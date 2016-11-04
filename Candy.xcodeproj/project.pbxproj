@@ -1,0 +1,542 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		75C36DFC1DCCF77600F84214 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 75C36DFB1DCCF77600F84214 /* main.m */; };
+		75C36DFF1DCCF77600F84214 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 75C36DFE1DCCF77600F84214 /* AppDelegate.m */; };
+		75C36E011DCCF77600F84214 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 75C36E001DCCF77600F84214 /* GameScene.sks */; };
+		75C36E031DCCF77700F84214 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 75C36E021DCCF77600F84214 /* Actions.sks */; };
+		75C36E061DCCF77700F84214 /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 75C36E051DCCF77700F84214 /* GameScene.m */; };
+		75C36E091DCCF77700F84214 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75C36E081DCCF77700F84214 /* GameViewController.m */; };
+		75C36E0C1DCCF77700F84214 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75C36E0A1DCCF77700F84214 /* Main.storyboard */; };
+		75C36E0E1DCCF77700F84214 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75C36E0D1DCCF77700F84214 /* Assets.xcassets */; };
+		75C36E111DCCF77700F84214 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75C36E0F1DCCF77700F84214 /* LaunchScreen.storyboard */; };
+		75C36E1C1DCCF77700F84214 /* CandyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 75C36E1B1DCCF77700F84214 /* CandyTests.m */; };
+		75C36E271DCCF77700F84214 /* CandyUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 75C36E261DCCF77700F84214 /* CandyUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		75C36E181DCCF77700F84214 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 75C36DEF1DCCF77600F84214 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 75C36DF61DCCF77600F84214;
+			remoteInfo = Candy;
+		};
+		75C36E231DCCF77700F84214 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 75C36DEF1DCCF77600F84214 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 75C36DF61DCCF77600F84214;
+			remoteInfo = Candy;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		75C36DF71DCCF77600F84214 /* Candy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Candy.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		75C36DFB1DCCF77600F84214 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		75C36DFD1DCCF77600F84214 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		75C36DFE1DCCF77600F84214 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		75C36E001DCCF77600F84214 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		75C36E021DCCF77600F84214 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
+		75C36E041DCCF77700F84214 /* GameScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameScene.h; sourceTree = "<group>"; };
+		75C36E051DCCF77700F84214 /* GameScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameScene.m; sourceTree = "<group>"; };
+		75C36E071DCCF77700F84214 /* GameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
+		75C36E081DCCF77700F84214 /* GameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
+		75C36E0B1DCCF77700F84214 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		75C36E0D1DCCF77700F84214 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		75C36E101DCCF77700F84214 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		75C36E121DCCF77700F84214 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		75C36E171DCCF77700F84214 /* CandyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CandyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		75C36E1B1DCCF77700F84214 /* CandyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CandyTests.m; sourceTree = "<group>"; };
+		75C36E1D1DCCF77700F84214 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		75C36E221DCCF77700F84214 /* CandyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CandyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		75C36E261DCCF77700F84214 /* CandyUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CandyUITests.m; sourceTree = "<group>"; };
+		75C36E281DCCF77700F84214 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		75C36DF41DCCF77600F84214 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		75C36E141DCCF77700F84214 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		75C36E1F1DCCF77700F84214 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		75C36DEE1DCCF77600F84214 = {
+			isa = PBXGroup;
+			children = (
+				75C36DF91DCCF77600F84214 /* Candy */,
+				75C36E1A1DCCF77700F84214 /* CandyTests */,
+				75C36E251DCCF77700F84214 /* CandyUITests */,
+				75C36DF81DCCF77600F84214 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		75C36DF81DCCF77600F84214 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				75C36DF71DCCF77600F84214 /* Candy.app */,
+				75C36E171DCCF77700F84214 /* CandyTests.xctest */,
+				75C36E221DCCF77700F84214 /* CandyUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		75C36DF91DCCF77600F84214 /* Candy */ = {
+			isa = PBXGroup;
+			children = (
+				75C36DFD1DCCF77600F84214 /* AppDelegate.h */,
+				75C36DFE1DCCF77600F84214 /* AppDelegate.m */,
+				75C36E001DCCF77600F84214 /* GameScene.sks */,
+				75C36E021DCCF77600F84214 /* Actions.sks */,
+				75C36E041DCCF77700F84214 /* GameScene.h */,
+				75C36E051DCCF77700F84214 /* GameScene.m */,
+				75C36E071DCCF77700F84214 /* GameViewController.h */,
+				75C36E081DCCF77700F84214 /* GameViewController.m */,
+				75C36E0A1DCCF77700F84214 /* Main.storyboard */,
+				75C36E0D1DCCF77700F84214 /* Assets.xcassets */,
+				75C36E0F1DCCF77700F84214 /* LaunchScreen.storyboard */,
+				75C36E121DCCF77700F84214 /* Info.plist */,
+				75C36DFA1DCCF77600F84214 /* Supporting Files */,
+			);
+			path = Candy;
+			sourceTree = "<group>";
+		};
+		75C36DFA1DCCF77600F84214 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				75C36DFB1DCCF77600F84214 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		75C36E1A1DCCF77700F84214 /* CandyTests */ = {
+			isa = PBXGroup;
+			children = (
+				75C36E1B1DCCF77700F84214 /* CandyTests.m */,
+				75C36E1D1DCCF77700F84214 /* Info.plist */,
+			);
+			path = CandyTests;
+			sourceTree = "<group>";
+		};
+		75C36E251DCCF77700F84214 /* CandyUITests */ = {
+			isa = PBXGroup;
+			children = (
+				75C36E261DCCF77700F84214 /* CandyUITests.m */,
+				75C36E281DCCF77700F84214 /* Info.plist */,
+			);
+			path = CandyUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		75C36DF61DCCF77600F84214 /* Candy */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 75C36E2B1DCCF77700F84214 /* Build configuration list for PBXNativeTarget "Candy" */;
+			buildPhases = (
+				75C36DF31DCCF77600F84214 /* Sources */,
+				75C36DF41DCCF77600F84214 /* Frameworks */,
+				75C36DF51DCCF77600F84214 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Candy;
+			productName = Candy;
+			productReference = 75C36DF71DCCF77600F84214 /* Candy.app */;
+			productType = "com.apple.product-type.application";
+		};
+		75C36E161DCCF77700F84214 /* CandyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 75C36E2E1DCCF77700F84214 /* Build configuration list for PBXNativeTarget "CandyTests" */;
+			buildPhases = (
+				75C36E131DCCF77700F84214 /* Sources */,
+				75C36E141DCCF77700F84214 /* Frameworks */,
+				75C36E151DCCF77700F84214 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				75C36E191DCCF77700F84214 /* PBXTargetDependency */,
+			);
+			name = CandyTests;
+			productName = CandyTests;
+			productReference = 75C36E171DCCF77700F84214 /* CandyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		75C36E211DCCF77700F84214 /* CandyUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 75C36E311DCCF77700F84214 /* Build configuration list for PBXNativeTarget "CandyUITests" */;
+			buildPhases = (
+				75C36E1E1DCCF77700F84214 /* Sources */,
+				75C36E1F1DCCF77700F84214 /* Frameworks */,
+				75C36E201DCCF77700F84214 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				75C36E241DCCF77700F84214 /* PBXTargetDependency */,
+			);
+			name = CandyUITests;
+			productName = CandyUITests;
+			productReference = 75C36E221DCCF77700F84214 /* CandyUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		75C36DEF1DCCF77600F84214 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = Kilcal;
+				TargetAttributes = {
+					75C36DF61DCCF77600F84214 = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+					};
+					75C36E161DCCF77700F84214 = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 75C36DF61DCCF77600F84214;
+					};
+					75C36E211DCCF77700F84214 = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 75C36DF61DCCF77600F84214;
+					};
+				};
+			};
+			buildConfigurationList = 75C36DF21DCCF77600F84214 /* Build configuration list for PBXProject "Candy" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 75C36DEE1DCCF77600F84214;
+			productRefGroup = 75C36DF81DCCF77600F84214 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				75C36DF61DCCF77600F84214 /* Candy */,
+				75C36E161DCCF77700F84214 /* CandyTests */,
+				75C36E211DCCF77700F84214 /* CandyUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		75C36DF51DCCF77600F84214 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				75C36E0C1DCCF77700F84214 /* Main.storyboard in Resources */,
+				75C36E011DCCF77600F84214 /* GameScene.sks in Resources */,
+				75C36E0E1DCCF77700F84214 /* Assets.xcassets in Resources */,
+				75C36E111DCCF77700F84214 /* LaunchScreen.storyboard in Resources */,
+				75C36E031DCCF77700F84214 /* Actions.sks in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		75C36E151DCCF77700F84214 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		75C36E201DCCF77700F84214 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		75C36DF31DCCF77600F84214 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				75C36E091DCCF77700F84214 /* GameViewController.m in Sources */,
+				75C36DFF1DCCF77600F84214 /* AppDelegate.m in Sources */,
+				75C36E061DCCF77700F84214 /* GameScene.m in Sources */,
+				75C36DFC1DCCF77600F84214 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		75C36E131DCCF77700F84214 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				75C36E1C1DCCF77700F84214 /* CandyTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		75C36E1E1DCCF77700F84214 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				75C36E271DCCF77700F84214 /* CandyUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		75C36E191DCCF77700F84214 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 75C36DF61DCCF77600F84214 /* Candy */;
+			targetProxy = 75C36E181DCCF77700F84214 /* PBXContainerItemProxy */;
+		};
+		75C36E241DCCF77700F84214 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 75C36DF61DCCF77600F84214 /* Candy */;
+			targetProxy = 75C36E231DCCF77700F84214 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		75C36E0A1DCCF77700F84214 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				75C36E0B1DCCF77700F84214 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		75C36E0F1DCCF77700F84214 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				75C36E101DCCF77700F84214 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		75C36E291DCCF77700F84214 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		75C36E2A1DCCF77700F84214 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		75C36E2C1DCCF77700F84214 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Candy/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = kilcal.Candy;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		75C36E2D1DCCF77700F84214 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Candy/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = kilcal.Candy;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		75C36E2F1DCCF77700F84214 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = CandyTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = kilcal.CandyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Candy.app/Candy";
+			};
+			name = Debug;
+		};
+		75C36E301DCCF77700F84214 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = CandyTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = kilcal.CandyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Candy.app/Candy";
+			};
+			name = Release;
+		};
+		75C36E321DCCF77700F84214 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = CandyUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = kilcal.CandyUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Candy;
+			};
+			name = Debug;
+		};
+		75C36E331DCCF77700F84214 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = CandyUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = kilcal.CandyUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Candy;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		75C36DF21DCCF77600F84214 /* Build configuration list for PBXProject "Candy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				75C36E291DCCF77700F84214 /* Debug */,
+				75C36E2A1DCCF77700F84214 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		75C36E2B1DCCF77700F84214 /* Build configuration list for PBXNativeTarget "Candy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				75C36E2C1DCCF77700F84214 /* Debug */,
+				75C36E2D1DCCF77700F84214 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		75C36E2E1DCCF77700F84214 /* Build configuration list for PBXNativeTarget "CandyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				75C36E2F1DCCF77700F84214 /* Debug */,
+				75C36E301DCCF77700F84214 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		75C36E311DCCF77700F84214 /* Build configuration list for PBXNativeTarget "CandyUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				75C36E321DCCF77700F84214 /* Debug */,
+				75C36E331DCCF77700F84214 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 75C36DEF1DCCF77600F84214 /* Project object */;
+}
