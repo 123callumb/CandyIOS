@@ -1,0 +1,14 @@
+
+Okay this is more of an Idea list/Deamand list XD
+
+- Create a background package, each background file will be created with SKSpriteNodes and then added to the scene.
+- Create a foreground package, this will contain things such as front animations e.g. sweet tap animations.
+- Create a person/player package, this will have the customisation of the player.
+- How I want the scene files to be structures like:
+    - Scene:  + Background Classes
+              + Foreground Classes
+              + Person Class
+              + Gui Overlay Class
+              + Data Classes (e.g. Money and Time)
+
+- Should have like constant animations happening in the background, for example in my other app I had clouds always moving, makes it less static!
