@@ -17,6 +17,7 @@
     SKSpriteNode *splash = [SKSpriteNode spriteNodeWithImageNamed:@"splashNew"];
     splash.anchorPoint = CGPointMake(0.5, 0.5);
     [scene addChild:splash];
+    NSLog(@"test2");
 }
 
 @end

@@ -1,5 +1,5 @@
 //
-//  backgroundManager.h
+//  mainBackground.h
 //  Candy
 //
 //  Created by Callum Beckwith on 05/11/2016.
@@ -8,7 +8,6 @@
 
 #import <SpriteKit/SpriteKit.h>
 
-@interface backgroundManager : SKSpriteNode
-+(void)splashScene: (SKScene *)s;
-+(void)mainScene: (SKScene *)s;
+@interface mainBackground : SKSpriteNode
++(void)mainBacking: (SKScene *)s;
 @end

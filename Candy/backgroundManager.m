@@ -8,6 +8,7 @@
 
 #import "backgroundManager.h"
 #import "splashBacking.h"
+#import "mainBackground.h"
 
 @implementation backgroundManager
 
@@ -16,6 +17,11 @@
 //GameScene.m XD
 +(void)splashScene: (SKScene *)s {
     [splashBacking main:s];
+}
+
+//Main.m XD
++(void)mainScene: (SKScene *)s {
+    [mainBackground mainBacking:s];
 }
 
 @end
