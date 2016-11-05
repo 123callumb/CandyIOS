@@ -19,6 +19,8 @@
 		75C36E1C1DCCF77700F84214 /* CandyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 75C36E1B1DCCF77700F84214 /* CandyTests.m */; };
 		75C36E271DCCF77700F84214 /* CandyUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 75C36E261DCCF77700F84214 /* CandyUITests.m */; };
 		75C36E351DCD085000F84214 /* toDoList in Resources */ = {isa = PBXBuildFile; fileRef = 75C36E341DCD085000F84214 /* toDoList */; };
+		75C36E3A1DCE5CD900F84214 /* splashBacking.m in Sources */ = {isa = PBXBuildFile; fileRef = 75C36E391DCE5CD900F84214 /* splashBacking.m */; };
+		75C36E3E1DCE5F2000F84214 /* backgroundManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 75C36E3D1DCE5F2000F84214 /* backgroundManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +62,10 @@
 		75C36E261DCCF77700F84214 /* CandyUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CandyUITests.m; sourceTree = "<group>"; };
 		75C36E281DCCF77700F84214 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		75C36E341DCD085000F84214 /* toDoList */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = toDoList; sourceTree = "<group>"; };
+		75C36E381DCE5CD900F84214 /* splashBacking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = splashBacking.h; path = Candy/splashBacking.h; sourceTree = "<group>"; };
+		75C36E391DCE5CD900F84214 /* splashBacking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = splashBacking.m; path = Candy/splashBacking.m; sourceTree = "<group>"; };
+		75C36E3C1DCE5F2000F84214 /* backgroundManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = backgroundManager.h; path = Candy/backgroundManager.h; sourceTree = "<group>"; };
+		75C36E3D1DCE5F2000F84214 /* backgroundManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = backgroundManager.m; path = Candy/backgroundManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +96,8 @@
 		75C36DEE1DCCF77600F84214 = {
 			isa = PBXGroup;
 			children = (
+				75C36E371DCE59EF00F84214 /* Backgrounds */,
+				75C36E361DCE55BA00F84214 /* preAssets */,
 				75C36DF91DCCF77600F84214 /* Candy */,
 				75C36E1A1DCCF77700F84214 /* CandyTests */,
 				75C36E251DCCF77700F84214 /* CandyUITests */,
@@ -152,6 +160,32 @@
 				75C36E281DCCF77700F84214 /* Info.plist */,
 			);
 			path = CandyUITests;
+			sourceTree = "<group>";
+		};
+		75C36E361DCE55BA00F84214 /* preAssets */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = preAssets;
+			sourceTree = "<group>";
+		};
+		75C36E371DCE59EF00F84214 /* Backgrounds */ = {
+			isa = PBXGroup;
+			children = (
+				75C36E3B1DCE5EFB00F84214 /* splashScene */,
+				75C36E3C1DCE5F2000F84214 /* backgroundManager.h */,
+				75C36E3D1DCE5F2000F84214 /* backgroundManager.m */,
+			);
+			name = Backgrounds;
+			sourceTree = "<group>";
+		};
+		75C36E3B1DCE5EFB00F84214 /* splashScene */ = {
+			isa = PBXGroup;
+			children = (
+				75C36E381DCE5CD900F84214 /* splashBacking.h */,
+				75C36E391DCE5CD900F84214 /* splashBacking.m */,
+			);
+			name = splashScene;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -291,6 +325,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75C36E3A1DCE5CD900F84214 /* splashBacking.m in Sources */,
+				75C36E3E1DCE5F2000F84214 /* backgroundManager.m in Sources */,
 				75C36E091DCCF77700F84214 /* GameViewController.m in Sources */,
 				75C36DFF1DCCF77600F84214 /* AppDelegate.m in Sources */,
 				75C36E061DCCF77700F84214 /* GameScene.m in Sources */,

@@ -7,6 +7,7 @@
 //
 
 #import "GameScene.h"
+#import "backgroundManager.h"
 
 @implementation GameScene {
 }
@@ -14,6 +15,8 @@
 //We will use this as like a splash screen and then initialise all the other scenes from it.
 
 - (void)didMoveToView:(SKView *)view {
+    [backgroundManager splashScene:self];
+    
 }
 
 
