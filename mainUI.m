@@ -7,11 +7,19 @@
 //
 
 #import "mainUI.h"
+#import "inventoryButton.h"
+#import "sweetsButton.h"
+#import "coinButton.h"
 
 @implementation mainUI
 
 
 +(void)drawUI: (SKScene *)s{
+    
+    [inventoryButton addButton:s];
+    [sweetsButton addButton:s];
+    [coinButton addButton:s];
+    
     SKSpriteNode *panelOne = [SKSpriteNode spriteNodeWithImageNamed:@"menuBarWhite"];
     panelOne.anchorPoint = CGPointMake(0.5, 0);
     panelOne.position = CGPointMake(0, -s.size.height/2);
@@ -24,36 +32,12 @@
     SKSpriteNode *background = [SKSpriteNode spriteNodeWithImageNamed:@"woodTexture"];
     background.position = CGPointMake(0, -s.frame.size.height/3);
     background.anchorPoint = CGPointMake(0.5, 0.5);
-  //  [s addChild:background];
+    //[s addChild:background];
     
     SKSpriteNode *sweetMachine = [SKSpriteNode spriteNodeWithImageNamed:@"stupidMachine"];
     sweetMachine.anchorPoint = CGPointMake(0.5, 0.5);
     sweetMachine.position = CGPointMake(-s.frame.size.width/5, 0);
-   // [s addChild:sweetMachine];
-    
-    SKSpriteNode *buttonTest = [SKSpriteNode spriteNodeWithImageNamed:@"sweetStoreButtonBetter"];
-    buttonTest.anchorPoint = CGPointMake(0.5, 0.5);
-    buttonTest.position = CGPointMake(buttonTest.size.width/2.1, -s.frame.size.height/2.25);
-    buttonTest.xScale = 0.45;
-    buttonTest.yScale = 0.45;
-    buttonTest.zPosition = 11;
-    [s addChild:buttonTest];
-    
-    SKSpriteNode *buttonMoney = [SKSpriteNode spriteNodeWithImageNamed:@"moneyButton"];
-    buttonMoney.anchorPoint = CGPointMake(0.5, 0.5);
-    buttonMoney.position = CGPointMake(-buttonMoney.size.width/2.1, -s.frame.size.height/2.25);
-    buttonMoney.xScale = 0.45;
-    buttonMoney.yScale = 0.45;
-    buttonMoney.zPosition = 11;
-    [s addChild:buttonMoney];
-    
-    SKSpriteNode *buttonPointless = [SKSpriteNode spriteNodeWithImageNamed:@"pointlessButton"];
-    buttonPointless.anchorPoint = CGPointMake(0.5, 0.5);
-    buttonPointless.position = CGPointMake(0, -s.frame.size.height/2.25);
-    buttonPointless.xScale = 0.45;
-    buttonPointless.yScale = 0.45;
-    buttonPointless.zPosition = 11;
-    [s addChild:buttonPointless];
+    //[s addChild:sweetMachine];
     
     SKSpriteNode *buttonDunno = [SKSpriteNode spriteNodeWithImageNamed:@"dunnoButton"];
     buttonDunno.anchorPoint = CGPointMake(0.5, 0.5);

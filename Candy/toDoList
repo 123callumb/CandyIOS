@@ -12,3 +12,8 @@ Okay this is more of an Idea list/Deamand list XD
               + Data Classes (e.g. Money and Time)
 
 - Should have like constant animations happening in the background, for example in my other app I had clouds always moving, makes it less static!
+
+- So for the main ui it should be:
+    - Buttons have seperate classes
+    - On press of a button it dips down - as if it has actually been pressed
+    - Menu will pop up in the middle of the screen, simple translate animation, (slide up!)

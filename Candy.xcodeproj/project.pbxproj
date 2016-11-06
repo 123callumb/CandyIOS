@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		7525F7781DCE921B00B0510C /* mainUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 7525F7771DCE921B00B0510C /* mainUI.m */; };
+		7525F77C1DCFBFF100B0510C /* inventoryButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 7525F77B1DCFBFF100B0510C /* inventoryButton.m */; };
+		7525F7851DCFC58B00B0510C /* buttonHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 7525F7841DCFC58B00B0510C /* buttonHandler.m */; };
+		7525F7881DCFC72A00B0510C /* buttonAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7525F7871DCFC72A00B0510C /* buttonAnimation.m */; };
+		7525F78B1DCFDD8400B0510C /* sweetsButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 7525F78A1DCFDD8400B0510C /* sweetsButton.m */; };
+		7525F78E1DCFEA7C00B0510C /* coinButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 7525F78D1DCFEA7C00B0510C /* coinButton.m */; };
 		75C36DFC1DCCF77600F84214 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 75C36DFB1DCCF77600F84214 /* main.m */; };
 		75C36DFF1DCCF77600F84214 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 75C36DFE1DCCF77600F84214 /* AppDelegate.m */; };
 		75C36E011DCCF77600F84214 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 75C36E001DCCF77600F84214 /* GameScene.sks */; };
@@ -47,6 +52,16 @@
 /* Begin PBXFileReference section */
 		7525F7761DCE921B00B0510C /* mainUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mainUI.h; sourceTree = "<group>"; };
 		7525F7771DCE921B00B0510C /* mainUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mainUI.m; sourceTree = "<group>"; };
+		7525F77A1DCFBFF100B0510C /* inventoryButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = inventoryButton.h; path = Candy/userInterface/Buttons/inventoryButton.h; sourceTree = "<group>"; };
+		7525F77B1DCFBFF100B0510C /* inventoryButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = inventoryButton.m; path = Candy/userInterface/Buttons/inventoryButton.m; sourceTree = "<group>"; };
+		7525F7831DCFC58B00B0510C /* buttonHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = buttonHandler.h; path = Candy/userInterface/Buttons/buttonHandler.h; sourceTree = "<group>"; };
+		7525F7841DCFC58B00B0510C /* buttonHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = buttonHandler.m; path = Candy/userInterface/Buttons/buttonHandler.m; sourceTree = "<group>"; };
+		7525F7861DCFC72A00B0510C /* buttonAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = buttonAnimation.h; path = Candy/userInterface/Buttons/buttonAnimation.h; sourceTree = "<group>"; };
+		7525F7871DCFC72A00B0510C /* buttonAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = buttonAnimation.m; path = Candy/userInterface/Buttons/buttonAnimation.m; sourceTree = "<group>"; };
+		7525F7891DCFDD8400B0510C /* sweetsButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = sweetsButton.h; path = Candy/userInterface/Buttons/sweetsButton.h; sourceTree = "<group>"; };
+		7525F78A1DCFDD8400B0510C /* sweetsButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = sweetsButton.m; path = Candy/userInterface/Buttons/sweetsButton.m; sourceTree = "<group>"; };
+		7525F78C1DCFEA7C00B0510C /* coinButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = coinButton.h; path = Candy/userInterface/Buttons/coinButton.h; sourceTree = "<group>"; };
+		7525F78D1DCFEA7C00B0510C /* coinButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = coinButton.m; path = Candy/userInterface/Buttons/coinButton.m; sourceTree = "<group>"; };
 		75C36DF71DCCF77600F84214 /* Candy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Candy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		75C36DFB1DCCF77600F84214 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		75C36DFD1DCCF77600F84214 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -71,8 +86,8 @@
 		75C36E381DCE5CD900F84214 /* splashBacking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = splashBacking.h; path = Candy/splashBacking.h; sourceTree = "<group>"; };
 		75C36E391DCE5CD900F84214 /* splashBacking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = splashBacking.m; path = Candy/splashBacking.m; sourceTree = "<group>"; };
 		75C36E3C1DCE5F2000F84214 /* backgroundManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = backgroundManager.h; path = Candy/backgroundManager.h; sourceTree = "<group>"; };
-		75C36E3D1DCE5F2000F84214 /* backgroundManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = backgroundManager.m; path = Candy/backgroundManager.m; sourceTree = "<group>"; };
-		75C36E401DCE63E500F84214 /* mainTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = mainTransition.h; path = Candy/mainTransition.h; sourceTree = "<group>"; };
+		75C36E3D1DCE5F2000F84214 /* backgroundManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = backgroundManager.m; path = Candy/backgroundManager.m; sourceTree = SOURCE_ROOT; };
+		75C36E401DCE63E500F84214 /* mainTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = mainTransition.h; path = Candy/mainTransition.h; sourceTree = SOURCE_ROOT; };
 		75C36E411DCE63E500F84214 /* mainTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = mainTransition.m; path = Candy/mainTransition.m; sourceTree = "<group>"; };
 		75C36E441DCE752A00F84214 /* main.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = main.h; sourceTree = "<group>"; };
 		75C36E451DCE752A00F84214 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -108,10 +123,28 @@
 		7525F7751DCE920400B0510C /* userInterface */ = {
 			isa = PBXGroup;
 			children = (
+				7525F7791DCFBFAA00B0510C /* Buttons */,
 				7525F7761DCE921B00B0510C /* mainUI.h */,
 				7525F7771DCE921B00B0510C /* mainUI.m */,
 			);
 			name = userInterface;
+			sourceTree = "<group>";
+		};
+		7525F7791DCFBFAA00B0510C /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				7525F77A1DCFBFF100B0510C /* inventoryButton.h */,
+				7525F77B1DCFBFF100B0510C /* inventoryButton.m */,
+				7525F7831DCFC58B00B0510C /* buttonHandler.h */,
+				7525F7841DCFC58B00B0510C /* buttonHandler.m */,
+				7525F7861DCFC72A00B0510C /* buttonAnimation.h */,
+				7525F7871DCFC72A00B0510C /* buttonAnimation.m */,
+				7525F7891DCFDD8400B0510C /* sweetsButton.h */,
+				7525F78A1DCFDD8400B0510C /* sweetsButton.m */,
+				7525F78C1DCFEA7C00B0510C /* coinButton.h */,
+				7525F78D1DCFEA7C00B0510C /* coinButton.m */,
+			);
+			name = Buttons;
 			sourceTree = "<group>";
 		};
 		75C36DEE1DCCF77600F84214 = {
@@ -377,16 +410,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7525F77C1DCFBFF100B0510C /* inventoryButton.m in Sources */,
 				75C36E3A1DCE5CD900F84214 /* splashBacking.m in Sources */,
 				75C36E3E1DCE5F2000F84214 /* backgroundManager.m in Sources */,
 				75C36E091DCCF77700F84214 /* GameViewController.m in Sources */,
+				7525F7851DCFC58B00B0510C /* buttonHandler.m in Sources */,
+				7525F78E1DCFEA7C00B0510C /* coinButton.m in Sources */,
 				75C36E421DCE63E500F84214 /* mainTransition.m in Sources */,
 				7525F7781DCE921B00B0510C /* mainUI.m in Sources */,
 				75C36DFF1DCCF77600F84214 /* AppDelegate.m in Sources */,
 				75C36E061DCCF77700F84214 /* GameScene.m in Sources */,
 				75C36E4A1DCE793D00F84214 /* mainBackground.m in Sources */,
+				7525F78B1DCFDD8400B0510C /* sweetsButton.m in Sources */,
 				75C36E461DCE752A00F84214 /* main.m in Sources */,
 				75C36DFC1DCCF77600F84214 /* main.m in Sources */,
+				7525F7881DCFC72A00B0510C /* buttonAnimation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

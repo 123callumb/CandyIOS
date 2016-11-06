@@ -9,6 +9,7 @@
 #import "main.h"
 #import "backgroundManager.h"
 #import "mainUI.h"
+#import "buttonHandler.h"
 
 @implementation main
 
@@ -19,6 +20,13 @@
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    
+    UITouch *tap = [touches anyObject];
+    CGPoint loc = [tap locationInNode:self];
+    SKNode *obj = [self nodeAtPoint:loc];
+    
+    
+    [buttonHandler registerButtons:obj];
 }
 
 //These methods are new and pretty dank af!
