@@ -20,13 +20,19 @@
 
 +(void)switchScene: (SKScene *)s1 sceneTwo: (SKScene *)s2 Transition:(SKTransition *)tran sceneID:(int)id; {
     
-    
+    //Set custom tran
     SKTransition *customTransition = tran;
+    
+    //This is the ugly bit, it needs to be this way because you can't import classes through a method
     if(id==0){
+        
+        //That \/ lil bitch rn there is our problem
         s2 = [[main alloc] initWithSize:s1.size];
         s2.scaleMode = SKSceneScaleModeAspectFill;
     }
     
+    
+    //Change the scene
     s2.scaleMode = SKSceneScaleModeAspectFill;
     [s1.view presentScene:s2 transition:customTransition];
 }

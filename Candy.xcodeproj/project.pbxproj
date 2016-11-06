@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7525F7781DCE921B00B0510C /* mainUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 7525F7771DCE921B00B0510C /* mainUI.m */; };
 		75C36DFC1DCCF77600F84214 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 75C36DFB1DCCF77600F84214 /* main.m */; };
 		75C36DFF1DCCF77600F84214 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 75C36DFE1DCCF77600F84214 /* AppDelegate.m */; };
 		75C36E011DCCF77600F84214 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 75C36E001DCCF77600F84214 /* GameScene.sks */; };
@@ -44,6 +45,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7525F7761DCE921B00B0510C /* mainUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mainUI.h; sourceTree = "<group>"; };
+		7525F7771DCE921B00B0510C /* mainUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mainUI.m; sourceTree = "<group>"; };
 		75C36DF71DCCF77600F84214 /* Candy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Candy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		75C36DFB1DCCF77600F84214 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		75C36DFD1DCCF77600F84214 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -102,9 +105,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7525F7751DCE920400B0510C /* userInterface */ = {
+			isa = PBXGroup;
+			children = (
+				7525F7761DCE921B00B0510C /* mainUI.h */,
+				7525F7771DCE921B00B0510C /* mainUI.m */,
+			);
+			name = userInterface;
+			sourceTree = "<group>";
+		};
 		75C36DEE1DCCF77600F84214 = {
 			isa = PBXGroup;
 			children = (
+				7525F7751DCE920400B0510C /* userInterface */,
 				75C36E431DCE751200F84214 /* Scenes */,
 				75C36E3F1DCE638A00F84214 /* sceneTransitionSystem */,
 				75C36E371DCE59EF00F84214 /* Backgrounds */,
@@ -368,6 +381,7 @@
 				75C36E3E1DCE5F2000F84214 /* backgroundManager.m in Sources */,
 				75C36E091DCCF77700F84214 /* GameViewController.m in Sources */,
 				75C36E421DCE63E500F84214 /* mainTransition.m in Sources */,
+				7525F7781DCE921B00B0510C /* mainUI.m in Sources */,
 				75C36DFF1DCCF77600F84214 /* AppDelegate.m in Sources */,
 				75C36E061DCCF77700F84214 /* GameScene.m in Sources */,
 				75C36E4A1DCE793D00F84214 /* mainBackground.m in Sources */,
@@ -606,6 +620,7 @@
 				75C36E2D1DCCF77700F84214 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		75C36E2E1DCCF77700F84214 /* Build configuration list for PBXNativeTarget "CandyTests" */ = {
 			isa = XCConfigurationList;
@@ -614,6 +629,7 @@
 				75C36E301DCCF77700F84214 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		75C36E311DCCF77700F84214 /* Build configuration list for PBXNativeTarget "CandyUITests" */ = {
 			isa = XCConfigurationList;
@@ -622,6 +638,7 @@
 				75C36E331DCCF77700F84214 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

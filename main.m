@@ -8,12 +8,14 @@
 
 #import "main.h"
 #import "backgroundManager.h"
+#import "mainUI.h"
 
 @implementation main
 
 -(void)didMoveToView:(SKView *)view {
     //Set Background Foreground, mainly static!
     [backgroundManager mainScene:self];
+    [mainUI drawUI:self];
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {

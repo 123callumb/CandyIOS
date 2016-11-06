@@ -12,8 +12,6 @@
 
 +(void)mainBacking: (SKScene *)s {
     s.anchorPoint = CGPointMake(0.5, 0.5);
-    SKLabelNode *test = [SKLabelNode labelNodeWithText:@"Hello Cunt"];
-    [s addChild:test];
 }
 
 @end
