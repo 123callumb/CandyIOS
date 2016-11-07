@@ -8,8 +8,11 @@
 
 #import "inventoryButton.h"
 #import "buttonAnimation.h"
+#import "inventoryMenu.h"
 
 @implementation inventoryButton
+bool isActive = false;
+
 +(void)addButton: (SKScene *)s {
     
     SKSpriteNode *buttonInventory = [SKSpriteNode spriteNodeWithImageNamed:@"pointlessButton"];
@@ -21,7 +24,21 @@
     buttonInventory.name = @"buttonInventory";
     [s addChild:buttonInventory];
 }
-+(void)onTouch: (SKNode *)b {
++(void)onTouch: (SKNode *)b cs:(SKScene *)s {
+    
     [buttonAnimation changeState:b changeName:@"pointlessButtonPressed" originalName:@"pointlessButton"];
+    
+    if(isActive == false){
+        [inventoryMenu menuActions:s inScene:true];
+    }
+     else if(isActive == true){
+         [inventoryMenu menuActions:s inScene:false];
+    }
+}
++(void)invActive {
+    isActive = true;
+}
++(void)invDeactive {
+    isActive = false;
 }
 @end

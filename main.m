@@ -26,7 +26,7 @@
     SKNode *obj = [self nodeAtPoint:loc];
     
     
-    [buttonHandler registerButtons:obj];
+    [buttonHandler registerButtons:obj currentScene:self];
 }
 
 //These methods are new and pretty dank af!

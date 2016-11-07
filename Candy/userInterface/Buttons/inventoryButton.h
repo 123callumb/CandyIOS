@@ -10,5 +10,7 @@
 
 @interface inventoryButton : SKSpriteNode
 +(void)addButton: (SKScene *)s;
-+(void)onTouch: (SKNode *)b;
++(void)onTouch: (SKNode *)b cs:(SKScene *)s;
++(void)invActive;
++(void)invDeactive;
 @end

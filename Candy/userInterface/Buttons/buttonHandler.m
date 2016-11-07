@@ -12,10 +12,10 @@
 #import "coinButton.h"
 
 @implementation buttonHandler
-+(void)registerButtons:(SKNode *)obj {
++(void)registerButtons:(SKNode *)obj currentScene:(SKScene *)s {
     
     if([obj.name isEqualToString:@"buttonInventory"]){
-        [inventoryButton onTouch:obj];
+        [inventoryButton onTouch:obj cs:s];
     }
     
     if([obj.name isEqualToString:@"buttonSweets"]){

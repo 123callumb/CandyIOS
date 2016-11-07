@@ -10,15 +10,18 @@
 #import "inventoryButton.h"
 #import "sweetsButton.h"
 #import "coinButton.h"
+#import "menuBacking.h"
+#import "coinBarSprite.h"
 
 @implementation mainUI
 
-
+//Literally all of this needs improving, each part of the ui will have its own class, makes it easier when it comes to making it look dynamic!
 +(void)drawUI: (SKScene *)s{
     
     [inventoryButton addButton:s];
     [sweetsButton addButton:s];
     [coinButton addButton:s];
+    [coinBarSprite addCoinBar:s];
     
     SKSpriteNode *panelOne = [SKSpriteNode spriteNodeWithImageNamed:@"menuBarWhite"];
     panelOne.anchorPoint = CGPointMake(0.5, 0);
@@ -29,15 +32,6 @@
     
     [s addChild:panelOne];
     
-    SKSpriteNode *background = [SKSpriteNode spriteNodeWithImageNamed:@"woodTexture"];
-    background.position = CGPointMake(0, -s.frame.size.height/3);
-    background.anchorPoint = CGPointMake(0.5, 0.5);
-    //[s addChild:background];
-    
-    SKSpriteNode *sweetMachine = [SKSpriteNode spriteNodeWithImageNamed:@"stupidMachine"];
-    sweetMachine.anchorPoint = CGPointMake(0.5, 0.5);
-    sweetMachine.position = CGPointMake(-s.frame.size.width/5, 0);
-    //[s addChild:sweetMachine];
     
     SKSpriteNode *buttonDunno = [SKSpriteNode spriteNodeWithImageNamed:@"dunnoButton"];
     buttonDunno.anchorPoint = CGPointMake(0.5, 0.5);
@@ -47,20 +41,6 @@
     buttonDunno.zPosition = 11;
     [s addChild:buttonDunno];
     
-    SKSpriteNode *coinBar = [SKSpriteNode spriteNodeWithImageNamed:@"coinBar"];
-    coinBar.anchorPoint = CGPointMake(0.5, 0.5);
-    coinBar.position = CGPointMake(-s.frame.size.width/4.4, s.frame.size.height/2.3);
-    coinBar.xScale = 0.45;
-    coinBar.yScale = 0.42;
-    coinBar.zPosition = 11;
-    [s addChild:coinBar];
     
-    SKSpriteNode *comboBar = [SKSpriteNode spriteNodeWithImageNamed:@"redSmall"];
-    comboBar.anchorPoint = CGPointMake(0.5, 0.5);
-    comboBar.position = CGPointMake(-s.frame.size.width/2.8, s.frame.size.height/2.3);
-    comboBar.xScale = 0.45;
-    comboBar.yScale = 0.42;
-    comboBar.zPosition = 11;
-   // [s addChild:comboBar];
 }
 @end

@@ -1,5 +1,5 @@
 //
-//  buttonHandler.h
+//  menuBacking.h
 //  Candy
 //
 //  Created by Callum Beckwith on 06/11/2016.
@@ -8,6 +8,6 @@
 
 #import <SpriteKit/SpriteKit.h>
 
-@interface buttonHandler : SKScene
-+(void)registerButtons:(SKNode *)obj currentScene:(SKScene *)s;
+@interface menuBacking : SKSpriteNode
++(id)createBacking;
 @end
