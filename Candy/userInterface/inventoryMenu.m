@@ -12,34 +12,49 @@
 
 @implementation inventoryMenu
 
+bool created = false;
+
 +(void)menuActions: (SKScene *)s inScene:(bool)in {
     
+    if(!created){
     SKSpriteNode *main = (SKSpriteNode *)[menuBacking createBacking];
     main.position = CGPointMake(0, -s.frame.size.height);
     main.name = @"menuInventory";
     [s addChild:main];
+    }
+    
+    SKSpriteNode *main = (SKSpriteNode*)[s childNodeWithName:@"menuInventory"];
     
     if(in){
         [self createMenu:s node:main];
-    }else {
+    }else if(!in) {
         [self removeMenu:s node:main];
     }
 }
 
 +(void)createMenu: (SKScene *)s node:(SKSpriteNode *)main {
-
+    
+    created = true;
     [inventoryButton invActive];
+    [inventoryButton isBusy];
     
     SKAction *slideUp = [SKAction moveToY:(main.position.y+s.frame.size.height) duration:0.5];
-    [main runAction:slideUp];
+    [main runAction:slideUp completion:^{
+            [inventoryButton isntBusy];
+    }];
 }
-+(void)removeMenu: (SKScene *)s node:(SKSpriteNode *)main {
+
++(void)removeMenu: (SKScene *)s node:(SKSpriteNode *)m {
     
-    main = (SKSpriteNode*)[s childNodeWithName:@"menuInventory"];
+    SKSpriteNode *main = (SKSpriteNode*)[s childNodeWithName:@"menuInventory"];
+    
+    [inventoryButton isBusy];
     
     SKAction *slideDown = [SKAction moveToY:(-s.frame.size.height) duration:0.5];
     [main runAction:slideDown completion:^{
-        [inventoryButton invDeactive];
+            [inventoryButton isntBusy];
+            [inventoryButton invDeactive];
     }];
- }
+}
+
 @end

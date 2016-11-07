@@ -12,6 +12,7 @@
 
 @implementation inventoryButton
 bool isActive = false;
+bool isBusy = false;
 
 +(void)addButton: (SKScene *)s {
     
@@ -27,18 +28,36 @@ bool isActive = false;
 +(void)onTouch: (SKNode *)b cs:(SKScene *)s {
     
     [buttonAnimation changeState:b changeName:@"pointlessButtonPressed" originalName:@"pointlessButton"];
+    if(isBusy){
+        NSLog(@"button busy");
+    }else if(!isBusy){
+        
+        if(isActive == false){
+            [inventoryMenu menuActions:s inScene:true];
+            }
+        
+        else if(isActive == true){
+            [inventoryMenu menuActions:s inScene:false];
+            }
+    }
     
-    if(isActive == false){
-        [inventoryMenu menuActions:s inScene:true];
-    }
-     else if(isActive == true){
-         [inventoryMenu menuActions:s inScene:false];
-    }
+
 }
+
 +(void)invActive {
     isActive = true;
 }
+
 +(void)invDeactive {
     isActive = false;
 }
+
++(void)isBusy {
+    isBusy = true;
+}
+
++(void)isntBusy; {
+    isBusy = false;
+}
+
 @end
