@@ -16,6 +16,10 @@
 		7525F7911DCFF8FB00B0510C /* menuBacking.m in Sources */ = {isa = PBXBuildFile; fileRef = 7525F7901DCFF8FB00B0510C /* menuBacking.m */; };
 		7525F7941DD08C9D00B0510C /* coinBarSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = 7525F7931DD08C9D00B0510C /* coinBarSprite.m */; };
 		7525F7971DD08F8400B0510C /* inventoryMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 7525F7961DD08F8400B0510C /* inventoryMenu.m */; };
+		7525F79A1DD0EF9500B0510C /* menuHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 7525F7991DD0EF9500B0510C /* menuHandler.m */; };
+		7525F7A81DD216D800B0510C /* money.m in Sources */ = {isa = PBXBuildFile; fileRef = 7525F7A71DD216D800B0510C /* money.m */; };
+		7525F7B11DD2242100B0510C /* taps.m in Sources */ = {isa = PBXBuildFile; fileRef = 7525F7B01DD2242100B0510C /* taps.m */; };
+		7525F7B31DD232E600B0510C /* 5x5_pixel 2.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7525F7B21DD232E600B0510C /* 5x5_pixel 2.ttf */; };
 		75C36DFC1DCCF77600F84214 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 75C36DFB1DCCF77600F84214 /* main.m */; };
 		75C36DFF1DCCF77600F84214 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 75C36DFE1DCCF77600F84214 /* AppDelegate.m */; };
 		75C36E011DCCF77600F84214 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 75C36E001DCCF77600F84214 /* GameScene.sks */; };
@@ -71,6 +75,13 @@
 		7525F7931DD08C9D00B0510C /* coinBarSprite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = coinBarSprite.m; path = Candy/userInterface/coinBarSprite.m; sourceTree = "<group>"; };
 		7525F7951DD08F8400B0510C /* inventoryMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = inventoryMenu.h; path = Candy/userInterface/inventoryMenu.h; sourceTree = "<group>"; };
 		7525F7961DD08F8400B0510C /* inventoryMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = inventoryMenu.m; path = Candy/userInterface/inventoryMenu.m; sourceTree = "<group>"; };
+		7525F7981DD0EF9500B0510C /* menuHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = menuHandler.h; path = Candy/userInterface/menuHandler.h; sourceTree = "<group>"; };
+		7525F7991DD0EF9500B0510C /* menuHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = menuHandler.m; path = Candy/userInterface/menuHandler.m; sourceTree = "<group>"; };
+		7525F7A61DD216D800B0510C /* money.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = money.h; path = Candy/Money/money.h; sourceTree = "<group>"; };
+		7525F7A71DD216D800B0510C /* money.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = money.m; path = Candy/Money/money.m; sourceTree = "<group>"; };
+		7525F7AF1DD2242100B0510C /* taps.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = taps.h; path = Candy/tap/taps.h; sourceTree = "<group>"; };
+		7525F7B01DD2242100B0510C /* taps.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = taps.m; path = Candy/tap/taps.m; sourceTree = "<group>"; };
+		7525F7B21DD232E600B0510C /* 5x5_pixel 2.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "5x5_pixel 2.ttf"; path = "fonts/5x5_pixel 2.ttf"; sourceTree = "<group>"; };
 		75C36DF71DCCF77600F84214 /* Candy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Candy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		75C36DFB1DCCF77600F84214 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		75C36DFD1DCCF77600F84214 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -141,6 +152,8 @@
 				7525F7931DD08C9D00B0510C /* coinBarSprite.m */,
 				7525F7951DD08F8400B0510C /* inventoryMenu.h */,
 				7525F7961DD08F8400B0510C /* inventoryMenu.m */,
+				7525F7981DD0EF9500B0510C /* menuHandler.h */,
+				7525F7991DD0EF9500B0510C /* menuHandler.m */,
 			);
 			name = userInterface;
 			sourceTree = "<group>";
@@ -162,9 +175,29 @@
 			name = Buttons;
 			sourceTree = "<group>";
 		};
+		7525F79B1DD1386F00B0510C /* tap */ = {
+			isa = PBXGroup;
+			children = (
+				7525F7AF1DD2242100B0510C /* taps.h */,
+				7525F7B01DD2242100B0510C /* taps.m */,
+			);
+			name = tap;
+			sourceTree = "<group>";
+		};
+		7525F7A51DD2166600B0510C /* moneySystem */ = {
+			isa = PBXGroup;
+			children = (
+				7525F7A61DD216D800B0510C /* money.h */,
+				7525F7A71DD216D800B0510C /* money.m */,
+			);
+			name = moneySystem;
+			sourceTree = "<group>";
+		};
 		75C36DEE1DCCF77600F84214 = {
 			isa = PBXGroup;
 			children = (
+				7525F7A51DD2166600B0510C /* moneySystem */,
+				7525F79B1DD1386F00B0510C /* tap */,
 				7525F7751DCE920400B0510C /* userInterface */,
 				75C36E431DCE751200F84214 /* Scenes */,
 				75C36E3F1DCE638A00F84214 /* sceneTransitionSystem */,
@@ -211,6 +244,7 @@
 		75C36DFA1DCCF77600F84214 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				7525F7B21DD232E600B0510C /* 5x5_pixel 2.ttf */,
 				75C36DFB1DCCF77600F84214 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -398,6 +432,7 @@
 				75C36E0C1DCCF77700F84214 /* Main.storyboard in Resources */,
 				75C36E011DCCF77600F84214 /* GameScene.sks in Resources */,
 				75C36E0E1DCCF77700F84214 /* Assets.xcassets in Resources */,
+				7525F7B31DD232E600B0510C /* 5x5_pixel 2.ttf in Resources */,
 				75C36E111DCCF77700F84214 /* LaunchScreen.storyboard in Resources */,
 				75C36E351DCD085000F84214 /* toDoList in Resources */,
 				75C36E031DCCF77700F84214 /* Actions.sks in Resources */,
@@ -436,8 +471,11 @@
 				75C36DFF1DCCF77600F84214 /* AppDelegate.m in Sources */,
 				75C36E061DCCF77700F84214 /* GameScene.m in Sources */,
 				75C36E4A1DCE793D00F84214 /* mainBackground.m in Sources */,
+				7525F79A1DD0EF9500B0510C /* menuHandler.m in Sources */,
+				7525F7B11DD2242100B0510C /* taps.m in Sources */,
 				7525F78B1DCFDD8400B0510C /* sweetsButton.m in Sources */,
 				7525F7911DCFF8FB00B0510C /* menuBacking.m in Sources */,
+				7525F7A81DD216D800B0510C /* money.m in Sources */,
 				7525F7941DD08C9D00B0510C /* coinBarSprite.m in Sources */,
 				75C36E461DCE752A00F84214 /* main.m in Sources */,
 				7525F7971DD08F8400B0510C /* inventoryMenu.m in Sources */,

@@ -1,5 +1,5 @@
 //
-//  coinBarSprite.h
+//  menuHandler.h
 //  Candy
 //
 //  Created by Callum Beckwith on 07/11/2016.
@@ -8,7 +8,6 @@
 
 #import <SpriteKit/SpriteKit.h>
 
-@interface coinBarSprite : SKSpriteNode
-+(void)addCoinBar:(SKScene *)s;
-+(void)updateText: (SKScene *)s;
+@interface menuHandler : SKSpriteNode
+
 @end

@@ -10,6 +10,7 @@
 #import "backgroundManager.h"
 #import "mainUI.h"
 #import "buttonHandler.h"
+#import "taps.h"
 
 @implementation main
 
@@ -25,7 +26,7 @@
     CGPoint loc = [tap locationInNode:self];
     SKNode *obj = [self nodeAtPoint:loc];
     
-    
+    [taps onPressed:self];
     [buttonHandler registerButtons:obj currentScene:self];
 }
 
