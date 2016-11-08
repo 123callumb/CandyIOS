@@ -21,6 +21,13 @@
 		7525F7B11DD2242100B0510C /* taps.m in Sources */ = {isa = PBXBuildFile; fileRef = 7525F7B01DD2242100B0510C /* taps.m */; };
 		7525F7B31DD232E600B0510C /* pixel.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7525F7B21DD232E600B0510C /* pixel.ttf */; };
 		7525F7BB1DD23D5A00B0510C /* arcade.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7525F7BA1DD23D5A00B0510C /* arcade.ttf */; };
+		7525F7BE1DD256A500B0510C /* comboBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 7525F7BD1DD256A500B0510C /* comboBar.m */; };
+		7525F7C21DD25C8500B0510C /* comboTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7525F7C11DD25C8500B0510C /* comboTimer.m */; };
+		7525F7C51DD25C9100B0510C /* combo.m in Sources */ = {isa = PBXBuildFile; fileRef = 7525F7C41DD25C9100B0510C /* combo.m */; };
+		7525F7C61DD287A300B0510C /* pixel.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7525F7B21DD232E600B0510C /* pixel.ttf */; };
+		7525F7C71DD287A400B0510C /* pixel.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7525F7B21DD232E600B0510C /* pixel.ttf */; };
+		7525F7C81DD287AE00B0510C /* arcade.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7525F7BA1DD23D5A00B0510C /* arcade.ttf */; };
+		7525F7C91DD287AF00B0510C /* arcade.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7525F7BA1DD23D5A00B0510C /* arcade.ttf */; };
 		75C36DFC1DCCF77600F84214 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 75C36DFB1DCCF77600F84214 /* main.m */; };
 		75C36DFF1DCCF77600F84214 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 75C36DFE1DCCF77600F84214 /* AppDelegate.m */; };
 		75C36E011DCCF77600F84214 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 75C36E001DCCF77600F84214 /* GameScene.sks */; };
@@ -61,7 +68,7 @@
 		7525F7761DCE921B00B0510C /* mainUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mainUI.h; sourceTree = "<group>"; };
 		7525F7771DCE921B00B0510C /* mainUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mainUI.m; sourceTree = "<group>"; };
 		7525F77A1DCFBFF100B0510C /* inventoryButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = inventoryButton.h; path = Candy/userInterface/Buttons/inventoryButton.h; sourceTree = "<group>"; };
-		7525F77B1DCFBFF100B0510C /* inventoryButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = inventoryButton.m; path = Candy/userInterface/Buttons/inventoryButton.m; sourceTree = "<group>"; };
+		7525F77B1DCFBFF100B0510C /* inventoryButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = inventoryButton.m; path = Candy/userInterface/Buttons/inventoryButton.m; sourceTree = SOURCE_ROOT; };
 		7525F7831DCFC58B00B0510C /* buttonHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = buttonHandler.h; path = Candy/userInterface/Buttons/buttonHandler.h; sourceTree = "<group>"; };
 		7525F7841DCFC58B00B0510C /* buttonHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = buttonHandler.m; path = Candy/userInterface/Buttons/buttonHandler.m; sourceTree = "<group>"; };
 		7525F7861DCFC72A00B0510C /* buttonAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = buttonAnimation.h; path = Candy/userInterface/Buttons/buttonAnimation.h; sourceTree = "<group>"; };
@@ -83,7 +90,13 @@
 		7525F7AF1DD2242100B0510C /* taps.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = taps.h; path = Candy/tap/taps.h; sourceTree = "<group>"; };
 		7525F7B01DD2242100B0510C /* taps.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = taps.m; path = Candy/tap/taps.m; sourceTree = "<group>"; };
 		7525F7B21DD232E600B0510C /* pixel.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = pixel.ttf; path = fonts/pixel.ttf; sourceTree = "<group>"; };
-		7525F7BA1DD23D5A00B0510C /* arcade.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = arcade.ttf; path = Candy/fonts/arcade.ttf; sourceTree = SOURCE_ROOT; };
+		7525F7BA1DD23D5A00B0510C /* arcade.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = arcade.ttf; path = ../../../../../../../../Documents/Kilcal/Candy/Project/Candy/Candy/fonts/arcade.ttf; sourceTree = BUILT_PRODUCTS_DIR; };
+		7525F7BC1DD256A500B0510C /* comboBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = comboBar.h; path = Candy/userInterface/comboBar.h; sourceTree = "<group>"; };
+		7525F7BD1DD256A500B0510C /* comboBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = comboBar.m; path = Candy/userInterface/comboBar.m; sourceTree = "<group>"; };
+		7525F7C01DD25C8500B0510C /* comboTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = comboTimer.h; path = Candy/comboSystem/comboTimer.h; sourceTree = "<group>"; };
+		7525F7C11DD25C8500B0510C /* comboTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = comboTimer.m; path = Candy/comboSystem/comboTimer.m; sourceTree = "<group>"; };
+		7525F7C31DD25C9100B0510C /* combo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = combo.h; sourceTree = "<group>"; };
+		7525F7C41DD25C9100B0510C /* combo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = combo.m; sourceTree = "<group>"; };
 		75C36DF71DCCF77600F84214 /* Candy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Candy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		75C36DFB1DCCF77600F84214 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		75C36DFD1DCCF77600F84214 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -156,6 +169,8 @@
 				7525F7961DD08F8400B0510C /* inventoryMenu.m */,
 				7525F7981DD0EF9500B0510C /* menuHandler.h */,
 				7525F7991DD0EF9500B0510C /* menuHandler.m */,
+				7525F7BC1DD256A500B0510C /* comboBar.h */,
+				7525F7BD1DD256A500B0510C /* comboBar.m */,
 			);
 			name = userInterface;
 			sourceTree = "<group>";
@@ -195,9 +210,21 @@
 			name = moneySystem;
 			sourceTree = "<group>";
 		};
+		7525F7BF1DD25C5800B0510C /* comboSystem */ = {
+			isa = PBXGroup;
+			children = (
+				7525F7C01DD25C8500B0510C /* comboTimer.h */,
+				7525F7C11DD25C8500B0510C /* comboTimer.m */,
+				7525F7C31DD25C9100B0510C /* combo.h */,
+				7525F7C41DD25C9100B0510C /* combo.m */,
+			);
+			name = comboSystem;
+			sourceTree = "<group>";
+		};
 		75C36DEE1DCCF77600F84214 = {
 			isa = PBXGroup;
 			children = (
+				7525F7BF1DD25C5800B0510C /* comboSystem */,
 				7525F7A51DD2166600B0510C /* moneySystem */,
 				7525F79B1DD1386F00B0510C /* tap */,
 				7525F7751DCE920400B0510C /* userInterface */,
@@ -447,6 +474,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7525F7C81DD287AE00B0510C /* arcade.ttf in Resources */,
+				7525F7C61DD287A300B0510C /* pixel.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -454,6 +483,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7525F7C91DD287AF00B0510C /* arcade.ttf in Resources */,
+				7525F7C71DD287A400B0510C /* pixel.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -474,6 +505,7 @@
 				7525F7781DCE921B00B0510C /* mainUI.m in Sources */,
 				75C36DFF1DCCF77600F84214 /* AppDelegate.m in Sources */,
 				75C36E061DCCF77700F84214 /* GameScene.m in Sources */,
+				7525F7BE1DD256A500B0510C /* comboBar.m in Sources */,
 				75C36E4A1DCE793D00F84214 /* mainBackground.m in Sources */,
 				7525F79A1DD0EF9500B0510C /* menuHandler.m in Sources */,
 				7525F7B11DD2242100B0510C /* taps.m in Sources */,
@@ -481,9 +513,11 @@
 				7525F7911DCFF8FB00B0510C /* menuBacking.m in Sources */,
 				7525F7A81DD216D800B0510C /* money.m in Sources */,
 				7525F7941DD08C9D00B0510C /* coinBarSprite.m in Sources */,
+				7525F7C51DD25C9100B0510C /* combo.m in Sources */,
 				75C36E461DCE752A00F84214 /* main.m in Sources */,
 				7525F7971DD08F8400B0510C /* inventoryMenu.m in Sources */,
 				75C36DFC1DCCF77600F84214 /* main.m in Sources */,
+				7525F7C21DD25C8500B0510C /* comboTimer.m in Sources */,
 				7525F7881DCFC72A00B0510C /* buttonAnimation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

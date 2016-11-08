@@ -31,12 +31,6 @@
         [mainTransition switchScene:self sceneTwo:main Transition:[SKTransition crossFadeWithDuration:1] sceneID:0];
     }];
     
-    for(NSString* family in [UIFont familyNames]){
-        NSLog(@"%@", family);
-        for(NSString* name in [UIFont fontNamesForFamilyName:family]){
-            NSLog(@"    %@", name);
-        }
-    }
     }
 
 -(void)update:(CFTimeInterval)currentTime {

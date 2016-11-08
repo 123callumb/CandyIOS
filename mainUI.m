@@ -12,6 +12,7 @@
 #import "coinButton.h"
 #import "menuBacking.h"
 #import "coinBarSprite.h"
+#import "comboBar.h"
 
 @implementation mainUI
 
@@ -22,6 +23,7 @@
     [sweetsButton addButton:s];
     [coinButton addButton:s];
     [coinBarSprite addCoinBar:s];
+    [comboBar addBar:s];
     
     SKSpriteNode *panelOne = [SKSpriteNode spriteNodeWithImageNamed:@"menuBarWhite"];
     panelOne.anchorPoint = CGPointMake(0.5, 0);
