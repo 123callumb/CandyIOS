@@ -22,7 +22,7 @@
     [s addChild:coinBar];
 }
 +(void)addText: (SKSpriteNode *)n; {
-    SKLabelNode *moneyText = [SKLabelNode labelNodeWithFontNamed:@""];
+    SKLabelNode *moneyText = [SKLabelNode labelNodeWithFontNamed:@"arcade"];
     moneyText.horizontalAlignmentMode = SKLabelHorizontalAlignmentModeLeft;
     moneyText.name = @"moneyText";
     moneyText.zPosition = 12;
