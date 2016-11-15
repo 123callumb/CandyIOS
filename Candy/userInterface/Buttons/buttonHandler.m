@@ -20,7 +20,7 @@
     }
     
     if([obj.name isEqualToString:@"buttonSweets"]){
-        [sweetsButton touched:obj];
+        [sweetsButton touched:obj cs:s];
     }
     
     if([obj.name isEqualToString:@"buttonMoney"]){

@@ -29,6 +29,7 @@
 		7525F7C81DD287AE00B0510C /* arcade.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7525F7BA1DD23D5A00B0510C /* arcade.ttf */; };
 		7525F7C91DD287AF00B0510C /* arcade.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7525F7BA1DD23D5A00B0510C /* arcade.ttf */; };
 		7525F7CC1DD2931900B0510C /* coders_crux.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7525F7CB1DD2931900B0510C /* coders_crux.ttf */; };
+		75919B911DDB7A93001F66EB /* upgradeMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 75919B901DDB7A93001F66EB /* upgradeMenu.m */; };
 		75C36DFC1DCCF77600F84214 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 75C36DFB1DCCF77600F84214 /* main.m */; };
 		75C36DFF1DCCF77600F84214 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 75C36DFE1DCCF77600F84214 /* AppDelegate.m */; };
 		75C36E011DCCF77600F84214 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 75C36E001DCCF77600F84214 /* GameScene.sks */; };
@@ -105,6 +106,8 @@
 		7525F7C31DD25C9100B0510C /* combo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = combo.h; sourceTree = "<group>"; };
 		7525F7C41DD25C9100B0510C /* combo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = combo.m; sourceTree = "<group>"; };
 		7525F7CB1DD2931900B0510C /* coders_crux.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = coders_crux.ttf; path = Candy/fonts/coders_crux.ttf; sourceTree = "<group>"; };
+		75919B8F1DDB7A93001F66EB /* upgradeMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = upgradeMenu.h; path = Candy/userInterface/upgradeMenu.h; sourceTree = "<group>"; };
+		75919B901DDB7A93001F66EB /* upgradeMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = upgradeMenu.m; path = Candy/userInterface/upgradeMenu.m; sourceTree = "<group>"; };
 		75C36DF71DCCF77600F84214 /* Candy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Candy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		75C36DFB1DCCF77600F84214 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		75C36DFD1DCCF77600F84214 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -193,6 +196,8 @@
 				7525F7BD1DD256A500B0510C /* comboBar.m */,
 				75E8F1961DD7969500A421E7 /* statsMenu.h */,
 				75E8F1971DD7969500A421E7 /* statsMenu.m */,
+				75919B8F1DDB7A93001F66EB /* upgradeMenu.h */,
+				75919B901DDB7A93001F66EB /* upgradeMenu.m */,
 			);
 			name = userInterface;
 			sourceTree = "<group>";
@@ -585,6 +590,7 @@
 				7525F7BE1DD256A500B0510C /* comboBar.m in Sources */,
 				75C36E4A1DCE793D00F84214 /* mainBackground.m in Sources */,
 				7525F79A1DD0EF9500B0510C /* menuHandler.m in Sources */,
+				75919B911DDB7A93001F66EB /* upgradeMenu.m in Sources */,
 				7525F7B11DD2242100B0510C /* taps.m in Sources */,
 				7525F78B1DCFDD8400B0510C /* sweetsButton.m in Sources */,
 				7525F7911DCFF8FB00B0510C /* menuBacking.m in Sources */,

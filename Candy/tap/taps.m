@@ -18,7 +18,6 @@
 @implementation taps
 +(void)onPressed: (SKScene *)s location:(CGPoint)p {
     [coinBarSprite updateText:s];
-    [nodeToParticle particleFlyAnimation:[defaultSweet addSweet:s pos:p] scene:s];
     [money addBalance:1];
 }
 +(void)onRelease: (SKScene*)s {

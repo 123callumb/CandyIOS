@@ -10,5 +10,5 @@
 
 @interface sweetsButton : SKSpriteNode
 +(void)addButton: (SKScene *)s;
-+(void)touched: (SKNode *)but;
++(void)touched: (SKNode *)but cs:(SKScene *)s; 
 @end

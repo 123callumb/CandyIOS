@@ -9,6 +9,7 @@
 #import "menuHandler.h"
 #import "inventoryMenu.h"
 #import "statsMenu.h"
+#import "upgradeMenu.h"
 
 @implementation menuHandler
 //The slide up thingy!
@@ -24,7 +25,7 @@ int currentMenu = 0;
     SKSpriteNode *invButton = (SKSpriteNode*)[s childNodeWithName:@"buttonInventory"];
     SKSpriteNode *storeButton = (SKSpriteNode*)[s childNodeWithName:@"buttonSweets"];
     
-    SKAction *slideToDaRight = [SKAction moveByX:s.frame.size.width y:0 duration:0.2];
+    SKAction *slideToDaRight = [SKAction moveByX:s.frame.size.width y:0 duration:0.1];
     SKAction *waitABitLovie = [SKAction waitForDuration:0.1];
    
     [s runAction:waitABitLovie completion:^{
@@ -62,8 +63,11 @@ int currentMenu = 0;
         currentMenu = 3;
         
     }else if(currentMenu == 2){
-        
+       
+        [upgradeMenu menuHandler:s inScene:false];
+        [self menuBringBacker:s];
         currentMenu = 3;
+        
     }
 }
 +(void)setCurrentMenu: (int)num {
