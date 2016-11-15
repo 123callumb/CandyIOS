@@ -8,8 +8,12 @@
 
 #import "coinButton.h"
 #import "buttonAnimation.h"
+#import "statsMenu.h"
+#import "menuHandler.h"
 
 @implementation coinButton
+bool isCoinBusy = false;
+
 +(void)addButton: (SKScene *)s {
     SKSpriteNode *buttonMoney = [SKSpriteNode spriteNodeWithImageNamed:@"moneyButton"];
     buttonMoney.anchorPoint = CGPointMake(0.5, 0.5);
@@ -19,9 +23,32 @@
     buttonMoney.zPosition = 11;
     buttonMoney.name = @"buttonMoney";
     [s addChild:buttonMoney];
-    
 }
-+(void)touched: (SKNode *)but {
++(void)touched: (SKNode *)but cs:(SKScene *)s{
     [buttonAnimation changeState:but changeName:@"moneyButtonPressed" originalName:@"moneyButton"];
+    //When the button has been pressed
+    if(isCoinBusy){
+        NSLog(@"button busy");
+    }
+    
+    //Buttons Action Here:
+    else if(!isCoinBusy){
+        [self buttonReset:s];
+        [statsMenu menuHandler:s inScene:true];
+        [menuHandler menuRemover:s];
+        
+        //The Inventory has the id of 0
+        [menuHandler setCurrentMenu:1];
+    }
+
 }
+
++(void)buttonReset: (SKScene*)s {
+    isCoinBusy = true;
+    SKAction *wait = [SKAction waitForDuration:1];
+    [s runAction:wait completion:^{
+        isCoinBusy = false;
+    }];
+}
+
 @end

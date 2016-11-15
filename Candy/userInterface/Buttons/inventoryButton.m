@@ -9,9 +9,9 @@
 #import "inventoryButton.h"
 #import "buttonAnimation.h"
 #import "inventoryMenu.h"
+#import "menuHandler.h"
 
 @implementation inventoryButton
-bool isActive = false;
 bool isBusy = false;
 
 +(void)addButton: (SKScene *)s {
@@ -27,37 +27,31 @@ bool isBusy = false;
 }
 +(void)onTouch: (SKNode *)b cs:(SKScene *)s {
     
+    //Change Animation State:
     [buttonAnimation changeState:b changeName:@"pointlessButtonPressed" originalName:@"pointlessButton"];
+    
+    //When the button has been pressed
     if(isBusy){
         NSLog(@"button busy");
-    }else if(!isBusy){
-        
-        if(isActive == false){
-            [inventoryMenu menuActions:s inScene:true];
-            }
-        
-        else if(isActive == true){
-            [inventoryMenu menuActions:s inScene:false];
-            }
-    }
+        }
     
-
+    //Buttons Action Here:
+    else if(!isBusy){
+        [self buttonReset:s];
+        [inventoryMenu menuActions:s inScene:true];
+        [menuHandler menuRemover:s];
+        
+        //The Inventory has the id of 0
+        [menuHandler setCurrentMenu:0];
+    }
 }
 
-+(void)invActive {
-    isActive = true;
-}
-
-+(void)invDeactive {
-    isActive = false;
-}
-
-+(void)isBusy {
++(void)buttonReset: (SKScene*)s {
     isBusy = true;
-}
-
-+(void)isntBusy; {
-    isBusy = false;
+    SKAction *wait = [SKAction waitForDuration:1];
+    [s runAction:wait completion:^{
+        isBusy = false;
+    }];
 }
 
 @end

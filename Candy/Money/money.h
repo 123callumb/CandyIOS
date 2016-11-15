@@ -11,4 +11,5 @@
 @interface money : SKNode
 +(void)addBalance: (int)x;
 +(NSString*)getBalanceAsString;
++(int)getBalance;
 @end

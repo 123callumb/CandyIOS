@@ -9,5 +9,6 @@
 #import <SpriteKit/SpriteKit.h>
 
 @interface taps : SKSpriteNode
-+(void)onPressed: (SKScene *)s;
++(void)onPressed: (SKScene *)s location:(CGPoint)p;
++(void)onRelease: (SKScene*)s;
 @end

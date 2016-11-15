@@ -10,4 +10,5 @@
 
 @interface menuBacking : SKSpriteNode
 +(id)createBacking;
++(id)createStatsBacking;
 @end

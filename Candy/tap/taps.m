@@ -11,12 +11,17 @@
 #import "money.h"
 #import "combo.h"
 #import "comboBar.h"
+#import "comboTimer.h"
+#import "defaultSweet.h"
+#import "nodeToParticle.h"
 
 @implementation taps
-+(void)onPressed: (SKScene *)s {
++(void)onPressed: (SKScene *)s location:(CGPoint)p {
     [coinBarSprite updateText:s];
+    [nodeToParticle particleFlyAnimation:[defaultSweet addSweet:s pos:p] scene:s];
     [money addBalance:1];
-    [combo comboDecider:s];
-    [comboBar updateText:s];
+}
++(void)onRelease: (SKScene*)s {
+    
 }
 @end

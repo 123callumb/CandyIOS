@@ -8,28 +8,38 @@
 
 #import "comboTimer.h"
 #import "combo.h"
+#import "money.h"
 
 @implementation comboTimer
 
 int comboTimerValue = 0;
-bool comboActive = false;
+bool comboActive = true;
+
+bool comboReset;
+bool alreadyCounting = false;
+bool readyRelease = false;
 
 +(void)startTimer: (SKScene *)s {
-    comboTimerValue = true;
+    readyRelease = false;
+}
 
-    for(comboActive = 10; comboActive <= 0;){
-        SKAction *timer = [SKAction waitForDuration:1];
-        [s runAction:timer completion:^{
-            [combo addCombo:0.01];
++(void)realeaseMechanism: (SKScene*)s {
+    
+    SKAction *tenSeconds = [SKAction waitForDuration:10];
+    
+    [s runAction:tenSeconds completion:^{
+        readyRelease = true;
+        SKAction *oneSecond = [SKAction waitForDuration:1];
+        int x = [money getBalance];
+        [s runAction:oneSecond completion:^{
+            int y = [money getBalance];
+            if(readyRelease == true && y == x){
+                [combo resetCombo:s];
+            }
         }];
-    }
-
-
+    }];
 }
 
-+(void)resetTimer {
-    comboActive = false;
-}
 +(bool)getComboValue {
     return comboActive;
 }

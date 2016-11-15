@@ -26,16 +26,9 @@
     CGPoint loc = [tap locationInNode:self];
     SKNode *obj = [self nodeAtPoint:loc];
     
-    [taps onPressed:self];
+    [taps onPressed:self location:loc];
     [buttonHandler registerButtons:obj currentScene:self];
     
-    NSArray *fontFamilies = [UIFont familyNames];
-    for (int i = 0; i < [fontFamilies count]; i++)
-    {
-        NSString *fontFamily = [fontFamilies objectAtIndex:i];
-        NSArray *fontNames = [UIFont fontNamesForFamilyName:[fontFamilies objectAtIndex:i]];
-        NSLog (@"%@: %@", fontFamily, fontNames);
-    }
 }
 
 //These methods are new and pretty dank af!
@@ -43,6 +36,7 @@
 }
 
 -(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
+    [taps onRelease:self];
 }
 
 -(void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event {

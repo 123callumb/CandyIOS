@@ -10,6 +10,7 @@
 #import "inventoryButton.h"
 #import "sweetsButton.h"
 #import "coinButton.h"
+#import "menuBackButton.h"
 
 @implementation buttonHandler
 +(void)registerButtons:(SKNode *)obj currentScene:(SKScene *)s {
@@ -23,7 +24,10 @@
     }
     
     if([obj.name isEqualToString:@"buttonMoney"]){
-        [coinButton touched:obj];
+        [coinButton touched:obj cs:s];
+    }
+    if([obj.name isEqualToString:@"buttonBack"]){
+        [menuBackButton onTouch:obj currentScene:s];
     }
 }
 @end

@@ -10,6 +10,6 @@
 
 @interface comboTimer : SKNode
 +(void)startTimer:(SKScene *)s;
-
 +(bool)getComboValue;
++(void)realeaseMechanism: (SKScene*)s;
 @end

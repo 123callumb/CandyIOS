@@ -21,7 +21,7 @@
     [s addChild:bar];
 }
 +(void)addText: (SKSpriteNode *)n; {
-    SKLabelNode *comboText = [SKLabelNode labelNodeWithFontNamed:@"Zapfino"];
+    SKLabelNode *comboText = [SKLabelNode labelNodeWithFontNamed:@"Coder's-Crux"];
     comboText.horizontalAlignmentMode = SKLabelHorizontalAlignmentModeLeft;
     comboText.name = @"comboText";
     comboText.zPosition = 12;

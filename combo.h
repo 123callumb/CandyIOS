@@ -10,7 +10,8 @@
 
 @interface combo : SKNode
 +(void)comboDecider:(SKScene *)s;
-+(void)addCombo: (double)x;
-+(double)getCombo;
++(void)addCombo: (float)x;
++(float)getCombo;
++(void)resetCombo: (SKScene*)s;
 +(NSString *)getComboAsString;
 @end

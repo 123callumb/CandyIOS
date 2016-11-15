@@ -22,11 +22,11 @@
     [s addChild:coinBar];
 }
 +(void)addText: (SKSpriteNode *)n; {
-    SKLabelNode *moneyText = [SKLabelNode labelNodeWithFontNamed:@"ArcadeClassic"];
+    SKLabelNode *moneyText = [SKLabelNode labelNodeWithFontNamed:@"Coder's-Crux"];
     moneyText.horizontalAlignmentMode = SKLabelHorizontalAlignmentModeLeft;
     moneyText.name = @"moneyText";
     moneyText.zPosition = 12;
-    moneyText.fontSize = 100;
+    moneyText.fontSize = 140;
     moneyText.text = [money getBalanceAsString];
     moneyText.position = CGPointMake(0-n.frame.size.width/2 , 0-moneyText.frame.size.height/3.3);
     [n addChild:moneyText];

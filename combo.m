@@ -8,25 +8,28 @@
 
 #import "combo.h"
 #import "comboTimer.h"
+#import "comboBar.h"
 
 @implementation combo
 
-double comboValue = 1.0;
+float comboValue = 1.01;
 
 +(void)comboDecider:(SKScene *)s {
-    if([comboTimer getComboValue] == false){
         [comboTimer startTimer:s];
-    }
 }
-+(void)addCombo: (double)x{
++(void)addCombo: (float)x{
     comboValue = comboValue + x;
 }
 
-+(double)getCombo {
++(float)getCombo {
     return comboValue;
 }
++(void)resetCombo: (SKScene*)s {
+    comboValue = 1.00;
+    [comboBar updateText:s];
+}
 +(NSString*)getComboAsString {
-    NSString *comboV = [NSString stringWithFormat:@"%f", comboValue];
+    NSString *comboV = [NSString stringWithFormat:@"%.02f", comboValue];
     return comboV;
 }
 @end

@@ -9,5 +9,8 @@
 #import <SpriteKit/SpriteKit.h>
 
 @interface menuHandler : SKSpriteNode
-
++(void)menuRemover:(SKScene*)s;
++(void)menuBringBacker:(SKScene*)s;
++(void)closeMenu:(SKScene*)s;
++(void)setCurrentMenu: (int)num;
 @end

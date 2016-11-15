@@ -9,6 +9,7 @@
 #import "inventoryMenu.h"
 #import "menuBacking.h"
 #import "inventoryButton.h"
+#import "menuBackButton.h"
 
 @implementation inventoryMenu
 
@@ -28,32 +29,27 @@ bool created = false;
     if(in){
         [self createMenu:s node:main];
     }else if(!in) {
-        [self removeMenu:s node:main];
+        [self removeMenu:s];
     }
 }
 
 +(void)createMenu: (SKScene *)s node:(SKSpriteNode *)main {
     
     created = true;
-    [inventoryButton invActive];
-    [inventoryButton isBusy];
     
     SKAction *slideUp = [SKAction moveToY:(main.position.y+s.frame.size.height) duration:0.5];
     [main runAction:slideUp completion:^{
-            [inventoryButton isntBusy];
+        [menuBackButton createButton:s];
     }];
 }
 
-+(void)removeMenu: (SKScene *)s node:(SKSpriteNode *)m {
++(void)removeMenu: (SKScene *)s {
     
     SKSpriteNode *main = (SKSpriteNode*)[s childNodeWithName:@"menuInventory"];
     
-    [inventoryButton isBusy];
-    
     SKAction *slideDown = [SKAction moveToY:(-s.frame.size.height) duration:0.5];
     [main runAction:slideDown completion:^{
-            [inventoryButton isntBusy];
-            [inventoryButton invDeactive];
+            [menuBackButton removeButton:s];
     }];
 }
 
