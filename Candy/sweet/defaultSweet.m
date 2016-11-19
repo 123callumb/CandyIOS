@@ -15,6 +15,7 @@ int upgradeValue = 0;
 +(id)addSweet: (SKScene*)s pos:(CGPoint)p; {
     SKSpriteNode *sweetDefault = [sweet createNewSweet:s sweetName:@"default" textureName:@"defaultSweet"];
     sweetDefault.position = p;
+    sweetDefault.zPosition = 4;
     return sweetDefault;
 }
 +(int)getUpgradeValue {

@@ -26,6 +26,7 @@ bool isUpgradeBusy = false;
 
 }
 +(void)touched: (SKNode *)but cs:(SKScene *)s; {
+    if([menuHandler getCurrentMenu] == 4){
     [buttonAnimation changeState:but changeName:@"sweetStoreButtonPressed" originalName:@"sweetStoreButtonBetter"];
     
     if(isUpgradeBusy){
@@ -40,6 +41,7 @@ bool isUpgradeBusy = false;
         
         //The Inventory has the id of 0
         [menuHandler setCurrentMenu:2];
+    }
     }
 }
 

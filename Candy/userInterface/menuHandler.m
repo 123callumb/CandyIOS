@@ -13,7 +13,7 @@
 
 @implementation menuHandler
 //The slide up thingy!
-int currentMenu = 0;
+int currentMenu = 4;
 
 +(int)getCurrentMenu {
     return currentMenu;
@@ -55,18 +55,18 @@ int currentMenu = 0;
     if(currentMenu == 0){
         [inventoryMenu menuActions:s inScene:false];
         [self menuBringBacker:s];
-        currentMenu = 3;
+        currentMenu = 4;
     }else if(currentMenu == 1){
         
         [statsMenu menuHandler:s inScene:false];
         [self menuBringBacker:s];
-        currentMenu = 3;
+        currentMenu = 4;
         
     }else if(currentMenu == 2){
        
         [upgradeMenu menuHandler:s inScene:false];
         [self menuBringBacker:s];
-        currentMenu = 3;
+        currentMenu = 4;
         
     }
 }

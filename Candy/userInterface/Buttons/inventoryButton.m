@@ -26,7 +26,7 @@ bool isBusy = false;
     [s addChild:buttonInventory];
 }
 +(void)onTouch: (SKNode *)b cs:(SKScene *)s {
-    
+    if([menuHandler getCurrentMenu] == 4){
     //Change Animation State:
     [buttonAnimation changeState:b changeName:@"pointlessButtonPressed" originalName:@"pointlessButton"];
     
@@ -43,6 +43,7 @@ bool isBusy = false;
         
         //The Inventory has the id of 0
         [menuHandler setCurrentMenu:0];
+    }
     }
 }
 

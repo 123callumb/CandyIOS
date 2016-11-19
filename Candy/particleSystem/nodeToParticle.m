@@ -10,8 +10,8 @@
 
 @implementation nodeToParticle
 +(void)particleFlyAnimation: (SKSpriteNode*)n scene:(SKScene *)s{
-   // SKSpriteNode *one = n;
-   // [self applyImpluse:one scene:s];
+   SKSpriteNode *one = n;
+    [self applyImpluse:one scene:s];
    
     
 }
@@ -28,7 +28,7 @@
     int rndValueX = lowerBoundX + arc4random() % (upperBoundX - lowerBoundX);
 
     SKAction *leftFly = [SKAction applyImpulse:CGVectorMake(rndValueX,600) duration:0.2];
-    SKAction *killTimer = [SKAction waitForDuration:2];
+    SKAction *killTimer = [SKAction fadeOutWithDuration:0.3];
     
     [l1 runAction:leftFly completion:^{
         [l1 runAction:killTimer completion:^{

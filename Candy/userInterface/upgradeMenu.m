@@ -36,7 +36,7 @@ bool createdUpgrades = false;
     
     createdUpgrades = true;
     
-    SKAction *slideUp = [SKAction moveToY:(main.position.y+s.frame.size.height) duration:0.5];
+    SKAction *slideUp = [SKAction moveToY:(main.position.y+s.frame.size.height) duration:0.3];
     [main runAction:slideUp completion:^{
         [menuBackButton createButton:s];
     }];
@@ -45,7 +45,7 @@ bool createdUpgrades = false;
     
     SKSpriteNode *main = (SKSpriteNode*)[s childNodeWithName:@"menuUpgrades"];
     
-    SKAction *slideDown = [SKAction moveToY:(-s.frame.size.height) duration:0.5];
+    SKAction *slideDown = [SKAction moveToY:(-s.frame.size.height) duration:0.3];
     [main runAction:slideDown completion:^{
         [menuBackButton removeButton:s];
     }];

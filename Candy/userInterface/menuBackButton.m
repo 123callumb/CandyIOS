@@ -21,13 +21,13 @@
     buttonBack.name = @"buttonBack";
     [s addChild:buttonBack];
     
-    SKAction *hiThere = [SKAction moveByX:-s.frame.size.width y:0 duration:0.4];
+    SKAction *hiThere = [SKAction moveByX:-s.frame.size.width y:0 duration:0.15];
     [buttonBack runAction:hiThere];
 }
 +(void)removeButton:(SKScene*)s {
     SKSpriteNode *backButton = (SKSpriteNode*)[s childNodeWithName:@"buttonBack"];
     
-    SKAction *byeThere = [SKAction moveByX:-s.frame.size.width y:0 duration:0.4];
+    SKAction *byeThere = [SKAction moveByX:-s.frame.size.width y:0 duration:0.15];
 
     
     [backButton runAction:byeThere completion:^{
@@ -36,7 +36,7 @@
    }
 +(void)onTouch: (SKNode*)n currentScene:(SKScene*)s {
     [buttonAnimation changeState:n changeName:@"backButtonPressure" originalName:@"backButton"];
-    SKAction *waitFam = [SKAction waitForDuration:0.4];
+    SKAction *waitFam = [SKAction waitForDuration:0.15];
     [n runAction:waitFam completion:^{
         [self removeButton:s];
         [menuHandler closeMenu:s];

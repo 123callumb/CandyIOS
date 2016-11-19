@@ -31,6 +31,8 @@
 		7525F7CC1DD2931900B0510C /* coders_crux.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7525F7CB1DD2931900B0510C /* coders_crux.ttf */; };
 		75919B911DDB7A93001F66EB /* upgradeMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 75919B901DDB7A93001F66EB /* upgradeMenu.m */; };
 		75919B951DDB82DF001F66EB /* mainUpgrade.m in Sources */ = {isa = PBXBuildFile; fileRef = 75919B941DDB82DF001F66EB /* mainUpgrade.m */; };
+		75919B991DDCA41C001F66EB /* defaultLevel.m in Sources */ = {isa = PBXBuildFile; fileRef = 75919B981DDCA41C001F66EB /* defaultLevel.m */; };
+		75919B9C1DDCA4CE001F66EB /* levelDecider.m in Sources */ = {isa = PBXBuildFile; fileRef = 75919B9B1DDCA4CE001F66EB /* levelDecider.m */; };
 		75C36DFC1DCCF77600F84214 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 75C36DFB1DCCF77600F84214 /* main.m */; };
 		75C36DFF1DCCF77600F84214 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 75C36DFE1DCCF77600F84214 /* AppDelegate.m */; };
 		75C36E011DCCF77600F84214 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 75C36E001DCCF77600F84214 /* GameScene.sks */; };
@@ -111,6 +113,10 @@
 		75919B901DDB7A93001F66EB /* upgradeMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = upgradeMenu.m; path = Candy/userInterface/upgradeMenu.m; sourceTree = "<group>"; };
 		75919B931DDB82DF001F66EB /* mainUpgrade.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = mainUpgrade.h; path = Candy/userInterface/upgradeMenu/mainUpgrade.h; sourceTree = "<group>"; };
 		75919B941DDB82DF001F66EB /* mainUpgrade.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = mainUpgrade.m; path = Candy/userInterface/upgradeMenu/mainUpgrade.m; sourceTree = "<group>"; };
+		75919B971DDCA41C001F66EB /* defaultLevel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = defaultLevel.h; path = Candy/levels/defaultLevel.h; sourceTree = "<group>"; };
+		75919B981DDCA41C001F66EB /* defaultLevel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = defaultLevel.m; path = Candy/levels/defaultLevel.m; sourceTree = "<group>"; };
+		75919B9A1DDCA4CE001F66EB /* levelDecider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = levelDecider.h; sourceTree = "<group>"; };
+		75919B9B1DDCA4CE001F66EB /* levelDecider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = levelDecider.m; sourceTree = "<group>"; };
 		75C36DF71DCCF77600F84214 /* Candy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Candy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		75C36DFB1DCCF77600F84214 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		75C36DFD1DCCF77600F84214 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -273,9 +279,19 @@
 			name = upgradeMenu;
 			sourceTree = "<group>";
 		};
+		75919B961DDCA353001F66EB /* levelBackgrounds */ = {
+			isa = PBXGroup;
+			children = (
+				75919B971DDCA41C001F66EB /* defaultLevel.h */,
+				75919B981DDCA41C001F66EB /* defaultLevel.m */,
+			);
+			name = levelBackgrounds;
+			sourceTree = "<group>";
+		};
 		75C36DEE1DCCF77600F84214 = {
 			isa = PBXGroup;
 			children = (
+				75919B961DDCA353001F66EB /* levelBackgrounds */,
 				75E8F1921DD3CBF700A421E7 /* particleSystem */,
 				75E8F18E1DD3AE1400A421E7 /* Inventory */,
 				75E8F1861DD3A55A00A421E7 /* Sweets */,
@@ -321,6 +337,8 @@
 				75C36E121DCCF77700F84214 /* Info.plist */,
 				75C36DFA1DCCF77600F84214 /* Supporting Files */,
 				75C36E341DCD085000F84214 /* toDoList */,
+				75919B9A1DDCA4CE001F66EB /* levelDecider.h */,
+				75919B9B1DDCA4CE001F66EB /* levelDecider.m */,
 			);
 			path = Candy;
 			sourceTree = "<group>";
@@ -589,6 +607,7 @@
 			files = (
 				7525F77C1DCFBFF100B0510C /* inventoryButton.m in Sources */,
 				75C36E3A1DCE5CD900F84214 /* splashBacking.m in Sources */,
+				75919B991DDCA41C001F66EB /* defaultLevel.m in Sources */,
 				75C36E3E1DCE5F2000F84214 /* backgroundManager.m in Sources */,
 				75E8F1891DD3A57200A421E7 /* sweet.m in Sources */,
 				75C36E091DCCF77700F84214 /* GameViewController.m in Sources */,
@@ -601,6 +620,7 @@
 				75E8F1911DD3AE3A00A421E7 /* inventory.m in Sources */,
 				75C36E061DCCF77700F84214 /* GameScene.m in Sources */,
 				7525F7BE1DD256A500B0510C /* comboBar.m in Sources */,
+				75919B9C1DDCA4CE001F66EB /* levelDecider.m in Sources */,
 				75C36E4A1DCE793D00F84214 /* mainBackground.m in Sources */,
 				7525F79A1DD0EF9500B0510C /* menuHandler.m in Sources */,
 				75919B911DDB7A93001F66EB /* upgradeMenu.m in Sources */,

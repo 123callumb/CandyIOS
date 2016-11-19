@@ -24,7 +24,7 @@
     return sBack;
 }
 +(id)createUpgradesBacking {
-    SKSpriteNode *upgradeMenu = [SKSpriteNode spriteNodeWithImageNamed:@"menuUpgrades"];
+    SKSpriteNode *upgradeMenu = [SKSpriteNode spriteNodeWithImageNamed:@"menuUpgrade"];
     upgradeMenu.xScale = 0.43;
     upgradeMenu.yScale = 0.43;
     upgradeMenu.anchorPoint = CGPointMake(0.5, 0.55);

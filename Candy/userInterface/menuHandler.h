@@ -13,4 +13,5 @@
 +(void)menuBringBacker:(SKScene*)s;
 +(void)closeMenu:(SKScene*)s;
 +(void)setCurrentMenu: (int)num;
++(int)getCurrentMenu;
 @end

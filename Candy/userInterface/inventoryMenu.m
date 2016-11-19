@@ -37,7 +37,7 @@ bool created = false;
     
     created = true;
     
-    SKAction *slideUp = [SKAction moveToY:(main.position.y+s.frame.size.height) duration:0.5];
+    SKAction *slideUp = [SKAction moveToY:(main.position.y+s.frame.size.height) duration:0.3];
     [main runAction:slideUp completion:^{
         [menuBackButton createButton:s];
     }];
@@ -47,7 +47,7 @@ bool created = false;
     
     SKSpriteNode *main = (SKSpriteNode*)[s childNodeWithName:@"menuInventory"];
     
-    SKAction *slideDown = [SKAction moveToY:(-s.frame.size.height) duration:0.5];
+    SKAction *slideDown = [SKAction moveToY:(-s.frame.size.height) duration:0.3];
     [main runAction:slideDown completion:^{
             [menuBackButton removeButton:s];
     }];

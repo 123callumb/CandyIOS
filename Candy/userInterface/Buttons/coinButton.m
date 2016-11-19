@@ -25,6 +25,7 @@ bool isCoinBusy = false;
     [s addChild:buttonMoney];
 }
 +(void)touched: (SKNode *)but cs:(SKScene *)s{
+    if([menuHandler getCurrentMenu] == 4){
     [buttonAnimation changeState:but changeName:@"moneyButtonPressed" originalName:@"moneyButton"];
     //When the button has been pressed
     if(isCoinBusy){
@@ -39,6 +40,7 @@ bool isCoinBusy = false;
         
         //The Inventory has the id of 0
         [menuHandler setCurrentMenu:1];
+    }
     }
 
 }

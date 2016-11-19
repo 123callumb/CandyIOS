@@ -11,6 +11,7 @@
 #import "mainUI.h"
 #import "buttonHandler.h"
 #import "taps.h"
+#import "levelDecider.h"
 
 @implementation main
 
@@ -18,6 +19,7 @@
     //Set Background Foreground, mainly static!
     [backgroundManager mainScene:self];
     [mainUI drawUI:self];
+    [levelDecider createLevel:self];
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
