@@ -10,4 +10,6 @@
 
 @interface registerBoxes : SKSpriteNode
 +(void)registerBoxes:(SKNode *)obj currentScene:(SKScene *)s;
++(int)getSlotPressed;
++(void)setSlotPressed: (int)num;
 @end

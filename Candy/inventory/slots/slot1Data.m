@@ -10,23 +10,19 @@
 
 @implementation slot1Data
 
-+(int)getSweet: (NSString*)no; {
++(int)getSweet: (int)no; {
     
-    int s1Sweet = (int)[[NSUserDefaults standardUserDefaults] integerForKey:[NSString stringWithFormat:@"slot%@Sweet", no]];
-    
-    if (s1Sweet ==! NULL) {
-        return s1Sweet;
-    }else {
-        return 0;
-    }
+    int s1Sweet = (int)[[NSUserDefaults standardUserDefaults] integerForKey:[NSString stringWithFormat:@"slot%dSweet", no]];
+    return s1Sweet;
+
 }
-+(void)setSweet: (int)num sweetNum:(NSString*)no; {
-    [[NSUserDefaults standardUserDefaults] setInteger:(num) forKey:[NSString stringWithFormat:@"slot%@Sweet", no]];
++(void)setSweet: (int)num sweetNum:(int)no; {
+    [[NSUserDefaults standardUserDefaults] setInteger:(num) forKey:[NSString stringWithFormat:@"slot%dSweet", no]];
 }
 
-+(int)getFlavour: (NSString*)no; {
++(int)getFlavour: (int)no; {
     
-    int s1Flav = (int)[[NSUserDefaults standardUserDefaults] integerForKey:[NSString stringWithFormat:@"slot%@Flavour", no]];
+    int s1Flav = (int)[[NSUserDefaults standardUserDefaults] integerForKey:[NSString stringWithFormat:@"slot%dFlavour", no]];
     
     if (s1Flav ==! NULL) {
         return s1Flav;
@@ -34,13 +30,13 @@
         return 0;
     }
 }
-+(void)setFlavour: (int)num sweetNum:(NSString*)no;{
-    [[NSUserDefaults standardUserDefaults] setInteger:(num) forKey:[NSString stringWithFormat:@"slot%@Flavour", no]];
++(void)setFlavour: (int)num sweetNum:(int)no;{
+    [[NSUserDefaults standardUserDefaults] setInteger:(num) forKey:[NSString stringWithFormat:@"slot%dFlavour", no]];
 }
 
-+(int)getSweetness: (NSString*)no; {
++(int)getSweetness: (int)no; {
     
-    int s1Sweetness = (int)[[NSUserDefaults standardUserDefaults] integerForKey:[NSString stringWithFormat:@"slot%@Sweetness", no]];
+    int s1Sweetness = (int)[[NSUserDefaults standardUserDefaults] integerForKey:[NSString stringWithFormat:@"slot%dSweetness", no]];
     
     if (s1Sweetness ==! NULL) {
         return s1Sweetness;
@@ -48,7 +44,7 @@
         return 0;
     }
 }
-+(void)setSweetness: (int)num sweetNum:(NSString*)no; {
-    [[NSUserDefaults standardUserDefaults] setInteger:(num) forKey:[NSString stringWithFormat:@"slot%@Sweetness", no]];
++(void)setSweetness: (int)num sweetNum:(int)no; {
+    [[NSUserDefaults standardUserDefaults] setInteger:(num) forKey:[NSString stringWithFormat:@"slot%dSweetness", no]];
 }
 @end

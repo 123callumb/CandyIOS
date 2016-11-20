@@ -37,6 +37,7 @@
 		757CD1981DE188C000D07480 /* sweetCustomMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 757CD1971DE188C000D07480 /* sweetCustomMenu.m */; };
 		757CD19B1DE2083400D07480 /* sweetData.m in Sources */ = {isa = PBXBuildFile; fileRef = 757CD19A1DE2083400D07480 /* sweetData.m */; };
 		757CD19E1DE208E300D07480 /* slot1Data.m in Sources */ = {isa = PBXBuildFile; fileRef = 757CD19D1DE208E300D07480 /* slot1Data.m */; };
+		757CD1A11DE2200000D07480 /* sweetPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 757CD1A01DE2200000D07480 /* sweetPicker.m */; };
 		75919B911DDB7A93001F66EB /* upgradeMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 75919B901DDB7A93001F66EB /* upgradeMenu.m */; };
 		75919B951DDB82DF001F66EB /* mainUpgrade.m in Sources */ = {isa = PBXBuildFile; fileRef = 75919B941DDB82DF001F66EB /* mainUpgrade.m */; };
 		75919B991DDCA41C001F66EB /* defaultLevel.m in Sources */ = {isa = PBXBuildFile; fileRef = 75919B981DDCA41C001F66EB /* defaultLevel.m */; };
@@ -133,6 +134,8 @@
 		757CD19A1DE2083400D07480 /* sweetData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = sweetData.m; path = Candy/inventory/slots/sweetData.m; sourceTree = "<group>"; };
 		757CD19C1DE208E300D07480 /* slot1Data.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = slot1Data.h; path = Candy/inventory/slots/slot1Data.h; sourceTree = "<group>"; };
 		757CD19D1DE208E300D07480 /* slot1Data.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = slot1Data.m; path = Candy/inventory/slots/slot1Data.m; sourceTree = "<group>"; };
+		757CD19F1DE2200000D07480 /* sweetPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = sweetPicker.h; path = Candy/inventory/sweetPicker.h; sourceTree = "<group>"; };
+		757CD1A01DE2200000D07480 /* sweetPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = sweetPicker.m; path = Candy/inventory/sweetPicker.m; sourceTree = "<group>"; };
 		75919B8F1DDB7A93001F66EB /* upgradeMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = upgradeMenu.h; path = Candy/userInterface/upgradeMenu.h; sourceTree = "<group>"; };
 		75919B901DDB7A93001F66EB /* upgradeMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = upgradeMenu.m; path = Candy/userInterface/upgradeMenu.m; sourceTree = "<group>"; };
 		75919B931DDB82DF001F66EB /* mainUpgrade.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = mainUpgrade.h; path = Candy/userInterface/upgradeMenu/mainUpgrade.h; sourceTree = "<group>"; };
@@ -496,6 +499,8 @@
 				757CD1971DE188C000D07480 /* sweetCustomMenu.m */,
 				757CD1991DE2083400D07480 /* sweetData.h */,
 				757CD19A1DE2083400D07480 /* sweetData.m */,
+				757CD19F1DE2200000D07480 /* sweetPicker.h */,
+				757CD1A01DE2200000D07480 /* sweetPicker.m */,
 			);
 			name = Inventory;
 			sourceTree = "<group>";
@@ -689,6 +694,7 @@
 				75E8F1981DD7969500A421E7 /* statsMenu.m in Sources */,
 				75C36E461DCE752A00F84214 /* main.m in Sources */,
 				7525F7971DD08F8400B0510C /* inventoryMenu.m in Sources */,
+				757CD1A11DE2200000D07480 /* sweetPicker.m in Sources */,
 				75C36DFC1DCCF77600F84214 /* main.m in Sources */,
 				7525F7C21DD25C8500B0510C /* comboTimer.m in Sources */,
 				757CD1981DE188C000D07480 /* sweetCustomMenu.m in Sources */,

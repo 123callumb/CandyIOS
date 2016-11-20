@@ -9,12 +9,12 @@
 #import <SpriteKit/SpriteKit.h>
 
 @interface slot1Data : SKSpriteNode
-+(int)getSweet: (NSString*)no;
-+(void)setSweet: (int)num sweetNum:(NSString*)no;
++(int)getSweet: (int)no;
++(void)setSweet: (int)num sweetNum:(int)no;
 
-+(int)getFlavour: (NSString*)no;
-+(void)setFlavour: (int)num sweetNum:(NSString*)no;
++(int)getFlavour: (int)no;
++(void)setFlavour: (int)num sweetNum:(int)no;
 
-+(int)getSweetness: (NSString*)no;
-+(void)setSweetness: (int)num sweetNum:(NSString*)no;
++(int)getSweetness: (int)no;
++(void)setSweetness: (int)num sweetNum:(int)no;
 @end

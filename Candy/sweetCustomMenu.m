@@ -7,13 +7,16 @@
 //
 
 #import "sweetCustomMenu.h"
+#import "slot1Data.h"
+#import "registerBoxes.h"
+#import "sweetPicker.h"
 
 @implementation sweetCustomMenu
 bool createdBox1 = false;
 +(void)menuActions: (SKScene *)s inScene:(bool)in {
     
     if(!createdBox1){
-        SKSpriteNode *topHalf = [SKSpriteNode spriteNodeWithImageNamed:@"invTest"];
+        SKSpriteNode *topHalf = [SKSpriteNode spriteNodeWithImageNamed:@"invSlot"];
         SKSpriteNode *bottomHalf = [SKSpriteNode spriteNodeWithImageNamed:@"boxScreenBottom"];
         SKSpriteNode *boxTitle = [SKSpriteNode spriteNodeWithImageNamed:@"titleBox"];
         SKLabelNode *boxTitleText = [SKLabelNode labelNodeWithFontNamed:@"Coder's-Crux"];
@@ -29,8 +32,8 @@ bool createdBox1 = false;
         topHalf.position = CGPointMake(0, s.frame.size.height*2);
         bottomHalf.position = CGPointMake(0, -s.frame.size.height*2);
         boxTitle.position = CGPointMake(0, topHalf.frame.size.height/1.2);
-        
-        boxTitleText.text = @"BOX 1";
+    
+        boxTitleText.text = @"SET SLOT";
         boxTitleText.fontSize = 170;
         boxTitleText.fontColor = [UIColor blackColor];
         boxTitleText.position = CGPointMake(0, -boxTitle.frame.size.height/10);
@@ -43,6 +46,7 @@ bool createdBox1 = false;
         
         bottomHalf.anchorPoint = CGPointMake(0.5, 0.5);
         
+        [sweetPicker addSweetPicker:topHalf];
         [s addChild:topHalf];
         [s addChild:bottomHalf];
     }

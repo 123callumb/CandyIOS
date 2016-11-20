@@ -8,18 +8,32 @@
 
 #import "registerBoxes.h"
 #import "box1DataScreen.h"
+#import "sweetPicker.h"
 
 @implementation registerBoxes
+int slotNoPressed = 0;
 +(void)registerBoxes:(SKNode *)obj currentScene:(SKScene *)s {
-    
-    if([obj.name isEqualToString:@"box_1_1"] ||
-       [obj.name isEqualToString:@"box_1_2"] ||
-       [obj.name isEqualToString:@"box_1_3"] ||
-       [obj.name isEqualToString:@"box_1_4"]){
-        [box1DataScreen menuActions:s inScene:true];
-        SKAction *animate = [SKAction scaleBy:0.8 duration:0.2];
-        SKAction *inAnimate = [SKAction scaleBy:1.25 duration:0.2];
-        [obj runAction:animate completion:^{[obj runAction:inAnimate];}];
-    }
+    [self boxPresser:obj currentScene:s slotNo:1];
+    [self boxPresser:obj currentScene:s slotNo:2];
+    [self boxPresser:obj currentScene:s slotNo:3];
+    [self boxPresser:obj currentScene:s slotNo:4];
+    [sweetPicker onArrowPress:(SKSpriteNode*)obj scene:s];
 }
+
++(void)boxPresser:(SKNode *)obj currentScene:(SKScene *)s slotNo:(int)num {
+    
+    if([obj.name isEqualToString:[NSString stringWithFormat:@"box_1_%d", num]]){
+        [box1DataScreen menuActions:s inScene:true];
+        [self setSlotPressed:num];
+    }
+    
+}
++(int)getSlotPressed {
+    return slotNoPressed;
+}
++(void)setSlotPressed: (int)num {
+    slotNoPressed = num;
+}
+
+
 @end
