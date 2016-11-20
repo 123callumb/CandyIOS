@@ -12,6 +12,7 @@
 #import "buttonHandler.h"
 #import "taps.h"
 #import "levelDecider.h"
+#import "registerBoxes.h"
 
 @implementation main
 
@@ -30,6 +31,7 @@
     
     [taps onPressed:self location:loc];
     [buttonHandler registerButtons:obj currentScene:self];
+    [registerBoxes registerBoxes:obj currentScene:self];
     
 }
 

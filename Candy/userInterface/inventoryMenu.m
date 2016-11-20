@@ -10,6 +10,7 @@
 #import "menuBacking.h"
 #import "inventoryButton.h"
 #import "menuBackButton.h"
+#import "slotManager.h"
 
 @implementation inventoryMenu
 
@@ -21,6 +22,7 @@ bool created = false;
     SKSpriteNode *main = (SKSpriteNode *)[menuBacking createBacking];
     main.position = CGPointMake(0, -s.frame.size.height);
     main.name = @"menuInventory";
+    [slotManager addSlots:main];
     [s addChild:main];
     }
     
