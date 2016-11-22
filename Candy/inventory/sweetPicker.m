@@ -63,17 +63,15 @@ int sweetNum = 0;
 +(void)changeSweet: (SKScene*)s {
     SKSpriteNode *topNode = (SKSpriteNode*)[s childNodeWithName:@"invBoxTop"];
     SKSpriteNode *sweet = (SKSpriteNode*)[topNode childNodeWithName:@"sweetPicker"];
+    
     if(sweetNum == 0){
         sweet.texture = [SKTexture textureWithImageNamed:@"defaultSweet"];
-        [slot1Data setSweet:0 sweetNum:[registerBoxes getSlotPressed]];
     }
     if(sweetNum == 1){
         sweet.texture = [SKTexture textureWithImageNamed:@"bonbon"];
-        [slot1Data setSweet:1 sweetNum:[registerBoxes getSlotPressed]];
     }
     if(sweetNum == 2){
         sweet.texture = [SKTexture textureWithImageNamed:@"badSweet"];
-        [slot1Data setSweet:2 sweetNum:[registerBoxes getSlotPressed]];
     }
 }
 +(int)getSweetNum {
