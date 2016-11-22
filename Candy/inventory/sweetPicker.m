@@ -36,13 +36,15 @@ int sweetNum = 0;
     
     SKAction *shirnk = [SKAction scaleBy:0.8 duration:0.1];
     SKAction *grow = [SKAction scaleBy:1.25 duration:0.1];
-    
+    NSLog(@"%d", sweetNum);
+
     if([obj.name isEqualToString:@"arrowLeftSweetPicker"]){
         [obj runAction:shirnk completion:^{
             [obj runAction:grow];
             if(sweetNum > 0){
                 sweetNum = sweetNum - 1;
                 [self changeSweet:s];
+                NSLog(@"%d", sweetNum);
             }
         }];
     }
@@ -52,6 +54,8 @@ int sweetNum = 0;
             if(sweetNum < 2){
                 sweetNum = sweetNum + 1;
                 [self changeSweet:s];
+                NSLog(@"%d", sweetNum);
+
             }
         }];
     }
@@ -59,15 +63,15 @@ int sweetNum = 0;
 +(void)changeSweet: (SKScene*)s {
     SKSpriteNode *topNode = (SKSpriteNode*)[s childNodeWithName:@"invBoxTop"];
     SKSpriteNode *sweet = (SKSpriteNode*)[topNode childNodeWithName:@"sweetPicker"];
-    if([self getSweetNum] == 0){
+    if(sweetNum == 0){
         sweet.texture = [SKTexture textureWithImageNamed:@"defaultSweet"];
         [slot1Data setSweet:0 sweetNum:[registerBoxes getSlotPressed]];
     }
-    if([self getSweetNum] == 1){
+    if(sweetNum == 1){
         sweet.texture = [SKTexture textureWithImageNamed:@"bonbon"];
         [slot1Data setSweet:1 sweetNum:[registerBoxes getSlotPressed]];
     }
-    if([self getSweetNum] == 2){
+    if(sweetNum == 2){
         sweet.texture = [SKTexture textureWithImageNamed:@"badSweet"];
         [slot1Data setSweet:2 sweetNum:[registerBoxes getSlotPressed]];
     }
