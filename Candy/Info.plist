@@ -32,8 +32,6 @@
 	<true/>
 	<key>UIAppFonts</key>
 	<array>
-		<string>arcade.tff</string>
-		<string>pixel.tff</string>
 		<string>coders_crux.ttf</string>
 	</array>
 	<key>UISupportedInterfaceOrientations</key>

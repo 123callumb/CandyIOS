@@ -23,14 +23,11 @@
 		7525F7A81DD216D800B0510C /* money.m in Sources */ = {isa = PBXBuildFile; fileRef = 7525F7A71DD216D800B0510C /* money.m */; };
 		7525F7B11DD2242100B0510C /* taps.m in Sources */ = {isa = PBXBuildFile; fileRef = 7525F7B01DD2242100B0510C /* taps.m */; };
 		7525F7B31DD232E600B0510C /* pixel.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7525F7B21DD232E600B0510C /* pixel.ttf */; };
-		7525F7BB1DD23D5A00B0510C /* arcade.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7525F7BA1DD23D5A00B0510C /* arcade.ttf */; };
 		7525F7BE1DD256A500B0510C /* comboBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 7525F7BD1DD256A500B0510C /* comboBar.m */; };
 		7525F7C21DD25C8500B0510C /* comboTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7525F7C11DD25C8500B0510C /* comboTimer.m */; };
 		7525F7C51DD25C9100B0510C /* combo.m in Sources */ = {isa = PBXBuildFile; fileRef = 7525F7C41DD25C9100B0510C /* combo.m */; };
 		7525F7C61DD287A300B0510C /* pixel.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7525F7B21DD232E600B0510C /* pixel.ttf */; };
 		7525F7C71DD287A400B0510C /* pixel.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7525F7B21DD232E600B0510C /* pixel.ttf */; };
-		7525F7C81DD287AE00B0510C /* arcade.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7525F7BA1DD23D5A00B0510C /* arcade.ttf */; };
-		7525F7C91DD287AF00B0510C /* arcade.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7525F7BA1DD23D5A00B0510C /* arcade.ttf */; };
 		7525F7CC1DD2931900B0510C /* coders_crux.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7525F7CB1DD2931900B0510C /* coders_crux.ttf */; };
 		757CD1921DE1383F00D07480 /* box1DataScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 757CD1911DE1383F00D07480 /* box1DataScreen.m */; };
 		757CD1951DE1598100D07480 /* registerBoxes.m in Sources */ = {isa = PBXBuildFile; fileRef = 757CD1941DE1598100D07480 /* registerBoxes.m */; };
@@ -117,7 +114,6 @@
 		7525F7AF1DD2242100B0510C /* taps.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = taps.h; path = Candy/tap/taps.h; sourceTree = "<group>"; };
 		7525F7B01DD2242100B0510C /* taps.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = taps.m; path = Candy/tap/taps.m; sourceTree = "<group>"; };
 		7525F7B21DD232E600B0510C /* pixel.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = pixel.ttf; path = Candy/fonts/pixel.ttf; sourceTree = "<group>"; };
-		7525F7BA1DD23D5A00B0510C /* arcade.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = arcade.ttf; path = ../../../../../../../../Documents/Kilcal/Candy/Project/Candy/Candy/fonts/arcade.ttf; sourceTree = BUILT_PRODUCTS_DIR; };
 		7525F7BC1DD256A500B0510C /* comboBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = comboBar.h; path = Candy/userInterface/comboBar.h; sourceTree = "<group>"; };
 		7525F7BD1DD256A500B0510C /* comboBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = comboBar.m; path = Candy/userInterface/comboBar.m; sourceTree = "<group>"; };
 		7525F7C01DD25C8500B0510C /* comboTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = comboTimer.h; path = Candy/comboSystem/comboTimer.h; sourceTree = "<group>"; };
@@ -312,7 +308,6 @@
 		7525F7CA1DD2930400B0510C /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				7525F7BA1DD23D5A00B0510C /* arcade.ttf */,
 				7525F7B21DD232E600B0510C /* pixel.ttf */,
 				7525F7CB1DD2931900B0510C /* coders_crux.ttf */,
 			);
@@ -634,7 +629,6 @@
 				75C36E111DCCF77700F84214 /* LaunchScreen.storyboard in Resources */,
 				75C36E351DCD085000F84214 /* toDoList in Resources */,
 				75C36E031DCCF77700F84214 /* Actions.sks in Resources */,
-				7525F7BB1DD23D5A00B0510C /* arcade.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -642,7 +636,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7525F7C81DD287AE00B0510C /* arcade.ttf in Resources */,
 				7525F7C61DD287A300B0510C /* pixel.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -651,7 +644,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7525F7C91DD287AF00B0510C /* arcade.ttf in Resources */,
 				7525F7C71DD287A400B0510C /* pixel.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -855,7 +847,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = T5F4852ZMN;
 				INFOPLIST_FILE = Candy/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = kilcal.Candy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -868,7 +860,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = T5F4852ZMN;
 				INFOPLIST_FILE = Candy/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = kilcal.Candy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
