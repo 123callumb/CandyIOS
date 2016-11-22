@@ -9,6 +9,7 @@
 #import "registerBoxes.h"
 #import "box1DataScreen.h"
 #import "sweetPicker.h"
+#import "doneButton.h"
 
 @implementation registerBoxes
 int slotNoPressed = 0;
@@ -18,6 +19,9 @@ int slotNoPressed = 0;
     [self boxPresser:obj currentScene:s slotNo:3];
     [self boxPresser:obj currentScene:s slotNo:4];
     [sweetPicker onArrowPress:(SKSpriteNode*)obj scene:s];
+    if([obj.name isEqualToString:@"buttonDone"]){
+    [doneButton onTouch:obj currentScene:s];
+    }
 }
 
 +(void)boxPresser:(SKNode *)obj currentScene:(SKScene *)s slotNo:(int)num {
@@ -25,6 +29,7 @@ int slotNoPressed = 0;
     if([obj.name isEqualToString:[NSString stringWithFormat:@"box_1_%d", num]]){
         [box1DataScreen menuActions:s inScene:true];
         [self setSlotPressed:num];
+        [self cheekyInteraction:(SKSpriteNode*)obj];
     }
     
 }
@@ -33,6 +38,13 @@ int slotNoPressed = 0;
 }
 +(void)setSlotPressed: (int)num {
     slotNoPressed = num;
+}
++(void)cheekyInteraction: (SKSpriteNode*)s {
+    SKAction *shrink = [SKAction scaleBy:0.8 duration:0.1];
+    SKAction *grow = [SKAction scaleBy:1.25 duration:0.1];
+    [s runAction:shrink completion:^{
+        [s runAction:grow];
+    }];
 }
 
 

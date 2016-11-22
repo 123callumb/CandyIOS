@@ -11,5 +11,5 @@
 @interface inventoryMenu : SKSpriteNode
 +(void)menuActions: (SKScene *)s inScene:(bool)in;
 +(void)createMenu: (SKScene *)s node:(SKSpriteNode *)main;
-+(void)removeMenu: (SKScene *)s;
++(void)removeMenu: (SKScene *)s node:(SKSpriteNode *)m;
 @end

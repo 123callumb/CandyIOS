@@ -7,20 +7,25 @@
 //
 
 #import "sweetData.h"
+#import "slot1Data.h"
 
 @implementation sweetData
-+(void)selectVariables: (int)i {
-    if(i == 0){
-    
++(id)sweetFromSlot: (int)i {
+    SKSpriteNode *sweet = [SKSpriteNode spriteNodeWithImageNamed:[self textureDecider:i]];
+    return sweet;
+}
++(NSString*)textureDecider: (int)i {
+    if([slot1Data getSweet:i] == 0){
+        return @"defaultSweet";
     }
-    if(i == 1){
-    
+    if([slot1Data getSweet:i] == 1){
+        return @"bonbon";
     }
-    if(i == 2){
-    
+    if([slot1Data getSweet:i] == 2){
+        return @"badSweet";
     }
-    if(i == 3){
-    
+    else {
+    return @"";
     }
 }
 @end

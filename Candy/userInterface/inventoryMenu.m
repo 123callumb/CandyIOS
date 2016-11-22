@@ -17,27 +17,23 @@
 bool created = false;
 
 +(void)menuActions: (SKScene *)s inScene:(bool)in {
-    
-    if(!created){
+
     SKSpriteNode *main = (SKSpriteNode *)[menuBacking createBacking];
     main.position = CGPointMake(0, -s.frame.size.height);
     main.name = @"menuInventory";
     [slotManager addSlots:main];
     [s addChild:main];
-    }
     
-    SKSpriteNode *main = (SKSpriteNode*)[s childNodeWithName:@"menuInventory"];
+    SKSpriteNode *main_ = (SKSpriteNode*)[s childNodeWithName:@"menuInventory"];
     
     if(in){
-        [self createMenu:s node:main];
+        [self createMenu:s node:main_];
     }else if(!in) {
-        [self removeMenu:s];
+        [self removeMenu:s node:main_];
     }
 }
 
 +(void)createMenu: (SKScene *)s node:(SKSpriteNode *)main {
-    
-    created = true;
     
     SKAction *slideUp = [SKAction moveToY:(main.position.y+s.frame.size.height) duration:0.3];
     [main runAction:slideUp completion:^{
@@ -45,13 +41,14 @@ bool created = false;
     }];
 }
 
-+(void)removeMenu: (SKScene *)s {
++(void)removeMenu: (SKScene *)s node:(SKSpriteNode*)m {
     
     SKSpriteNode *main = (SKSpriteNode*)[s childNodeWithName:@"menuInventory"];
     
     SKAction *slideDown = [SKAction moveToY:(-s.frame.size.height) duration:0.3];
     [main runAction:slideDown completion:^{
             [menuBackButton removeButton:s];
+            [main removeFromParent];
     }];
 }
 

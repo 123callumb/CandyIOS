@@ -10,7 +10,7 @@
 
 @implementation slot
 +(id)slot: (NSString*)name {
-    SKSpriteNode *box = [SKSpriteNode spriteNodeWithImageNamed:@"invBox"];
+    SKSpriteNode *box = [SKSpriteNode spriteNodeWithImageNamed:@"invBox2"];
     box.zPosition = 10;
     box.anchorPoint = CGPointMake(0.5, 0.5);
     SKLabelNode *boxName = [SKLabelNode labelNodeWithText:name];

@@ -12,4 +12,5 @@
 +(void)addSweetPicker: (SKSpriteNode*)s;
 +(void)onArrowPress: (SKSpriteNode*)obj scene:(SKScene*)s;
 +(int)getSweetNum;
++(void)resetSweetNum;
 @end

@@ -10,14 +10,14 @@
 #import "slot1Data.h"
 #import "registerBoxes.h"
 #import "sweetPicker.h"
+#import "doneButton.h"
 
 @implementation sweetCustomMenu
-bool createdBox1 = false;
+
 +(void)menuActions: (SKScene *)s inScene:(bool)in {
     
-    if(!createdBox1){
         SKSpriteNode *topHalf = [SKSpriteNode spriteNodeWithImageNamed:@"invSlot"];
-        SKSpriteNode *bottomHalf = [SKSpriteNode spriteNodeWithImageNamed:@"boxScreenBottom"];
+        SKSpriteNode *bottomHalf = [SKSpriteNode spriteNodeWithImageNamed:@"bottomInvHalf"];
         SKSpriteNode *boxTitle = [SKSpriteNode spriteNodeWithImageNamed:@"titleBox"];
         SKLabelNode *boxTitleText = [SKLabelNode labelNodeWithFontNamed:@"Coder's-Crux"];
         
@@ -47,9 +47,9 @@ bool createdBox1 = false;
         bottomHalf.anchorPoint = CGPointMake(0.5, 0.5);
         
         [sweetPicker addSweetPicker:topHalf];
+        [doneButton createButton:bottomHalf];
         [s addChild:topHalf];
         [s addChild:bottomHalf];
-    }
     
     SKSpriteNode *boxMenu = (SKSpriteNode*)[s childNodeWithName:@"invBoxTop"];
     SKSpriteNode *boxMenuBottom = (SKSpriteNode*)[s childNodeWithName:@"invBoxBottom"];
@@ -57,13 +57,11 @@ bool createdBox1 = false;
     if(in){
         [self createMenu:s node:boxMenu node2:boxMenuBottom];
     }else if(!in) {
-        [self removeMenu:s];
+        [self removeMenu:s node:boxMenu node2:boxMenuBottom];
     }
 }
 
 +(void)createMenu: (SKScene *)s node:(SKSpriteNode *)main node2:(SKSpriteNode *)main2 {
-    
-    createdBox1 = true;
     
     SKAction *slideUp = [SKAction moveToY:(0) duration:0.3];
     SKAction *slideDown = [SKAction moveToY:-s.frame.size.height/2.3 duration:0.3];
@@ -71,12 +69,16 @@ bool createdBox1 = false;
     [main2 runAction:slideDown];
 }
 
-+(void)removeMenu: (SKScene *)s {
++(void)removeMenu: (SKScene *)s node:(SKSpriteNode *)main node2:(SKSpriteNode *)main2 {
     
-    SKSpriteNode *main = (SKSpriteNode*)[s childNodeWithName:@"boxMenu1"];
+    SKAction *slideUp = [SKAction moveToY:-s.frame.size.height duration:0.7];
+    SKAction *slideDown = [SKAction moveToY:s.frame.size.height duration:0.7];
     
-    SKAction *slideDown = [SKAction moveToY:(-s.frame.size.height) duration:0.3];
     [main runAction:slideDown completion:^{
+        [main removeFromParent];
+    }];
+    [main2 runAction:slideUp completion:^{
+        [main2 removeFromParent];
     }];
 }
 @end

@@ -7,6 +7,8 @@
 //
 
 #import "sweetPicker.h"
+#import "slot1Data.h"
+#import "registerBoxes.h"
 
 @implementation sweetPicker
 int sweetNum = 0;
@@ -47,7 +49,7 @@ int sweetNum = 0;
     if([obj.name isEqualToString:@"arrowRightSweetPicker"]){
         [obj runAction:shirnk completion:^{
             [obj runAction:grow];
-            if(sweetNum < 4){
+            if(sweetNum < 2){
                 sweetNum = sweetNum + 1;
                 [self changeSweet:s];
             }
@@ -55,17 +57,25 @@ int sweetNum = 0;
     }
 }
 +(void)changeSweet: (SKScene*)s {
-    SKSpriteNode *sweet = (SKSpriteNode*)[s childNodeWithName:@"sweetPicker"];
+    SKSpriteNode *topNode = (SKSpriteNode*)[s childNodeWithName:@"invBoxTop"];
+    SKSpriteNode *sweet = (SKSpriteNode*)[topNode childNodeWithName:@"sweetPicker"];
     if([self getSweetNum] == 0){
         sweet.texture = [SKTexture textureWithImageNamed:@"defaultSweet"];
-        NSLog(@"hi default");
+        [slot1Data setSweet:0 sweetNum:[registerBoxes getSlotPressed]];
     }
     if([self getSweetNum] == 1){
-        sweet.texture = [SKTexture textureWithImageNamed:@"dunnoButton"];
-        NSLog(@"hi Dunno");
+        sweet.texture = [SKTexture textureWithImageNamed:@"bonbon"];
+        [slot1Data setSweet:1 sweetNum:[registerBoxes getSlotPressed]];
+    }
+    if([self getSweetNum] == 2){
+        sweet.texture = [SKTexture textureWithImageNamed:@"badSweet"];
+        [slot1Data setSweet:2 sweetNum:[registerBoxes getSlotPressed]];
     }
 }
 +(int)getSweetNum {
     return sweetNum;
+}
++(void)resetSweetNum {
+    sweetNum = 0;
 }
 @end

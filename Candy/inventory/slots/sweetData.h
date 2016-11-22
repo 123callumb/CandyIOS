@@ -9,5 +9,5 @@
 #import <SpriteKit/SpriteKit.h>
 
 @interface sweetData : SKSpriteNode
-
++(id)sweetFromSlot: (int)i;
 @end

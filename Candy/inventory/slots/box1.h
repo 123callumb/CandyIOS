@@ -10,4 +10,5 @@
 
 @interface box1 : SKSpriteNode
 +(void)addbox:(SKSpriteNode*)s;
++(void)refreshBoxes: (SKScene*)s;
 @end

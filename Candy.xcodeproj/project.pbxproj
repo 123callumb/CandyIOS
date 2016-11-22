@@ -59,6 +59,7 @@
 		75C36E421DCE63E500F84214 /* mainTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 75C36E411DCE63E500F84214 /* mainTransition.m */; };
 		75C36E461DCE752A00F84214 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 75C36E451DCE752A00F84214 /* main.m */; };
 		75C36E4A1DCE793D00F84214 /* mainBackground.m in Sources */ = {isa = PBXBuildFile; fileRef = 75C36E491DCE793D00F84214 /* mainBackground.m */; };
+		75E1B5D71DE29B3600F7C50F /* doneButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E1B5D61DE29B3600F7C50F /* doneButton.m */; };
 		75E8F1891DD3A57200A421E7 /* sweet.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E8F1881DD3A57200A421E7 /* sweet.m */; };
 		75E8F18D1DD3AB0300A421E7 /* defaultSweet.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E8F18C1DD3AB0300A421E7 /* defaultSweet.m */; };
 		75E8F1911DD3AE3A00A421E7 /* inventory.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E8F1901DD3AE3A00A421E7 /* inventory.m */; };
@@ -175,6 +176,8 @@
 		75C36E451DCE752A00F84214 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		75C36E481DCE793D00F84214 /* mainBackground.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mainBackground.h; sourceTree = "<group>"; };
 		75C36E491DCE793D00F84214 /* mainBackground.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mainBackground.m; sourceTree = "<group>"; };
+		75E1B5D51DE29B3600F7C50F /* doneButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = doneButton.h; path = Candy/inventory/doneButton.h; sourceTree = "<group>"; };
+		75E1B5D61DE29B3600F7C50F /* doneButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = doneButton.m; path = Candy/inventory/doneButton.m; sourceTree = "<group>"; };
 		75E8F1871DD3A57200A421E7 /* sweet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = sweet.h; path = Candy/sweet/sweet.h; sourceTree = "<group>"; };
 		75E8F1881DD3A57200A421E7 /* sweet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = sweet.m; path = Candy/sweet/sweet.m; sourceTree = "<group>"; };
 		75E8F18B1DD3AB0300A421E7 /* defaultSweet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = defaultSweet.h; path = Candy/sweet/defaultSweet.h; sourceTree = "<group>"; };
@@ -501,6 +504,8 @@
 				757CD19A1DE2083400D07480 /* sweetData.m */,
 				757CD19F1DE2200000D07480 /* sweetPicker.h */,
 				757CD1A01DE2200000D07480 /* sweetPicker.m */,
+				75E1B5D51DE29B3600F7C50F /* doneButton.h */,
+				75E1B5D61DE29B3600F7C50F /* doneButton.m */,
 			);
 			name = Inventory;
 			sourceTree = "<group>";
@@ -687,6 +692,7 @@
 				7525F78B1DCFDD8400B0510C /* sweetsButton.m in Sources */,
 				7525F7911DCFF8FB00B0510C /* menuBacking.m in Sources */,
 				75E8F19B1DD8F6E500A421E7 /* menuBackButton.m in Sources */,
+				75E1B5D71DE29B3600F7C50F /* doneButton.m in Sources */,
 				75919B951DDB82DF001F66EB /* mainUpgrade.m in Sources */,
 				7525F7A81DD216D800B0510C /* money.m in Sources */,
 				7525F7941DD08C9D00B0510C /* coinBarSprite.m in Sources */,
