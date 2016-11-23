@@ -37,6 +37,11 @@
 
 //These methods are new and pretty dank af!
 -(void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event{
+    UITouch *tap = [touches anyObject];
+    CGPoint loc = [tap locationInNode:self];
+    SKNode *obj = [self nodeAtPoint:loc];
+    
+    [taps onMovement:self location:loc node:obj];
 }
 
 -(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {

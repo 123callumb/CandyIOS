@@ -10,6 +10,7 @@
 #import "box1DataScreen.h"
 #import "sweetPicker.h"
 #import "doneButton.h"
+#import "flavourPicker.h"
 
 @implementation registerBoxes
 int slotNoPressed = 0;
@@ -19,6 +20,7 @@ int slotNoPressed = 0;
     [self boxPresser:obj currentScene:s slotNo:3];
     [self boxPresser:obj currentScene:s slotNo:4];
     [sweetPicker onArrowPress:(SKSpriteNode*)obj scene:s];
+    [flavourPicker onArrowPress:(SKSpriteNode*)obj scene:s];
     if([obj.name isEqualToString:@"buttonDone"]){
     [doneButton onTouch:obj currentScene:s];
     }

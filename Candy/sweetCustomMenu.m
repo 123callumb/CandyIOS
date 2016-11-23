@@ -11,12 +11,14 @@
 #import "registerBoxes.h"
 #import "sweetPicker.h"
 #import "doneButton.h"
+#import "flavourPicker.h"
+#import "sweetnessSlider.h"
 
 @implementation sweetCustomMenu
 
 +(void)menuActions: (SKScene *)s inScene:(bool)in {
     
-        SKSpriteNode *topHalf = [SKSpriteNode spriteNodeWithImageNamed:@"invSlot"];
+        SKSpriteNode *topHalf = [SKSpriteNode spriteNodeWithImageNamed:@"sweetInv"];
         SKSpriteNode *bottomHalf = [SKSpriteNode spriteNodeWithImageNamed:@"bottomInvHalf"];
         SKSpriteNode *boxTitle = [SKSpriteNode spriteNodeWithImageNamed:@"titleBox"];
         SKLabelNode *boxTitleText = [SKLabelNode labelNodeWithFontNamed:@"Coder's-Crux"];
@@ -45,9 +47,11 @@
         bottomHalf.zPosition = 15;
         
         bottomHalf.anchorPoint = CGPointMake(0.5, 0.5);
-        
+    
+        [sweetnessSlider addSlider:topHalf];
         [sweetPicker addSweetPicker:topHalf];
         [doneButton createButton:bottomHalf];
+        [flavourPicker addFlavourPicker:topHalf];
         [s addChild:topHalf];
         [s addChild:bottomHalf];
     

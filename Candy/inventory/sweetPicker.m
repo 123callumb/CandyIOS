@@ -36,7 +36,6 @@ int sweetNum = 0;
     
     SKAction *shirnk = [SKAction scaleBy:0.8 duration:0.1];
     SKAction *grow = [SKAction scaleBy:1.25 duration:0.1];
-    NSLog(@"%d", sweetNum);
 
     if([obj.name isEqualToString:@"arrowLeftSweetPicker"]){
         [obj runAction:shirnk completion:^{
@@ -44,7 +43,6 @@ int sweetNum = 0;
             if(sweetNum > 0){
                 sweetNum = sweetNum - 1;
                 [self changeSweet:s];
-                NSLog(@"%d", sweetNum);
             }
         }];
     }
@@ -54,8 +52,6 @@ int sweetNum = 0;
             if(sweetNum < 2){
                 sweetNum = sweetNum + 1;
                 [self changeSweet:s];
-                NSLog(@"%d", sweetNum);
-
             }
         }];
     }

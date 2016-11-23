@@ -9,6 +9,8 @@
 #import "box1.h"
 #import "slot.h"
 #import "sweetData.h"
+#import "flavourPicker.h"
+#import "slot1Data.h"
 
 @implementation box1
 +(void)addbox:(SKSpriteNode*)s {
@@ -19,36 +21,43 @@
     [self addCheekyBars:s];
 }
 +(void)addbox1:(SKSpriteNode*)s {
-    SKSpriteNode *box = [slot slot:@"BOX 1"];
+    SKSpriteNode *box = [slot slot:[flavourPicker determineFlavourString:[slot1Data getFlavour:1]]];
     box.position = CGPointMake(-s.frame.size.width/2.2, s.frame.size.height/4);
     box.name = @"box_1_1";
     SKSpriteNode *sweet = [sweetData sweetFromSlot:1];
     [box addChild:sweet];
     [s addChild:box];
+    NSLog(@"Box 1 = %@", [flavourPicker determineFlavourString:[slot1Data getFlavour:1]]);
 }
 +(void)addbox2:(SKSpriteNode*)s; {
-    SKSpriteNode *box = [slot slot:@"BOX 2"];
+    SKSpriteNode *box = [slot slot:[flavourPicker determineFlavourString:[slot1Data getFlavour:2]]];
     box.position = CGPointMake(s.frame.size.width/2.2, s.frame.size.height/4);
     box.name = @"box_1_2";
     SKSpriteNode *sweet = [sweetData sweetFromSlot:2];
     [box addChild:sweet];
     [s addChild:box];
+    NSLog(@"Box 2 = %@", [flavourPicker determineFlavourString:[slot1Data getFlavour:2]]);
+
 }
 +(void)addbox3:(SKSpriteNode*)s; {
-    SKSpriteNode *box = [slot slot:@"BOX 3"];
+    SKSpriteNode *box = [slot slot:[flavourPicker determineFlavourString:[slot1Data getFlavour:3]]];
     box.position = CGPointMake(-s.frame.size.width/2.2, -s.frame.size.height/2.1);
     box.name = @"box_1_3";
     SKSpriteNode *sweet = [sweetData sweetFromSlot:3];
     [box addChild:sweet];
     [s addChild:box];
+    NSLog(@"Box 3 = %@", [flavourPicker determineFlavourString:[slot1Data getFlavour:3]]);
+
 }
 +(void)addbox4:(SKSpriteNode*)s; {
-    SKSpriteNode *box = [slot slot:@"BOX 4"];
+    SKSpriteNode *box = [slot slot:[flavourPicker determineFlavourString:[slot1Data getFlavour:4]]];
     box.position = CGPointMake(s.frame.size.width/2.2, -s.frame.size.height/2.1);
     box.name = @"box_1_4";
     SKSpriteNode *sweet = [sweetData sweetFromSlot:4];
     [box addChild:sweet];
     [s addChild:box];
+    NSLog(@"Box 4 = %@", [flavourPicker determineFlavourString:[slot1Data getFlavour:4]]);
+
 }
 +(void)addCheekyBars: (SKSpriteNode*)s {
     SKSpriteNode *up = [SKSpriteNode spriteNodeWithImageNamed:@"upMenuBlue"];

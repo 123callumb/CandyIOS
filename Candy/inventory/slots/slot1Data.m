@@ -23,12 +23,7 @@
 +(int)getFlavour: (int)no; {
     
     int s1Flav = (int)[[NSUserDefaults standardUserDefaults] integerForKey:[NSString stringWithFormat:@"slot%dFlavour", no]];
-    
-    if (s1Flav ==! NULL) {
-        return s1Flav;
-    }else {
-        return 0;
-    }
+    return s1Flav;
 }
 +(void)setFlavour: (int)num sweetNum:(int)no;{
     [[NSUserDefaults standardUserDefaults] setInteger:(num) forKey:[NSString stringWithFormat:@"slot%dFlavour", no]];
@@ -37,12 +32,7 @@
 +(int)getSweetness: (int)no; {
     
     int s1Sweetness = (int)[[NSUserDefaults standardUserDefaults] integerForKey:[NSString stringWithFormat:@"slot%dSweetness", no]];
-    
-    if (s1Sweetness ==! NULL) {
-        return s1Sweetness;
-    }else {
-        return 0;
-    }
+    return s1Sweetness;
 }
 +(void)setSweetness: (int)num sweetNum:(int)no; {
     [[NSUserDefaults standardUserDefaults] setInteger:(num) forKey:[NSString stringWithFormat:@"slot%dSweetness", no]];

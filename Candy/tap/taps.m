@@ -15,6 +15,7 @@
 #import "defaultSweet.h"
 #import "nodeToParticle.h"
 #import "menuHandler.h"
+#import "sweetnessSlider.h"
 
 @implementation taps
 +(void)onPressed: (SKScene *)s location:(CGPoint)p {
@@ -27,5 +28,8 @@
 }
 +(void)onRelease: (SKScene*)s {
     
+}
++(void)onMovement: (SKScene*)s location:(CGPoint)p node:(SKNode*)n {
+    [sweetnessSlider moveSlider:(SKSpriteNode*)n location:p];
 }
 @end
