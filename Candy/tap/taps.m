@@ -22,7 +22,6 @@
 +(void)onPressed: (SKScene *)s location:(CGPoint)p {
     if([menuHandler getCurrentMenu] == 4){
     [coinBarSprite updateText:s];
-    [money addBalance:1];
     [determineSweetTap spawn:s location:p];
     }
 }

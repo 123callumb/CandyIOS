@@ -7,6 +7,7 @@
 //
 
 #import "nodeToParticle.h"
+#import "determineSweetTap.h"
 
 @implementation nodeToParticle
 +(void)particleFlyAnimation: (SKSpriteNode*)n scene:(SKScene *)s scaleNo:(float)scale;{
@@ -16,26 +17,34 @@
     
 }
 +(void)applyImpluse: (SKSpriteNode*)l1 scene:(SKScene*)s scaleNo:(float)scale; {
+    
+    float fadeTime = 0.25;
+    
+    
     [s addChild:l1];
     l1.xScale = scale;
     l1.yScale = scale;
     
     
-    l1.physicsBody = [SKPhysicsBody bodyWithTexture:l1.texture size:l1.texture.size];
+   // l1.physicsBody = [SKPhysicsBody bodyWithTexture:l1.texture size:l1.texture.size];
     
-    int lowerBoundX = -500;
-    int upperBoundX = 500;
+    int lowerBoundX = -200;
+    int upperBoundX = 200;
     int rndValueX = lowerBoundX + arc4random() % (upperBoundX - lowerBoundX);
-
-    SKAction *leftFly = [SKAction applyImpulse:CGVectorMake(rndValueX,600) duration:0.1];
-    SKAction *killTimer = [SKAction fadeOutWithDuration:0.1];
     
-    [l1 runAction:leftFly completion:^{
-        [l1 runAction:killTimer completion:^{
-            [l1 removeFromParent];
+    int lowerBoundY = -200;
+    int upperBoundY = 200;
+    int rndValueY = lowerBoundY + arc4random() % (upperBoundY - lowerBoundY);
 
+
+    SKAction *leftFly = [SKAction moveBy:CGVectorMake(rndValueX,rndValueY) duration:0.25];
+    SKAction *killTimer = [SKAction fadeOutWithDuration:fadeTime];
+    
+    [l1 runAction:killTimer completion:^{
+            [l1 removeFromParent];
         }];
-    }];
+    [l1 runAction:leftFly];
+
 
 }
 @end

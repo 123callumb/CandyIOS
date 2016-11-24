@@ -9,5 +9,5 @@
 #import <SpriteKit/SpriteKit.h>
 
 @interface inventory : SKNode
-
++(int)slotCalculation: (int)slotNumber;
 @end

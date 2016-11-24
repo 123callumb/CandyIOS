@@ -10,4 +10,5 @@
 
 @interface determineSweetTap : SKSpriteNode
 +(void)spawn: (SKScene *)s location:(CGPoint)p;
++(int)getInventoryUnlocked;
 @end
