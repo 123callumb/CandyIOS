@@ -27,7 +27,6 @@
     SKSpriteNode *sweet = [sweetData sweetFromSlot:1];
     [box addChild:sweet];
     [s addChild:box];
-    NSLog(@"Box 1 = %@", [flavourPicker determineFlavourString:[slot1Data getFlavour:1]]);
 }
 +(void)addbox2:(SKSpriteNode*)s; {
     SKSpriteNode *box = [slot slot:[flavourPicker determineFlavourString:[slot1Data getFlavour:2]]];
@@ -36,7 +35,6 @@
     SKSpriteNode *sweet = [sweetData sweetFromSlot:2];
     [box addChild:sweet];
     [s addChild:box];
-    NSLog(@"Box 2 = %@", [flavourPicker determineFlavourString:[slot1Data getFlavour:2]]);
 
 }
 +(void)addbox3:(SKSpriteNode*)s; {
@@ -46,7 +44,6 @@
     SKSpriteNode *sweet = [sweetData sweetFromSlot:3];
     [box addChild:sweet];
     [s addChild:box];
-    NSLog(@"Box 3 = %@", [flavourPicker determineFlavourString:[slot1Data getFlavour:3]]);
 
 }
 +(void)addbox4:(SKSpriteNode*)s; {
@@ -56,7 +53,6 @@
     SKSpriteNode *sweet = [sweetData sweetFromSlot:4];
     [box addChild:sweet];
     [s addChild:box];
-    NSLog(@"Box 4 = %@", [flavourPicker determineFlavourString:[slot1Data getFlavour:4]]);
 
 }
 +(void)addCheekyBars: (SKSpriteNode*)s {

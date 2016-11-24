@@ -9,5 +9,5 @@
 #import <SpriteKit/SpriteKit.h>
 
 @interface defaultSweet : SKSpriteNode
-+(id)addSweet: (SKScene*)s pos:(CGPoint)p;
++(id)addSweet: (SKScene*)s pos:(CGPoint)p slotID:(int)slot;
 @end

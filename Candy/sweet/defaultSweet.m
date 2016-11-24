@@ -8,12 +8,14 @@
 
 #import "defaultSweet.h"
 #import "sweet.h"
+#import "sweetData.h"
 
 @implementation defaultSweet
 int upgradeValue = 0;
 
-+(id)addSweet: (SKScene*)s pos:(CGPoint)p; {
-    SKSpriteNode *sweetDefault = [sweet createNewSweet:s sweetName:@"default" textureName:@"defaultSweet"];
++(id)addSweet: (SKScene*)s pos:(CGPoint)p slotID:(int)slot; {
+    NSString *sweetTexture = [sweetData textureDecider:slot];
+    SKSpriteNode *sweetDefault = [sweet createNewSweet:s sweetName:@"particleSweet" textureName:sweetTexture];
     sweetDefault.position = p;
     sweetDefault.zPosition = 4;
     return sweetDefault;

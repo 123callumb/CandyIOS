@@ -7,6 +7,7 @@
 //
 
 #import "slot.h"
+#import "sweetData.h"
 
 @implementation slot
 +(id)slot: (NSString*)name {

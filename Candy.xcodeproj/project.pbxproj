@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		750F3A911DE64A65002AFB78 /* sweetnessSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 750F3A901DE64A65002AFB78 /* sweetnessSlider.m */; };
+		750F3A941DE68167002AFB78 /* determineSweetTap.m in Sources */ = {isa = PBXBuildFile; fileRef = 750F3A931DE68167002AFB78 /* determineSweetTap.m */; };
 		7521F8C11DE0F61E00F2AD76 /* slotManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7521F8C01DE0F61E00F2AD76 /* slotManager.m */; };
 		7521F8C41DE0F66900F2AD76 /* slot.m in Sources */ = {isa = PBXBuildFile; fileRef = 7521F8C31DE0F66900F2AD76 /* slot.m */; };
 		7521F8C71DE0F91700F2AD76 /* box1.m in Sources */ = {isa = PBXBuildFile; fileRef = 7521F8C61DE0F91700F2AD76 /* box1.m */; };
@@ -87,6 +88,8 @@
 /* Begin PBXFileReference section */
 		750F3A8F1DE64A65002AFB78 /* sweetnessSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = sweetnessSlider.h; path = Candy/inventory/sweetnessSlider.h; sourceTree = "<group>"; };
 		750F3A901DE64A65002AFB78 /* sweetnessSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = sweetnessSlider.m; path = Candy/inventory/sweetnessSlider.m; sourceTree = "<group>"; };
+		750F3A921DE68167002AFB78 /* determineSweetTap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = determineSweetTap.h; path = Candy/tap/determineSweetTap.h; sourceTree = "<group>"; };
+		750F3A931DE68167002AFB78 /* determineSweetTap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = determineSweetTap.m; path = Candy/tap/determineSweetTap.m; sourceTree = "<group>"; };
 		7521F8BF1DE0F61E00F2AD76 /* slotManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = slotManager.h; path = Candy/inventory/slots/slotManager.h; sourceTree = "<group>"; };
 		7521F8C01DE0F61E00F2AD76 /* slotManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = slotManager.m; path = Candy/inventory/slots/slotManager.m; sourceTree = "<group>"; };
 		7521F8C21DE0F66900F2AD76 /* slot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = slot.h; path = Candy/inventory/slot.h; sourceTree = "<group>"; };
@@ -287,6 +290,8 @@
 			children = (
 				7525F7AF1DD2242100B0510C /* taps.h */,
 				7525F7B01DD2242100B0510C /* taps.m */,
+				750F3A921DE68167002AFB78 /* determineSweetTap.h */,
+				750F3A931DE68167002AFB78 /* determineSweetTap.m */,
 			);
 			name = tap;
 			sourceTree = "<group>";
@@ -679,6 +684,7 @@
 				7525F78E1DCFEA7C00B0510C /* coinButton.m in Sources */,
 				75C36E421DCE63E500F84214 /* mainTransition.m in Sources */,
 				75E8F1951DD3CC3100A421E7 /* nodeToParticle.m in Sources */,
+				750F3A941DE68167002AFB78 /* determineSweetTap.m in Sources */,
 				7521F8C41DE0F66900F2AD76 /* slot.m in Sources */,
 				7525F7781DCE921B00B0510C /* mainUI.m in Sources */,
 				75C36DFF1DCCF77600F84214 /* AppDelegate.m in Sources */,

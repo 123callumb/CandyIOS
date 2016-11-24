@@ -50,7 +50,6 @@ int flavourNum = 0;
             if(flavourNum > 0){
                 flavourNum = flavourNum - 1;
                 textLabel.text = [self determineFlavourString:flavourNum];
-                NSLog(@"%d should be set for slot %d", flavourNum, [registerBoxes getSlotPressed]);
                 [slot1Data setFlavour:flavourNum sweetNum:[registerBoxes getSlotPressed]];
             }
         }];
@@ -62,7 +61,7 @@ int flavourNum = 0;
                 flavourNum = flavourNum + 1;
                 textLabel.text = [self determineFlavourString:flavourNum];
                  [slot1Data setFlavour:flavourNum sweetNum:[registerBoxes getSlotPressed]];
-                NSLog(@"%d should be set for slot %d", flavourNum, [registerBoxes getSlotPressed]);
+               
 
             }
         }];

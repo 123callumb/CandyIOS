@@ -16,14 +16,14 @@
 #import "nodeToParticle.h"
 #import "menuHandler.h"
 #import "sweetnessSlider.h"
+#import "determineSweetTap.h"
 
 @implementation taps
 +(void)onPressed: (SKScene *)s location:(CGPoint)p {
     if([menuHandler getCurrentMenu] == 4){
     [coinBarSprite updateText:s];
     [money addBalance:1];
-    SKSpriteNode *sweet = [defaultSweet addSweet:s pos:p];
-    [nodeToParticle particleFlyAnimation:sweet scene:s];
+    [determineSweetTap spawn:s location:p];
     }
 }
 +(void)onRelease: (SKScene*)s {

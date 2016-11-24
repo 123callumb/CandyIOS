@@ -10,4 +10,5 @@
 
 @interface sweetData : SKSpriteNode
 +(id)sweetFromSlot: (int)i;
++(NSString*)textureDecider: (int)i;
 @end

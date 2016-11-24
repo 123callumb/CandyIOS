@@ -9,5 +9,5 @@
 #import <SpriteKit/SpriteKit.h>
 
 @interface nodeToParticle : SKSpriteNode
-+(void)particleFlyAnimation: (SKSpriteNode*)n scene:(SKScene *)s;
++(void)particleFlyAnimation: (SKSpriteNode*)n scene:(SKScene *)s scaleNo:(float)scale;
 @end
