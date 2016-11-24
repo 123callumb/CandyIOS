@@ -9,19 +9,19 @@
 // We will use ns user defaults in the future when we want the game to remmebr the integer value!
 
 #import "money.h"
-int moneyBalance = 0;
 
 @implementation money
 
 +(void)addBalance: (int)x{
-    moneyBalance = moneyBalance + x;
+    [[NSUserDefaults standardUserDefaults] setInteger:([self getBalance]+x) forKey:[NSString stringWithFormat:@"moneyValue"]];
 }
 
 +(int)getBalance {
+    int moneyBalance = (int)[[NSUserDefaults standardUserDefaults] integerForKey:[NSString stringWithFormat:@"moneyValue"]];
     return moneyBalance;
 }
 +(NSString*)getBalanceAsString {
-    NSString *bal = [NSString stringWithFormat:@"%d", moneyBalance];
+    NSString *bal = [NSString stringWithFormat:@"%d", [self getBalance]];
     return bal;
 }
 
