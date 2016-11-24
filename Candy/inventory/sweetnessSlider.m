@@ -16,7 +16,7 @@ int sweetness = 0;
 +(void)addSlider: (SKSpriteNode*)s {
     SKSpriteNode *sliderButton = [SKSpriteNode spriteNodeWithImageNamed:@"sliderButtonLonger"];
     sliderButton.name = @"sweetnessSlider";
-    sliderButton.position = CGPointMake(0, -s.frame.size.height/1.23);
+    sliderButton.position = CGPointMake([self sweetnessValueToSlider:[slot1Data getSweetness:[registerBoxes getSlotPressed]]], -s.frame.size.height/1.23);
     
     [s addChild:sliderButton];
 }
@@ -57,6 +57,37 @@ int sweetness = 0;
         [slot1Data setSweetness:8 sweetNum:[registerBoxes getSlotPressed]];
     }else {
     
+    }
+}
++(int)sweetnessValueToSlider: (int)x {
+    if(x == 0){
+        return -360;
+    }
+    if(x == 1){
+        return -300;
+    }
+    if(x == 2){
+        return -200;
+    }
+    if(x == 3){
+        return -100;
+    }
+    if(x == 4){
+        return 0;
+    }
+    if(x == 5){
+        return 100;
+    }
+    if(x == 6){
+        return 200;
+    }
+    if(x == 7){
+        return 300;
+    }
+    if(x == 8){
+        return 360;
+    } else {
+        return 0;
     }
 }
 @end
