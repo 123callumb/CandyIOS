@@ -9,6 +9,7 @@
 #import "sweetPicker.h"
 #import "slot1Data.h"
 #import "registerBoxes.h"
+#import "sweetData.h"
 
 @implementation sweetPicker
 int sweetNum = 0;
@@ -17,7 +18,7 @@ int sweetNum = 0;
     SKSpriteNode *arrowLeft = [SKSpriteNode spriteNodeWithImageNamed:@"arrrowLeft"];
     SKSpriteNode *arrowRight = [SKSpriteNode spriteNodeWithImageNamed:@"arrowRight"];
     
-    SKSpriteNode *sweet = [SKSpriteNode spriteNodeWithImageNamed:@"defaultSweet"];
+    SKSpriteNode *sweet = [SKSpriteNode spriteNodeWithImageNamed:[sweetData textureDecider:[slot1Data getSweet:[registerBoxes getSlotPressed]]]];
     
     arrowLeft.name = @"arrowLeftSweetPicker";
     arrowRight.name = @"arrowRightSweetPicker";
