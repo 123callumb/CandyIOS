@@ -10,6 +10,4 @@
 
 @interface slotManager : SKSpriteNode
 +(void)addSlots: (SKSpriteNode*)s;
-+(int)getUnlockedSlots;
-+(void)setUnlockedSlots:(int)num;
 @end
