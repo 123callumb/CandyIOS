@@ -260,8 +260,6 @@
 				61E183941DEE14450034C021 /* character_clothes.m */,
 				61E1838A1DEE13BA0034C021 /* selection_bar.h */,
 				61E1838B1DEE13BA0034C021 /* selection_bar.m */,
-				61E1837D1DEDE45A0034C021 /* Character_Maker.h */,
-				61E1837E1DEDE45A0034C021 /* Character_Maker.m */,
 				61E183871DEE13490034C021 /* skinColour.h */,
 				61E183881DEE13490034C021 /* skinColour.m */,
 			);
@@ -541,6 +539,8 @@
 		75C36E431DCE751200F84214 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				61E1837D1DEDE45A0034C021 /* Character_Maker.h */,
+				61E1837E1DEDE45A0034C021 /* Character_Maker.m */,
 				75C36E441DCE752A00F84214 /* main.h */,
 				75C36E451DCE752A00F84214 /* main.m */,
 			);
