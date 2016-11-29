@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "2A865BC7CF0C312D39054014AE14BA169D4CFBF4",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "2A865BC7CF0C312D39054014AE14BA169D4CFBF4" : 9223372036854775807,
+    "B44CE65D6A8F60593E4005B17ED1ADD5937E18D4" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "5D151628-6DC2-4856-8998-C55FB28B0EA1",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "2A865BC7CF0C312D39054014AE14BA169D4CFBF4" : "CandyIOS\/",
+    "B44CE65D6A8F60593E4005B17ED1ADD5937E18D4" : "..\/Character_Maker"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Candy",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Candy.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/123callumb\/CandyIOS.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "2A865BC7CF0C312D39054014AE14BA169D4CFBF4"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Killiann\/Character_Maker.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "B44CE65D6A8F60593E4005B17ED1ADD5937E18D4"
+    }
+  ]
+}
