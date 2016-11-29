@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		61E183781DEDE43D0034C021 /* background.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E1836F1DEDE43D0034C021 /* background.m */; };
-		61E183791DEDE43D0034C021 /* character_clothes.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E183711DEDE43D0034C021 /* character_clothes.m */; };
-		61E1837A1DEDE43D0034C021 /* Save.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E183731DEDE43D0034C021 /* Save.m */; };
-		61E1837B1DEDE43D0034C021 /* selection_bar.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E183751DEDE43D0034C021 /* selection_bar.m */; };
 		61E1837F1DEDE45A0034C021 /* Character_Maker.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E1837E1DEDE45A0034C021 /* Character_Maker.m */; };
 		61E183861DEE00E30034C021 /* Character.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E183851DEE00E30034C021 /* Character.m */; };
 		61E183891DEE13490034C021 /* skinColour.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E183881DEE13490034C021 /* skinColour.m */; };
+		61E1838C1DEE13BA0034C021 /* selection_bar.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E1838B1DEE13BA0034C021 /* selection_bar.m */; };
+		61E1838F1DEE13E20034C021 /* Save.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E1838E1DEE13E20034C021 /* Save.m */; };
+		61E183921DEE14140034C021 /* background.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E183911DEE14140034C021 /* background.m */; };
+		61E183951DEE14450034C021 /* character_clothes.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E183941DEE14450034C021 /* character_clothes.m */; };
 		750F3A911DE64A65002AFB78 /* sweetnessSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 750F3A901DE64A65002AFB78 /* sweetnessSlider.m */; };
 		750F3A941DE68167002AFB78 /* determineSweetTap.m in Sources */ = {isa = PBXBuildFile; fileRef = 750F3A931DE68167002AFB78 /* determineSweetTap.m */; };
 		750F3A991DEC81A4002AFB78 /* statsMenuButtons.m in Sources */ = {isa = PBXBuildFile; fileRef = 750F3A981DEC81A4002AFB78 /* statsMenuButtons.m */; };
@@ -95,20 +95,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		61E1836E1DEDE43D0034C021 /* background.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = background.h; path = ../Character_Maker/Character_Maker/background.h; sourceTree = "<group>"; };
-		61E1836F1DEDE43D0034C021 /* background.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = background.m; path = ../Character_Maker/Character_Maker/background.m; sourceTree = "<group>"; };
-		61E183701DEDE43D0034C021 /* character_clothes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = character_clothes.h; path = ../Character_Maker/Character_Maker/character_clothes.h; sourceTree = "<group>"; };
-		61E183711DEDE43D0034C021 /* character_clothes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = character_clothes.m; path = ../Character_Maker/Character_Maker/character_clothes.m; sourceTree = "<group>"; };
-		61E183721DEDE43D0034C021 /* Save.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Save.h; path = ../Character_Maker/Character_Maker/Save.h; sourceTree = "<group>"; };
-		61E183731DEDE43D0034C021 /* Save.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Save.m; path = ../Character_Maker/Character_Maker/Save.m; sourceTree = "<group>"; };
-		61E183741DEDE43D0034C021 /* selection_bar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = selection_bar.h; path = ../Character_Maker/Character_Maker/selection_bar.h; sourceTree = "<group>"; };
-		61E183751DEDE43D0034C021 /* selection_bar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = selection_bar.m; path = ../Character_Maker/Character_Maker/selection_bar.m; sourceTree = "<group>"; };
 		61E1837D1DEDE45A0034C021 /* Character_Maker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Character_Maker.h; sourceTree = "<group>"; };
 		61E1837E1DEDE45A0034C021 /* Character_Maker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Character_Maker.m; sourceTree = "<group>"; };
 		61E183841DEE00E30034C021 /* Character.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Character.h; sourceTree = "<group>"; };
 		61E183851DEE00E30034C021 /* Character.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Character.m; sourceTree = "<group>"; };
 		61E183871DEE13490034C021 /* skinColour.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = skinColour.h; sourceTree = "<group>"; };
 		61E183881DEE13490034C021 /* skinColour.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = skinColour.m; sourceTree = "<group>"; };
+		61E1838A1DEE13BA0034C021 /* selection_bar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = selection_bar.h; sourceTree = "<group>"; };
+		61E1838B1DEE13BA0034C021 /* selection_bar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = selection_bar.m; sourceTree = "<group>"; };
+		61E1838D1DEE13E20034C021 /* Save.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Save.h; sourceTree = "<group>"; };
+		61E1838E1DEE13E20034C021 /* Save.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Save.m; sourceTree = "<group>"; };
+		61E183901DEE14140034C021 /* background.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = background.h; sourceTree = "<group>"; };
+		61E183911DEE14140034C021 /* background.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = background.m; sourceTree = "<group>"; };
+		61E183931DEE14450034C021 /* character_clothes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = character_clothes.h; sourceTree = "<group>"; };
+		61E183941DEE14450034C021 /* character_clothes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = character_clothes.m; sourceTree = "<group>"; };
 		750F3A8F1DE64A65002AFB78 /* sweetnessSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = sweetnessSlider.h; path = Candy/inventory/sweetnessSlider.h; sourceTree = "<group>"; };
 		750F3A901DE64A65002AFB78 /* sweetnessSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = sweetnessSlider.m; path = Candy/inventory/sweetnessSlider.m; sourceTree = "<group>"; };
 		750F3A921DE68167002AFB78 /* determineSweetTap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = determineSweetTap.h; path = Candy/tap/determineSweetTap.h; sourceTree = "<group>"; };
@@ -252,14 +252,14 @@
 		61E1836B1DEDE3DE0034C021 /* Character_Maker */ = {
 			isa = PBXGroup;
 			children = (
-				61E1836E1DEDE43D0034C021 /* background.h */,
-				61E1836F1DEDE43D0034C021 /* background.m */,
-				61E183701DEDE43D0034C021 /* character_clothes.h */,
-				61E183711DEDE43D0034C021 /* character_clothes.m */,
-				61E183721DEDE43D0034C021 /* Save.h */,
-				61E183731DEDE43D0034C021 /* Save.m */,
-				61E183741DEDE43D0034C021 /* selection_bar.h */,
-				61E183751DEDE43D0034C021 /* selection_bar.m */,
+				61E1838D1DEE13E20034C021 /* Save.h */,
+				61E1838E1DEE13E20034C021 /* Save.m */,
+				61E183901DEE14140034C021 /* background.h */,
+				61E183911DEE14140034C021 /* background.m */,
+				61E183931DEE14450034C021 /* character_clothes.h */,
+				61E183941DEE14450034C021 /* character_clothes.m */,
+				61E1838A1DEE13BA0034C021 /* selection_bar.h */,
+				61E1838B1DEE13BA0034C021 /* selection_bar.m */,
 				61E1837D1DEDE45A0034C021 /* Character_Maker.h */,
 				61E1837E1DEDE45A0034C021 /* Character_Maker.m */,
 				61E183871DEE13490034C021 /* skinColour.h */,
@@ -747,16 +747,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				61E1837A1DEDE43D0034C021 /* Save.m in Sources */,
 				750F3A991DEC81A4002AFB78 /* statsMenuButtons.m in Sources */,
+				61E183951DEE14450034C021 /* character_clothes.m in Sources */,
 				7525F77C1DCFBFF100B0510C /* inventoryButton.m in Sources */,
 				75C36E3A1DCE5CD900F84214 /* splashBacking.m in Sources */,
 				75919B991DDCA41C001F66EB /* defaultLevel.m in Sources */,
 				75C36E3E1DCE5F2000F84214 /* backgroundManager.m in Sources */,
+				61E1838F1DEE13E20034C021 /* Save.m in Sources */,
 				61E1837F1DEDE45A0034C021 /* Character_Maker.m in Sources */,
 				75E8F1891DD3A57200A421E7 /* sweet.m in Sources */,
 				7521F8C11DE0F61E00F2AD76 /* slotManager.m in Sources */,
 				75C36E091DCCF77700F84214 /* GameViewController.m in Sources */,
+				61E1838C1DEE13BA0034C021 /* selection_bar.m in Sources */,
 				61E183891DEE13490034C021 /* skinColour.m in Sources */,
 				757CD19B1DE2083400D07480 /* sweetData.m in Sources */,
 				757CD1921DE1383F00D07480 /* box1DataScreen.m in Sources */,
@@ -766,13 +768,13 @@
 				750F3A9C1DEC863E002AFB78 /* registerStatsButtons.m in Sources */,
 				75C36E421DCE63E500F84214 /* mainTransition.m in Sources */,
 				75E8F1951DD3CC3100A421E7 /* nodeToParticle.m in Sources */,
+				61E183921DEE14140034C021 /* background.m in Sources */,
 				750F3A941DE68167002AFB78 /* determineSweetTap.m in Sources */,
 				7521F8C41DE0F66900F2AD76 /* slot.m in Sources */,
 				7525F7781DCE921B00B0510C /* mainUI.m in Sources */,
 				75C36DFF1DCCF77600F84214 /* AppDelegate.m in Sources */,
 				75E8F1911DD3AE3A00A421E7 /* inventory.m in Sources */,
 				75C36E061DCCF77700F84214 /* GameScene.m in Sources */,
-				61E183791DEDE43D0034C021 /* character_clothes.m in Sources */,
 				7525F7BE1DD256A500B0510C /* comboBar.m in Sources */,
 				75919B9C1DDCA4CE001F66EB /* levelDecider.m in Sources */,
 				75C36E4A1DCE793D00F84214 /* mainBackground.m in Sources */,
@@ -780,7 +782,6 @@
 				757CD19E1DE208E300D07480 /* slot1Data.m in Sources */,
 				75919B911DDB7A93001F66EB /* upgradeMenu.m in Sources */,
 				7525F7B11DD2242100B0510C /* taps.m in Sources */,
-				61E183781DEDE43D0034C021 /* background.m in Sources */,
 				7525F78B1DCFDD8400B0510C /* sweetsButton.m in Sources */,
 				7525F7911DCFF8FB00B0510C /* menuBacking.m in Sources */,
 				75E8F19B1DD8F6E500A421E7 /* menuBackButton.m in Sources */,
@@ -799,7 +800,6 @@
 				750F3A911DE64A65002AFB78 /* sweetnessSlider.m in Sources */,
 				7525F7C21DD25C8500B0510C /* comboTimer.m in Sources */,
 				757CD1981DE188C000D07480 /* sweetCustomMenu.m in Sources */,
-				61E1837B1DEDE43D0034C021 /* selection_bar.m in Sources */,
 				75E8F18D1DD3AB0300A421E7 /* defaultSweet.m in Sources */,
 				7525F7881DCFC72A00B0510C /* buttonAnimation.m in Sources */,
 				7521F8C71DE0F91700F2AD76 /* box1.m in Sources */,
