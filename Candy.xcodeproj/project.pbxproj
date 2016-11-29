@@ -11,9 +11,9 @@
 		61E183791DEDE43D0034C021 /* character_clothes.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E183711DEDE43D0034C021 /* character_clothes.m */; };
 		61E1837A1DEDE43D0034C021 /* Save.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E183731DEDE43D0034C021 /* Save.m */; };
 		61E1837B1DEDE43D0034C021 /* selection_bar.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E183751DEDE43D0034C021 /* selection_bar.m */; };
-		61E1837C1DEDE43D0034C021 /* skinColour.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E183771DEDE43D0034C021 /* skinColour.m */; };
 		61E1837F1DEDE45A0034C021 /* Character_Maker.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E1837E1DEDE45A0034C021 /* Character_Maker.m */; };
 		61E183861DEE00E30034C021 /* Character.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E183851DEE00E30034C021 /* Character.m */; };
+		61E183891DEE13490034C021 /* skinColour.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E183881DEE13490034C021 /* skinColour.m */; };
 		750F3A911DE64A65002AFB78 /* sweetnessSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 750F3A901DE64A65002AFB78 /* sweetnessSlider.m */; };
 		750F3A941DE68167002AFB78 /* determineSweetTap.m in Sources */ = {isa = PBXBuildFile; fileRef = 750F3A931DE68167002AFB78 /* determineSweetTap.m */; };
 		750F3A991DEC81A4002AFB78 /* statsMenuButtons.m in Sources */ = {isa = PBXBuildFile; fileRef = 750F3A981DEC81A4002AFB78 /* statsMenuButtons.m */; };
@@ -103,12 +103,12 @@
 		61E183731DEDE43D0034C021 /* Save.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Save.m; path = ../Character_Maker/Character_Maker/Save.m; sourceTree = "<group>"; };
 		61E183741DEDE43D0034C021 /* selection_bar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = selection_bar.h; path = ../Character_Maker/Character_Maker/selection_bar.h; sourceTree = "<group>"; };
 		61E183751DEDE43D0034C021 /* selection_bar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = selection_bar.m; path = ../Character_Maker/Character_Maker/selection_bar.m; sourceTree = "<group>"; };
-		61E183761DEDE43D0034C021 /* skinColour.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = skinColour.h; path = ../Character_Maker/Character_Maker/skinColour.h; sourceTree = "<group>"; };
-		61E183771DEDE43D0034C021 /* skinColour.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = skinColour.m; path = ../Character_Maker/Character_Maker/skinColour.m; sourceTree = "<group>"; };
 		61E1837D1DEDE45A0034C021 /* Character_Maker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Character_Maker.h; sourceTree = "<group>"; };
 		61E1837E1DEDE45A0034C021 /* Character_Maker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Character_Maker.m; sourceTree = "<group>"; };
 		61E183841DEE00E30034C021 /* Character.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Character.h; sourceTree = "<group>"; };
 		61E183851DEE00E30034C021 /* Character.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Character.m; sourceTree = "<group>"; };
+		61E183871DEE13490034C021 /* skinColour.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = skinColour.h; sourceTree = "<group>"; };
+		61E183881DEE13490034C021 /* skinColour.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = skinColour.m; sourceTree = "<group>"; };
 		750F3A8F1DE64A65002AFB78 /* sweetnessSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = sweetnessSlider.h; path = Candy/inventory/sweetnessSlider.h; sourceTree = "<group>"; };
 		750F3A901DE64A65002AFB78 /* sweetnessSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = sweetnessSlider.m; path = Candy/inventory/sweetnessSlider.m; sourceTree = "<group>"; };
 		750F3A921DE68167002AFB78 /* determineSweetTap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = determineSweetTap.h; path = Candy/tap/determineSweetTap.h; sourceTree = "<group>"; };
@@ -260,10 +260,10 @@
 				61E183731DEDE43D0034C021 /* Save.m */,
 				61E183741DEDE43D0034C021 /* selection_bar.h */,
 				61E183751DEDE43D0034C021 /* selection_bar.m */,
-				61E183761DEDE43D0034C021 /* skinColour.h */,
-				61E183771DEDE43D0034C021 /* skinColour.m */,
 				61E1837D1DEDE45A0034C021 /* Character_Maker.h */,
 				61E1837E1DEDE45A0034C021 /* Character_Maker.m */,
+				61E183871DEE13490034C021 /* skinColour.h */,
+				61E183881DEE13490034C021 /* skinColour.m */,
 			);
 			name = Character_Maker;
 			sourceTree = "<group>";
@@ -757,6 +757,7 @@
 				75E8F1891DD3A57200A421E7 /* sweet.m in Sources */,
 				7521F8C11DE0F61E00F2AD76 /* slotManager.m in Sources */,
 				75C36E091DCCF77700F84214 /* GameViewController.m in Sources */,
+				61E183891DEE13490034C021 /* skinColour.m in Sources */,
 				757CD19B1DE2083400D07480 /* sweetData.m in Sources */,
 				757CD1921DE1383F00D07480 /* box1DataScreen.m in Sources */,
 				7525F7851DCFC58B00B0510C /* buttonHandler.m in Sources */,
@@ -801,7 +802,6 @@
 				61E1837B1DEDE43D0034C021 /* selection_bar.m in Sources */,
 				75E8F18D1DD3AB0300A421E7 /* defaultSweet.m in Sources */,
 				7525F7881DCFC72A00B0510C /* buttonAnimation.m in Sources */,
-				61E1837C1DEDE43D0034C021 /* skinColour.m in Sources */,
 				7521F8C71DE0F91700F2AD76 /* box1.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
