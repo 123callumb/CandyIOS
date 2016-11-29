@@ -38,7 +38,6 @@ NSString *PresetVal;
         }];
         
         //switch Scene
-        [backgroundManager splashScene:s];
         SKAction *splashTime = [SKAction waitForDuration:0];
         [s runAction:splashTime completion:^{
             [mainTransition switchScene:s sceneTwo:@"main" Transition:[SKTransition crossFadeWithDuration:1]];
