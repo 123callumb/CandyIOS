@@ -13,6 +13,7 @@
 #import "taps.h"
 #import "levelDecider.h"
 #import "registerBoxes.h"
+#import "registerStatsButtons.h"
 
 @implementation main
 
@@ -32,7 +33,7 @@
     [taps onPressed:self location:loc];
     [buttonHandler registerButtons:obj currentScene:self];
     [registerBoxes registerBoxes:obj currentScene:self];
-    
+    [registerStatsButtons registerStatsButtons:self location:loc node:obj];
 }
 
 //These methods are new and pretty dank af!

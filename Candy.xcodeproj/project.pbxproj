@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		750F3A911DE64A65002AFB78 /* sweetnessSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 750F3A901DE64A65002AFB78 /* sweetnessSlider.m */; };
 		750F3A941DE68167002AFB78 /* determineSweetTap.m in Sources */ = {isa = PBXBuildFile; fileRef = 750F3A931DE68167002AFB78 /* determineSweetTap.m */; };
+		750F3A991DEC81A4002AFB78 /* statsMenuButtons.m in Sources */ = {isa = PBXBuildFile; fileRef = 750F3A981DEC81A4002AFB78 /* statsMenuButtons.m */; };
+		750F3A9C1DEC863E002AFB78 /* registerStatsButtons.m in Sources */ = {isa = PBXBuildFile; fileRef = 750F3A9B1DEC863E002AFB78 /* registerStatsButtons.m */; };
 		7521F8C11DE0F61E00F2AD76 /* slotManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7521F8C01DE0F61E00F2AD76 /* slotManager.m */; };
 		7521F8C41DE0F66900F2AD76 /* slot.m in Sources */ = {isa = PBXBuildFile; fileRef = 7521F8C31DE0F66900F2AD76 /* slot.m */; };
 		7521F8C71DE0F91700F2AD76 /* box1.m in Sources */ = {isa = PBXBuildFile; fileRef = 7521F8C61DE0F91700F2AD76 /* box1.m */; };
@@ -90,6 +92,10 @@
 		750F3A901DE64A65002AFB78 /* sweetnessSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = sweetnessSlider.m; path = Candy/inventory/sweetnessSlider.m; sourceTree = "<group>"; };
 		750F3A921DE68167002AFB78 /* determineSweetTap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = determineSweetTap.h; path = Candy/tap/determineSweetTap.h; sourceTree = "<group>"; };
 		750F3A931DE68167002AFB78 /* determineSweetTap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = determineSweetTap.m; path = Candy/tap/determineSweetTap.m; sourceTree = "<group>"; };
+		750F3A971DEC81A4002AFB78 /* statsMenuButtons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = statsMenuButtons.h; path = Candy/globalMenu/statsMenuButtons.h; sourceTree = "<group>"; };
+		750F3A981DEC81A4002AFB78 /* statsMenuButtons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = statsMenuButtons.m; path = Candy/globalMenu/statsMenuButtons.m; sourceTree = "<group>"; };
+		750F3A9A1DEC863E002AFB78 /* registerStatsButtons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = registerStatsButtons.h; path = Candy/globalMenu/registerStatsButtons.h; sourceTree = "<group>"; };
+		750F3A9B1DEC863E002AFB78 /* registerStatsButtons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = registerStatsButtons.m; path = Candy/globalMenu/registerStatsButtons.m; sourceTree = "<group>"; };
 		7521F8BF1DE0F61E00F2AD76 /* slotManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = slotManager.h; path = Candy/inventory/slots/slotManager.h; sourceTree = "<group>"; };
 		7521F8C01DE0F61E00F2AD76 /* slotManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = slotManager.m; path = Candy/inventory/slots/slotManager.m; sourceTree = "<group>"; };
 		7521F8C21DE0F66900F2AD76 /* slot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = slot.h; path = Candy/inventory/slot.h; sourceTree = "<group>"; };
@@ -222,6 +228,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		750F3A951DEC8160002AFB78 /* globalMenu */ = {
+			isa = PBXGroup;
+			children = (
+				750F3A961DEC8169002AFB78 /* statsMenu */,
+				750F3A971DEC81A4002AFB78 /* statsMenuButtons.h */,
+				750F3A981DEC81A4002AFB78 /* statsMenuButtons.m */,
+				750F3A9A1DEC863E002AFB78 /* registerStatsButtons.h */,
+				750F3A9B1DEC863E002AFB78 /* registerStatsButtons.m */,
+			);
+			name = globalMenu;
+			sourceTree = "<group>";
+		};
+		750F3A961DEC8169002AFB78 /* statsMenu */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = statsMenu;
+			sourceTree = "<group>";
+		};
 		7521F8BE1DE0F5F600F2AD76 /* Slots */ = {
 			isa = PBXGroup;
 			children = (
@@ -346,6 +371,7 @@
 		75C36DEE1DCCF77600F84214 = {
 			isa = PBXGroup;
 			children = (
+				750F3A951DEC8160002AFB78 /* globalMenu */,
 				75919B961DDCA353001F66EB /* levelBackgrounds */,
 				75E8F1921DD3CBF700A421E7 /* particleSystem */,
 				75E8F18E1DD3AE1400A421E7 /* Inventory */,
@@ -670,6 +696,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				750F3A991DEC81A4002AFB78 /* statsMenuButtons.m in Sources */,
 				7525F77C1DCFBFF100B0510C /* inventoryButton.m in Sources */,
 				75C36E3A1DCE5CD900F84214 /* splashBacking.m in Sources */,
 				75919B991DDCA41C001F66EB /* defaultLevel.m in Sources */,
@@ -682,6 +709,7 @@
 				7525F7851DCFC58B00B0510C /* buttonHandler.m in Sources */,
 				757CD1951DE1598100D07480 /* registerBoxes.m in Sources */,
 				7525F78E1DCFEA7C00B0510C /* coinButton.m in Sources */,
+				750F3A9C1DEC863E002AFB78 /* registerStatsButtons.m in Sources */,
 				75C36E421DCE63E500F84214 /* mainTransition.m in Sources */,
 				75E8F1951DD3CC3100A421E7 /* nodeToParticle.m in Sources */,
 				750F3A941DE68167002AFB78 /* determineSweetTap.m in Sources */,

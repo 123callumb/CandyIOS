@@ -10,6 +10,7 @@
 #import "menuBacking.h"
 #import "coinButton.h"
 #import "menuBackButton.h"
+#import "statsMenuButtons.h"
 
 @implementation statsMenu
 
@@ -21,6 +22,7 @@ bool createdStats = false;
         SKSpriteNode *main = (SKSpriteNode*)[menuBacking createStatsBacking];
         main.position = CGPointMake(0, -s.frame.size.height);
         main.name = @"menuStats";
+        [statsMenuButtons addStatsButton:main];
         [s addChild:main];
     }
     

@@ -47,16 +47,16 @@ int inventoryUnlocked = 4;
 }
 +(float)determineScale {
     if(inventoryUnlocked == 1){
-        return 0.5;
+        return 0.6;
     }
     if(inventoryUnlocked == 2){
-        return 0.4;
+        return 0.6;
     }
     if(inventoryUnlocked == 3){
-        return 0.3;
+        return 0.6;
     }
     if(inventoryUnlocked == 4){
-        return 0.2;
+        return 0.6;
     }else {
         return 0.005;
     }
