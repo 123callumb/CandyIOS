@@ -7,14 +7,25 @@
 //
 
 #import "defaultLevel.h"
+#import "Character.h"
 
 @implementation defaultLevel
 +(void)setLevel:(SKScene*)s{
     SKSpriteNode *back = [SKSpriteNode spriteNodeWithImageNamed:@"smallerRoom"];
-    back.zPosition = -1;
+    SKSpriteNode *desk = [SKSpriteNode spriteNodeWithImageNamed:@"desk"];
+    back.zPosition = -3;
     back.xScale = 1.5;
     back.yScale = 1.5;
     back.anchorPoint = CGPointMake(0.5, 0.4);
+    
+    desk.zPosition = -1;
+    desk.xScale = 1.5;
+    desk.yScale = 1.5;
+    desk.anchorPoint = CGPointMake(0.5, 0.4);
+    
     [s addChild:back];
+    [Character Spawn:s];
+    [s addChild:desk];
+    
 }
 @end

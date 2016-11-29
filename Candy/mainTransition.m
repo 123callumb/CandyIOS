@@ -8,6 +8,7 @@
 
 #import "mainTransition.h"
 #import "main.h"
+#import "Character_Maker.h"
 
 //Everytime we want to change scene if we use this method it will make it easier, we can also add certain scene transitions easier this way!
 
@@ -16,21 +17,23 @@
 //Currently this class is pretty screwed but ill explain how it works :/
 @implementation mainTransition {
     main *main;
+    Character_Maker *Char_Maker;
 }
 
-+(void)switchScene: (SKScene *)s1 sceneTwo: (SKScene *)s2 Transition:(SKTransition *)tran sceneID:(int)id; {
++(void)switchScene: (SKScene *)s1 sceneTwo: (NSString *)scene2 Transition:(SKTransition *)tran{
     
     //Set custom tran
     SKTransition *customTransition = tran;
-    
-    //This is the ugly bit, it needs to be this way because you can't import classes through a method
-    if(id==0){
-        
-        //That \/ lil bitch rn there is our problem
+    SKScene *s2;
+
+    //fixed the transition problem lad
+    if([scene2 isEqual:@"main"]){
         s2 = [[main alloc] initWithSize:s1.size];
-        s2.scaleMode = SKSceneScaleModeAspectFill;
     }
-    
+    else if([scene2 isEqual:@"Character_Maker"]){
+        s2 = [[Character_Maker alloc] initWithSize:s1.size];
+    }
+    s2.scaleMode = SKSceneScaleModeAspectFill;
     
     //Change the scene
     s2.scaleMode = SKSceneScaleModeAspectFill;

@@ -10,10 +10,12 @@
 #import "backgroundManager.h"
 #import "mainTransition.h"
 #import "main.h"
+#import "Character_Maker.h"
 
 @implementation GameScene {
     
     SKScene *main;
+    SKScene *Character_maker;
 }
 
 //We will use this as like a splash screen and then initialise all the other scenes from it.
@@ -28,7 +30,7 @@
     //This can be moved to a custom delay method, but is it worth it?
     SKAction *splashTime = [SKAction waitForDuration:2];
     [self runAction:splashTime completion:^{
-        [mainTransition switchScene:self sceneTwo:main Transition:[SKTransition crossFadeWithDuration:1] sceneID:0];
+        [mainTransition switchScene:self sceneTwo:@"Character_Maker" Transition:[SKTransition crossFadeWithDuration:1]];
     }];
     
     }
