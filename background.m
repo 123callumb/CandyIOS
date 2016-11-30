@@ -16,7 +16,7 @@ int scrollSpeed = 5;
 +(void)spawnTextures:(SKScene*)s{
     bg1 = [SKSpriteNode spriteNodeWithImageNamed:@"back"];
     bg2 = [SKSpriteNode spriteNodeWithImageNamed:@"back"];
-    back = [SKSpriteNode spriteNodeWithImageNamed:@"background"];
+    back = [SKSpriteNode spriteNodeWithImageNamed:@"bg"];
     
     bg1.anchorPoint = CGPointMake(0, 0);
     bg2.anchorPoint = CGPointMake(0, 0);
