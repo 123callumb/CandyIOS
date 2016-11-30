@@ -23,6 +23,14 @@
     SKSpriteNode *pants = [SKSpriteNode spriteNodeWithImageNamed:PantsName];
     SKSpriteNode *shoes = [SKSpriteNode spriteNodeWithImageNamed:ShoesName];
     SKSpriteNode *preset = [SKSpriteNode spriteNodeWithImageNamed:PresetName];
+    SKSpriteNode *shadow = [SKSpriteNode spriteNodeWithImageNamed:@"spr_shadow_0"];
+    
+    //Hat Shadow
+    SKSpriteNode *HatShadow = [SKSpriteNode spriteNodeWithImageNamed:HatName];
+    HatShadow.color = [SKColor blackColor];
+    HatShadow.position = CGPointMake(10, -10);
+    HatShadow.alpha = 0.1;
+    HatShadow.colorBlendFactor = 1;
     
     base.zPosition = -2;
     hue.zPosition = -2;
@@ -31,11 +39,16 @@
     pants.zPosition = -2;
     shoes.zPosition = -2;
     preset.zPosition = -2;
+    shadow.zPosition = -2;
+    HatShadow.zPosition = -2;
     
+    shadow.alpha = 0.1;
     hue.alpha = [[NSUserDefaults standardUserDefaults] doubleForKey:@"Alpha"];
     
     long isPre = [[NSUserDefaults standardUserDefaults] integerForKey:@"isPreset"];
     
+    [s addChild:shadow];
+    [s addChild:HatShadow];
     [s addChild:base];
     [s addChild:hue];
     if(isPre == 0){
