@@ -56,6 +56,8 @@
     
     long isPre = [[NSUserDefaults standardUserDefaults] integerForKey:@"isPreset"];
     
+    //CHECK PUSH CHECK PUSH
+    
     [s addChild:shadow];
     if(isPre == 0)[s addChild:HatShadow];
     [s addChild:base];
