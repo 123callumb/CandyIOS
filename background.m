@@ -9,18 +9,23 @@
 #import "background.h"
 SKSpriteNode *bg1 = nil;
 SKSpriteNode *bg2 = nil;
+SKSpriteNode *back = nil;
 int scrollSpeed = 5;
 
 @implementation background
 +(void)spawnTextures:(SKScene*)s{
     bg1 = [SKSpriteNode spriteNodeWithImageNamed:@"back"];
     bg2 = [SKSpriteNode spriteNodeWithImageNamed:@"back"];
+    back = [SKSpriteNode spriteNodeWithImageNamed:@"bg"];
     
     bg1.anchorPoint = CGPointMake(0, 0);
     bg2.anchorPoint = CGPointMake(0, 0);
-    bg1.position = CGPointMake(0, 0);
-    bg2.position = CGPointMake(0, bg1.frame.size.height);
+    back.anchorPoint = CGPointMake(0, 0);
+    back.position = CGPointMake(0, 0);
+    bg1.position = CGPointMake(0, s.frame.size.height);
+    bg2.position = CGPointMake(0, bg1.frame.size.height + (s.frame.size.height));
     
+    [s addChild:back];
     [s addChild:bg1];
     [s addChild:bg2];
 }
