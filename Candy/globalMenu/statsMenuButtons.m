@@ -7,18 +7,38 @@
 //
 
 #import "statsMenuButtons.h"
+#import "playerStatsMenu.h"
 
 @implementation statsMenuButtons
+
 +(void)addStatsButton: (SKSpriteNode*)s {
     SKSpriteNode *statsButton = [SKSpriteNode spriteNodeWithImageNamed:@"playerStatsButton"];
-    statsButton.position = CGPointMake(0, -s.frame.size.height/1.275);
+    statsButton.position = CGPointMake(0, -s.frame.size.height/1.3);
     statsButton.name = @"statsMenuStatsButton";
 
+    SKSpriteNode *mapButton = [SKSpriteNode spriteNodeWithImageNamed:@"mapButton"];
+    mapButton.position = CGPointMake(0, -s.frame.size.height/10);
+    mapButton.name = @"statsMenuMapButton";
     
+    SKSpriteNode *coinPackButton = [SKSpriteNode spriteNodeWithImageNamed:@"coinPackButton"];
+    coinPackButton.position = CGPointMake(0, s.frame.size.height/1.8);
+    coinPackButton.name = @"statsMenuCoinPackButton";
+    
+    [s addChild:mapButton];
+    [s addChild:coinPackButton];
     [s addChild:statsButton];
 }
-+(void)onStatsButtonPress:(SKSpriteNode*)s {
++(void)onStatsButtonPress:(SKSpriteNode*)s scene:(SKScene*)sk {
     if([s.name isEqualToString:@"statsMenuStatsButton"]){
+        SKAction *block = [SKAction runBlock:^{}];
+        [self buttonAnimation:s action:block];
+        [playerStatsMenu createPStatsMenu:sk];
+    }
+    if([s.name isEqualToString:@"statsMenuMapButton"]){
+        SKAction *block = [SKAction runBlock:^{}];
+        [self buttonAnimation:s action:block];
+    }
+    if([s.name isEqualToString:@"statsMenuCoinPackButton"]){
         SKAction *block = [SKAction runBlock:^{}];
         [self buttonAnimation:s action:block];
     }

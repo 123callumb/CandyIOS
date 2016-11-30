@@ -8,9 +8,11 @@
 
 #import "registerStatsButtons.h"
 #import "statsMenuButtons.h"
+#import "playerStatsMenu.h"
 
 @implementation registerStatsButtons
 +(void)registerStatsButtons: (SKScene*)s location:(CGPoint)p node:(SKNode*)n {
-    [statsMenuButtons onStatsButtonPress:(SKSpriteNode*)n];
+    [statsMenuButtons onStatsButtonPress:(SKSpriteNode*)n scene:s];
+    [playerStatsMenu onDoneTouch:(SKSpriteNode*)n scene:s];
 }
 @end

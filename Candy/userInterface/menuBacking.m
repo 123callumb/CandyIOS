@@ -17,7 +17,7 @@
     return back;
 }
 +(id)createStatsBacking {
-    SKSpriteNode *sBack = [SKSpriteNode spriteNodeWithImageNamed:@"statsTemplate"];
+    SKSpriteNode *sBack = [SKSpriteNode spriteNodeWithImageNamed:@"menuStatsLong"];
     sBack.xScale = 0.43;
     sBack.yScale = 0.43;
     sBack.anchorPoint = CGPointMake(0.5, 0.55);
