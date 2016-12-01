@@ -19,7 +19,7 @@ int inventoryUnlocked = 4;
     SKSpriteNode *sweet = [defaultSweet addSweet:s pos:p slotID:1];
     float scale = [self determineScale];
     [money addBalance:[inventory slotCalculation:1]];
-    NSLog(@"Slot 1 Earnings = %d", [inventory slotCalculation:1]);
+    //NSLog(@"Slot 1 Earnings = %d", [inventory slotCalculation:1]);
     
     [nodeToParticle particleFlyAnimation:sweet scene:s scaleNo:scale];
     
@@ -27,21 +27,21 @@ int inventoryUnlocked = 4;
         SKSpriteNode *sweet1 = [defaultSweet addSweet:s pos:p slotID:2];
         [nodeToParticle particleFlyAnimation:sweet1 scene:s scaleNo:scale];
         [money addBalance:[inventory slotCalculation:2]];
-        NSLog(@"Slot 2 Earnings = %d", [inventory slotCalculation:2]);
+        //NSLog(@"Slot 2 Earnings = %d", [inventory slotCalculation:2]);
         
     }
     if(inventoryUnlocked >= 3){
         SKSpriteNode *sweet2 = [defaultSweet addSweet:s pos:p slotID:3];
         [nodeToParticle particleFlyAnimation:sweet2 scene:s scaleNo:scale];
         [money addBalance:[inventory slotCalculation:3]];
-        NSLog(@"Slot 3 Earnings = %d", [inventory slotCalculation:3]);
+        //NSLog(@"Slot 3 Earnings = %d", [inventory slotCalculation:3]);
         
     }
     if(inventoryUnlocked >= 4){
         SKSpriteNode *sweet3 = [defaultSweet addSweet:s pos:p slotID:4];
         [nodeToParticle particleFlyAnimation:sweet3 scene:s scaleNo:scale];
         [money addBalance:[inventory slotCalculation:4]];
-        NSLog(@"Slot 4 Earnings = %d", [inventory slotCalculation:4]);
+        //NSLog(@"Slot 4 Earnings = %d", [inventory slotCalculation:4]);
         
     }
 }
