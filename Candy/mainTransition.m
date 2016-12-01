@@ -9,6 +9,7 @@
 #import "mainTransition.h"
 #import "main.h"
 #import "Character_Maker.h"
+#import "mapScene.h"
 
 //Everytime we want to change scene if we use this method it will make it easier, we can also add certain scene transitions easier this way!
 
@@ -18,6 +19,7 @@
 @implementation mainTransition {
     main *main;
     Character_Maker *Char_Maker;
+    mapScene *mapMain;
 }
 
 +(void)switchScene: (SKScene *)s1 sceneTwo: (NSString *)scene2 Transition:(SKTransition *)tran{
@@ -32,6 +34,8 @@
     }
     else if([scene2 isEqual:@"Character_Maker"]){
         s2 = [[Character_Maker alloc] initWithSize:s1.size];
+    }else if([scene2 isEqual:@"mainMap"]){
+        s2 = [[mapScene alloc] initWithSize:s1.size];
     }
     s2.scaleMode = SKSceneScaleModeAspectFill;
     

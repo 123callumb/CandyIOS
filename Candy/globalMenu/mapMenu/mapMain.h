@@ -10,4 +10,5 @@
 
 @interface mapMain : SKSpriteNode
 +(void)mapNavigation: (CGPoint)p node:(SKSpriteNode*)s;
++(void)createMap: (SKScene*)s;
 @end
