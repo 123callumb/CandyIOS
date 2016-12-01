@@ -24,7 +24,7 @@
     desk.anchorPoint = CGPointMake(0.5, 0.4);
     
     [s addChild:back];
-    [Character Spawn:s];
+    [Character Spawn:s Position:CGPointMake(0, -30)];
     [s addChild:desk];
     
 }
