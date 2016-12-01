@@ -9,7 +9,7 @@
 #import "Character.h"
 
 @implementation Character
-+(void)Spawn:(SKScene*)s Position:(CGPoint)Pos{
++(void)Spawn:(SKScene*)s Position:(CGPoint)Pos Scale:(double)scale{
     NSString *HatName = [[NSUserDefaults standardUserDefaults] stringForKey:@"hatsVal"];
     NSString *PantsName = [[NSUserDefaults standardUserDefaults] stringForKey:@"pantsVal"];
     NSString *ShirtName = [[NSUserDefaults standardUserDefaults] stringForKey:@"shirtsVal"];
@@ -43,7 +43,29 @@
     shadow.position = Pos;
     HatShadow.position = CGPointMake(Pos.x+10, Pos.y-10);
     
+<<<<<<< HEAD
 
+=======
+    base.xScale = scale;
+    base.yScale = scale;
+    hue.xScale = scale;
+    hue.yScale = scale;
+    hat.xScale = scale;
+    hat.yScale = scale;
+    shirt.xScale = scale;
+    shirt.yScale = scale;
+    pants.xScale = scale;
+    pants.yScale = scale;
+    shoes.xScale = scale;
+    shoes.yScale = scale;
+    preset.xScale = scale;
+    preset.yScale = scale;
+    HatShadow.xScale = scale;
+    HatShadow.yScale = scale;
+    shadow.xScale = scale;
+    shadow.yScale = scale;
+    
+>>>>>>> master
     base.zPosition = -2;
     hue.zPosition = -2;
     hat.zPosition = -2;
