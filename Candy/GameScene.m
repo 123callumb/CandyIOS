@@ -28,6 +28,8 @@
     
     //Add Scene Extras
     //This can be moved to a custom delay method, but is it worth it?
+    
+    
     SKAction *splashTime = [SKAction waitForDuration:2];
     [self runAction:splashTime completion:^{
         [mainTransition switchScene:self sceneTwo:@"Character_Maker" Transition:[SKTransition crossFadeWithDuration:1]];
