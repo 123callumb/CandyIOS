@@ -41,6 +41,8 @@
     shadow.position = Pos;
     HatShadow.position = CGPointMake(Pos.x+10, Pos.y-10);
     
+    //test 123 test 123
+    
     base.xScale = scale;
     base.yScale = scale;
     hue.xScale = scale;
