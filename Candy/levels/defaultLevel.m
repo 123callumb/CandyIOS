@@ -11,21 +11,21 @@
 
 @implementation defaultLevel
 +(void)setLevel:(SKScene*)s{
-    SKSpriteNode *back = [SKSpriteNode spriteNodeWithImageNamed:@"smallerRoom"];
+    SKSpriteNode *back = [SKSpriteNode spriteNodeWithImageNamed:@"crap_room"];
     SKSpriteNode *desk = [SKSpriteNode spriteNodeWithImageNamed:@"desk"];
     back.zPosition = -3;
-    back.xScale = 1.5;
-    back.yScale = 1.5;
+    back.xScale = 1.3;
+    back.yScale = 1.3;
     back.anchorPoint = CGPointMake(0.5, 0.4);
     
     desk.zPosition = -1;
-    desk.xScale = 1.5;
-    desk.yScale = 1.5;
+    desk.xScale = 1.3;
+    desk.yScale = 1.3;
     desk.anchorPoint = CGPointMake(0.5, 0.4);
     
     [s addChild:back];
-    [Character Spawn:s Position:CGPointMake(0, -30)];
-    [s addChild:desk];
+    [Character Spawn:s Position:CGPointMake(0, -30) Scale:0.75];
+    //[s addChild:desk];
     
 }
 @end
