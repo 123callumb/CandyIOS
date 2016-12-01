@@ -74,6 +74,7 @@
     shoes.anchorPoint = Anchor;
     preset.anchorPoint = Anchor;
     shadow.anchorPoint = Anchor;
+    HatShadow.anchorPoint = Anchor;
     
     base.zPosition = -2;
     hue.zPosition = -2;
