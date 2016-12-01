@@ -9,5 +9,5 @@
 #import <SpriteKit/SpriteKit.h>
 
 @interface Character : SKSpriteNode
-+(void)Spawn:(SKScene*)s Position:(CGPoint)Pos;
++(void)Spawn:(SKScene*)s Position:(CGPoint)Pos Scale:(double)scale;
 @end
