@@ -7,6 +7,7 @@
 //
 
 #import "playerStatsMenu.h"
+#import "inventory.h"
 
 @implementation playerStatsMenu
 +(void)createPStatsMenu: (SKScene*)s {
@@ -19,6 +20,8 @@
     splayerStatsBacking.anchorPoint = CGPointMake(0.5, 0.55);
     
     SKAction *slideRight = [SKAction moveByX:-s.frame.size.width y:0 duration:0.15];
+    
+    [self addStatsLabels:splayerStatsBacking];
     
     [s addChild:done];
     [s addChild:splayerStatsBacking];
@@ -53,5 +56,20 @@
     [button runAction:slideRight completion:^{
         [button removeFromParent];
     }];
+}
++(void)addStatsLabels: (SKSpriteNode*)s {
+    int slotOutputInt = ([inventory slotCalculation:1] + [inventory slotCalculation:2] + [inventory slotCalculation:3] + [inventory slotCalculation:4]);
+    
+    NSString *slotToString = [NSString stringWithFormat:@"%d", slotOutputInt];
+    
+    SKLabelNode *slotOutput = [SKLabelNode labelNodeWithText:slotToString];
+    
+    slotOutput.fontName = @"Coder's-Crux";
+    slotOutput.fontSize = 150;
+    slotOutput.fontColor = [SKColor blackColor];
+    slotOutput.position = CGPointMake(0, -s.frame.size.height/6);
+    
+    
+    [s addChild:slotOutput];
 }
 @end
