@@ -36,7 +36,8 @@ NSString *PresetVal;
         [SaveButton runAction:delay completion:^{
             SaveButton.texture = [SKTexture textureWithImageNamed:@"spr_save_button_0"];
         }];
-        
+        //set NSUSERDEFAULT so that the character creator wont open again on launch
+        [[NSUserDefaults standardUserDefaults] setBool:true forKey:@"spawnCreator"];
         //switch Scene
         SKAction *splashTime = [SKAction waitForDuration:0];
         [s runAction:splashTime completion:^{

@@ -64,6 +64,17 @@
     shadow.xScale = scale;
     shadow.yScale = scale;
     
+    CGPoint Anchor = CGPointMake(0.5, 0);
+    
+    base.anchorPoint = Anchor;
+    hue.anchorPoint = Anchor;
+    hat.anchorPoint = Anchor;
+    shirt.anchorPoint = Anchor;
+    pants.anchorPoint = Anchor;
+    shoes.anchorPoint = Anchor;
+    preset.anchorPoint = Anchor;
+    shadow.anchorPoint = Anchor;
+    
     base.zPosition = -2;
     hue.zPosition = -2;
     hat.zPosition = -2;
