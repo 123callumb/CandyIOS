@@ -23,9 +23,8 @@
     SKSpriteNode *pants = [SKSpriteNode spriteNodeWithImageNamed:PantsName];
     SKSpriteNode *shoes = [SKSpriteNode spriteNodeWithImageNamed:ShoesName];
     SKSpriteNode *preset = [SKSpriteNode spriteNodeWithImageNamed:PresetName];
-<<<<<<< HEAD
     //checkennugget
-=======
+
     SKSpriteNode *shadow = [SKSpriteNode spriteNodeWithImageNamed:@"spr_shadow_0"];
     
     //Hat Shadow
@@ -44,7 +43,7 @@
     shadow.position = Pos;
     HatShadow.position = CGPointMake(Pos.x+10, Pos.y-10);
     
->>>>>>> master
+
     base.zPosition = -2;
     hue.zPosition = -2;
     hat.zPosition = -2;
