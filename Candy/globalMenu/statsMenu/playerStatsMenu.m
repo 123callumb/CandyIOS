@@ -8,6 +8,8 @@
 
 #import "playerStatsMenu.h"
 #import "inventory.h"
+#import "buttonAnimation.h"
+#import "statsMenuButtons.h"
 
 @implementation playerStatsMenu
 +(void)createPStatsMenu: (SKScene*)s {
@@ -22,6 +24,7 @@
     SKAction *slideRight = [SKAction moveByX:-s.frame.size.width y:0 duration:0.15];
     
     [self addStatsLabels:splayerStatsBacking];
+    [self addPlayerButton:splayerStatsBacking];
     
     [s addChild:done];
     [s addChild:splayerStatsBacking];
@@ -42,6 +45,7 @@
 +(void)onDoneTouch: (SKSpriteNode*)s scene:(SKScene*)sk{
     if([s.name isEqualToString:@"statsDoneButton"]){
         [self removeStatsMenu:sk];
+        [buttonAnimation changeState:(SKSpriteNode*)s changeName:@"donePressured" originalName:@"doneButton"];
     }
 }
 +(void)removeStatsMenu: (SKScene*)s {
@@ -71,5 +75,20 @@
     
     
     [s addChild:slotOutput];
+}
++(void)addPlayerButton: (SKSpriteNode*)s {
+    SKSpriteNode *pSButton = [SKSpriteNode spriteNodeWithImageNamed:@"playerStatsIcon"];
+    pSButton.position = CGPointMake(-s.frame.size.width/2, s.frame.size.height/1.8);
+    pSButton.name = @"statsPlayerIcon";
+    
+    [s addChild:pSButton];
+}
++(void)onPlayerButtonTouch: (SKScene*)s location:(CGPoint)p node:(SKNode*)n {
+    if([n.name isEqualToString:@"statsPlayerIcon"]){
+    SKAction *onTouch = [SKAction runBlock:^{
+        
+    }];
+    [statsMenuButtons buttonAnimation:(SKSpriteNode*)n action:onTouch];
+    }
 }
 @end

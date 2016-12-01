@@ -14,5 +14,6 @@
 +(void)registerStatsButtons: (SKScene*)s location:(CGPoint)p node:(SKNode*)n {
     [statsMenuButtons onStatsButtonPress:(SKSpriteNode*)n scene:s];
     [playerStatsMenu onDoneTouch:(SKSpriteNode*)n scene:s];
+    [playerStatsMenu onPlayerButtonTouch:s location:p node:n];
 }
 @end

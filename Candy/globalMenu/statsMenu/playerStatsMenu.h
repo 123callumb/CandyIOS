@@ -11,4 +11,5 @@
 @interface playerStatsMenu : SKSpriteNode
 +(void)createPStatsMenu: (SKScene*)s;
 +(void)onDoneTouch: (SKSpriteNode*)s scene:(SKScene*)sk;
++(void)onPlayerButtonTouch: (SKScene*)s location:(CGPoint)p node:(SKNode*)n;
 @end
