@@ -35,7 +35,9 @@
         [playerStatsMenu createPStatsMenu:sk];
     }
     if([s.name isEqualToString:@"statsMenuMapButton"]){
-        SKAction *block = [SKAction runBlock:^{}];
+        SKAction *block = [SKAction runBlock:^{
+        
+        }];
         [self buttonAnimation:s action:block];
     }
     if([s.name isEqualToString:@"statsMenuCoinPackButton"]){
