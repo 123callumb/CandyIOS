@@ -23,7 +23,7 @@
     SKSpriteNode *pants = [SKSpriteNode spriteNodeWithImageNamed:PantsName];
     SKSpriteNode *shoes = [SKSpriteNode spriteNodeWithImageNamed:ShoesName];
     SKSpriteNode *preset = [SKSpriteNode spriteNodeWithImageNamed:PresetName];
-    
+    //checkennugget
     base.zPosition = -2;
     hue.zPosition = -2;
     hat.zPosition = -2;
