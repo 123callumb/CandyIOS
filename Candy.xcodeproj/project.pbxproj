@@ -52,6 +52,8 @@
 		75919B951DDB82DF001F66EB /* mainUpgrade.m in Sources */ = {isa = PBXBuildFile; fileRef = 75919B941DDB82DF001F66EB /* mainUpgrade.m */; };
 		75919B991DDCA41C001F66EB /* defaultLevel.m in Sources */ = {isa = PBXBuildFile; fileRef = 75919B981DDCA41C001F66EB /* defaultLevel.m */; };
 		75919B9C1DDCA4CE001F66EB /* levelDecider.m in Sources */ = {isa = PBXBuildFile; fileRef = 75919B9B1DDCA4CE001F66EB /* levelDecider.m */; };
+		759E71C81DF0A02600B7275A /* mapMain.m in Sources */ = {isa = PBXBuildFile; fileRef = 759E71C71DF0A02600B7275A /* mapMain.m */; };
+		759E71CB1DF0A21D00B7275A /* mapScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 759E71CA1DF0A21D00B7275A /* mapScene.m */; };
 		75C36DFC1DCCF77600F84214 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 75C36DFB1DCCF77600F84214 /* main.m */; };
 		75C36DFF1DCCF77600F84214 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 75C36DFE1DCCF77600F84214 /* AppDelegate.m */; };
 		75C36E011DCCF77600F84214 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 75C36E001DCCF77600F84214 /* GameScene.sks */; };
@@ -180,6 +182,10 @@
 		75919B981DDCA41C001F66EB /* defaultLevel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = defaultLevel.m; path = Candy/levels/defaultLevel.m; sourceTree = "<group>"; };
 		75919B9A1DDCA4CE001F66EB /* levelDecider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = levelDecider.h; sourceTree = "<group>"; };
 		75919B9B1DDCA4CE001F66EB /* levelDecider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = levelDecider.m; sourceTree = "<group>"; };
+		759E71C61DF0A02600B7275A /* mapMain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = mapMain.h; path = Candy/globalMenu/mapMenu/mapMain.h; sourceTree = "<group>"; };
+		759E71C71DF0A02600B7275A /* mapMain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = mapMain.m; path = Candy/globalMenu/mapMenu/mapMain.m; sourceTree = "<group>"; };
+		759E71C91DF0A21D00B7275A /* mapScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = mapScene.h; path = Candy/Scenes/mapScene.h; sourceTree = "<group>"; };
+		759E71CA1DF0A21D00B7275A /* mapScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = mapScene.m; path = Candy/Scenes/mapScene.m; sourceTree = "<group>"; };
 		75C36DF71DCCF77600F84214 /* Candy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Candy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		75C36DFB1DCCF77600F84214 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		75C36DFD1DCCF77600F84214 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -281,6 +287,7 @@
 		750F3A951DEC8160002AFB78 /* globalMenu */ = {
 			isa = PBXGroup;
 			children = (
+				759E71C51DF09FF400B7275A /* mapMenu */,
 				750F3A961DEC8169002AFB78 /* statsMenu */,
 				750F3A971DEC81A4002AFB78 /* statsMenuButtons.h */,
 				750F3A981DEC81A4002AFB78 /* statsMenuButtons.m */,
@@ -420,6 +427,15 @@
 			name = levelBackgrounds;
 			sourceTree = "<group>";
 		};
+		759E71C51DF09FF400B7275A /* mapMenu */ = {
+			isa = PBXGroup;
+			children = (
+				759E71C61DF0A02600B7275A /* mapMain.h */,
+				759E71C71DF0A02600B7275A /* mapMain.m */,
+			);
+			name = mapMenu;
+			sourceTree = "<group>";
+		};
 		75C36DEE1DCCF77600F84214 = {
 			isa = PBXGroup;
 			children = (
@@ -548,6 +564,8 @@
 				61E1837E1DEDE45A0034C021 /* Character_Maker.m */,
 				75C36E441DCE752A00F84214 /* main.h */,
 				75C36E451DCE752A00F84214 /* main.m */,
+				759E71C91DF0A21D00B7275A /* mapScene.h */,
+				759E71CA1DF0A21D00B7275A /* mapScene.m */,
 			);
 			name = Scenes;
 			sourceTree = "<group>";
@@ -793,12 +811,14 @@
 				75E1B5D71DE29B3600F7C50F /* doneButton.m in Sources */,
 				75919B951DDB82DF001F66EB /* mainUpgrade.m in Sources */,
 				750F3A9F1DEF0762002AFB78 /* playerStatsMenu.m in Sources */,
+				759E71CB1DF0A21D00B7275A /* mapScene.m in Sources */,
 				7525F7A81DD216D800B0510C /* money.m in Sources */,
 				7525F7941DD08C9D00B0510C /* coinBarSprite.m in Sources */,
 				75270FCB1DE50B8600E7588F /* flavourPicker.m in Sources */,
 				7525F7C51DD25C9100B0510C /* combo.m in Sources */,
 				75E8F1981DD7969500A421E7 /* statsMenu.m in Sources */,
 				61E183861DEE00E30034C021 /* Character.m in Sources */,
+				759E71C81DF0A02600B7275A /* mapMain.m in Sources */,
 				75C36E461DCE752A00F84214 /* main.m in Sources */,
 				7525F7971DD08F8400B0510C /* inventoryMenu.m in Sources */,
 				757CD1A11DE2200000D07480 /* sweetPicker.m in Sources */,
