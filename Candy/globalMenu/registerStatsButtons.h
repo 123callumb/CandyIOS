@@ -10,4 +10,5 @@
 
 @interface registerStatsButtons : SKSpriteNode
 +(void)registerStatsButtons: (SKScene*)s location:(CGPoint)p node:(SKNode*)n;
+
 @end
