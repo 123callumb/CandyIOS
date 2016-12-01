@@ -8,6 +8,7 @@
 
 #import "statsMenuButtons.h"
 #import "playerStatsMenu.h"
+#import "mainTransition.h"
 
 @implementation statsMenuButtons
 
@@ -36,7 +37,7 @@
     }
     if([s.name isEqualToString:@"statsMenuMapButton"]){
         SKAction *block = [SKAction runBlock:^{
-        
+            [mainTransition switchScene:sk sceneTwo:@"mainMap" Transition:[SKTransition doorsCloseVerticalWithDuration:0.3]];
         }];
         [self buttonAnimation:s action:block];
     }

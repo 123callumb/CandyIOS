@@ -12,6 +12,8 @@
 +(void)createMap: (SKScene*)s {
     SKSpriteNode *map = [SKSpriteNode spriteNodeWithImageNamed:@"mapTemplate"];
     map.name = @"mainMap";
+    map.xScale = 2;
+    map.yScale = 2;
     [s addChild:map];
 }
 +(void)mapNavigation: (CGPoint)p node:(SKSpriteNode*)s {

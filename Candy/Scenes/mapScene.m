@@ -12,6 +12,7 @@
 @implementation mapScene
 -(void)didMoveToView:(SKView *)view {
     //Set Background Foreground, mainly static!
+    [mapMain createMap:self];
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
