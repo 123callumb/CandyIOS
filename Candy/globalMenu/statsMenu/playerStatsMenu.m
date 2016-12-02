@@ -91,7 +91,6 @@
     SKAction *onTouch = [SKAction runBlock:^{
 
     }];
-        
         SKAction *splashTime = [SKAction waitForDuration:0];
         [s runAction:splashTime completion:^{
             [mainTransition switchScene:s sceneTwo:@"Character_Maker" Transition:[SKTransition moveInWithDirection:SKTransitionDirectionUp duration:1]];
