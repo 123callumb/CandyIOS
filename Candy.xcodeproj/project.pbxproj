@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		618EA38C1DF1ED4C00D07ADD /* candyMachines.m in Sources */ = {isa = PBXBuildFile; fileRef = 618EA38B1DF1ED4C00D07ADD /* candyMachines.m */; };
 		61E1837F1DEDE45A0034C021 /* Character_Maker.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E1837E1DEDE45A0034C021 /* Character_Maker.m */; };
 		61E183861DEE00E30034C021 /* Character.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E183851DEE00E30034C021 /* Character.m */; };
 		61E183891DEE13490034C021 /* skinColour.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E183881DEE13490034C021 /* skinColour.m */; };
@@ -99,6 +100,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		618EA38A1DF1ED4C00D07ADD /* candyMachines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = candyMachines.h; path = Candy/candyMachines.h; sourceTree = "<group>"; };
+		618EA38B1DF1ED4C00D07ADD /* candyMachines.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = candyMachines.m; path = Candy/candyMachines.m; sourceTree = "<group>"; };
 		61E1837D1DEDE45A0034C021 /* Character_Maker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Character_Maker.h; sourceTree = "<group>"; };
 		61E1837E1DEDE45A0034C021 /* Character_Maker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Character_Maker.m; sourceTree = "<group>"; };
 		61E183841DEE00E30034C021 /* Character.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Character.h; sourceTree = "<group>"; };
@@ -261,6 +264,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		618EA38D1DF1ED5700D07ADD /* Candy_Machines */ = {
+			isa = PBXGroup;
+			children = (
+				618EA38A1DF1ED4C00D07ADD /* candyMachines.h */,
+				618EA38B1DF1ED4C00D07ADD /* candyMachines.m */,
+			);
+			name = Candy_Machines;
+			sourceTree = "<group>";
+		};
 		61E1836B1DEDE3DE0034C021 /* Character_Maker */ = {
 			isa = PBXGroup;
 			children = (
@@ -444,6 +456,7 @@
 		75C36DEE1DCCF77600F84214 = {
 			isa = PBXGroup;
 			children = (
+				618EA38D1DF1ED5700D07ADD /* Candy_Machines */,
 				61E183801DEDF0830034C021 /* CharacterSpawn */,
 				61E1836B1DEDE3DE0034C021 /* Character_Maker */,
 				750F3A951DEC8160002AFB78 /* globalMenu */,
@@ -794,6 +807,7 @@
 				757CD1951DE1598100D07480 /* registerBoxes.m in Sources */,
 				7525F78E1DCFEA7C00B0510C /* coinButton.m in Sources */,
 				750F3A9C1DEC863E002AFB78 /* registerStatsButtons.m in Sources */,
+				618EA38C1DF1ED4C00D07ADD /* candyMachines.m in Sources */,
 				75C36E421DCE63E500F84214 /* mainTransition.m in Sources */,
 				75E8F1951DD3CC3100A421E7 /* nodeToParticle.m in Sources */,
 				61E183921DEE14140034C021 /* background.m in Sources */,
@@ -929,7 +943,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -970,7 +984,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -983,7 +997,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = T5F4852ZMN;
 				INFOPLIST_FILE = Candy/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = kilcal.Candy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -996,7 +1010,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = T5F4852ZMN;
 				INFOPLIST_FILE = Candy/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = kilcal.Candy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
