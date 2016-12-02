@@ -14,11 +14,13 @@
 #import "levelDecider.h"
 #import "registerBoxes.h"
 #import "registerStatsButtons.h"
+#import "menuHandler.h"
 
 @implementation main
 
 -(void)didMoveToView:(SKView *)view {
     //Set Background Foreground, mainly static!
+    [menuHandler refreshMenuSystem:self];
     [backgroundManager mainScene:self];
     [mainUI drawUI:self];
     [levelDecider createLevel:self];

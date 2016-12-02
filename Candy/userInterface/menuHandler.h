@@ -14,4 +14,5 @@
 +(void)closeMenu:(SKScene*)s;
 +(void)setCurrentMenu: (int)num;
 +(int)getCurrentMenu;
++(void)refreshMenuSystem: (SKScene*)s;
 @end
