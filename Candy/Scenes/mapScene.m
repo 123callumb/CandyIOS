@@ -26,7 +26,7 @@
     
     SKScene *mainScene = [[main alloc] initWithSize:self.size];
     
-
+    [mapGui onNavigationPress:(SKSpriteNode*)obj scene:self];
     [mapGui onTouchOfBack:self obj:(SKSpriteNode*)obj scene2:mainScene];
 }
 
@@ -44,7 +44,8 @@
     CGPoint loc = [tap locationInNode:self];
     SKNode *obj = [self nodeAtPoint:loc];
     
-    [mapMain onRelease:(SKSpriteNode*)obj point:loc];
+    [mapGui nagivationEnded:self];
+    [mapMain onRelease:(SKSpriteNode*)obj point:loc scene:self];
 }
 
 -(void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event {
