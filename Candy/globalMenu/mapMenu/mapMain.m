@@ -38,9 +38,9 @@ int movedBy = 0;
         
     }
 }
-+(void)onRelease: (SKSpriteNode*)s point:(CGPoint)p {
++(void)onRelease: (SKSpriteNode*)s point:(CGPoint)p scene:(SKScene*)sk {
     if([s.name isEqualToString:@"mainMap"]){
-        s.anchorPoint = CGPointMake(s.anchorPoint.x - movedBy/1000, 0.5);
+        s.anchorPoint = sk.anchorPoint;
     }
 }
 @end

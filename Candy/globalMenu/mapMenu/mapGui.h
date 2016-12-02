@@ -11,4 +11,6 @@
 @interface mapGui : SKSpriteNode
 +(void)addGui: (SKScene*)s;
 +(void)onTouchOfBack: (SKScene*)s obj:(SKSpriteNode*)n scene2:(SKScene*)s2;
++(void)onNavigationPress: (SKSpriteNode*)obj scene:(SKScene*)s;
++(void)nagivationEnded: (SKScene*)s;
 @end
