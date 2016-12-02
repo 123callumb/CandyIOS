@@ -10,6 +10,7 @@
 #import "inventoryMenu.h"
 #import "statsMenu.h"
 #import "upgradeMenu.h"
+#import "coinButton.h"
 
 @implementation menuHandler
 //The slide up thingy!
@@ -78,5 +79,6 @@ int currentMenu = 4;
     [inventoryMenu menuActions:s inScene:false];
     [statsMenu menuHandler:s inScene:false];
     [upgradeMenu menuHandler:s inScene:false];
+    [coinButton buttonReset:s];
 }
 @end

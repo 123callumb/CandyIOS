@@ -16,6 +16,7 @@
     //Set Background Foreground, mainly static!
     [mapMain createMap:self];
     self.anchorPoint = CGPointMake(0.5, 0.5);
+    
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
@@ -25,6 +26,7 @@
     
     SKScene *mainScene = [[main alloc] initWithSize:self.size];
     
+
     [mapGui onTouchOfBack:self obj:(SKSpriteNode*)obj scene2:mainScene];
 }
 
@@ -38,6 +40,11 @@
 }
 
 -(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
+    UITouch *tap = [touches anyObject];
+    CGPoint loc = [tap locationInNode:self];
+    SKNode *obj = [self nodeAtPoint:loc];
+    
+    [mapMain onRelease:(SKSpriteNode*)obj point:loc];
 }
 
 -(void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event {
