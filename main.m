@@ -15,7 +15,9 @@
 #import "registerBoxes.h"
 #import "registerStatsButtons.h"
 #import "menuHandler.h"
-
+#import "candyMachines.h"
+#import "money.h"
+#import "coinBarSprite.h"
 @implementation main
 
 -(void)didMoveToView:(SKView *)view {
@@ -31,6 +33,7 @@
     CGPoint loc = [tap locationInNode:self];
     SKNode *obj = [self nodeAtPoint:loc];
     
+    [candyMachines onTouch:obj];
     [taps onPressed:self location:loc];
     [buttonHandler registerButtons:obj currentScene:self];
     [registerBoxes registerBoxes:obj currentScene:self];
