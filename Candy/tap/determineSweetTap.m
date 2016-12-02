@@ -16,6 +16,8 @@
 int inventoryUnlocked = 4;
 +(void)spawn: (SKScene *)s location:(CGPoint)p {
     
+    if (p.y >= -470){
+    
     p = CGPointMake(-40, -80);
     SKSpriteNode *sweet = [defaultSweet addSweet:s pos:p slotID:1];
     float scale = [self determineScale];
@@ -44,6 +46,7 @@ int inventoryUnlocked = 4;
         [money addBalance:[inventory slotCalculation:4]];
         //NSLog(@"Slot 4 Earnings = %d", [inventory slotCalculation:4]);
         
+    }
     }
 }
 +(float)determineScale {

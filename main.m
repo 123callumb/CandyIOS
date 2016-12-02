@@ -32,8 +32,9 @@
     UITouch *tap = [touches anyObject];
     CGPoint loc = [tap locationInNode:self];
     SKNode *obj = [self nodeAtPoint:loc];
-    
+    if(loc.y >= -470){
     [candyMachines onTouch:obj];
+    }
     [taps onPressed:self location:loc];
     [buttonHandler registerButtons:obj currentScene:self];
     [registerBoxes registerBoxes:obj currentScene:self];
