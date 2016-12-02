@@ -73,5 +73,10 @@ int currentMenu = 4;
 +(void)setCurrentMenu: (int)num {
     currentMenu = num;
 }
-
++(void)refreshMenuSystem: (SKScene*)s; {
+    [self setCurrentMenu:4];
+    [inventoryMenu menuActions:s inScene:false];
+    [statsMenu menuHandler:s inScene:false];
+    [upgradeMenu menuHandler:s inScene:false];
+}
 @end
