@@ -7,6 +7,7 @@
 //
 
 #import "mapMain.h"
+#import "mapGui.h"
 
 @implementation mapMain
 +(void)createMap: (SKScene*)s {
@@ -14,6 +15,7 @@
     map.name = @"mainMap";
     map.xScale = 2;
     map.yScale = 2;
+    [mapGui addGui:s];
     [s addChild:map];
 }
 +(void)mapNavigation: (CGPoint)p node:(SKSpriteNode*)s {

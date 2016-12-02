@@ -12,6 +12,7 @@
 #import "statsMenuButtons.h"
 #import "mainTransition.h"
 #import "Character_Maker.h"
+#import "main.h"
 
 @implementation playerStatsMenu
 +(void)createPStatsMenu: (SKScene*)s {
@@ -87,11 +88,14 @@
 }
 +(void)onPlayerButtonTouch: (SKScene*)s location:(CGPoint)p node:(SKNode*)n {
     if([n.name isEqualToString:@"statsPlayerIcon"]){
-    SKAction *onTouch = [SKAction runBlock:^{}];
+    SKAction *onTouch = [SKAction runBlock:^{
+
+    }];
         
         SKAction *splashTime = [SKAction waitForDuration:0];
         [s runAction:splashTime completion:^{
             [mainTransition switchScene:s sceneTwo:@"Character_Maker" Transition:[SKTransition moveInWithDirection:SKTransitionDirectionUp duration:1]];
+            
         }];
     [statsMenuButtons buttonAnimation:(SKSpriteNode*)n action:onTouch];
     }
