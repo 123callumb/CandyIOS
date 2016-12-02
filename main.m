@@ -25,7 +25,6 @@
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-    
     UITouch *tap = [touches anyObject];
     CGPoint loc = [tap locationInNode:self];
     SKNode *obj = [self nodeAtPoint:loc];
