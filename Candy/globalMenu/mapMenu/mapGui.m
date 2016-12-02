@@ -9,12 +9,13 @@
 
 #import "mapGui.h"
 #import "buttonAnimation.h"
+#import "mainTransition.h"
 
 @implementation mapGui
 +(void)addGui: (SKScene*)s {
     SKSpriteNode *mapBackB = [SKSpriteNode spriteNodeWithImageNamed:@"backButton"];
     mapBackB.name = @"mapBackButton";
-    mapBackB.position = CGPointMake(0, 0);
+    mapBackB.position = CGPointMake(0, -s.frame.size.height/2.3);
     mapBackB.zPosition = 10;
     mapBackB.xScale = 0.43;
     mapBackB.yScale = 0.43;
@@ -23,8 +24,10 @@
 +(void)onTouchOfBack: (SKScene*)s obj:(SKSpriteNode*)n scene2:(SKScene*)s2 {
     if([n.name isEqualToString:@"mapBackButton"]){
         [buttonAnimation changeState:n changeName:@"backButtonPressure" originalName:@"backButton"];
-        SKTransition *thing = [SKTransition doorsOpenVerticalWithDuration:0.3];
-        [s.view presentScene:s2 transition:thing];
+        SKAction *waitForButtonPls = [SKAction waitForDuration:0.01];
+        [s runAction:waitForButtonPls completion:^{
+            [mainTransition switchScene:s sceneTwo:@"main" Transition:[SKTransition doorsCloseVerticalWithDuration:1]];
+        }];
     }
 }
 @end
