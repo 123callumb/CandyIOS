@@ -18,39 +18,35 @@ bool createdStats = false;
 
 +(void)menuHandler: (SKScene*)s inScene:(bool)in{
     
-    if(!createdStats){
-        SKSpriteNode *main = (SKSpriteNode*)[menuBacking createStatsBacking];
-        main.position = CGPointMake(0, -s.frame.size.height);
-        main.name = @"menuStats";
-        [statsMenuButtons addStatsButton:main];
-        [s addChild:main];
-    }
+    SKSpriteNode *main = (SKSpriteNode*)[menuBacking createStatsBacking];
+    main.position = CGPointMake(0, -s.frame.size.height);
+    main.name = @"menuStats";
+    [statsMenuButtons addStatsButton:main];
+    [s addChild:main];
     
-    SKSpriteNode *main = (SKSpriteNode*)[s childNodeWithName:@"menuStats"];
+    SKSpriteNode *main_ = (SKSpriteNode*)[s childNodeWithName:@"menuStats"];
+
     
     if(in){
-        [self createMenu:main scene:s];
+        [self createMenu:main_ scene:s];
     }else if(!in) {
-        [self removeMenu:s];
+        [self removeMenu:s node:main_];
     }
     
 }
 +(void)createMenu: (SKSpriteNode*)main scene:(SKScene*)s; {
-    
-    createdStats = true;
     
     SKAction *slideUp = [SKAction moveToY:(main.position.y+s.frame.size.height) duration:0.3];
     [main runAction:slideUp completion:^{
             [menuBackButton createButton:s];
     }];
 }
-+(void)removeMenu: (SKScene*)s; {
-    
-    SKSpriteNode *main = (SKSpriteNode*)[s childNodeWithName:@"menuStats"];
++(void)removeMenu: (SKScene*)s node:(SKSpriteNode*)m; {
     
     SKAction *slideDown = [SKAction moveToY:(-s.frame.size.height) duration:0.3];
-    [main runAction:slideDown completion:^{
+    [m runAction:slideDown completion:^{
         [menuBackButton removeButton:s];
+        [m removeFromParent];
     }];
 }
 
