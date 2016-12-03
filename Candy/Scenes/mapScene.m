@@ -10,6 +10,7 @@
 #import "mapMain.h"
 #import "mapGui.h"
 #import "main.h"
+#import "mapBuilding.h"
 
 @implementation mapScene
 -(void)didMoveToView:(SKView *)view {
@@ -26,26 +27,19 @@
     
     SKScene *mainScene = [[main alloc] initWithSize:self.size];
     
+    [mapBuilding addBuildingTouches:self node:(SKSpriteNode*)obj];
     [mapGui onNavigationPress:(SKSpriteNode*)obj scene:self];
     [mapGui onTouchOfBack:self obj:(SKSpriteNode*)obj scene2:mainScene];
 }
 
 //These methods are new and pretty dank af!
 -(void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event{
-    UITouch *tap = [touches anyObject];
-    CGPoint loc = [tap locationInNode:self];
-    SKNode *obj = [self nodeAtPoint:loc];
     
-    [mapMain mapNavigation:loc node:(SKSpriteNode*)obj];    
 }
 
 -(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
-    UITouch *tap = [touches anyObject];
-    CGPoint loc = [tap locationInNode:self];
-    SKNode *obj = [self nodeAtPoint:loc];
     
     [mapGui nagivationEnded:self];
-    [mapMain onRelease:(SKSpriteNode*)obj point:loc scene:self];
 }
 
 -(void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event {

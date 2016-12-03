@@ -9,7 +9,5 @@
 #import <SpriteKit/SpriteKit.h>
 
 @interface mapMain : SKSpriteNode
-+(void)mapNavigation: (CGPoint)p node:(SKSpriteNode*)s;
 +(void)createMap: (SKScene*)s;
-+(void)onRelease: (SKSpriteNode*)s point:(CGPoint)p scene:(SKScene*)sk;
 @end

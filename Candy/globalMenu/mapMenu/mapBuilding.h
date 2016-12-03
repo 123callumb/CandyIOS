@@ -10,4 +10,5 @@
 
 @interface mapBuilding : SKSpriteNode
 +(void)addBuilding1: (SKSpriteNode*)s;
++(void)addBuildingTouches: (SKScene*)s node:(SKSpriteNode*)n;
 @end
