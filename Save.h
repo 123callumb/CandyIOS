@@ -11,4 +11,5 @@
 @interface Save : SKSpriteNode
 +(void)spawn:(SKScene*)s;
 +(void)onTouch:(SKNode*)n scene:(SKScene*)s;
+
 @end

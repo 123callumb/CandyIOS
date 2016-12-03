@@ -18,6 +18,7 @@
 #import "candyMachines.h"
 #import "money.h"
 #import "coinBarSprite.h"
+#import "upgradeMenu.h"
 @implementation main
 
 -(void)didMoveToView:(SKView *)view {
@@ -35,6 +36,7 @@
     if(loc.y >= -470){
     [candyMachines onTouch:obj];
     }
+    [upgradeMenu SwitchingMenu:self node:obj];
     [taps onPressed:self location:loc];
     [buttonHandler registerButtons:obj currentScene:self];
     [registerBoxes registerBoxes:obj currentScene:self];
