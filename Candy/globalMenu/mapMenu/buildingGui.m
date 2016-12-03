@@ -10,6 +10,8 @@
 
 @implementation buildingGui
 bool guiEnabled = false;
+
+//Methd pointess now but wanna keep it in..why? just cos.
 +(void)createMenu: (SKSpriteNode*)n {
     SKSpriteNode *buildingGui = [SKSpriteNode spriteNodeWithImageNamed:@"mapGuiBoxSmall"];
     buildingGui.position = CGPointMake(n.frame.size.width * 2, 0);
@@ -25,7 +27,6 @@ bool guiEnabled = false;
         SKAction *scaleUp = [SKAction scaleBy:1.25 duration:0.1];
         SKAction *sequence = [SKAction sequence:@[scaleDown, scaleUp]];
         [n runAction:sequence];
-        [self createMenu:n];
         guiEnabled = true;
     }
 }
