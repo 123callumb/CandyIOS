@@ -10,4 +10,5 @@
 
 @interface upgradeMenu : SKSpriteNode
 +(void)menuHandler: (SKScene*)s inScene:(bool)in;
++(void)SwitchingMenu:(SKScene*)s node:(SKNode*)n;
 @end
