@@ -10,6 +10,7 @@
 #import "mapGui.h"
 #import "buttonAnimation.h"
 #import "mainTransition.h"
+#import "coinBarSprite.h"
 
 @implementation mapGui
 
@@ -23,6 +24,7 @@ bool navigationHeld = false;
     mapBackB.xScale = 0.43;
     mapBackB.yScale = 0.43;
     [self navigationButtons:s];
+    [coinBarSprite addCoinBar:s];
     [s addChild:mapBackB];
 }
 +(void)onTouchOfBack: (SKScene*)s obj:(SKSpriteNode*)n scene2:(SKScene*)s2 {
@@ -86,7 +88,7 @@ bool navigationHeld = false;
         SKAction *moveMapLeft = [SKAction moveByX:20 y:0 duration:0.05];
         [n runAction:moveMapLeft completion:^{
             [self moveMapLoopLeft:n];
-                        NSLog(@"%f", n.position.x);
+                    
             }];
         }
     }
@@ -97,7 +99,7 @@ bool navigationHeld = false;
         SKAction *moveMapRight = [SKAction moveByX:-20 y:0 duration:0.05];
         [n runAction:moveMapRight completion:^{
             [self moveMapLoopRight:n];
-            NSLog(@"%f", n.position.x);
+
         }];
         }
     }
