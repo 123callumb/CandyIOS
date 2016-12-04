@@ -11,30 +11,17 @@
 #import "sweetPicker.h"
 #import "doneButton.h"
 #import "flavourPicker.h"
+#import "buttonCreator.h"
 
 @implementation registerBoxes
 int slotNoPressed = 0;
 +(void)registerBoxes:(SKNode *)obj currentScene:(SKScene *)s {
-    [self boxPresser:obj currentScene:s slotNo:1];
-    [self boxPresser:obj currentScene:s slotNo:2];
-    [self boxPresser:obj currentScene:s slotNo:3];
-    [self boxPresser:obj currentScene:s slotNo:4];
-    [sweetPicker onArrowPress:(SKSpriteNode*)obj scene:s];
-    [flavourPicker onArrowPress:(SKSpriteNode*)obj scene:s];
+    [buttonCreator animateOnPress:(SKSpriteNode*)obj scene:s];
     if([obj.name isEqualToString:@"buttonDone"]){
     [doneButton onTouch:obj currentScene:s];
     }
 }
 
-+(void)boxPresser:(SKNode *)obj currentScene:(SKScene *)s slotNo:(int)num {
-    
-    if([obj.name isEqualToString:[NSString stringWithFormat:@"box_1_%d", num]]){
-        [box1DataScreen menuActions:s inScene:true];
-        [self setSlotPressed:num];
-        [self cheekyInteraction:(SKSpriteNode*)obj];
-    }
-    
-}
 +(int)getSlotPressed {
     return slotNoPressed;
 }
