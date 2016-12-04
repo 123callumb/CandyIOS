@@ -21,9 +21,10 @@ NSString *PresetVal;
 
 @implementation Save
 +(void)spawn:(SKScene*)s{
-    SaveButton = [SKSpriteNode spriteNodeWithImageNamed:@"spr_save_button_0"];
-    SaveButton.position = CGPointMake(s.frame.size.width /2, 120);
-    
+    SaveButton = [SKSpriteNode spriteNodeWithImageNamed:@"doneButton"];
+    SaveButton.position = CGPointMake(s.frame.size.width /2, s.frame.size.height/10);
+    SaveButton.xScale = 0.55;
+    SaveButton.yScale = 0.55;
     SaveButton.name = @"SaveButton";
     
     [s addChild:SaveButton];
@@ -31,10 +32,10 @@ NSString *PresetVal;
 +(void)onTouch:(SKNode*)n scene:(SKScene*)s{
     if([n.name isEqualToString:@"SaveButton"]){
         //animation
-        SaveButton.texture = [SKTexture textureWithImageNamed:@"spr_save_button_1"];
+        SaveButton.texture = [SKTexture textureWithImageNamed:@"donePressured"];
         SKAction *delay = [SKAction waitForDuration:0.5];
         [SaveButton runAction:delay completion:^{
-            SaveButton.texture = [SKTexture textureWithImageNamed:@"spr_save_button_0"];
+            SaveButton.texture = [SKTexture textureWithImageNamed:@"doneButton"];
         }];
         //set NSUSERDEFAULT so that the character creator wont open again on launch
         [[NSUserDefaults standardUserDefaults] setBool:true forKey:@"spawnCreator"];
