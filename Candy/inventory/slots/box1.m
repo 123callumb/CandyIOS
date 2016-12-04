@@ -11,71 +11,61 @@
 #import "sweetData.h"
 #import "flavourPicker.h"
 #import "slot1Data.h"
+#import "buttonCreator.h"
 
 @implementation box1
+
+int selectedSweet = 1;
+int slotsUnlocked = 2;
+
 +(void)addbox:(SKSpriteNode*)s {
-    [self addbox1:s];
-    [self addbox2:s];
-    [self addbox3:s];
-    [self addbox4:s];
-    [self addCheekyBars:s];
+    [self addButtons:s];
+    [self addSlots:s];
+    [self addSweet:s];
 }
-+(void)addbox1:(SKSpriteNode*)s {
-    SKSpriteNode *box = [slot slot:[flavourPicker determineFlavourString:[slot1Data getFlavour:1]]];
-    box.position = CGPointMake(-s.frame.size.width/2.2, s.frame.size.height/4);
-    box.name = @"box_1_1";
-    SKSpriteNode *sweet = [sweetData sweetFromSlot:1];
-    [box addChild:sweet];
-    [s addChild:box];
-}
-+(void)addbox2:(SKSpriteNode*)s; {
-    SKSpriteNode *box = [slot slot:[flavourPicker determineFlavourString:[slot1Data getFlavour:2]]];
-    box.position = CGPointMake(s.frame.size.width/2.2, s.frame.size.height/4);
-    box.name = @"box_1_2";
-    SKSpriteNode *sweet = [sweetData sweetFromSlot:2];
-    [box addChild:sweet];
-    [s addChild:box];
 
++(void)addSlots:(SKSpriteNode*)s {
+    float yVal = s.frame.size.height/2.4;
+    [slot slot:s slotNumber:1 pos:CGPointMake(-s.frame.size.width/1.35, yVal)];
+    [slot slot:s slotNumber:2 pos:CGPointMake(-s.frame.size.width/2.8, yVal)];
+    [slot slot:s slotNumber:3 pos:CGPointMake(0, yVal)];
+    [slot slot:s slotNumber:4 pos:CGPointMake(s.frame.size.width/2.8, yVal)];
+    [slot slot:s slotNumber:5 pos:CGPointMake(s.frame.size.width/1.35, yVal)];
 }
-+(void)addbox3:(SKSpriteNode*)s; {
-    SKSpriteNode *box = [slot slot:[flavourPicker determineFlavourString:[slot1Data getFlavour:3]]];
-    box.position = CGPointMake(-s.frame.size.width/2.2, -s.frame.size.height/2.1);
-    box.name = @"box_1_3";
-    SKSpriteNode *sweet = [sweetData sweetFromSlot:3];
-    [box addChild:sweet];
-    [s addChild:box];
 
++(void)addButtons: (SKSpriteNode*)s {
+    [buttonCreator createSweetButton:s text:@"SWEET TYPE" buttonName:@"sweetTypeButton" position:CGPointMake(0, -s.frame.size.height/2.4)];
+    [buttonCreator createSweetButton:s text:@"FLAVOUR" buttonName:@"sweetFlavourButton" position:CGPointMake(0, -s.frame.size.height/1.6)];
 }
-+(void)addbox4:(SKSpriteNode*)s; {
-    SKSpriteNode *box = [slot slot:[flavourPicker determineFlavourString:[slot1Data getFlavour:4]]];
-    box.position = CGPointMake(s.frame.size.width/2.2, -s.frame.size.height/2.1);
-    box.name = @"box_1_4";
-    SKSpriteNode *sweet = [sweetData sweetFromSlot:4];
-    [box addChild:sweet];
-    [s addChild:box];
 
++(void)addSweet: (SKSpriteNode*)s {
+    SKSpriteNode *sweet = [SKSpriteNode spriteNodeWithImageNamed:@"defaultSweet"];
+    sweet.position = CGPointMake(0, 0);
+    [s addChild:sweet];
 }
-+(void)addCheekyBars: (SKSpriteNode*)s {
-    SKSpriteNode *up = [SKSpriteNode spriteNodeWithImageNamed:@"upMenuBlue"];
-    SKSpriteNode *down = [SKSpriteNode spriteNodeWithImageNamed:@"downMenuBlue"];
-    up.position = CGPointMake(0, s.frame.size.height/1.4);
-    down.position = CGPointMake(0, -s.frame.size.height/1.05);
-    [s addChild:up];
-    [s addChild:down];
-}
-+(void)refreshBoxes: (SKScene*)s {
-    SKSpriteNode *inv = (SKSpriteNode*)[s childNodeWithName:@"menuInventory"];
-    SKAction *respawn = [SKAction runBlock:^{
-    
-    for(int num = 1; num <= 4; num++){
-        SKSpriteNode *box = (SKSpriteNode*)[inv childNodeWithName:[NSString stringWithFormat:@"box_1_%d", num]];
-        [box removeFromParent];
++(void)onSlotClick: (SKSpriteNode*)s {
+    if([s.name containsString:@"sweetSlot"]){
+        if([s.name containsString:@"1"]){
+            selectedSweet = 1;
+        }
+        if([s.name containsString:@"2"] && (slotsUnlocked > 2)){
+            selectedSweet = 2;
+        }
+        if([s.name containsString:@"3"] && (slotsUnlocked > 3)){
+            selectedSweet = 3;
+        }
+        if([s.name containsString:@"4"] && (slotsUnlocked > 4)){
+            selectedSweet = 4;
+        }
+        if([s.name containsString:@"5"] && (slotsUnlocked > 5)){
+            selectedSweet = 5;
+        }
     }
-        
-    }];
-    
-    [inv runAction:respawn completion:^{
-        [self addbox:inv];
-    }];
+}
++(int)getSelectedSlot {
+    return selectedSweet;
+}
++(int)getSlotsUnlocked {
+    return slotsUnlocked;
 }
 @end
