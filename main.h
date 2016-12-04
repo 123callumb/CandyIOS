@@ -9,4 +9,6 @@
 #import <SpriteKit/SpriteKit.h>
 
 @interface main : SKScene
++(void)scrollViewGeneralController:(BOOL)b;
++(void)scrollViewSpecialController:(BOOL)b;
 @end
