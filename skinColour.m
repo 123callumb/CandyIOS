@@ -18,12 +18,12 @@ double BarVal = 0;
 
 @implementation skinColour
 +(void)SpawnTextures:(SKScene*)s{
-    bar = [SKSpriteNode spriteNodeWithImageNamed:@"spr_hue_bar_0"];
-    slider = [SKSpriteNode spriteNodeWithImageNamed:@"spr_hue_slider_0"];
+    bar = [SKSpriteNode spriteNodeWithImageNamed:@"hueBar"];
+    slider = [SKSpriteNode spriteNodeWithImageNamed:@"hueSliderButton"];
     BaseHue =[SKSpriteNode spriteNodeWithImageNamed:@"spr_character_hue_0"];
-    slider.position = CGPointMake(s.frame.size.width / 2 - 90, 400);
-    bar.position = CGPointMake(s.frame.size.width / 2 , 400);
-    BaseHue.position = CGPointMake(s.frame.size.width/2, s.frame.size.height/2);
+    slider.position = CGPointMake(s.frame.size.width / 2 - 90, s.frame.size.height/4.4);
+    bar.position = CGPointMake(s.frame.size.width / 2 , s.frame.size.height/4.4);
+    BaseHue.position = CGPointMake(s.frame.size.width/1.9, s.frame.size.height/1.65);
     
     BarVal = (slider.position.x - (bar.position.x - (bar.frame.size.width / 2) + 30.0f)) /260;
     BaseHue.alpha = BarVal;

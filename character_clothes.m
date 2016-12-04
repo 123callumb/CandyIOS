@@ -38,9 +38,13 @@ SKSpriteNode *prevbtn = nil;
     
     imageState = img;
     
-    SKSpriteNode *bg = [SKSpriteNode spriteNodeWithImageNamed:@"spr_gray_background_0"];
+    SKSpriteNode *bg = [SKSpriteNode spriteNodeWithImageNamed:@"cEditorBgTemp"];
     SKSpriteNode *bgborder = [SKSpriteNode spriteNodeWithImageNamed:@"spr_gray_background_border_0"];
     SKSpriteNode *base = [SKSpriteNode spriteNodeWithImageNamed:@"spr_character_base_0"];
+    
+    bg.yScale = 1.35;
+    bg.xScale = 1.35;
+    bg.zPosition = 0;
     
     hats = [SKSpriteNode spriteNodeWithImageNamed:@"spr_hats_0"];
     shirts = [SKSpriteNode spriteNodeWithImageNamed:@"spr_shirts_0"];
@@ -48,8 +52,8 @@ SKSpriteNode *prevbtn = nil;
     shoes = [SKSpriteNode spriteNodeWithImageNamed:@"spr_shoes_0"];
     pre = [SKSpriteNode spriteNodeWithImageNamed:@"spr_presets_0"];
     
-    nextbtn = [SKSpriteNode spriteNodeWithImageNamed:@"spr_button_next_0"];
-    prevbtn = [SKSpriteNode spriteNodeWithImageNamed:@"spr_button_prev_0"];
+    nextbtn = [SKSpriteNode spriteNodeWithImageNamed:@"arrowRight"];
+    prevbtn = [SKSpriteNode spriteNodeWithImageNamed:@"arrrowLeft"];
     
     hatsNum = 7;
     shirtsNum= 7;
@@ -63,27 +67,35 @@ SKSpriteNode *prevbtn = nil;
     currentPants = 0;
     currentShoes = 0;
     
-    nextbtn.anchorPoint = CGPointMake(0, 0.5);
-    prevbtn.anchorPoint = CGPointMake(0, 0.5);
+    nextbtn.anchorPoint = CGPointMake(0.5, 0.5);
+    prevbtn.anchorPoint = CGPointMake(0.5, 0.5);
     
     nextbtn.name=@"next";
     prevbtn.name=@"prev";
     
+    nextbtn.xScale = 0.43;
+    nextbtn.yScale = 0.43;
+    prevbtn.xScale = 0.43;
+    prevbtn.yScale = 0.43;
+    
     bg.position = CGPointMake(s.frame.size.width / 2, s.frame.size.height / 2);
     bgborder.position = CGPointMake(s.frame.size.width / 2, s.frame.size.height / 2);
-    base.position = CGPointMake(s.frame.size.width / 2, s.frame.size.height /2);
-    hats.position = CGPointMake(s.frame.size.width / 2, s.frame.size.height /2);
-    shirts.position = CGPointMake(s.frame.size.width / 2, s.frame.size.height /2);
-    pants.position = CGPointMake(s.frame.size.width / 2, s.frame.size.height /2);
-    shoes.position = CGPointMake(s.frame.size.width / 2, s.frame.size.height /2);
-    pre.position = CGPointMake(s.frame.size.width / 2, s.frame.size.height /2);
-    nextbtn.position = CGPointMake(s.frame.size.width - nextbtn.frame.size.width - 30, s.frame.size.height / 2);
-    prevbtn.position = CGPointMake(30, s.frame.size.height / 2);
+    
+    CGPoint personPos = CGPointMake(s.frame.size.width/1.9, s.frame.size.height/1.65);
+    
+    base.position = personPos;
+    hats.position = personPos;
+    shirts.position = personPos;
+    pants.position = personPos;
+    shoes.position = personPos;
+    pre.position = personPos;
+    nextbtn.position = CGPointMake(s.frame.size.width/2 + nextbtn.frame.size.width*2, s.frame.size.height / 1.7);
+    prevbtn.position = CGPointMake(s.frame.size.width/2 - prevbtn.frame.size.width*2, s.frame.size.height / 1.7);
     
     [selection_bar spawn:s];
     
     [s addChild:bg];
-    [s addChild:bgborder];
+    // [s addChild:bgborder];
     [s addChild:base];
     
     [skinColour SpawnTextures:s];
@@ -105,10 +117,10 @@ SKSpriteNode *prevbtn = nil;
         else if(imageState == 3)currentShoes++;
         else if(imageState == 4)currentPre++;
         
-        nextbtn.texture = [SKTexture textureWithImageNamed:@"spr_button_next_1"];
+        nextbtn.texture = [SKTexture textureWithImageNamed:@"arrowRight"];
         SKAction *delay = [SKAction waitForDuration:0.2];
         [nextbtn runAction:delay completion:^{
-            nextbtn.texture = [SKTexture textureWithImageNamed:@"spr_button_next_0"];
+            nextbtn.texture = [SKTexture textureWithImageNamed:@"arrowRight"];
         }];
     }
     else if([n.name isEqualToString:@"prev"]){
@@ -118,10 +130,10 @@ SKSpriteNode *prevbtn = nil;
         else if(imageState == 3)currentShoes-=1;
         else if(imageState == 4)currentPre-=1;
         
-        prevbtn.texture = [SKTexture textureWithImageNamed:@"spr_button_prev_1"];
+        prevbtn.texture = [SKTexture textureWithImageNamed:@"arrrowLeft"];
         SKAction *delay = [SKAction waitForDuration:0.2];
         [prevbtn runAction:delay completion:^{
-            prevbtn.texture = [SKTexture textureWithImageNamed:@"spr_button_prev_0"];
+            prevbtn.texture = [SKTexture textureWithImageNamed:@"arrrowLeft"];
         }];
         
     }
