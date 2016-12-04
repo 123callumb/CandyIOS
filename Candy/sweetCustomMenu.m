@@ -18,28 +18,16 @@
 
 +(void)menuActions: (SKScene *)s inScene:(bool)in {
     
-        SKSpriteNode *topHalf = [SKSpriteNode spriteNodeWithImageNamed:@"sweetInv"];
+        SKSpriteNode *topHalf = [SKSpriteNode spriteNodeWithImageNamed:@"invSweetType"];
         SKSpriteNode *bottomHalf = [SKSpriteNode spriteNodeWithImageNamed:@"bottomInvHalf"];
-        SKSpriteNode *boxTitle = [SKSpriteNode spriteNodeWithImageNamed:@"titleBox"];
-        SKLabelNode *boxTitleText = [SKLabelNode labelNodeWithFontNamed:@"Coder's-Crux"];
-        
         topHalf.xScale = 0.45;
         topHalf.yScale = 0.45;
         bottomHalf.xScale = 0.45;
         bottomHalf.yScale = 0.45;
         
-        [topHalf addChild:boxTitle];
-        [boxTitle addChild:boxTitleText];
-        
         topHalf.position = CGPointMake(0, s.frame.size.height*2);
         bottomHalf.position = CGPointMake(0, -s.frame.size.height*2);
-        boxTitle.position = CGPointMake(0, topHalf.frame.size.height/1.2);
     
-        boxTitleText.text = @"SET SLOT";
-        boxTitleText.fontSize = 170;
-        boxTitleText.fontColor = [UIColor blackColor];
-        boxTitleText.position = CGPointMake(0, -boxTitle.frame.size.height/10);
-        
         topHalf.name = @"invBoxTop";
         bottomHalf.name = @"invBoxBottom";
         
@@ -48,10 +36,8 @@
         
         bottomHalf.anchorPoint = CGPointMake(0.5, 0.5);
     
-        [sweetnessSlider addSlider:topHalf];
-        [sweetPicker addSweetPicker:topHalf];
         [doneButton createButton:bottomHalf];
-        [flavourPicker addFlavourPicker:topHalf];
+
         [s addChild:topHalf];
         [s addChild:bottomHalf];
     

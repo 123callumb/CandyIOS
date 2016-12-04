@@ -14,4 +14,8 @@
 +(void)addSlots: (SKSpriteNode*)s {
     [box1 addbox:s];
 }
++(void)createInventory: (SKSpriteNode*)s {
+    
+}
+
 @end

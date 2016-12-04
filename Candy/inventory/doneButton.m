@@ -31,7 +31,6 @@
     [sweetCustomMenu menuActions:s inScene:false];
     int slotClicked = [registerBoxes getSlotPressed];
     [self getSweetPickerData:slotClicked];
-    [box1 refreshBoxes:s];
     [registerBoxes setSlotPressed:0];
 }
 +(void)getSweetPickerData:(int)slotClicked {

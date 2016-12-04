@@ -47,6 +47,7 @@
 		755ACB3F1DF1F781000DD9CB /* mapBuilding.m in Sources */ = {isa = PBXBuildFile; fileRef = 755ACB3E1DF1F781000DD9CB /* mapBuilding.m */; };
 		755ACB421DF32F51000DD9CB /* buildingGui.m in Sources */ = {isa = PBXBuildFile; fileRef = 755ACB411DF32F51000DD9CB /* buildingGui.m */; };
 		756C31231DF34F7F0017FBE9 /* coinSpawner.m in Sources */ = {isa = PBXBuildFile; fileRef = 756C31221DF34F7F0017FBE9 /* coinSpawner.m */; };
+		756C31261DF4D0B20017FBE9 /* buttonCreator.m in Sources */ = {isa = PBXBuildFile; fileRef = 756C31251DF4D0B20017FBE9 /* buttonCreator.m */; };
 		757CD1921DE1383F00D07480 /* box1DataScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 757CD1911DE1383F00D07480 /* box1DataScreen.m */; };
 		757CD1951DE1598100D07480 /* registerBoxes.m in Sources */ = {isa = PBXBuildFile; fileRef = 757CD1941DE1598100D07480 /* registerBoxes.m */; };
 		757CD1981DE188C000D07480 /* sweetCustomMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 757CD1971DE188C000D07480 /* sweetCustomMenu.m */; };
@@ -177,6 +178,8 @@
 		755ACB411DF32F51000DD9CB /* buildingGui.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = buildingGui.m; path = Candy/globalMenu/mapMenu/buildingGui.m; sourceTree = "<group>"; };
 		756C31211DF34F7F0017FBE9 /* coinSpawner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = coinSpawner.h; path = Candy/Money/coinSpawner.h; sourceTree = "<group>"; };
 		756C31221DF34F7F0017FBE9 /* coinSpawner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = coinSpawner.m; path = Candy/Money/coinSpawner.m; sourceTree = "<group>"; };
+		756C31241DF4D0B20017FBE9 /* buttonCreator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = buttonCreator.h; path = Candy/inventory/slots/buttonCreator.h; sourceTree = "<group>"; };
+		756C31251DF4D0B20017FBE9 /* buttonCreator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = buttonCreator.m; path = Candy/inventory/slots/buttonCreator.m; sourceTree = "<group>"; };
 		757CD1901DE1383F00D07480 /* box1DataScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = box1DataScreen.h; path = Candy/inventory/slots/box1DataScreen.h; sourceTree = "<group>"; };
 		757CD1911DE1383F00D07480 /* box1DataScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = box1DataScreen.m; path = Candy/inventory/slots/box1DataScreen.m; sourceTree = "<group>"; };
 		757CD1931DE1598100D07480 /* registerBoxes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = registerBoxes.h; path = Candy/inventory/registerBoxes.h; sourceTree = "<group>"; };
@@ -345,6 +348,8 @@
 				757CD1941DE1598100D07480 /* registerBoxes.m */,
 				757CD19C1DE208E300D07480 /* slot1Data.h */,
 				757CD19D1DE208E300D07480 /* slot1Data.m */,
+				756C31241DF4D0B20017FBE9 /* buttonCreator.h */,
+				756C31251DF4D0B20017FBE9 /* buttonCreator.m */,
 			);
 			name = Slots;
 			sourceTree = "<group>";
@@ -811,6 +816,7 @@
 				75C36E3E1DCE5F2000F84214 /* backgroundManager.m in Sources */,
 				61E1838F1DEE13E20034C021 /* Save.m in Sources */,
 				61E1837F1DEDE45A0034C021 /* Character_Maker.m in Sources */,
+				756C31261DF4D0B20017FBE9 /* buttonCreator.m in Sources */,
 				75E8F1891DD3A57200A421E7 /* sweet.m in Sources */,
 				7521F8C11DE0F61E00F2AD76 /* slotManager.m in Sources */,
 				75C36E091DCCF77700F84214 /* GameViewController.m in Sources */,
