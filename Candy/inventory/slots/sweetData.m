@@ -28,4 +28,34 @@
     return @"";
     }
 }
++(NSString*)sweetTypeNameDecider: (int)i {
+    if([slot1Data getSweet:i] == 0){
+        return @"WRAPPED SWEET";
+    }
+    if([slot1Data getSweet:i] == 1){
+        return @"BON BON";
+    }
+    if([slot1Data getSweet:i] == 2){
+        return @"CHEW";
+    }
+    else {
+        return @"SWEET TYPE";
+    }
+}
++(NSString*)determineFlavourString: (int)flavourID {
+    if([slot1Data getFlavour:flavourID] == 1){
+        return @"Mint";
+    }
+    if([slot1Data getFlavour:flavourID] == 2){
+        return @"Coke";
+    }
+    if([slot1Data getFlavour:flavourID] == 3){
+        return @"Strawberry";
+    }
+    if ([slot1Data getFlavour:flavourID] == 4) {
+        return @"Chocolate";
+    }else {
+        return @"No Flavour";
+    }
+}
 @end

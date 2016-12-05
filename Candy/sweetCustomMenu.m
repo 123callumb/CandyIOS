@@ -20,12 +20,12 @@
     
         SKSpriteNode *topHalf = [SKSpriteNode spriteNodeWithImageNamed:@"invSweetType"];
         SKSpriteNode *bottomHalf = [SKSpriteNode spriteNodeWithImageNamed:@"bottomInvHalf"];
-        topHalf.xScale = 0.45;
-        topHalf.yScale = 0.45;
+        topHalf.xScale = 0;
+        topHalf.yScale = 0;
         bottomHalf.xScale = 0.45;
         bottomHalf.yScale = 0.45;
         
-        topHalf.position = CGPointMake(0, s.frame.size.height*2);
+        topHalf.position = CGPointMake(0, -s.frame.size.height/25);
         bottomHalf.position = CGPointMake(0, -s.frame.size.height*2);
     
         topHalf.name = @"invBoxTop";
@@ -53,16 +53,16 @@
 
 +(void)createMenu: (SKScene *)s node:(SKSpriteNode *)main node2:(SKSpriteNode *)main2 {
     
-    SKAction *slideUp = [SKAction moveToY:(0) duration:0.3];
-    SKAction *slideDown = [SKAction moveToY:-s.frame.size.height/2.3 duration:0.3];
+    SKAction *slideUp = [SKAction scaleTo:0.43 duration:0.1];
+    SKAction *slideDown = [SKAction moveToY:-s.frame.size.height/2.3 duration:0.1];
     [main runAction:slideUp];
     [main2 runAction:slideDown];
 }
 
 +(void)removeMenu: (SKScene *)s node:(SKSpriteNode *)main node2:(SKSpriteNode *)main2 {
     
-    SKAction *slideUp = [SKAction moveToY:-s.frame.size.height duration:0.7];
-    SKAction *slideDown = [SKAction moveToY:s.frame.size.height duration:0.7];
+    SKAction *slideUp = [SKAction moveToY:-s.frame.size.height duration:0.1];
+    SKAction *slideDown = [SKAction scaleTo:0 duration:0.1];
     
     [main runAction:slideDown completion:^{
         [main removeFromParent];

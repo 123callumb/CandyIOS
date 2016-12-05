@@ -9,5 +9,7 @@
 #import <SpriteKit/SpriteKit.h>
 
 @interface slot : SKSpriteNode
-+(void)slot: (SKSpriteNode*)s slotNumber:(int)noOfSlot pos:(CGPoint)position;
++(void)slot: (SKSpriteNode*)s slotNumber:(int)noOfSlot;
++(float)calculateSlotX: (int)slotNO invSprite:(SKSpriteNode*)s;
++(void)refreshSlots: (SKSpriteNode*)s ;
 @end
