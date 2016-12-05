@@ -11,4 +11,6 @@
 @interface buttonCreator : SKSpriteNode
 +(void)createSweetButton: (SKSpriteNode*)s text:(NSString*)text buttonName:(NSString*)name position:(CGPoint)pos;
 +(void)animateOnPress: (SKSpriteNode*)s scene:(SKScene*)sk;
++(void)addButtons: (SKSpriteNode*)s;
++(void)refreshButtons: (SKSpriteNode*)s;
 @end

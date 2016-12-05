@@ -12,11 +12,13 @@
 #import "doneButton.h"
 #import "flavourPicker.h"
 #import "buttonCreator.h"
+#import "box1.h"
 
 @implementation registerBoxes
 int slotNoPressed = 0;
 +(void)registerBoxes:(SKNode *)obj currentScene:(SKScene *)s {
     [buttonCreator animateOnPress:(SKSpriteNode*)obj scene:s];
+    [box1 onSlotClick:(SKSpriteNode*)obj scene:s];
     if([obj.name isEqualToString:@"buttonDone"]){
     [doneButton onTouch:obj currentScene:s];
     }

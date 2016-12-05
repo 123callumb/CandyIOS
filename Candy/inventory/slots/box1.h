@@ -12,4 +12,5 @@
 +(void)addbox:(SKSpriteNode*)s;
 +(int)getSlotsUnlocked;
 +(int)getSelectedSlot;
++(void)onSlotClick: (SKSpriteNode*)s scene:(SKScene*)sk;
 @end

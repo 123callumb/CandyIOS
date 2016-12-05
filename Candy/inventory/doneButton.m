@@ -34,8 +34,5 @@
     [registerBoxes setSlotPressed:0];
 }
 +(void)getSweetPickerData:(int)slotClicked {
-    int sweetNumber = [sweetPicker getSweetNum];
-    [slot1Data setSweet:sweetNumber sweetNum:slotClicked];
-    [sweetPicker resetSweetNum];
 }
 @end
