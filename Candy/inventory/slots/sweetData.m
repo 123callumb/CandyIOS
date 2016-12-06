@@ -44,18 +44,18 @@
 }
 +(NSString*)determineFlavourString: (int)flavourID {
     if([slot1Data getFlavour:flavourID] == 1){
-        return @"Mint";
+        return @"MINT";
     }
     if([slot1Data getFlavour:flavourID] == 2){
-        return @"Coke";
+        return @"COKE";
     }
     if([slot1Data getFlavour:flavourID] == 3){
-        return @"Strawberry";
+        return @"StRAWBERRY";
     }
     if ([slot1Data getFlavour:flavourID] == 4) {
-        return @"Chocolate";
+        return @"CHOCOLATE";
     }else {
-        return @"No Flavour";
+        return @"FLAVOUR";
     }
 }
 @end

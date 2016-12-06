@@ -10,6 +10,8 @@
 #import "sweetCustomMenu.h"
 #import "box1.h"
 #import "sweetData.h"
+#import "sweetTypeUI.h"
+#import "sweetFavourNode.h"
 
 @implementation buttonCreator
 +(void)createSweetButton: (SKSpriteNode*)s text:(NSString*)text buttonName:(NSString*)name position:(CGPoint)pos {
@@ -37,7 +39,7 @@
             if ([s.name isEqualToString:@"sweetTypeButton"]) {
                 [sweetCustomMenu menuActions:sk inScene:true];
             }else {
-                
+                [sweetFavourNode menuActions:sk inScene:true];
             }
         }];
         
