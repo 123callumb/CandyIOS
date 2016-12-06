@@ -15,6 +15,8 @@
 #import "slot1Data.h"
 #import "registerBoxes.h"
 #import "flavourPicker.h"
+#import "sweetFavourNode.h"
+#import "buttonCreator.h"
 
 @implementation doneButton
 +(void)createButton: (SKSpriteNode*)s {
@@ -29,6 +31,9 @@
 +(void)onTouch: (SKNode*)n currentScene:(SKScene*)s {
     [buttonAnimation changeState:n changeName:@"donePressured" originalName:@"doneButton"];
     [sweetCustomMenu menuActions:s inScene:false];
+    [sweetFavourNode menuActions:s inScene:false];
+    SKSpriteNode *invMenu = (SKSpriteNode*)[s childNodeWithName:@"menuInventory"];
+    [buttonCreator refreshButtons:invMenu];
     int slotClicked = [registerBoxes getSlotPressed];
     [self getSweetPickerData:slotClicked];
     [registerBoxes setSlotPressed:0];

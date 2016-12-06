@@ -15,6 +15,7 @@
 		61E1838F1DEE13E20034C021 /* Save.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E1838E1DEE13E20034C021 /* Save.m */; };
 		61E183921DEE14140034C021 /* background.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E183911DEE14140034C021 /* background.m */; };
 		61E183951DEE14450034C021 /* character_clothes.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E183941DEE14450034C021 /* character_clothes.m */; };
+		750F2A321DF7523E00A784F6 /* sweetFavourNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 750F2A311DF7523E00A784F6 /* sweetFavourNode.m */; };
 		750F3A911DE64A65002AFB78 /* sweetnessSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 750F3A901DE64A65002AFB78 /* sweetnessSlider.m */; };
 		750F3A941DE68167002AFB78 /* determineSweetTap.m in Sources */ = {isa = PBXBuildFile; fileRef = 750F3A931DE68167002AFB78 /* determineSweetTap.m */; };
 		750F3A991DEC81A4002AFB78 /* statsMenuButtons.m in Sources */ = {isa = PBXBuildFile; fileRef = 750F3A981DEC81A4002AFB78 /* statsMenuButtons.m */; };
@@ -46,6 +47,7 @@
 		755ACB3C1DF0C9C5000DD9CB /* mapGui.m in Sources */ = {isa = PBXBuildFile; fileRef = 755ACB3B1DF0C9C5000DD9CB /* mapGui.m */; };
 		755ACB3F1DF1F781000DD9CB /* mapBuilding.m in Sources */ = {isa = PBXBuildFile; fileRef = 755ACB3E1DF1F781000DD9CB /* mapBuilding.m */; };
 		755ACB421DF32F51000DD9CB /* buildingGui.m in Sources */ = {isa = PBXBuildFile; fileRef = 755ACB411DF32F51000DD9CB /* buildingGui.m */; };
+		7565B0A41DF6CA7400390278 /* sweetTypeUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 7565B0A31DF6CA7400390278 /* sweetTypeUI.m */; };
 		756C31231DF34F7F0017FBE9 /* coinSpawner.m in Sources */ = {isa = PBXBuildFile; fileRef = 756C31221DF34F7F0017FBE9 /* coinSpawner.m */; };
 		756C31261DF4D0B20017FBE9 /* buttonCreator.m in Sources */ = {isa = PBXBuildFile; fileRef = 756C31251DF4D0B20017FBE9 /* buttonCreator.m */; };
 		757CD1921DE1383F00D07480 /* box1DataScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 757CD1911DE1383F00D07480 /* box1DataScreen.m */; };
@@ -120,6 +122,8 @@
 		61E183911DEE14140034C021 /* background.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = background.m; sourceTree = "<group>"; };
 		61E183931DEE14450034C021 /* character_clothes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = character_clothes.h; sourceTree = "<group>"; };
 		61E183941DEE14450034C021 /* character_clothes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = character_clothes.m; sourceTree = "<group>"; };
+		750F2A301DF7523E00A784F6 /* sweetFavourNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = sweetFavourNode.h; path = Candy/inventory/sweetFavourNode.h; sourceTree = "<group>"; };
+		750F2A311DF7523E00A784F6 /* sweetFavourNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = sweetFavourNode.m; path = Candy/inventory/sweetFavourNode.m; sourceTree = "<group>"; };
 		750F3A8F1DE64A65002AFB78 /* sweetnessSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = sweetnessSlider.h; path = Candy/inventory/sweetnessSlider.h; sourceTree = "<group>"; };
 		750F3A901DE64A65002AFB78 /* sweetnessSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = sweetnessSlider.m; path = Candy/inventory/sweetnessSlider.m; sourceTree = "<group>"; };
 		750F3A921DE68167002AFB78 /* determineSweetTap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = determineSweetTap.h; path = Candy/tap/determineSweetTap.h; sourceTree = "<group>"; };
@@ -176,6 +180,8 @@
 		755ACB3E1DF1F781000DD9CB /* mapBuilding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = mapBuilding.m; path = Candy/globalMenu/mapMenu/mapBuilding.m; sourceTree = "<group>"; };
 		755ACB401DF32F51000DD9CB /* buildingGui.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = buildingGui.h; path = Candy/globalMenu/mapMenu/buildingGui.h; sourceTree = "<group>"; };
 		755ACB411DF32F51000DD9CB /* buildingGui.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = buildingGui.m; path = Candy/globalMenu/mapMenu/buildingGui.m; sourceTree = "<group>"; };
+		7565B0A21DF6CA7400390278 /* sweetTypeUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = sweetTypeUI.h; path = Candy/inventory/sweetTypeUI.h; sourceTree = "<group>"; };
+		7565B0A31DF6CA7400390278 /* sweetTypeUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = sweetTypeUI.m; path = Candy/inventory/sweetTypeUI.m; sourceTree = "<group>"; };
 		756C31211DF34F7F0017FBE9 /* coinSpawner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = coinSpawner.h; path = Candy/Money/coinSpawner.h; sourceTree = "<group>"; };
 		756C31221DF34F7F0017FBE9 /* coinSpawner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = coinSpawner.m; path = Candy/Money/coinSpawner.m; sourceTree = "<group>"; };
 		756C31241DF4D0B20017FBE9 /* buttonCreator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = buttonCreator.h; path = Candy/inventory/slots/buttonCreator.h; sourceTree = "<group>"; };
@@ -654,6 +660,10 @@
 				75270FCA1DE50B8600E7588F /* flavourPicker.m */,
 				750F3A8F1DE64A65002AFB78 /* sweetnessSlider.h */,
 				750F3A901DE64A65002AFB78 /* sweetnessSlider.m */,
+				7565B0A21DF6CA7400390278 /* sweetTypeUI.h */,
+				7565B0A31DF6CA7400390278 /* sweetTypeUI.m */,
+				750F2A301DF7523E00A784F6 /* sweetFavourNode.h */,
+				750F2A311DF7523E00A784F6 /* sweetFavourNode.m */,
 			);
 			name = Inventory;
 			sourceTree = "<group>";
@@ -858,9 +868,11 @@
 				7525F7A81DD216D800B0510C /* money.m in Sources */,
 				7525F7941DD08C9D00B0510C /* coinBarSprite.m in Sources */,
 				75270FCB1DE50B8600E7588F /* flavourPicker.m in Sources */,
+				7565B0A41DF6CA7400390278 /* sweetTypeUI.m in Sources */,
 				756C31231DF34F7F0017FBE9 /* coinSpawner.m in Sources */,
 				7525F7C51DD25C9100B0510C /* combo.m in Sources */,
 				75E8F1981DD7969500A421E7 /* statsMenu.m in Sources */,
+				750F2A321DF7523E00A784F6 /* sweetFavourNode.m in Sources */,
 				61E183861DEE00E30034C021 /* Character.m in Sources */,
 				759E71C81DF0A02600B7275A /* mapMain.m in Sources */,
 				75C36E461DCE752A00F84214 /* main.m in Sources */,
