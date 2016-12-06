@@ -7,6 +7,7 @@
 //
 
 #import "AddItem.h"
+#import "box1.h"
 int currentValue = 0;
 UIImageView *upgradeProgress = nil;
 @implementation AddItem
@@ -81,6 +82,13 @@ UIImageView *upgradeProgress = nil;
     NSLog(@"%li",barID);
     NSLog(@"%li",upgradeProgress);
     NSLog(@"%@",newTexture);
+    
+    
+    if(newID == 0){
+        if(upgradeProgress < 5){
+            [box1 setUnlockedSlots:(int)(upgradeProgress+1)];
+        }
+    }
 }
 +(void)switchTexture:(id)sender{
     UIButton *button = (UIButton*)sender;
