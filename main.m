@@ -21,6 +21,8 @@
 #import "upgradeMenu.h"
 #import "AddItem.h"
 #import "scrollUpdate.h"
+#import "sweetTypeUI.h"
+#import "flavourPicker.h"
 
 UIScrollView* UIscrollUpdate = nil;
 UIImageView *img1 = nil;
