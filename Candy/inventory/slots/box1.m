@@ -17,7 +17,7 @@
 @implementation box1
 
 int selectedSweet = 1;
-int slotsUnlocked = 4;
+int slotsUnlocked = 1;
 
 +(void)addbox:(SKSpriteNode*)s {
     [buttonCreator addButtons:s];
@@ -52,5 +52,8 @@ int slotsUnlocked = 4;
 }
 +(int)getSlotsUnlocked {
     return slotsUnlocked;
+}
++(void)setUnlockedSlots:(int)value {
+    slotsUnlocked = value;
 }
 @end
