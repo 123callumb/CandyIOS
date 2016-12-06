@@ -9,8 +9,6 @@
 #import <SpriteKit/SpriteKit.h>
 
 @interface sweetPicker : SKSpriteNode
-+(void)addSweetPicker: (SKSpriteNode*)s;
-+(void)onArrowPress: (SKSpriteNode*)obj scene:(SKScene*)s;
-+(int)getSweetNum;
-+(void)resetSweetNum;
++(void)addSweet: (SKSpriteNode*)s;
++(void)refreshSweetType: (SKSpriteNode*)s;
 @end

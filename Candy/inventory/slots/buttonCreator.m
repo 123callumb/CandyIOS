@@ -8,6 +8,8 @@
 
 #import "buttonCreator.h"
 #import "sweetCustomMenu.h"
+#import "box1.h"
+#import "sweetData.h"
 
 @implementation buttonCreator
 +(void)createSweetButton: (SKSpriteNode*)s text:(NSString*)text buttonName:(NSString*)name position:(CGPoint)pos {
@@ -23,6 +25,7 @@
     buttonText.fontSize = 120;
     [s addChild:button];
 }
+
 +(void)animateOnPress: (SKSpriteNode*)s scene:(SKScene*)sk {
     if([s.name isEqualToString:@"sweetTypeButton"] || [s.name isEqualToString:@"sweetFlavourButton"]){
         
@@ -39,5 +42,34 @@
         }];
         
     }
+}
+
++(void)addButtons: (SKSpriteNode*)s {
+    [self addSweetType:s];
+    [self addSweetFlavour:s];
+}
+
++(void)addSweetType: (SKSpriteNode*)s {
+    for(int i = 1; i <= 5; i++){
+        if([box1 getSelectedSlot] == i){
+            NSString *sweetType = [sweetData sweetTypeNameDecider:i];
+            [buttonCreator createSweetButton:s text:sweetType buttonName:@"sweetTypeButton" position:CGPointMake(0, -s.frame.size.height/2.4)];
+        }
+    }
+}
++(void)addSweetFlavour: (SKSpriteNode*)s {
+    for(int i = 1; i <= 5; i++){
+        if([box1 getSelectedSlot] == i){
+            NSString *sweetFlavour = [sweetData determineFlavourString:i];
+            [buttonCreator createSweetButton:s text:sweetFlavour buttonName:@"sweetFlavourButton" position:CGPointMake(0, -s.frame.size.height/1.6)];
+        }
+    }
+}
++(void)refreshButtons: (SKSpriteNode*)s {
+    SKSpriteNode *sweetTypeButton = (SKSpriteNode*)[s childNodeWithName:@"sweetTypeButton"];
+    SKSpriteNode *sweetFlavourButton = (SKSpriteNode*)[s childNodeWithName:@"sweetFlavourButton"];
+    [sweetTypeButton removeFromParent];
+    [sweetFlavourButton removeFromParent];
+    [self addButtons:s];
 }
 @end
