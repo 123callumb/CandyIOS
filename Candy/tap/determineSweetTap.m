@@ -11,13 +11,10 @@
 #import "nodeToParticle.h"
 #import "money.h"
 #import "inventory.h"
-#import "box1.h"
 
 @implementation determineSweetTap
-int inventoryUnlocked = 1;
+int inventoryUnlocked = 4;
 +(void)spawn: (SKScene *)s location:(CGPoint)p {
-    
-    inventoryUnlocked = [box1 getSlotsUnlocked];
     
     if (p.y >= -470){
     
@@ -50,13 +47,6 @@ int inventoryUnlocked = 1;
         //NSLog(@"Slot 4 Earnings = %d", [inventory slotCalculation:4]);
         
     }
-    if(inventoryUnlocked >= 5){
-            SKSpriteNode *sweet4 = [defaultSweet addSweet:s pos:p slotID:5];
-            [nodeToParticle particleFlyAnimation:sweet4 scene:s scaleNo:scale];
-            [money addBalance:[inventory slotCalculation:5]];
-            //NSLog(@"Slot 4 Earnings = %d", [inventory slotCalculation:4]);
-            
-        }
     }
 }
 +(float)determineScale {
