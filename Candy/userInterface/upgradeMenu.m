@@ -11,6 +11,7 @@
 #import "sweetsButton.h"
 #import "menuBackButton.h"
 #import "main.h"
+#import "scrollUpdate.h"
 
 SKSpriteNode *btn_regular = nil;
 SKSpriteNode *btn_special = nil;
@@ -33,7 +34,6 @@ bool createdUpgrades = false;
         [s addChild:upgradeBack];
         [self createButtons:s];
     }
-    
     //SKSpriteNode *upgradeBack = (SKSpriteNode*)[s childNodeWithName:@"menuUpgrades"];
     
     if(in){
@@ -41,7 +41,6 @@ bool createdUpgrades = false;
     }else if(!in) {
         [self removeMenu:s];
     }
-    
 }
 +(void)createButtons:(SKScene*)s{
     btn_regular = [SKSpriteNode spriteNodeWithImageNamed:@"spr_regular_button"];
@@ -68,15 +67,15 @@ bool createdUpgrades = false;
         upgradeBack.texture = [SKTexture textureWithImageNamed:@"spr_upgrade_special"];
         btn_regular.hidden = false;
         btn_special.hidden = true;
-        [main scrollViewGeneralController:true];
-        [main scrollViewSpecialController:false];
+        [scrollUpdate Hide:s.view];
+        //[main scrollViewSpecialController:false];
     }
     else if([n.name isEqualToString:@"btn_regular"]){
         upgradeBack.texture = [SKTexture textureWithImageNamed:@"spr_upgrade_regular"];
         btn_regular.hidden = true;
         btn_special.hidden = false;
-        [main scrollViewGeneralController:false];
-        [main scrollViewSpecialController:true];
+        [scrollUpdate Show:s.view];
+        //[main scrollViewSpecialController:true];
     }
 }
 +(void)createMenu: (SKSpriteNode*)upgradeBack scene:(SKScene*)s; {
@@ -89,7 +88,7 @@ bool createdUpgrades = false;
     [upgradeBack runAction:slideUp completion:^{
         [menuBackButton createButton:s];
         btn_special.hidden = false;
-        [main scrollViewGeneralController:false];
+        [scrollUpdate Show:s.view];
     }];
 }
 
@@ -97,8 +96,7 @@ bool createdUpgrades = false;
     
     btn_special.hidden = true;
     btn_regular.hidden = true;
-    [main scrollViewGeneralController:true];
-    [main scrollViewSpecialController:true];
+    [scrollUpdate Hide:s.view];
     SKAction *slideDown = [SKAction moveToY:(-s.frame.size.height) duration:0.3];
     [btn_regular runAction:slideDown];
     [btn_special runAction:slideDown];

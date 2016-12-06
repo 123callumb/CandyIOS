@@ -19,9 +19,13 @@
 #import "money.h"
 #import "coinBarSprite.h"
 #import "upgradeMenu.h"
+#import "AddItem.h"
+#import "scrollUpdate.h"
 
-UIScrollView* scrollViewGeneral = nil;
-UIScrollView* scrollViewSpecial = nil;
+UIScrollView* UIscrollUpdate = nil;
+UIImageView *img1 = nil;
+UIScrollView* sTUI = nil;
+UIScrollView* sFUI = nil;
 @implementation main
 
 -(void)didMoveToView:(SKView *)view {
@@ -31,44 +35,26 @@ UIScrollView* scrollViewSpecial = nil;
     [mainUI drawUI:self];
     [levelDecider createLevel:self];
     
-    //scrollViewGeneral
-    UIImageView *img1 = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 337, 100)];
-    img1.image = [UIImage imageNamed:@"hueBar"];
-    UIImageView *img2 = [[UIImageView alloc] initWithFrame:CGRectMake(0, 100, 337, 100)];
-    img2.image = [UIImage imageNamed:@"hueBar"];
-    UIImageView *img3 = [[UIImageView alloc] initWithFrame:CGRectMake(0, 200, 337, 100)];
-    img3.image = [UIImage imageNamed:@"hueBar"];
-    UIImageView *img4 = [[UIImageView alloc] initWithFrame:CGRectMake(0, 300, 337, 100)];
-    img4.image = [UIImage imageNamed:@"hueBar"];
-    UIImageView *img5 = [[UIImageView alloc] initWithFrame:CGRectMake(0, 400, 337, 100)];
-    img5.image = [UIImage imageNamed:@"hueBar"];
-    UIImageView *img6 = [[UIImageView alloc] initWithFrame:CGRectMake(0, 500, 337, 100)];
-    img6.image = [UIImage imageNamed:@"hueBar"];
     
-    scrollViewGeneral = [[UIScrollView alloc]initWithFrame:CGRectMake(19, 159, 337, 396)];
-    scrollViewGeneral.backgroundColor = [UIColor whiteColor];
-    [scrollViewGeneral setContentSize:CGSizeMake(337, 900)];
-    [self.view addSubview:scrollViewGeneral];
-    scrollViewGeneral.hidden = true;
+    //scrollview(inventory)
+    sTUI = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width/1.44, -self.view.frame.size.height/2.82)];
+    [sweetTypeUI addMethodsToView:sTUI scene:self.view];
+    [self.view addSubview:sTUI];
     
-    UIView *redView = [[UIView alloc]initWithFrame:CGRectMake(19,159,337,200)];
-    redView.backgroundColor = [UIColor redColor];
+    sFUI = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width/1.44, -self.view.frame.size.height/2.82)];
+    [flavourPicker addFlavourPickerToView:sFUI scene:self.view];
+    [self.view addSubview:sFUI];
     
-    [scrollViewGeneral addSubview:img1];
-    [scrollViewGeneral addSubview:img2];
-    [scrollViewGeneral addSubview:img3];
-    [scrollViewGeneral addSubview:img4];
-    [scrollViewGeneral addSubview:img5];
-    [scrollViewGeneral addSubview:img6];
-    //scrollViewSpecial
-    scrollViewSpecial = [[UIScrollView alloc]initWithFrame:CGRectMake(19, 159, 337, 396)];
-    scrollViewSpecial.backgroundColor = [UIColor whiteColor];
-    [scrollViewSpecial setContentSize:CGSizeMake(337, 900)];
-    [self.view addSubview:scrollViewSpecial];
-    scrollViewSpecial.hidden = true;
-}
+    //scrollView(Update)
+    UIscrollUpdate = [[UIScrollView alloc]initWithFrame:CGRectMake(self.view.frame.size.width / 19, self.view.frame.size.height / 4.2, 8.95*(self.view.frame.size.width /10), 2.38*(self.view.frame.size.height / 4))];
+    [scrollUpdate initializeScroll:UIscrollUpdate uiView:self.view];
+    [self.view addSubview:UIscrollUpdate];
+    for(int i = 0; i<= 8; i++){
+        [AddItem CreateItem:@"nil" buttonTexture:@"upgradeButton" yPos:i*(UIscrollUpdate.frame.size.width/4) Scene:UIscrollUpdate ID:i];
+    }
+    }
 
-- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     UITouch *tap = [touches anyObject];
     CGPoint loc = [tap locationInNode:self];
     SKNode *obj = [self nodeAtPoint:loc];
@@ -81,13 +67,7 @@ UIScrollView* scrollViewSpecial = nil;
     [registerBoxes registerBoxes:obj currentScene:self];
     [registerStatsButtons registerStatsButtons:self location:loc node:obj];
 }
-//showing/closing scrollview
-+(void)scrollViewGeneralController:(BOOL)b{
-    scrollViewGeneral.hidden = b;
-}
-+(void)scrollViewSpecialController:(BOOL)b{
-    scrollViewSpecial.hidden = b;
-}
+
 //These methods are new and pretty dank af!
 -(void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event{
     UITouch *tap = [touches anyObject];
