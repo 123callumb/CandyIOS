@@ -13,4 +13,5 @@
 +(int)getSlotsUnlocked;
 +(int)getSelectedSlot;
 +(void)onSlotClick: (SKSpriteNode*)s scene:(SKScene*)sk;
++(void)setUnlockedSlots:(int)value;
 @end
