@@ -19,6 +19,7 @@
 		61E183951DEE14450034C021 /* character_clothes.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E183941DEE14450034C021 /* character_clothes.m */; };
 		750F2A321DF7523E00A784F6 /* sweetFavourNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 750F2A311DF7523E00A784F6 /* sweetFavourNode.m */; };
 		750F2A351DF77FF400A784F6 /* fiftyTapBonus.m in Sources */ = {isa = PBXBuildFile; fileRef = 750F2A341DF77FF400A784F6 /* fiftyTapBonus.m */; };
+		750F2A391DF85B9D00A784F6 /* messageSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = 750F2A381DF85B9D00A784F6 /* messageSprite.m */; };
 		750F3A911DE64A65002AFB78 /* sweetnessSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 750F3A901DE64A65002AFB78 /* sweetnessSlider.m */; };
 		750F3A941DE68167002AFB78 /* determineSweetTap.m in Sources */ = {isa = PBXBuildFile; fileRef = 750F3A931DE68167002AFB78 /* determineSweetTap.m */; };
 		750F3A991DEC81A4002AFB78 /* statsMenuButtons.m in Sources */ = {isa = PBXBuildFile; fileRef = 750F3A981DEC81A4002AFB78 /* statsMenuButtons.m */; };
@@ -133,6 +134,8 @@
 		750F2A311DF7523E00A784F6 /* sweetFavourNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = sweetFavourNode.m; path = Candy/inventory/sweetFavourNode.m; sourceTree = "<group>"; };
 		750F2A331DF77FF400A784F6 /* fiftyTapBonus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = fiftyTapBonus.h; path = Candy/tap/fiftyTapBonus.h; sourceTree = "<group>"; };
 		750F2A341DF77FF400A784F6 /* fiftyTapBonus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = fiftyTapBonus.m; path = Candy/tap/fiftyTapBonus.m; sourceTree = "<group>"; };
+		750F2A371DF85B9D00A784F6 /* messageSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = messageSprite.h; path = "Candy/Message System/messageSprite.h"; sourceTree = "<group>"; };
+		750F2A381DF85B9D00A784F6 /* messageSprite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = messageSprite.m; path = "Candy/Message System/messageSprite.m"; sourceTree = "<group>"; };
 		750F3A8F1DE64A65002AFB78 /* sweetnessSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = sweetnessSlider.h; path = Candy/inventory/sweetnessSlider.h; sourceTree = "<group>"; };
 		750F3A901DE64A65002AFB78 /* sweetnessSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = sweetnessSlider.m; path = Candy/inventory/sweetnessSlider.m; sourceTree = "<group>"; };
 		750F3A921DE68167002AFB78 /* determineSweetTap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = determineSweetTap.h; path = Candy/tap/determineSweetTap.h; sourceTree = "<group>"; };
@@ -337,6 +340,15 @@
 			name = CharacterSpawn;
 			sourceTree = "<group>";
 		};
+		750F2A361DF859DB00A784F6 /* Message System */ = {
+			isa = PBXGroup;
+			children = (
+				750F2A371DF85B9D00A784F6 /* messageSprite.h */,
+				750F2A381DF85B9D00A784F6 /* messageSprite.m */,
+			);
+			name = "Message System";
+			sourceTree = "<group>";
+		};
 		750F3A951DEC8160002AFB78 /* globalMenu */ = {
 			isa = PBXGroup;
 			children = (
@@ -504,6 +516,7 @@
 		75C36DEE1DCCF77600F84214 = {
 			isa = PBXGroup;
 			children = (
+				750F2A361DF859DB00A784F6 /* Message System */,
 				6109D29D1DF7576E00257CDB /* Update Menu */,
 				618EA38D1DF1ED5700D07ADD /* Candy_Machines */,
 				61E183801DEDF0830034C021 /* CharacterSpawn */,
@@ -861,6 +874,7 @@
 				757CD1921DE1383F00D07480 /* box1DataScreen.m in Sources */,
 				7525F7851DCFC58B00B0510C /* buttonHandler.m in Sources */,
 				757CD1951DE1598100D07480 /* registerBoxes.m in Sources */,
+				750F2A391DF85B9D00A784F6 /* messageSprite.m in Sources */,
 				7525F78E1DCFEA7C00B0510C /* coinButton.m in Sources */,
 				750F3A9C1DEC863E002AFB78 /* registerStatsButtons.m in Sources */,
 				618EA38C1DF1ED4C00D07ADD /* candyMachines.m in Sources */,

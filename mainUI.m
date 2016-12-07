@@ -36,6 +36,7 @@
     
     
     SKSpriteNode *buttonDunno = [SKSpriteNode spriteNodeWithImageNamed:@"dunnoButton"];
+    buttonDunno.name = @"buttonDunno";
     buttonDunno.anchorPoint = CGPointMake(0.5, 0.5);
     buttonDunno.position = CGPointMake(s.frame.size.width/2.5, s.frame.size.height/2.3);
     buttonDunno.xScale = 0.45;
