@@ -18,6 +18,7 @@
 		61E183921DEE14140034C021 /* background.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E183911DEE14140034C021 /* background.m */; };
 		61E183951DEE14450034C021 /* character_clothes.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E183941DEE14450034C021 /* character_clothes.m */; };
 		750F2A321DF7523E00A784F6 /* sweetFavourNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 750F2A311DF7523E00A784F6 /* sweetFavourNode.m */; };
+		750F2A351DF77FF400A784F6 /* fiftyTapBonus.m in Sources */ = {isa = PBXBuildFile; fileRef = 750F2A341DF77FF400A784F6 /* fiftyTapBonus.m */; };
 		750F3A911DE64A65002AFB78 /* sweetnessSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 750F3A901DE64A65002AFB78 /* sweetnessSlider.m */; };
 		750F3A941DE68167002AFB78 /* determineSweetTap.m in Sources */ = {isa = PBXBuildFile; fileRef = 750F3A931DE68167002AFB78 /* determineSweetTap.m */; };
 		750F3A991DEC81A4002AFB78 /* statsMenuButtons.m in Sources */ = {isa = PBXBuildFile; fileRef = 750F3A981DEC81A4002AFB78 /* statsMenuButtons.m */; };
@@ -130,6 +131,8 @@
 		61E183941DEE14450034C021 /* character_clothes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = character_clothes.m; sourceTree = "<group>"; };
 		750F2A301DF7523E00A784F6 /* sweetFavourNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = sweetFavourNode.h; path = Candy/inventory/sweetFavourNode.h; sourceTree = "<group>"; };
 		750F2A311DF7523E00A784F6 /* sweetFavourNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = sweetFavourNode.m; path = Candy/inventory/sweetFavourNode.m; sourceTree = "<group>"; };
+		750F2A331DF77FF400A784F6 /* fiftyTapBonus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = fiftyTapBonus.h; path = Candy/tap/fiftyTapBonus.h; sourceTree = "<group>"; };
+		750F2A341DF77FF400A784F6 /* fiftyTapBonus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = fiftyTapBonus.m; path = Candy/tap/fiftyTapBonus.m; sourceTree = "<group>"; };
 		750F3A8F1DE64A65002AFB78 /* sweetnessSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = sweetnessSlider.h; path = Candy/inventory/sweetnessSlider.h; sourceTree = "<group>"; };
 		750F3A901DE64A65002AFB78 /* sweetnessSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = sweetnessSlider.m; path = Candy/inventory/sweetnessSlider.m; sourceTree = "<group>"; };
 		750F3A921DE68167002AFB78 /* determineSweetTap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = determineSweetTap.h; path = Candy/tap/determineSweetTap.h; sourceTree = "<group>"; };
@@ -428,6 +431,8 @@
 				7525F7B01DD2242100B0510C /* taps.m */,
 				750F3A921DE68167002AFB78 /* determineSweetTap.h */,
 				750F3A931DE68167002AFB78 /* determineSweetTap.m */,
+				750F2A331DF77FF400A784F6 /* fiftyTapBonus.h */,
+				750F2A341DF77FF400A784F6 /* fiftyTapBonus.m */,
 			);
 			name = tap;
 			sourceTree = "<group>";
@@ -838,6 +843,7 @@
 			files = (
 				750F3A991DEC81A4002AFB78 /* statsMenuButtons.m in Sources */,
 				61E183951DEE14450034C021 /* character_clothes.m in Sources */,
+				750F2A351DF77FF400A784F6 /* fiftyTapBonus.m in Sources */,
 				7525F77C1DCFBFF100B0510C /* inventoryButton.m in Sources */,
 				75C36E3A1DCE5CD900F84214 /* splashBacking.m in Sources */,
 				75919B991DDCA41C001F66EB /* defaultLevel.m in Sources */,
