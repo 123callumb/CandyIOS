@@ -31,7 +31,7 @@
         [menuBackButton onTouch:obj currentScene:s];
     }
     if([obj.name isEqualToString:@"buttonDunno"]){
-        [messageSprite createMesssage:s line1:@"My mummy says"];
+        [messageSprite createMesssage:s line1:@"My mummy says" line2:@"" line3:@"" line4:@""];
     }
 }
 @end

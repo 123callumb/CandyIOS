@@ -51,7 +51,7 @@ int slotsUnlocked = 1;
     return selectedSweet;
 }
 +(long)getSlotsUnlocked {
-    return [[NSUserDefaults standardUserDefaults] integerForKey:@"CurrentValue0"];
+    return [[NSUserDefaults standardUserDefaults] integerForKey:@"CurrentValue0"]+1;
 }
 +(void)setUnlockedSlots:(int)value {
     slotsUnlocked = value;
