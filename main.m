@@ -68,6 +68,7 @@ UIScrollView* sFUI = nil;
     [buttonHandler registerButtons:obj currentScene:self];
     [registerBoxes registerBoxes:obj currentScene:self];
     [registerStatsButtons registerStatsButtons:self location:loc node:obj];
+    [upgradeMenu onTouch:obj scene:self];
 }
 
 //These methods are new and pretty dank af!

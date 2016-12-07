@@ -12,11 +12,17 @@
 #import "menuBackButton.h"
 #import "main.h"
 #import "scrollUpdate.h"
+#import "box1.h"
 
 SKSpriteNode *btn_regular = nil;
 SKSpriteNode *btn_special = nil;
 SKSpriteNode *menu = nil;
 SKSpriteNode *upgradeBack = nil;
+
+//reset to be removed
+SKSpriteNode *reset = nil;
+SKSpriteNode *warning = nil;
+
 
 @implementation upgradeMenu
 bool createdUpgrades = false;
@@ -33,6 +39,17 @@ bool createdUpgrades = false;
         upgradeBack.name = @"menuUpgrades";
         [s addChild:upgradeBack];
         [self createButtons:s];
+        
+        //reset to be removed
+        reset = [SKSpriteNode spriteNodeWithImageNamed:@"RESETBUTTON"];
+        reset.position = CGPointMake(0,800);
+        reset.name = @"reset";
+        [s addChild:reset];
+        
+        warning = [SKSpriteNode spriteNodeWithImageNamed:@"warning"];
+        warning.hidden = true;
+        [s addChild:warning];
+        
     }
     //SKSpriteNode *upgradeBack = (SKSpriteNode*)[s childNodeWithName:@"menuUpgrades"];
     
@@ -90,6 +107,10 @@ bool createdUpgrades = false;
         btn_special.hidden = false;
         [scrollUpdate Show:s.view];
     }];
+    
+    //reset to be removed
+    SKAction *slideDownReset = [SKAction moveToY:(430) duration:0.3];
+    [reset runAction:slideDownReset];
 }
 
 +(void)removeMenu: (SKScene*)s; {
@@ -105,5 +126,26 @@ bool createdUpgrades = false;
         upgradeBack.texture = [SKTexture textureWithImageNamed:@"spr_upgrade_regular"];
         
     }];
+    
+    //reset to be removed
+    SKAction *slideDownReset = [SKAction moveToY:(800) duration:0.3];
+    [reset runAction:slideDownReset];
+}
+//reset to be removed
++(void)onTouch:(SKNode*)n scene:(SKScene*)s{
+    if([n.name isEqualToString:@"reset"]){
+        for(int i =0; i<=8; i++)
+        {
+            NSString *temp = [NSString stringWithFormat:@"Unlocked%i",i];
+            [[NSUserDefaults standardUserDefaults] setInteger:0 forKey:temp];
+            NSString *upgradeValue = [NSString stringWithFormat:@"CurrentValue%i", i];
+            [[NSUserDefaults standardUserDefaults] setInteger:0 forKey:upgradeValue];
+            [box1 setUnlockedSlots:1];
+            
+            warning.hidden = false;
+            [upgradeMenu removeMenu:s];
+        }
+        
+    }
 }
 @end
