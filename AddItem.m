@@ -29,9 +29,17 @@ UIImageView *upgradeProgress = nil;
     //setting the upgradeValue(NSuserDefault(out of 7))
     NSString *upgradeValue = [NSString stringWithFormat:@"CurrentValue%i", i];
     long upgrd = [[NSUserDefaults standardUserDefaults] integerForKey:upgradeValue];
-    upgradeValue = [NSString stringWithFormat:@"upgradeProgress%li",upgrd];
+    
+     upgradeValue = [NSString stringWithFormat:@"upgradeProgress%li",upgrd];
+        NSLog(@"%@",upgradeValue);
+    
     upgradeProgress.image = [UIImage imageNamed:upgradeValue];
     
+    if(i == 0) {
+        upgradeValue = [NSString stringWithFormat:@"upgrade4Progress%li",upgrd];
+        [upgradeProgress setImage:[UIImage imageNamed:upgradeValue]];
+        NSLog(@"%@",upgradeValue);
+    }
     
     //upgradeButton
     SEL aSel = @selector(buttonActionn:);
@@ -50,7 +58,6 @@ UIImageView *upgradeProgress = nil;
             forState:UIControlStateSelected];
     [button setImage:[UIImage imageNamed:@"upgradeButton"]
             forState:UIControlStateNormal];
-    
     
     //Unlock Button
     SEL unlockSel = @selector(UnlockButtonAction:);
@@ -107,11 +114,23 @@ UIImageView *upgradeProgress = nil;
         NSString *upgradeValue = [NSString stringWithFormat:@"CurrentValue%li",newID];
         long upgradeProgress = [[NSUserDefaults standardUserDefaults] integerForKey:upgradeValue];
         if(upgradeProgress < 7){
-            upgradeProgress++;
+            if(newID ==0 && upgradeProgress <4){
+                upgradeProgress++;
+            }
+            else if(newID!=0){
+                upgradeProgress++;
+            }
         }
         [[NSUserDefaults standardUserDefaults] setInteger:upgradeProgress forKey:upgradeValue];
-        NSString *newTexture = [NSString stringWithFormat:@"upgradeProgress%li",upgradeProgress];
+        NSString *newTexture = nil;
     
+        if(newID == 0){
+            newTexture = [NSString stringWithFormat:@"upgrade4Progress%li",upgradeProgress];
+        }
+        else{
+            newTexture = [NSString stringWithFormat:@"upgradeProgress%li",upgradeProgress];
+        }
+        
         UIImageView *progressbar = (UIImageView*)[view viewWithTag:barID];
         [progressbar setImage:[UIImage imageNamed:newTexture]];
     
@@ -123,6 +142,9 @@ UIImageView *upgradeProgress = nil;
         if(newID == 0){
             if(upgradeProgress < 5){
                 [box1 setUnlockedSlots:(int)(upgradeProgress+1)];
+                int test = (int)upgradeProgress+1;
+                
+                NSLog(@"%i",test);
             }
         }
     }
