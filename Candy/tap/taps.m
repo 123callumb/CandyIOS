@@ -17,12 +17,16 @@
 #import "menuHandler.h"
 #import "sweetnessSlider.h"
 #import "determineSweetTap.h"
+#import "fiftyTapBonus.h"
 
 @implementation taps
 +(void)onPressed: (SKScene *)s location:(CGPoint)p {
+    SKNode *obj = [s nodeAtPoint:p];
     if([menuHandler getCurrentMenu] == 4){
     [coinBarSprite updateText:s];
     [determineSweetTap spawn:s location:p];
+        [fiftyTapBonus tapCollector:s];
+        [fiftyTapBonus onTouchofBonus:(SKSpriteNode*)obj scene:s];
     }
 }
 +(void)onRelease: (SKScene*)s {

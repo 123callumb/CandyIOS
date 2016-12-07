@@ -10,7 +10,7 @@
 
 @interface box1 : SKSpriteNode
 +(void)addbox:(SKSpriteNode*)s;
-+(int)getSlotsUnlocked;
++(long)getSlotsUnlocked;
 +(int)getSelectedSlot;
 +(void)onSlotClick: (SKSpriteNode*)s scene:(SKScene*)sk;
 +(void)setUnlockedSlots:(int)value;
