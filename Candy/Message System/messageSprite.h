@@ -9,5 +9,7 @@
 #import <SpriteKit/SpriteKit.h>
 
 @interface messageSprite : SKSpriteNode
-+(void)createMesssage: (SKScene*)s line1:(NSString*)l1 line2:(NSString*)l2 line3:(NSString*)l3 line4:(NSString*)l4;
++(void)createMesssage: (SKScene*)s iconImageName:(NSString*)image line1:(NSString*)l1 line2:(NSString*)l2 line3:(NSString*)l3 line4:(NSString*)l4;
++(bool)isMessageVisable;
++(void)removeAllMessageBoxes: (SKScene*)s;
 @end
