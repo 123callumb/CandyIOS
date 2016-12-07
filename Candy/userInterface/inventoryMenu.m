@@ -48,6 +48,7 @@ bool created = false;
     SKAction *slideDown = [SKAction moveToY:(-s.frame.size.height) duration:0.3];
     [main runAction:slideDown completion:^{
             [menuBackButton removeButton:s];
+        
             [main removeFromParent];
     }];
 }
