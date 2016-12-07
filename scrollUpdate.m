@@ -11,7 +11,7 @@
 @implementation scrollUpdate
 
 +(void)initializeScroll:(UIScrollView*)s uiView:(UIView*)v{
-    [s setContentSize:CGSizeMake(s.frame.size.width, 900)];
+    [s setContentSize:CGSizeMake(s.frame.size.width, 9*32*(s.frame.size.width / 128))];
     s.backgroundColor = [UIColor colorWithRed:121.0f/255.0f green:75.0f/255.0f blue:148.0f/255.0f alpha:1];
     s.tag = 1;
     s.hidden = true;
