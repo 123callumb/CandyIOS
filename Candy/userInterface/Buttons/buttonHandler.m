@@ -11,6 +11,7 @@
 #import "sweetsButton.h"
 #import "coinButton.h"
 #import "menuBackButton.h"
+#import "messageSprite.h"
 
 @implementation buttonHandler
 +(void)registerButtons:(SKNode *)obj currentScene:(SKScene *)s {
@@ -28,6 +29,9 @@
     }
     if([obj.name isEqualToString:@"buttonBack"]){
         [menuBackButton onTouch:obj currentScene:s];
+    }
+    if([obj.name isEqualToString:@"buttonDunno"]){
+        [messageSprite createMesssage:s line1:@"My mummy says"];
     }
 }
 @end
