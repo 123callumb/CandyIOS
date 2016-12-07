@@ -10,7 +10,7 @@
 #import "buttonAnimation.h"
 #import "inventoryMenu.h"
 #import "menuHandler.h"
-#import "sweetPicker.h"
+#import "slot.h"
 
 @implementation inventoryButton
 bool isBusy = false;
@@ -42,7 +42,7 @@ bool isBusy = false;
         [inventoryMenu menuActions:s inScene:true];
         [menuHandler menuRemover:s];
         SKSpriteNode *menuInv = (SKSpriteNode*)[s childNodeWithName:@"menuInventory"];
-        [sweetPicker refreshSweetType:menuInv];
+        [slot refreshSlots:menuInv];
         //The Inventory has the id of 0
         [menuHandler setCurrentMenu:0];
     }

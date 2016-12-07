@@ -31,7 +31,7 @@
         [menuBackButton onTouch:obj currentScene:s];
     }
     if([obj.name isEqualToString:@"buttonDunno"]){
-        [messageSprite createMesssage:s line1:@"My mummy says" line2:@"" line3:@"" line4:@""];
+        [messageSprite createMesssage:s line1:@"HELLO BITCHES TODAY" line2:@"YOU GONNA LEARN" line3:@"A THING OR TWO" line4:@"ABOUT SWEETS"];
     }
 }
 @end
