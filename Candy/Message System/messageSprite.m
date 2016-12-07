@@ -10,7 +10,7 @@
 
 @implementation messageSprite
 bool messageVisabe = false;
-+(void)createMesssage: (SKScene*)s line1:(NSString*)l1 line2:(NSString*)l2 line3:(NSString*)l3 line4:(NSString*)l4{
++(void)createMesssage: (SKScene*)s iconImageName:(NSString*)image line1:(NSString*)l1 line2:(NSString*)l2 line3:(NSString*)l3 line4:(NSString*)l4{
     
     SKSpriteNode *box = [SKSpriteNode spriteNodeWithImageNamed:@"messageBoxBig"];
     box.xScale = 0.1;
@@ -18,6 +18,14 @@ bool messageVisabe = false;
     box.name = @"messageBox";
     box.zPosition = 20;
     [s addChild:box];
+    
+    if(image.length != 0){
+        SKSpriteNode *spriteIcon = [SKSpriteNode spriteNodeWithImageNamed:image];
+        spriteIcon.position = CGPointMake(0, box.frame.size.height/2);
+        spriteIcon.xScale = 0.7;
+        spriteIcon.yScale = 0.7;
+        [box addChild:spriteIcon];
+    }
     
     SKAction *growIn = [SKAction scaleTo:0.7 duration:0.2];
     
@@ -48,5 +56,14 @@ bool messageVisabe = false;
 }
 +(float)calculateLine: (int)lineNo fontHeight:(float)fH {
         return lineNo * -fH*1.8;
+}
++(void)removeAllMessageBoxes: (SKScene*)s {
+    SKSpriteNode *messageBox = (SKSpriteNode*)[s childNodeWithName:@"messageBox"];
+    SKAction *scaleDown = [SKAction scaleTo:0.0 duration:0.2];
+    messageVisabe = false;
+    [messageBox runAction:scaleDown completion:^{
+        [messageBox removeFromParent];
+    }];
+    
 }
 @end
