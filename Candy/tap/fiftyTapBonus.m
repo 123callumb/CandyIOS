@@ -9,6 +9,7 @@
 #import "fiftyTapBonus.h"
 #import "defaultSweet.h"
 #import "coinSpawner.h"
+#import "box1.h"
 
 @implementation fiftyTapBonus
 int tapCollector = 0;
@@ -16,7 +17,7 @@ int tapCollector = 0;
     tapCollector++;
     if(tapCollector >= 50){
         int lowerBound = 1;
-        int upperBound = 5;
+        int upperBound = (int)[box1 getSlotsUnlocked];
         int rndValue = lowerBound + arc4random() % (upperBound - lowerBound);
         tapCollector = 0;
         NSLog(@"random %d", rndValue);

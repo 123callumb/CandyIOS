@@ -19,6 +19,7 @@
 #import "determineSweetTap.h"
 #import "fiftyTapBonus.h"
 #import "messageSprite.h"
+#import "box1.h"
 
 @implementation taps
 +(void)onPressed: (SKScene *)s location:(CGPoint)p {
@@ -29,6 +30,7 @@
             [determineSweetTap spawn:s location:p];
             [fiftyTapBonus tapCollector:s];
             [fiftyTapBonus onTouchofBonus:(SKSpriteNode*)obj scene:s];
+            NSLog(@"%d", (int)[box1 getSlotsUnlocked]);
         }else {
             [messageSprite removeAllMessageBoxes:s];
         }
