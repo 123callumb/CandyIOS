@@ -8,6 +8,8 @@
 
 #import "AddItem.h"
 #import "box1.h"
+#import "upgrade_moneyPerSecond.h"
+#import "upgrade_slotsUnlocked.h"
 int currentValue = 0;
 UIImageView *upgradeProgress = nil;
 @implementation AddItem
@@ -17,8 +19,8 @@ UIImageView *upgradeProgress = nil;
     upgradeProgress = [[UIImageView alloc] initWithFrame:CGRectMake(29*(s.frame.size.width/128), y+3*(s.frame.size.width/128), 6*(s.frame.size.width/128), 24*(s.frame.size.width/128))];
     UIImageView *back = [[UIImageView alloc] initWithFrame:CGRectMake(0, y, s.frame.size.width, s.frame.size.width/4)];
     //img to be used for the box later on
-    //UIImageView *img = [[UIImageView alloc] initWithFrame:CGRectMake(0,y,s.frame.size.width, (s.frame.size.height/8))];
-    //img.image = [UIImage imageNamed:imageName];
+    UIImageView *img = [[UIImageView alloc] initWithFrame:CGRectMake(5*(s.frame.size.width/128),y+4*(s.frame.size.width/128),22*(s.frame.size.width/128), 20*(s.frame.size.width/128))];
+    img.image = [UIImage imageNamed:imageName];
     back.image = [UIImage imageNamed:@"upgradeBar"];
     
     //locked image
@@ -35,10 +37,18 @@ UIImageView *upgradeProgress = nil;
     
     upgradeProgress.image = [UIImage imageNamed:upgradeValue];
     
-    if(i == 0) {
+    //adding Upgrades
+    
+    //slotsUnlocked
+    if(i==0){
+        //setting the amount of upgrades available texture
         upgradeValue = [NSString stringWithFormat:@"upgrade4Progress%li",upgrd];
         [upgradeProgress setImage:[UIImage imageNamed:upgradeValue]];
-        NSLog(@"%@",upgradeValue);
+        [upgrade_slotsUnlocked setTextures:img];
+    }
+    //coinsPerSecond
+    if(i==1){
+        [upgrade_moneyPerSecond setTextures:img];
     }
     
     //upgradeButton
@@ -49,7 +59,7 @@ UIImageView *upgradeProgress = nil;
                action:aSel
      forControlEvents:UIControlEventTouchUpInside];
     [button setTitle:@"" forState:UIControlStateNormal];
-    button.frame = CGRectMake(85*(s.frame.size.width / 128), y + 6*(s.frame.size.width/128), 38*(s.frame.size.width / 128), 20*(s.frame.size.width / 128));
+    button.frame = CGRectMake(85*(s.frame.size.width / 128), y + 3*(s.frame.size.width/128), 38*(s.frame.size.width / 128), 24*(s.frame.size.width / 128));
     [button setImage:btnImage forState:UIControlStateNormal];
     button.tag = 400+i;
     upgradeProgress.tag = 450+i;
@@ -80,7 +90,7 @@ UIImageView *upgradeProgress = nil;
     
     [s addSubview:back];
     [s addSubview:upgradeProgress];
-    //[s addSubview:img];
+    [s addSubview:img];
     [s addSubview:button];
     
     if((int)lockedID == 1)
