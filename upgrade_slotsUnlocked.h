@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface upgrade_slotsUnlocked : UIImageView
-+(void)setTextures:(UIImageView*)box;
-+(void)whenPressed;
++(void)setTextures:(UIImageView*)box text:(UILabel*)txt;
++(void)whenPressed:(long)upgradePro;
 @end

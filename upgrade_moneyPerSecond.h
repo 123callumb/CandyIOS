@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface upgrade_moneyPerSecond : UIImageView
-+(void)setTextures:(UIImageView*)box;
++(void)setTextures:(UIImageView*)box text:(UILabel*)txt;
 +(void)whenPressed;
 @end
