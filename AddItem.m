@@ -23,6 +23,14 @@ UIImageView *upgradeProgress = nil;
     img.image = [UIImage imageNamed:imageName];
     back.image = [UIImage imageNamed:@"upgradeBar"];
     
+    
+    //info label
+    UIFont *customFont = [UIFont fontWithName:@"Coder's-Crux" size:17];
+    
+    UILabel *infoText = [[UILabel alloc]initWithFrame:CGRectMake(38*(s.frame.size.width/128), y+4*(s.frame.size.width/128), 37*(s.frame.size.width/128), 8*(s.frame.size.width/128))];
+    infoText.font = customFont;
+    infoText.text = @"test";
+    
     //locked image
     UIImageView *lockedTexture = [[UIImageView alloc] initWithFrame:CGRectMake(0, y, s.frame.size.width, s.frame.size.width/4)];
     lockedTexture.image = [UIImage imageNamed:@"lockedUpgrade"];
@@ -40,16 +48,18 @@ UIImageView *upgradeProgress = nil;
     //adding Upgrades
     
     //slotsUnlocked
+    //OIOI
+    //THIS IS WHERE YOU ADD THE SETTEXTURES METHOD
+    //OIOI
     if(i==0){
-        //setting the amount of upgrades available texture
+        //setting the amount of upgrades available texture(4 for this one so it needs to be overwritten)
         upgradeValue = [NSString stringWithFormat:@"upgrade4Progress%li",upgrd];
         [upgradeProgress setImage:[UIImage imageNamed:upgradeValue]];
-        [upgrade_slotsUnlocked setTextures:img];
+        [upgrade_slotsUnlocked setTextures:img text:infoText];
     }
     //coinsPerSecond
-    if(i==1){
-        [upgrade_moneyPerSecond setTextures:img];
-    }
+    if(i==1)[upgrade_moneyPerSecond setTextures:img text:infoText];
+    
     
     //upgradeButton
     SEL aSel = @selector(buttonActionn:);
@@ -92,7 +102,7 @@ UIImageView *upgradeProgress = nil;
     [s addSubview:upgradeProgress];
     [s addSubview:img];
     [s addSubview:button];
-    
+    [s addSubview:infoText];
     if((int)lockedID == 1)
     {
         button.hidden = false;
@@ -143,20 +153,14 @@ UIImageView *upgradeProgress = nil;
         
         UIImageView *progressbar = (UIImageView*)[view viewWithTag:barID];
         [progressbar setImage:[UIImage imageNamed:newTexture]];
-    
-        NSLog(@"%li",barID);
-        NSLog(@"%li",upgradeProgress);
-        NSLog(@"%@",newTexture);
-        NSLog(@"%@",upgradeValue);
-    
-        if(newID == 0){
-            if(upgradeProgress < 5){
-                [box1 setUnlockedSlots:(int)(upgradeProgress+1)];
-                int test = (int)upgradeProgress+1;
-                
-                NSLog(@"%i",test);
-            }
-        }
+        
+        //OIOI
+        //HERE IS WHERE YOU ADD THE METHODS FROM THE CLASSES
+        //OIOI
+        if(newID==0)[upgrade_slotsUnlocked whenPressed:upgradeProgress];
+        if(newID==1)[upgrade_moneyPerSecond whenPressed];
+        //etc...
+        //etc...
     }
 }
 +(void)switchTexture:(id)sender{

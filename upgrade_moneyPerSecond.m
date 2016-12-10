@@ -9,8 +9,9 @@
 #import "upgrade_moneyPerSecond.h"
 
 @implementation upgrade_moneyPerSecond
-+(void)setTextures:(UIImageView*)box{
++(void)setTextures:(UIImageView*)box text:(UILabel*)txt{
     [box setImage:[UIImage imageNamed:@"coinPerSecond"]];
+    txt.text = @"Money Per Sec";
 }
 +(void)whenPressed{
     
