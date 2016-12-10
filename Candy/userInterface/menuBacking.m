@@ -23,11 +23,11 @@
     sBack.anchorPoint = CGPointMake(0.5, 0.55);
     return sBack;
 }
-//+(id)createUpgradesBacking {
-    //SKSpriteNode *upgradeMenu = [SKSpriteNode spriteNodeWithImageNamed:@"spr_upgrade_regular"];
-    //upgradeMenu.xScale = 0.43;
-    //upgradeMenu.yScale = 0.43;
-    //upgradeMenu.anchorPoint = CGPointMake(0.5, 0.52);
-   // return upgradeMenu;
-//}
++(id)createPacketsBacking {
+    SKSpriteNode *packetsMenu = [SKSpriteNode spriteNodeWithImageNamed:@"packetMenu"];
+    packetsMenu.xScale = 0.0;
+    packetsMenu.yScale = 0.0;
+    packetsMenu.anchorPoint = CGPointMake(0.5, 0.52);
+    return packetsMenu;
+}
 @end

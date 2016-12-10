@@ -7,7 +7,6 @@
 //
 
 #import "sweetTypeUI.h"
-#import "sweetData.h"
 #import "slot.h"
 #import "slot1Data.h"
 #import "box1.h"
