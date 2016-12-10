@@ -10,6 +10,7 @@
 #import "main.h"
 #import "Character_Maker.h"
 #import "mapScene.h"
+#import "sweetShop.h"
 
 //Everytime we want to change scene if we use this method it will make it easier, we can also add certain scene transitions easier this way!
 
@@ -20,6 +21,7 @@
     main *main;
     Character_Maker *Char_Maker;
     mapScene *mapMain;
+    sweetShop *sweetShopUI;
 }
 
 +(void)switchScene: (SKScene *)s1 sceneTwo: (NSString *)scene2 Transition:(SKTransition *)tran{
@@ -36,6 +38,8 @@
         s2 = [[Character_Maker alloc] initWithSize:s1.size];
     }else if([scene2 isEqual:@"mainMap"]){
         s2 = [[mapScene alloc] initWithSize:s1.size];
+    }else if([scene2 isEqual:@"sweetShop"]){
+        s2 = [[sweetShop alloc] initWithSize:s1.size];
     }
     s2.scaleMode = SKSceneScaleModeAspectFill;
     

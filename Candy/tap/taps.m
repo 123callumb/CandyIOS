@@ -30,7 +30,6 @@
             [determineSweetTap spawn:s location:p];
             [fiftyTapBonus tapCollector:s];
             [fiftyTapBonus onTouchofBonus:(SKSpriteNode*)obj scene:s];
-            NSLog(@"%d", (int)[box1 getSlotsUnlocked]);
         }else {
             [messageSprite removeAllMessageBoxes:s];
         }

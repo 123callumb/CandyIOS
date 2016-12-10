@@ -12,6 +12,7 @@
 #import "coinButton.h"
 #import "menuBackButton.h"
 #import "messageSprite.h"
+#import "packetButton.h"
 
 @implementation buttonHandler
 +(void)registerButtons:(SKNode *)obj currentScene:(SKScene *)s {
@@ -30,8 +31,8 @@
     if([obj.name isEqualToString:@"buttonBack"]){
         [menuBackButton onTouch:obj currentScene:s];
     }
-    if([obj.name isEqualToString:@"buttonDunno"]){
-        [messageSprite createMesssage:s iconImageName:@"dunnoButton" line1:@"HELLO BITCHES TODAY" line2:@"YOU GONNA LEARN" line3:@"A THING OR TWO" line4:@"ABOUT SWEETS"];
+    if([obj.name isEqualToString:@"buttonPacket"]){
+        [packetButton onTouch:(SKSpriteNode*)obj scene:s];
     }
 }
 @end

@@ -16,9 +16,9 @@ int tapCollector = 0;
 +(void)tapCollector:(SKScene*)s {
     tapCollector++;
     if(tapCollector >= 50){
-        int lowerBound = 1;
+        int lowerBound = 0;
         int upperBound = (int)[box1 getSlotsUnlocked];
-        int rndValue = lowerBound + arc4random() % (upperBound - lowerBound);
+        int rndValue = lowerBound + (int)arc4random() % (upperBound - lowerBound);
         tapCollector = 0;
         NSLog(@"random %d", rndValue);
         [self createRandomSweetBonus:rndValue scene:s];

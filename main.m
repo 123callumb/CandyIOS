@@ -23,6 +23,7 @@
 #import "scrollUpdate.h"
 #import "sweetTypeUI.h"
 #import "flavourPicker.h"
+#import "sweetShopUI.h"
 
 UIScrollView* UIscrollUpdate = nil;
 UIImageView *img1 = nil;
@@ -54,6 +55,8 @@ UIScrollView* sFUI = nil;
     for(int i = 0; i<= 8; i++){
         [AddItem CreateItem:@"nil" buttonTexture:@"upgradeButton" yPos:i*(UIscrollUpdate.frame.size.width/4) Scene:UIscrollUpdate ID:i];
     }
+    [sweetShopUI addUIView:self.view];
+    
     }
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
