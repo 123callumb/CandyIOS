@@ -11,6 +11,7 @@
 #import "statsMenu.h"
 #import "upgradeMenu.h"
 #import "coinButton.h"
+#import "packetMenu.h"
 
 @implementation menuHandler
 //The slide up thingy!
@@ -66,6 +67,12 @@ int currentMenu = 4;
     }else if(currentMenu == 2){
        
         [upgradeMenu menuHandler:s inScene:false];
+        [self menuBringBacker:s];
+        currentMenu = 4;
+        
+    }else if(currentMenu == 3){
+        
+        [packetMenu menuHandler:s inScene:false];
         [self menuBringBacker:s];
         currentMenu = 4;
         

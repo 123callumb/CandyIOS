@@ -19,6 +19,7 @@
 #import "determineSweetTap.h"
 #import "fiftyTapBonus.h"
 #import "messageSprite.h"
+#import "box1.h"
 
 @implementation taps
 +(void)onPressed: (SKScene *)s location:(CGPoint)p {

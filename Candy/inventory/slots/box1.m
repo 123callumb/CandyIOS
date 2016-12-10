@@ -40,12 +40,12 @@ int slotsUnlocked = 1;
 }
 +(void)slotClickMethod:(int)slotNo slot:(SKSpriteNode*)s scene:(SKScene*)sk {
     SKSpriteNode *invNode = (SKSpriteNode*)[sk childNodeWithName:@"menuInventory"];
-    if([s.name containsString:[NSString stringWithFormat:@"%d", slotNo]] && (slotNo <= [self getSlotsUnlocked])){
-        selectedSweet = slotNo;
-        [slot refreshSlots:invNode];
-        [sweetPicker refreshSweetType:invNode];
-        [buttonCreator refreshButtons:invNode];
-    }
+        if([s.name containsString:[NSString stringWithFormat:@"%d", slotNo]] && (slotNo <= [self getSlotsUnlocked])){
+            selectedSweet = slotNo;
+            [slot refreshSlots:invNode];
+            [sweetPicker refreshSweetType:invNode];
+            [buttonCreator refreshButtons:invNode];
+        }
 }
 +(int)getSelectedSlot {
     return selectedSweet;
