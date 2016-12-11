@@ -22,7 +22,6 @@
     [sweetShopBackground addBacking:main];
     [sweetScrollUI addScrollUI:main];
     [backButtonSweetShop addBackButton:main];
-    
     [v addSubview:main];
 
 }

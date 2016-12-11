@@ -25,8 +25,11 @@
 }
 +(void)onButtonPress:(SKSpriteNode*)s scene:(SKScene*)sk {
     if([s.name isEqualToString:@"packetsMyButton"]){
-        SKAction *block = [SKAction runBlock:^{}];
+        SKAction *block = [SKAction runBlock:^{
+            [mainTransition switchScene:sk sceneTwo:@"packetScene" Transition:[SKTransition doorsCloseVerticalWithDuration:0.4]];
+        }];
         [self buttonAnimation:s action:block];
+
        
     }
     if([s.name isEqualToString:@"packetsBuyButton"]){
