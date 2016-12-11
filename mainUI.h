@@ -10,4 +10,5 @@
 
 @interface mainUI : SKSpriteNode
 +(void)drawUI: (SKScene *)s;
++(void)nonInteractiveUI: (SKScene*)s;
 @end
