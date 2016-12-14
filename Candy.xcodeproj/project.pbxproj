@@ -50,6 +50,10 @@
 		7525F7C71DD287A400B0510C /* pixel.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7525F7B21DD232E600B0510C /* pixel.ttf */; };
 		7525F7CC1DD2931900B0510C /* coders_crux.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7525F7CB1DD2931900B0510C /* coders_crux.ttf */; };
 		75270FCB1DE50B8600E7588F /* flavourPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 75270FCA1DE50B8600E7588F /* flavourPicker.m */; };
+		75527A291DFDF9FF00D149C0 /* packetScrollUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 75527A281DFDF9FF00D149C0 /* packetScrollUI.m */; };
+		75527A2C1DFF009B00D149C0 /* packetInventroySlot.m in Sources */ = {isa = PBXBuildFile; fileRef = 75527A2B1DFF009B00D149C0 /* packetInventroySlot.m */; };
+		75527A2F1DFF00D600D149C0 /* packetInventoryData.m in Sources */ = {isa = PBXBuildFile; fileRef = 75527A2E1DFF00D600D149C0 /* packetInventoryData.m */; };
+		75527A321E007ACA00D149C0 /* skPacketOpener.m in Sources */ = {isa = PBXBuildFile; fileRef = 75527A311E007ACA00D149C0 /* skPacketOpener.m */; };
 		755ACB3C1DF0C9C5000DD9CB /* mapGui.m in Sources */ = {isa = PBXBuildFile; fileRef = 755ACB3B1DF0C9C5000DD9CB /* mapGui.m */; };
 		755ACB3F1DF1F781000DD9CB /* mapBuilding.m in Sources */ = {isa = PBXBuildFile; fileRef = 755ACB3E1DF1F781000DD9CB /* mapBuilding.m */; };
 		755ACB421DF32F51000DD9CB /* buildingGui.m in Sources */ = {isa = PBXBuildFile; fileRef = 755ACB411DF32F51000DD9CB /* buildingGui.m */; };
@@ -203,6 +207,14 @@
 		7525F7CB1DD2931900B0510C /* coders_crux.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = coders_crux.ttf; path = Candy/fonts/coders_crux.ttf; sourceTree = "<group>"; };
 		75270FC91DE50B8600E7588F /* flavourPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = flavourPicker.h; path = Candy/inventory/flavourPicker.h; sourceTree = "<group>"; };
 		75270FCA1DE50B8600E7588F /* flavourPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = flavourPicker.m; path = Candy/inventory/flavourPicker.m; sourceTree = "<group>"; };
+		75527A271DFDF9FF00D149C0 /* packetScrollUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = packetScrollUI.h; path = Candy/Packets/packetScrollUI.h; sourceTree = "<group>"; };
+		75527A281DFDF9FF00D149C0 /* packetScrollUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = packetScrollUI.m; path = Candy/Packets/packetScrollUI.m; sourceTree = "<group>"; };
+		75527A2A1DFF009B00D149C0 /* packetInventroySlot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = packetInventroySlot.h; path = Candy/Packets/packetInventroySlot.h; sourceTree = "<group>"; };
+		75527A2B1DFF009B00D149C0 /* packetInventroySlot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = packetInventroySlot.m; path = Candy/Packets/packetInventroySlot.m; sourceTree = "<group>"; };
+		75527A2D1DFF00D600D149C0 /* packetInventoryData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = packetInventoryData.h; path = Candy/Packets/packetInventoryData.h; sourceTree = "<group>"; };
+		75527A2E1DFF00D600D149C0 /* packetInventoryData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = packetInventoryData.m; path = Candy/Packets/packetInventoryData.m; sourceTree = "<group>"; };
+		75527A301E007ACA00D149C0 /* skPacketOpener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = skPacketOpener.h; path = Candy/Packets/skPacketOpener.h; sourceTree = "<group>"; };
+		75527A311E007ACA00D149C0 /* skPacketOpener.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = skPacketOpener.m; path = Candy/Packets/skPacketOpener.m; sourceTree = "<group>"; };
 		755ACB3A1DF0C9C5000DD9CB /* mapGui.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = mapGui.h; path = Candy/globalMenu/mapMenu/mapGui.h; sourceTree = "<group>"; };
 		755ACB3B1DF0C9C5000DD9CB /* mapGui.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = mapGui.m; path = Candy/globalMenu/mapMenu/mapGui.m; sourceTree = "<group>"; };
 		755ACB3D1DF1F781000DD9CB /* mapBuilding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = mapBuilding.h; path = Candy/globalMenu/mapMenu/mapBuilding.h; sourceTree = "<group>"; };
@@ -534,6 +546,14 @@
 			children = (
 				75712C131DFCE1EF00450342 /* packetSKUI.h */,
 				75712C141DFCE1EF00450342 /* packetSKUI.m */,
+				75527A271DFDF9FF00D149C0 /* packetScrollUI.h */,
+				75527A281DFDF9FF00D149C0 /* packetScrollUI.m */,
+				75527A2A1DFF009B00D149C0 /* packetInventroySlot.h */,
+				75527A2B1DFF009B00D149C0 /* packetInventroySlot.m */,
+				75527A2D1DFF00D600D149C0 /* packetInventoryData.h */,
+				75527A2E1DFF00D600D149C0 /* packetInventoryData.m */,
+				75527A301E007ACA00D149C0 /* skPacketOpener.h */,
+				75527A311E007ACA00D149C0 /* skPacketOpener.m */,
 			);
 			name = Packets;
 			sourceTree = "<group>";
@@ -945,6 +965,7 @@
 				75919B991DDCA41C001F66EB /* defaultLevel.m in Sources */,
 				75C36E3E1DCE5F2000F84214 /* backgroundManager.m in Sources */,
 				61E1838F1DEE13E20034C021 /* Save.m in Sources */,
+				75527A2C1DFF009B00D149C0 /* packetInventroySlot.m in Sources */,
 				61E1837F1DEDE45A0034C021 /* Character_Maker.m in Sources */,
 				756C31261DF4D0B20017FBE9 /* buttonCreator.m in Sources */,
 				61A7DE851DF8C068004C2F71 /* upgrade_slotsUnlocked.m in Sources */,
@@ -953,6 +974,7 @@
 				7521F8C11DE0F61E00F2AD76 /* slotManager.m in Sources */,
 				75C36E091DCCF77700F84214 /* GameViewController.m in Sources */,
 				61E1838C1DEE13BA0034C021 /* selection_bar.m in Sources */,
+				75527A291DFDF9FF00D149C0 /* packetScrollUI.m in Sources */,
 				61E183891DEE13490034C021 /* skinColour.m in Sources */,
 				757CD19B1DE2083400D07480 /* sweetData.m in Sources */,
 				757CD1921DE1383F00D07480 /* box1DataScreen.m in Sources */,
@@ -991,6 +1013,7 @@
 				7525F7911DCFF8FB00B0510C /* menuBacking.m in Sources */,
 				75E8F19B1DD8F6E500A421E7 /* menuBackButton.m in Sources */,
 				75E1B5D71DE29B3600F7C50F /* doneButton.m in Sources */,
+				75527A321E007ACA00D149C0 /* skPacketOpener.m in Sources */,
 				755ACB3F1DF1F781000DD9CB /* mapBuilding.m in Sources */,
 				75919B951DDB82DF001F66EB /* mainUpgrade.m in Sources */,
 				750F3A9F1DEF0762002AFB78 /* playerStatsMenu.m in Sources */,
@@ -1018,6 +1041,7 @@
 				75E8F18D1DD3AB0300A421E7 /* defaultSweet.m in Sources */,
 				7525F7881DCFC72A00B0510C /* buttonAnimation.m in Sources */,
 				7571FB741DFB7453006E1E49 /* sweetShopBackground.m in Sources */,
+				75527A2F1DFF00D600D149C0 /* packetInventoryData.m in Sources */,
 				7521F8C71DE0F91700F2AD76 /* box1.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

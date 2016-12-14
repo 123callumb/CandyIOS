@@ -17,7 +17,7 @@
     
     UIScrollView *mainScroll = [[UIScrollView alloc] initWithFrame:CGRectMake(0, (header.frame.size.height + key.frame.size.height), v.frame.size.width, (v.frame.size.height - (key.frame.size.height + header.frame.size.height*2)))];
     
-    mainScroll.backgroundColor = [UIColor colorWithRed:221.0f/255.0f green:221.0f/255.0f blue:221.0f/255.0f alpha:1];
+    mainScroll.backgroundColor = [UIColor colorWithRed:120.0f/255.0f green:185.0f/255.0f blue:219.0/255.0f alpha:1];
     
     [mainScroll setContentSize:CGSizeMake(v.frame.size.width, mainScroll.frame.size.height*1.1)];
     

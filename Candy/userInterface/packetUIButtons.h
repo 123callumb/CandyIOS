@@ -11,4 +11,5 @@
 @interface packetUIButtons : SKSpriteNode
 +(void)addButtons: (SKSpriteNode*)s;
 +(void)onButtonPress:(SKSpriteNode*)s scene:(SKScene*)sk;
++(void)buttonAnimation: (SKSpriteNode*)s action:(SKAction*)r;
 @end
