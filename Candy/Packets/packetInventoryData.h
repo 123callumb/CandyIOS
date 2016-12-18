@@ -9,13 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface packetInventoryData : UIView
-+(void)fillSlot:(NSString*)packetTexture;
-+(void)setSlotPacket: (NSString*)textureName slotNo:(int)slotNo;
-+(NSString*)getSlotPacket: (int)slotNo;
-+(void)setSlotFull:(int)slotNo;
-+(void)setSlotEmpty:(int)slotNo;
-+(bool)getSlotFull: (int)slotNo;
-+(int)getSlotsFilled;
-+(void)addNewFullSlot;
-+(void)removeFullSlot;
+
++(NSMutableArray*)getPacketInventroyAsArray;
++(void)addPacketWithStringToInventory: (NSString*)packetName;
++(NSString*)getPacketAtSlot: (int)slotID;
++(int)getSlotsFull;
++(void)removeFullSlot: (int)slotNo;
 @end

@@ -12,6 +12,7 @@
 @implementation packetInventroySlot
 
 int packetInventorySpace = 50;
+NSString *selectedPacket;
 
 +(void)addSlots: (UIScrollView*)v {
     for(int i = 1; i < packetInventorySpace; i++){
@@ -24,8 +25,10 @@ int packetInventorySpace = 50;
     
     NSString *packetName;
     
-    if([packetInventoryData getSlotFull:slotID] == 1){
-        packetName = [[NSUserDefaults standardUserDefaults] valueForKey:[NSString stringWithFormat:@"packet_slot_%d", slotID]];
+    if([[packetInventoryData getPacketInventroyAsArray] count] >= slotID){
+        
+        packetName = [packetInventoryData getPacketAtSlot:slotID];
+        
     }else {
         packetName = @"packetBlank";
     }
@@ -34,21 +37,35 @@ int packetInventorySpace = 50;
                                                             [self calculateY:slotID viewWidth:v.frame.size.width/3.6],
                                                             v.frame.size.width/3.2,
                                                             v.frame.size.width/3.6)];
+    
     SEL onPress = @selector(onSlotPress:);
     UIImage *packetImage = [UIImage imageNamed:packetName];
     UIButton *slotButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    
+    if([[packetInventoryData getPacketInventroyAsArray] count] >= slotID){
     [slotButton addTarget:self action:onPress forControlEvents:UIControlEventTouchUpInside];
+        }
     [slotButton setImage:packetImage forState:UIControlStateNormal];
     slotButton.frame = CGRectMake(0, 0, slot.frame.size.width, slot.frame.size.width/1.2);
-    
+    slotButton.tag = slotID + 1500;
     [slot addSubview:slotButton];
     [v addSubview:slot];
 }
 
 +(void)onSlotPress: (id)sender {
+    UIButton *packet = (UIButton*)sender;
     UIView *v = (UIView*)[sender superview];
     UIScrollView *sv = (UIScrollView*)[v superview];
-    [sv removeFromSuperview];
+    int packetID = (int)packet.tag - 1500;
+
+    if([packetInventoryData getPacketAtSlot:packetID] != nil){
+        [sv removeFromSuperview];
+         selectedPacket = [packetInventoryData getPacketAtSlot:packetID];
+         [packetInventoryData removeFullSlot:packetID];
+    }
+}
++(NSString*)getSelectedPacket {
+    return selectedPacket;
 }
 
 +(float)calculateX: (int)idNum viewWidth:(float)xWidth {

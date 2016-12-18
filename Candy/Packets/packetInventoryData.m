@@ -10,41 +10,59 @@
 #import "packetInventroySlot.h"
 
 @implementation packetInventoryData
-+(void)fillSlot:(NSString*)packetTexture{
-    int slotNo = [self getSlotsFilled] + 1;
-    [self setSlotPacket:packetTexture slotNo:slotNo];
-    [self setSlotFull:slotNo];
-    [self addNewFullSlot];
-}
-+(void)setSlotPacket: (NSString*)textureName slotNo:(int)slotNo{
-    [[NSUserDefaults standardUserDefaults] setValue:textureName forKey:[NSString stringWithFormat:@"packet_slot_%d", slotNo]];
-    [[NSUserDefaults standardUserDefaults] synchronize];
-}
-+(NSString*)getSlotPacket: (int)slotNo {
-    return [[NSUserDefaults standardUserDefaults] valueForKey:[NSString stringWithFormat:@"packet_slot_%d", slotNo]];
-}
-+(void)setSlotFull:(int)slotNo {
-    [[NSUserDefaults standardUserDefaults] setInteger:1 forKey:[NSString stringWithFormat:@"packet_slot_full_%d", slotNo]];
-    [[NSUserDefaults standardUserDefaults] synchronize];
-}
-+(void)setSlotEmpty:(int)slotNo {
-    [[NSUserDefaults standardUserDefaults] setInteger:0 forKey:[NSString stringWithFormat:@"packet_slot_full_%d", slotNo]];
-    [[NSUserDefaults standardUserDefaults] synchronize];
-}
-+(bool)getSlotFull: (int)slotNo {
-    if ([[NSUserDefaults standardUserDefaults] integerForKey:[NSString stringWithFormat:@"packet_slot_full_%d", slotNo]] == 1) {
-        return true;
-    }else {
-        return false;
+
++(NSMutableArray*)getPacketInventroyAsArray {
+    NSMutableArray *packetArray;
+    NSUserDefaults *nd = [NSUserDefaults standardUserDefaults];
+    NSData *arrayToData = [nd objectForKey:@"packetInventory"];
+    
+    if(arrayToData == nil){
+        packetArray = [[NSMutableArray alloc] init];
     }
+    
+    packetArray = [NSKeyedUnarchiver unarchiveObjectWithData:arrayToData];
+    return packetArray;
 }
-+(int)getSlotsFilled   {
-    return (int)[[NSUserDefaults standardUserDefaults] integerForKey:@"packet_slots"];
+
++(void)addPacketWithStringToInventory: (NSString*)packetName {
+    
+    NSUserDefaults *nd = [NSUserDefaults standardUserDefaults];
+    NSMutableArray *pInv = [self getPacketInventroyAsArray];
+    
+    if(pInv == nil){
+        pInv = [[NSMutableArray alloc] init];
+    }
+    
+    [pInv addObject:packetName];
+    
+    // V I dont think this is needed but im too scared to take it out 0.o V I kind of think it is when i think about it... XD
+    NSData *arrayToData = [NSKeyedArchiver archivedDataWithRootObject:pInv];
+    
+    [nd setObject:arrayToData forKey:@"packetInventory"];
+    [nd synchronize];
+    
 }
-+(void)addNewFullSlot {
-    [[NSUserDefaults standardUserDefaults] setInteger:([self getSlotsFilled]+1) forKey:@"packet_slots"];
+
++(NSString*)getPacketAtSlot: (int)slotID {
+    
+    NSMutableArray *pInv = [self getPacketInventroyAsArray];
+    NSString *packetName = [pInv objectAtIndex:slotID-1];
+    
+    return packetName;
 }
-+(void)removeFullSlot {
-    [[NSUserDefaults standardUserDefaults] setInteger:([self getSlotsFilled]-1) forKey:@"packet_slots"];
++(int)getSlotsFull {
+    NSMutableArray *pInv = [self getPacketInventroyAsArray];
+    return (int)([pInv count]+1);
+}
++(void)removeFullSlot: (int)slotNo {
+    NSUserDefaults *nd = [NSUserDefaults standardUserDefaults];
+    NSMutableArray *pInv = [self getPacketInventroyAsArray];
+    
+    [pInv removeObjectAtIndex:slotNo - 1];
+    
+    NSData *arrayToData = [NSKeyedArchiver archivedDataWithRootObject:pInv];
+    
+    [nd setObject:arrayToData forKey:@"packetInventory"];
+    [nd synchronize];
 }
 @end

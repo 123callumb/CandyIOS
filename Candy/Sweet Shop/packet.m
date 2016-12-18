@@ -50,19 +50,19 @@
     int packetPressed = (int)(packet.tag - 1100);
     
     if (packetPressed == 1) {
-        [packetInventoryData fillSlot:@"lollyPacket"];
+        [packetInventoryData addPacketWithStringToInventory:@"lollyPacket"];
     }
     if (packetPressed == 2) {
-        [packetInventoryData fillSlot:@"bonbonPacket"];
+        [packetInventoryData addPacketWithStringToInventory:@"bonbonPacket"];
     }
     if (packetPressed == 3) {
-        [packetInventoryData fillSlot:@"sweetPacket"];
+        [packetInventoryData addPacketWithStringToInventory:@"sweetPacket"];
     }
     if (packetPressed == 4) {
-        [packetInventoryData fillSlot:@"chewPacket"];
+        [packetInventoryData addPacketWithStringToInventory:@"chewPacket"];
     }
     if (packetPressed == 5) {
-        [packetInventoryData fillSlot:@"jawbreakerPacket"];
+        [packetInventoryData addPacketWithStringToInventory:@"jawbreakerPacket"];
     }
     
 

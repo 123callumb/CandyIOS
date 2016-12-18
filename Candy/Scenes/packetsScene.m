@@ -24,6 +24,6 @@
     UIView *v = (UIView*)tap.view;
     
     [packetSKUI onBackTouch:self obj:obj view:v];
-    [skPacketOpener  onOpenPress:obj];
+    [skPacketOpener  onOpenPress:obj scene:self view:v];
 }
 @end

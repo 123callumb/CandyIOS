@@ -10,4 +10,5 @@
 
 @interface packetInventroySlot : UIView
 +(void)addSlots: (UIScrollView*)v;
++(NSString*)getSelectedPacket;
 @end
