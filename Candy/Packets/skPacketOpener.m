@@ -11,6 +11,9 @@
 #import "bonbonPacket.h"
 #import "packetScrollUI.h"
 #import "packetInventroySlot.h"
+#import "lollyPacket.h"
+#import "chewPacket.h"
+#import "wrappedPacket.h"
 
 @implementation skPacketOpener
 
@@ -75,6 +78,18 @@ NSString *openedItem;
     if([[packetInventroySlot getSelectedPacket] isEqualToString:@"bonbonPacket"]){
         [bonbonPacket addContentSection:packetContents];
         [bonbonPacket createRandomSlider:s yPos:s.frame.size.height/4.84];
+    }
+    if([[packetInventroySlot getSelectedPacket] isEqualToString:@"lollyPacket"]){
+        [lollyPacket addContentSection:packetContents];
+        [lollyPacket createRandomSlider:s yPos:s.frame.size.height/4.84];
+    }
+    if([[packetInventroySlot getSelectedPacket] isEqualToString:@"sweetPacket"]){
+        [wrappedPacket addContentSection:packetContents];
+        [wrappedPacket createRandomSlider:s yPos:s.frame.size.height/4.84];
+    }
+    if([[packetInventroySlot getSelectedPacket] isEqualToString:@"chewPacket"]){
+        [chewPacket addContentSection:packetContents];
+        [chewPacket createRandomSlider:s yPos:s.frame.size.height/4.84];
     }
     
     [s addChild:rightTray];
