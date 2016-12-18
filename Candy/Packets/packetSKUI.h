@@ -10,5 +10,5 @@
 
 @interface packetSKUI : SKSpriteNode
 +(void)addPacketUI: (SKScene*)s;
-+(void)onBackTouch: (SKScene*)s obj:(SKNode*)n;
++(void)onBackTouch: (SKScene*)s obj:(SKNode*)n view:(UIView*)v;
 @end

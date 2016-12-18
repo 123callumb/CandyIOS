@@ -7,7 +7,7 @@
 //
 
 #import "packet.h"
-
+#import "packetInventoryData.h"
 
 @implementation packet
 +(void)addPackets: (UIView*)v {
@@ -47,7 +47,26 @@
 }
 +(void)onPress: (id)sender {
     UIButton *packet = (UIButton*)sender;
-    NSLog(@"%ld", packet.tag - 1100);
+    int packetPressed = (int)(packet.tag - 1100);
+    
+    if (packetPressed == 1) {
+        [packetInventoryData addPacketWithStringToInventory:@"lollyPacket"];
+    }
+    if (packetPressed == 2) {
+        [packetInventoryData addPacketWithStringToInventory:@"bonbonPacket"];
+    }
+    if (packetPressed == 3) {
+        [packetInventoryData addPacketWithStringToInventory:@"sweetPacket"];
+    }
+    if (packetPressed == 4) {
+        [packetInventoryData addPacketWithStringToInventory:@"chewPacket"];
+    }
+    if (packetPressed == 5) {
+        [packetInventoryData addPacketWithStringToInventory:@"jawbreakerPacket"];
+    }
+    
+
+    
 }
 +(float)calculateX: (int)idNum viewWidth:(float)xWidth {
     for(int i = 1; i < 100; i = i + 3){
