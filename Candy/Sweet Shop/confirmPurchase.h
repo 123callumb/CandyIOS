@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface confirmPurchase : UIView
-
++(void)confirmPacketPurchase: (UIView*)v tagNumber:(int)tagNo;
 @end

@@ -8,6 +8,7 @@
 
 #import "packet.h"
 #import "packetInventoryData.h"
+#import "confirmPurchase.h"
 
 @implementation packet
 +(void)addPackets: (UIView*)v {
@@ -54,22 +55,15 @@
 }
 +(void)onPress: (id)sender {
     UIButton *packet = (UIButton*)sender;
+    UIView *v2 = [packet superview];
+    UIScrollView *v1 = (UIScrollView*)[v2 superview];
+    UIView *v = [v1 superview];
+    
     int packetPressed = (int)(packet.tag - 1100);
-    NSLog(@"was pressed fammmmm");
-    if (packetPressed == 1) {
-        [packetInventoryData addPacketWithStringToInventory:@"lollyPacket"];
+    
+    if (packet.isSelected == false) {
+        [confirmPurchase confirmPacketPurchase:v tagNumber:packetPressed];
     }
-    if (packetPressed == 2) {
-        [packetInventoryData addPacketWithStringToInventory:@"bonbonPacket"];
-    }
-    if (packetPressed == 3) {
-        [packetInventoryData addPacketWithStringToInventory:@"sweetPacket"];
-    }
-    if (packetPressed == 4) {
-        [packetInventoryData addPacketWithStringToInventory:@"chewPacket"];
-    }
-    if (packetPressed == 5) {
-        [packetInventoryData addPacketWithStringToInventory:@"jawbreakerPacket"];
-    }
+
 }
 @end
