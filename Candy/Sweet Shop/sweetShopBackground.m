@@ -7,6 +7,7 @@
 //
 
 #import "sweetShopBackground.h"
+#import "uiGemLabel.h"
 
 @implementation sweetShopBackground
 
@@ -34,6 +35,10 @@
     UIImageView *packetKeys = [[UIImageView alloc] initWithImage:packetKey];
     packetKeys.frame = CGRectMake(0, v.frame.size.height/6, v.frame.size.width, v.frame.size.height/7);
     packetKeys.tag = 1003;
+    [uiGemLabel addGemLabel:packetKeys rectSize:CGRectMake(packetKeys.frame.size.width-packetKeys.frame.size.height*1.15,
+                                                           packetKeys.frame.size.height-packetKeys.frame.size.height*1.05,
+                                                           packetKeys.frame.size.height, packetKeys.frame.size.height)
+                                                           fontSize:40.0f];
     [v addSubview:packetKeys];
 }
 @end
