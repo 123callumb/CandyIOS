@@ -23,55 +23,57 @@ NSString *selectedPacket;
 
 +(void)packetSlot: (UIScrollView*)v slotID:(int)slotID {
     
-    NSString *packetName;
-    
+    NSString *packetName = @"packetBlank";
+
     if([[packetInventoryData getPacketInventroyAsArray] count] >= slotID){
         
         packetName = [packetInventoryData getPacketAtSlot:slotID];
         
-    }else {
-        packetName = @"packetBlank";
     }
     
-    UIView *slot = [[UIView alloc] initWithFrame:CGRectMake([self calculateX:slotID viewWidth:v.frame.size.width],
-                                                            [self calculateY:slotID viewWidth:v.frame.size.width/3],
-                                                            v.frame.size.width/3,
-                                                            v.frame.size.width/3)];
+    UIImage *packet = [UIImage imageNamed:packetName];
+    UIImage *slotBg = [UIImage imageNamed:@"packetInventorySlot"];
     
+    UIImageView *slot = [[UIImageView alloc] initWithImage:slotBg];
+    UIButton *packetButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    
+    [packetButton setImage:packet forState:UIControlStateNormal];
+    
+    float slotWidth = v.frame.size.width/3;
+    
+    slot.frame = CGRectMake([self calculateX:slotID viewWidth:slotWidth], [self calculateY:slotID viewWidth:slotWidth], slotWidth, slotWidth);
+    
+    float packetW = slot.frame.size.width/1.4;
+    float packetH = slot.frame.size.height/1.6;
+    
+    packetButton.frame = CGRectMake((slot.frame.origin.x) + (slot.frame.size.width/2) - (packetW/2),
+                                    (slot.frame.origin.y) + (slot.frame.size.height/2) - (packetH/2),
+                                    (packetW),
+                                    (packetH));
+    
+    packetButton.tag = slotID + 1500;
+
     SEL onPress = @selector(onSlotPress:);
-    UIImage *packetImage = [UIImage imageNamed:packetName];
-    UIButton *slotButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    UIImage *slotBack = [UIImage imageNamed:@"packetInventorySlot"];
-    UIImageView *slotView = [[UIImageView alloc]initWithImage:slotBack];
     
-    slotView.frame = CGRectMake(slot.frame.origin.x, slot.frame.origin.y, slot.frame.size.width, slot.frame.size.width);
+    
+
     
     if([[packetInventoryData getPacketInventroyAsArray] count] >= slotID){
-    [slotButton addTarget:self action:onPress forControlEvents:UIControlEventTouchUpInside];
+        [packetButton addTarget:self action:onPress forControlEvents:UIControlEventTouchUpInside];
         }
     
-    [slotButton setImage:packetImage forState:UIControlStateNormal];
-    
-    float slotWidth = slot.frame.size.width/1.4;
-    float slotHeight = slot.frame.size.height/1.6;
-    
-    slotButton.frame = CGRectMake(slot.frame.size.width/2 - slotWidth/2, slot.frame.size.height/2 - slotHeight/2, slotWidth, slotHeight);
-    slotButton.tag = slotID + 1500;
-    
-    [slot addSubview:slotView];
-    [slotView addSubview:slotButton];
-
     [v addSubview:slot];
+    [v addSubview:packetButton];
+    
 }
 
 +(void)onSlotPress: (id)sender {
     UIButton *packet = (UIButton*)sender;
-    UIView *v = (UIView*)[sender superview];
-    UIScrollView *sv = (UIScrollView*)[v superview];
+    UIScrollView *v = (UIScrollView*)[sender superview];
     int packetID = (int)packet.tag - 1500;
 
     if([packetInventoryData getPacketAtSlot:packetID] != nil){
-        [sv removeFromSuperview];
+        [v removeFromSuperview];
          selectedPacket = [packetInventoryData getPacketAtSlot:packetID];
          [packetInventoryData removeFullSlot:packetID];
     }
@@ -81,7 +83,8 @@ NSString *selectedPacket;
 }
 
 +(float)calculateX: (int)idNum viewWidth:(float)xWidth {
-    float itemSize = xWidth/3;
+    float itemSize = xWidth;
+    float frameSize = xWidth*3;
     
     for(int i = 1; i < 100; i = i + 3){
         if (idNum == i) {
@@ -90,20 +93,18 @@ NSString *selectedPacket;
     }
     for(int i = 2; i < 100; i = i + 3){
         if (idNum == i) {
-            return xWidth/2 - itemSize;
+            return frameSize/2 - itemSize/2;
         }
     }
     for(int i = 3; i < 100; i = i + 3){
         if (idNum == i) {
-            return xWidth/2 - itemSize/2;
+            return frameSize - itemSize;
         }
     }
     return 0;
 }
 //I mean I can write a seperate function which does this calculation but I cant think of the formula right nowwww so this is gonna have to do #CopyAndPasta
 +(float)calculateY: (int)idNum viewWidth:(float)yWidth {
-    
-    yWidth = yWidth/2;
     
     for(int i = 1; i <= 3; i++){
         if (idNum == i) {
