@@ -30,7 +30,7 @@
     [v addSubview:footer];
 }
 +(void)addPacketKeys: (UIView*)v {
-    UIImage *packetKey = [UIImage imageNamed:@"packetKeys"];
+    UIImage *packetKey = [UIImage imageNamed:@"gemsBar"];
     UIImageView *packetKeys = [[UIImageView alloc] initWithImage:packetKey];
     packetKeys.frame = CGRectMake(0, v.frame.size.height/6, v.frame.size.width, v.frame.size.height/7);
     packetKeys.tag = 1003;
