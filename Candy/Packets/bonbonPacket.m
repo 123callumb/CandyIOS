@@ -13,9 +13,12 @@
 @implementation bonbonPacket
 +(NSArray*)contentList {
     NSArray *content = [NSArray arrayWithObjects:@"mintbonbonPacket",
+                    @"bonbonLimePacket",
                     @"cokebonbonPacket",
                     @"strawberrybonbonPacket",
+                    @"bonbonLemonPacket",
                     @"bubblegumbonbonPacket",
+                    @"bonbonTropicalPacket",
                     @"cherrybonbonPacket",
                     @"rainbowBonBonPacket",
                     nil];

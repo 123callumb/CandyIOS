@@ -54,6 +54,8 @@
 		753D56CB1E06FD7600A6CBF8 /* lollyPacket.m in Sources */ = {isa = PBXBuildFile; fileRef = 753D56CA1E06FD7600A6CBF8 /* lollyPacket.m */; };
 		753D56CE1E06FF2800A6CBF8 /* wrappedPacket.m in Sources */ = {isa = PBXBuildFile; fileRef = 753D56CD1E06FF2800A6CBF8 /* wrappedPacket.m */; };
 		753D56D11E06FFF000A6CBF8 /* chewPacket.m in Sources */ = {isa = PBXBuildFile; fileRef = 753D56D01E06FFF000A6CBF8 /* chewPacket.m */; };
+		753D56D41E07035B00A6CBF8 /* jawbreakerPacket.m in Sources */ = {isa = PBXBuildFile; fileRef = 753D56D31E07035B00A6CBF8 /* jawbreakerPacket.m */; };
+		753D56D71E07572800A6CBF8 /* confirmPurchase.m in Sources */ = {isa = PBXBuildFile; fileRef = 753D56D61E07572800A6CBF8 /* confirmPurchase.m */; };
 		75527A291DFDF9FF00D149C0 /* packetScrollUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 75527A281DFDF9FF00D149C0 /* packetScrollUI.m */; };
 		75527A2C1DFF009B00D149C0 /* packetInventroySlot.m in Sources */ = {isa = PBXBuildFile; fileRef = 75527A2B1DFF009B00D149C0 /* packetInventroySlot.m */; };
 		75527A2F1DFF00D600D149C0 /* packetInventoryData.m in Sources */ = {isa = PBXBuildFile; fileRef = 75527A2E1DFF00D600D149C0 /* packetInventoryData.m */; };
@@ -220,6 +222,10 @@
 		753D56CD1E06FF2800A6CBF8 /* wrappedPacket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = wrappedPacket.m; path = Candy/Packets/wrappedPacket.m; sourceTree = "<group>"; };
 		753D56CF1E06FFF000A6CBF8 /* chewPacket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = chewPacket.h; path = Candy/Packets/chewPacket.h; sourceTree = "<group>"; };
 		753D56D01E06FFF000A6CBF8 /* chewPacket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = chewPacket.m; path = Candy/Packets/chewPacket.m; sourceTree = "<group>"; };
+		753D56D21E07035B00A6CBF8 /* jawbreakerPacket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = jawbreakerPacket.h; path = Candy/Packets/jawbreakerPacket.h; sourceTree = "<group>"; };
+		753D56D31E07035B00A6CBF8 /* jawbreakerPacket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = jawbreakerPacket.m; path = Candy/Packets/jawbreakerPacket.m; sourceTree = "<group>"; };
+		753D56D51E07572800A6CBF8 /* confirmPurchase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = confirmPurchase.h; path = "Candy/Sweet Shop/confirmPurchase.h"; sourceTree = "<group>"; };
+		753D56D61E07572800A6CBF8 /* confirmPurchase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = confirmPurchase.m; path = "Candy/Sweet Shop/confirmPurchase.m"; sourceTree = "<group>"; };
 		75527A271DFDF9FF00D149C0 /* packetScrollUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = packetScrollUI.h; path = Candy/Packets/packetScrollUI.h; sourceTree = "<group>"; };
 		75527A281DFDF9FF00D149C0 /* packetScrollUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = packetScrollUI.m; path = Candy/Packets/packetScrollUI.m; sourceTree = "<group>"; };
 		75527A2A1DFF009B00D149C0 /* packetInventroySlot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = packetInventroySlot.h; path = Candy/Packets/packetInventroySlot.h; sourceTree = "<group>"; };
@@ -579,6 +585,8 @@
 				753D56CD1E06FF2800A6CBF8 /* wrappedPacket.m */,
 				753D56CF1E06FFF000A6CBF8 /* chewPacket.h */,
 				753D56D01E06FFF000A6CBF8 /* chewPacket.m */,
+				753D56D21E07035B00A6CBF8 /* jawbreakerPacket.h */,
+				753D56D31E07035B00A6CBF8 /* jawbreakerPacket.m */,
 			);
 			name = Packets;
 			sourceTree = "<group>";
@@ -596,6 +604,8 @@
 				75B6A1321DFB8E0E00ED922C /* backButtonSweetShop.m */,
 				75B6A1341DFB8F2000ED922C /* packet.h */,
 				75B6A1351DFB8F2000ED922C /* packet.m */,
+				753D56D51E07572800A6CBF8 /* confirmPurchase.h */,
+				753D56D61E07572800A6CBF8 /* confirmPurchase.m */,
 			);
 			name = "Sweet Shop";
 			sourceTree = "<group>";
@@ -990,6 +1000,7 @@
 				75919B991DDCA41C001F66EB /* defaultLevel.m in Sources */,
 				75C36E3E1DCE5F2000F84214 /* backgroundManager.m in Sources */,
 				61E1838F1DEE13E20034C021 /* Save.m in Sources */,
+				753D56D71E07572800A6CBF8 /* confirmPurchase.m in Sources */,
 				75527A2C1DFF009B00D149C0 /* packetInventroySlot.m in Sources */,
 				61E1837F1DEDE45A0034C021 /* Character_Maker.m in Sources */,
 				756C31261DF4D0B20017FBE9 /* buttonCreator.m in Sources */,
@@ -1037,6 +1048,7 @@
 				75919B911DDB7A93001F66EB /* upgradeMenu.m in Sources */,
 				7525F7B11DD2242100B0510C /* taps.m in Sources */,
 				7525F78B1DCFDD8400B0510C /* sweetsButton.m in Sources */,
+				753D56D41E07035B00A6CBF8 /* jawbreakerPacket.m in Sources */,
 				75B6A1361DFB8F2000ED922C /* packet.m in Sources */,
 				75712C111DFCE1A400450342 /* packetsScene.m in Sources */,
 				7525F7911DCFF8FB00B0510C /* menuBacking.m in Sources */,

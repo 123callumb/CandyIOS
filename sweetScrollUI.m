@@ -19,7 +19,7 @@
     
     mainScroll.backgroundColor = [UIColor colorWithRed:120.0f/255.0f green:185.0f/255.0f blue:219.0/255.0f alpha:1];
     
-    [mainScroll setContentSize:CGSizeMake(v.frame.size.width, mainScroll.frame.size.height*1.1)];
+    [mainScroll setContentSize:CGSizeMake(v.frame.size.width, mainScroll.frame.size.height*1.25)];
     
     [packet addPackets:mainScroll];
     
