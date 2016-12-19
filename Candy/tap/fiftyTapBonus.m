@@ -10,6 +10,7 @@
 #import "defaultSweet.h"
 #import "coinSpawner.h"
 #import "box1.h"
+#import "gems.h"
 
 @implementation fiftyTapBonus
 int tapCollector = 0;
@@ -47,6 +48,7 @@ int tapCollector = 0;
         int lowerBound = 5;
         int upperBound = 70;
         int rndValue = lowerBound + arc4random() % (upperBound - lowerBound);
+        [gems addGems:1];
         [coinSpawner coinExplosion:obj scene:s coinAmount:rndValue];
 
     }

@@ -8,6 +8,7 @@
 
 #import "confirmPurchase.h"
 #import "packetInventoryData.h"
+#import "gems.h"
 
 @implementation confirmPurchase
 
@@ -80,6 +81,7 @@
         [packetInventoryData addPacketWithStringToInventory:@"jawbreakerPacket"];
     }
     
+    [gems removeGems:2];
     [v removeFromSuperview];
 }
 +(void)onNvm: (id)sender {

@@ -9,6 +9,7 @@
 #import "packet.h"
 #import "packetInventoryData.h"
 #import "confirmPurchase.h"
+#import "gems.h"
 
 @implementation packet
 +(void)addPackets: (UIView*)v {
@@ -62,7 +63,9 @@
     int packetPressed = (int)(packet.tag - 1100);
     
     if (packet.isSelected == false) {
+        if([gems getGems] >= 2){
         [confirmPurchase confirmPacketPurchase:v tagNumber:packetPressed];
+        }
     }
 
 }

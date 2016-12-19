@@ -64,6 +64,8 @@
 		755ACB3F1DF1F781000DD9CB /* mapBuilding.m in Sources */ = {isa = PBXBuildFile; fileRef = 755ACB3E1DF1F781000DD9CB /* mapBuilding.m */; };
 		755ACB421DF32F51000DD9CB /* buildingGui.m in Sources */ = {isa = PBXBuildFile; fileRef = 755ACB411DF32F51000DD9CB /* buildingGui.m */; };
 		7565B0A41DF6CA7400390278 /* sweetTypeUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 7565B0A31DF6CA7400390278 /* sweetTypeUI.m */; };
+		756AEAFF1E088B76002CFA70 /* gems.m in Sources */ = {isa = PBXBuildFile; fileRef = 756AEAFE1E088B76002CFA70 /* gems.m */; };
+		756AEB021E0890C7002CFA70 /* uiGemLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 756AEB011E0890C7002CFA70 /* uiGemLabel.m */; };
 		756C31231DF34F7F0017FBE9 /* coinSpawner.m in Sources */ = {isa = PBXBuildFile; fileRef = 756C31221DF34F7F0017FBE9 /* coinSpawner.m */; };
 		756C31261DF4D0B20017FBE9 /* buttonCreator.m in Sources */ = {isa = PBXBuildFile; fileRef = 756C31251DF4D0B20017FBE9 /* buttonCreator.m */; };
 		75712C111DFCE1A400450342 /* packetsScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 75712C101DFCE1A400450342 /* packetsScene.m */; };
@@ -242,6 +244,10 @@
 		755ACB411DF32F51000DD9CB /* buildingGui.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = buildingGui.m; path = Candy/globalMenu/mapMenu/buildingGui.m; sourceTree = "<group>"; };
 		7565B0A21DF6CA7400390278 /* sweetTypeUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = sweetTypeUI.h; path = Candy/inventory/sweetTypeUI.h; sourceTree = "<group>"; };
 		7565B0A31DF6CA7400390278 /* sweetTypeUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = sweetTypeUI.m; path = Candy/inventory/sweetTypeUI.m; sourceTree = "<group>"; };
+		756AEAFD1E088B76002CFA70 /* gems.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = gems.h; path = "Candy/Gems System/gems.h"; sourceTree = "<group>"; };
+		756AEAFE1E088B76002CFA70 /* gems.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = gems.m; path = "Candy/Gems System/gems.m"; sourceTree = "<group>"; };
+		756AEB001E0890C7002CFA70 /* uiGemLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = uiGemLabel.h; path = "Candy/Gems System/uiGemLabel.h"; sourceTree = "<group>"; };
+		756AEB011E0890C7002CFA70 /* uiGemLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = uiGemLabel.m; path = "Candy/Gems System/uiGemLabel.m"; sourceTree = "<group>"; };
 		756C31211DF34F7F0017FBE9 /* coinSpawner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = coinSpawner.h; path = Candy/Money/coinSpawner.h; sourceTree = "<group>"; };
 		756C31221DF34F7F0017FBE9 /* coinSpawner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = coinSpawner.m; path = Candy/Money/coinSpawner.m; sourceTree = "<group>"; };
 		756C31241DF4D0B20017FBE9 /* buttonCreator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = buttonCreator.h; path = Candy/inventory/slots/buttonCreator.h; sourceTree = "<group>"; };
@@ -562,6 +568,17 @@
 			name = Fonts;
 			sourceTree = "<group>";
 		};
+		756AEAFC1E088B4D002CFA70 /* Gems System */ = {
+			isa = PBXGroup;
+			children = (
+				756AEAFD1E088B76002CFA70 /* gems.h */,
+				756AEAFE1E088B76002CFA70 /* gems.m */,
+				756AEB001E0890C7002CFA70 /* uiGemLabel.h */,
+				756AEB011E0890C7002CFA70 /* uiGemLabel.m */,
+			);
+			name = "Gems System";
+			sourceTree = "<group>";
+		};
 		75712C121DFCE1C900450342 /* Packets */ = {
 			isa = PBXGroup;
 			children = (
@@ -646,6 +663,7 @@
 		75C36DEE1DCCF77600F84214 = {
 			isa = PBXGroup;
 			children = (
+				756AEAFC1E088B4D002CFA70 /* Gems System */,
 				75712C121DFCE1C900450342 /* Packets */,
 				7571FB6E1DFB712F006E1E49 /* Sweet Shop */,
 				750F2A361DF859DB00A784F6 /* Message System */,
@@ -1026,6 +1044,7 @@
 				75E8F1951DD3CC3100A421E7 /* nodeToParticle.m in Sources */,
 				61E183921DEE14140034C021 /* background.m in Sources */,
 				7571FB6A1DFB509B006E1E49 /* packetUIButtons.m in Sources */,
+				756AEB021E0890C7002CFA70 /* uiGemLabel.m in Sources */,
 				7571FB771DFB77D2006E1E49 /* sweetScrollUI.m in Sources */,
 				755ACB3C1DF0C9C5000DD9CB /* mapGui.m in Sources */,
 				750F3A941DE68167002AFB78 /* determineSweetTap.m in Sources */,
@@ -1067,6 +1086,7 @@
 				756C31231DF34F7F0017FBE9 /* coinSpawner.m in Sources */,
 				7525F7C51DD25C9100B0510C /* combo.m in Sources */,
 				75E8F1981DD7969500A421E7 /* statsMenu.m in Sources */,
+				756AEAFF1E088B76002CFA70 /* gems.m in Sources */,
 				750F2A321DF7523E00A784F6 /* sweetFavourNode.m in Sources */,
 				61E183861DEE00E30034C021 /* Character.m in Sources */,
 				615C34E91DF6D42900F1B3E2 /* AddItem.m in Sources */,
