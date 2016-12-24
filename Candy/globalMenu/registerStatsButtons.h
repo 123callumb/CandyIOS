@@ -9,6 +9,6 @@
 #import <SpriteKit/SpriteKit.h>
 
 @interface registerStatsButtons : SKSpriteNode
-+(void)registerStatsButtons: (SKScene*)s location:(CGPoint)p node:(SKNode*)n;
++(void)registerStatsButtons: (SKScene*)s location:(CGPoint)p node:(SKNode*)n view:(UIView*)v;
 
 @end
