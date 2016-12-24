@@ -24,6 +24,7 @@
 #import "sweetTypeUI.h"
 #import "flavourPicker.h"
 #import "sweetShopUI.h"
+#import "sweetInventoryUI.h"
 
 UIScrollView* UIscrollUpdate = nil;
 UIImageView *img1 = nil;
@@ -56,6 +57,7 @@ UIScrollView* sFUI = nil;
         [AddItem CreateItem:@"nil" buttonTexture:@"upgradeButton" yPos:i*(UIscrollUpdate.frame.size.width/4) Scene:UIscrollUpdate ID:i];
     }
     [sweetShopUI addUIView:self.view];
+    [sweetInventoryUI createUI:self.view];
     
     }
 
@@ -70,7 +72,7 @@ UIScrollView* sFUI = nil;
     [taps onPressed:self location:loc];
     [buttonHandler registerButtons:obj currentScene:self];
     [registerBoxes registerBoxes:obj currentScene:self];
-    [registerStatsButtons registerStatsButtons:self location:loc node:obj];
+    [registerStatsButtons registerStatsButtons:self location:loc node:obj view:self.view];
     [upgradeMenu onTouch:obj scene:self];
 }
 

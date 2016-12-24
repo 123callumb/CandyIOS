@@ -18,6 +18,7 @@
     
     if(arrayToData == nil){
         packetArray = [[NSMutableArray alloc] init];
+        arrayToData = [[NSData alloc] init];
     }
     
     packetArray = [NSKeyedUnarchiver unarchiveObjectWithData:arrayToData];

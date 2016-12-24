@@ -8,6 +8,7 @@
 
 #import "packetContentManager.h"
 #import "skPacketOpener.h"
+#import "inventoryDataHandler.h"
 
 @implementation packetContentManager
 
@@ -164,7 +165,7 @@
                     
                     [skPacketOpener setOpenedItem:[NSString stringWithFormat:@"%@", unboxedItem.name]];
                     [skPacketOpener openedSweet:s];
-                    
+                    [inventoryDataHandler addSweet:unboxedItem.name];
                 }
                 SKAction *wait = [SKAction waitForDuration:1.75];
                 [s runAction:wait completion:^{
