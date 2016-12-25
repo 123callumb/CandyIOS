@@ -14,7 +14,7 @@
 +(void)addScrollUI: (UIView*)v{
     UIScrollView *scrollUI = [[UIScrollView alloc] initWithFrame:CGRectMake(0, v.frame.size.height/4.5, v.frame.size.width, v.frame.size.height - v.frame.size.height/4.5 - v.frame.size.height/6)];
     scrollUI.contentSize = CGSizeMake(v.frame.size.width*2, scrollUI.frame.size.height);
-    scrollUI.backgroundColor = [UIColor colorWithRed:120.0f/255.0f green:185.0f/255.0f blue:219.0/255.0f alpha:1];
+    scrollUI.backgroundColor = [UIColor colorWithRed:120.0f/255.0f green:185.0f/255.0f blue:219.0/255.0f alpha:0.8];
     [sweetInventorySlot addSlots:scrollUI];
     [v addSubview:scrollUI];
 }

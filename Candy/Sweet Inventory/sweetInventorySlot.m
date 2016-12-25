@@ -26,7 +26,7 @@
     
     UIView *slot = [[UIView alloc] initWithFrame:CGRectMake([self getSlotX:slotNo slotWidth:v.frame.size.width/3.8],
                                                             [self getSlotY:slotNo slotHeight:v.frame.size.width/3.68],
-                                                            v.frame.size.height/4, v.frame.size.height/4)];
+                                                            v.frame.size.height/4.5, v.frame.size.height/4.5)];
     
     UIButton *sweet = [UIButton buttonWithType:UIButtonTypeCustom];
     UIImage *slotBgImage = [UIImage imageNamed:slotBackgroundName];
@@ -37,7 +37,7 @@
     float sweetHeight = slot.frame.size.height/1.5;
     
     slotBg.frame = CGRectMake(0, 0, slot.frame.size.width, slot.frame.size.height);
-    sweet.frame = CGRectMake(slot.frame.size.width/2 - sweetWidth/2, slot.frame.size.height/2 - sweetHeight/2, sweetWidth, sweetHeight);
+    sweet.frame = CGRectMake(slot.frame.size.width/2 - sweetWidth/2, slot.frame.size.height/2 - sweetHeight/1.5, sweetWidth, sweetHeight);
     
     [sweet setImage:sweetTeture forState:UIControlStateNormal];
     
@@ -50,38 +50,38 @@
 
 +(NSString*)getSlotBackgroundImage: (NSString*)t {
     if([t isEqualToString:@"Grey"]){
-        return @"greySlotBg";
+        return @"greySlotBgR";
     }
     if([t isEqualToString:@"Blue"]){
-        return @"blueSlotBg";
+        return @"blueSlotBgR";
     }
     if([t isEqualToString:@"Red"]){
-        return @"redSlotBg";
+        return @"redSlotBgR";
     }
     if([t isEqualToString:@"Yellow"]){
-        return @"yellowSlotBg";
-    }else return @"greySlotBg";
+        return @"yellowSlotBgR";
+    }else return @"greySlotBgR";
 }
 +(float)getSlotY: (int)slotNo slotHeight:(float)slotH {
-    
+    float ss = slotH/16;
     for(int i = 0; i <= slotNo; i = i + 4){
         if(slotNo == i){
-            return 0;
+            return 0 + ss;
             }
         }
     for(int i = 1; i <= slotNo; i = i + 4){
         if(slotNo == i){
-                return slotH;
+                return slotH + ss;
         }
     }
     for(int i = 2; i <= slotNo; i = i + 4){
         if(slotNo == i){
-                return slotH*2;
+                return slotH*2 + ss;
         }
     }
     for(int i = 3; i <= slotNo; i = i + 4){
         if(slotNo == i){
-                return slotH*3;
+                return slotH*3 + ss;
         }
     }
 
@@ -91,11 +91,13 @@
     
     int row = 0;
     int slot = slotNo;
+    float ss = slotW/16;
+
     
     for(int i = slotNo; i <= [[sweetInventoryData getInventory] count]-1; i = i - 4){
         
         if(slot == 0 || slot == 1 || slot == 2 || slot == 3){
-            return slotW*row;
+            return slotW*row + ss;
         }else {
             row = row+1;
             slot = slot -4;
