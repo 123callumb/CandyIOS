@@ -402,16 +402,24 @@
 		6109D29D1DF7576E00257CDB /* Update Menu */ = {
 			isa = PBXGroup;
 			children = (
+				61851C751DF9A35D00E133E6 /* Upgrades */,
 				615C34EA1DF6E0DB00F1B3E2 /* scrollUpdate.h */,
 				615C34EB1DF6E0DB00F1B3E2 /* scrollUpdate.m */,
 				615C34E71DF6D42900F1B3E2 /* AddItem.h */,
 				615C34E81DF6D42900F1B3E2 /* AddItem.m */,
+			);
+			name = "Update Menu";
+			sourceTree = "<group>";
+		};
+		61851C751DF9A35D00E133E6 /* Upgrades */ = {
+			isa = PBXGroup;
+			children = (
 				6182EAA51DF8BD2900590FA4 /* upgrade_moneyPerSecond.h */,
 				6182EAA61DF8BD2900590FA4 /* upgrade_moneyPerSecond.m */,
 				61A7DE831DF8C068004C2F71 /* upgrade_slotsUnlocked.h */,
 				61A7DE841DF8C068004C2F71 /* upgrade_slotsUnlocked.m */,
 			);
-			name = "Update Menu";
+			name = Upgrades;
 			sourceTree = "<group>";
 		};
 		618EA38D1DF1ED5700D07ADD /* Candy_Machines */ = {
