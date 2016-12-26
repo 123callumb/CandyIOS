@@ -12,4 +12,6 @@
 +(NSMutableArray*)getInventory;
 +(void)addObject: (NSMutableDictionary*)sweetData;
 +(NSMutableDictionary*)getSweetDataAtSlot: (int)slotID;
++(void)removeObject: (int)slotID;
++(int)rowAmount;
 @end

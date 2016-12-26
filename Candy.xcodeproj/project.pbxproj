@@ -27,6 +27,8 @@
 		750F3A991DEC81A4002AFB78 /* statsMenuButtons.m in Sources */ = {isa = PBXBuildFile; fileRef = 750F3A981DEC81A4002AFB78 /* statsMenuButtons.m */; };
 		750F3A9C1DEC863E002AFB78 /* registerStatsButtons.m in Sources */ = {isa = PBXBuildFile; fileRef = 750F3A9B1DEC863E002AFB78 /* registerStatsButtons.m */; };
 		750F3A9F1DEF0762002AFB78 /* playerStatsMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 750F3A9E1DEF0761002AFB78 /* playerStatsMenu.m */; };
+		752002451E11B2FB00C2AC11 /* itemUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 752002441E11B2FB00C2AC11 /* itemUI.m */; };
+		752002481E11D47B00C2AC11 /* confirmSale.m in Sources */ = {isa = PBXBuildFile; fileRef = 752002471E11D47B00C2AC11 /* confirmSale.m */; };
 		7521F8C11DE0F61E00F2AD76 /* slotManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7521F8C01DE0F61E00F2AD76 /* slotManager.m */; };
 		7521F8C41DE0F66900F2AD76 /* slot.m in Sources */ = {isa = PBXBuildFile; fileRef = 7521F8C31DE0F66900F2AD76 /* slot.m */; };
 		7521F8C71DE0F91700F2AD76 /* box1.m in Sources */ = {isa = PBXBuildFile; fileRef = 7521F8C61DE0F91700F2AD76 /* box1.m */; };
@@ -183,6 +185,10 @@
 		750F3A9B1DEC863E002AFB78 /* registerStatsButtons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = registerStatsButtons.m; path = Candy/globalMenu/registerStatsButtons.m; sourceTree = "<group>"; };
 		750F3A9D1DEF0761002AFB78 /* playerStatsMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = playerStatsMenu.h; path = Candy/globalMenu/statsMenu/playerStatsMenu.h; sourceTree = "<group>"; };
 		750F3A9E1DEF0761002AFB78 /* playerStatsMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = playerStatsMenu.m; path = Candy/globalMenu/statsMenu/playerStatsMenu.m; sourceTree = "<group>"; };
+		752002431E11B2FB00C2AC11 /* itemUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = itemUI.h; path = "Candy/Sweet Inventory/itemUI.h"; sourceTree = "<group>"; };
+		752002441E11B2FB00C2AC11 /* itemUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = itemUI.m; path = "Candy/Sweet Inventory/itemUI.m"; sourceTree = "<group>"; };
+		752002461E11D47B00C2AC11 /* confirmSale.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = confirmSale.h; path = "Candy/Sweet Inventory/confirmSale.h"; sourceTree = "<group>"; };
+		752002471E11D47B00C2AC11 /* confirmSale.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = confirmSale.m; path = "Candy/Sweet Inventory/confirmSale.m"; sourceTree = "<group>"; };
 		7521F8BF1DE0F61E00F2AD76 /* slotManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = slotManager.h; path = Candy/inventory/slots/slotManager.h; sourceTree = "<group>"; };
 		7521F8C01DE0F61E00F2AD76 /* slotManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = slotManager.m; path = Candy/inventory/slots/slotManager.m; sourceTree = "<group>"; };
 		7521F8C21DE0F66900F2AD76 /* slot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = slot.h; path = Candy/inventory/slot.h; sourceTree = "<group>"; };
@@ -906,6 +912,10 @@
 				757695281E0B2A860067ABBF /* sweetInventoryScrollUI.m */,
 				75E8F4F01E0B2EAB00018296 /* sweetInventorySlot.h */,
 				75E8F4F11E0B2EAB00018296 /* sweetInventorySlot.m */,
+				752002431E11B2FB00C2AC11 /* itemUI.h */,
+				752002441E11B2FB00C2AC11 /* itemUI.m */,
+				752002461E11D47B00C2AC11 /* confirmSale.h */,
+				752002471E11D47B00C2AC11 /* confirmSale.m */,
 			);
 			name = "Sweet Inventory";
 			sourceTree = "<group>";
@@ -972,7 +982,7 @@
 		75C36DEF1DCCF77600F84214 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = Kilcal;
 				TargetAttributes = {
 					75C36DF61DCCF77600F84214 = {
@@ -1130,6 +1140,7 @@
 				757695231E09AF9F0067ABBF /* sweetInventoryUI.m in Sources */,
 				7525F7A81DD216D800B0510C /* money.m in Sources */,
 				7525F7941DD08C9D00B0510C /* coinBarSprite.m in Sources */,
+				752002451E11B2FB00C2AC11 /* itemUI.m in Sources */,
 				75270FCB1DE50B8600E7588F /* flavourPicker.m in Sources */,
 				6182EAA71DF8BD2900590FA4 /* upgrade_moneyPerSecond.m in Sources */,
 				7565B0A41DF6CA7400390278 /* sweetTypeUI.m in Sources */,
@@ -1141,6 +1152,7 @@
 				61E183861DEE00E30034C021 /* Character.m in Sources */,
 				615C34E91DF6D42900F1B3E2 /* AddItem.m in Sources */,
 				759E71C81DF0A02600B7275A /* mapMain.m in Sources */,
+				752002481E11D47B00C2AC11 /* confirmSale.m in Sources */,
 				75C36E461DCE752A00F84214 /* main.m in Sources */,
 				7525F7971DD08F8400B0510C /* inventoryMenu.m in Sources */,
 				757CD1A11DE2200000D07480 /* sweetPicker.m in Sources */,
@@ -1227,6 +1239,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -1249,7 +1262,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -1274,6 +1287,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -1290,7 +1304,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;

@@ -12,4 +12,5 @@
 +(void)createUI: (UIView*)v;
 +(void)showSweetInventoryUI:(UIView*)v;
 +(void)hideSweetInventoryUI: (UIView*)v;
++(void)refreshView: (UIView*)v;
 @end
