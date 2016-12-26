@@ -13,12 +13,26 @@
 
 @implementation upgrade_slotsUnlocked
 
-+(void)setTextures:(UIImageView*)box text:(UILabel*)txt{
+
+
++(void)setTextures:(UIImageView*)box text:(UILabel*)txt money:(UILabel*)txtMoney id:(double)i{
     [box setImage:[UIImage imageNamed:@"slotsUnlocked"]];
     txt.text = @"Slots Unlocked";
+    [self calculateMoney:i text:txtMoney];
 }
 +(void)whenPressed:(long)upgradePro{
     if(upgradePro < 5)[box1 setUnlockedSlots:(int)(upgradePro+1)];
+}
++(void)calculateMoney:(double)i text:(UILabel*)txt{
+    double money = 1000 * (exp(i));
+    //NSLog(@"%f",money);
+    [txt removeFromSuperview];
+    txt.text = @ "OIOIOI";
+    NSLog(@"%@", @"MONEY$$$");
+    NSLog(@"%f", money);
+    //jess was ere xoxoxoxo :* ;)
+    //hi calljm i am hacking u
+    
 }
 
 @end

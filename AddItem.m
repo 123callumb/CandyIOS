@@ -12,6 +12,7 @@
 #import "upgrade_slotsUnlocked.h"
 int currentValue = 0;
 UIImageView *upgradeProgress = nil;
+UILabel *moneyText;
 @implementation AddItem
 
 +(void)CreateItem:(NSString*)imageName buttonTexture:(NSString*)buttonName yPos:(double)y Scene:(UIScrollView*)s ID:(int)i{
@@ -25,16 +26,27 @@ UIImageView *upgradeProgress = nil;
     
     
     //info label
-    UIFont *customFont = [UIFont fontWithName:@"Coder's-Crux" size:17];
+    UIFont *infoFont = [UIFont fontWithName:@"Coder's-Crux" size:17];
+    UIFont *moneyFont = [UIFont fontWithName:@"Coder's-Crux" size:22];
     
     UILabel *infoText = [[UILabel alloc]initWithFrame:CGRectMake(38*(s.frame.size.width/128), y+4*(s.frame.size.width/128), 37*(s.frame.size.width/128), 8*(s.frame.size.width/128))];
-    infoText.font = customFont;
+    infoText.font = infoFont;
     infoText.text = @"test";
+    
+    //money label
+    moneyText = [[UILabel alloc]initWithFrame:CGRectMake(48*(s.frame.size.width/128), y+17*(s.frame.size.width/128), 37*(s.frame.size.width/128), 8*(s.frame.size.width/128))];
+    moneyText.font = moneyFont;
+    moneyText.text = @"test";
     
     //locked image
     UIImageView *lockedTexture = [[UIImageView alloc] initWithFrame:CGRectMake(0, y, s.frame.size.width, s.frame.size.width/4)];
     lockedTexture.image = [UIImage imageNamed:@"lockedUpgrade"];
     lockedTexture.tag = 500+i;
+    //unlcock cost
+    UIImageView *unlockCostBar = [[UIImageView alloc] initWithFrame:CGRectMake(35*(s.frame.size.width/128), y+6*(s.frame.size.width/128), 48*(s.frame.size.width/128), 18*(s.frame.size.width/128))];
+    unlockCostBar.image = [UIImage imageNamed:@"upgradeCost"];
+    unlockCostBar.tag = 600+i;
+    
     
     //setting the upgradeValue(NSuserDefault(out of 7))
     NSString *upgradeValue = [NSString stringWithFormat:@"CurrentValue%i", i];
@@ -55,10 +67,13 @@ UIImageView *upgradeProgress = nil;
         //setting the amount of upgrades available texture(4 for this one so it needs to be overwritten)
         upgradeValue = [NSString stringWithFormat:@"upgrade4Progress%li",upgrd];
         [upgradeProgress setImage:[UIImage imageNamed:upgradeValue]];
-        [upgrade_slotsUnlocked setTextures:img text:infoText];
+        //[upgrade_slotsUnlocked setTextures:img text:infoText money:moneyText id:i];
     }
     //coinsPerSecond
     if(i==1)[upgrade_moneyPerSecond setTextures:img text:infoText];
+    //
+    //
+    //
     
     
     //upgradeButton
@@ -69,7 +84,7 @@ UIImageView *upgradeProgress = nil;
                action:aSel
      forControlEvents:UIControlEventTouchUpInside];
     [button setTitle:@"" forState:UIControlStateNormal];
-    button.frame = CGRectMake(85*(s.frame.size.width / 128), y + 3*(s.frame.size.width/128), 38*(s.frame.size.width / 128), 24*(s.frame.size.width / 128));
+    button.frame = CGRectMake(85*(s.frame.size.width / 128), y + 3*(s.frame.size.width/128), 40*(s.frame.size.width / 128), 24*(s.frame.size.width / 128));
     [button setImage:btnImage forState:UIControlStateNormal];
     button.tag = 400+i;
     upgradeProgress.tag = 450+i;
@@ -86,7 +101,7 @@ UIImageView *upgradeProgress = nil;
                action:unlockSel
      forControlEvents:UIControlEventTouchUpInside];
     [unlock setTitle:@"" forState:UIControlStateNormal];
-    unlock.frame = CGRectMake(85*(s.frame.size.width / 128), y + 6*(s.frame.size.width/128), 38*(s.frame.size.width / 128), 20*(s.frame.size.width / 128));
+    unlock.frame = CGRectMake(85*(s.frame.size.width / 128), y + 6*(s.frame.size.width/128), 40*(s.frame.size.width / 128), 18*(s.frame.size.width / 128));
     [unlock setImage:btnImage forState:UIControlStateNormal];
     unlock.tag = 550+i;
     [unlock setImage:[UIImage imageNamed:@"unlockButtonPressed"]
@@ -103,6 +118,7 @@ UIImageView *upgradeProgress = nil;
     [s addSubview:img];
     [s addSubview:button];
     [s addSubview:infoText];
+    [s addSubview:moneyText];
     if((int)lockedID == 1)
     {
         button.hidden = false;
@@ -112,12 +128,14 @@ UIImageView *upgradeProgress = nil;
     if((int)lockedID != 1){
         [s addSubview:lockedTexture];
         [s addSubview:unlock];
+        [s addSubview:unlockCostBar];
     }
 }
 +(void)buttonActionn:(id)sender{
     
     UIButton *button = (UIButton*)sender;
     UIView *view = (UIView*)[sender superview];
+    //UIScrollView *scrollView = (UIScrollView*)[view viewWithTag:0];
     
     long newID = button.tag - 400;
     long barID = 450+newID;
@@ -146,9 +164,11 @@ UIImageView *upgradeProgress = nil;
     
         if(newID == 0){
             newTexture = [NSString stringWithFormat:@"upgrade4Progress%li",upgradeProgress];
+            
         }
         else{
             newTexture = [NSString stringWithFormat:@"upgradeProgress%li",upgradeProgress];
+            
         }
         
         UIImageView *progressbar = (UIImageView*)[view viewWithTag:barID];
@@ -157,8 +177,14 @@ UIImageView *upgradeProgress = nil;
         //OIOI
         //HERE IS WHERE YOU ADD THE METHODS FROM THE CLASSES
         //OIOI
-        if(newID==0)[upgrade_slotsUnlocked whenPressed:upgradeProgress];
-        if(newID==1)[upgrade_moneyPerSecond whenPressed];
+        if(newID==0){
+            [upgrade_slotsUnlocked calculateMoney:upgradeProgress text:moneyText];
+            [upgrade_slotsUnlocked whenPressed:upgradeProgress];
+        }
+        if(newID==1){
+            [upgrade_moneyPerSecond whenPressed];
+            [upgrade_slotsUnlocked calculateMoney:upgradeProgress text:moneyText];
+        }
         //etc...
         //etc...
     }
@@ -174,12 +200,15 @@ UIImageView *upgradeProgress = nil;
     long newID = button.tag - 550;
     long imageID = 500+newID;
     long buttonID = 400+newID;
+    long costID = 600+newID;
     
     UIButton *upgradeButton = (UIButton*)[view viewWithTag:buttonID];
     UIImageView *lockedImage = (UIImageView*)[view viewWithTag:imageID];
+    UIImageView *costImage = (UIImageView*)[view viewWithTag:costID];
     [lockedImage removeFromSuperview];
     upgradeButton.hidden = false;
     [button removeFromSuperview];
+    [costImage removeFromSuperview];
     
     NSString *Locked = [NSString stringWithFormat:@"Unlocked%i",(int)newID];
     [[NSUserDefaults standardUserDefaults] setInteger:1 forKey:Locked];
