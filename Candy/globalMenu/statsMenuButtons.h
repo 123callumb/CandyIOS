@@ -11,5 +11,5 @@
 @interface statsMenuButtons : SKSpriteNode
 +(void)addStatsButton: (SKSpriteNode*)s;
 +(void)buttonAnimation: (SKSpriteNode*)s action:(SKAction*)r;
-+(void)onStatsButtonPress:(SKSpriteNode*)s scene:(SKScene*)sk;
++(void)onStatsButtonPress:(SKSpriteNode*)s scene:(SKScene*)sk view:(UIView*)v;
 @end

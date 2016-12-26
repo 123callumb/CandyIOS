@@ -9,16 +9,21 @@
 #import "statsMenuButtons.h"
 #import "playerStatsMenu.h"
 #import "mainTransition.h"
+#import "sweetInventoryUI.h"
 
 @implementation statsMenuButtons
 
 +(void)addStatsButton: (SKSpriteNode*)s {
-    SKSpriteNode *statsButton = [SKSpriteNode spriteNodeWithImageNamed:@"playerStatsButton"];
-    statsButton.position = CGPointMake(0, -s.frame.size.height/1.3);
-    statsButton.name = @"statsMenuStatsButton";
+    SKSpriteNode *playerButton = [SKSpriteNode spriteNodeWithImageNamed:@"playerStatsIcon"];
+    playerButton.position = CGPointMake(s.frame.size.width/2, s.frame.size.height/20);
+    playerButton.name = @"statsMenuStatsButton";
+    
+    SKSpriteNode *sweetInventoryButton = [SKSpriteNode spriteNodeWithImageNamed:@"sweetMenuButton"];
+    sweetInventoryButton.position = CGPointMake(-s.frame.size.width/2, s.frame.size.height/20);
+    sweetInventoryButton.name = @"sweetInvButton";
 
     SKSpriteNode *mapButton = [SKSpriteNode spriteNodeWithImageNamed:@"mapButton"];
-    mapButton.position = CGPointMake(0, -s.frame.size.height/10);
+    mapButton.position = CGPointMake(0, -s.frame.size.height/1.6);
     mapButton.name = @"statsMenuMapButton";
     
     SKSpriteNode *coinPackButton = [SKSpriteNode spriteNodeWithImageNamed:@"coinPackButton"];
@@ -27,9 +32,10 @@
     
     [s addChild:mapButton];
     [s addChild:coinPackButton];
-    [s addChild:statsButton];
+    [s addChild:playerButton];
+    [s addChild:sweetInventoryButton];
 }
-+(void)onStatsButtonPress:(SKSpriteNode*)s scene:(SKScene*)sk {
++(void)onStatsButtonPress:(SKSpriteNode*)s scene:(SKScene*)sk view:(UIView*)v {
     if([s.name isEqualToString:@"statsMenuStatsButton"]){
         SKAction *block = [SKAction runBlock:^{}];
         [self buttonAnimation:s action:block];
@@ -43,6 +49,12 @@
     }
     if([s.name isEqualToString:@"statsMenuCoinPackButton"]){
         SKAction *block = [SKAction runBlock:^{}];
+        [self buttonAnimation:s action:block];
+    }
+    if([s.name isEqualToString:@"sweetInvButton"]){
+        SKAction *block = [SKAction runBlock:^{
+            [sweetInventoryUI showSweetInventoryUI:v];
+        }];
         [self buttonAnimation:s action:block];
     }
 }

@@ -7,7 +7,9 @@
 //
 
 #import "packet.h"
-
+#import "packetInventoryData.h"
+#import "confirmPurchase.h"
+#import "gems.h"
 
 @implementation packet
 +(void)addPackets: (UIView*)v {
@@ -19,75 +21,52 @@
 }
 +(void)createSweetPacket: (UIView*)v idNum:(int)packetNo packetTexture:(NSString*)texture {
     
-    UIView *packetWindow = [[UIView alloc] initWithFrame:CGRectMake([self calculateX:packetNo viewWidth:v.frame.size.width],
-                                                                    [self calculateY:packetNo viewWidth:v.frame.size.height],
-                                                                    v.frame.size.width/3.5,
-                                                                    v.frame.size.width/3)];
+    UIView *packetWindow = [[UIView alloc] initWithFrame:CGRectMake(0,
+                                                                    (v.frame.size.width/4.2) * (packetNo-1),
+                                                                    v.frame.size.width,
+                                                                    v.frame.size.width/4.2)];
 
     
     UIImage *packetTexture = [UIImage imageNamed:texture];
+    UIImageView *bar = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"packetBuyBar"]];
     UIImageView *packetView = [[UIImageView alloc] initWithImage:packetTexture];
     UIButton *openButton = [UIButton buttonWithType:UIButtonTypeCustom];
     
     SEL onPress = @selector(onPress:);
     
-    openButton.frame = CGRectMake(0, packetView.frame.size.height/4.5, v.frame.size.width/3.5, v.frame.size.height/7.7);
-    openButton.tag = 1100 + packetNo;
+    bar.frame = CGRectMake(0, 0, packetWindow.frame.size.width, packetWindow.frame.size.height);
+    
+    openButton.frame = CGRectMake(packetWindow.frame.size.width/3.5, packetWindow.frame.size.height/7, packetView.frame.size.width/3.8, packetWindow.frame.size.height/1.4);
+   
+    packetView.frame = CGRectMake(packetWindow.frame.size.width/20, packetWindow.frame.size.height/5, packetWindow.frame.size.width/6, packetWindow.frame.size.height/1.7);
     
     [openButton addTarget:self action:onPress forControlEvents:UIControlEventTouchUpInside];
-    [openButton setImage:[UIImage imageNamed:@"openButton"] forState:UIControlStateNormal];
-    [openButton setImage:[UIImage imageNamed:@"openPressured"] forState:UIControlStateHighlighted];
+    [openButton setImage:[UIImage imageNamed:@"packetBuyButton"] forState:UIControlStateNormal];
+    [openButton setImage:[UIImage imageNamed:@"packetButButtonPressed"] forState:UIControlStateHighlighted];
+    openButton.tag = 1100 + packetNo;
     
-    packetView.frame = CGRectMake(0, 0, packetWindow.frame.size.width, packetWindow.frame.size.width/1.2);
     
+    
+
+    [bar addSubview:packetView];
+    [packetWindow addSubview:bar];
     [packetWindow addSubview:openButton];
-    [packetWindow addSubview:packetView];
     
     [v addSubview:packetWindow];
 }
 +(void)onPress: (id)sender {
     UIButton *packet = (UIButton*)sender;
-    NSLog(@"%ld", packet.tag - 1100);
-}
-+(float)calculateX: (int)idNum viewWidth:(float)xWidth {
-    for(int i = 1; i < 100; i = i + 3){
-        if (idNum == i) {
-            return xWidth/26;
+    UIView *v2 = [packet superview];
+    UIScrollView *v1 = (UIScrollView*)[v2 superview];
+    UIView *v = [v1 superview];
+    
+    int packetPressed = (int)(packet.tag - 1100);
+    
+    if (packet.isSelected == false) {
+        if([gems getGems] >= 2){
+        [confirmPurchase confirmPacketPurchase:v tagNumber:packetPressed];
         }
     }
-    for(int i = 2; i < 100; i = i + 3){
-        if (idNum == i) {
-            return xWidth/2.8;
-        }
-    }
-    for(int i = 3; i < 100; i = i + 3){
-        if (idNum == i) {
-            return xWidth-(xWidth/3.1);
-        }
-    }
-    return 0;
-}
-+(float)calculateY: (int)idNum viewWidth:(float)yWidth {
-    for(int i = 1; i <= 3; i++){
-        if (idNum == i) {
-            return yWidth/18;
-        }
-    }
-    for(int i = 4; i <= 6; i++){
-        if (idNum == i) {
-            return yWidth/2.1;
-        }
-    }
-    for(int i = 7; i <= 9; i++){
-        if (idNum == i) {
-            return yWidth/4;
-        }
-    }
-    for(int i = 10; i <= 12; i++){
-        if (idNum == i) {
-            return yWidth/2;
-        }
-    }
-    return 0;
+
 }
 @end
