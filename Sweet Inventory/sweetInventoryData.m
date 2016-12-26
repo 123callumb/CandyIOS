@@ -45,4 +45,33 @@
     NSMutableDictionary *sweetData = [invAray objectAtIndex:slotID];
     return sweetData;
 }
++(void)removeObject: (int)slotID {
+    NSMutableArray *inv = [self getInventory];
+    NSUserDefaults *nd = [NSUserDefaults standardUserDefaults];
+    
+    if(inv == nil){
+        inv = [[NSMutableArray alloc] init];
+    }
+    
+    [inv removeObjectAtIndex:slotID];
+    NSData *arrayToData = [NSKeyedArchiver archivedDataWithRootObject:inv];
+    [nd setObject:arrayToData forKey:@"sweetInventory"];
+    [nd synchronize];
+
+}
++(int)rowAmount {
+    int rows = 0;
+    int highestSlotNo = (int)([[self getInventory] count]);
+   
+    for (int i = 0; i <= ([[self getInventory] count]); i++) {
+        if(highestSlotNo == 0 || highestSlotNo == 1 || highestSlotNo == 2 || highestSlotNo == 3){
+            return rows;
+        }else {
+            rows++;
+            highestSlotNo = highestSlotNo - 4;
+        }
+    }
+    
+    return 0;
+}
 @end

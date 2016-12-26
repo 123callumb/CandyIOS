@@ -8,6 +8,7 @@
 
 #import "sweetInventorySlot.h"
 #import "sweetInventoryData.h"
+#import "itemUI.h"
 
 @implementation sweetInventorySlot
 +(void)addSlots: (UIScrollView*)v {
@@ -39,13 +40,29 @@
     slotBg.frame = CGRectMake(0, 0, slot.frame.size.width, slot.frame.size.height);
     sweet.frame = CGRectMake(slot.frame.size.width/2 - sweetWidth/2, slot.frame.size.height/2 - sweetHeight/1.5, sweetWidth, sweetHeight);
     
+    sweet.tag = 4500 + slotNo;
     [sweet setImage:sweetTeture forState:UIControlStateNormal];
+    
+    SEL onPress = @selector(onSweetPress:);
+    
+    [sweet addTarget:self action:onPress forControlEvents:UIControlEventTouchUpInside];
     
     [slot addSubview:slotBg];
     [slot addSubview:sweet];
     
     [v addSubview:slot];
     
+}
+
++(void)onSweetPress: (id)sender {
+    UIButton *sweet = (UIButton*)sender;
+    UIView *ui = [sweet superview];
+    UIScrollView *v1 = (UIScrollView*)[ui superview];
+    UIView *v = [v1 superview];
+    
+    int slotNumber = (int) (sweet.tag - 4500);
+    [itemUI createNewItemUi:v slotId:slotNumber];
+
 }
 
 +(NSString*)getSlotBackgroundImage: (NSString*)t {
@@ -62,6 +79,7 @@
         return @"yellowSlotBgR";
     }else return @"greySlotBgR";
 }
+
 +(float)getSlotY: (int)slotNo slotHeight:(float)slotH {
     float ss = slotH/16;
     for(int i = 0; i <= slotNo; i = i + 4){

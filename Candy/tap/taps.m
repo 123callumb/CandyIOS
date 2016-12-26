@@ -46,12 +46,6 @@
     [sweetnessSlider moveSlider:(SKSpriteNode*)n location:p];
 }
 +(void)randomTapTests {
-    int lastItemInInv = ((int)[[sweetInventoryData getInventory] count] )-1;
-    NSMutableDictionary *sweetData = [sweetInventoryData getSweetDataAtSlot:lastItemInInv];
-    NSString *sweetName = [sweetData objectForKey:@"sweet_name"];
-    int invAmount = (int)[[sweetInventoryData getInventory] count];
-    NSLog(@"%@", sweetName);
-    NSLog(@"%d", invAmount);
-    [gems addGems:10];
+
 }
 @end

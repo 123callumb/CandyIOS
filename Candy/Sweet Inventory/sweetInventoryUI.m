@@ -35,4 +35,8 @@
     UIView *ui = (UIView*)[v viewWithTag:4000];
     [ui removeFromSuperview];
 }
++(void)refreshView: (UIView*)v {
+    [self hideSweetInventoryUI:v];
+    [self showSweetInventoryUI:v];
+}
 @end
