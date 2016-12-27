@@ -27,7 +27,7 @@
     
     UIView *slot = [[UIView alloc] initWithFrame:CGRectMake([self getSlotX:slotNo slotWidth:v.frame.size.width/3.8],
                                                             [self getSlotY:slotNo slotHeight:v.frame.size.width/3.68],
-                                                            v.frame.size.height/4.5, v.frame.size.height/4.5)];
+                                                            v.frame.size.height/4, v.frame.size.height/4)];
     
     UIButton *sweet = [UIButton buttonWithType:UIButtonTypeCustom];
     UIImage *slotBgImage = [UIImage imageNamed:slotBackgroundName];
@@ -38,7 +38,7 @@
     float sweetHeight = slot.frame.size.height/1.5;
     
     slotBg.frame = CGRectMake(0, 0, slot.frame.size.width, slot.frame.size.height);
-    sweet.frame = CGRectMake(slot.frame.size.width/2 - sweetWidth/2, slot.frame.size.height/2 - sweetHeight/1.5, sweetWidth, sweetHeight);
+    sweet.frame = CGRectMake(slot.frame.size.width/2 - sweetWidth/2, slot.frame.size.height/2 - sweetHeight/2, sweetWidth, sweetHeight);
     
     sweet.tag = 4500 + slotNo;
     [sweet setImage:sweetTeture forState:UIControlStateNormal];
@@ -67,21 +67,21 @@
 
 +(NSString*)getSlotBackgroundImage: (NSString*)t {
     if([t isEqualToString:@"Grey"]){
-        return @"greySlotBgR";
+        return @"greyBox";
     }
     if([t isEqualToString:@"Blue"]){
-        return @"blueSlotBgR";
+        return @"blueBox";
     }
     if([t isEqualToString:@"Red"]){
-        return @"redSlotBgR";
+        return @"redBox";
     }
     if([t isEqualToString:@"Yellow"]){
-        return @"yellowSlotBgR";
-    }else return @"greySlotBgR";
+        return @"yellowBox";
+    }else return @"greyBox";
 }
 
 +(float)getSlotY: (int)slotNo slotHeight:(float)slotH {
-    float ss = slotH/16;
+    float ss = 0;
     for(int i = 0; i <= slotNo; i = i + 4){
         if(slotNo == i){
             return 0 + ss;
