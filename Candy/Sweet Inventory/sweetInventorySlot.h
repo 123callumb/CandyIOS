@@ -10,4 +10,5 @@
 
 @interface sweetInventorySlot : UIView
 +(void)addSlots: (UIScrollView*)v;
++(NSString*)getSlotBackgroundImage: (NSString*)t;
 @end

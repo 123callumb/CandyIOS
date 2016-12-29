@@ -28,8 +28,6 @@
 
 UIScrollView* UIscrollUpdate = nil;
 UIImageView *img1 = nil;
-UIScrollView* sTUI = nil;
-UIScrollView* sFUI = nil;
 @implementation main
 
 -(void)didMoveToView:(SKView *)view {
@@ -39,16 +37,6 @@ UIScrollView* sFUI = nil;
     [mainUI drawUI:self];
     [levelDecider createLevel:self];
     
-    
-    //scrollview(inventory)
-    sTUI = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width/1.44, -self.view.frame.size.height/2.82)];
-    [sweetTypeUI addMethodsToView:sTUI scene:self.view];
-    [self.view addSubview:sTUI];
-    
-    sFUI = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width/1.44, -self.view.frame.size.height/2.82)];
-    [flavourPicker addFlavourPickerToView:sFUI scene:self.view];
-    [self.view addSubview:sFUI];
-    
     //scrollView(Update)
     UIscrollUpdate = [[UIScrollView alloc]initWithFrame:CGRectMake(self.view.frame.size.width / 19, self.view.frame.size.height / 4.2, 8.95*(self.view.frame.size.width /10), 2.38*(self.view.frame.size.height / 4))];
     [scrollUpdate initializeScroll:UIscrollUpdate uiView:self.view];
@@ -56,9 +44,7 @@ UIScrollView* sFUI = nil;
     for(int i = 0; i<= 8; i++){
         [AddItem CreateItem:@"nil" buttonTexture:@"upgradeButton" yPos:i*(UIscrollUpdate.frame.size.width/4) Scene:UIscrollUpdate ID:i];
     }
-    [sweetShopUI addUIView:self.view];
-    [sweetInventoryUI createUI:self.view];
-    
+    [sweetShopUI addUIView:self.view];    
     }
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
@@ -70,7 +56,7 @@ UIScrollView* sFUI = nil;
     }
     [upgradeMenu SwitchingMenu:self node:obj];
     [taps onPressed:self location:loc];
-    [buttonHandler registerButtons:obj currentScene:self];
+    [buttonHandler registerButtons:obj currentScene:self view:self.view];
     [registerBoxes registerBoxes:obj currentScene:self];
     [registerStatsButtons registerStatsButtons:self location:loc node:obj view:self.view];
     [upgradeMenu onTouch:obj scene:self];

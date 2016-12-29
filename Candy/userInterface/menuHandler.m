@@ -53,7 +53,7 @@ int currentMenu = 4;
         [storeButton runAction:slideToDaLeft];
     }];
 }
-+(void)closeMenu:(SKScene*)s {
++(void)closeMenu:(SKScene*)s view:(UIView*)v{
     if(currentMenu == 0){
         [inventoryMenu menuActions:s inScene:false];
         [self menuBringBacker:s];

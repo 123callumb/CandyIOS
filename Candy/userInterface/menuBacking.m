@@ -10,7 +10,7 @@
 
 @implementation menuBacking
 +(id)createBacking; {
-    SKSpriteNode *back = [SKSpriteNode spriteNodeWithImageNamed:@"shackInvBg"];
+    SKSpriteNode *back = [SKSpriteNode spriteNodeWithImageNamed:@"sweetSellingMenu"];
     back.xScale = 0.43;
     back.yScale = 0.43;
     back.anchorPoint = CGPointMake(0.5, 0.55);
