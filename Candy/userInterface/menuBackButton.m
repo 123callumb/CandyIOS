@@ -9,6 +9,7 @@
 #import "menuBackButton.h"
 #import "buttonAnimation.h"
 #import "menuHandler.h"
+#import "quickSelectUI.h"
 
 @implementation menuBackButton
 +(void)createButton:(SKScene*)s {
@@ -34,13 +35,13 @@
         [backButton removeFromParent];
     }];
    }
-+(void)onTouch: (SKNode*)n currentScene:(SKScene*)s {
++(void)onTouch: (SKNode*)n currentScene:(SKScene*)s view:(UIView*)v{
     [buttonAnimation changeState:n changeName:@"backButtonPressure" originalName:@"backButton"];
     SKAction *waitFam = [SKAction waitForDuration:0.15];
     [n runAction:waitFam completion:^{
         [self removeButton:s];
-        [menuHandler closeMenu:s];
-        
+        [menuHandler closeMenu:s view:v];
+        [quickSelectUI removeUI:v];
     }];
 }
 @end

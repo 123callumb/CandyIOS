@@ -11,6 +11,7 @@
 #import "inventoryMenu.h"
 #import "menuHandler.h"
 #import "slot.h"
+#import "quickSelectUI.h"
 
 @implementation inventoryButton
 bool isBusy = false;
@@ -26,7 +27,7 @@ bool isBusy = false;
     buttonInventory.name = @"buttonInventory";
     [s addChild:buttonInventory];
 }
-+(void)onTouch: (SKNode *)b cs:(SKScene *)s {
++(void)onTouch: (SKNode *)b cs:(SKScene *)s view:(UIView*)v{
     if([menuHandler getCurrentMenu] == 4){
     //Change Animation State:
     [buttonAnimation changeState:b changeName:@"pointlessButtonPressed" originalName:@"pointlessButton"];
@@ -41,10 +42,13 @@ bool isBusy = false;
         [self buttonReset:s];
         [inventoryMenu menuActions:s inScene:true];
         [menuHandler menuRemover:s];
-        SKSpriteNode *menuInv = (SKSpriteNode*)[s childNodeWithName:@"menuInventory"];
-        [slot refreshSlots:menuInv];
+
         //The Inventory has the id of 0
         [menuHandler setCurrentMenu:0];
+        
+        [s runAction:[SKAction waitForDuration:0.25] completion:^{
+                [quickSelectUI addUI:v];
+        }];
     }
     }
 }

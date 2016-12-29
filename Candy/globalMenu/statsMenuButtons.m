@@ -15,15 +15,15 @@
 
 +(void)addStatsButton: (SKSpriteNode*)s {
     SKSpriteNode *playerButton = [SKSpriteNode spriteNodeWithImageNamed:@"playerStatsIcon"];
-    playerButton.position = CGPointMake(s.frame.size.width/2, s.frame.size.height/20);
+    playerButton.position = CGPointMake(s.frame.size.width/2, s.frame.size.height/13);
     playerButton.name = @"statsMenuStatsButton";
     
     SKSpriteNode *sweetInventoryButton = [SKSpriteNode spriteNodeWithImageNamed:@"sweetMenuButton"];
-    sweetInventoryButton.position = CGPointMake(-s.frame.size.width/2, s.frame.size.height/20);
+    sweetInventoryButton.position = CGPointMake(-s.frame.size.width/2, s.frame.size.height/13);
     sweetInventoryButton.name = @"sweetInvButton";
 
     SKSpriteNode *mapButton = [SKSpriteNode spriteNodeWithImageNamed:@"mapButton"];
-    mapButton.position = CGPointMake(0, -s.frame.size.height/1.6);
+    mapButton.position = CGPointMake(0, -s.frame.size.height/1.8);
     mapButton.name = @"statsMenuMapButton";
     
     SKSpriteNode *coinPackButton = [SKSpriteNode spriteNodeWithImageNamed:@"coinPackButton"];
