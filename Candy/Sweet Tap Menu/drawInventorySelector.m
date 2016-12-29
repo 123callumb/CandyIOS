@@ -10,6 +10,7 @@
 #import "sweetInventoryData.h"
 #import "sweetInventorySlot.h"
 #import "sweetDrawData.h"
+#import "sweetDrawUI.h"
 
 @implementation drawInventorySelector
 
@@ -86,6 +87,10 @@
 }
 +(void)onSweetInvPress: (id)sender {
     UIButton *sweetSelected = (UIButton*)sender;
+    UIView *slot = [sweetSelected superview];
+    UIScrollView *sv = (UIScrollView*)[slot superview];
+    UIView *v = [sv superview];
+    UIView *v1 = [v superview];
     
     int invSlotNo = (int) (sweetSelected.tag) - 12000;
     NSLog(@"%d", invSlotNo);
@@ -96,7 +101,9 @@
     NSString *tex = [addedobj objectForKey:@"sweet_texture"];
     NSLog(@"slot %d was set to texture %@", [sweetDrawData getDrawSelected], tex);
     
-    
+    [sweetDrawUI refresh:v1];
+    [v removeFromSuperview];
+
 }
 
 @end

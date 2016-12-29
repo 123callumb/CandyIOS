@@ -8,6 +8,7 @@
 
 #import "sweetDrawUI.h"
 #import "drawSlotSelectorUI.h"
+#import "quickSelectUI.h"
 
 @implementation sweetDrawUI
 
@@ -53,7 +54,13 @@
 +(void)onBackPress: (id)sender {
     UIButton *backButton = (UIButton*)sender;
     UIView *v = [backButton superview];
+    UIView *v1 = [v superview];
     
+    [quickSelectUI refresh:v1];
     [self removeMenu:v];
+}
++(void)refresh: (UIView*)v {
+    [self removeMenu:v];
+    [self createMenu:v];
 }
 @end

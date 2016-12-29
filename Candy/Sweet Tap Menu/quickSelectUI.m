@@ -29,4 +29,8 @@
     UIScrollView *main = (UIScrollView*)[v viewWithTag:9000];
     [main removeFromSuperview];
 }
++(void)refresh: (UIView*)v {
+    [self removeUI:v];
+    [self addUI:v];
+}
 @end
