@@ -12,6 +12,8 @@
 #import "upgradeMenu.h"
 #import "coinButton.h"
 #import "packetMenu.h"
+#import "sweetDrawUI.h"
+#import "sweetInvSelectUI.h"
 
 @implementation menuHandler
 //The slide up thingy!
@@ -57,6 +59,8 @@ int currentMenu = 4;
     if(currentMenu == 0){
         [inventoryMenu menuActions:s inScene:false];
         [self menuBringBacker:s];
+        [sweetDrawUI removeMenu:v];
+        [sweetInvSelectUI removeMenu:v];
         currentMenu = 4;
     }else if(currentMenu == 1){
         

@@ -42,9 +42,13 @@ bool isBusy = false;
         [self buttonReset:s];
         [inventoryMenu menuActions:s inScene:true];
         [menuHandler menuRemover:s];
-        [quickSelectUI addUI:v];
+
         //The Inventory has the id of 0
         [menuHandler setCurrentMenu:0];
+        
+        [s runAction:[SKAction waitForDuration:0.25] completion:^{
+                [quickSelectUI addUI:v];
+        }];
     }
     }
 }

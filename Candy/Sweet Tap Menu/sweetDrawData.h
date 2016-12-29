@@ -9,7 +9,11 @@
 #import <Foundation/Foundation.h>
 
 @interface sweetDrawData : NSObject
-+(void)addObject: (NSMutableDictionary*)sweetData;
++(void)editObject: (int)drawSlot invSlot:(int)invSlotID;
 +(NSString*)getTextureAtSlot: (int)slotNo;
++(NSMutableDictionary*)getSweetDataAtSlot: (int)slotID;
 +(int)getDrawsUnlocked;
++(int)getDrawSelected;
++(void)setDrawSelected: (int)amount;
++(void)setDrawsUnlocked: (int)amount;
 @end

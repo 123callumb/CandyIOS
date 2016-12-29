@@ -12,6 +12,7 @@
 #import "money.h"
 #import "inventory.h"
 #import "box1.h"
+#import "sweetDrawData.h"
 
 @implementation determineSweetTap
 
@@ -22,9 +23,9 @@
     p = CGPointMake(-40, -80);
     float scale = 0.3;
     
-        for(int i = 1; i <= [box1 getSlotsUnlocked]; i++){
+        for(int i = 1; i <= [sweetDrawData getDrawsUnlocked]; i++){
             if([self getInventoryUnlocked] >= i){
-                SKSpriteNode *sweet1 = [defaultSweet addSweet:s pos:p slotID:i];
+                SKSpriteNode *sweet1 = [self createSweetSprite:s pos:p slotNo:i];
                 [nodeToParticle particleFlyAnimation:sweet1 scene:s scaleNo:scale];
                 [money addBalance:[inventory slotCalculation:i]];
             }
@@ -50,6 +51,13 @@
     }
 }
 +(int)getInventoryUnlocked {
-    return (int)[box1 getSlotsUnlocked];
+    return (int)[sweetDrawData getDrawsUnlocked];
+}
++(id)createSweetSprite: (SKScene*)s pos:(CGPoint)p slotNo:(int)slotID {
+    NSString *sweetTextureName = [sweetDrawData getTextureAtSlot:slotID];
+    SKSpriteNode *sweet = [SKSpriteNode spriteNodeWithImageNamed:sweetTextureName];
+    sweet.position = p;
+
+    return sweet;
 }
 @end

@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface sweetInvSelectUI : UIView
-
++(void)createMenu: (UIView*)v;
++(void)removeMenu: (UIView*)v;
 @end

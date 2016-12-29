@@ -9,7 +9,7 @@
 //
 
 #import "upgrade_slotsUnlocked.h"
-#import "box1.h"
+#import "sweetDrawData.h"
 
 @implementation upgrade_slotsUnlocked
 
@@ -18,7 +18,7 @@
     txt.text = @"Slots Unlocked";
 }
 +(void)whenPressed:(long)upgradePro{
-    if(upgradePro < 5)[box1 setUnlockedSlots:(int)(upgradePro+1)];
+    if(upgradePro < 5)[sweetDrawData setDrawsUnlocked:(int)(upgradePro)];
 }
 
 @end

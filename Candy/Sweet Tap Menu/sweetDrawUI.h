@@ -10,4 +10,5 @@
 
 @interface sweetDrawUI : UIView
 +(void)createMenu: (UIView*)v;
++(void)removeMenu: (UIView*)v;
 @end

@@ -8,7 +8,7 @@
 
 #import "drawSlotSelectorUI.h"
 #import "sweetDrawData.h"
-#import "drawInventorySelector.h"
+#import "sweetInvSelectUI.h"
 
 @implementation drawSlotSelectorUI
 
@@ -18,9 +18,9 @@
     
     UIScrollView *drawSlotsUi = [[UIScrollView alloc] initWithFrame:CGRectMake(v.frame.size.width/2 - uiWidth/2, v.frame.size.height/5.4, uiWidth, uiHeight)];
     drawSlotsUi.backgroundColor = [UIColor clearColor];
-    drawSlotsUi.contentSize = CGSizeMake(drawSlotsUi.frame.size.width, drawSlotsUi.frame.size.height*2);
+    drawSlotsUi.contentSize = CGSizeMake(drawSlotsUi.frame.size.width, (uiWidth/1.6 * [sweetDrawData getDrawsUnlocked]/2));
     
-    for(int i = 0; i <= [sweetDrawData getDrawsUnlocked] + 5; i++){
+    for(int i = 0; i <= [sweetDrawData getDrawsUnlocked]; i++){
         [self createSlot:drawSlotsUi slotNo:i];
     }
     
@@ -41,7 +41,10 @@
     UIButton *sweetButton = [UIButton buttonWithType:UIButtonTypeCustom];
     
     [sweetButton setImage:sweetTexture forState:UIControlStateNormal];
-    [sweetButton setFrame:CGRectMake(0, -padding, mainSlot.frame.size.width, mainSlot.frame.size.height)];
+    
+    float sweetSizeSquared = mainSlot.frame.size.width/1.6;
+    
+    [sweetButton setFrame:CGRectMake(mainSlot.frame.size.width/2 - sweetSizeSquared/2,mainSlot.frame.size.height/2 - sweetSizeSquared/2.2 -padding, sweetSizeSquared, sweetSizeSquared)];
     
     sweetButton.tag = 11000 + drawNumber;
     
@@ -64,12 +67,12 @@
     
     int rowNo = 0;
     
-    for(int i = 1; i <= [sweetDrawData getDrawsUnlocked] + 5; i = i + 2){
+    for(int i = 1; i <= [sweetDrawData getDrawsUnlocked]; i = i + 2){
         if (drawID == i) {
             xPos = (slotSquared*2.2) - slotSquared;
         }
     }
-    for(int i = 0; i <= [sweetDrawData getDrawsUnlocked] + 5; i = i + 2){
+    for(int i = 0; i <= [sweetDrawData getDrawsUnlocked]; i = i + 2){
         if(drawID == i || drawID == i + 1){
             yPos = ((slotSquared + padding) * rowNo) + padding;
         }else {
@@ -83,7 +86,12 @@
     UIView *v1 = [slot superview];
     UIScrollView *sv = (UIScrollView*)[v1 superview];
     UIView *v = [sv superview];
+    UIView *v0 = [v superview];
+   
+    int selectedDraw = (int) (slot.tag) - 11000;
     
-    [drawInventorySelector createInvSelectionUI:v];
+    [sweetDrawData setDrawSelected:selectedDraw];
+    
+    [sweetInvSelectUI createMenu:v0];
 }
 @end

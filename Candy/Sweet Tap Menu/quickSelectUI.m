@@ -8,6 +8,7 @@
 
 #import "quickSelectUI.h"
 #import "sweetDrawSlots.h"
+#import "sweetDrawData.h"
 
 @implementation quickSelectUI
 
@@ -16,7 +17,7 @@
     float uiHeight = v.frame.size.height/5.05;
     
     UIScrollView *main = [[UIScrollView alloc] initWithFrame:CGRectMake(v.frame.size.width/2 - uiWidth/2, v.frame.size.height/1.77, uiWidth, uiHeight)];
-    main.contentSize = CGSizeMake(uiWidth*2, main.frame.size.height);
+    main.contentSize = CGSizeMake(uiWidth/2.2 * ([sweetDrawData getDrawsUnlocked] + 1) + uiWidth/30 , main.frame.size.height);
     main.backgroundColor = [UIColor clearColor];
     main.tag = 9000;
     

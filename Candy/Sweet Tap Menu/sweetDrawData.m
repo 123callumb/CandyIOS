@@ -7,8 +7,12 @@
 //
 
 #import "sweetDrawData.h"
+#import "sweetInventoryData.h"
 
 @implementation sweetDrawData
+
+int drawSelected = 0;
+
 +(int)getDrawsUnlocked {
     NSUserDefaults *nd = [NSUserDefaults standardUserDefaults];
     int drawsUnlocked = (int)[nd integerForKey:@"drawsUnlocked"];
@@ -33,15 +37,25 @@
     return drawArray;
     
 }
-+(void)addObject: (NSMutableDictionary*)sweetData {
++(void)editObject: (int)drawSlot invSlot:(int)invSlotID {
+    
     NSUserDefaults *nd = [NSUserDefaults standardUserDefaults];
     NSMutableArray *draw = [self getDraw];
     
     if(draw == nil){
         draw = [[NSMutableArray alloc] init];
+        
+        int blankInt = 1337;
+        NSNumber *blank = [NSNumber numberWithInteger:blankInt];
+        
+        for(int i = 0; i <= 200; i++){
+            [draw addObject:blank];
+        }
     }
-    
-    [draw addObject:sweetData];
+
+    NSNumber *newSlot = [NSNumber numberWithInteger:invSlotID];
+
+    [draw replaceObjectAtIndex:drawSlot withObject:newSlot];
     
     NSData *arrayToData = [NSKeyedArchiver archivedDataWithRootObject:draw];
     
@@ -51,7 +65,14 @@
 }
 +(NSMutableDictionary*)getSweetDataAtSlot: (int)slotID {
     NSMutableArray *invAray = [self getDraw];
-    NSMutableDictionary *sweetData = [invAray objectAtIndex:slotID];
+    NSNumber *slotData = [invAray objectAtIndex:slotID];
+    int slotNo = (int)[slotData integerValue];
+    NSMutableDictionary *sweetData;
+    if(slotNo == 1337 || slotNo > [[sweetInventoryData getInventory] count] - 1){
+        [sweetData setObject:@"emptyDraw" forKey:@"sweet_texture"];
+    }else{
+        sweetData = [sweetInventoryData getSweetDataAtSlot:slotNo];
+    }
     return sweetData;
 }
 +(void)removeObject: (int)slotID {
@@ -69,8 +90,8 @@
     
 }
 +(NSString*)getTextureAtSlot: (int)slotNo {
-    NSMutableArray *draw = [self getDraw];
-    NSMutableDictionary *drawData = [draw objectAtIndex:slotNo];
+
+    NSMutableDictionary *drawData = [self getSweetDataAtSlot:slotNo];
     NSString *textureName = [drawData objectForKey:@"sweet_texture"];
     
     if(textureName == nil){
@@ -78,5 +99,11 @@
     }else {
         return textureName;
     }
+}
++(int)getDrawSelected {
+    return drawSelected;
+}
++(void)setDrawSelected: (int)amount {
+    drawSelected = amount;
 }
 @end

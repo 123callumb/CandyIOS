@@ -31,8 +31,10 @@
     UIButton *sweetButton = [UIButton buttonWithType:UIButtonTypeCustom];
     
     [sweetButton setImage:sweetTexture forState:UIControlStateNormal];
-    [sweetButton setFrame:CGRectMake(0, 0, mainSlot.frame.size.width, mainSlot.frame.size.height)];
+   
+    float sweetSizeSquared = mainSlot.frame.size.width/1.6;
     
+    [sweetButton setFrame:CGRectMake(mainSlot.frame.size.width/2 - sweetSizeSquared/2,mainSlot.frame.size.height/2 - sweetSizeSquared/2.2 -padding, sweetSizeSquared, sweetSizeSquared)];
     SEL onPress = @selector(onDrawPress:);
     
     [sweetButton addTarget:self action:onPress forControlEvents:UIControlEventTouchUpInside];
@@ -66,4 +68,5 @@
 
     [sweetDrawUI createMenu:v];
 }
+
 @end

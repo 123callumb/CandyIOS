@@ -9,6 +9,7 @@
 #import "drawInventorySelector.h"
 #import "sweetInventoryData.h"
 #import "sweetInventorySlot.h"
+#import "sweetDrawData.h"
 
 @implementation drawInventorySelector
 
@@ -16,15 +17,19 @@
     float uiWidth = v.frame.size.width/1.5;
     float uiHeight = v.frame.size.height/1.74;
     
-    UIScrollView *drawInvUi = [[UIScrollView alloc] initWithFrame:CGRectMake(v.frame.size.width/2 - uiWidth/2, v.frame.size.height/5.4, uiWidth, uiHeight)];
-    drawInvUi.backgroundColor = [UIColor clearColor];
-    drawInvUi.contentSize = CGSizeMake(drawInvUi.frame.size.width, drawInvUi.frame.size.height*2);
+    UIScrollView *drawSlotsUi = [[UIScrollView alloc] initWithFrame:CGRectMake(v.frame.size.width/2 - uiWidth/2, v.frame.size.height/5.4, uiWidth, uiHeight)];
+    drawSlotsUi.backgroundColor = [UIColor clearColor];
+
     
-    for(int i = 0; i <= [[sweetInventoryData getInventory] count] - 1; i++){
-        [self createSlot:drawInvUi slotNo:i];
+    if([[sweetInventoryData getInventory] count] >= 1){
+        drawSlotsUi.contentSize = CGSizeMake(drawSlotsUi.frame.size.width, (drawSlotsUi.frame.size.width/2)*(([[sweetInventoryData getInventory] count]+1)/2));
+        for(int i = 0; i <= [[sweetInventoryData getInventory] count] - 1; i++){
+            [self createSlot:drawSlotsUi slotNo:i];
+        }
     }
     
-    [v addSubview:drawInvUi];
+    [drawSlotsUi setUserInteractionEnabled:true];
+    [v addSubview:drawSlotsUi];
 }
 +(void)createSlot: (UIView*)v slotNo:(int)slotID {
     NSMutableDictionary *slotData = [sweetInventoryData getSweetDataAtSlot:slotID];
@@ -80,6 +85,17 @@
     return CGRectMake(xPos, yPos, slotSquared, slotSquared);
 }
 +(void)onSweetInvPress: (id)sender {
+    UIButton *sweetSelected = (UIButton*)sender;
+    
+    int invSlotNo = (int) (sweetSelected.tag) - 12000;
+    NSLog(@"%d", invSlotNo);
+   
+   [sweetDrawData editObject:[sweetDrawData getDrawSelected] invSlot:invSlotNo];
+    
+    NSMutableDictionary *addedobj = [sweetDrawData getSweetDataAtSlot:[sweetDrawData getDrawSelected]];
+    NSString *tex = [addedobj objectForKey:@"sweet_texture"];
+    NSLog(@"slot %d was set to texture %@", [sweetDrawData getDrawSelected], tex);
+    
     
 }
 
