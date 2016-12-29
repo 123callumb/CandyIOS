@@ -11,4 +11,5 @@
 @interface quickSelectUI : UIView
 +(void)addUI: (UIView*)v;
 +(void)removeUI: (UIView*)v;
++(void)refresh: (UIView*)v;
 @end
