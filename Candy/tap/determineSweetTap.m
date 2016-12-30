@@ -13,6 +13,7 @@
 #import "inventory.h"
 #import "box1.h"
 #import "sweetDrawData.h"
+#import "sweetValueCalculation.h"
 
 @implementation determineSweetTap
 
@@ -27,7 +28,7 @@
             if([self getInventoryUnlocked] >= i){
                 SKSpriteNode *sweet1 = [self createSweetSprite:s pos:p slotNo:i];
                 [nodeToParticle particleFlyAnimation:sweet1 scene:s scaleNo:scale];
-                [money addBalance:[inventory slotCalculation:i]];
+                [money addBalance:[sweetValueCalculation calculateSkValue:sweet1]];
             }
         }
     }
@@ -44,7 +45,7 @@
     }
     if([self getInventoryUnlocked] == 4){
         return 0.3;
-    }if([self getInventoryUnlocked] == 4){
+    }if([self getInventoryUnlocked] == 5){
         return 0.3;
     }else {
         return 0.005;

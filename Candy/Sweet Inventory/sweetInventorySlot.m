@@ -9,6 +9,7 @@
 #import "sweetInventorySlot.h"
 #import "sweetInventoryData.h"
 #import "itemUI.h"
+#import "sweetValueCalculation.h"
 
 @implementation sweetInventorySlot
 +(void)addSlots: (UIScrollView*)v {
@@ -33,15 +34,26 @@
     UIImage *slotBgImage = [UIImage imageNamed:slotBackgroundName];
     UIImageView *slotBg = [[UIImageView alloc] initWithImage:slotBgImage];
     UIImage *sweetTeture = [UIImage imageNamed:textureName];
+    UIImage *ptTeture = [UIImage imageNamed:@"ptLabel"];
+    UIImageView *ptBg = [[UIImageView alloc] initWithImage:ptTeture];
+
     
     float sweetWidth = slot.frame.size.width/1.5;
     float sweetHeight = slot.frame.size.height/1.5;
     
     slotBg.frame = CGRectMake(0, 0, slot.frame.size.width, slot.frame.size.height);
-    sweet.frame = CGRectMake(slot.frame.size.width/2 - sweetWidth/2, slot.frame.size.height/2 - sweetHeight/2, sweetWidth, sweetHeight);
+    ptBg.frame = CGRectMake(0, 0, slot.frame.size.width, slot.frame.size.height);
+    sweet.frame = CGRectMake(slot.frame.size.width/2 - sweetWidth/2, slot.frame.size.height/2 - sweetHeight/1.4, sweetWidth, sweetHeight);
     
+    UILabel *perTapValue = [[UILabel alloc] initWithFrame:CGRectMake(0, slot.frame.size.height/4.5, slot.frame.size.width, ptBg.frame.size
+                                                                     .height)];
     sweet.tag = 4500 + slotNo;
     [sweet setImage:sweetTeture forState:UIControlStateNormal];
+    
+    [perTapValue setFont:[UIFont fontWithName:@"Coder's-Crux" size:20]];
+    [perTapValue setText:[NSString stringWithFormat:@"%dPT", [sweetValueCalculation calculateTextureValue:textureName]]];
+    [perTapValue setTextColor:[UIColor blackColor]];
+    [perTapValue setTextAlignment:NSTextAlignmentCenter];
     
     SEL onPress = @selector(onSweetPress:);
     
@@ -49,6 +61,8 @@
     
     [slot addSubview:slotBg];
     [slot addSubview:sweet];
+    [ptBg addSubview:perTapValue];
+    [slot addSubview:ptBg];
     
     [v addSubview:slot];
     
