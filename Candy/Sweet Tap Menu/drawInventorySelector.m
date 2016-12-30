@@ -65,9 +65,6 @@
     [slot addSubview:slotBg];
     [slot addSubview:sweet];
     
-   
-
-    
     if([[sweetDrawData getDraw] containsObject:slotNo]){
         UIImage *inUseImage = [UIImage imageNamed:@"boxInUse"];
         UIImageView *inUseSlot = [[UIImageView alloc] initWithImage:inUseImage];
