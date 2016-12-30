@@ -45,6 +45,8 @@
     UIImageView *slotBg = [[UIImageView alloc] initWithImage:slotBgImage];
     UIImage *sweetTeture = [UIImage imageNamed:textureName];
     
+    NSNumber *slotNo = [NSNumber numberWithInteger:slotID];
+    
     float sweetWidth = slot.frame.size.width/1.5;
     float sweetHeight = slot.frame.size.height/1.5;
     
@@ -54,12 +56,28 @@
     sweet.tag = 12000 + slotID;
     [sweet setImage:sweetTeture forState:UIControlStateNormal];
     
+    if(![[sweetDrawData getDraw] containsObject:slotNo]){
     SEL onPress = @selector(onSweetInvPress:);
     
     [sweet addTarget:self action:onPress forControlEvents:UIControlEventTouchUpInside];
+    }
     
     [slot addSubview:slotBg];
     [slot addSubview:sweet];
+    
+   
+
+    
+    if([[sweetDrawData getDraw] containsObject:slotNo]){
+        UIImage *inUseImage = [UIImage imageNamed:@"boxInUse"];
+        UIImageView *inUseSlot = [[UIImageView alloc] initWithImage:inUseImage];
+        
+        inUseSlot.frame = CGRectMake(0, 0, slot.frame.size.width, slot.frame.size.height);
+        
+        [slot addSubview:inUseSlot];
+    }
+    
+
     
     [v addSubview:slot];
     
