@@ -14,8 +14,10 @@
 
 
 +(void)main: (SKScene *)scene; {
-    SKSpriteNode *splash = [SKSpriteNode spriteNodeWithImageNamed:@"splashNew"];
+    SKSpriteNode *splash = [SKSpriteNode spriteNodeWithImageNamed:@"HDSplash"];
     splash.anchorPoint = CGPointMake(0.5, 0.5);
+    splash.xScale = 0.9;
+    splash.yScale= 0.9;
     [scene addChild:splash];
     NSLog(@"test2");
 }
