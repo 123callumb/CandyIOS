@@ -23,6 +23,12 @@
 +(void)addUpgradeBuildingButton: (SKSpriteNode*)s {
     SKSpriteNode *buildingUpgButton = [SKSpriteNode spriteNodeWithImageNamed:@"buildingButton"];
     buildingUpgButton.position = CGPointMake(0, s.frame.size.height/1.47);
+    SKLabelNode *placeTitle = [SKLabelNode labelNodeWithFontNamed:@"Coder's-Crux"];
+    placeTitle.text = @"Old House";
+    placeTitle.fontSize = 200.0f;
+    placeTitle.fontColor = [SKColor blackColor];
+    placeTitle.position = CGPointMake(-buildingUpgButton.frame.size.width/16, -buildingUpgButton.frame.size.height/8);
+    [buildingUpgButton addChild:placeTitle];
     [s addChild:buildingUpgButton];
 }
 @end
