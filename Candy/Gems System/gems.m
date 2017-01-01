@@ -48,13 +48,13 @@
 }
 +(void)addMiniGems: (int)amount {
     NSUserDefaults *nd = [NSUserDefaults standardUserDefaults];
-    [nd setInteger:([self getGems]+amount) forKey:@"miniGemValue"];
+    [nd setInteger:([self getMiniGems]+amount) forKey:@"miniGemValue"];
 }
 +(void)removeMiniGems: (int)amount {
     NSUserDefaults *nd = [NSUserDefaults standardUserDefaults];
-    [nd setInteger:([self getGems]-amount) forKey:@"miniGemValue"];
+    [nd setInteger:([self getMiniGems]-amount) forKey:@"miniGemValue"];
 }
 +(NSString*)getMiniGemsAsString {
-    return [NSString stringWithFormat:@"%d", [self getGems]];
+    return [NSString stringWithFormat:@"%d", [self getMiniGems]];
 }
 @end

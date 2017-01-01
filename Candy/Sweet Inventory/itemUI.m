@@ -9,6 +9,7 @@
 #import "itemUI.h"
 #import "sweetInventoryData.h"
 #import "confirmSale.h"
+#import "confirmGemSale.h"
 
 @implementation itemUI
 
@@ -127,7 +128,10 @@
     [confirmSale confirmPacketPurchase:v tagNumber:slotID];
 }
 +(void)sellForGems: (id)sender {
-    
+    UIButton *sweet = (UIButton*)sender;
+    UIView *v = [sweet superview];
+    int slotID = (int)(sweet.tag - 8500);
+    [confirmGemSale confirmGemSale:v tagNumber:slotID];
 }
 +(int)getCoinSelllingPrice: (NSString*)slotColor {
     if([slotColor isEqualToString:@"Grey"]){

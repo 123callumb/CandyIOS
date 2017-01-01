@@ -52,6 +52,7 @@
 		7525F7C71DD287A400B0510C /* pixel.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7525F7B21DD232E600B0510C /* pixel.ttf */; };
 		7525F7CC1DD2931900B0510C /* coders_crux.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7525F7CB1DD2931900B0510C /* coders_crux.ttf */; };
 		75270FCB1DE50B8600E7588F /* flavourPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 75270FCA1DE50B8600E7588F /* flavourPicker.m */; };
+		753060CF1E19B99C004D7757 /* confirmGemSale.m in Sources */ = {isa = PBXBuildFile; fileRef = 753060CE1E19B99C004D7757 /* confirmGemSale.m */; };
 		753D56C81E06E50B00A6CBF8 /* packetContentManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 753D56C71E06E50B00A6CBF8 /* packetContentManager.m */; };
 		753D56CB1E06FD7600A6CBF8 /* lollyPacket.m in Sources */ = {isa = PBXBuildFile; fileRef = 753D56CA1E06FD7600A6CBF8 /* lollyPacket.m */; };
 		753D56CE1E06FF2800A6CBF8 /* wrappedPacket.m in Sources */ = {isa = PBXBuildFile; fileRef = 753D56CD1E06FF2800A6CBF8 /* wrappedPacket.m */; };
@@ -131,6 +132,9 @@
 		75E8F1981DD7969500A421E7 /* statsMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E8F1971DD7969500A421E7 /* statsMenu.m */; };
 		75E8F19B1DD8F6E500A421E7 /* menuBackButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E8F19A1DD8F6E500A421E7 /* menuBackButton.m */; };
 		75E8F4F21E0B2EAB00018296 /* sweetInventorySlot.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E8F4F11E0B2EAB00018296 /* sweetInventorySlot.m */; };
+		75ED3B581E1960360012BA98 /* gemGemeratorGui.m in Sources */ = {isa = PBXBuildFile; fileRef = 75ED3B571E1960360012BA98 /* gemGemeratorGui.m */; };
+		75ED3B5B1E19647F0012BA98 /* gemInteractionUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 75ED3B5A1E19647F0012BA98 /* gemInteractionUI.m */; };
+		75ED3B5E1E19897D0012BA98 /* gemPotData.m in Sources */ = {isa = PBXBuildFile; fileRef = 75ED3B5D1E19897D0012BA98 /* gemPotData.m */; };
 		75FCC5E41E08E6380051CBA1 /* sweetInventoryData.m in Sources */ = {isa = PBXBuildFile; fileRef = 75FCC5E31E08E6380051CBA1 /* sweetInventoryData.m */; };
 		75FCC5E71E0975FD0051CBA1 /* inventoryDataHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 75FCC5E61E0975FD0051CBA1 /* inventoryDataHandler.m */; };
 		75FCC5EA1E09769B0051CBA1 /* inventorySweetData.m in Sources */ = {isa = PBXBuildFile; fileRef = 75FCC5E91E09769B0051CBA1 /* inventorySweetData.m */; };
@@ -238,6 +242,8 @@
 		7525F7CB1DD2931900B0510C /* coders_crux.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = coders_crux.ttf; path = Candy/fonts/coders_crux.ttf; sourceTree = "<group>"; };
 		75270FC91DE50B8600E7588F /* flavourPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = flavourPicker.h; path = Candy/inventory/flavourPicker.h; sourceTree = "<group>"; };
 		75270FCA1DE50B8600E7588F /* flavourPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = flavourPicker.m; path = Candy/inventory/flavourPicker.m; sourceTree = "<group>"; };
+		753060CD1E19B99C004D7757 /* confirmGemSale.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = confirmGemSale.h; path = "Candy/Sweet Inventory/confirmGemSale.h"; sourceTree = "<group>"; };
+		753060CE1E19B99C004D7757 /* confirmGemSale.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = confirmGemSale.m; path = "Candy/Sweet Inventory/confirmGemSale.m"; sourceTree = "<group>"; };
 		753D56C61E06E50B00A6CBF8 /* packetContentManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = packetContentManager.h; path = Candy/Packets/packetContentManager.h; sourceTree = "<group>"; };
 		753D56C71E06E50B00A6CBF8 /* packetContentManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = packetContentManager.m; path = Candy/Packets/packetContentManager.m; sourceTree = "<group>"; };
 		753D56C91E06FD7600A6CBF8 /* lollyPacket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = lollyPacket.h; path = Candy/Packets/lollyPacket.h; sourceTree = "<group>"; };
@@ -393,6 +399,12 @@
 		75E8F19A1DD8F6E500A421E7 /* menuBackButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = menuBackButton.m; path = Candy/userInterface/menuBackButton.m; sourceTree = "<group>"; };
 		75E8F4F01E0B2EAB00018296 /* sweetInventorySlot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = sweetInventorySlot.h; path = "Candy/Sweet Inventory/sweetInventorySlot.h"; sourceTree = "<group>"; };
 		75E8F4F11E0B2EAB00018296 /* sweetInventorySlot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = sweetInventorySlot.m; path = "Candy/Sweet Inventory/sweetInventorySlot.m"; sourceTree = "<group>"; };
+		75ED3B561E1960360012BA98 /* gemGemeratorGui.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = gemGemeratorGui.h; path = Candy/globalMenu/gemMenu/gemGemeratorGui.h; sourceTree = "<group>"; };
+		75ED3B571E1960360012BA98 /* gemGemeratorGui.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = gemGemeratorGui.m; path = Candy/globalMenu/gemMenu/gemGemeratorGui.m; sourceTree = "<group>"; };
+		75ED3B591E19647F0012BA98 /* gemInteractionUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = gemInteractionUI.h; path = Candy/globalMenu/gemMenu/gemInteractionUI.h; sourceTree = "<group>"; };
+		75ED3B5A1E19647F0012BA98 /* gemInteractionUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = gemInteractionUI.m; path = Candy/globalMenu/gemMenu/gemInteractionUI.m; sourceTree = "<group>"; };
+		75ED3B5C1E19897D0012BA98 /* gemPotData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = gemPotData.h; path = Candy/globalMenu/gemMenu/gemPotData.h; sourceTree = "<group>"; };
+		75ED3B5D1E19897D0012BA98 /* gemPotData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = gemPotData.m; path = Candy/globalMenu/gemMenu/gemPotData.m; sourceTree = "<group>"; };
 		75FCC5E21E08E6380051CBA1 /* sweetInventoryData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = sweetInventoryData.h; path = "Sweet Inventory/sweetInventoryData.h"; sourceTree = "<group>"; };
 		75FCC5E31E08E6380051CBA1 /* sweetInventoryData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = sweetInventoryData.m; path = "Sweet Inventory/sweetInventoryData.m"; sourceTree = "<group>"; };
 		75FCC5E51E0975FD0051CBA1 /* inventoryDataHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = inventoryDataHandler.h; path = "Candy/Sweet Inventory/inventoryDataHandler.h"; sourceTree = "<group>"; };
@@ -496,6 +508,7 @@
 		750F3A951DEC8160002AFB78 /* globalMenu */ = {
 			isa = PBXGroup;
 			children = (
+				75ED3B551E195FFC0012BA98 /* gemMenu */,
 				759E71C51DF09FF400B7275A /* mapMenu */,
 				750F3A961DEC8169002AFB78 /* statsMenu */,
 				750F3A971DEC81A4002AFB78 /* statsMenuButtons.h */,
@@ -956,6 +969,19 @@
 			name = particleSystem;
 			sourceTree = "<group>";
 		};
+		75ED3B551E195FFC0012BA98 /* gemMenu */ = {
+			isa = PBXGroup;
+			children = (
+				75ED3B561E1960360012BA98 /* gemGemeratorGui.h */,
+				75ED3B571E1960360012BA98 /* gemGemeratorGui.m */,
+				75ED3B591E19647F0012BA98 /* gemInteractionUI.h */,
+				75ED3B5A1E19647F0012BA98 /* gemInteractionUI.m */,
+				75ED3B5C1E19897D0012BA98 /* gemPotData.h */,
+				75ED3B5D1E19897D0012BA98 /* gemPotData.m */,
+			);
+			name = gemMenu;
+			sourceTree = "<group>";
+		};
 		75FCC5E11E08E5F30051CBA1 /* Sweet Inventory */ = {
 			isa = PBXGroup;
 			children = (
@@ -977,6 +1003,8 @@
 				752002441E11B2FB00C2AC11 /* itemUI.m */,
 				752002461E11D47B00C2AC11 /* confirmSale.h */,
 				752002471E11D47B00C2AC11 /* confirmSale.m */,
+				753060CD1E19B99C004D7757 /* confirmGemSale.h */,
+				753060CE1E19B99C004D7757 /* confirmGemSale.m */,
 			);
 			name = "Sweet Inventory";
 			sourceTree = "<group>";
@@ -1162,6 +1190,7 @@
 				61E183921DEE14140034C021 /* background.m in Sources */,
 				7571FB6A1DFB509B006E1E49 /* packetUIButtons.m in Sources */,
 				756AEB021E0890C7002CFA70 /* uiGemLabel.m in Sources */,
+				75ED3B581E1960360012BA98 /* gemGemeratorGui.m in Sources */,
 				75E8F4F21E0B2EAB00018296 /* sweetInventorySlot.m in Sources */,
 				7571FB771DFB77D2006E1E49 /* sweetScrollUI.m in Sources */,
 				755ACB3C1DF0C9C5000DD9CB /* mapGui.m in Sources */,
@@ -1214,6 +1243,7 @@
 				7565B0A41DF6CA7400390278 /* sweetTypeUI.m in Sources */,
 				756C31231DF34F7F0017FBE9 /* coinSpawner.m in Sources */,
 				7525F7C51DD25C9100B0510C /* combo.m in Sources */,
+				75ED3B5E1E19897D0012BA98 /* gemPotData.m in Sources */,
 				75E8F1981DD7969500A421E7 /* statsMenu.m in Sources */,
 				756AEAFF1E088B76002CFA70 /* gems.m in Sources */,
 				750F2A321DF7523E00A784F6 /* sweetFavourNode.m in Sources */,
@@ -1224,11 +1254,13 @@
 				75C36E461DCE752A00F84214 /* main.m in Sources */,
 				75828DFC1E16A417008DC5AF /* sweetValueCalculation.m in Sources */,
 				7525F7971DD08F8400B0510C /* inventoryMenu.m in Sources */,
+				753060CF1E19B99C004D7757 /* confirmGemSale.m in Sources */,
 				757CD1A11DE2200000D07480 /* sweetPicker.m in Sources */,
 				75712C151DFCE1EF00450342 /* packetSKUI.m in Sources */,
 				755B0D201E143BE100EBA428 /* sweetDrawUI.m in Sources */,
 				75C36DFC1DCCF77600F84214 /* main.m in Sources */,
 				750F3A911DE64A65002AFB78 /* sweetnessSlider.m in Sources */,
+				75ED3B5B1E19647F0012BA98 /* gemInteractionUI.m in Sources */,
 				75E39AD01E0319FD003D7DD7 /* bonbonPacket.m in Sources */,
 				7525F7C21DD25C8500B0510C /* comboTimer.m in Sources */,
 				757CD1981DE188C000D07480 /* sweetCustomMenu.m in Sources */,
