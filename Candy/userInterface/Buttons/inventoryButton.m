@@ -16,13 +16,13 @@
 @implementation inventoryButton
 bool isBusy = false;
 
-+(void)addButton: (SKScene *)s {
++(void)addButton: (SKSpriteNode *)s {
     
     SKSpriteNode *buttonInventory = [SKSpriteNode spriteNodeWithImageNamed:@"pointlessButton"];
     buttonInventory.anchorPoint = CGPointMake(0.5, 0.5);
-    buttonInventory.position = CGPointMake(0, -s.frame.size.height/2.25);
+    buttonInventory.position = CGPointMake(0, s.frame.size.height/4.2);
     buttonInventory.xScale = 0.45;
-    buttonInventory.yScale = 0.45;
+    buttonInventory.yScale = 0.33;
     buttonInventory.zPosition = 11;
     buttonInventory.name = @"buttonInventory";
     [s addChild:buttonInventory];

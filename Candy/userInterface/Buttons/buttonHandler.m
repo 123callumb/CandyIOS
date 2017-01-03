@@ -13,6 +13,7 @@
 #import "menuBackButton.h"
 #import "messageSprite.h"
 #import "packetButton.h"
+#import "menuButton.h"
 
 @implementation buttonHandler
 +(void)registerButtons:(SKNode *)obj currentScene:(SKScene *)s view:(UIView*)v{
@@ -34,5 +35,13 @@
     if([obj.name isEqualToString:@"buttonPacket"]){
         [packetButton onTouch:(SKSpriteNode*)obj scene:s];
     }
+    if([obj.name isEqualToString:@"buttonMenu"]){
+        [menuButton onTouch:(SKSpriteNode*)obj scene:s];
+    }
+    if([obj.name isEqualToString:@"closeButton"]){
+        [menuButton onCloseButton:(SKSpriteNode*)obj scene:s];
+        [packetButton reCreate:s];
+    }
+
 }
 @end

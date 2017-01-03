@@ -14,18 +14,15 @@
 #import "coinBarSprite.h"
 #import "comboBar.h"
 #import "packetButton.h"
+#import "menuHandler.h"
 
 @implementation mainUI
 
 +(void)drawUI: (SKScene *)s{
     
-    [inventoryButton addButton:s];
-    [sweetsButton addButton:s];
-    [coinButton addButton:s];
     [coinBarSprite addCoinBar:s];
     [comboBar addBar:s];
-    [packetButton addButton:s];
-    [self nonInteractiveUI:s];
+    [menuHandler addTopButtons:s];
 }
 
 +(void)nonInteractiveUI: (SKScene*)s {

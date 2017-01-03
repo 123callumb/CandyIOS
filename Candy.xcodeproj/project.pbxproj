@@ -123,6 +123,8 @@
 		75CCCB301E153198007DA3EC /* sweetInvSelectUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 75CCCB2F1E153198007DA3EC /* sweetInvSelectUI.m */; };
 		75D568871E13263800349143 /* skUiItems.m in Sources */ = {isa = PBXBuildFile; fileRef = 75D568861E13263800349143 /* skUiItems.m */; };
 		75D5688A1E132A5600349143 /* quickSelectUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 75D568891E132A5500349143 /* quickSelectUI.m */; };
+		75D8C3591E1C304C00D35217 /* bottomBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 75D8C3581E1C304C00D35217 /* bottomBar.m */; };
+		75D8C35C1E1C37E200D35217 /* menuButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 75D8C35B1E1C37E200D35217 /* menuButton.m */; };
 		75E1B5D71DE29B3600F7C50F /* doneButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E1B5D61DE29B3600F7C50F /* doneButton.m */; };
 		75E39AD01E0319FD003D7DD7 /* bonbonPacket.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E39ACF1E0319FD003D7DD7 /* bonbonPacket.m */; };
 		75E8F1891DD3A57200A421E7 /* sweet.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E8F1881DD3A57200A421E7 /* sweet.m */; };
@@ -381,6 +383,10 @@
 		75D568861E13263800349143 /* skUiItems.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = skUiItems.m; path = "Candy/Sweet Tap Menu/skUiItems.m"; sourceTree = "<group>"; };
 		75D568881E132A5500349143 /* quickSelectUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = quickSelectUI.h; path = "Candy/Sweet Tap Menu/quickSelectUI.h"; sourceTree = "<group>"; };
 		75D568891E132A5500349143 /* quickSelectUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = quickSelectUI.m; path = "Candy/Sweet Tap Menu/quickSelectUI.m"; sourceTree = "<group>"; };
+		75D8C3571E1C304C00D35217 /* bottomBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = bottomBar.h; path = Candy/userInterface/bottomBar.h; sourceTree = "<group>"; };
+		75D8C3581E1C304C00D35217 /* bottomBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = bottomBar.m; path = Candy/userInterface/bottomBar.m; sourceTree = "<group>"; };
+		75D8C35A1E1C37E200D35217 /* menuButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = menuButton.h; path = Candy/userInterface/menuButton.h; sourceTree = "<group>"; };
+		75D8C35B1E1C37E200D35217 /* menuButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = menuButton.m; path = Candy/userInterface/menuButton.m; sourceTree = "<group>"; };
 		75E1B5D51DE29B3600F7C50F /* doneButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = doneButton.h; path = Candy/inventory/doneButton.h; sourceTree = "<group>"; };
 		75E1B5D61DE29B3600F7C50F /* doneButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = doneButton.m; path = Candy/inventory/doneButton.m; sourceTree = "<group>"; };
 		75E39ACE1E0319FD003D7DD7 /* bonbonPacket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = bonbonPacket.h; path = Candy/Packets/bonbonPacket.h; sourceTree = "<group>"; };
@@ -574,6 +580,8 @@
 				7571FB661DFB1696006E1E49 /* packetMenu.m */,
 				7571FB681DFB509B006E1E49 /* packetUIButtons.h */,
 				7571FB691DFB509B006E1E49 /* packetUIButtons.m */,
+				75D8C3571E1C304C00D35217 /* bottomBar.h */,
+				75D8C3581E1C304C00D35217 /* bottomBar.m */,
 			);
 			name = userInterface;
 			sourceTree = "<group>";
@@ -595,6 +603,8 @@
 				7525F78D1DCFEA7C00B0510C /* coinButton.m */,
 				7571FB621DFB130E006E1E49 /* packetButton.h */,
 				7571FB631DFB130E006E1E49 /* packetButton.m */,
+				75D8C35A1E1C37E200D35217 /* menuButton.h */,
+				75D8C35B1E1C37E200D35217 /* menuButton.m */,
 			);
 			name = Buttons;
 			sourceTree = "<group>";
@@ -1262,12 +1272,14 @@
 				750F3A911DE64A65002AFB78 /* sweetnessSlider.m in Sources */,
 				75ED3B5B1E19647F0012BA98 /* gemInteractionUI.m in Sources */,
 				75E39AD01E0319FD003D7DD7 /* bonbonPacket.m in Sources */,
+				75D8C3591E1C304C00D35217 /* bottomBar.m in Sources */,
 				7525F7C21DD25C8500B0510C /* comboTimer.m in Sources */,
 				757CD1981DE188C000D07480 /* sweetCustomMenu.m in Sources */,
 				75E8F18D1DD3AB0300A421E7 /* defaultSweet.m in Sources */,
 				7525F7881DCFC72A00B0510C /* buttonAnimation.m in Sources */,
 				7571FB741DFB7453006E1E49 /* sweetShopBackground.m in Sources */,
 				75527A2F1DFF00D600D149C0 /* packetInventoryData.m in Sources */,
+				75D8C35C1E1C37E200D35217 /* menuButton.m in Sources */,
 				7521F8C71DE0F91700F2AD76 /* box1.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
