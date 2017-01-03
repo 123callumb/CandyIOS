@@ -9,7 +9,7 @@
 #import <SpriteKit/SpriteKit.h>
 
 @interface coinButton : SKSpriteNode
-+(void)addButton: (SKScene *)s;
++(void)addButton: (SKSpriteNode *)s;
 +(void)touched: (SKNode *)but cs:(SKScene *)s;
 +(void)buttonReset: (SKScene*)s;
 @end

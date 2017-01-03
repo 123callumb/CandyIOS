@@ -9,6 +9,6 @@
 #import <SpriteKit/SpriteKit.h>
 
 @interface sweetsButton : SKSpriteNode
-+(void)addButton: (SKScene *)s;
++(void)addButton: (SKSpriteNode *)s;
 +(void)touched: (SKNode *)but cs:(SKScene *)s; 
 @end

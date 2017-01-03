@@ -13,13 +13,13 @@
 
 @implementation sweetsButton
 bool isUpgradeBusy = false;
-+(void)addButton: (SKScene *)s; {
++(void)addButton: (SKSpriteNode *)s; {
     
     SKSpriteNode *buttonSweets = [SKSpriteNode spriteNodeWithImageNamed:@"sweetStoreButtonBetter"];
     buttonSweets.anchorPoint = CGPointMake(0.5, 0.5);
-    buttonSweets.position = CGPointMake(buttonSweets.size.width/2.1, -s.frame.size.height/2.25);
+    buttonSweets.position = CGPointMake(buttonSweets.size.width/2.1, s.frame.size.height/4.2);
     buttonSweets.xScale = 0.45;
-    buttonSweets.yScale = 0.45;
+    buttonSweets.yScale = 0.33;
     buttonSweets.zPosition = 11;
     buttonSweets.name = @"buttonSweets";
     [s addChild:buttonSweets];

@@ -15,4 +15,5 @@
 +(void)setCurrentMenu: (int)num;
 +(int)getCurrentMenu;
 +(void)refreshMenuSystem: (SKScene*)s;
++(void)addTopButtons:(SKScene*)s;
 @end

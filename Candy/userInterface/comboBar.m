@@ -18,7 +18,7 @@
     bar.zPosition = 10;
     bar.position = CGPointMake(s.frame.size.width/5.75, s.frame.size.height/2.3);
     [self addText:bar];
-    [s addChild:bar];
+    //[s addChild:bar];
 }
 +(void)addText: (SKSpriteNode *)n; {
     SKLabelNode *comboText = [SKLabelNode labelNodeWithFontNamed:@"Coder's-Crux"];
