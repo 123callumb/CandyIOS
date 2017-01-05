@@ -94,6 +94,7 @@
 		757CD19B1DE2083400D07480 /* sweetData.m in Sources */ = {isa = PBXBuildFile; fileRef = 757CD19A1DE2083400D07480 /* sweetData.m */; };
 		757CD19E1DE208E300D07480 /* slot1Data.m in Sources */ = {isa = PBXBuildFile; fileRef = 757CD19D1DE208E300D07480 /* slot1Data.m */; };
 		757CD1A11DE2200000D07480 /* sweetPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 757CD1A01DE2200000D07480 /* sweetPicker.m */; };
+		7580D74D1E1EDDA800BCDA75 /* desks.m in Sources */ = {isa = PBXBuildFile; fileRef = 7580D74C1E1EDDA800BCDA75 /* desks.m */; };
 		75828DFC1E16A417008DC5AF /* sweetValueCalculation.m in Sources */ = {isa = PBXBuildFile; fileRef = 75828DFB1E16A417008DC5AF /* sweetValueCalculation.m */; };
 		75919B911DDB7A93001F66EB /* upgradeMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 75919B901DDB7A93001F66EB /* upgradeMenu.m */; };
 		75919B951DDB82DF001F66EB /* mainUpgrade.m in Sources */ = {isa = PBXBuildFile; fileRef = 75919B941DDB82DF001F66EB /* mainUpgrade.m */; };
@@ -101,6 +102,10 @@
 		75919B9C1DDCA4CE001F66EB /* levelDecider.m in Sources */ = {isa = PBXBuildFile; fileRef = 75919B9B1DDCA4CE001F66EB /* levelDecider.m */; };
 		759E71C81DF0A02600B7275A /* mapMain.m in Sources */ = {isa = PBXBuildFile; fileRef = 759E71C71DF0A02600B7275A /* mapMain.m */; };
 		759E71CB1DF0A21D00B7275A /* mapScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 759E71CA1DF0A21D00B7275A /* mapScene.m */; };
+		75B526421E1E9E610020A609 /* floors.m in Sources */ = {isa = PBXBuildFile; fileRef = 75B526411E1E9E610020A609 /* floors.m */; };
+		75B526451E1EAD580020A609 /* levelStructure.m in Sources */ = {isa = PBXBuildFile; fileRef = 75B526441E1EAD580020A609 /* levelStructure.m */; };
+		75B526481E1EC8400020A609 /* buildingType.m in Sources */ = {isa = PBXBuildFile; fileRef = 75B526471E1EC8400020A609 /* buildingType.m */; };
+		75B5264B1E1ECD2B0020A609 /* levelWorkstations.m in Sources */ = {isa = PBXBuildFile; fileRef = 75B5264A1E1ECD2B0020A609 /* levelWorkstations.m */; };
 		75B6A1331DFB8E0E00ED922C /* backButtonSweetShop.m in Sources */ = {isa = PBXBuildFile; fileRef = 75B6A1321DFB8E0E00ED922C /* backButtonSweetShop.m */; };
 		75B6A1361DFB8F2000ED922C /* packet.m in Sources */ = {isa = PBXBuildFile; fileRef = 75B6A1351DFB8F2000ED922C /* packet.m */; };
 		75C36DFC1DCCF77600F84214 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 75C36DFB1DCCF77600F84214 /* main.m */; };
@@ -328,6 +333,8 @@
 		757CD19D1DE208E300D07480 /* slot1Data.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = slot1Data.m; path = Candy/inventory/slots/slot1Data.m; sourceTree = "<group>"; };
 		757CD19F1DE2200000D07480 /* sweetPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = sweetPicker.h; path = Candy/inventory/sweetPicker.h; sourceTree = "<group>"; };
 		757CD1A01DE2200000D07480 /* sweetPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = sweetPicker.m; path = Candy/inventory/sweetPicker.m; sourceTree = "<group>"; };
+		7580D74B1E1EDDA800BCDA75 /* desks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = desks.h; path = Candy/levels/desks.h; sourceTree = "<group>"; };
+		7580D74C1E1EDDA800BCDA75 /* desks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = desks.m; path = Candy/levels/desks.m; sourceTree = "<group>"; };
 		75828DFA1E16A417008DC5AF /* sweetValueCalculation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = sweetValueCalculation.h; path = "Candy/Sweet Tap Menu/sweetValueCalculation.h"; sourceTree = "<group>"; };
 		75828DFB1E16A417008DC5AF /* sweetValueCalculation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = sweetValueCalculation.m; path = "Candy/Sweet Tap Menu/sweetValueCalculation.m"; sourceTree = "<group>"; };
 		75919B8F1DDB7A93001F66EB /* upgradeMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = upgradeMenu.h; path = Candy/userInterface/upgradeMenu.h; sourceTree = "<group>"; };
@@ -336,12 +343,20 @@
 		75919B941DDB82DF001F66EB /* mainUpgrade.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = mainUpgrade.m; path = Candy/userInterface/upgradeMenu/mainUpgrade.m; sourceTree = "<group>"; };
 		75919B971DDCA41C001F66EB /* defaultLevel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = defaultLevel.h; path = Candy/levels/defaultLevel.h; sourceTree = "<group>"; };
 		75919B981DDCA41C001F66EB /* defaultLevel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = defaultLevel.m; path = Candy/levels/defaultLevel.m; sourceTree = "<group>"; };
-		75919B9A1DDCA4CE001F66EB /* levelDecider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = levelDecider.h; sourceTree = "<group>"; };
-		75919B9B1DDCA4CE001F66EB /* levelDecider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = levelDecider.m; sourceTree = "<group>"; };
+		75919B9A1DDCA4CE001F66EB /* levelDecider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = levelDecider.h; path = Candy/levelDecider.h; sourceTree = "<group>"; };
+		75919B9B1DDCA4CE001F66EB /* levelDecider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = levelDecider.m; path = Candy/levelDecider.m; sourceTree = "<group>"; };
 		759E71C61DF0A02600B7275A /* mapMain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = mapMain.h; path = Candy/globalMenu/mapMenu/mapMain.h; sourceTree = "<group>"; };
 		759E71C71DF0A02600B7275A /* mapMain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = mapMain.m; path = Candy/globalMenu/mapMenu/mapMain.m; sourceTree = "<group>"; };
 		759E71C91DF0A21D00B7275A /* mapScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = mapScene.h; path = Candy/Scenes/mapScene.h; sourceTree = "<group>"; };
 		759E71CA1DF0A21D00B7275A /* mapScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = mapScene.m; path = Candy/Scenes/mapScene.m; sourceTree = "<group>"; };
+		75B526401E1E9E610020A609 /* floors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = floors.h; path = Candy/levels/floors.h; sourceTree = "<group>"; };
+		75B526411E1E9E610020A609 /* floors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = floors.m; path = Candy/levels/floors.m; sourceTree = "<group>"; };
+		75B526431E1EAD580020A609 /* levelStructure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = levelStructure.h; path = Candy/levels/levelStructure.h; sourceTree = "<group>"; };
+		75B526441E1EAD580020A609 /* levelStructure.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = levelStructure.m; path = Candy/levels/levelStructure.m; sourceTree = "<group>"; };
+		75B526461E1EC8400020A609 /* buildingType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = buildingType.h; path = Candy/levels/buildingType.h; sourceTree = "<group>"; };
+		75B526471E1EC8400020A609 /* buildingType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = buildingType.m; path = Candy/levels/buildingType.m; sourceTree = "<group>"; };
+		75B526491E1ECD2B0020A609 /* levelWorkstations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = levelWorkstations.h; path = Candy/levels/levelWorkstations.h; sourceTree = "<group>"; };
+		75B5264A1E1ECD2B0020A609 /* levelWorkstations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = levelWorkstations.m; path = Candy/levels/levelWorkstations.m; sourceTree = "<group>"; };
 		75B6A1311DFB8E0E00ED922C /* backButtonSweetShop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = backButtonSweetShop.h; path = "Candy/Sweet Shop/backButtonSweetShop.h"; sourceTree = "<group>"; };
 		75B6A1321DFB8E0E00ED922C /* backButtonSweetShop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = backButtonSweetShop.m; path = "Candy/Sweet Shop/backButtonSweetShop.m"; sourceTree = "<group>"; };
 		75B6A1341DFB8F2000ED922C /* packet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = packet.h; path = "Candy/Sweet Shop/packet.h"; sourceTree = "<group>"; };
@@ -724,8 +739,20 @@
 		75919B961DDCA353001F66EB /* levelBackgrounds */ = {
 			isa = PBXGroup;
 			children = (
+				75919B9A1DDCA4CE001F66EB /* levelDecider.h */,
+				75919B9B1DDCA4CE001F66EB /* levelDecider.m */,
 				75919B971DDCA41C001F66EB /* defaultLevel.h */,
 				75919B981DDCA41C001F66EB /* defaultLevel.m */,
+				75B526401E1E9E610020A609 /* floors.h */,
+				75B526411E1E9E610020A609 /* floors.m */,
+				75B526431E1EAD580020A609 /* levelStructure.h */,
+				75B526441E1EAD580020A609 /* levelStructure.m */,
+				75B526461E1EC8400020A609 /* buildingType.h */,
+				75B526471E1EC8400020A609 /* buildingType.m */,
+				75B526491E1ECD2B0020A609 /* levelWorkstations.h */,
+				75B5264A1E1ECD2B0020A609 /* levelWorkstations.m */,
+				7580D74B1E1EDDA800BCDA75 /* desks.h */,
+				7580D74C1E1EDDA800BCDA75 /* desks.m */,
 			);
 			name = levelBackgrounds;
 			sourceTree = "<group>";
@@ -805,8 +832,6 @@
 				75C36E121DCCF77700F84214 /* Info.plist */,
 				75C36DFA1DCCF77600F84214 /* Supporting Files */,
 				75C36E341DCD085000F84214 /* toDoList */,
-				75919B9A1DDCA4CE001F66EB /* levelDecider.h */,
-				75919B9B1DDCA4CE001F66EB /* levelDecider.m */,
 			);
 			path = Candy;
 			sourceTree = "<group>";
@@ -1166,6 +1191,7 @@
 				750F2A351DF77FF400A784F6 /* fiftyTapBonus.m in Sources */,
 				7525F77C1DCFBFF100B0510C /* inventoryButton.m in Sources */,
 				75C36E3A1DCE5CD900F84214 /* splashBacking.m in Sources */,
+				7580D74D1E1EDDA800BCDA75 /* desks.m in Sources */,
 				7571FB641DFB130E006E1E49 /* packetButton.m in Sources */,
 				75919B991DDCA41C001F66EB /* defaultLevel.m in Sources */,
 				75C36E3E1DCE5F2000F84214 /* backgroundManager.m in Sources */,
@@ -1206,6 +1232,7 @@
 				755ACB3C1DF0C9C5000DD9CB /* mapGui.m in Sources */,
 				750F3A941DE68167002AFB78 /* determineSweetTap.m in Sources */,
 				755ACB421DF32F51000DD9CB /* buildingGui.m in Sources */,
+				75B526421E1E9E610020A609 /* floors.m in Sources */,
 				7521F8C41DE0F66900F2AD76 /* slot.m in Sources */,
 				755B0D231E14514B00EBA428 /* drawSlotSelectorUI.m in Sources */,
 				755B0D261E14777800EBA428 /* drawInventorySelector.m in Sources */,
@@ -1221,6 +1248,7 @@
 				75D5688A1E132A5600349143 /* quickSelectUI.m in Sources */,
 				75C36E061DCCF77700F84214 /* GameScene.m in Sources */,
 				7525F7BE1DD256A500B0510C /* comboBar.m in Sources */,
+				75B526451E1EAD580020A609 /* levelStructure.m in Sources */,
 				75919B9C1DDCA4CE001F66EB /* levelDecider.m in Sources */,
 				75C36E4A1DCE793D00F84214 /* mainBackground.m in Sources */,
 				7525F79A1DD0EF9500B0510C /* menuHandler.m in Sources */,
@@ -1255,6 +1283,7 @@
 				7525F7C51DD25C9100B0510C /* combo.m in Sources */,
 				75ED3B5E1E19897D0012BA98 /* gemPotData.m in Sources */,
 				75E8F1981DD7969500A421E7 /* statsMenu.m in Sources */,
+				75B526481E1EC8400020A609 /* buildingType.m in Sources */,
 				756AEAFF1E088B76002CFA70 /* gems.m in Sources */,
 				750F2A321DF7523E00A784F6 /* sweetFavourNode.m in Sources */,
 				61E183861DEE00E30034C021 /* Character.m in Sources */,
@@ -1265,6 +1294,7 @@
 				75828DFC1E16A417008DC5AF /* sweetValueCalculation.m in Sources */,
 				7525F7971DD08F8400B0510C /* inventoryMenu.m in Sources */,
 				753060CF1E19B99C004D7757 /* confirmGemSale.m in Sources */,
+				75B5264B1E1ECD2B0020A609 /* levelWorkstations.m in Sources */,
 				757CD1A11DE2200000D07480 /* sweetPicker.m in Sources */,
 				75712C151DFCE1EF00450342 /* packetSKUI.m in Sources */,
 				755B0D201E143BE100EBA428 /* sweetDrawUI.m in Sources */,

@@ -22,6 +22,7 @@
 #import "box1.h"
 #import "sweetInventoryData.h"
 #import "gems.h"
+#import "candyMachines.h"
 
 @implementation taps
 +(void)onPressed: (SKScene *)s location:(CGPoint)p {
@@ -33,7 +34,7 @@
             [determineSweetTap spawn:s location:p];
             [fiftyTapBonus tapCollector:s];
             [fiftyTapBonus onTouchofBonus:(SKSpriteNode*)obj scene:s];
-            
+            [candyMachines onTouch:s];
         }else {
             [messageSprite removeAllMessageBoxes:s];
         }
