@@ -29,7 +29,7 @@
     moneyText.zPosition = 12;
     moneyText.fontSize = 140;
     moneyText.text = [money getBalanceAsString];
-    moneyText.position = CGPointMake(0 - n.frame.size.width/3.6, 0-moneyText.frame.size.height/2);
+    moneyText.position = CGPointMake(0 - n.frame.size.width/3.8, -moneyText.frame.size.height/1.65);
     [n addChild:moneyText];
 }
 +(void)updateText: (SKScene *)s {

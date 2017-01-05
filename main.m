@@ -51,9 +51,7 @@ UIImageView *img1 = nil;
     UITouch *tap = [touches anyObject];
     CGPoint loc = [tap locationInNode:self];
     SKNode *obj = [self nodeAtPoint:loc];
-    if(loc.y >= -470){
-    [candyMachines onTouch:obj];
-    }
+
     [upgradeMenu SwitchingMenu:self node:obj];
     [taps onPressed:self location:loc];
     [buttonHandler registerButtons:obj currentScene:self view:self.view];
