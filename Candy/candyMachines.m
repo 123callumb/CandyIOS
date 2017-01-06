@@ -57,7 +57,7 @@ SKSpriteNode *button;
     SKSpriteNode *desk = (SKSpriteNode*)[s childNodeWithName:@"desk"];
     SKSpriteNode *machine = (SKSpriteNode*)[desk childNodeWithName:@"candyMachine"];
     
-    CGPoint deskSweetSpawnPlace = CGPointMake(desk.position.x - desk.frame.size.width/2, desk.position.y + desk.frame.size.height/2);
+    CGPoint deskSweetSpawnPlace = CGPointMake(desk.position.x - desk.frame.size.width/2.3, desk.position.y + desk.frame.size.height/2);
     
     [self animateMachine:machine scene:s position:deskSweetSpawnPlace];
 
@@ -66,14 +66,11 @@ SKSpriteNode *button;
        
         SKSpriteNode *machine = (SKSpriteNode*)[workstation childNodeWithName:@"candyMachine"];
         
-        CGPoint sweetSpawnPlace = CGPointMake(workstation.position.x - workstation.frame.size.width/10, workstation.position.y - workstation.frame.size.height/9);
+        CGPoint sweetSpawnPlace = CGPointMake(workstation.position.x - workstation.frame.size.width/10, workstation.position.y - workstation.frame.size.height/3);
         
         [self animateMachine:machine scene:s position:sweetSpawnPlace];
 
-        
     }];
-    
-    
     
 }
 +(void)animateMachine: (SKSpriteNode*)node scene:(SKScene*)s position:(CGPoint)pos {
