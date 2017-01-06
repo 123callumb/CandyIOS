@@ -7,6 +7,7 @@
 //
 
 #import "candyMachines.h"
+#import "determineSweetTap.h"
 
 SKSpriteNode *machineBase;
 SKSpriteNode *stamper;
@@ -56,19 +57,26 @@ SKSpriteNode *button;
     SKSpriteNode *desk = (SKSpriteNode*)[s childNodeWithName:@"desk"];
     SKSpriteNode *machine = (SKSpriteNode*)[desk childNodeWithName:@"candyMachine"];
     
-    [self animateMachine:machine];
+    CGPoint deskSweetSpawnPlace = CGPointMake(desk.position.x - desk.frame.size.width/2, desk.position.y + desk.frame.size.height/2);
+    
+    [self animateMachine:machine scene:s position:deskSweetSpawnPlace];
 
     SKSpriteNode *floor = (SKSpriteNode*)[s childNodeWithName:@"levelFloor"];
     [floor enumerateChildNodesWithName:@"workstation" usingBlock:^(SKNode *workstation, BOOL *stop){
        
         SKSpriteNode *machine = (SKSpriteNode*)[workstation childNodeWithName:@"candyMachine"];
-        [self animateMachine:machine];
+        
+        CGPoint sweetSpawnPlace = CGPointMake(workstation.position.x - workstation.frame.size.width/10, workstation.position.y - workstation.frame.size.height/9);
+        
+        [self animateMachine:machine scene:s position:sweetSpawnPlace];
 
         
     }];
     
+    
+    
 }
-+(void)animateMachine: (SKSpriteNode*)node {
++(void)animateMachine: (SKSpriteNode*)node scene:(SKScene*)s position:(CGPoint)pos {
     node.texture = [SKTexture textureWithImageNamed:[self getCurrentCandyMachineTextureOnPress]];
     
     SKAction *delay = [SKAction waitForDuration:0.03];
@@ -76,5 +84,6 @@ SKSpriteNode *button;
     [node runAction:delay completion:^{
         node.texture = [SKTexture textureWithImageNamed:[self getCurrentCandyMachineTexture]];
     }];
+    [determineSweetTap spawn:s location:pos];
 }
 @end
