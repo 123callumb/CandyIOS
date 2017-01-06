@@ -12,9 +12,11 @@
 #import "Character.h"
 #import "levelWorkstations.h"
 #import "desks.h"
+#import "dynamicBackgrounds.h"
 
 @implementation levelStructure
 +(void)createLevel: (SKScene*)s {
+    [self addDynamicBackground:s];
     [self addFloor:s];
     [self addBuildingType:s];
     [self addMainCharacter:s];
@@ -41,6 +43,9 @@
 }
 +(void)addMainCharacter: (SKScene*)s {
     [Character Spawn:s Position:[self returnCharacterPosition:s] Scale:[self returnCharacterScale]];
+}
++(void)addDynamicBackground: (SKScene*)s {
+    [dynamicBackgrounds addDynamicBackground:s];
 }
 
 //These need to go in a character class V probably best when we have character animations on the go etc!

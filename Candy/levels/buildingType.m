@@ -10,8 +10,8 @@
 
 @implementation buildingType
 +(void)addBuildingTypes: (NSMutableArray*)floors {
-    [floors addObject:@"building_house"]; //ID 0 for when pulling from else where etc...
-    [floors addObject:@"wall_lvl_2"];  //ID 1
+    [floors addObject:@"building_house"];//ID 0 for when pulling from else where etc...
+    [floors addObject:@"upgradedHouse_lvl_3"];//ID 1
 }
 +(NSArray*)getBuildingTypes {
     NSMutableArray *buildingType = [[NSMutableArray alloc] init];
