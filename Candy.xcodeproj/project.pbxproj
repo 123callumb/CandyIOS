@@ -53,6 +53,7 @@
 		7525F7CC1DD2931900B0510C /* coders_crux.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7525F7CB1DD2931900B0510C /* coders_crux.ttf */; };
 		75270FCB1DE50B8600E7588F /* flavourPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 75270FCA1DE50B8600E7588F /* flavourPicker.m */; };
 		753060CF1E19B99C004D7757 /* confirmGemSale.m in Sources */ = {isa = PBXBuildFile; fileRef = 753060CE1E19B99C004D7757 /* confirmGemSale.m */; };
+		753D2EEF1E1FE7960043F33C /* dynamicBackgrounds.m in Sources */ = {isa = PBXBuildFile; fileRef = 753D2EEE1E1FE7960043F33C /* dynamicBackgrounds.m */; };
 		753D56C81E06E50B00A6CBF8 /* packetContentManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 753D56C71E06E50B00A6CBF8 /* packetContentManager.m */; };
 		753D56CB1E06FD7600A6CBF8 /* lollyPacket.m in Sources */ = {isa = PBXBuildFile; fileRef = 753D56CA1E06FD7600A6CBF8 /* lollyPacket.m */; };
 		753D56CE1E06FF2800A6CBF8 /* wrappedPacket.m in Sources */ = {isa = PBXBuildFile; fileRef = 753D56CD1E06FF2800A6CBF8 /* wrappedPacket.m */; };
@@ -251,6 +252,8 @@
 		75270FCA1DE50B8600E7588F /* flavourPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = flavourPicker.m; path = Candy/inventory/flavourPicker.m; sourceTree = "<group>"; };
 		753060CD1E19B99C004D7757 /* confirmGemSale.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = confirmGemSale.h; path = "Candy/Sweet Inventory/confirmGemSale.h"; sourceTree = "<group>"; };
 		753060CE1E19B99C004D7757 /* confirmGemSale.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = confirmGemSale.m; path = "Candy/Sweet Inventory/confirmGemSale.m"; sourceTree = "<group>"; };
+		753D2EED1E1FE7960043F33C /* dynamicBackgrounds.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dynamicBackgrounds.h; path = Candy/levels/dynamicBackgrounds.h; sourceTree = "<group>"; };
+		753D2EEE1E1FE7960043F33C /* dynamicBackgrounds.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = dynamicBackgrounds.m; path = Candy/levels/dynamicBackgrounds.m; sourceTree = "<group>"; };
 		753D56C61E06E50B00A6CBF8 /* packetContentManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = packetContentManager.h; path = Candy/Packets/packetContentManager.h; sourceTree = "<group>"; };
 		753D56C71E06E50B00A6CBF8 /* packetContentManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = packetContentManager.m; path = Candy/Packets/packetContentManager.m; sourceTree = "<group>"; };
 		753D56C91E06FD7600A6CBF8 /* lollyPacket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = lollyPacket.h; path = Candy/Packets/lollyPacket.h; sourceTree = "<group>"; };
@@ -753,6 +756,8 @@
 				75B5264A1E1ECD2B0020A609 /* levelWorkstations.m */,
 				7580D74B1E1EDDA800BCDA75 /* desks.h */,
 				7580D74C1E1EDDA800BCDA75 /* desks.m */,
+				753D2EED1E1FE7960043F33C /* dynamicBackgrounds.h */,
+				753D2EEE1E1FE7960043F33C /* dynamicBackgrounds.m */,
 			);
 			name = levelBackgrounds;
 			sourceTree = "<group>";
@@ -1278,6 +1283,7 @@
 				752002451E11B2FB00C2AC11 /* itemUI.m in Sources */,
 				75270FCB1DE50B8600E7588F /* flavourPicker.m in Sources */,
 				6182EAA71DF8BD2900590FA4 /* upgrade_moneyPerSecond.m in Sources */,
+				753D2EEF1E1FE7960043F33C /* dynamicBackgrounds.m in Sources */,
 				7565B0A41DF6CA7400390278 /* sweetTypeUI.m in Sources */,
 				756C31231DF34F7F0017FBE9 /* coinSpawner.m in Sources */,
 				7525F7C51DD25C9100B0510C /* combo.m in Sources */,
