@@ -31,7 +31,6 @@
         if(![messageSprite isMessageVisable]){
             [self randomTapTests];
             [coinBarSprite updateText:s];
-            [determineSweetTap spawn:s location:p];
             [fiftyTapBonus tapCollector:s];
             [fiftyTapBonus onTouchofBonus:(SKSpriteNode*)obj scene:s];
             [candyMachines onTouch:s];
@@ -41,11 +40,13 @@
     }
 }
 +(void)onRelease: (SKScene*)s {
+
+}
+
++(void)onMovement: (SKScene*)s location:(CGPoint)p node:(SKNode*)n {
     
 }
-+(void)onMovement: (SKScene*)s location:(CGPoint)p node:(SKNode*)n {
-    [sweetnessSlider moveSlider:(SKSpriteNode*)n location:p];
-}
+
 +(void)randomTapTests {
 
 }
