@@ -10,4 +10,9 @@
 
 @interface floors : NSObject
 +(NSString*)getCurrentFloor;
++(NSString*)getFloorAtIndex: (int)index;
++(int)getAmountOfFloors;
++(void)addNewFloorToList: (int)floorID;
++(bool)doesOwnFloor: (int)floorID;
++(void)setCurrentFloorID: (int)floorID;
 @end
