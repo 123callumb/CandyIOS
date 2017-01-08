@@ -1,0 +1,83 @@
+//
+//  deskStore.m
+//  Candy
+//
+//  Created by Callum Beckwith on 08/01/2017.
+//  Copyright © 2017 Kilcal. All rights reserved.
+//
+
+#import "deskStore.h"
+#import "storeItemUI.h"
+#import "desks.h"
+#import "money.h"
+
+@implementation deskStore
+
++(void)addDeskStoreUI: (UIView*)v {
+    UIScrollView *deskStore = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, v.frame.size.width, v.frame.size.height)];
+    deskStore.contentSize = CGSizeMake(deskStore.frame.size.width, deskStore.frame.size.height/2 * ([desks getAmountOfDesks] + 1));
+    deskStore.tag = 21100;
+    deskStore.backgroundColor = [UIColor whiteColor];
+    [self addItemUIs:deskStore];
+    
+    [v addSubview:deskStore];
+}
++(void)addItemUIs: (UIScrollView*)v {
+    for(int i = 0; i <= [desks getAmountOfDesks]; i++){
+        [storeItemUI
+         createItemUI:v
+         itemID:i
+         shopTexture:@"itemUI_Floor"
+         startTagAt:23000
+         itemTexture:[desks getDeskAtIndex:i]
+         itemScale:0.4
+         itemName:[self determineScreenName:[desks getDeskAtIndex:i]]
+         itemPrice:[self determinePriceBasedOnName:[desks getDeskAtIndex:i]]
+         owned:[desks doesOwnDesk:i]
+         ];
+    }
+}
++(NSString*)determineScreenName: (NSString*)inputString {
+    NSString *output;
+    
+    if([inputString isEqualToString:@"desk_wood"]){
+        output = @"WOODEN DESK";
+    }else if([inputString isEqualToString:@"desk_grey"]){
+        output = @"GREY DESK";
+    }else {
+        output = @"No Name";
+    }
+    
+    return output;
+}
++(int)determinePriceBasedOnName: (NSString*)inputString {
+    int output;
+    
+    if([inputString isEqualToString:@"desk_wood"]){
+        output = 0;
+    }else if([inputString isEqualToString:@"desk_grey"]){
+        output = 2500;
+    }else {
+        output = 0;
+    }
+    
+    return output;
+}
++(void)onBuy: (int)deskID {
+    if(deskID >= 23000 && deskID < 24000){
+        int desk = deskID - 23000;
+        if([money getBalance] >= [self determinePriceBasedOnName:[desks getDeskAtIndex:desk]]){
+            [desks addNewDeskToList:desk];
+            [self onEquip:desk];
+            [money addBalance:-[self determinePriceBasedOnName:[desks getDeskAtIndex:desk]]];
+        }
+    }
+    
+}
++(void)onEquip: (int)deskID {
+    if(deskID >= 23000 && deskID < 24000){
+        int desk = deskID - 23000;
+        [desks setCurrentDeskID:desk];
+    }
+}
+@end

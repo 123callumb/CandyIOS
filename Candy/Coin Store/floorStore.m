@@ -63,7 +63,7 @@
     int output;
     
     if([inputString isEqualToString:@"floor_1"]){
-        output = 1000;
+        output = 0;
     }else if([inputString isEqualToString:@"floor_blue"]){
         output = 1000;
     }else if([inputString isEqualToString:@"floor_red"]){
