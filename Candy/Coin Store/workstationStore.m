@@ -30,7 +30,7 @@
          shopTexture:@"itemUI_Floor"
          startTagAt:24000
          itemTexture:[levelWorkstations getWorkstationAtIndex:i]
-         itemScale:0.2
+         itemScale:0.6
          itemName:[self determineScreenName:[levelWorkstations getWorkstationAtIndex:i]]
          itemPrice:[self determinePriceBasedOnName:[levelWorkstations getWorkstationAtIndex:i]]
          owned:[levelWorkstations doesOwnWorkstation:i]
@@ -72,7 +72,7 @@
         int workstation = stationID - 24000;
         if([money getBalance] >= [self determinePriceBasedOnName:[levelWorkstations getWorkstationAtIndex:workstation]]){
             [levelWorkstations addNewWorkstationToList:workstation];
-            [self onEquip:workstation];
+            [levelWorkstations setCurrentWorkstationID:workstation];
             [money addBalance:-[self determinePriceBasedOnName:[levelWorkstations getWorkstationAtIndex:workstation]]];
         }
     }

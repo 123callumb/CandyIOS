@@ -68,7 +68,7 @@
         int desk = deskID - 23000;
         if([money getBalance] >= [self determinePriceBasedOnName:[desks getDeskAtIndex:desk]]){
             [desks addNewDeskToList:desk];
-            [self onEquip:desk];
+            [desks setCurrentDeskID:desk];
             [money addBalance:-[self determinePriceBasedOnName:[desks getDeskAtIndex:desk]]];
         }
     }
