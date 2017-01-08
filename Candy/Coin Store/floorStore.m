@@ -87,7 +87,7 @@
         int floor = floorID - 22000;
         if([money getBalance] >= [self determinePriceBasedOnName:[floors getFloorAtIndex:floor]]){
             [floors addNewFloorToList:floor];
-            [self onEquip:floor];
+            [floors setCurrentFloorID:floor];
             [money addBalance:-[self determinePriceBasedOnName:[floors getFloorAtIndex:floor]]];
         }
     }
