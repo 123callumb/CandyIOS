@@ -8,6 +8,8 @@
 
 #import "storeItemUI.h"
 #import "floorStore.h"
+#import "deskStore.h"
+#import "workstationStore.h"
 
 @implementation storeItemUI
 +(void)createItemUI: (UIScrollView*)v itemID:(int)itemNumber shopTexture:(NSString*)shopStyle startTagAt:(int)tag itemTexture:(NSString*)itemTexture itemScale:(float)itemScale itemName:(NSString*)itemName itemPrice:(int)price owned:(bool)doesOwnItem{
@@ -84,14 +86,19 @@
 }
 +(void)onBuyPress: (id)sender {
     UIButton *button = (UIButton*)sender;
-    NSLog(@"from store: %d", (int)button.tag);
-    [floorStore onBuy:(int)button.tag];
+    int buttonTag = (int)button.tag;
+    [floorStore onBuy:buttonTag];
+    [deskStore onBuy:buttonTag];
+    [workstationStore onBuy:buttonTag];
     [self refreshItemUI:button];
 
 }
 +(void)onEquipPress: (id)sender {
     UIButton *button = (UIButton*)sender;
-    [floorStore onEquip:(int)button.tag];
+    int buttonTag = (int)button.tag;
+    [floorStore onEquip:buttonTag];
+    [deskStore onEquip:buttonTag];
+    [workstationStore onEquip:buttonTag];
     [self refreshItemUI:button];
 }
 +(void)refreshItemUI: (UIButton*)button {

@@ -10,4 +10,10 @@
 
 @interface levelWorkstations : SKSpriteNode
 +(void)addWorkstations: (SKSpriteNode*)s;
++(NSString*)getWorkstationAtIndex: (int)index;
++(void)setCurrentWorkstationID: (int)buildingID;
++(int)getAmountOfWorkstations;
++(NSMutableArray*)getOwnedWorkstationsByID;
++(void)addNewWorkstationToList: (int)workstationID;
++(bool)doesOwnWorkstation: (int)workstationID;
 @end

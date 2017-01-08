@@ -12,7 +12,7 @@
 @implementation desks
 +(void)addDeskTypes: (NSMutableArray*)desks {
     [desks addObject:@"desk_wood"]; //ID 0 for when pulling from else where etc...
-    [desks addObject:@"desk_betterwood;)"];  //ID 1
+    [desks addObject:@"desk_grey"];  //ID 1
 }
 +(NSArray*)getDeskTypes {
     NSMutableArray *deskTypes = [[NSMutableArray alloc] init];
@@ -42,4 +42,51 @@
     [candyMachines addCandyMachine:desk scale:1 position:CGPointMake(-desk.frame.size.width/2.4, desk.frame.size.height/1.3)];
     [s addChild:desk];
 }
++(int)getAmountOfDesks {
+    return (int)( [[self getDeskTypes] count] - 1 );
+}
++(NSString*)getDeskAtIndex: (int)index {
+    return [[self getDeskTypes] objectAtIndex:index];
+}
++(NSMutableArray*)getOwnedDesksByID {
+    NSMutableArray *floorArray;
+    NSUserDefaults *nd = [NSUserDefaults standardUserDefaults];
+    NSData *arrayToData = [nd objectForKey:@"ownedDesks"];
+    
+    if(arrayToData == nil){
+        floorArray = [[NSMutableArray alloc] init];
+        arrayToData = [[NSData alloc] init];
+    }
+    
+    floorArray = [NSKeyedUnarchiver unarchiveObjectWithData:arrayToData];
+    return floorArray;
+}
++(void)addNewDeskToList: (int)deskID {
+    NSUserDefaults *nd = [NSUserDefaults standardUserDefaults];
+    NSMutableArray *desks = [self getOwnedDesksByID];
+    
+    if(desks == nil){
+        desks = [[NSMutableArray alloc] init];
+    }
+    
+    NSNumber *newDesk = [NSNumber numberWithInt:deskID];
+    
+    [desks addObject:newDesk];
+    
+    NSData *arrayToData = [NSKeyedArchiver archivedDataWithRootObject:desks];
+    
+    [nd setObject:arrayToData forKey:@"ownedDesks"];
+    [nd synchronize];
+}
++(bool)doesOwnDesk: (int)deskID {
+    NSNumber *inputID = [NSNumber numberWithUnsignedInt:deskID];
+    
+    if([[self getOwnedDesksByID] containsObject:inputID]){
+        
+        return true;
+    }else {
+        return false;
+    }
+}
+
 @end

@@ -13,7 +13,8 @@
 @implementation levelWorkstations
 +(void)addWorkstationTypes: (NSMutableArray*)workstations {
     [workstations addObject:@"workstation_box"]; //ID 0 for when pulling from else where etc...
-    [workstations addObject:@"nice_desk"];  //ID 1
+    [workstations addObject:@"workstation_wood"];  //ID 1
+    [workstations addObject:@"workstation_cloudedGlass"];
 }
 +(NSArray*)getWorkstationTypes {
     NSMutableArray *workstationTypes = [[NSMutableArray alloc] init];
@@ -64,5 +65,51 @@
 +(int)getUsableWorkstations {
     NSUserDefaults *nd = [NSUserDefaults standardUserDefaults];
     return (int)[nd integerForKey:@"workstation_active"];
+}
++(NSString*)getWorkstationAtIndex: (int)index {
+    return [[self getWorkstationTypes] objectAtIndex:index];
+}
++(int)getAmountOfWorkstations {
+    return (int)( [[self getWorkstationTypes] count] - 1 );
+}
++(NSMutableArray*)getOwnedWorkstationsByID {
+    NSMutableArray *workstationArray;
+    NSUserDefaults *nd = [NSUserDefaults standardUserDefaults];
+    NSData *arrayToData = [nd objectForKey:@"ownedWorkstations"];
+    
+    if(arrayToData == nil){
+        workstationArray = [[NSMutableArray alloc] init];
+        arrayToData = [[NSData alloc] init];
+    }
+    
+    workstationArray = [NSKeyedUnarchiver unarchiveObjectWithData:arrayToData];
+    return workstationArray;
+}
++(void)addNewWorkstationToList: (int)workstationID {
+    NSUserDefaults *nd = [NSUserDefaults standardUserDefaults];
+    NSMutableArray *workstations = [self getOwnedWorkstationsByID];
+    
+    if(workstations == nil){
+        workstations = [[NSMutableArray alloc] init];
+    }
+    
+    NSNumber *newWorkstation = [NSNumber numberWithInt:workstationID];
+    
+    [workstations addObject:newWorkstation];
+    
+    NSData *arrayToData = [NSKeyedArchiver archivedDataWithRootObject:workstations];
+    
+    [nd setObject:arrayToData forKey:@"ownedWorkstations"];
+    [nd synchronize];
+}
++(bool)doesOwnWorkstation: (int)workstationID {
+    NSNumber *inputID = [NSNumber numberWithUnsignedInt:workstationID];
+    
+    if([[self getOwnedWorkstationsByID] containsObject:inputID]){
+        
+        return true;
+    }else {
+        return false;
+    }
 }
 @end

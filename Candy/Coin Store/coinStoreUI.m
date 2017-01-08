@@ -8,6 +8,8 @@
 
 #import "coinStoreUI.h"
 #import "floorStore.h"
+#import "deskStore.h"
+#import "workstationStore.h"
 
 @implementation coinStoreUI
 
@@ -29,13 +31,12 @@
 }
 +(void)addMenuButtons: (UIScrollView*)v {
     [self createButton:v textureName:@"floorsButton" buttonID:0];
-    [self createButton:v textureName:@"candyMachineButtonTemp" buttonID:1];
-    [self createButton:v textureName:@"desksButtonTemp" buttonID:2];
-    [self createButton:v textureName:@"workstationsButtonTemp" buttonID:3];
-    [self createButton:v textureName:@"hatsButtonTemp" buttonID:4];
-    [self createButton:v textureName:@"shirtsButtonTemp" buttonID:5];
-    [self createButton:v textureName:@"pantsButtonTemp" buttonID:6];
-    [self createButton:v textureName:@"shoesButtonTemp" buttonID:7];
+    [self createButton:v textureName:@"desksButtonTemp" buttonID:1];
+    [self createButton:v textureName:@"workstationsButtonTemp" buttonID:2];
+    [self createButton:v textureName:@"hatsButtonTemp" buttonID:3];
+    [self createButton:v textureName:@"shirtsButtonTemp" buttonID:4];
+    [self createButton:v textureName:@"pantsButtonTemp" buttonID:5];
+    [self createButton:v textureName:@"shoesButtonTemp" buttonID:6];
 }
 +(void)createButton: (UIScrollView*)v textureName:(NSString*)textureName buttonID:(int)buttonID {
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -65,6 +66,12 @@
     
     if(buttonID == 0){
         [floorStore addFloorStoreUI:v];
+    }
+    if(buttonID == 1){
+        [deskStore addDeskStoreUI:v];
+    }
+    if(buttonID == 2){
+        [workstationStore addWorkstationStoreUI:v];
     }
 }
 @end
