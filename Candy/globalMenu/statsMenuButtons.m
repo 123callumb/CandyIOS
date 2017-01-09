@@ -11,6 +11,7 @@
 #import "mainTransition.h"
 #import "sweetInventoryUI.h"
 #import "gemGemeratorGui.h"
+#import "tutorialMessages.h"
 
 @implementation statsMenuButtons
 
@@ -61,6 +62,7 @@
     if([s.name isEqualToString:@"statsMenuCoinStoreButton"]){
         SKAction *block = [SKAction runBlock:^{
             [mainTransition switchScene:sk sceneTwo:@"coinStore" Transition:[SKTransition fadeWithDuration:0.3]];
+            [tutorialMessages firstTimeStoreButton:v];
         }];
         [self buttonAnimation:s action:block];
     }
@@ -71,13 +73,16 @@
     if([s.name isEqualToString:@"sweetInvButton"]){
         SKAction *block = [SKAction runBlock:^{
             [sweetInventoryUI showSweetInventoryUI:v];
+            [tutorialMessages firstTimeSweetInvButton:v];
         }];
         [self buttonAnimation:s action:block];
+
     }
     if([s.name isEqualToString:@"statsMenuGemButton"]){
         SKAction *block = [SKAction runBlock:^{}];
         [self buttonAnimation:s action:block];
         [gemGemeratorGui createGemMenu:sk];
+        [tutorialMessages firstTimeGemeratorButton:v];
     }
 }
 

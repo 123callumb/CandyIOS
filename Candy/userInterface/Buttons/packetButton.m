@@ -11,10 +11,12 @@
 #import "packetMenu.h"
 #import "menuHandler.h"
 #import "menuButton.h"
+#import "tutorialMessages.h"
 
 @implementation packetButton
 +(void)onTouch: (SKSpriteNode*)obj scene:(SKScene*)s {
     [buttonAnimation changeState:obj changeName:@"packetsButtonTop" originalName:@"packetsButtonTop"];
+    [tutorialMessages firstTimePacktsButton:s.view];
     [packetMenu menuHandler:s inScene:true];
     [menuHandler setCurrentMenu:3];
     [menuHandler menuRemover:s];
