@@ -88,6 +88,7 @@
 		7571FB711DFB716D006E1E49 /* sweetShopUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 7571FB701DFB716D006E1E49 /* sweetShopUI.m */; };
 		7571FB741DFB7453006E1E49 /* sweetShopBackground.m in Sources */ = {isa = PBXBuildFile; fileRef = 7571FB731DFB7453006E1E49 /* sweetShopBackground.m */; };
 		7571FB771DFB77D2006E1E49 /* sweetScrollUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 7571FB761DFB77D2006E1E49 /* sweetScrollUI.m */; };
+		75754BEF1E2401FE0030D1BA /* tutorialMessages.m in Sources */ = {isa = PBXBuildFile; fileRef = 75754BEE1E2401FE0030D1BA /* tutorialMessages.m */; };
 		757695231E09AF9F0067ABBF /* sweetInventoryUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 757695221E09AF9F0067ABBF /* sweetInventoryUI.m */; };
 		757695261E09AFF10067ABBF /* sweetInventoryBackground.m in Sources */ = {isa = PBXBuildFile; fileRef = 757695251E09AFF10067ABBF /* sweetInventoryBackground.m */; };
 		757695291E0B2A860067ABBF /* sweetInventoryScrollUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 757695281E0B2A860067ABBF /* sweetInventoryScrollUI.m */; };
@@ -329,6 +330,8 @@
 		7571FB731DFB7453006E1E49 /* sweetShopBackground.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = sweetShopBackground.m; path = "Candy/Sweet Shop/sweetShopBackground.m"; sourceTree = "<group>"; };
 		7571FB751DFB77D2006E1E49 /* sweetScrollUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sweetScrollUI.h; sourceTree = "<group>"; };
 		7571FB761DFB77D2006E1E49 /* sweetScrollUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = sweetScrollUI.m; sourceTree = "<group>"; };
+		75754BED1E2401FE0030D1BA /* tutorialMessages.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = tutorialMessages.h; path = "Candy/Message System/tutorialMessages.h"; sourceTree = "<group>"; };
+		75754BEE1E2401FE0030D1BA /* tutorialMessages.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = tutorialMessages.m; path = "Candy/Message System/tutorialMessages.m"; sourceTree = "<group>"; };
 		757695211E09AF9F0067ABBF /* sweetInventoryUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = sweetInventoryUI.h; path = "Candy/Sweet Inventory/sweetInventoryUI.h"; sourceTree = "<group>"; };
 		757695221E09AF9F0067ABBF /* sweetInventoryUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = sweetInventoryUI.m; path = "Candy/Sweet Inventory/sweetInventoryUI.m"; sourceTree = "<group>"; };
 		757695241E09AFF10067ABBF /* sweetInventoryBackground.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = sweetInventoryBackground.h; path = "Candy/Sweet Inventory/sweetInventoryBackground.h"; sourceTree = "<group>"; };
@@ -546,6 +549,8 @@
 			children = (
 				750F2A371DF85B9D00A784F6 /* messageUI.h */,
 				750F2A381DF85B9D00A784F6 /* messageUI.m */,
+				75754BED1E2401FE0030D1BA /* tutorialMessages.h */,
+				75754BEE1E2401FE0030D1BA /* tutorialMessages.m */,
 			);
 			name = "Message System";
 			sourceTree = "<group>";
@@ -1363,6 +1368,7 @@
 				75712C151DFCE1EF00450342 /* packetSKUI.m in Sources */,
 				755B0D201E143BE100EBA428 /* sweetDrawUI.m in Sources */,
 				75C36DFC1DCCF77600F84214 /* main.m in Sources */,
+				75754BEF1E2401FE0030D1BA /* tutorialMessages.m in Sources */,
 				750F3A911DE64A65002AFB78 /* sweetnessSlider.m in Sources */,
 				75ED3B5B1E19647F0012BA98 /* gemInteractionUI.m in Sources */,
 				75E39AD01E0319FD003D7DD7 /* bonbonPacket.m in Sources */,

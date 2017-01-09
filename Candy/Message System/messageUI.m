@@ -9,9 +9,18 @@
 #import "messageUI.h"
 
 @implementation messageUI
-+(void)createMultipleMessageBoxes: (NSArray*)infoStrings corrispondingTextures:(NSArray*)textures uiview:(UIView*)v endMessageIDAt:(int)messageID displayOnce:(bool)displayOnce {
++(void)createMultipleMessageBoxes: (NSArray*)infoStrings corrispondingTextures:(NSArray*)textures textureScales:(NSArray*)scales uiview:(UIView*)v endMessageIDAt:(int)messageID displayOnce:(bool)displayOnce {
     for(int i = (int)([infoStrings count] - 1); i >= 0; i = i - 1){
-        [self createMessageBox:v information:[infoStrings objectAtIndex:i] representingImage:[textures objectAtIndex:i] imageScale:0.4 messageBoxID:messageID + i displayOnce:displayOnce];
+        NSString *infoString = [infoStrings objectAtIndex:i];
+        NSString *stringTexture = [textures objectAtIndex:i];
+        float scale = [[scales objectAtIndex:i] floatValue];
+        [self createMessageBox:v
+              information:infoString
+              representingImage:stringTexture
+              imageScale:scale
+              messageBoxID:messageID + i
+              displayOnce:displayOnce
+         ];
     }
 }
 +(void)createMessageBox: (UIView*)v information:(NSString*)contentText representingImage:(NSString*)imageTexture imageScale:(float)scale messageBoxID:(int)boxID displayOnce:(bool)displayOnce {
@@ -25,7 +34,7 @@
         [backdrop setImage:backgroundImage forState:UIControlStateNormal];
         [backdrop addTarget:self action:@selector(removeMessageOnPress:) forControlEvents:UIControlEventTouchUpInside];
     
-        UILabel *information = [[UILabel alloc] initWithFrame:CGRectMake(messageBox.frame.size.width/2 - v.frame.size.width/3 , messageBox.frame.size.height/2 - v.frame.size.height/8, v.frame.size.width/1.5, v.frame.size.height/2)];
+        UILabel *information = [[UILabel alloc] initWithFrame:CGRectMake(messageBox.frame.size.width/2 - v.frame.size.width/3 , messageBox.frame.size.height/2.5, v.frame.size.width/1.5, v.frame.size.height/2)];
     
         [information setFont:[UIFont fontWithName:@"Coder's-Crux" size:30.0f]];
         [information setText:contentText];
@@ -40,7 +49,7 @@
         float imageW = representingImage.size.width * scale;
         float imageH = representingImage.size.height * scale;
     
-        UIImageView *representingView = [[UIImageView alloc] initWithFrame:CGRectMake(messageBox.frame.size.width/2 - imageW/2, v.frame.size.   height/4, imageW, imageH)];
+        UIImageView *representingView = [[UIImageView alloc] initWithFrame:CGRectMake(messageBox.frame.size.width/2 - imageW/2, v.frame.size.   height/2.5 - imageH, imageW, imageH)];
         [representingView setImage:representingImage];
     
         backdrop.frame = CGRectMake(0, 0, messageBox.frame.size.width, messageBox.frame.size.height);

@@ -26,7 +26,7 @@
 #import "sweetShopUI.h"
 #import "sweetInventoryUI.h"
 #import "coinBarSprite.h"
-#import "messageUI.h"
+#import "tutorialMessages.h"
 
 UIScrollView* UIscrollUpdate = nil;
 UIImageView *img1 = nil;
@@ -38,6 +38,7 @@ UIImageView *img1 = nil;
     [backgroundManager mainScene:self];
     [mainUI drawUI:self];
     [levelDecider createLevel:self];
+    [tutorialMessages firstTimeLoadMessages:self.view];
     
     //scrollView(Update)
     UIscrollUpdate = [[UIScrollView alloc]initWithFrame:CGRectMake(self.view.frame.size.width / 19, self.view.frame.size.height / 4.2, 8.95*(self.view.frame.size.width /10), 2.38*(self.view.frame.size.height / 4))];

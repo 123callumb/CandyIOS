@@ -9,10 +9,12 @@
 #import "menuButton.h"
 #import "bottomBar.h"
 #import "packetButton.h"
+#import "tutorialMessages.h"
 
 @implementation menuButton
 +(void)onTouch: (SKSpriteNode*)obj scene:(SKScene*)s {
     SKAction *slideAway = [SKAction moveToY:obj.position.y + obj.size.height*2 duration:0.1];
+    [tutorialMessages firstTimeMenuButton:s.view];
     [bottomBar addBottomBar:s];
     [packetButton slideAway:s];
     [self addCloseButton:s];
