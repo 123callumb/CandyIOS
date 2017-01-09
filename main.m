@@ -25,6 +25,8 @@
 #import "flavourPicker.h"
 #import "sweetShopUI.h"
 #import "sweetInventoryUI.h"
+#import "coinBarSprite.h"
+#import "messageUI.h"
 
 UIScrollView* UIscrollUpdate = nil;
 UIImageView *img1 = nil;
@@ -44,7 +46,7 @@ UIImageView *img1 = nil;
     for(int i = 0; i<= 8; i++){
         [AddItem CreateItem:@"nil" buttonTexture:@"upgradeButton" yPos:i*(UIscrollUpdate.frame.size.width/4) Scene:UIscrollUpdate ID:i];
     }
-    [sweetShopUI addUIView:self.view];    
+    [sweetShopUI addUIView:self.view];
     }
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
@@ -77,6 +79,7 @@ UIImageView *img1 = nil;
 }
 
 -(void)update:(CFTimeInterval)currentTime {
-
+    //God i really hope this doesn't cause lag
+    [coinBarSprite updateText:self];
 }
 @end
