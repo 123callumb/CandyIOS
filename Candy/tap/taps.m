@@ -18,7 +18,6 @@
 #import "sweetnessSlider.h"
 #import "determineSweetTap.h"
 #import "fiftyTapBonus.h"
-#import "messageSprite.h"
 #import "box1.h"
 #import "sweetInventoryData.h"
 #import "gems.h"
@@ -28,17 +27,14 @@
 +(void)onPressed: (SKScene *)s location:(CGPoint)p {
     SKNode *obj = [s nodeAtPoint:p];
     if([menuHandler getCurrentMenu] == 4){
-        if(![messageSprite isMessageVisable]){
             [self randomTapTests];
             [coinBarSprite updateText:s];
             [fiftyTapBonus tapCollector:s];
             [fiftyTapBonus onTouchofBonus:(SKSpriteNode*)obj scene:s];
             [candyMachines onTouch:s];
-        }else {
-            [messageSprite removeAllMessageBoxes:s];
         }
-    }
 }
+
 +(void)onRelease: (SKScene*)s {
 
 }

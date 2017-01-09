@@ -11,7 +11,6 @@
 #import "sweetsButton.h"
 #import "coinButton.h"
 #import "menuBackButton.h"
-#import "messageSprite.h"
 #import "packetButton.h"
 #import "menuButton.h"
 
