@@ -35,7 +35,7 @@
     [s addChild:floor];
 }
 +(void)addBuildingType: (SKScene*)s {
-    SKSpriteNode *wall = [SKSpriteNode spriteNodeWithImageNamed:[buildingType getCurrentBuilding]];
+    SKSpriteNode *wall = [SKSpriteNode spriteNodeWithImageNamed:[buildingType getCurrentBuildingWall]];
     wall.size = CGSizeMake(s.frame.size.width, s.frame.size.height/3.5);
     wall.position = CGPointMake(0, s.frame.size.height/2-wall.frame.size.height/2);
     wall.zPosition = -4;
@@ -53,10 +53,10 @@
     if([buildingType getCurrentBuildingID] == 0){
         return 0.75;
     }
-    return 1;
+    return 0.75;
 }
 +(CGPoint)returnCharacterPosition: (SKScene*)s {
-    CGPoint pos = CGPointMake(0, 0);
+    CGPoint pos = CGPointMake(0, s.frame.size.height/7.4);
         if([buildingType getCurrentBuildingID] == 0){
             pos = CGPointMake(0, s.frame.size.height/7.4);
         }

@@ -9,18 +9,15 @@
 #import "buildingType.h"
 
 @implementation buildingType
-+(void)addBuildingTypes: (NSMutableArray*)floors {
-    [floors addObject:@"building_house"];//ID 0 for when pulling from else where etc...
-    [floors addObject:@"upgradedHouse_lvl_3"];//ID 1
++(void)addBuildingTypes: (NSMutableArray*)buildings {
+    [self addBuildingData:buildings interiorTexture:@"building_house" buildingTexture:@"starterHouse" onScreenName:@"Old House" buildingPrice:[NSNumber numberWithInt:0]];
+    [self addBuildingData:buildings interiorTexture:@"upgradedHouse_lvl_3" buildingTexture:@"newHouse" onScreenName:@"New House" buildingPrice:[NSNumber numberWithInt:20000]];
+        [self addBuildingData:buildings interiorTexture:@"upgradedHouse_lvl_3" buildingTexture:@"newHouse" onScreenName:@"New House 2" buildingPrice:[NSNumber numberWithInt:20000]];
 }
 +(NSArray*)getBuildingTypes {
     NSMutableArray *buildingType = [[NSMutableArray alloc] init];
     [self addBuildingTypes:buildingType];
     return buildingType;
-}
-+(NSString*)getCurrentBuilding {
-    int buildingID = [self getCurrentBuildingID];
-    return [[self getBuildingTypes] objectAtIndex:buildingID];
 }
 +(void)setCurrentBuildingID: (int)buildingID {
     NSUserDefaults *nd = [NSUserDefaults standardUserDefaults];
@@ -30,5 +27,67 @@
 +(int)getCurrentBuildingID {
     NSUserDefaults *nd = [NSUserDefaults standardUserDefaults];
     return (int)[nd integerForKey:@"building_ID"];
+}
++(void)addBuildingData:(NSMutableArray*)buildings interiorTexture:(NSString*)wallTexture buildingTexture:(NSString*)building onScreenName:(NSString*)name buildingPrice:(NSNumber*)price{
+    NSMutableDictionary *buildingData = [[NSMutableDictionary alloc] init];
+    [buildingData setObject:wallTexture forKey:@"building_wall"];
+    [buildingData setObject:building forKey:@"building_texture"];
+    [buildingData setObject:name forKey:@"building_name"];
+    [buildingData setObject:price forKey:@"building_price"];
+    [buildings addObject:buildingData];
+}
++(NSString*)getCurrentBuildingWall {
+    int buildingID = [self getCurrentBuildingID];
+    NSMutableDictionary *buildingData = [[self getBuildingTypes] objectAtIndex:buildingID];
+    NSString *wallTexture = [buildingData objectForKey:@"building_wall"];
+    return wallTexture;
+}
+
+//Yes I realise that all of these can be placed in one method due to the fact they all return string values but I will get round to that when it's rewrite time :P
+
++(NSString*)getCurrentBuilding {
+    int buildingID = [self getCurrentBuildingID];
+    NSMutableDictionary *buildingData = [[self getBuildingTypes] objectAtIndex:buildingID];
+    NSString *buildingTexture = [buildingData objectForKey:@"building_texture"];
+    return buildingTexture;
+}
++(NSString*)getCurrentBuildingName {
+    int buildingID = [self getCurrentBuildingID];
+    NSMutableDictionary *buildingData = [[self getBuildingTypes] objectAtIndex:buildingID];
+    NSString *buildingName = [buildingData objectForKey:@"building_name"];
+    return buildingName;
+}
++(NSString*)getNextBuildingName {
+    int buildingID = [self getCurrentBuildingID] + 1;
+    
+    if(buildingID <= [[self getBuildingTypes] count] - 1){
+        NSMutableDictionary *buildingData = [[self getBuildingTypes] objectAtIndex:buildingID];
+        NSString *buildingName = [buildingData objectForKey:@"building_name"];
+        return buildingName;
+    }
+    return @"No Further Upgrades";
+
+}
++(NSString*)getNextBuilding {
+    int buildingID = [self getCurrentBuildingID] + 1;
+    if(buildingID <= [[self getBuildingTypes] count] - 1){
+        NSMutableDictionary *buildingData = [[self getBuildingTypes] objectAtIndex:buildingID];
+        NSString *buildingName = [buildingData objectForKey:@"building_texture"];
+        return buildingName;
+    }
+    return @"emptyDraw";
+}
+
+//Yes these will be in their own method aswell okayyyyy ;)
+
++(int)getNextBuildingPrice {
+    int buildingID = [self getCurrentBuildingID] + 1;
+    if(buildingID <= [[self getBuildingTypes] count] - 1){
+        NSMutableDictionary *buildingData = [[self getBuildingTypes] objectAtIndex:buildingID];
+        NSNumber *buildingPriceNS = [buildingData objectForKey:@"building_price"];
+        int buildingPrice = [buildingPriceNS intValue];
+        return buildingPrice;
+    }
+    return 0;
 }
 @end
