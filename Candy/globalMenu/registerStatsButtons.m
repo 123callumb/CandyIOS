@@ -12,6 +12,8 @@
 #import "packetUIButtons.h"
 #import "gemGemeratorGui.h"
 #import "gemInteractionUI.h"
+#import "skUiItems.h"
+#import "buildingUpgradeUI.h"
 
 @implementation registerStatsButtons
 +(void)registerStatsButtons: (SKScene*)s location:(CGPoint)p node:(SKNode*)n view:(UIView*)v {
@@ -21,5 +23,8 @@
     [packetUIButtons onButtonPress:(SKSpriteNode*)n scene:s];
     [gemGemeratorGui onDoneTouch:(SKSpriteNode*)n scene:s];
     [gemInteractionUI onInteraction:(SKSpriteNode*)n pos:p];
+    [skUiItems onUpgTouch:v button:(SKSpriteNode*)n scene:s];
+    [buildingUpgradeUI onBackTouch:v button:(SKSpriteNode*)n scene:s];
+    [buildingUpgradeUI onUpgradeTouch:v button:(SKSpriteNode*)n scene:s];
 }
 @end

@@ -15,6 +15,7 @@
 #import "sweetDrawUI.h"
 #import "sweetInvSelectUI.h"
 #import "menuButton.h"
+#import "buildingUpgradeUI.h"
 
 @implementation menuHandler
 //The slide up thingy!
@@ -86,6 +87,7 @@ int currentMenu = 4;
         [self menuBringBacker:s];
         [sweetDrawUI removeMenu:v];
         [sweetInvSelectUI removeMenu:v];
+        [buildingUpgradeUI removeMenu:s];
         currentMenu = 4;
     }else if(currentMenu == 1){
         
@@ -100,7 +102,7 @@ int currentMenu = 4;
         currentMenu = 4;
         
     }else if(currentMenu == 3){
-                [menuButton reCreate:s];
+        [menuButton reCreate:s];
         [packetMenu menuHandler:s inScene:false];
         [self menuBringBacker:s];
         currentMenu = 4;

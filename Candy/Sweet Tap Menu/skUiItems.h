@@ -10,4 +10,5 @@
 
 @interface skUiItems : SKSpriteNode
 +(void)addSkUI: (SKSpriteNode*)s;
++(void)onUpgTouch: (UIView*)v button:(SKSpriteNode*)node scene:(SKScene*)s;
 @end

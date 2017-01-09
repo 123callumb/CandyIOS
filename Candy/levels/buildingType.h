@@ -9,6 +9,12 @@
 #import <SpriteKit/SpriteKit.h>
 
 @interface buildingType : SKSpriteNode
-+(NSString*)getCurrentBuilding;
++(void)setCurrentBuildingID: (int)buildingID;
 +(int)getCurrentBuildingID;
++(NSString*)getCurrentBuildingWall;
++(NSString*)getCurrentBuilding;
++(NSString*)getCurrentBuildingName;
++(NSString*)getNextBuildingName;
++(NSString*)getNextBuilding;
++(int)getNextBuildingPrice;
 @end

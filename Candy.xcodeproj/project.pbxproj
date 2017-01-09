@@ -65,6 +65,7 @@
 		75527A2C1DFF009B00D149C0 /* packetInventroySlot.m in Sources */ = {isa = PBXBuildFile; fileRef = 75527A2B1DFF009B00D149C0 /* packetInventroySlot.m */; };
 		75527A2F1DFF00D600D149C0 /* packetInventoryData.m in Sources */ = {isa = PBXBuildFile; fileRef = 75527A2E1DFF00D600D149C0 /* packetInventoryData.m */; };
 		75527A321E007ACA00D149C0 /* skPacketOpener.m in Sources */ = {isa = PBXBuildFile; fileRef = 75527A311E007ACA00D149C0 /* skPacketOpener.m */; };
+		75582AEB1E22E42900254C54 /* buildingUpgradeUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 75582AEA1E22E42900254C54 /* buildingUpgradeUI.m */; };
 		755ACB3C1DF0C9C5000DD9CB /* mapGui.m in Sources */ = {isa = PBXBuildFile; fileRef = 755ACB3B1DF0C9C5000DD9CB /* mapGui.m */; };
 		755ACB3F1DF1F781000DD9CB /* mapBuilding.m in Sources */ = {isa = PBXBuildFile; fileRef = 755ACB3E1DF1F781000DD9CB /* mapBuilding.m */; };
 		755ACB421DF32F51000DD9CB /* buildingGui.m in Sources */ = {isa = PBXBuildFile; fileRef = 755ACB411DF32F51000DD9CB /* buildingGui.m */; };
@@ -282,6 +283,8 @@
 		75527A2E1DFF00D600D149C0 /* packetInventoryData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = packetInventoryData.m; path = Candy/Packets/packetInventoryData.m; sourceTree = "<group>"; };
 		75527A301E007ACA00D149C0 /* skPacketOpener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = skPacketOpener.h; path = Candy/Packets/skPacketOpener.h; sourceTree = "<group>"; };
 		75527A311E007ACA00D149C0 /* skPacketOpener.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = skPacketOpener.m; path = Candy/Packets/skPacketOpener.m; sourceTree = "<group>"; };
+		75582AE91E22E42900254C54 /* buildingUpgradeUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = buildingUpgradeUI.h; path = "Candy/Building System/buildingUpgradeUI.h"; sourceTree = "<group>"; };
+		75582AEA1E22E42900254C54 /* buildingUpgradeUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = buildingUpgradeUI.m; path = "Candy/Building System/buildingUpgradeUI.m"; sourceTree = "<group>"; };
 		755ACB3A1DF0C9C5000DD9CB /* mapGui.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = mapGui.h; path = Candy/globalMenu/mapMenu/mapGui.h; sourceTree = "<group>"; };
 		755ACB3B1DF0C9C5000DD9CB /* mapGui.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = mapGui.m; path = Candy/globalMenu/mapMenu/mapGui.m; sourceTree = "<group>"; };
 		755ACB3D1DF1F781000DD9CB /* mapBuilding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = mapBuilding.h; path = Candy/globalMenu/mapMenu/mapBuilding.h; sourceTree = "<group>"; };
@@ -689,6 +692,15 @@
 			name = Fonts;
 			sourceTree = "<group>";
 		};
+		75582AE81E22E40500254C54 /* Building System */ = {
+			isa = PBXGroup;
+			children = (
+				75582AE91E22E42900254C54 /* buildingUpgradeUI.h */,
+				75582AEA1E22E42900254C54 /* buildingUpgradeUI.m */,
+			);
+			name = "Building System";
+			sourceTree = "<group>";
+		};
 		756AEAFC1E088B4D002CFA70 /* Gems System */ = {
 			isa = PBXGroup;
 			children = (
@@ -798,6 +810,7 @@
 		75C36DEE1DCCF77600F84214 = {
 			isa = PBXGroup;
 			children = (
+				75582AE81E22E40500254C54 /* Building System */,
 				75D2DA881E2044AF00E31D1E /* Coin Store */,
 				75D568841E1325B000349143 /* Sweet Tap Menu */,
 				75FCC5E11E08E5F30051CBA1 /* Sweet Inventory */,
@@ -1282,6 +1295,7 @@
 				7521F8C41DE0F66900F2AD76 /* slot.m in Sources */,
 				755B0D231E14514B00EBA428 /* drawSlotSelectorUI.m in Sources */,
 				755B0D261E14777800EBA428 /* drawInventorySelector.m in Sources */,
+				75582AEB1E22E42900254C54 /* buildingUpgradeUI.m in Sources */,
 				753D56CB1E06FD7600A6CBF8 /* lollyPacket.m in Sources */,
 				7571FB6D1DFB70D2006E1E49 /* sweetShop.m in Sources */,
 				753D56CE1E06FF2800A6CBF8 /* wrappedPacket.m in Sources */,
