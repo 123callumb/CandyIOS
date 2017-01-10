@@ -46,6 +46,14 @@
         output = @"OAK STATION";
     }else if([inputString isEqualToString:@"workstation_cloudedGlass"]){
         output = @"CLOUDED GLASS";
+    }else if([inputString isEqualToString:@"workstation_grey"]){
+        output = @"GREY STATION";
+    }else if([inputString isEqualToString:@"workstation_colours"]){
+        output = @"COLOURED GLASS";
+    }else if([inputString isEqualToString:@"workstation_tetris"]){
+        output = @"TETRIS STATION";
+    }else if([inputString isEqualToString:@"workstation_meme"]){
+        output = @"HARAMBE <3";
     }else {
         output = @"No Name";
     }
@@ -60,6 +68,14 @@
     }else if([inputString isEqualToString:@"workstation_wood"]){
         output = 3000;
     }else if([inputString isEqualToString:@"workstation_cloudedGlass"]){
+        output = 4000;
+    }else if([inputString isEqualToString:@"workstation_grey"]){
+        output = 5000;
+    }else if([inputString isEqualToString:@"workstation_colours"]){
+        output = 7500;
+    }else if([inputString isEqualToString:@"workstation_tetris"]){
+        output = 100000;
+    }else if([inputString isEqualToString:@"workstation_meme"]){
         output = 100000;
     }else {
         output = 0;
