@@ -11,8 +11,16 @@
 @implementation buildingType
 +(void)addBuildingTypes: (NSMutableArray*)buildings {
     [self addBuildingData:buildings interiorTexture:@"building_house" buildingTexture:@"starterHouse" onScreenName:@"Old House" buildingPrice:[NSNumber numberWithInt:0]];
-    [self addBuildingData:buildings interiorTexture:@"upgradedHouse_lvl_3" buildingTexture:@"newHouse" onScreenName:@"New House" buildingPrice:[NSNumber numberWithInt:20000]];
-        [self addBuildingData:buildings interiorTexture:@"upgradedHouse_lvl_3" buildingTexture:@"newHouse" onScreenName:@"New House 2" buildingPrice:[NSNumber numberWithInt:20000]];
+    [self addBuildingData:buildings interiorTexture:@"upgradedHouse_lvl_2" buildingTexture:@"house_lvl_3" onScreenName:@"New House" buildingPrice:[NSNumber numberWithInt:20000]];
+    [self addBuildingData:buildings interiorTexture:@"upgradedHouse_lvl_1" buildingTexture:@"newHouse" onScreenName:@"Nice House" buildingPrice:[NSNumber numberWithInt:40000]];
+    [self addBuildingData:buildings interiorTexture:@"upgradedHouse_lvl_3" buildingTexture:@"house_lvl_4" onScreenName:@"Big House" buildingPrice:[NSNumber numberWithInt:80000]];
+    [self addBuildingData:buildings interiorTexture:@"upgradedHouse_lvl_2" buildingTexture:@"cityOffice_lvl_1" onScreenName:@"Small City Office" buildingPrice:[NSNumber numberWithInt:160000]];
+    [self addBuildingData:buildings interiorTexture:@"upgradedHouse_lvl_1" buildingTexture:@"cityOffice_lvl_2" onScreenName:@"City Office" buildingPrice:[NSNumber numberWithInt:320000]];
+    [self addBuildingData:buildings interiorTexture:@"upgradedHouse_lvl_3" buildingTexture:@"cityOffice_lvl_3" onScreenName:@"Large City Office" buildingPrice:[NSNumber numberWithInt:640000]];
+    [self addBuildingData:buildings interiorTexture:@"upgradedHouse_lvl_2" buildingTexture:@"factory_lvl_1" onScreenName:@"Small Factory" buildingPrice:[NSNumber numberWithInt:1200000]];
+    [self addBuildingData:buildings interiorTexture:@"upgradedHouse_lvl_1" buildingTexture:@"factory_lvl_2" onScreenName:@"Factory" buildingPrice:[NSNumber numberWithInt:2400000]];
+    [self addBuildingData:buildings interiorTexture:@"upgradedHouse_lvl_3" buildingTexture:@"factory_lvl_3" onScreenName:@"Large Factory" buildingPrice:[NSNumber numberWithInt:4800000]];
+
 }
 +(NSArray*)getBuildingTypes {
     NSMutableArray *buildingType = [[NSMutableArray alloc] init];

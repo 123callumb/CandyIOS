@@ -13,6 +13,9 @@
 +(void)addDeskTypes: (NSMutableArray*)desks {
     [desks addObject:@"desk_wood"]; //ID 0 for when pulling from else where etc...
     [desks addObject:@"desk_grey"];  //ID 1
+    [desks addObject:@"desk_polished"]; 
+    [desks addObject:@"black_desk"];
+    [desks addObject:@"desk_king"];
 }
 +(NSArray*)getDeskTypes {
     NSMutableArray *deskTypes = [[NSMutableArray alloc] init];

@@ -21,7 +21,7 @@
 }
 +(void)addMainMenu: (UIView*)v {
     UIScrollView *menuScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, v.frame.size.width, v.frame.size.height)];
-    menuScrollView.contentSize = CGSizeMake(v.frame.size.width, v.frame.size.height*2.3);
+    menuScrollView.contentSize = CGSizeMake(v.frame.size.width, v.frame.size.height*2);
     [self addMenuButtons:menuScrollView];
     [v addSubview:menuScrollView];
 }
@@ -31,8 +31,8 @@
 }
 +(void)addMenuButtons: (UIScrollView*)v {
     [self createButton:v textureName:@"floorsButton" buttonID:0];
-    [self createButton:v textureName:@"desksButtonTemp" buttonID:1];
-    [self createButton:v textureName:@"workstationsButtonTemp" buttonID:2];
+    [self createButton:v textureName:@"desksButton" buttonID:1];
+    [self createButton:v textureName:@"workstationsButton" buttonID:2];
     [self createButton:v textureName:@"hatsButtonTemp" buttonID:3];
     [self createButton:v textureName:@"shirtsButtonTemp" buttonID:4];
     [self createButton:v textureName:@"pantsButtonTemp" buttonID:5];

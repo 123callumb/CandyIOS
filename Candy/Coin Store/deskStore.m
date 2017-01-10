@@ -44,6 +44,12 @@
         output = @"WOODEN DESK";
     }else if([inputString isEqualToString:@"desk_grey"]){
         output = @"GREY DESK";
+    }else if([inputString isEqualToString:@"desk_polished"]){
+        output = @"POLISHED DESK";
+    }else if([inputString isEqualToString:@"black_desk"]){
+        output = @"METAL DESK";
+    }else if([inputString isEqualToString:@"desk_king"]){
+        output = @"RICH OAK";
     }else {
         output = @"No Name";
     }
@@ -57,6 +63,12 @@
         output = 0;
     }else if([inputString isEqualToString:@"desk_grey"]){
         output = 2500;
+    }else if([inputString isEqualToString:@"desk_polished"]){
+        output = 5000;
+    }else if([inputString isEqualToString:@"black_desk"]){
+        output = 7500;
+    }else if([inputString isEqualToString:@"desk_king"]){
+        output = 50000;
     }else {
         output = 0;
     }

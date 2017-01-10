@@ -15,6 +15,10 @@
     [workstations addObject:@"workstation_box"]; //ID 0 for when pulling from else where etc...
     [workstations addObject:@"workstation_wood"];  //ID 1
     [workstations addObject:@"workstation_cloudedGlass"];
+    [workstations addObject:@"workstation_grey"];
+    [workstations addObject:@"workstation_colours"];
+    [workstations addObject:@"workstation_tetris"];
+    [workstations addObject:@"workstation_meme"];
 }
 +(NSArray*)getWorkstationTypes {
     NSMutableArray *workstationTypes = [[NSMutableArray alloc] init];
