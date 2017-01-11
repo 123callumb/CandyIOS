@@ -11,6 +11,7 @@
 #import "coinSpawner.h"
 #import "box1.h"
 #import "gems.h"
+#import "gemAnimations.h"
 
 @implementation fiftyTapBonus
 int tapCollector = 0;
@@ -26,11 +27,11 @@ int tapCollector = 0;
     }
 }
 +(void)createRandomSweetBonus:(int)sweetSlotID scene:(SKScene*)s {
-    SKSpriteNode *sweet = [defaultSweet addSweet:s pos:CGPointMake(0, 0) slotID:sweetSlotID];
+    SKSpriteNode *sweet = [SKSpriteNode spriteNodeWithImageNamed:@"tempPresent"];
     sweet.alpha = 0;
-    sweet.xScale = 0.3;
-    sweet.yScale = 0.3;
-    sweet.name = @"bonusSweet";
+    sweet.xScale = 0.2;
+    sweet.yScale = 0.2;
+    sweet.name = @"bonusPresent";
     [s addChild:sweet];
     SKAction *fadeIn = [SKAction fadeInWithDuration:0.2];
     SKAction *scaleIn = [SKAction scaleTo:0.6 duration:0.2];
@@ -44,13 +45,16 @@ int tapCollector = 0;
     [sweet runAction:lauch];
 }
 +(void)onTouchofBonus:(SKSpriteNode*)obj scene:(SKScene*)s {
-    if([obj.name isEqualToString:@"bonusSweet"]){
-        int lowerBound = 5;
-        int upperBound = 70;
+    if([obj.name isEqualToString:@"bonusPresent"]){
+        int lowerBound = 1;
+        int upperBound = 100;
         int rndValue = lowerBound + arc4random() % (upperBound - lowerBound);
-        [gems addGems:1];
-        [coinSpawner coinExplosion:obj scene:s coinAmount:rndValue];
-
+        if(rndValue > 96){
+            [gemAnimations miniGemExplosion:obj scene:s];
+        }else {
+            [coinSpawner coinExplosion:obj scene:s];
+        }
     }
 }
+
 @end

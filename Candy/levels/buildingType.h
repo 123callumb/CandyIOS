@@ -16,5 +16,6 @@
 +(NSString*)getCurrentBuildingName;
 +(NSString*)getNextBuildingName;
 +(NSString*)getNextBuilding;
++(NSArray*)getBuildingTypes;
 +(int)getNextBuildingPrice;
 @end

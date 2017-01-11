@@ -52,6 +52,8 @@
 		7525F7C71DD287A400B0510C /* pixel.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7525F7B21DD232E600B0510C /* pixel.ttf */; };
 		7525F7CC1DD2931900B0510C /* coders_crux.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7525F7CB1DD2931900B0510C /* coders_crux.ttf */; };
 		75270FCB1DE50B8600E7588F /* flavourPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 75270FCA1DE50B8600E7588F /* flavourPicker.m */; };
+		752CC6D21E26CAAD00C6FB31 /* gemAnimations.m in Sources */ = {isa = PBXBuildFile; fileRef = 752CC6D11E26CAAD00C6FB31 /* gemAnimations.m */; };
+		752CC6D51E26CB3300C6FB31 /* bonusAmounts.m in Sources */ = {isa = PBXBuildFile; fileRef = 752CC6D41E26CB3300C6FB31 /* bonusAmounts.m */; };
 		753060CF1E19B99C004D7757 /* confirmGemSale.m in Sources */ = {isa = PBXBuildFile; fileRef = 753060CE1E19B99C004D7757 /* confirmGemSale.m */; };
 		753D2EEF1E1FE7960043F33C /* dynamicBackgrounds.m in Sources */ = {isa = PBXBuildFile; fileRef = 753D2EEE1E1FE7960043F33C /* dynamicBackgrounds.m */; };
 		753D2EF51E2031BC0043F33C /* coinStoreScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 753D2EF41E2031BC0043F33C /* coinStoreScene.m */; };
@@ -258,6 +260,10 @@
 		7525F7CB1DD2931900B0510C /* coders_crux.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = coders_crux.ttf; path = Candy/fonts/coders_crux.ttf; sourceTree = "<group>"; };
 		75270FC91DE50B8600E7588F /* flavourPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = flavourPicker.h; path = Candy/inventory/flavourPicker.h; sourceTree = "<group>"; };
 		75270FCA1DE50B8600E7588F /* flavourPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = flavourPicker.m; path = Candy/inventory/flavourPicker.m; sourceTree = "<group>"; };
+		752CC6D01E26CAAD00C6FB31 /* gemAnimations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = gemAnimations.h; path = "Candy/Gems System/gemAnimations.h"; sourceTree = "<group>"; };
+		752CC6D11E26CAAD00C6FB31 /* gemAnimations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = gemAnimations.m; path = "Candy/Gems System/gemAnimations.m"; sourceTree = "<group>"; };
+		752CC6D31E26CB3300C6FB31 /* bonusAmounts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = bonusAmounts.h; path = Candy/tap/bonusAmounts.h; sourceTree = "<group>"; };
+		752CC6D41E26CB3300C6FB31 /* bonusAmounts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = bonusAmounts.m; path = Candy/tap/bonusAmounts.m; sourceTree = "<group>"; };
 		753060CD1E19B99C004D7757 /* confirmGemSale.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = confirmGemSale.h; path = "Candy/Sweet Inventory/confirmGemSale.h"; sourceTree = "<group>"; };
 		753060CE1E19B99C004D7757 /* confirmGemSale.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = confirmGemSale.m; path = "Candy/Sweet Inventory/confirmGemSale.m"; sourceTree = "<group>"; };
 		753D2EED1E1FE7960043F33C /* dynamicBackgrounds.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dynamicBackgrounds.h; path = Candy/levels/dynamicBackgrounds.h; sourceTree = "<group>"; };
@@ -662,6 +668,8 @@
 				750F3A931DE68167002AFB78 /* determineSweetTap.m */,
 				750F2A331DF77FF400A784F6 /* fiftyTapBonus.h */,
 				750F2A341DF77FF400A784F6 /* fiftyTapBonus.m */,
+				752CC6D31E26CB3300C6FB31 /* bonusAmounts.h */,
+				752CC6D41E26CB3300C6FB31 /* bonusAmounts.m */,
 			);
 			name = tap;
 			sourceTree = "<group>";
@@ -713,6 +721,8 @@
 				756AEAFE1E088B76002CFA70 /* gems.m */,
 				756AEB001E0890C7002CFA70 /* uiGemLabel.h */,
 				756AEB011E0890C7002CFA70 /* uiGemLabel.m */,
+				752CC6D01E26CAAD00C6FB31 /* gemAnimations.h */,
+				752CC6D11E26CAAD00C6FB31 /* gemAnimations.m */,
 			);
 			name = "Gems System";
 			sourceTree = "<group>";
@@ -1260,6 +1270,7 @@
 				755B0D1A1E1415FF00EBA428 /* sweetDrawSlots.m in Sources */,
 				753D56D71E07572800A6CBF8 /* confirmPurchase.m in Sources */,
 				75527A2C1DFF009B00D149C0 /* packetInventroySlot.m in Sources */,
+				752CC6D21E26CAAD00C6FB31 /* gemAnimations.m in Sources */,
 				758C52531E2295870054D864 /* deskStore.m in Sources */,
 				61E1837F1DEDE45A0034C021 /* Character_Maker.m in Sources */,
 				756C31261DF4D0B20017FBE9 /* buttonCreator.m in Sources */,
@@ -1349,6 +1360,7 @@
 				753D2EEF1E1FE7960043F33C /* dynamicBackgrounds.m in Sources */,
 				7565B0A41DF6CA7400390278 /* sweetTypeUI.m in Sources */,
 				756C31231DF34F7F0017FBE9 /* coinSpawner.m in Sources */,
+				752CC6D51E26CB3300C6FB31 /* bonusAmounts.m in Sources */,
 				7525F7C51DD25C9100B0510C /* combo.m in Sources */,
 				75ED3B5E1E19897D0012BA98 /* gemPotData.m in Sources */,
 				75E8F1981DD7969500A421E7 /* statsMenu.m in Sources */,
