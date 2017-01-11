@@ -65,7 +65,7 @@
     }];
 }
 +(void)addStatsLabels: (SKSpriteNode*)s {
-    int slotOutputInt = ([inventory slotCalculation:1] + [inventory slotCalculation:2] + [inventory slotCalculation:3] + [inventory slotCalculation:4]);
+    int slotOutputInt = 0;
     
     NSString *slotToString = [NSString stringWithFormat:@"%d", slotOutputInt];
     
@@ -77,7 +77,7 @@
     slotOutput.position = CGPointMake(0, -s.frame.size.height/6);
     
     
-    [s addChild:slotOutput];
+    //[s addChild:slotOutput];
 }
 +(void)addPlayerButton: (SKSpriteNode*)s {
     SKSpriteNode *pSButton = [SKSpriteNode spriteNodeWithImageNamed:@"playerStatsIcon"];
