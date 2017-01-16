@@ -14,6 +14,7 @@
 #import "gemInteractionUI.h"
 #import "skUiItems.h"
 #import "buildingUpgradeUI.h"
+#import "spinWheel.h"
 
 @implementation registerStatsButtons
 +(void)registerStatsButtons: (SKScene*)s location:(CGPoint)p node:(SKNode*)n view:(UIView*)v {
@@ -26,5 +27,6 @@
     [skUiItems onUpgTouch:v button:(SKSpriteNode*)n scene:s];
     [buildingUpgradeUI onBackTouch:v button:(SKSpriteNode*)n scene:s];
     [buildingUpgradeUI onUpgradeTouch:v button:(SKSpriteNode*)n scene:s];
+    [spinWheel onNotifTouch:(SKSpriteNode*)n scene:s];
 }
 @end

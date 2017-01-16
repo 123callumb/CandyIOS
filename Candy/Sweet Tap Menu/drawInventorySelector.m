@@ -22,7 +22,7 @@
     drawSlotsUi.backgroundColor = [UIColor clearColor];
 
     
-    if([[sweetInventoryData getInventory] count] >= 1){
+    if([[sweetInventoryData getInventory] count] >= 1 && [sweetInventoryData getInventory] != nil){
         drawSlotsUi.contentSize = CGSizeMake(drawSlotsUi.frame.size.width, (drawSlotsUi.frame.size.width/2)*(([[sweetInventoryData getInventory] count]+1)/2));
         for(int i = 0; i <= [[sweetInventoryData getInventory] count] - 1; i++){
             [self createSlot:drawSlotsUi slotNo:i];
