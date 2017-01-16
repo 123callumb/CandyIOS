@@ -65,6 +65,7 @@ int drawSelected = 0;
 }
 +(NSMutableDictionary*)getSweetDataAtSlot: (int)slotID {
     NSMutableArray *invAray = [self getDraw];
+    if(invAray != NULL){
     NSNumber *slotData = [invAray objectAtIndex:slotID];
     int slotNo = (int)[slotData integerValue];
     NSMutableDictionary *sweetData;
@@ -74,6 +75,8 @@ int drawSelected = 0;
         sweetData = [sweetInventoryData getSweetDataAtSlot:slotNo];
     }
     return sweetData;
+    }
+    return NULL;
 }
 +(void)removeObject: (int)slotID {
     NSMutableArray *draw = [self getDraw];
