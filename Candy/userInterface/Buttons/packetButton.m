@@ -10,25 +10,17 @@
 #import "buttonAnimation.h"
 #import "packetMenu.h"
 #import "menuHandler.h"
+#import "menuButton.h"
+#import "tutorialMessages.h"
 
 @implementation packetButton
-+(void)addButton: (SKScene*)s {
-
-    SKSpriteNode *buttonDunno = [SKSpriteNode spriteNodeWithImageNamed:@"packetButton"];
-    buttonDunno.name = @"buttonPacket";
-    buttonDunno.anchorPoint = CGPointMake(0.5, 0.5);
-    buttonDunno.position = CGPointMake(s.frame.size.width/2.5, s.frame.size.height/2.3);
-    buttonDunno.xScale = 0.45;
-    buttonDunno.yScale = 0.42;
-    buttonDunno.zPosition = 11;
-    [s addChild:buttonDunno];
-
-}
 +(void)onTouch: (SKSpriteNode*)obj scene:(SKScene*)s {
-    [buttonAnimation changeState:obj changeName:@"packetButtonPressured" originalName:@"packetButton"];
+    [buttonAnimation changeState:obj changeName:@"packetsButtonTop" originalName:@"packetsButtonTop"];
+    [tutorialMessages firstTimePacktsButton:s.view];
     [packetMenu menuHandler:s inScene:true];
     [menuHandler setCurrentMenu:3];
     [menuHandler menuRemover:s];
+    [menuButton slideAwayMenu:s];
     SKAction *slideAway = [SKAction moveToY:obj.position.y + obj.size.height*2 duration:0.1];
     [obj runAction:slideAway];
 }
@@ -36,5 +28,12 @@
     SKSpriteNode *button = (SKSpriteNode*)[s childNodeWithName:@"buttonPacket"];
     SKAction *slideDown = [SKAction moveToY:button.position.y - button.size.height*2 duration:0.1];
     [button runAction:slideDown];
+
+}
++(void)slideAway: (SKScene*)s  {
+    SKSpriteNode *button = (SKSpriteNode*)[s childNodeWithName:@"buttonPacket"];
+
+    SKAction *slideAway = [SKAction moveToY:button.position.y + button.size.height*2 duration:0.1];
+    [button runAction:slideAway];
 }
 @end

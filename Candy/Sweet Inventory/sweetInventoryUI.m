@@ -14,8 +14,6 @@
 
 +(void)createUI: (UIView*)v {
     UIView *main = [[UIView alloc] initWithFrame:CGRectMake(0, 0, v.frame.size.width, v.frame.size.height)];
-    
-    main.hidden = true;
     main.tag = 4000;
     
     [sweetInventoryBackground addItems:main];
@@ -24,15 +22,14 @@
     [v addSubview:main];
 }
 +(void)showSweetInventoryUI:(UIView*)v {
-    UIView *ui = (UIView*)[v viewWithTag:4000];
-    if(ui.hidden == true){
-        ui.hidden = false;
-    }else {
         [self createUI:v];
-    }
 }
 +(void)hideSweetInventoryUI: (UIView*)v {
     UIView *ui = (UIView*)[v viewWithTag:4000];
     [ui removeFromSuperview];
+}
++(void)refreshView: (UIView*)v {
+    [self hideSweetInventoryUI:v];
+    [self showSweetInventoryUI:v];
 }
 @end

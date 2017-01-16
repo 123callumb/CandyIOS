@@ -11,5 +11,5 @@
 @interface menuBackButton : SKSpriteNode
 +(void)createButton:(SKScene*)s;
 +(void)removeButton:(SKScene*)s;
-+(void)onTouch: (SKNode*)n currentScene:(SKScene*)s;
++(void)onTouch: (SKNode*)n currentScene:(SKScene*)s view:(UIView*)v;
 @end

@@ -12,6 +12,8 @@
 #import "mapScene.h"
 #import "sweetShop.h"
 #import "packetsScene.h"
+#import "coinStoreScene.h"
+#import "spinScene.h"
 
 //Everytime we want to change scene if we use this method it will make it easier, we can also add certain scene transitions easier this way!
 
@@ -24,6 +26,8 @@
     mapScene *mapMain;
     sweetShop *sweetShopUI;
     packetsScene *packetSK;
+    coinStoreScene *coinStore;
+    spinScene *spinSK;
 }
 
 +(void)switchScene: (SKScene *)s1 sceneTwo: (NSString *)scene2 Transition:(SKTransition *)tran{
@@ -44,6 +48,10 @@
         s2 = [[sweetShop alloc] initWithSize:s1.size];
     }else if([scene2 isEqual:@"packetScene"]){
         s2 = [[packetsScene alloc] initWithSize:s1.size];
+    }else if([scene2 isEqual:@"coinStore"]){
+        s2 = [[coinStoreScene alloc] initWithSize:s1.size];
+    }else if([scene2 isEqual:@"dailySpin"]){
+        s2 = [[spinScene alloc] initWithSize:s1.size];
     }
     s2.scaleMode = SKSceneScaleModeAspectFill;
     

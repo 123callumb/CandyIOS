@@ -9,5 +9,5 @@
 #import <SpriteKit/SpriteKit.h>
 
 @interface buttonHandler : SKScene
-+(void)registerButtons:(SKNode *)obj currentScene:(SKScene *)s;
++(void)registerButtons:(SKNode *)obj currentScene:(SKScene *)s view:(UIView*)v;
 @end

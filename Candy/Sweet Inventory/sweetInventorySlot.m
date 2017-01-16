@@ -8,6 +8,8 @@
 
 #import "sweetInventorySlot.h"
 #import "sweetInventoryData.h"
+#import "itemUI.h"
+#import "sweetValueCalculation.h"
 
 @implementation sweetInventorySlot
 +(void)addSlots: (UIScrollView*)v {
@@ -26,44 +28,74 @@
     
     UIView *slot = [[UIView alloc] initWithFrame:CGRectMake([self getSlotX:slotNo slotWidth:v.frame.size.width/3.8],
                                                             [self getSlotY:slotNo slotHeight:v.frame.size.width/3.68],
-                                                            v.frame.size.height/4.5, v.frame.size.height/4.5)];
+                                                            v.frame.size.height/4, v.frame.size.height/4)];
     
     UIButton *sweet = [UIButton buttonWithType:UIButtonTypeCustom];
     UIImage *slotBgImage = [UIImage imageNamed:slotBackgroundName];
     UIImageView *slotBg = [[UIImageView alloc] initWithImage:slotBgImage];
     UIImage *sweetTeture = [UIImage imageNamed:textureName];
+    UIImage *ptTeture = [UIImage imageNamed:@"ptLabel"];
+    UIImageView *ptBg = [[UIImageView alloc] initWithImage:ptTeture];
+
     
     float sweetWidth = slot.frame.size.width/1.5;
     float sweetHeight = slot.frame.size.height/1.5;
     
     slotBg.frame = CGRectMake(0, 0, slot.frame.size.width, slot.frame.size.height);
-    sweet.frame = CGRectMake(slot.frame.size.width/2 - sweetWidth/2, slot.frame.size.height/2 - sweetHeight/1.5, sweetWidth, sweetHeight);
+    ptBg.frame = CGRectMake(0, 0, slot.frame.size.width, slot.frame.size.height);
+    sweet.frame = CGRectMake(slot.frame.size.width/2 - sweetWidth/2, slot.frame.size.height/2 - sweetHeight/1.4, sweetWidth, sweetHeight);
     
+    UILabel *perTapValue = [[UILabel alloc] initWithFrame:CGRectMake(0, slot.frame.size.height/4.5, slot.frame.size.width, ptBg.frame.size
+                                                                     .height)];
+    sweet.tag = 4500 + slotNo;
     [sweet setImage:sweetTeture forState:UIControlStateNormal];
+    
+    [perTapValue setFont:[UIFont fontWithName:@"Coder's-Crux" size:20]];
+    [perTapValue setText:[NSString stringWithFormat:@"%dPT", [sweetValueCalculation calculateTextureValue:textureName]]];
+    [perTapValue setTextColor:[UIColor blackColor]];
+    [perTapValue setTextAlignment:NSTextAlignmentCenter];
+    
+    SEL onPress = @selector(onSweetPress:);
+    
+    [sweet addTarget:self action:onPress forControlEvents:UIControlEventTouchUpInside];
     
     [slot addSubview:slotBg];
     [slot addSubview:sweet];
+    [ptBg addSubview:perTapValue];
+    [slot addSubview:ptBg];
     
     [v addSubview:slot];
     
 }
 
++(void)onSweetPress: (id)sender {
+    UIButton *sweet = (UIButton*)sender;
+    UIView *ui = [sweet superview];
+    UIScrollView *v1 = (UIScrollView*)[ui superview];
+    UIView *v = [v1 superview];
+    
+    int slotNumber = (int) (sweet.tag - 4500);
+    [itemUI createNewItemUi:v slotId:slotNumber];
+
+}
+
 +(NSString*)getSlotBackgroundImage: (NSString*)t {
     if([t isEqualToString:@"Grey"]){
-        return @"greySlotBgR";
+        return @"greyBox";
     }
     if([t isEqualToString:@"Blue"]){
-        return @"blueSlotBgR";
+        return @"blueBox";
     }
     if([t isEqualToString:@"Red"]){
-        return @"redSlotBgR";
+        return @"redBox";
     }
     if([t isEqualToString:@"Yellow"]){
-        return @"yellowSlotBgR";
-    }else return @"greySlotBgR";
+        return @"yellowBox";
+    }else return @"greyBox";
 }
+
 +(float)getSlotY: (int)slotNo slotHeight:(float)slotH {
-    float ss = slotH/16;
+    float ss = 0;
     for(int i = 0; i <= slotNo; i = i + 4){
         if(slotNo == i){
             return 0 + ss;

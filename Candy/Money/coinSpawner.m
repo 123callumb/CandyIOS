@@ -9,6 +9,7 @@
 #import "coinSpawner.h"
 #import "money.h"
 #import "inventory.h"
+#import "bonusAmounts.h"
 
 @implementation coinSpawner
 +(void)spriteToSpriteSpawner: (SKSpriteNode*)s1 sprite2:(SKSpriteNode*)s2 scene:(SKScene*)s {
@@ -32,9 +33,11 @@
         [coin removeFromParent];
     }];
 }
-+(void)coinExplosion: (SKSpriteNode*)s1 scene:(SKScene*)s coinAmount:(int)coinNo {
++(void)coinExplosion: (SKSpriteNode*)s1 scene:(SKScene*)s {
     
-    if([s1.name isEqualToString:@"bonusSweet"]){
+    int coinNo = [bonusAmounts calculateCoinReturn];
+    
+    if([s1.name isEqualToString:@"bonusPresent"]){
         s1.name = @"bonusUsed";
     
         SKAction *fadeOutt = [SKAction fadeOutWithDuration:0.2];
@@ -74,9 +77,8 @@
                                 [coin removeFromParent];
             }];
         }];
-            [coin runAction:shrinkCoin];
-        int addedBal = [inventory slotCalculation:1] + [inventory slotCalculation:2] + [inventory slotCalculation:3] + [inventory slotCalculation:4];
-        [money addBalance:addedBal];
+        [coin runAction:shrinkCoin];
+        [money addBalance:coinNo];
     }
 }
 @end

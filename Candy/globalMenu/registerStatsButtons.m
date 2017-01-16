@@ -10,6 +10,11 @@
 #import "statsMenuButtons.h"
 #import "playerStatsMenu.h"
 #import "packetUIButtons.h"
+#import "gemGemeratorGui.h"
+#import "gemInteractionUI.h"
+#import "skUiItems.h"
+#import "buildingUpgradeUI.h"
+#import "spinWheel.h"
 
 @implementation registerStatsButtons
 +(void)registerStatsButtons: (SKScene*)s location:(CGPoint)p node:(SKNode*)n view:(UIView*)v {
@@ -17,5 +22,11 @@
     [playerStatsMenu onDoneTouch:(SKSpriteNode*)n scene:s];
     [playerStatsMenu onPlayerButtonTouch:s location:p node:n];
     [packetUIButtons onButtonPress:(SKSpriteNode*)n scene:s];
+    [gemGemeratorGui onDoneTouch:(SKSpriteNode*)n scene:s];
+    [gemInteractionUI onInteraction:(SKSpriteNode*)n pos:p];
+    [skUiItems onUpgTouch:v button:(SKSpriteNode*)n scene:s];
+    [buildingUpgradeUI onBackTouch:v button:(SKSpriteNode*)n scene:s];
+    [buildingUpgradeUI onUpgradeTouch:v button:(SKSpriteNode*)n scene:s];
+    [spinWheel onNotifTouch:(SKSpriteNode*)n scene:s];
 }
 @end

@@ -12,6 +12,7 @@
 @implementation sweetInventoryBackground
 
 +(void)addItems: (UIView*)v {
+    [self addInvBackground:v];
     [self addHeader:v];
     [self addBackBar:v];
     [self addBackButton:v];
@@ -45,5 +46,10 @@
     UIView *v = [v1 superview];
     [sweetInventoryUI hideSweetInventoryUI:v];
 }
-
++(void)addInvBackground: (UIView*)v {
+     UIImageView *scrollUI = [[UIImageView alloc] initWithFrame:CGRectMake(0, v.frame.size.height/4.5, v.frame.size.width, v.frame.size.height - v.frame.size.height/4.5 - v.frame.size.height/6)];
+    UIImage *bgimg = [UIImage imageNamed:@"invBG"];
+    [scrollUI setImage:bgimg];
+    [v addSubview:scrollUI];
+}
 @end

@@ -12,6 +12,10 @@
 #import "upgradeMenu.h"
 #import "coinButton.h"
 #import "packetMenu.h"
+#import "sweetDrawUI.h"
+#import "sweetInvSelectUI.h"
+#import "menuButton.h"
+#import "buildingUpgradeUI.h"
 
 @implementation menuHandler
 //The slide up thingy!
@@ -20,12 +24,35 @@ int currentMenu = 4;
 +(int)getCurrentMenu {
     return currentMenu;
 }
-
++(void)addTopButtons:(SKScene*)s {
+    [self addPacketButton:s];
+    [self addMenuButton:s];
+}
++(void)addMenuButton: (SKScene*)s {
+    SKSpriteNode *menuButton = [SKSpriteNode spriteNodeWithImageNamed:@"menuButtonTop"];
+    menuButton.xScale = 0.6;
+    menuButton.yScale = 0.6;
+    menuButton.position = CGPointMake(-s.frame.size.width/2 + menuButton.frame.size.width/2, s.frame.size.height/2.2);
+    menuButton.zPosition = 14;
+    menuButton.name = @"buttonMenu";
+    [s addChild:menuButton];
+}
++(void)addPacketButton: (SKScene*)s {
+    SKSpriteNode *packetButton = [SKSpriteNode spriteNodeWithImageNamed:@"packetsButtonTop"];
+    packetButton.xScale = 0.6;
+    packetButton.yScale = 0.6;
+    packetButton.zPosition = 14;
+    packetButton.position = CGPointMake(s.frame.size.width/2 - packetButton.frame.size.width/2, s.frame.size.height/2.2);
+    packetButton.name = @"buttonPacket";
+    [s addChild:packetButton];
+}
 +(void)menuRemover:(SKScene*)s {
     
-    SKSpriteNode *coinButton = (SKSpriteNode*)[s childNodeWithName:@"buttonMoney"];
-    SKSpriteNode *invButton = (SKSpriteNode*)[s childNodeWithName:@"buttonInventory"];
-    SKSpriteNode *storeButton = (SKSpriteNode*)[s childNodeWithName:@"buttonSweets"];
+    SKSpriteNode *bottomBar = (SKSpriteNode*)[s childNodeWithName:@"bottomBar"];
+    
+    SKSpriteNode *coinButton = (SKSpriteNode*)[bottomBar childNodeWithName:@"buttonMoney"];
+    SKSpriteNode *invButton = (SKSpriteNode*)[bottomBar childNodeWithName:@"buttonInventory"];
+    SKSpriteNode *storeButton = (SKSpriteNode*)[bottomBar childNodeWithName:@"buttonSweets"];
     
     SKAction *slideToDaRight = [SKAction moveByX:s.frame.size.width y:0 duration:0.1];
     SKAction *waitABitLovie = [SKAction waitForDuration:0.1];
@@ -39,10 +66,11 @@ int currentMenu = 4;
     
 }
 +(void)menuBringBacker:(SKScene*)s {
+    SKSpriteNode *bottomBar = (SKSpriteNode*)[s childNodeWithName:@"bottomBar"];
     
-    SKSpriteNode *coinButton = (SKSpriteNode*)[s childNodeWithName:@"buttonMoney"];
-    SKSpriteNode *invButton = (SKSpriteNode*)[s childNodeWithName:@"buttonInventory"];
-    SKSpriteNode *storeButton = (SKSpriteNode*)[s childNodeWithName:@"buttonSweets"];
+    SKSpriteNode *coinButton = (SKSpriteNode*)[bottomBar childNodeWithName:@"buttonMoney"];
+    SKSpriteNode *invButton = (SKSpriteNode*)[bottomBar childNodeWithName:@"buttonInventory"];
+    SKSpriteNode *storeButton = (SKSpriteNode*)[bottomBar childNodeWithName:@"buttonSweets"];
     
     SKAction *slideToDaLeft = [SKAction moveByX:-s.frame.size.width y:0 duration:0.2];
     SKAction *waitABitLovie = [SKAction waitForDuration:0.1];
@@ -53,10 +81,13 @@ int currentMenu = 4;
         [storeButton runAction:slideToDaLeft];
     }];
 }
-+(void)closeMenu:(SKScene*)s {
++(void)closeMenu:(SKScene*)s view:(UIView*)v{
     if(currentMenu == 0){
         [inventoryMenu menuActions:s inScene:false];
         [self menuBringBacker:s];
+        [sweetDrawUI removeMenu:v];
+        [sweetInvSelectUI removeMenu:v];
+        [buildingUpgradeUI removeMenu:s];
         currentMenu = 4;
     }else if(currentMenu == 1){
         
@@ -71,7 +102,7 @@ int currentMenu = 4;
         currentMenu = 4;
         
     }else if(currentMenu == 3){
-        
+        [menuButton reCreate:s];
         [packetMenu menuHandler:s inScene:false];
         [self menuBringBacker:s];
         currentMenu = 4;

@@ -25,11 +25,11 @@
 #import "flavourPicker.h"
 #import "sweetShopUI.h"
 #import "sweetInventoryUI.h"
+#import "coinBarSprite.h"
+#import "tutorialMessages.h"
 
 UIScrollView* UIscrollUpdate = nil;
 UIImageView *img1 = nil;
-UIScrollView* sTUI = nil;
-UIScrollView* sFUI = nil;
 @implementation main
 
 -(void)didMoveToView:(SKView *)view {
@@ -38,16 +38,7 @@ UIScrollView* sFUI = nil;
     [backgroundManager mainScene:self];
     [mainUI drawUI:self];
     [levelDecider createLevel:self];
-    
-    
-    //scrollview(inventory)
-    sTUI = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width/1.44, -self.view.frame.size.height/2.82)];
-    [sweetTypeUI addMethodsToView:sTUI scene:self.view];
-    [self.view addSubview:sTUI];
-    
-    sFUI = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width/1.44, -self.view.frame.size.height/2.82)];
-    [flavourPicker addFlavourPickerToView:sFUI scene:self.view];
-    [self.view addSubview:sFUI];
+    [tutorialMessages firstTimeLoadMessages:self.view];
     
     //scrollView(Update)
     UIscrollUpdate = [[UIScrollView alloc]initWithFrame:CGRectMake(self.view.frame.size.width / 19, self.view.frame.size.height / 4.2, 8.95*(self.view.frame.size.width /10), 2.38*(self.view.frame.size.height / 4))];
@@ -57,20 +48,16 @@ UIScrollView* sFUI = nil;
         [AddItem CreateItem:@"nil" buttonTexture:@"upgradeButton" yPos:i*(UIscrollUpdate.frame.size.width/4) Scene:UIscrollUpdate ID:i];
     }
     [sweetShopUI addUIView:self.view];
-    [sweetInventoryUI createUI:self.view];
-    
     }
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     UITouch *tap = [touches anyObject];
     CGPoint loc = [tap locationInNode:self];
     SKNode *obj = [self nodeAtPoint:loc];
-    if(loc.y >= -470){
-    [candyMachines onTouch:obj];
-    }
+
     [upgradeMenu SwitchingMenu:self node:obj];
     [taps onPressed:self location:loc];
-    [buttonHandler registerButtons:obj currentScene:self];
+    [buttonHandler registerButtons:obj currentScene:self view:self.view];
     [registerBoxes registerBoxes:obj currentScene:self];
     [registerStatsButtons registerStatsButtons:self location:loc node:obj view:self.view];
     [upgradeMenu onTouch:obj scene:self];
@@ -93,6 +80,7 @@ UIScrollView* sFUI = nil;
 }
 
 -(void)update:(CFTimeInterval)currentTime {
-
+    //God i really hope this doesn't cause lag
+    [coinBarSprite updateText:self];
 }
 @end

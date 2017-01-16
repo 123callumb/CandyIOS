@@ -9,7 +9,7 @@
 #import <SpriteKit/SpriteKit.h>
 
 @interface packetButton : SKSpriteNode
-+(void)addButton: (SKScene*)s;
 +(void)onTouch: (SKSpriteNode*)obj scene:(SKScene*)s;
 +(void)reCreate: (SKScene*)s;
++(void)slideAway: (SKScene*)obj;
 @end

@@ -11,19 +11,21 @@
 #import "inventoryButton.h"
 #import "menuBackButton.h"
 #import "slotManager.h"
+#import "skUiItems.h"
 
 @implementation inventoryMenu
 
 bool created = false;
 
-+(void)menuActions: (SKScene *)s inScene:(bool)in {
++(void)menuActions: (SKScene *)s inScene:(bool)in{
 
     SKSpriteNode *main = (SKSpriteNode *)[menuBacking createBacking];
     main.position = CGPointMake(0, -s.frame.size.height);
     main.name = @"menuInventory";
-    [slotManager addSlots:main];
-    [s addChild:main];
     
+    [skUiItems addSkUI:main];
+    [s addChild:main];
+
     SKSpriteNode *main_ = (SKSpriteNode*)[s childNodeWithName:@"menuInventory"];
     
     if(in){

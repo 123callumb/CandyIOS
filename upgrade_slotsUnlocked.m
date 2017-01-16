@@ -9,7 +9,7 @@
 //
 
 #import "upgrade_slotsUnlocked.h"
-#import "box1.h"
+#import "sweetDrawData.h"
 
 @implementation upgrade_slotsUnlocked
 
@@ -21,7 +21,7 @@
     [self calculateMoney:i text:txtMoney];
 }
 +(void)whenPressed:(long)upgradePro{
-    if(upgradePro < 5)[box1 setUnlockedSlots:(int)(upgradePro+1)];
+    if(upgradePro < 5)[sweetDrawData setDrawsUnlocked:(int)(upgradePro)];
 }
 +(void)calculateMoney:(double)i text:(UILabel*)txt{
     double money = 1000 * (exp(i));

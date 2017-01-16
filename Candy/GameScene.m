@@ -11,6 +11,7 @@
 #import "mainTransition.h"
 #import "main.h"
 #import "Character_Maker.h"
+#import "gems.h"
 
 @implementation GameScene {
     
@@ -24,8 +25,7 @@
     
     //Set Background, Foreground etc..
     [backgroundManager splashScene:self];
-    NSLog(@"test");
-    
+    [gems addGems:10];
     //Add Scene Extras
     //This can be moved to a custom delay method, but is it worth it?
     
@@ -40,6 +40,7 @@
         [self runAction:splashTime completion:^{
             [mainTransition switchScene:self sceneTwo:@"main" Transition:[SKTransition crossFadeWithDuration:1]];
         }];
+        
     }
 }
 

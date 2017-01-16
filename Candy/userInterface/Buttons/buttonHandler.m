@@ -11,14 +11,14 @@
 #import "sweetsButton.h"
 #import "coinButton.h"
 #import "menuBackButton.h"
-#import "messageSprite.h"
 #import "packetButton.h"
+#import "menuButton.h"
 
 @implementation buttonHandler
-+(void)registerButtons:(SKNode *)obj currentScene:(SKScene *)s {
++(void)registerButtons:(SKNode *)obj currentScene:(SKScene *)s view:(UIView*)v{
     
     if([obj.name isEqualToString:@"buttonInventory"]){
-        [inventoryButton onTouch:obj cs:s];
+        [inventoryButton onTouch:obj cs:s view:v];
     }
     
     if([obj.name isEqualToString:@"buttonSweets"]){
@@ -29,10 +29,18 @@
         [coinButton touched:obj cs:s];
     }
     if([obj.name isEqualToString:@"buttonBack"]){
-        [menuBackButton onTouch:obj currentScene:s];
+        [menuBackButton onTouch:obj currentScene:s view:v];
     }
     if([obj.name isEqualToString:@"buttonPacket"]){
         [packetButton onTouch:(SKSpriteNode*)obj scene:s];
     }
+    if([obj.name isEqualToString:@"buttonMenu"]){
+        [menuButton onTouch:(SKSpriteNode*)obj scene:s];
+    }
+    if([obj.name isEqualToString:@"closeButton"]){
+        [menuButton onCloseButton:(SKSpriteNode*)obj scene:s];
+        [packetButton reCreate:s];
+    }
+
 }
 @end

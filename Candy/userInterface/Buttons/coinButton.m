@@ -14,12 +14,12 @@
 @implementation coinButton
 bool isCoinBusy = false;
 
-+(void)addButton: (SKScene *)s {
++(void)addButton: (SKSpriteNode *)s {
     SKSpriteNode *buttonMoney = [SKSpriteNode spriteNodeWithImageNamed:@"moneyButton"];
     buttonMoney.anchorPoint = CGPointMake(0.5, 0.5);
-    buttonMoney.position = CGPointMake(-buttonMoney.size.width/2.1, -s.frame.size.height/2.25);
+    buttonMoney.position = CGPointMake(-buttonMoney.size.width/2.1, s.frame.size.height/4.2);
     buttonMoney.xScale = 0.45;
-    buttonMoney.yScale = 0.45;
+    buttonMoney.yScale = 0.33;
     buttonMoney.zPosition = 11;
     buttonMoney.name = @"buttonMoney";
     [s addChild:buttonMoney];

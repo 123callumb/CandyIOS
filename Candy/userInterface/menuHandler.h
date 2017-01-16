@@ -11,8 +11,9 @@
 @interface menuHandler : SKSpriteNode
 +(void)menuRemover:(SKScene*)s;
 +(void)menuBringBacker:(SKScene*)s;
-+(void)closeMenu:(SKScene*)s;
++(void)closeMenu:(SKScene*)s view:(UIView*)v;
 +(void)setCurrentMenu: (int)num;
 +(int)getCurrentMenu;
 +(void)refreshMenuSystem: (SKScene*)s;
++(void)addTopButtons:(SKScene*)s;
 @end

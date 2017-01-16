@@ -10,5 +10,5 @@
 
 @interface coinSpawner : SKSpriteNode
 +(void)spriteToSpriteSpawner: (SKSpriteNode*)s1 sprite2:(SKSpriteNode*)s2 scene:(SKScene*)s;
-+(void)coinExplosion: (SKSpriteNode*)s1 scene:(SKScene*)s coinAmount:(int)coinNo;
++(void)coinExplosion: (SKSpriteNode*)s1 scene:(SKScene*)s;
 @end

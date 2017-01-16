@@ -9,6 +9,6 @@
 #import <SpriteKit/SpriteKit.h>
 
 @interface inventoryButton : SKSpriteNode
-+(void)addButton: (SKScene *)s;
-+(void)onTouch: (SKNode *)b cs:(SKScene *)s;
++(void)addButton: (SKSpriteNode *)s;
++(void)onTouch: (SKNode *)b cs:(SKScene *)s view:(UIView*)v;
 @end
