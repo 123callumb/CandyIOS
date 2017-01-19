@@ -9,5 +9,7 @@
 #import <SpriteKit/SpriteKit.h>
 
 @interface spinBox : SKSpriteNode
-
++(void)createPrizeBox: (SKScene*)s;
++(void)updateBox: (SKScene*)s;
++(void)setFinalOutcome: (NSString*)str;
 @end

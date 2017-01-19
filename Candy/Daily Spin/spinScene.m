@@ -9,11 +9,12 @@
 #import "spinScene.h"
 #import "spinWheel.h"
 #import "sparks.h"
+#import "spinBox.h"
 
 @implementation spinScene
 
 bool spinTaken = false;
-NSString *finalOutcome;
+int count = 0;
 
 -(void)didMoveToView:(SKView *)view {
     
@@ -55,13 +56,19 @@ NSString *finalOutcome;
 
     
 }
--(void)update:(NSTimeInterval)currentTime {
-   
+-(void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     SKSpriteNode *tapMeter = (SKSpriteNode*)[self childNodeWithName:@"meterScale"];
-
-    if(tapMeter.position.y > -self.frame.size.height/3.8){
-        spinTaken = true;
+    
+        if(tapMeter.position.y > -self.frame.size.height/3.8){
+            spinTaken = true;
     }
+    
+    if(spinTaken){
+        [spinBox createPrizeBox:self];
+    }
+}
+-(void)update:(NSTimeInterval)currentTime {
+        [spinBox updateBox:self];
 }
 -(void)afterSpin: (SKScene*)s {
     
@@ -72,24 +79,22 @@ NSString *finalOutcome;
         for(int i = 0; i <= [spritesAtPoint count] - 1; i++){
             SKSpriteNode *node = [spritesAtPoint objectAtIndex:i];
             
-            if([node.name isEqualToString:@"coin"]){
-                [self setFinalOutcome:@"coin"];
-            }
-            if([node.name isEqualToString:@"gem"]){
-                [self setFinalOutcome:@"gem"];
+                if([node.name isEqualToString:@"coin"]){
+                    [spinBox setFinalOutcome:@"coin"];
+                    NSLog(@"coin");
+                }
+                if([node.name isEqualToString:@"gem"]){
+                    [spinBox setFinalOutcome:@"gem"];
+                    NSLog(@"gem");
+                }
+                if([node.name isEqualToString:@"miniGem"]){
+                    [spinBox setFinalOutcome:@"miniGems"];
+                    NSLog(@"miniGem");
+                }
 
-            }
-            if([node.name isEqualToString:@"miniGem"]){
-                [self setFinalOutcome:@"miniGem"];
-            }
-            
         }
     }
 }
--(void)setFinalOutcome: (NSString*)str {
-    finalOutcome = str;
-}
-+(NSString*)getFinalOutcome {
-    return finalOutcome;
-}
+
+
 @end
