@@ -8,16 +8,19 @@
 
 #import "spinWheel.h"
 #import "mainTransition.h"
+#import "spinData.h"
 
 @implementation spinWheel
 +(void)addDailySpinNotification: (SKScene*)s {
-    SKSpriteNode *wheel = [SKSpriteNode spriteNodeWithImageNamed:@"wheelSpinNotification"];
-    wheel.xScale = 0.45;
-    wheel.yScale = 0.45;
-    wheel.position = CGPointMake(s.frame.size.width/2 - wheel.frame.size.width/2, s.frame.size.height/2 - s.frame.size.height/6);
-    wheel.zPosition = -1;
-    wheel.name = @"dailySpinNotifWheel";
-    [s addChild:wheel];
+    if([spinData isEligibleForDailySpin] == true){
+        SKSpriteNode *wheel = [SKSpriteNode spriteNodeWithImageNamed:@"wheelSpinNotification"];
+        wheel.xScale = 0.45;
+        wheel.yScale = 0.45;
+        wheel.position = CGPointMake(s.frame.size.width/2 - wheel.frame.size.width/2, s.frame.size.height/2 - s.frame.size.height/6);
+        wheel.zPosition = -1;
+        wheel.name = @"dailySpinNotifWheel";
+        [s addChild:wheel];
+    }
 }
 +(void)onNotifTouch: (SKSpriteNode*)node scene:(SKScene*)s{
     if([node.name isEqualToString:@"dailySpinNotifWheel"]){
@@ -38,8 +41,6 @@
     [self addTapScale:s];
     [self addTapMeter:s];
     [self addWheelHolder:s];
-
-
 }
 +(void)addWheelHolder: (SKScene*)s {
     SKSpriteNode *holder = [SKSpriteNode spriteNodeWithImageNamed:@"spinWheelPart"];

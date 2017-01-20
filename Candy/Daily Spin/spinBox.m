@@ -11,6 +11,7 @@
 #import "mainTransition.h"
 #import "money.h"
 #import "gems.h"
+#import "spinData.h"
 @implementation spinBox
 
 NSString *finalOutcome = @"gem";
@@ -79,6 +80,6 @@ NSString *finalOutcome = @"gem";
         [gems addMiniGems:10];
     }
     [mainTransition switchScene:s sceneTwo:@"main" Transition:[SKTransition fadeWithColor:[SKColor blackColor] duration:2.5]];
-    
+    [spinData setCurrentDate];
 }
 @end
