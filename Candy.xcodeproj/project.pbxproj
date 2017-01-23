@@ -9,9 +9,8 @@
 /* Begin PBXBuildFile section */
 		615C34E91DF6D42900F1B3E2 /* AddItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 615C34E81DF6D42900F1B3E2 /* AddItem.m */; };
 		615C34EC1DF6E0DB00F1B3E2 /* scrollUpdate.m in Sources */ = {isa = PBXBuildFile; fileRef = 615C34EB1DF6E0DB00F1B3E2 /* scrollUpdate.m */; };
-		6182EAA71DF8BD2900590FA4 /* upgrade_moneyPerSecond.m in Sources */ = {isa = PBXBuildFile; fileRef = 6182EAA61DF8BD2900590FA4 /* upgrade_moneyPerSecond.m */; };
 		618EA38C1DF1ED4C00D07ADD /* candyMachines.m in Sources */ = {isa = PBXBuildFile; fileRef = 618EA38B1DF1ED4C00D07ADD /* candyMachines.m */; };
-		61A7DE851DF8C068004C2F71 /* upgrade_slotsUnlocked.m in Sources */ = {isa = PBXBuildFile; fileRef = 61A7DE841DF8C068004C2F71 /* upgrade_slotsUnlocked.m */; };
+		61D0BCF81E365BAC00EA940C /* upgrades.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D0BCF71E365BAC00EA940C /* upgrades.m */; };
 		61E1837F1DEDE45A0034C021 /* Character_Maker.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E1837E1DEDE45A0034C021 /* Character_Maker.m */; };
 		61E183861DEE00E30034C021 /* Character.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E183851DEE00E30034C021 /* Character.m */; };
 		61E183891DEE13490034C021 /* skinColour.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E183881DEE13490034C021 /* skinColour.m */; };
@@ -189,12 +188,10 @@
 		615C34E81DF6D42900F1B3E2 /* AddItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddItem.m; sourceTree = "<group>"; };
 		615C34EA1DF6E0DB00F1B3E2 /* scrollUpdate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = scrollUpdate.h; sourceTree = "<group>"; };
 		615C34EB1DF6E0DB00F1B3E2 /* scrollUpdate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = scrollUpdate.m; sourceTree = "<group>"; };
-		6182EAA51DF8BD2900590FA4 /* upgrade_moneyPerSecond.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = upgrade_moneyPerSecond.h; sourceTree = "<group>"; };
-		6182EAA61DF8BD2900590FA4 /* upgrade_moneyPerSecond.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = upgrade_moneyPerSecond.m; sourceTree = "<group>"; };
 		618EA38A1DF1ED4C00D07ADD /* candyMachines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = candyMachines.h; path = Candy/candyMachines.h; sourceTree = "<group>"; };
 		618EA38B1DF1ED4C00D07ADD /* candyMachines.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = candyMachines.m; path = Candy/candyMachines.m; sourceTree = "<group>"; };
-		61A7DE831DF8C068004C2F71 /* upgrade_slotsUnlocked.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = upgrade_slotsUnlocked.h; sourceTree = "<group>"; };
-		61A7DE841DF8C068004C2F71 /* upgrade_slotsUnlocked.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = upgrade_slotsUnlocked.m; sourceTree = "<group>"; };
+		61D0BCF61E365BAC00EA940C /* upgrades.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = upgrades.h; sourceTree = "<group>"; };
+		61D0BCF71E365BAC00EA940C /* upgrades.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = upgrades.m; sourceTree = "<group>"; };
 		61E1837D1DEDE45A0034C021 /* Character_Maker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Character_Maker.h; sourceTree = "<group>"; };
 		61E1837E1DEDE45A0034C021 /* Character_Maker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Character_Maker.m; sourceTree = "<group>"; };
 		61E183841DEE00E30034C021 /* Character.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Character.h; sourceTree = "<group>"; };
@@ -522,24 +519,14 @@
 		6109D29D1DF7576E00257CDB /* Update Menu */ = {
 			isa = PBXGroup;
 			children = (
-				61851C751DF9A35D00E133E6 /* Upgrades */,
+				61D0BCF61E365BAC00EA940C /* upgrades.h */,
+				61D0BCF71E365BAC00EA940C /* upgrades.m */,
 				615C34EA1DF6E0DB00F1B3E2 /* scrollUpdate.h */,
 				615C34EB1DF6E0DB00F1B3E2 /* scrollUpdate.m */,
 				615C34E71DF6D42900F1B3E2 /* AddItem.h */,
 				615C34E81DF6D42900F1B3E2 /* AddItem.m */,
 			);
 			name = "Update Menu";
-			sourceTree = "<group>";
-		};
-		61851C751DF9A35D00E133E6 /* Upgrades */ = {
-			isa = PBXGroup;
-			children = (
-				6182EAA51DF8BD2900590FA4 /* upgrade_moneyPerSecond.h */,
-				6182EAA61DF8BD2900590FA4 /* upgrade_moneyPerSecond.m */,
-				61A7DE831DF8C068004C2F71 /* upgrade_slotsUnlocked.h */,
-				61A7DE841DF8C068004C2F71 /* upgrade_slotsUnlocked.m */,
-			);
-			name = Upgrades;
 			sourceTree = "<group>";
 		};
 		618EA38D1DF1ED5700D07ADD /* Candy_Machines */ = {
@@ -1337,7 +1324,6 @@
 				75B7C6AB1E32A59C00D01EB5 /* trendsMain.m in Sources */,
 				756C31261DF4D0B20017FBE9 /* buttonCreator.m in Sources */,
 				753D56C81E06E50B00A6CBF8 /* packetContentManager.m in Sources */,
-				61A7DE851DF8C068004C2F71 /* upgrade_slotsUnlocked.m in Sources */,
 				75E8F1891DD3A57200A421E7 /* sweet.m in Sources */,
 				615C34EC1DF6E0DB00F1B3E2 /* scrollUpdate.m in Sources */,
 				75FCC5E71E0975FD0051CBA1 /* inventoryDataHandler.m in Sources */,
@@ -1420,7 +1406,6 @@
 				7525F7941DD08C9D00B0510C /* coinBarSprite.m in Sources */,
 				752002451E11B2FB00C2AC11 /* itemUI.m in Sources */,
 				75270FCB1DE50B8600E7588F /* flavourPicker.m in Sources */,
-				6182EAA71DF8BD2900590FA4 /* upgrade_moneyPerSecond.m in Sources */,
 				75D2B32D1E22AA5C0095C533 /* workstationStore.m in Sources */,
 				753D2EEF1E1FE7960043F33C /* dynamicBackgrounds.m in Sources */,
 				7565B0A41DF6CA7400390278 /* sweetTypeUI.m in Sources */,
@@ -1447,6 +1432,7 @@
 				755B0D201E143BE100EBA428 /* sweetDrawUI.m in Sources */,
 				75D01FEE1E36AD60004F8F0F /* trendsChart.m in Sources */,
 				75C36DFC1DCCF77600F84214 /* main.m in Sources */,
+				61D0BCF81E365BAC00EA940C /* upgrades.m in Sources */,
 				75754BEF1E2401FE0030D1BA /* tutorialMessages.m in Sources */,
 				75D01FF11E36B103004F8F0F /* trendsData.m in Sources */,
 				75784D4E1E282F4200C41067 /* spinWheel.m in Sources */,

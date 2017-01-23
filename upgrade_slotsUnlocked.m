@@ -11,14 +11,29 @@
 #import "upgrade_slotsUnlocked.h"
 #import "sweetDrawData.h"
 
-@implementation upgrade_slotsUnlocked
+NSInteger moneyValues[7];
 
-+(void)setTextures:(UIImageView*)box text:(UILabel*)txt{
+@implementation upgrade_slotsUnlocked
++(void)setTextures:(UIImageView*)box text:(UILabel*)txt id:(double)i{
     [box setImage:[UIImage imageNamed:@"slotsUnlocked"]];
     txt.text = @"Slots Unlocked";
+    moneyValues[0] = 10;
+    moneyValues[1] = 16;
+    moneyValues[2] = 49;
+    moneyValues[3] = 105;
+    moneyValues[4] = 250;
+    moneyValues[5] = 500;
+    moneyValues[6] = 1000;
 }
 +(void)whenPressed:(long)upgradePro{
-    if(upgradePro < 5)[sweetDrawData setDrawsUnlocked:(int)(upgradePro)];
+    if(upgradePro < 8)[sweetDrawData setDrawsUnlocked:(int)(upgradePro)];
+}
++(void)fetchMoney:(long)upgradeVal text:(UILabel*)txt{
+    if(upgradeVal < 7){
+        long money = moneyValues[upgradeVal];
+        txt.text = [NSString stringWithFormat:@"%ld",money];
+    }
+    else [txt setText:@"COMPLETE"];
 }
 
 @end
