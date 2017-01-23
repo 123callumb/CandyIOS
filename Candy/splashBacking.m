@@ -19,7 +19,6 @@
     splash.xScale = 0.9;
     splash.yScale= 0.9;
     [scene addChild:splash];
-    NSLog(@"test2");
 }
 
 @end
