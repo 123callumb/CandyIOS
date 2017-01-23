@@ -20,7 +20,7 @@ int drawSelected = 0;
 }
 +(void)setDrawsUnlocked: (int)amount {
     NSUserDefaults *nd = [NSUserDefaults standardUserDefaults];
-    [nd setInteger:[self getDrawsUnlocked]+amount forKey:@"drawsUnlocked"];
+    [nd setInteger:[self getDrawsUnlocked]+1 forKey:@"drawsUnlocked"];
 }
 +(NSMutableArray*)getDraw {
     

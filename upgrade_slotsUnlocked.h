@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface upgrade_slotsUnlocked : UIImageView
-+(void)setTextures:(UIImageView*)box text:(UILabel*)txt money:(UILabel*)txtMoney id:(double)i;
++(void)setTextures:(UIImageView*)box text:(UILabel*)txt id:(double)i;
 +(void)whenPressed:(long)upgradePro;
-+(void)calculateMoney:(double)i text:(UILabel*)txt;
++(void)fetchMoney:(long)upgradeVal text:(UILabel*)txt;
 @end

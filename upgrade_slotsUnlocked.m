@@ -11,28 +11,29 @@
 #import "upgrade_slotsUnlocked.h"
 #import "sweetDrawData.h"
 
+NSInteger moneyValues[7];
+
 @implementation upgrade_slotsUnlocked
-
-
-
-+(void)setTextures:(UIImageView*)box text:(UILabel*)txt money:(UILabel*)txtMoney id:(double)i{
++(void)setTextures:(UIImageView*)box text:(UILabel*)txt id:(double)i{
     [box setImage:[UIImage imageNamed:@"slotsUnlocked"]];
     txt.text = @"Slots Unlocked";
-    [self calculateMoney:i text:txtMoney];
+    moneyValues[0] = 10;
+    moneyValues[1] = 16;
+    moneyValues[2] = 49;
+    moneyValues[3] = 105;
+    moneyValues[4] = 250;
+    moneyValues[5] = 500;
+    moneyValues[6] = 1000;
 }
 +(void)whenPressed:(long)upgradePro{
-    if(upgradePro < 5)[sweetDrawData setDrawsUnlocked:(int)(upgradePro)];
+    if(upgradePro < 8)[sweetDrawData setDrawsUnlocked:(int)(upgradePro)];
 }
-+(void)calculateMoney:(double)i text:(UILabel*)txt{
-    double money = 1000 * (exp(i));
-    //NSLog(@"%f",money);
-    [txt removeFromSuperview];
-    txt.text = @ "OIOIOI";
-    NSLog(@"%@", @"MONEY$$$");
-    NSLog(@"%f", money);
-    //jess was ere xoxoxoxo :* ;)
-    //hi calljm i am hacking u
-    
++(void)fetchMoney:(long)upgradeVal text:(UILabel*)txt{
+    if(upgradeVal < 7){
+        long money = moneyValues[upgradeVal];
+        txt.text = [NSString stringWithFormat:@"%ld",money];
+    }
+    else [txt setText:@"COMPLETE"];
 }
 
 @end
