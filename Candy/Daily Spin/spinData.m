@@ -10,15 +10,11 @@
 
 @implementation spinData
 +(BOOL)isEligibleForDailySpin {
-    
     if ([NSDate date] > [self getLastCurrentDate]) {
-        NSLog(@"%@", [NSDate date]);
-        NSLog(@"%@", [self getLastCurrentDate]);
             return true;
     }else {
             return false;
     }
-
 }
 +(void)setCurrentDate {
     NSDateComponents *day = [[NSDateComponents alloc] init];

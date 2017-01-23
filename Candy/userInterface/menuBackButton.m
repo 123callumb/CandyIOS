@@ -11,6 +11,7 @@
 #import "menuHandler.h"
 #import "quickSelectUI.h"
 
+
 @implementation menuBackButton
 +(void)createButton:(SKScene*)s {
     SKSpriteNode *buttonBack = [SKSpriteNode spriteNodeWithImageNamed:@"backButton"];
@@ -40,6 +41,7 @@
     SKAction *waitFam = [SKAction waitForDuration:0.15];
     [n runAction:waitFam completion:^{
         [self removeButton:s];
+        
         [menuHandler closeMenu:s view:v];
         [quickSelectUI removeUI:v];
     }];

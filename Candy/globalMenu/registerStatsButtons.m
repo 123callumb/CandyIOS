@@ -15,6 +15,7 @@
 #import "skUiItems.h"
 #import "buildingUpgradeUI.h"
 #import "spinWheel.h"
+#import "trendsButton.h"
 
 @implementation registerStatsButtons
 +(void)registerStatsButtons: (SKScene*)s location:(CGPoint)p node:(SKNode*)n view:(UIView*)v {
@@ -28,5 +29,6 @@
     [buildingUpgradeUI onBackTouch:v button:(SKSpriteNode*)n scene:s];
     [buildingUpgradeUI onUpgradeTouch:v button:(SKSpriteNode*)n scene:s];
     [spinWheel onNotifTouch:(SKSpriteNode*)n scene:s];
+    [trendsButton  onTrendBarTouch:v node:(SKSpriteNode*)n];
 }
 @end
