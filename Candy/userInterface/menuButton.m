@@ -25,7 +25,6 @@
 +(void)reCreate: (SKScene*)s {
     SKSpriteNode *button = (SKSpriteNode*)[s childNodeWithName:@"buttonMenu"];
     SKAction *slideDown = [SKAction moveToY:button.position.y - button.size.height*2 duration:0.1];
-    NSLog(@"we get here");
     [button runAction:slideDown];
     
 }
