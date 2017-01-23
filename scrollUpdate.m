@@ -24,6 +24,4 @@
     UIScrollView *updateView = (UIScrollView*)[v viewWithTag:1];
     updateView.hidden = true;
 }
-
-
 @end
