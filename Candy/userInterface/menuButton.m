@@ -10,6 +10,7 @@
 #import "bottomBar.h"
 #import "packetButton.h"
 #import "tutorialMessages.h"
+#import "trendsButton.h"
 
 @implementation menuButton
 +(void)onTouch: (SKSpriteNode*)obj scene:(SKScene*)s {
@@ -18,6 +19,7 @@
     [bottomBar addBottomBar:s];
     [packetButton slideAway:s];
     [self addCloseButton:s];
+    [trendsButton createTrendsButton:s];
     [obj runAction:slideAway];
 }
 +(void)reCreate: (SKScene*)s {
@@ -47,6 +49,7 @@
     SKAction *slideAway = [SKAction moveToY:obj.position.y + obj.size.height*2 duration:0.1];
     [bottomBar removeBar:s];
     [self reCreate:s];
+    [trendsButton removeTrendsButton:s];
     [obj runAction:slideAway];
 }
 +(void)slideAwayMenu: (SKScene*)s  {

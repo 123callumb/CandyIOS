@@ -119,6 +119,8 @@
 		75B5264B1E1ECD2B0020A609 /* levelWorkstations.m in Sources */ = {isa = PBXBuildFile; fileRef = 75B5264A1E1ECD2B0020A609 /* levelWorkstations.m */; };
 		75B6A1331DFB8E0E00ED922C /* backButtonSweetShop.m in Sources */ = {isa = PBXBuildFile; fileRef = 75B6A1321DFB8E0E00ED922C /* backButtonSweetShop.m */; };
 		75B6A1361DFB8F2000ED922C /* packet.m in Sources */ = {isa = PBXBuildFile; fileRef = 75B6A1351DFB8F2000ED922C /* packet.m */; };
+		75B7C6AB1E32A59C00D01EB5 /* trendsMain.m in Sources */ = {isa = PBXBuildFile; fileRef = 75B7C6AA1E32A59C00D01EB5 /* trendsMain.m */; };
+		75B7C6AE1E33C92000D01EB5 /* trendsButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 75B7C6AD1E33C92000D01EB5 /* trendsButton.m */; };
 		75C36DFC1DCCF77600F84214 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 75C36DFB1DCCF77600F84214 /* main.m */; };
 		75C36DFF1DCCF77600F84214 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 75C36DFE1DCCF77600F84214 /* AppDelegate.m */; };
 		75C36E011DCCF77600F84214 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 75C36E001DCCF77600F84214 /* GameScene.sks */; };
@@ -137,6 +139,8 @@
 		75C36E461DCE752A00F84214 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 75C36E451DCE752A00F84214 /* main.m */; };
 		75C36E4A1DCE793D00F84214 /* mainBackground.m in Sources */ = {isa = PBXBuildFile; fileRef = 75C36E491DCE793D00F84214 /* mainBackground.m */; };
 		75CCCB301E153198007DA3EC /* sweetInvSelectUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 75CCCB2F1E153198007DA3EC /* sweetInvSelectUI.m */; };
+		75D01FEE1E36AD60004F8F0F /* trendsChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 75D01FED1E36AD60004F8F0F /* trendsChart.m */; };
+		75D01FF11E36B103004F8F0F /* trendsData.m in Sources */ = {isa = PBXBuildFile; fileRef = 75D01FF01E36B103004F8F0F /* trendsData.m */; };
 		75D2B32D1E22AA5C0095C533 /* workstationStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 75D2B32C1E22AA5C0095C533 /* workstationStore.m */; };
 		75D2DA8B1E20454000E31D1E /* coinStoreUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 75D2DA8A1E20454000E31D1E /* coinStoreUI.m */; };
 		75D2DA8E1E213B1100E31D1E /* floorStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 75D2DA8D1E213B1100E31D1E /* floorStore.m */; };
@@ -399,6 +403,10 @@
 		75B6A1321DFB8E0E00ED922C /* backButtonSweetShop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = backButtonSweetShop.m; path = "Candy/Sweet Shop/backButtonSweetShop.m"; sourceTree = "<group>"; };
 		75B6A1341DFB8F2000ED922C /* packet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = packet.h; path = "Candy/Sweet Shop/packet.h"; sourceTree = "<group>"; };
 		75B6A1351DFB8F2000ED922C /* packet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = packet.m; path = "Candy/Sweet Shop/packet.m"; sourceTree = "<group>"; };
+		75B7C6A91E32A59C00D01EB5 /* trendsMain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = trendsMain.h; path = "Candy/Trend System/trendsMain.h"; sourceTree = "<group>"; };
+		75B7C6AA1E32A59C00D01EB5 /* trendsMain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = trendsMain.m; path = "Candy/Trend System/trendsMain.m"; sourceTree = "<group>"; };
+		75B7C6AC1E33C92000D01EB5 /* trendsButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = trendsButton.h; path = "Candy/Trend System/trendsButton.h"; sourceTree = "<group>"; };
+		75B7C6AD1E33C92000D01EB5 /* trendsButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = trendsButton.m; path = "Candy/Trend System/trendsButton.m"; sourceTree = "<group>"; };
 		75C36DF71DCCF77600F84214 /* Candy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Candy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		75C36DFB1DCCF77600F84214 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		75C36DFD1DCCF77600F84214 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -432,6 +440,10 @@
 		75C36E491DCE793D00F84214 /* mainBackground.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mainBackground.m; sourceTree = "<group>"; };
 		75CCCB2E1E153198007DA3EC /* sweetInvSelectUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = sweetInvSelectUI.h; path = "Candy/Sweet Tap Menu/sweetInvSelectUI.h"; sourceTree = "<group>"; };
 		75CCCB2F1E153198007DA3EC /* sweetInvSelectUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = sweetInvSelectUI.m; path = "Candy/Sweet Tap Menu/sweetInvSelectUI.m"; sourceTree = "<group>"; };
+		75D01FEC1E36AD60004F8F0F /* trendsChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = trendsChart.h; path = "Candy/Trend System/trendsChart.h"; sourceTree = "<group>"; };
+		75D01FED1E36AD60004F8F0F /* trendsChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = trendsChart.m; path = "Candy/Trend System/trendsChart.m"; sourceTree = "<group>"; };
+		75D01FEF1E36B103004F8F0F /* trendsData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = trendsData.h; path = "Candy/Trend System/trendsData.h"; sourceTree = "<group>"; };
+		75D01FF01E36B103004F8F0F /* trendsData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = trendsData.m; path = "Candy/Trend System/trendsData.m"; sourceTree = "<group>"; };
 		75D2B32B1E22AA5C0095C533 /* workstationStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = workstationStore.h; path = "Candy/Coin Store/workstationStore.h"; sourceTree = "<group>"; };
 		75D2B32C1E22AA5C0095C533 /* workstationStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = workstationStore.m; path = "Candy/Coin Store/workstationStore.m"; sourceTree = "<group>"; };
 		75D2DA891E20454000E31D1E /* coinStoreUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = coinStoreUI.h; path = "Candy/Coin Store/coinStoreUI.h"; sourceTree = "<group>"; };
@@ -852,9 +864,25 @@
 			name = mapMenu;
 			sourceTree = "<group>";
 		};
+		75B7C6A81E327D8400D01EB5 /* Trend System */ = {
+			isa = PBXGroup;
+			children = (
+				75B7C6A91E32A59C00D01EB5 /* trendsMain.h */,
+				75B7C6AA1E32A59C00D01EB5 /* trendsMain.m */,
+				75B7C6AC1E33C92000D01EB5 /* trendsButton.h */,
+				75B7C6AD1E33C92000D01EB5 /* trendsButton.m */,
+				75D01FEC1E36AD60004F8F0F /* trendsChart.h */,
+				75D01FED1E36AD60004F8F0F /* trendsChart.m */,
+				75D01FEF1E36B103004F8F0F /* trendsData.h */,
+				75D01FF01E36B103004F8F0F /* trendsData.m */,
+			);
+			name = "Trend System";
+			sourceTree = "<group>";
+		};
 		75C36DEE1DCCF77600F84214 = {
 			isa = PBXGroup;
 			children = (
+				75B7C6A81E327D8400D01EB5 /* Trend System */,
 				75784D481E281AB600C41067 /* Daily Spin */,
 				75582AE81E22E40500254C54 /* Building System */,
 				75D2DA881E2044AF00E31D1E /* Coin Store */,
@@ -1306,6 +1334,7 @@
 				752CC6D21E26CAAD00C6FB31 /* gemAnimations.m in Sources */,
 				758C52531E2295870054D864 /* deskStore.m in Sources */,
 				61E1837F1DEDE45A0034C021 /* Character_Maker.m in Sources */,
+				75B7C6AB1E32A59C00D01EB5 /* trendsMain.m in Sources */,
 				756C31261DF4D0B20017FBE9 /* buttonCreator.m in Sources */,
 				753D56C81E06E50B00A6CBF8 /* packetContentManager.m in Sources */,
 				61A7DE851DF8C068004C2F71 /* upgrade_slotsUnlocked.m in Sources */,
@@ -1405,6 +1434,7 @@
 				750F2A321DF7523E00A784F6 /* sweetFavourNode.m in Sources */,
 				61E183861DEE00E30034C021 /* Character.m in Sources */,
 				615C34E91DF6D42900F1B3E2 /* AddItem.m in Sources */,
+				75B7C6AE1E33C92000D01EB5 /* trendsButton.m in Sources */,
 				759E71C81DF0A02600B7275A /* mapMain.m in Sources */,
 				752002481E11D47B00C2AC11 /* confirmSale.m in Sources */,
 				75C36E461DCE752A00F84214 /* main.m in Sources */,
@@ -1415,8 +1445,10 @@
 				757CD1A11DE2200000D07480 /* sweetPicker.m in Sources */,
 				75712C151DFCE1EF00450342 /* packetSKUI.m in Sources */,
 				755B0D201E143BE100EBA428 /* sweetDrawUI.m in Sources */,
+				75D01FEE1E36AD60004F8F0F /* trendsChart.m in Sources */,
 				75C36DFC1DCCF77600F84214 /* main.m in Sources */,
 				75754BEF1E2401FE0030D1BA /* tutorialMessages.m in Sources */,
+				75D01FF11E36B103004F8F0F /* trendsData.m in Sources */,
 				75784D4E1E282F4200C41067 /* spinWheel.m in Sources */,
 				7579CB031E2A8CBD00975F01 /* sparks.m in Sources */,
 				750F3A911DE64A65002AFB78 /* sweetnessSlider.m in Sources */,
