@@ -12,6 +12,7 @@
 #import "sweetInventoryUI.h"
 #import "gemGemeratorGui.h"
 #import "tutorialMessages.h"
+#import "trendsMain.h"
 
 @implementation statsMenuButtons
 
@@ -24,13 +25,17 @@
     sweetInventoryButton.position = CGPointMake(-s.frame.size.width/2, s.frame.size.height/9);
     sweetInventoryButton.name = @"sweetInvButton";
 
-    SKSpriteNode *mapButton = [SKSpriteNode spriteNodeWithImageNamed:@"mapButtonSmaller"];
-    mapButton.position = CGPointMake(0, -s.frame.size.height/1.21);
+    SKSpriteNode *mapButton = [SKSpriteNode spriteNodeWithImageNamed:@"mapButtonS"];
+    mapButton.position = CGPointMake(-s.frame.size.width/2, -s.frame.size.height/1.21);
     mapButton.name = @"statsMenuMapButton";
     
-    SKSpriteNode *coinPackButton = [SKSpriteNode spriteNodeWithImageNamed:@"coinPackButton"];
-    coinPackButton.position = CGPointMake(0, s.frame.size.height/1.7);
-    coinPackButton.name = @"statsMenuCoinPackButton";
+    SKSpriteNode *sweetTrends = [SKSpriteNode spriteNodeWithImageNamed:@"sweetTrendsButton"];
+    sweetTrends.position = CGPointMake(s.frame.size.width/2, -s.frame.size.height/1.21);
+    sweetTrends.name = @"sweetTrendsButton";
+    
+    SKSpriteNode *coinPackButton = [SKSpriteNode spriteNodeWithImageNamed:@"itemPacksButton"];
+    coinPackButton.position = CGPointMake(s.frame.size.width/2, s.frame.size.height/1.7);
+    coinPackButton.name = @"itemPacksButton";
     
     SKSpriteNode *coinStoreButton = [SKSpriteNode spriteNodeWithImageNamed:@"coinStoreButton"];
     coinStoreButton.position = CGPointMake(-s.frame.size.width/2, -s.frame.size.height/2.8);
@@ -40,12 +45,18 @@
     gemButton.position = CGPointMake(s.frame.size.width/2, -s.frame.size.height/2.8);
     gemButton.name = @"statsMenuGemButton";
     
+    SKSpriteNode *dailySpin = [SKSpriteNode spriteNodeWithImageNamed:@"dailySpinButton"];
+    dailySpin.position = CGPointMake(-s.frame.size.width/2, s.frame.size.height/1.7);
+    dailySpin.name = @"dailySpinButton";
+    
     [s addChild:mapButton];
     [s addChild:coinPackButton];
     [s addChild:playerButton];
     [s addChild:sweetInventoryButton];
     [s addChild:gemButton];
     [s addChild:coinStoreButton];
+    [s addChild:sweetTrends];
+    [s addChild:dailySpin];
 }
 +(void)onStatsButtonPress:(SKSpriteNode*)s scene:(SKScene*)sk view:(UIView*)v {
     if([s.name isEqualToString:@"statsMenuStatsButton"]){
@@ -83,6 +94,16 @@
         [self buttonAnimation:s action:block];
         [gemGemeratorGui createGemMenu:sk];
         [tutorialMessages firstTimeGemeratorButton:v];
+    }
+    if([s.name isEqualToString:@"dailySpinButton"]){
+        SKAction *block = [SKAction runBlock:^{}];
+        [self buttonAnimation:s action:block];
+        [mainTransition switchScene:sk sceneTwo:@"dailySpin" Transition:[SKTransition fadeWithColor:[SKColor blackColor] duration:0.3]];
+    }
+    if([s.name isEqualToString:@"sweetTrendsButton"]){
+        SKAction *block = [SKAction runBlock:^{}];
+        [self buttonAnimation:s action:block];
+        [trendsMain createTrendsMenu:v];
     }
 }
 

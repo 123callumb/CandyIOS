@@ -28,7 +28,5 @@
     [skUiItems onUpgTouch:v button:(SKSpriteNode*)n scene:s];
     [buildingUpgradeUI onBackTouch:v button:(SKSpriteNode*)n scene:s];
     [buildingUpgradeUI onUpgradeTouch:v button:(SKSpriteNode*)n scene:s];
-    [spinWheel onNotifTouch:(SKSpriteNode*)n scene:s];
-    [trendsButton  onTrendBarTouch:v node:(SKSpriteNode*)n];
 }
 @end

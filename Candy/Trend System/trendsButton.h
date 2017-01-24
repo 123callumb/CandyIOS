@@ -9,7 +9,4 @@
 #import <SpriteKit/SpriteKit.h>
 
 @interface trendsButton : SKSpriteNode
-+(void)createTrendsButton: (SKScene*)s;
-+(void)removeTrendsButton: (SKScene*)s;
-+(void)onTrendBarTouch: (UIView*)v node:(SKSpriteNode*)button;
 @end

@@ -9,7 +9,5 @@
 #import <SpriteKit/SpriteKit.h>
 
 @interface spinWheel : SKSpriteNode
-+(void)addDailySpinNotification: (SKScene*)s;
-+(void)onNotifTouch: (SKSpriteNode*)node scene:(SKScene*)s;
 +(void)addWheel: (SKScene*)s;
 @end
