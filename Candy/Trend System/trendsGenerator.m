@@ -26,7 +26,7 @@
     NSString *barTime = [NSString stringWithFormat:@"trends_time_bar_%d", bar];
     
     int storedTime = (int)[nd integerForKey:barTime];
-        
+    
     if(storedTime != hour){
 
         if(storedTime == 0){
