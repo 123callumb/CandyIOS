@@ -60,7 +60,7 @@ UIImageView *img1 = nil;
     [buttonHandler registerButtons:obj currentScene:self view:self.view];
     [registerBoxes registerBoxes:obj currentScene:self];
     [registerStatsButtons registerStatsButtons:self location:loc node:obj view:self.view];
-    [upgradeMenu onTouch:obj scene:self];
+    //[upgradeMenu onTouch:obj scene:self];
 }
 
 //These methods are new and pretty dank af!
