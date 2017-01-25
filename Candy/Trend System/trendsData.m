@@ -7,7 +7,7 @@
 //
 
 #import "trendsData.h"
-
+#import "trendsGenerator.h"
 @implementation trendsData
 +(NSMutableArray*)trendsArray {
     NSMutableArray *trendsArray = [[NSMutableArray alloc] init];
@@ -17,7 +17,7 @@
 +(void)addTrendsToArray: (NSMutableArray*)m {
     
     [self createTrendChartItem:m sweetTexture:@"lollyPacket" trend:4];
-    [self createTrendChartItem:m sweetTexture:@"jawbreakerPacket" trend:1];
+    [self createTrendChartItem:m sweetTexture:@"jawbreakerPacket" trend:[trendsGenerator generateRandomTrend]];
     [self createTrendChartItem:m sweetTexture:@"chewPacket" trend:5];
     [self createTrendChartItem:m sweetTexture:@"bonbonPacket" trend:2];
     [self createTrendChartItem:m sweetTexture:@"sweetPacket" trend:1];

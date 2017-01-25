@@ -8,8 +8,14 @@
 
 #import "sweetValueCalculation.h"
 #import "bonbonPacket.h"
+#import "bonbonPacket.h"
+#import "lollyPacket.h"
+#import "wrappedPacket.h"
+#import "chewPacket.h"
+#import "jawbreakerPacket.h"
 
 @implementation sweetValueCalculation
+
 +(NSMutableArray*)sweetPriceDataArray {
     
     NSMutableArray *dataArray = [[NSMutableArray alloc] init];
@@ -21,55 +27,55 @@
     
     //I mean they can all be put into an array and a for loop but if we do it this way then we can set the exact prices so if the trend of a certain sweet goes up we can increase its price!
     
-    [self addSweetSaleData:@"bonbonMint" sellingPrice:default_grey_per_tap array:dataArray];
-    [self addSweetSaleData:@"bonbonLime" sellingPrice:default_grey_per_tap array:dataArray];
-    [self addSweetSaleData:@"bonbonCola" sellingPrice:default_grey_per_tap array:dataArray];
-    [self addSweetSaleData:@"bonbonStrawberry" sellingPrice:default_blue_per_tap array:dataArray];
-    [self addSweetSaleData:@"bonbonLemon" sellingPrice:default_blue_per_tap array:dataArray];
-    [self addSweetSaleData:@"bonbonBubblegum" sellingPrice:default_blue_per_tap array:dataArray];
-    [self addSweetSaleData:@"bonbonTropical" sellingPrice:default_red_per_tap array:dataArray];
-    [self addSweetSaleData:@"bonbonCherry" sellingPrice:default_red_per_tap array:dataArray];
-    [self addSweetSaleData:@"bonbonRainbow" sellingPrice:default_yellow_per_tap array:dataArray];
+    [self addSweetSaleData:@"bonbonMint" sellingPrice:default_grey_per_tap * [bonbonPacket getBrandValue] array:dataArray];
+    [self addSweetSaleData:@"bonbonLime" sellingPrice:default_grey_per_tap * [bonbonPacket getBrandValue] array:dataArray];
+    [self addSweetSaleData:@"bonbonCola" sellingPrice:default_grey_per_tap * [bonbonPacket getBrandValue] array:dataArray];
+    [self addSweetSaleData:@"bonbonStrawberry" sellingPrice:default_blue_per_tap * [bonbonPacket getBrandValue] array:dataArray];
+    [self addSweetSaleData:@"bonbonLemon" sellingPrice:default_blue_per_tap * [bonbonPacket getBrandValue] array:dataArray];
+    [self addSweetSaleData:@"bonbonBubblegum" sellingPrice:default_blue_per_tap * [bonbonPacket getBrandValue] array:dataArray];
+    [self addSweetSaleData:@"bonbonTropical" sellingPrice:default_red_per_tap * [bonbonPacket getBrandValue] array:dataArray];
+    [self addSweetSaleData:@"bonbonCherry" sellingPrice:default_red_per_tap * [bonbonPacket getBrandValue] array:dataArray];
+    [self addSweetSaleData:@"bonbonRainbow" sellingPrice:default_yellow_per_tap * [bonbonPacket getBrandValue] array:dataArray];
     
-    [self addSweetSaleData:@"chewOrange" sellingPrice:default_grey_per_tap array:dataArray];
-    [self addSweetSaleData:@"chewCherry" sellingPrice:default_grey_per_tap array:dataArray];
-    [self addSweetSaleData:@"chewVanilla" sellingPrice:default_grey_per_tap array:dataArray];
-    [self addSweetSaleData:@"chewBubblegum" sellingPrice:default_blue_per_tap array:dataArray];
-    [self addSweetSaleData:@"chewApple" sellingPrice:default_blue_per_tap array:dataArray];
-    [self addSweetSaleData:@"chewSourLime" sellingPrice:default_blue_per_tap array:dataArray];
-    [self addSweetSaleData:@"chewCandyfloss" sellingPrice:default_red_per_tap array:dataArray];
-    [self addSweetSaleData:@"chewBanana" sellingPrice:default_red_per_tap array:dataArray];
-    [self addSweetSaleData:@"chewFizzyCola" sellingPrice:default_yellow_per_tap array:dataArray];
+    [self addSweetSaleData:@"chewOrange" sellingPrice:default_grey_per_tap * [chewPacket getBrandValue] array:dataArray];
+    [self addSweetSaleData:@"chewCherry" sellingPrice:default_grey_per_tap * [chewPacket getBrandValue] array:dataArray];
+    [self addSweetSaleData:@"chewVanilla" sellingPrice:default_grey_per_tap * [chewPacket getBrandValue] array:dataArray];
+    [self addSweetSaleData:@"chewBubblegum" sellingPrice:default_blue_per_tap * [chewPacket getBrandValue] array:dataArray];
+    [self addSweetSaleData:@"chewApple" sellingPrice:default_blue_per_tap * [chewPacket getBrandValue] array:dataArray];
+    [self addSweetSaleData:@"chewSourLime" sellingPrice:default_blue_per_tap * [chewPacket getBrandValue] array:dataArray];
+    [self addSweetSaleData:@"chewCandyfloss" sellingPrice:default_red_per_tap * [chewPacket getBrandValue] array:dataArray];
+    [self addSweetSaleData:@"chewBanana" sellingPrice:default_red_per_tap * [chewPacket getBrandValue] array:dataArray];
+    [self addSweetSaleData:@"chewFizzyCola" sellingPrice:default_yellow_per_tap * [chewPacket getBrandValue] array:dataArray];
     
-    [self addSweetSaleData:@"wrappedMint" sellingPrice:default_grey_per_tap array:dataArray];
-    [self addSweetSaleData:@"wrappedLime" sellingPrice:default_grey_per_tap array:dataArray];
-    [self addSweetSaleData:@"wrappedCoffee" sellingPrice:default_grey_per_tap array:dataArray];
-    [self addSweetSaleData:@"wrappedLemon" sellingPrice:default_blue_per_tap array:dataArray];
-    [self addSweetSaleData:@"wrappedCherry" sellingPrice:default_blue_per_tap array:dataArray];
-    [self addSweetSaleData:@"wrappedStrawberry" sellingPrice:default_blue_per_tap array:dataArray];
-    [self addSweetSaleData:@"wrappedOrange" sellingPrice:default_red_per_tap array:dataArray];
-    [self addSweetSaleData:@"wrappedBlueberry" sellingPrice:default_red_per_tap array:dataArray];
-    [self addSweetSaleData:@"wrappedTropical" sellingPrice:default_yellow_per_tap array:dataArray];
+    [self addSweetSaleData:@"wrappedMint" sellingPrice:default_grey_per_tap * [wrappedPacket getBrandValue] array:dataArray];
+    [self addSweetSaleData:@"wrappedLime" sellingPrice:default_grey_per_tap * [wrappedPacket getBrandValue] array:dataArray];
+    [self addSweetSaleData:@"wrappedCoffee" sellingPrice:default_grey_per_tap * [wrappedPacket getBrandValue] array:dataArray];
+    [self addSweetSaleData:@"wrappedLemon" sellingPrice:default_blue_per_tap * [wrappedPacket getBrandValue] array:dataArray];
+    [self addSweetSaleData:@"wrappedCherry" sellingPrice:default_blue_per_tap * [wrappedPacket getBrandValue] array:dataArray];
+    [self addSweetSaleData:@"wrappedStrawberry" sellingPrice:default_blue_per_tap * [wrappedPacket getBrandValue] array:dataArray];
+    [self addSweetSaleData:@"wrappedOrange" sellingPrice:default_red_per_tap * [wrappedPacket getBrandValue] array:dataArray];
+    [self addSweetSaleData:@"wrappedBlueberry" sellingPrice:default_red_per_tap * [wrappedPacket getBrandValue] array:dataArray];
+    [self addSweetSaleData:@"wrappedTropical" sellingPrice:default_yellow_per_tap * [wrappedPacket getBrandValue] array:dataArray];
     
-    [self addSweetSaleData:@"jawbreakerLiquorice" sellingPrice:default_grey_per_tap array:dataArray];
-    [self addSweetSaleData:@"jawbreakerLime" sellingPrice:default_grey_per_tap array:dataArray];
-    [self addSweetSaleData:@"jawbreakerLemon" sellingPrice:default_grey_per_tap array:dataArray];
-    [self addSweetSaleData:@"jawbreakerBlueberry" sellingPrice:default_blue_per_tap array:dataArray];
-    [self addSweetSaleData:@"jawbreakerStrawberry" sellingPrice:default_blue_per_tap array:dataArray];
-    [self addSweetSaleData:@"jawbreakerOrange" sellingPrice:default_blue_per_tap array:dataArray];
-    [self addSweetSaleData:@"jawbreakerCandyfloss" sellingPrice:default_red_per_tap array:dataArray];
-    [self addSweetSaleData:@"jawbreakerBubblegum" sellingPrice:default_red_per_tap array:dataArray];
-    [self addSweetSaleData:@"jawbreakerWatermelon" sellingPrice:default_yellow_per_tap array:dataArray];
+    [self addSweetSaleData:@"jawbreakerLiquorice" sellingPrice:default_grey_per_tap * [jawbreakerPacket getBrandValue] array:dataArray];
+    [self addSweetSaleData:@"jawbreakerLime" sellingPrice:default_grey_per_tap * [jawbreakerPacket getBrandValue] array:dataArray];
+    [self addSweetSaleData:@"jawbreakerLemon" sellingPrice:default_grey_per_tap * [jawbreakerPacket getBrandValue] array:dataArray];
+    [self addSweetSaleData:@"jawbreakerBlueberry" sellingPrice:default_blue_per_tap * [jawbreakerPacket getBrandValue] array:dataArray];
+    [self addSweetSaleData:@"jawbreakerStrawberry" sellingPrice:default_blue_per_tap * [jawbreakerPacket getBrandValue] array:dataArray];
+    [self addSweetSaleData:@"jawbreakerOrange" sellingPrice:default_blue_per_tap * [jawbreakerPacket getBrandValue] array:dataArray];
+    [self addSweetSaleData:@"jawbreakerCandyfloss" sellingPrice:default_red_per_tap * [jawbreakerPacket getBrandValue] array:dataArray];
+    [self addSweetSaleData:@"jawbreakerBubblegum" sellingPrice:default_red_per_tap * [jawbreakerPacket getBrandValue] array:dataArray];
+    [self addSweetSaleData:@"jawbreakerWatermelon" sellingPrice:default_yellow_per_tap * [jawbreakerPacket getBrandValue] array:dataArray];
     
-    [self addSweetSaleData:@"lollyMint" sellingPrice:default_grey_per_tap array:dataArray];
-    [self addSweetSaleData:@"lollyLime" sellingPrice:default_grey_per_tap array:dataArray];
-    [self addSweetSaleData:@"lollyLemon" sellingPrice:default_grey_per_tap array:dataArray];
-    [self addSweetSaleData:@"lollyCola" sellingPrice:default_blue_per_tap array:dataArray];
-    [self addSweetSaleData:@"lollyOrange" sellingPrice:default_blue_per_tap array:dataArray];
-    [self addSweetSaleData:@"lollyStrawberry" sellingPrice:default_blue_per_tap array:dataArray];
-    [self addSweetSaleData:@"lollyCherry" sellingPrice:default_red_per_tap array:dataArray];
-    [self addSweetSaleData:@"lollySherbert" sellingPrice:default_red_per_tap array:dataArray];
-    [self addSweetSaleData:@"lollySourApple" sellingPrice:default_yellow_per_tap array:dataArray];
+    [self addSweetSaleData:@"lollyMint" sellingPrice:default_grey_per_tap * [lollyPacket getBrandValue] array:dataArray];
+    [self addSweetSaleData:@"lollyLime" sellingPrice:default_grey_per_tap * [lollyPacket getBrandValue] array:dataArray];
+    [self addSweetSaleData:@"lollyLemon" sellingPrice:default_grey_per_tap * [lollyPacket getBrandValue] array:dataArray];
+    [self addSweetSaleData:@"lollyCola" sellingPrice:default_blue_per_tap * [lollyPacket getBrandValue] array:dataArray];
+    [self addSweetSaleData:@"lollyOrange" sellingPrice:default_blue_per_tap * [lollyPacket getBrandValue] array:dataArray];
+    [self addSweetSaleData:@"lollyStrawberry" sellingPrice:default_blue_per_tap * [lollyPacket getBrandValue] array:dataArray];
+    [self addSweetSaleData:@"lollyCherry" sellingPrice:default_red_per_tap * [lollyPacket getBrandValue] array:dataArray];
+    [self addSweetSaleData:@"lollySherbert" sellingPrice:default_red_per_tap * [lollyPacket getBrandValue] array:dataArray];
+    [self addSweetSaleData:@"lollySourApple" sellingPrice:default_yellow_per_tap * [lollyPacket getBrandValue] array:dataArray];
     
     return dataArray;
 }

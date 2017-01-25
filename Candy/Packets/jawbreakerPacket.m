@@ -32,4 +32,12 @@
 +(void)createRandomSlider: (SKScene*)s yPos:(float)yVal {
     [packetContentManager createSlider:s yPos:yVal sweetList:[self contentList]];
 }
++(int)getBrandValue {
+    NSUserDefaults *nd = [NSUserDefaults standardUserDefaults];
+    return (int)[nd integerForKey:@"jawbreaker_brand_trend"] + 1;
+}
++(void)upgradeBrandValue {
+    NSUserDefaults *nd = [NSUserDefaults standardUserDefaults];
+    [nd setInteger:[self getBrandValue]+1 forKey:@"jawbreaker_brand_trend"];
+}
 @end
