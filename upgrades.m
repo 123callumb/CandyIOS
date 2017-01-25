@@ -28,37 +28,37 @@ NSInteger moneyValues[7];
     //upgrade_UsableWorkStations
     if(upgradeID == 1){
         [box setImage:[UIImage imageNamed:@"workStationsUnlocked"]];
-        txt.text = @"Unlock Workstation";
+        txt.text = @"Workstation";
     }
     //upgrade 2
     //upgrade_Chew
     if(upgradeID == 2){
         [box setImage:[UIImage imageNamed:@"upgrade_chew"]];
-        txt.text = @"Upgrade Chew";
+        txt.text = @"Chew";
     }
     //upgrade 3
     //upgrade_Lolly
     if(upgradeID == 3){
         [box setImage:[UIImage imageNamed:@"upgrade_lolly"]];
-        txt.text = @"Upgrade Lolly";
+        txt.text = @"Lolly";
     }
     //upgrade 4
     //upgrade_Wrapped
     if(upgradeID == 4){
         [box setImage:[UIImage imageNamed:@"upgrade_wrapped"]];
-        txt.text = @"Upgrade Wrapped";
+        txt.text = @"Wrapped";
     }
     //upgrade 5
     //upgrade_Jawbreaker
     if(upgradeID == 5){
         [box setImage:[UIImage imageNamed:@"upgrade_jawbreaker"]];
-        txt.text = @"Upgrade Jawbreaker";
+        txt.text = @"Jawbreaker";
     }
     //upgrade 6
     //upgrade_Bonbons
     if(upgradeID == 6){
         [box setImage:[UIImage imageNamed:@"upgrade_bonbons"]];
-        txt.text = @"Upgrade Bonbons";
+        txt.text = @"Bonbons";
     }
 }
 
