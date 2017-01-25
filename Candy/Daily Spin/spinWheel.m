@@ -11,25 +11,7 @@
 #import "spinData.h"
 
 @implementation spinWheel
-+(void)addDailySpinNotification: (SKScene*)s {
-    if([spinData isEligibleForDailySpin] == true){
-        SKSpriteNode *wheel = [SKSpriteNode spriteNodeWithImageNamed:@"wheelSpinNotification"];
-        wheel.xScale = 0.45;
-        wheel.yScale = 0.45;
-        wheel.position = CGPointMake(s.frame.size.width/2 - wheel.frame.size.width/2, s.frame.size.height/2 - s.frame.size.height/6);
-        wheel.zPosition = -1;
-        wheel.name = @"dailySpinNotifWheel";
-        [s addChild:wheel];
-    }
-}
-+(void)onNotifTouch: (SKSpriteNode*)node scene:(SKScene*)s{
-    if([node.name isEqualToString:@"dailySpinNotifWheel"]){
-        SKAction *slideAway = [SKAction moveByX:node.frame.size.width y:0 duration:0.2];
-        [node runAction:slideAway completion:^{
-            [mainTransition switchScene:s sceneTwo:@"dailySpin" Transition:[SKTransition fadeWithDuration:0.3]];
-        }];
-    }
-}
+
 +(void)addWheel: (SKScene*)s {
     SKSpriteNode *wheel = [SKSpriteNode spriteNodeWithImageNamed:@"blankWheel"];
     wheel.name = @"dailySpinWheel";
