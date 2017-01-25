@@ -21,7 +21,6 @@
     [self addFloor:s];
     [self addBuildingType:s];
     [self addMainCharacter:s];
-    [spinWheel addDailySpinNotification:s];
     [desks addDesk:CGPointMake(0, s.frame.size.height/8) scale:0.85 nodeToAttatch:s];
 }
 +(void)addFloorItems: (SKSpriteNode*)s {

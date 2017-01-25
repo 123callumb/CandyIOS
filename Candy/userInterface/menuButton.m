@@ -10,6 +10,7 @@
 #import "bottomBar.h"
 #import "packetButton.h"
 #import "tutorialMessages.h"
+#import "trendsButton.h"
 
 @implementation menuButton
 +(void)onTouch: (SKSpriteNode*)obj scene:(SKScene*)s {
@@ -23,7 +24,6 @@
 +(void)reCreate: (SKScene*)s {
     SKSpriteNode *button = (SKSpriteNode*)[s childNodeWithName:@"buttonMenu"];
     SKAction *slideDown = [SKAction moveToY:button.position.y - button.size.height*2 duration:0.1];
-    NSLog(@"we get here");
     [button runAction:slideDown];
     
 }
