@@ -16,11 +16,11 @@
 }
 +(void)addTrendsToArray: (NSMutableArray*)m {
     
-    [self createTrendChartItem:m sweetTexture:@"lollyPacket" trend:4];
-    [self createTrendChartItem:m sweetTexture:@"jawbreakerPacket" trend:[trendsGenerator generateRandomTrend]];
-    [self createTrendChartItem:m sweetTexture:@"chewPacket" trend:5];
-    [self createTrendChartItem:m sweetTexture:@"bonbonPacket" trend:2];
-    [self createTrendChartItem:m sweetTexture:@"sweetPacket" trend:1];
+    [self createTrendChartItem:m sweetTexture:@"lollyPacket" trend:[trendsGenerator generateRandomTrend:0]];
+    [self createTrendChartItem:m sweetTexture:@"jawbreakerPacket" trend:[trendsGenerator generateRandomTrend:1]];
+    [self createTrendChartItem:m sweetTexture:@"chewPacket" trend:[trendsGenerator generateRandomTrend:2]];
+    [self createTrendChartItem:m sweetTexture:@"bonbonPacket" trend:[trendsGenerator generateRandomTrend:3]];
+    [self createTrendChartItem:m sweetTexture:@"sweetPacket" trend:[trendsGenerator generateRandomTrend:4]];
 
 }
 +(void)createTrendChartItem: (NSMutableArray*)m sweetTexture:(NSString*)texture trend:(int)trendLevel {
@@ -55,5 +55,9 @@
 }
 +(int)amountOfTrends {
     return (int)[[self trendsArray] count] - 1;
+}
++(int)getTrendMultiplierByPacketTrendID: (int)s {
+    NSUserDefaults *nd = [NSUserDefaults standardUserDefaults];
+    return (int)[nd integerForKey:[NSString stringWithFormat:@"trend_value_bar_%d", s]];
 }
 @end

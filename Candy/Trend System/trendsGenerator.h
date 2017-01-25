@@ -9,5 +9,5 @@
 #import <Foundation/Foundation.h>
 
 @interface trendsGenerator : NSObject
-+(int)generateRandomTrend;
++(int)generateRandomTrend: (int)barNo;
 @end

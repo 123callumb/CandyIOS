@@ -7,18 +7,62 @@
 //
 
 #import "trendsGenerator.h"
+#import "bonusAmounts.h"
 
 @implementation trendsGenerator
-+(int)generateRandomTrend {
++(int)generateRandomTrend: (int)barNo {
     
     NSDate *date = [NSDate date];
     NSCalendar *ccal = [NSCalendar currentCalendar];
     NSDateComponents *dateComp = [ccal components:NSCalendarUnitHour fromDate:date];
-    [self generateRandomNumberBasedOnHour:(int)[dateComp hour]];
-    return 1;
+    
+    return [self hourCheck:(int)[dateComp hour] barNum:barNo];
 }
 
-+(void)generateRandomNumberBasedOnHour: (int)hour {
++(int)hourCheck: (int)hour barNum:(int)bar {
+    
+    NSUserDefaults *nd = [NSUserDefaults standardUserDefaults];
+    NSString *barName = [NSString stringWithFormat:@"trend_value_bar_%d", bar];
+    NSString *barTime = [NSString stringWithFormat:@"trends_time_bar_%d", bar];
+    
+    int storedTime = (int)[nd integerForKey:barTime];
+    
+    NSLog(@"%d and %d", storedTime, hour);
+    
+    if(storedTime != hour){
 
+        if(storedTime == 0){
+            [nd setInteger:1 forKey:barTime];
+        }else {
+            [nd setInteger:hour forKey:barTime];
+        }
+        
+    [nd setInteger:[bonusAmounts generateRandIntWithBounds:1 UprBound:5] forKey:barName];
+    
+    }
+    return (int)[nd integerForKey:barName];
+}
+
++(int)returnNumberFromArray: (NSArray*)a probabilities:(NSArray*)prob {
+    if([a count] != [prob count]){
+        NSLog(@"Must create the same amount of probabilities that you did numbers");
+        return 1;
+    }else {
+        NSMutableArray *numbers = [[NSMutableArray alloc] init];
+        
+        for(int i = 0; i <= ([a count] - 1);i++){
+            
+            NSNumber *no = [a objectAtIndex:i];
+            int multiplier = (int)[prob objectAtIndex:i];
+            
+            for(int z = 0; z <= multiplier; z++){
+                [numbers addObject:no];
+            }
+        }
+        
+        int rnd = [bonusAmounts generateRandIntWithBounds:0 UprBound:(int)([numbers count]-1)];
+
+        return (int)[numbers objectAtIndex:rnd];
+    }
 }
 @end
