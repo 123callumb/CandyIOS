@@ -12,4 +12,5 @@
 +(NSString*)getTrendTextureAtIndex: (int)input;
 +(NSString*)getTrendAtIndex: (int)input;
 +(int)amountOfTrends;
++(int)getTrendMultiplierByPacketTrendID: (int)s;
 @end

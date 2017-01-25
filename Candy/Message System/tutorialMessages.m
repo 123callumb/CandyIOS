@@ -72,4 +72,7 @@
                     information:@"This is the Store. Here you can buy building items such as desks and new floors to help you customise your place!"
               representingImage:@"coinStoreButton" imageScale:0.3 messageBoxID:33 displayOnce:true];
 }
++(void)firstTimeTrends: (UIView*)v {
+    [messageUI createMessageBox:v information:@"Here are the current Market Trends. Trends will determine how much your sweets are worth per tap. Trends will change every hour so always keep coming back here to maximise your profits!" representingImage:@"marketChart" imageScale:0.2 messageBoxID:34 displayOnce:true];
+}
 @end

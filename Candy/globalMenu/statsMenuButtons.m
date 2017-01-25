@@ -104,6 +104,8 @@
         SKAction *block = [SKAction runBlock:^{}];
         [self buttonAnimation:s action:block];
         [trendsMain createTrendsMenu:v];
+        [tutorialMessages firstTimeTrends:v];
+
     }
 }
 
