@@ -11,4 +11,6 @@
 @interface lollyPacket : SKSpriteNode
 +(void)addContentSection: (SKSpriteNode*)s;
 +(void)createRandomSlider: (SKScene*)s yPos:(float)yVal;
++(int)getBrandValue;
++(void)upgradeBrandValue;
 @end
