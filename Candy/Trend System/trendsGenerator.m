@@ -36,7 +36,7 @@
         }
         
     [nd setInteger:[bonusAmounts generateRandIntWithBounds:1 UprBound:5] forKey:barName];
-    
+        [nd synchronize];
     }
     return (int)[nd integerForKey:barName];
 }
