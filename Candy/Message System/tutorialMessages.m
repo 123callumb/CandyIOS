@@ -8,6 +8,7 @@
 
 #import "tutorialMessages.h"
 #import "messageUI.h"
+#import "spinData.h"
 
 @implementation tutorialMessages
 
@@ -74,5 +75,8 @@
 }
 +(void)firstTimeTrends: (UIView*)v {
     [messageUI createMessageBox:v information:@"Here are the current Market Trends. Trends will determine how much your sweets are worth per tap. Trends will change every hour so always keep coming back here to maximise your profits!" representingImage:@"marketChart" imageScale:0.2 messageBoxID:34 displayOnce:true];
+}
++(void)spinTimeLeft: (UIView*)v {
+    [messageUI createMessageBox:v information:[NSString stringWithFormat:@"Come back in %d Hours for your Free Daily Spin! Your current Daily Spin streak is %d days!", [spinData getHoursLeft], [spinData getStreakValue]] representingImage:@"spinWheen" imageScale:0.1 messageBoxID:35 displayOnce:false];
 }
 @end

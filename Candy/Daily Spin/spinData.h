@@ -11,4 +11,6 @@
 @interface spinData : NSObject
 +(BOOL)isEligibleForDailySpin;
 +(void)setCurrentDate;
++(int)getHoursLeft;
++(int)getStreakValue;
 @end

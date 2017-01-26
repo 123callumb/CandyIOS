@@ -36,7 +36,7 @@
     
         UILabel *information = [[UILabel alloc] initWithFrame:CGRectMake(messageBox.frame.size.width/2 - v.frame.size.width/3 , messageBox.frame.size.height/2.5, v.frame.size.width/1.5, v.frame.size.height/2)];
     
-        [information setFont:[UIFont fontWithName:@"Coder's-Crux" size:30.0f]];
+        [information setFont:[UIFont fontWithName:@"Coder's-Crux" size:28.0f]];
         [information setText:contentText];
         [information setLineBreakMode:NSLineBreakByClipping];
         [information setTextAlignment:NSTextAlignmentCenter];

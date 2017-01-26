@@ -109,6 +109,8 @@
         [self buttonAnimation:s action:block];
         if([spinData isEligibleForDailySpin]){
             [mainTransition switchScene:sk sceneTwo:@"dailySpin" Transition:[SKTransition fadeWithColor:[SKColor blackColor] duration:0.3]];
+        }else {
+            [tutorialMessages spinTimeLeft:v];
         }
     }
     if([s.name isEqualToString:@"sweetTrendsButton"]){

@@ -25,6 +25,13 @@
         NSDateComponents *dateGap = [ccal components:NSCalendarUnitDay fromDate:date toDate:[nd objectForKey:@"next_spin_date"] options:0];
     
         if ([dateGap day] >= 1) {
+            
+            if([dateGap day] == 1){
+                [self addStreak];
+            }else {
+                [self resetStreak];
+            }
+    
             return true;
         }else {
             return false;
@@ -42,5 +49,26 @@
     
     [nd setObject:dateComp forKey:@"next_spin_date"];
     [nd synchronize];
+}
++(int)getHoursLeft {
+    NSUserDefaults *nd = [NSUserDefaults standardUserDefaults];
+    NSDate *date = [NSDate date];
+    NSCalendar *ccal = [NSCalendar currentCalendar];
+    NSDateComponents *dateGap = [ccal components:NSCalendarUnitHour fromDate:date toDate:[nd objectForKey:@"next_spin_date"] options:0];
+    return (int)[dateGap hour];
+}
++(void)addStreak {
+    NSUserDefaults *nd = [NSUserDefaults standardUserDefaults];
+    [nd setInteger:[self getStreakValue]+1 forKey:@"spin_wheel_streak"];
+    [nd synchronize];
+}
++(void)resetStreak {
+    NSUserDefaults *nd = [NSUserDefaults standardUserDefaults];
+    [nd setInteger:0 forKey:@"spin_wheel_streak"];
+    [nd synchronize];
+}
++(int)getStreakValue {
+    NSUserDefaults *nd = [NSUserDefaults standardUserDefaults];
+    return (int)[nd integerForKey:@"spin_wheel_streak"];
 }
 @end

@@ -22,7 +22,6 @@ int tapCollector = 0;
         int upperBound = (int)[box1 getSlotsUnlocked];
         int rndValue = lowerBound + (int)arc4random() % (upperBound - lowerBound);
         tapCollector = 0;
-        NSLog(@"random %d", rndValue);
         [self createRandomSweetBonus:rndValue scene:s];
     }
 }
