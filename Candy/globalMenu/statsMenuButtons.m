@@ -13,6 +13,7 @@
 #import "gemGemeratorGui.h"
 #import "tutorialMessages.h"
 #import "trendsMain.h"
+#import "spinData.h"
 
 @implementation statsMenuButtons
 
@@ -45,7 +46,15 @@
     gemButton.position = CGPointMake(s.frame.size.width/2, -s.frame.size.height/2.8);
     gemButton.name = @"statsMenuGemButton";
     
-    SKSpriteNode *dailySpin = [SKSpriteNode spriteNodeWithImageNamed:@"dailySpinButton"];
+    NSString *dailySpinTexture;
+    
+    if([spinData isEligibleForDailySpin]){
+        dailySpinTexture = @"dailySpinButton";
+    }else {
+        dailySpinTexture = @"dailySpinButtonTaken";
+    }
+    
+    SKSpriteNode *dailySpin = [SKSpriteNode spriteNodeWithImageNamed:dailySpinTexture];
     dailySpin.position = CGPointMake(-s.frame.size.width/2, s.frame.size.height/1.7);
     dailySpin.name = @"dailySpinButton";
     
@@ -98,7 +107,11 @@
     if([s.name isEqualToString:@"dailySpinButton"]){
         SKAction *block = [SKAction runBlock:^{}];
         [self buttonAnimation:s action:block];
-        [mainTransition switchScene:sk sceneTwo:@"dailySpin" Transition:[SKTransition fadeWithColor:[SKColor blackColor] duration:0.3]];
+        if([spinData isEligibleForDailySpin]){
+            [mainTransition switchScene:sk sceneTwo:@"dailySpin" Transition:[SKTransition fadeWithColor:[SKColor blackColor] duration:0.3]];
+        }else {
+            [tutorialMessages spinTimeLeft:v];
+        }
     }
     if([s.name isEqualToString:@"sweetTrendsButton"]){
         SKAction *block = [SKAction runBlock:^{}];

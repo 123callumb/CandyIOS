@@ -16,4 +16,5 @@
 +(void)firstTimeSweetInvButton: (UIView*)v;
 +(void)firstTimeStoreButton: (UIView*)v;
 +(void)firstTimeTrends: (UIView*)v;
++(void)spinTimeLeft: (UIView*)v;
 @end

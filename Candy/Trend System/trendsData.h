@@ -13,4 +13,5 @@
 +(NSString*)getTrendAtIndex: (int)input;
 +(int)amountOfTrends;
 +(int)getTrendMultiplierByPacketTrendID: (int)s;
++(void)keepTrendsUpdated;
 @end

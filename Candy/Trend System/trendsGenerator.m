@@ -26,7 +26,7 @@
     NSString *barTime = [NSString stringWithFormat:@"trends_time_bar_%d", bar];
     
     int storedTime = (int)[nd integerForKey:barTime];
-        
+    
     if(storedTime != hour){
 
         if(storedTime == 0){
@@ -36,7 +36,7 @@
         }
         
     [nd setInteger:[bonusAmounts generateRandIntWithBounds:1 UprBound:5] forKey:barName];
-    
+        [nd synchronize];
     }
     return (int)[nd integerForKey:barName];
 }

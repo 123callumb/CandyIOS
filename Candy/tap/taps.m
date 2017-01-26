@@ -22,6 +22,7 @@
 #import "sweetInventoryData.h"
 #import "gems.h"
 #import "candyMachines.h"
+#import "trendsData.h"
 
 @implementation taps
 +(void)onPressed: (SKScene *)s location:(CGPoint)p {
@@ -33,6 +34,7 @@
             [fiftyTapBonus onTouchofBonus:(SKSpriteNode*)obj scene:s];
             [candyMachines onTouch:s];
         }
+    [trendsData keepTrendsUpdated];
 }
 
 +(void)onRelease: (SKScene*)s {

@@ -23,6 +23,11 @@
     [self createTrendChartItem:m sweetTexture:@"sweetPacket" trend:[trendsGenerator generateRandomTrend:4]];
 
 }
++(void)keepTrendsUpdated {
+    for(int i = 0; i <= 4; i++){
+        [trendsGenerator generateRandomTrend:i];
+    }
+}
 +(void)createTrendChartItem: (NSMutableArray*)m sweetTexture:(NSString*)texture trend:(int)trendLevel {
     NSMutableDictionary *trendItem = [[NSMutableDictionary alloc] init];
     [trendItem setObject:texture forKey:@"trend_texture"];

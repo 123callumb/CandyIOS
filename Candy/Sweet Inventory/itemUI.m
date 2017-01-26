@@ -94,8 +94,12 @@
     
     [mainItem addSubview:topBar];
     [mainItem addSubview:back];
-    [mainItem addSubview:sellCoinButton];
-    [mainItem addSubview:sellGemButton];
+    
+    if([[sweetInventoryData getInventory] count] > 1){
+        [mainItem addSubview:sellCoinButton];
+        [mainItem addSubview:sellGemButton];
+    }
+    
     [mainItem addSubview:backInvButton];
     [mainItem addSubview:sweet];
     [mainItem addSubview:sweetNameBg];

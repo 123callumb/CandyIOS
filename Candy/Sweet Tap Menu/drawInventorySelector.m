@@ -108,13 +108,13 @@
     UIView *v1 = [v superview];
     
     int invSlotNo = (int) (sweetSelected.tag) - 12000;
-    NSLog(@"%d", invSlotNo);
+    //NSLog(@"%d", invSlotNo);
    
-   [sweetDrawData editObject:[sweetDrawData getDrawSelected] invSlot:invSlotNo];
+    [sweetDrawData editObject:[sweetDrawData getDrawSelected] invSlot:invSlotNo];
     
-    NSMutableDictionary *addedobj = [sweetDrawData getSweetDataAtSlot:[sweetDrawData getDrawSelected]];
-    NSString *tex = [addedobj objectForKey:@"sweet_texture"];
-    NSLog(@"slot %d was set to texture %@", [sweetDrawData getDrawSelected], tex);
+    //NSMutableDictionary *addedobj = [sweetDrawData getSweetDataAtSlot:[sweetDrawData getDrawSelected]];
+    //NSString *tex = [addedobj objectForKey:@"sweet_texture"];
+    //NSLog(@"slot %d was set to texture %@", [sweetDrawData getDrawSelected], tex);
     
     [sweetDrawUI refresh:v1];
     [v removeFromSuperview];
