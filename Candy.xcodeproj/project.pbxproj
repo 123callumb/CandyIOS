@@ -152,6 +152,7 @@
 		75E1B5D71DE29B3600F7C50F /* doneButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E1B5D61DE29B3600F7C50F /* doneButton.m */; };
 		75E39AD01E0319FD003D7DD7 /* bonbonPacket.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E39ACF1E0319FD003D7DD7 /* bonbonPacket.m */; };
 		75E3B5B21E37D6C700979CA4 /* trendsGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E3B5B11E37D6C700979CA4 /* trendsGenerator.m */; };
+		75E3B5B61E3AB09300979CA4 /* freeItemsScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E3B5B51E3AB09300979CA4 /* freeItemsScene.m */; };
 		75E8F1891DD3A57200A421E7 /* sweet.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E8F1881DD3A57200A421E7 /* sweet.m */; };
 		75E8F18D1DD3AB0300A421E7 /* defaultSweet.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E8F18C1DD3AB0300A421E7 /* defaultSweet.m */; };
 		75E8F1911DD3AE3A00A421E7 /* inventory.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E8F1901DD3AE3A00A421E7 /* inventory.m */; };
@@ -466,6 +467,8 @@
 		75E39ACF1E0319FD003D7DD7 /* bonbonPacket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = bonbonPacket.m; path = Candy/Packets/bonbonPacket.m; sourceTree = SOURCE_ROOT; };
 		75E3B5B01E37D6C700979CA4 /* trendsGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = trendsGenerator.h; path = "Candy/Trend System/trendsGenerator.h"; sourceTree = "<group>"; };
 		75E3B5B11E37D6C700979CA4 /* trendsGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = trendsGenerator.m; path = "Candy/Trend System/trendsGenerator.m"; sourceTree = "<group>"; };
+		75E3B5B41E3AB09300979CA4 /* freeItemsScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = freeItemsScene.h; path = "Candy/Free Items/freeItemsScene.h"; sourceTree = "<group>"; };
+		75E3B5B51E3AB09300979CA4 /* freeItemsScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = freeItemsScene.m; path = "Candy/Free Items/freeItemsScene.m"; sourceTree = "<group>"; };
 		75E8F1871DD3A57200A421E7 /* sweet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = sweet.h; path = Candy/sweet/sweet.h; sourceTree = "<group>"; };
 		75E8F1881DD3A57200A421E7 /* sweet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = sweet.m; path = Candy/sweet/sweet.m; sourceTree = "<group>"; };
 		75E8F18B1DD3AB0300A421E7 /* defaultSweet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = defaultSweet.h; path = Candy/sweet/defaultSweet.h; sourceTree = "<group>"; };
@@ -874,6 +877,7 @@
 		75C36DEE1DCCF77600F84214 = {
 			isa = PBXGroup;
 			children = (
+				75E3B5B31E3AB07500979CA4 /* Free Items  */,
 				75B7C6A81E327D8400D01EB5 /* Trend System */,
 				75784D481E281AB600C41067 /* Daily Spin */,
 				75582AE81E22E40500254C54 /* Building System */,
@@ -1070,6 +1074,15 @@
 				75828DFB1E16A417008DC5AF /* sweetValueCalculation.m */,
 			);
 			name = "Sweet Tap Menu";
+			sourceTree = "<group>";
+		};
+		75E3B5B31E3AB07500979CA4 /* Free Items  */ = {
+			isa = PBXGroup;
+			children = (
+				75E3B5B41E3AB09300979CA4 /* freeItemsScene.h */,
+				75E3B5B51E3AB09300979CA4 /* freeItemsScene.m */,
+			);
+			name = "Free Items ";
 			sourceTree = "<group>";
 		};
 		75E8F1861DD3A55A00A421E7 /* Sweets */ = {
@@ -1317,6 +1330,7 @@
 				75C36E3A1DCE5CD900F84214 /* splashBacking.m in Sources */,
 				7580D74D1E1EDDA800BCDA75 /* desks.m in Sources */,
 				7571FB641DFB130E006E1E49 /* packetButton.m in Sources */,
+				75E3B5B61E3AB09300979CA4 /* freeItemsScene.m in Sources */,
 				75919B991DDCA41C001F66EB /* defaultLevel.m in Sources */,
 				75C36E3E1DCE5F2000F84214 /* backgroundManager.m in Sources */,
 				61E1838F1DEE13E20034C021 /* Save.m in Sources */,

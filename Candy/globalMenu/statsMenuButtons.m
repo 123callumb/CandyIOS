@@ -26,9 +26,9 @@
     sweetInventoryButton.position = CGPointMake(-s.frame.size.width/2, s.frame.size.height/9);
     sweetInventoryButton.name = @"sweetInvButton";
 
-    SKSpriteNode *mapButton = [SKSpriteNode spriteNodeWithImageNamed:@"mapButtonS"];
-    mapButton.position = CGPointMake(-s.frame.size.width/2, -s.frame.size.height/1.21);
-    mapButton.name = @"statsMenuMapButton";
+    SKSpriteNode *mapButton = [SKSpriteNode spriteNodeWithImageNamed:@"freeItemsButton"];
+    mapButton.position = CGPointMake(-s.frame.size.width/2, s.frame.size.height/1.7);
+    mapButton.name = @"freeItemsButton";
     
     SKSpriteNode *sweetTrends = [SKSpriteNode spriteNodeWithImageNamed:@"sweetTrendsButton"];
     sweetTrends.position = CGPointMake(s.frame.size.width/2, -s.frame.size.height/1.21);
@@ -55,7 +55,7 @@
     }
     
     SKSpriteNode *dailySpin = [SKSpriteNode spriteNodeWithImageNamed:dailySpinTexture];
-    dailySpin.position = CGPointMake(-s.frame.size.width/2, s.frame.size.height/1.7);
+    dailySpin.position = CGPointMake(-s.frame.size.width/2, -s.frame.size.height/1.21);
     dailySpin.name = @"dailySpinButton";
     
     [s addChild:mapButton];
@@ -73,11 +73,9 @@
         [self buttonAnimation:s action:block];
         [playerStatsMenu createPStatsMenu:sk];
     }
-    if([s.name isEqualToString:@"statsMenuMapButton"]){
-        SKAction *block = [SKAction runBlock:^{
-            [mainTransition switchScene:sk sceneTwo:@"mainMap" Transition:[SKTransition doorsCloseVerticalWithDuration:0.3]];
-        }];
-        [self buttonAnimation:s action:block];
+    if([s.name isEqualToString:@"freeItemsButton"]){
+        [mainTransition switchScene:sk sceneTwo:@"freeItems" Transition:[SKTransition fadeWithDuration:0.3]];
+        [self buttonAnimation:s action:[SKAction runBlock:^{}]];
     }
     if([s.name isEqualToString:@"statsMenuCoinStoreButton"]){
         SKAction *block = [SKAction runBlock:^{
