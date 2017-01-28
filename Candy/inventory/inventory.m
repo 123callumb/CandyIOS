@@ -20,7 +20,7 @@
     int sweetFlavour = [slot1Data getFlavour:slotNumber];
     int sS = [slot1Data getSweetness:slotNumber];
     
-    NSLog(@"Slot %d (Type:%d) (Flavour:%d) (Sweetness:%d)", slotNumber, sweetType, sweetFlavour, sS);
+    //NSLog(@"Slot %d (Type:%d) (Flavour:%d) (Sweetness:%d)", slotNumber, sweetType, sweetFlavour, sS);
     
     int slotValue = 1;
     

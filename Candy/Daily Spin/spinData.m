@@ -16,16 +16,20 @@
     NSDate *date = [NSDate date];
     NSCalendar *ccal = [NSCalendar currentCalendar];
     
+
+    
     if([nd objectForKey:@"next_spin_date"] == nil){
-        
+
+  
         return true;
         
     }else{
     
-        NSDateComponents *dateGap = [ccal components:NSCalendarUnitDay fromDate:date toDate:[nd objectForKey:@"next_spin_date"] options:0];
-    
+        
+        NSDateComponents *dateGap = [ccal components:NSCalendarUnitDay fromDate:[nd objectForKey:@"next_spin_date"] toDate:date options:0];
+
         if ([dateGap day] >= 1) {
-            
+
             if([dateGap day] == 1){
                 [self addStreak];
             }else {
