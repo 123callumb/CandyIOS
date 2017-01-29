@@ -89,6 +89,7 @@
 		7571FB711DFB716D006E1E49 /* sweetShopUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 7571FB701DFB716D006E1E49 /* sweetShopUI.m */; };
 		7571FB741DFB7453006E1E49 /* sweetShopBackground.m in Sources */ = {isa = PBXBuildFile; fileRef = 7571FB731DFB7453006E1E49 /* sweetShopBackground.m */; };
 		7571FB771DFB77D2006E1E49 /* sweetScrollUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 7571FB761DFB77D2006E1E49 /* sweetScrollUI.m */; };
+		757257251E3E671B00363F94 /* spinStreak.m in Sources */ = {isa = PBXBuildFile; fileRef = 757257241E3E671B00363F94 /* spinStreak.m */; };
 		75754BEF1E2401FE0030D1BA /* tutorialMessages.m in Sources */ = {isa = PBXBuildFile; fileRef = 75754BEE1E2401FE0030D1BA /* tutorialMessages.m */; };
 		757695231E09AF9F0067ABBF /* sweetInventoryUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 757695221E09AF9F0067ABBF /* sweetInventoryUI.m */; };
 		757695261E09AFF10067ABBF /* sweetInventoryBackground.m in Sources */ = {isa = PBXBuildFile; fileRef = 757695251E09AFF10067ABBF /* sweetInventoryBackground.m */; };
@@ -344,6 +345,8 @@
 		7571FB731DFB7453006E1E49 /* sweetShopBackground.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = sweetShopBackground.m; path = "Candy/Sweet Shop/sweetShopBackground.m"; sourceTree = "<group>"; };
 		7571FB751DFB77D2006E1E49 /* sweetScrollUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sweetScrollUI.h; sourceTree = "<group>"; };
 		7571FB761DFB77D2006E1E49 /* sweetScrollUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = sweetScrollUI.m; sourceTree = "<group>"; };
+		757257231E3E671B00363F94 /* spinStreak.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = spinStreak.h; path = "Candy/Daily Spin/spinStreak.h"; sourceTree = "<group>"; };
+		757257241E3E671B00363F94 /* spinStreak.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = spinStreak.m; path = "Candy/Daily Spin/spinStreak.m"; sourceTree = "<group>"; };
 		75754BED1E2401FE0030D1BA /* tutorialMessages.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = tutorialMessages.h; path = "Candy/Message System/tutorialMessages.h"; sourceTree = "<group>"; };
 		75754BEE1E2401FE0030D1BA /* tutorialMessages.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = tutorialMessages.m; path = "Candy/Message System/tutorialMessages.m"; sourceTree = "<group>"; };
 		757695211E09AF9F0067ABBF /* sweetInventoryUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = sweetInventoryUI.h; path = "Candy/Sweet Inventory/sweetInventoryUI.h"; sourceTree = "<group>"; };
@@ -806,6 +809,8 @@
 				7579CB051E2AA4CD00975F01 /* spinBox.m */,
 				75E04FCE1E3128590098E2AE /* spinData.h */,
 				75E04FCF1E3128590098E2AE /* spinData.m */,
+				757257231E3E671B00363F94 /* spinStreak.h */,
+				757257241E3E671B00363F94 /* spinStreak.m */,
 			);
 			name = "Daily Spin";
 			sourceTree = "<group>";
@@ -1393,6 +1398,7 @@
 				75D5688A1E132A5600349143 /* quickSelectUI.m in Sources */,
 				75C36E061DCCF77700F84214 /* GameScene.m in Sources */,
 				7525F7BE1DD256A500B0510C /* comboBar.m in Sources */,
+				757257251E3E671B00363F94 /* spinStreak.m in Sources */,
 				75B526451E1EAD580020A609 /* levelStructure.m in Sources */,
 				75919B9C1DDCA4CE001F66EB /* levelDecider.m in Sources */,
 				75C36E4A1DCE793D00F84214 /* mainBackground.m in Sources */,

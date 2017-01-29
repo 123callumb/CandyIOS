@@ -12,6 +12,8 @@
 #import "money.h"
 #import "gems.h"
 #import "spinData.h"
+#import "spinWheel.h"
+#import "spinStreak.h"
 @implementation spinBox
 
 NSString *finalOutcome = @"gem";
@@ -31,22 +33,18 @@ NSString *finalOutcome = @"gem";
         SKSpriteNode *prize = [SKSpriteNode spriteNodeWithImageNamed:[self getFinalOutcome]];
         prize.name = @"boxPrize";
         prize.zPosition = 10;
-        prize.position = CGPointMake(-box.frame.size.width*3, 0);
+        prize.position = CGPointMake(0, 0);
         prize.xScale = 2;
         prize.yScale = 2;
         [box addChild:prize];
         
-        SKLabelNode *multiplier = [SKLabelNode labelNodeWithText:@"x1 Day Bonus"];
-        multiplier.fontName = @"Coder's-Crux";
-        multiplier.fontColor = [SKColor blackColor];
-        multiplier.fontSize = 150;
-        multiplier.position = CGPointMake(box.frame.size.width*1.5, -multiplier.frame.size.height/4);
-        [box addChild:multiplier];
+        
         
         [s addChild:box];
         
         SKAction *grow = [SKAction scaleTo:0.5 duration:0.5];
         [box runAction:grow];
+        
         
         SKAction *finalResult = [SKAction waitForDuration:3];
         [s runAction:finalResult completion:^{
@@ -70,16 +68,36 @@ NSString *finalOutcome = @"gem";
     return finalOutcome;
 }
 +(void)onResult: (SKScene*)s {
+    
+    SKSpriteNode *box = (SKSpriteNode*)[s childNodeWithName:@"box"];
+    SKSpriteNode *prize = (SKSpriteNode*)[box childNodeWithName:@"boxPrize"];
+    SKAction *movePrize = [SKAction moveByX:(-box.frame.size.width/2) y:0 duration:0.8];
+    
+    [prize runAction:movePrize];
+    
     if([finalOutcome isEqualToString:@"coin"]){
         [money addBalance:1000];
+        [spinWheel addPrizeValue:s text:@"x1000!" pos:CGPointMake(box.frame.size.width/6, box.position.y - box.frame.size.height/20) textSize:150];
     }
     if([finalOutcome isEqualToString:@"gem"]){
         [gems addGems:1];
+        [spinWheel addPrizeValue:s text:@"x1!" pos:CGPointMake(box.frame.size.width/6, box.position.y - box.frame.size.height/20) textSize:150];
+
     }
     if([finalOutcome isEqualToString:@"miniGems"]){
         [gems addMiniGems:10];
+        [spinWheel addPrizeValue:s text:@"x10!" pos:CGPointMake(box.frame.size.width/6, box.position.y - box.frame.size.height/20) textSize:150];
+
     }
-    [mainTransition switchScene:s sceneTwo:@"main" Transition:[SKTransition fadeWithColor:[SKColor blackColor] duration:2.5]];
+    [spinWheel addPrizeValue:s text:[NSString stringWithFormat:@"%d Spin Streak:", [spinData getStreakValue]]
+                         pos:CGPointMake(box.frame.size.width/6, box.position.y - box.frame.size.height/6) textSize:50];
+    [spinWheel addPrizeValue:s text:[spinStreak determineSpinStreakPrize]
+                         pos:CGPointMake(box.frame.size.width/6, box.position.y - box.frame.size.height/3.5) textSize:50];
+
+    [s runAction:[SKAction waitForDuration:4] completion:^{
+        [mainTransition switchScene:s sceneTwo:@"main" Transition:[SKTransition fadeWithColor:[SKColor blackColor] duration:2.5]];
+    }];
+    
     [spinData setCurrentDate];
 }
 @end
