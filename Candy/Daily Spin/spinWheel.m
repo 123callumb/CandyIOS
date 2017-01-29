@@ -29,6 +29,7 @@
     holder.name = @"dailySpinWheelHolder";
     holder.xScale = 0.6;
     holder.yScale = 0.6;
+    holder.zPosition = 9;
     holder.position = CGPointMake(0, - s.frame.size.height/2 + holder.frame.size.height/2);
     [s addChild:holder];
 }
@@ -37,6 +38,7 @@
     meter.name = @"dailySpinWheelHolder";
     meter.xScale = 0.6;
     meter.yScale = 0.6;
+    meter.zPosition = 9;
     meter.position = CGPointMake(0, - s.frame.size.height/2 + meter.frame.size.height/2);
     [s addChild:meter];
 }
@@ -47,6 +49,7 @@
     SKSpriteNode *scale = [SKSpriteNode spriteNodeWithColor:[SKColor orangeColor] size:CGSizeMake(s.frame.size.width/34, s.frame.size.height/60)];
     scale.position = CGPointMake(0, -s.frame.size.height/2 + s.frame.size.height/48);
     scale.anchorPoint = CGPointMake(0.5, 1);
+    scale.zPosition = 9;
     scale.name = @"meterScale";
     [s addChild:scale];
 }
@@ -57,6 +60,7 @@
     coin.xScale = 2;
     coin.yScale = 2;
     coin.name = @"coin";
+    coin.zPosition = 8;
     coin.position = CGPointMake(coin.frame.size.height/5, -coin.frame.size.height/5);
     [s addChild:coin];
     SKSpriteNode *coin1 = [SKSpriteNode spriteNodeWithImageNamed:@"coin"];
@@ -64,6 +68,7 @@
     coin1.xScale = 2;
     coin1.yScale = 2;
     coin1.zRotation = -M_PI*2 + M_PI_4;
+    coin1.zPosition = 8;
     coin1.position = CGPointMake(-coin1.frame.size.height/5, coin1.frame.size.height/5);
     [s addChild:coin1];
     SKSpriteNode *miniGems = [SKSpriteNode spriteNodeWithImageNamed:@"miniGems"];
@@ -83,5 +88,16 @@
     Gem.position = CGPointMake(-Gem.frame.size.height/10, -Gem.frame.size.height/10);
     [s addChild:Gem];
 }
-
++(void)addPrizeValue: (SKScene*)s text:(NSString*)text pos:(CGPoint)position textSize:(float)size{
+    SKLabelNode *textV = [SKLabelNode labelNodeWithFontNamed:@"Coder's-Crux"];
+    textV.fontSize = size;
+    textV.fontColor = [SKColor blackColor];
+    textV.text = text;
+    textV.position = position;
+    textV.zPosition = 10;
+    textV.alpha = 0.0;
+    [s addChild:textV];
+    SKAction *fadeIn = [SKAction fadeInWithDuration:1];
+    [textV runAction:fadeIn];
+}
 @end
