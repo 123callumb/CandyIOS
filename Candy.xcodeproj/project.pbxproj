@@ -161,6 +161,30 @@
 		75E8F1981DD7969500A421E7 /* statsMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E8F1971DD7969500A421E7 /* statsMenu.m */; };
 		75E8F19B1DD8F6E500A421E7 /* menuBackButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E8F19A1DD8F6E500A421E7 /* menuBackButton.m */; };
 		75E8F4F21E0B2EAB00018296 /* sweetInventorySlot.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E8F4F11E0B2EAB00018296 /* sweetInventorySlot.m */; };
+		75EC2E2D1E3FA51C00469A13 /* FirebaseAnalytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75EC2E271E3FA51C00469A13 /* FirebaseAnalytics.framework */; };
+		75EC2E2E1E3FA51C00469A13 /* FirebaseAnalytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75EC2E271E3FA51C00469A13 /* FirebaseAnalytics.framework */; };
+		75EC2E2F1E3FA51C00469A13 /* FirebaseAnalytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75EC2E271E3FA51C00469A13 /* FirebaseAnalytics.framework */; };
+		75EC2E301E3FA51C00469A13 /* FirebaseCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75EC2E281E3FA51C00469A13 /* FirebaseCore.framework */; };
+		75EC2E311E3FA51C00469A13 /* FirebaseCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75EC2E281E3FA51C00469A13 /* FirebaseCore.framework */; };
+		75EC2E321E3FA51C00469A13 /* FirebaseCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75EC2E281E3FA51C00469A13 /* FirebaseCore.framework */; };
+		75EC2E331E3FA51C00469A13 /* FirebaseInstanceID.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75EC2E291E3FA51C00469A13 /* FirebaseInstanceID.framework */; };
+		75EC2E341E3FA51C00469A13 /* FirebaseInstanceID.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75EC2E291E3FA51C00469A13 /* FirebaseInstanceID.framework */; };
+		75EC2E351E3FA51C00469A13 /* FirebaseInstanceID.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75EC2E291E3FA51C00469A13 /* FirebaseInstanceID.framework */; };
+		75EC2E361E3FA51C00469A13 /* GoogleInterchangeUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75EC2E2A1E3FA51C00469A13 /* GoogleInterchangeUtilities.framework */; };
+		75EC2E371E3FA51C00469A13 /* GoogleInterchangeUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75EC2E2A1E3FA51C00469A13 /* GoogleInterchangeUtilities.framework */; };
+		75EC2E381E3FA51C00469A13 /* GoogleInterchangeUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75EC2E2A1E3FA51C00469A13 /* GoogleInterchangeUtilities.framework */; };
+		75EC2E391E3FA51C00469A13 /* GoogleSymbolUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75EC2E2B1E3FA51C00469A13 /* GoogleSymbolUtilities.framework */; };
+		75EC2E3A1E3FA51C00469A13 /* GoogleSymbolUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75EC2E2B1E3FA51C00469A13 /* GoogleSymbolUtilities.framework */; };
+		75EC2E3B1E3FA51C00469A13 /* GoogleSymbolUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75EC2E2B1E3FA51C00469A13 /* GoogleSymbolUtilities.framework */; };
+		75EC2E3C1E3FA51C00469A13 /* GoogleToolboxForMac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75EC2E2C1E3FA51C00469A13 /* GoogleToolboxForMac.framework */; };
+		75EC2E3D1E3FA51C00469A13 /* GoogleToolboxForMac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75EC2E2C1E3FA51C00469A13 /* GoogleToolboxForMac.framework */; };
+		75EC2E3E1E3FA51C00469A13 /* GoogleToolboxForMac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75EC2E2C1E3FA51C00469A13 /* GoogleToolboxForMac.framework */; };
+		75EC2E401E3FA62A00469A13 /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75EC2E3F1E3FA62A00469A13 /* GoogleMobileAds.framework */; };
+		75EC2E411E3FA62A00469A13 /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75EC2E3F1E3FA62A00469A13 /* GoogleMobileAds.framework */; };
+		75EC2E421E3FA62A00469A13 /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75EC2E3F1E3FA62A00469A13 /* GoogleMobileAds.framework */; };
+		75EC2E451E3FA84000469A13 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 75EC2E441E3FA84000469A13 /* GoogleService-Info.plist */; };
+		75EC2E461E3FA84000469A13 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 75EC2E441E3FA84000469A13 /* GoogleService-Info.plist */; };
+		75EC2E471E3FA84000469A13 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 75EC2E441E3FA84000469A13 /* GoogleService-Info.plist */; };
 		75ED3B581E1960360012BA98 /* gemGemeratorGui.m in Sources */ = {isa = PBXBuildFile; fileRef = 75ED3B571E1960360012BA98 /* gemGemeratorGui.m */; };
 		75ED3B5B1E19647F0012BA98 /* gemInteractionUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 75ED3B5A1E19647F0012BA98 /* gemInteractionUI.m */; };
 		75ED3B5E1E19897D0012BA98 /* gemPotData.m in Sources */ = {isa = PBXBuildFile; fileRef = 75ED3B5D1E19897D0012BA98 /* gemPotData.m */; };
@@ -486,6 +510,15 @@
 		75E8F19A1DD8F6E500A421E7 /* menuBackButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = menuBackButton.m; path = Candy/userInterface/menuBackButton.m; sourceTree = "<group>"; };
 		75E8F4F01E0B2EAB00018296 /* sweetInventorySlot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = sweetInventorySlot.h; path = "Candy/Sweet Inventory/sweetInventorySlot.h"; sourceTree = "<group>"; };
 		75E8F4F11E0B2EAB00018296 /* sweetInventorySlot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = sweetInventorySlot.m; path = "Candy/Sweet Inventory/sweetInventorySlot.m"; sourceTree = "<group>"; };
+		75EC2E271E3FA51C00469A13 /* FirebaseAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FirebaseAnalytics.framework; sourceTree = "<group>"; };
+		75EC2E281E3FA51C00469A13 /* FirebaseCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FirebaseCore.framework; sourceTree = "<group>"; };
+		75EC2E291E3FA51C00469A13 /* FirebaseInstanceID.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FirebaseInstanceID.framework; sourceTree = "<group>"; };
+		75EC2E2A1E3FA51C00469A13 /* GoogleInterchangeUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleInterchangeUtilities.framework; sourceTree = "<group>"; };
+		75EC2E2B1E3FA51C00469A13 /* GoogleSymbolUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleSymbolUtilities.framework; sourceTree = "<group>"; };
+		75EC2E2C1E3FA51C00469A13 /* GoogleToolboxForMac.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleToolboxForMac.framework; sourceTree = "<group>"; };
+		75EC2E3F1E3FA62A00469A13 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
+		75EC2E431E3FA75B00469A13 /* Firebase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Firebase.h; sourceTree = "<group>"; };
+		75EC2E441E3FA84000469A13 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		75ED3B561E1960360012BA98 /* gemGemeratorGui.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = gemGemeratorGui.h; path = Candy/globalMenu/gemMenu/gemGemeratorGui.h; sourceTree = "<group>"; };
 		75ED3B571E1960360012BA98 /* gemGemeratorGui.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = gemGemeratorGui.m; path = Candy/globalMenu/gemMenu/gemGemeratorGui.m; sourceTree = "<group>"; };
 		75ED3B591E19647F0012BA98 /* gemInteractionUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = gemInteractionUI.h; path = Candy/globalMenu/gemMenu/gemInteractionUI.h; sourceTree = "<group>"; };
@@ -505,6 +538,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75EC2E301E3FA51C00469A13 /* FirebaseCore.framework in Frameworks */,
+				75EC2E361E3FA51C00469A13 /* GoogleInterchangeUtilities.framework in Frameworks */,
+				75EC2E391E3FA51C00469A13 /* GoogleSymbolUtilities.framework in Frameworks */,
+				75EC2E3C1E3FA51C00469A13 /* GoogleToolboxForMac.framework in Frameworks */,
+				75EC2E331E3FA51C00469A13 /* FirebaseInstanceID.framework in Frameworks */,
+				75EC2E401E3FA62A00469A13 /* GoogleMobileAds.framework in Frameworks */,
+				75EC2E2D1E3FA51C00469A13 /* FirebaseAnalytics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -512,6 +552,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75EC2E311E3FA51C00469A13 /* FirebaseCore.framework in Frameworks */,
+				75EC2E371E3FA51C00469A13 /* GoogleInterchangeUtilities.framework in Frameworks */,
+				75EC2E3A1E3FA51C00469A13 /* GoogleSymbolUtilities.framework in Frameworks */,
+				75EC2E3D1E3FA51C00469A13 /* GoogleToolboxForMac.framework in Frameworks */,
+				75EC2E341E3FA51C00469A13 /* FirebaseInstanceID.framework in Frameworks */,
+				75EC2E411E3FA62A00469A13 /* GoogleMobileAds.framework in Frameworks */,
+				75EC2E2E1E3FA51C00469A13 /* FirebaseAnalytics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -519,6 +566,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75EC2E321E3FA51C00469A13 /* FirebaseCore.framework in Frameworks */,
+				75EC2E381E3FA51C00469A13 /* GoogleInterchangeUtilities.framework in Frameworks */,
+				75EC2E3B1E3FA51C00469A13 /* GoogleSymbolUtilities.framework in Frameworks */,
+				75EC2E3E1E3FA51C00469A13 /* GoogleToolboxForMac.framework in Frameworks */,
+				75EC2E351E3FA51C00469A13 /* FirebaseInstanceID.framework in Frameworks */,
+				75EC2E421E3FA62A00469A13 /* GoogleMobileAds.framework in Frameworks */,
+				75EC2E2F1E3FA51C00469A13 /* FirebaseAnalytics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -882,6 +936,15 @@
 		75C36DEE1DCCF77600F84214 = {
 			isa = PBXGroup;
 			children = (
+				75EC2E431E3FA75B00469A13 /* Firebase.h */,
+				75EC2E441E3FA84000469A13 /* GoogleService-Info.plist */,
+				75EC2E3F1E3FA62A00469A13 /* GoogleMobileAds.framework */,
+				75EC2E271E3FA51C00469A13 /* FirebaseAnalytics.framework */,
+				75EC2E281E3FA51C00469A13 /* FirebaseCore.framework */,
+				75EC2E291E3FA51C00469A13 /* FirebaseInstanceID.framework */,
+				75EC2E2A1E3FA51C00469A13 /* GoogleInterchangeUtilities.framework */,
+				75EC2E2B1E3FA51C00469A13 /* GoogleSymbolUtilities.framework */,
+				75EC2E2C1E3FA51C00469A13 /* GoogleToolboxForMac.framework */,
 				75E3B5B31E3AB07500979CA4 /* Free Items  */,
 				75B7C6A81E327D8400D01EB5 /* Trend System */,
 				75784D481E281AB600C41067 /* Daily Spin */,
@@ -1295,6 +1358,7 @@
 			files = (
 				75C36E0C1DCCF77700F84214 /* Main.storyboard in Resources */,
 				75C36E011DCCF77600F84214 /* GameScene.sks in Resources */,
+				75EC2E451E3FA84000469A13 /* GoogleService-Info.plist in Resources */,
 				75C36E0E1DCCF77700F84214 /* Assets.xcassets in Resources */,
 				7525F7B31DD232E600B0510C /* pixel.ttf in Resources */,
 				7525F7CC1DD2931900B0510C /* coders_crux.ttf in Resources */,
@@ -1309,6 +1373,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7525F7C61DD287A300B0510C /* pixel.ttf in Resources */,
+				75EC2E461E3FA84000469A13 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1317,6 +1382,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7525F7C71DD287A400B0510C /* pixel.ttf in Resources */,
+				75EC2E471E3FA84000469A13 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1573,6 +1639,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -1614,6 +1681,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -1624,6 +1692,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = T5F4852ZMN;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Candy/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1637,6 +1709,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = T5F4852ZMN;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Candy/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1649,6 +1725,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = CandyTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -1662,6 +1742,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = CandyTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -1674,6 +1758,10 @@
 		75C36E321DCCF77700F84214 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = CandyUITests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -1686,6 +1774,10 @@
 		75C36E331DCCF77700F84214 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = CandyUITests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
