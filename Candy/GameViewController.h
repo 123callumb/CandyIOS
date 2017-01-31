@@ -10,6 +10,7 @@
 #import <SpriteKit/SpriteKit.h>
 #import <GameplayKit/GameplayKit.h>
 
-@interface GameViewController : UIViewController
+@import GoogleMobileAds;
 
+@interface GameViewController : UIViewController
 @end

@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "Firebase.h"
+#import "GADMAdapterAdColonyInitializer.h"
 
 @interface AppDelegate ()
 
@@ -16,6 +18,15 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    [FIRApp configure];
+    [GADMAdapterAdColonyInitializer startWithAppID:@"appe261e252c06f42bab4" andZones:@[@"vzd7e1b436f65940978d", @"vz15fca91cdcff41c88f"] andCustomID:@"appe261e252c06f42bab4"];
+    [GADMobileAds configureWithApplicationID:@"ca-app-pub-1801714701929045~3500859617"];
+    
+    GADRequest *req = [GADRequest request];
+    req.testDevices = @[@"1e69c118ffc7ac17572ce32296f9878fe6d58d46"];
+    
+    [[GADRewardBasedVideoAd sharedInstance] loadRequest:req withAdUnitID:@"ca-app-pub-1801714701929045/4977592815"];
+
     // Override point for customization after application launch.
     return YES;
 }

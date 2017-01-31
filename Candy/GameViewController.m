@@ -9,6 +9,8 @@
 #import "GameViewController.h"
 #import "GameScene.h"
 
+@import GoogleMobileAds;
+
 @implementation GameViewController
 
 - (void)viewDidLoad {

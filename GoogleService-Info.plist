@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>192341028611-meq6edgb0b2pnl99i2mr4jkbu7kk137e.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.192341028611-meq6edgb0b2pnl99i2mr4jkbu7kk137e</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDtckRvJgMEp6e5z3F7_WHIk4l7-ILVMmI</string>
+	<key>GCM_SENDER_ID</key>
+	<string>192341028611</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>kilcal.Candy</string>
+	<key>PROJECT_ID</key>
+	<string>candy-292c9</string>
+	<key>STORAGE_BUCKET</key>
+	<string>candy-292c9.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true/>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false/>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false/>
+	<key>IS_GCM_ENABLED</key>
+	<true/>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true/>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:192341028611:ios:b14d566a21494224</string>
+	<key>DATABASE_URL</key>
+	<string>https://candy-292c9.firebaseio.com</string>
+</dict>
+</plist>
