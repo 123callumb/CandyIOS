@@ -7,9 +7,9 @@
 	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
 	<string>ca-app-pub-3940256099942544/4411468910</string>
 	<key>CLIENT_ID</key>
-	<string>192341028611-eet45v2vv8oi4h0a2iferri9u1psc4oa.apps.googleusercontent.com</string>
+	<string>192341028611-meq6edgb0b2pnl99i2mr4jkbu7kk137e.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.192341028611-eet45v2vv8oi4h0a2iferri9u1psc4oa</string>
+	<string>com.googleusercontent.apps.192341028611-meq6edgb0b2pnl99i2mr4jkbu7kk137e</string>
 	<key>API_KEY</key>
 	<string>AIzaSyDtckRvJgMEp6e5z3F7_WHIk4l7-ILVMmI</string>
 	<key>GCM_SENDER_ID</key>
@@ -17,7 +17,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>kill.Candy</string>
+	<string>kilcal.Candy</string>
 	<key>PROJECT_ID</key>
 	<string>candy-292c9</string>
 	<key>STORAGE_BUCKET</key>
@@ -33,7 +33,7 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true/>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:192341028611:ios:d1c91d79ebd65653</string>
+	<string>1:192341028611:ios:b14d566a21494224</string>
 	<key>DATABASE_URL</key>
 	<string>https://candy-292c9.firebaseio.com</string>
 </dict>

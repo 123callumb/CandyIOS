@@ -8,6 +8,10 @@
 
 #import <SpriteKit/SpriteKit.h>
 
-@interface freeItemsScene : SKScene
+@import GoogleMobileAds;
+
+@interface freeItemsScene : SKScene <GADRewardBasedVideoAdDelegate>
+
+@property(nonatomic, weak) IBOutlet GADRewardBasedVideoAd *videoAd;
 
 @end

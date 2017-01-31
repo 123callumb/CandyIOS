@@ -18,6 +18,38 @@
 		61E1838F1DEE13E20034C021 /* Save.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E1838E1DEE13E20034C021 /* Save.m */; };
 		61E183921DEE14140034C021 /* background.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E183911DEE14140034C021 /* background.m */; };
 		61E183951DEE14450034C021 /* character_clothes.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E183941DEE14450034C021 /* character_clothes.m */; };
+		750A02DF1E40EBEE00869355 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 750A02DE1E40EBEE00869355 /* AdSupport.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		750A02E11E40EBFB00869355 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 750A02E01E40EBFB00869355 /* AudioToolbox.framework */; };
+		750A02E31E40EC0500869355 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 750A02E21E40EC0500869355 /* AVFoundation.framework */; };
+		750A02E51E40EC1000869355 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 750A02E41E40EC1000869355 /* CoreTelephony.framework */; };
+		750A02E71E40EC1C00869355 /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 750A02E61E40EC1C00869355 /* EventKit.framework */; };
+		750A02E91E40EC2900869355 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 750A02E81E40EC2900869355 /* JavaScriptCore.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		750A02EB1E40EC3700869355 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 750A02EA1E40EC3700869355 /* MessageUI.framework */; };
+		750A02ED1E40EC4100869355 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 750A02EC1E40EC4100869355 /* Social.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		750A02EF1E40EC4A00869355 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 750A02EE1E40EC4A00869355 /* StoreKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		750A02F71E4106DC00869355 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 750A02F61E4106DC00869355 /* UIKit.framework */; };
+		750A02F91E4106EC00869355 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 750A02F81E4106EC00869355 /* CoreMedia.framework */; };
+		750A02FB1E4106F100869355 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 750A02FA1E4106F100869355 /* CoreGraphics.framework */; };
+		750A02FD1E4107F600869355 /* AppLovinSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 750A02FC1E4107F600869355 /* AppLovinSDK.framework */; };
+		750A02FE1E4107F600869355 /* AppLovinSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 750A02FC1E4107F600869355 /* AppLovinSDK.framework */; };
+		750A02FF1E4107F600869355 /* AppLovinSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 750A02FC1E4107F600869355 /* AppLovinSDK.framework */; };
+		750A030D1E410BC400869355 /* libAdapterSDKAdColony.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 750A030C1E410BC400869355 /* libAdapterSDKAdColony.a */; };
+		750A030E1E410BC400869355 /* libAdapterSDKAdColony.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 750A030C1E410BC400869355 /* libAdapterSDKAdColony.a */; };
+		750A030F1E410BC400869355 /* libAdapterSDKAdColony.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 750A030C1E410BC400869355 /* libAdapterSDKAdColony.a */; };
+		750A03111E410C0A00869355 /* libz.1.2.5.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 750A03101E410C0A00869355 /* libz.1.2.5.tbd */; };
+		750A03131E410C2900869355 /* EventKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 750A03121E410C2900869355 /* EventKitUI.framework */; };
+		750A03151E410C3700869355 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 750A03141E410C3700869355 /* MediaPlayer.framework */; };
+		750A03171E410C4000869355 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 750A03161E410C4000869355 /* QuartzCore.framework */; };
+		750A03191E410F8700869355 /* AdColony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 750A03181E410F8700869355 /* AdColony.framework */; };
+		750A031A1E410F8700869355 /* AdColony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 750A03181E410F8700869355 /* AdColony.framework */; };
+		750A031B1E410F8700869355 /* AdColony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 750A03181E410F8700869355 /* AdColony.framework */; };
+		750A031D1E4139D300869355 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 750A02F41E40EC6800869355 /* WebKit.framework */; };
+		750A03201E41447600869355 /* fsTimerData.m in Sources */ = {isa = PBXBuildFile; fileRef = 750A031F1E41447600869355 /* fsTimerData.m */; };
+		750A03211E41447600869355 /* fsTimerData.m in Sources */ = {isa = PBXBuildFile; fileRef = 750A031F1E41447600869355 /* fsTimerData.m */; };
+		750A03221E41447600869355 /* fsTimerData.m in Sources */ = {isa = PBXBuildFile; fileRef = 750A031F1E41447600869355 /* fsTimerData.m */; };
+		750A03251E4149D700869355 /* timerLabels.m in Sources */ = {isa = PBXBuildFile; fileRef = 750A03241E4149D700869355 /* timerLabels.m */; };
+		750A03261E4149D700869355 /* timerLabels.m in Sources */ = {isa = PBXBuildFile; fileRef = 750A03241E4149D700869355 /* timerLabels.m */; };
+		750A03271E4149D700869355 /* timerLabels.m in Sources */ = {isa = PBXBuildFile; fileRef = 750A03241E4149D700869355 /* timerLabels.m */; };
 		750F2A321DF7523E00A784F6 /* sweetFavourNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 750F2A311DF7523E00A784F6 /* sweetFavourNode.m */; };
 		750F2A351DF77FF400A784F6 /* fiftyTapBonus.m in Sources */ = {isa = PBXBuildFile; fileRef = 750F2A341DF77FF400A784F6 /* fiftyTapBonus.m */; };
 		750F2A391DF85B9D00A784F6 /* messageUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 750F2A381DF85B9D00A784F6 /* messageUI.m */; };
@@ -182,9 +214,9 @@
 		75EC2E401E3FA62A00469A13 /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75EC2E3F1E3FA62A00469A13 /* GoogleMobileAds.framework */; };
 		75EC2E411E3FA62A00469A13 /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75EC2E3F1E3FA62A00469A13 /* GoogleMobileAds.framework */; };
 		75EC2E421E3FA62A00469A13 /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75EC2E3F1E3FA62A00469A13 /* GoogleMobileAds.framework */; };
-		75EC2E451E3FA84000469A13 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 75EC2E441E3FA84000469A13 /* GoogleService-Info.plist */; };
-		75EC2E461E3FA84000469A13 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 75EC2E441E3FA84000469A13 /* GoogleService-Info.plist */; };
-		75EC2E471E3FA84000469A13 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 75EC2E441E3FA84000469A13 /* GoogleService-Info.plist */; };
+		75EC2E491E4002DD00469A13 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 75EC2E481E4002DD00469A13 /* GoogleService-Info.plist */; };
+		75EC2E4A1E4002DD00469A13 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 75EC2E481E4002DD00469A13 /* GoogleService-Info.plist */; };
+		75EC2E4B1E4002DD00469A13 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 75EC2E481E4002DD00469A13 /* GoogleService-Info.plist */; };
 		75ED3B581E1960360012BA98 /* gemGemeratorGui.m in Sources */ = {isa = PBXBuildFile; fileRef = 75ED3B571E1960360012BA98 /* gemGemeratorGui.m */; };
 		75ED3B5B1E19647F0012BA98 /* gemInteractionUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 75ED3B5A1E19647F0012BA98 /* gemInteractionUI.m */; };
 		75ED3B5E1E19897D0012BA98 /* gemPotData.m in Sources */ = {isa = PBXBuildFile; fileRef = 75ED3B5D1E19897D0012BA98 /* gemPotData.m */; };
@@ -233,6 +265,34 @@
 		61E183911DEE14140034C021 /* background.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = background.m; sourceTree = "<group>"; };
 		61E183931DEE14450034C021 /* character_clothes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = character_clothes.h; sourceTree = "<group>"; };
 		61E183941DEE14450034C021 /* character_clothes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = character_clothes.m; sourceTree = "<group>"; };
+		750A02DE1E40EBEE00869355 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		750A02E01E40EBFB00869355 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		750A02E21E40EC0500869355 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		750A02E41E40EC1000869355 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		750A02E61E40EC1C00869355 /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
+		750A02E81E40EC2900869355 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		750A02EA1E40EC3700869355 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		750A02EC1E40EC4100869355 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		750A02EE1E40EC4A00869355 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		750A02F01E40EC5400869355 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		750A02F21E40EC5F00869355 /* WatchConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchConnectivity.framework; path = System/Library/Frameworks/WatchConnectivity.framework; sourceTree = SDKROOT; };
+		750A02F41E40EC6800869355 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		750A02F61E4106DC00869355 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		750A02F81E4106EC00869355 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		750A02FA1E4106F100869355 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		750A02FC1E4107F600869355 /* AppLovinSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AppLovinSDK.framework; sourceTree = "<group>"; };
+		750A030A1E410BC400869355 /* GADMAdapterAdColonyExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADMAdapterAdColonyExtras.h; sourceTree = "<group>"; };
+		750A030B1E410BC400869355 /* GADMAdapterAdColonyInitializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADMAdapterAdColonyInitializer.h; sourceTree = "<group>"; };
+		750A030C1E410BC400869355 /* libAdapterSDKAdColony.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libAdapterSDKAdColony.a; sourceTree = "<group>"; };
+		750A03101E410C0A00869355 /* libz.1.2.5.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.1.2.5.tbd; path = usr/lib/libz.1.2.5.tbd; sourceTree = SDKROOT; };
+		750A03121E410C2900869355 /* EventKitUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKitUI.framework; path = System/Library/Frameworks/EventKitUI.framework; sourceTree = SDKROOT; };
+		750A03141E410C3700869355 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		750A03161E410C4000869355 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		750A03181E410F8700869355 /* AdColony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AdColony.framework; sourceTree = "<group>"; };
+		750A031E1E41447600869355 /* fsTimerData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = fsTimerData.h; path = "Candy/Free Items/fsTimerData.h"; sourceTree = "<group>"; };
+		750A031F1E41447600869355 /* fsTimerData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = fsTimerData.m; path = "Candy/Free Items/fsTimerData.m"; sourceTree = "<group>"; };
+		750A03231E4149D700869355 /* timerLabels.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = timerLabels.h; path = "Candy/Free Items/timerLabels.h"; sourceTree = "<group>"; };
+		750A03241E4149D700869355 /* timerLabels.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = timerLabels.m; path = "Candy/Free Items/timerLabels.m"; sourceTree = "<group>"; };
 		750F2A301DF7523E00A784F6 /* sweetFavourNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = sweetFavourNode.h; path = Candy/inventory/sweetFavourNode.h; sourceTree = "<group>"; };
 		750F2A311DF7523E00A784F6 /* sweetFavourNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = sweetFavourNode.m; path = Candy/inventory/sweetFavourNode.m; sourceTree = "<group>"; };
 		750F2A331DF77FF400A784F6 /* fiftyTapBonus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = fiftyTapBonus.h; path = Candy/tap/fiftyTapBonus.h; sourceTree = "<group>"; };
@@ -518,7 +578,7 @@
 		75EC2E2C1E3FA51C00469A13 /* GoogleToolboxForMac.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleToolboxForMac.framework; sourceTree = "<group>"; };
 		75EC2E3F1E3FA62A00469A13 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
 		75EC2E431E3FA75B00469A13 /* Firebase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Firebase.h; sourceTree = "<group>"; };
-		75EC2E441E3FA84000469A13 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		75EC2E481E4002DD00469A13 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		75ED3B561E1960360012BA98 /* gemGemeratorGui.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = gemGemeratorGui.h; path = Candy/globalMenu/gemMenu/gemGemeratorGui.h; sourceTree = "<group>"; };
 		75ED3B571E1960360012BA98 /* gemGemeratorGui.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = gemGemeratorGui.m; path = Candy/globalMenu/gemMenu/gemGemeratorGui.m; sourceTree = "<group>"; };
 		75ED3B591E19647F0012BA98 /* gemInteractionUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = gemInteractionUI.h; path = Candy/globalMenu/gemMenu/gemInteractionUI.h; sourceTree = "<group>"; };
@@ -538,12 +598,32 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				750A031D1E4139D300869355 /* WebKit.framework in Frameworks */,
+				750A03191E410F8700869355 /* AdColony.framework in Frameworks */,
+				750A03171E410C4000869355 /* QuartzCore.framework in Frameworks */,
+				750A03151E410C3700869355 /* MediaPlayer.framework in Frameworks */,
+				750A03131E410C2900869355 /* EventKitUI.framework in Frameworks */,
+				750A03111E410C0A00869355 /* libz.1.2.5.tbd in Frameworks */,
+				750A02FB1E4106F100869355 /* CoreGraphics.framework in Frameworks */,
+				750A02F91E4106EC00869355 /* CoreMedia.framework in Frameworks */,
+				750A02F71E4106DC00869355 /* UIKit.framework in Frameworks */,
+				750A02EF1E40EC4A00869355 /* StoreKit.framework in Frameworks */,
+				750A02ED1E40EC4100869355 /* Social.framework in Frameworks */,
+				750A02EB1E40EC3700869355 /* MessageUI.framework in Frameworks */,
+				750A02E91E40EC2900869355 /* JavaScriptCore.framework in Frameworks */,
+				750A02E71E40EC1C00869355 /* EventKit.framework in Frameworks */,
+				750A02E51E40EC1000869355 /* CoreTelephony.framework in Frameworks */,
+				750A02E31E40EC0500869355 /* AVFoundation.framework in Frameworks */,
+				750A02E11E40EBFB00869355 /* AudioToolbox.framework in Frameworks */,
+				750A02DF1E40EBEE00869355 /* AdSupport.framework in Frameworks */,
 				75EC2E301E3FA51C00469A13 /* FirebaseCore.framework in Frameworks */,
 				75EC2E361E3FA51C00469A13 /* GoogleInterchangeUtilities.framework in Frameworks */,
 				75EC2E391E3FA51C00469A13 /* GoogleSymbolUtilities.framework in Frameworks */,
 				75EC2E3C1E3FA51C00469A13 /* GoogleToolboxForMac.framework in Frameworks */,
 				75EC2E331E3FA51C00469A13 /* FirebaseInstanceID.framework in Frameworks */,
+				750A02FD1E4107F600869355 /* AppLovinSDK.framework in Frameworks */,
 				75EC2E401E3FA62A00469A13 /* GoogleMobileAds.framework in Frameworks */,
+				750A030D1E410BC400869355 /* libAdapterSDKAdColony.a in Frameworks */,
 				75EC2E2D1E3FA51C00469A13 /* FirebaseAnalytics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -559,6 +639,9 @@
 				75EC2E341E3FA51C00469A13 /* FirebaseInstanceID.framework in Frameworks */,
 				75EC2E411E3FA62A00469A13 /* GoogleMobileAds.framework in Frameworks */,
 				75EC2E2E1E3FA51C00469A13 /* FirebaseAnalytics.framework in Frameworks */,
+				750A030E1E410BC400869355 /* libAdapterSDKAdColony.a in Frameworks */,
+				750A02FE1E4107F600869355 /* AppLovinSDK.framework in Frameworks */,
+				750A031A1E410F8700869355 /* AdColony.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -573,6 +656,9 @@
 				75EC2E351E3FA51C00469A13 /* FirebaseInstanceID.framework in Frameworks */,
 				75EC2E421E3FA62A00469A13 /* GoogleMobileAds.framework in Frameworks */,
 				75EC2E2F1E3FA51C00469A13 /* FirebaseAnalytics.framework in Frameworks */,
+				750A030F1E410BC400869355 /* libAdapterSDKAdColony.a in Frameworks */,
+				750A02FF1E4107F600869355 /* AppLovinSDK.framework in Frameworks */,
+				750A031B1E410F8700869355 /* AdColony.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -625,6 +711,53 @@
 				61E183851DEE00E30034C021 /* Character.m */,
 			);
 			name = CharacterSpawn;
+			sourceTree = "<group>";
+		};
+		750A02DD1E40EBED00869355 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				750A03161E410C4000869355 /* QuartzCore.framework */,
+				750A03141E410C3700869355 /* MediaPlayer.framework */,
+				750A03121E410C2900869355 /* EventKitUI.framework */,
+				750A03101E410C0A00869355 /* libz.1.2.5.tbd */,
+				750A02FA1E4106F100869355 /* CoreGraphics.framework */,
+				750A02F81E4106EC00869355 /* CoreMedia.framework */,
+				750A02F61E4106DC00869355 /* UIKit.framework */,
+				750A02F41E40EC6800869355 /* WebKit.framework */,
+				750A02F21E40EC5F00869355 /* WatchConnectivity.framework */,
+				750A02F01E40EC5400869355 /* SystemConfiguration.framework */,
+				750A02EE1E40EC4A00869355 /* StoreKit.framework */,
+				750A02EC1E40EC4100869355 /* Social.framework */,
+				750A02EA1E40EC3700869355 /* MessageUI.framework */,
+				750A02E81E40EC2900869355 /* JavaScriptCore.framework */,
+				750A02E61E40EC1C00869355 /* EventKit.framework */,
+				750A02E41E40EC1000869355 /* CoreTelephony.framework */,
+				750A02E21E40EC0500869355 /* AVFoundation.framework */,
+				750A02E01E40EBFB00869355 /* AudioToolbox.framework */,
+				750A02DE1E40EBEE00869355 /* AdSupport.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		750A031C1E41136300869355 /* Firebase and Ad Framework */ = {
+			isa = PBXGroup;
+			children = (
+				75EC2E431E3FA75B00469A13 /* Firebase.h */,
+				75EC2E481E4002DD00469A13 /* GoogleService-Info.plist */,
+				750A030A1E410BC400869355 /* GADMAdapterAdColonyExtras.h */,
+				750A030B1E410BC400869355 /* GADMAdapterAdColonyInitializer.h */,
+				750A030C1E410BC400869355 /* libAdapterSDKAdColony.a */,
+				750A03181E410F8700869355 /* AdColony.framework */,
+				750A02FC1E4107F600869355 /* AppLovinSDK.framework */,
+				75EC2E3F1E3FA62A00469A13 /* GoogleMobileAds.framework */,
+				75EC2E271E3FA51C00469A13 /* FirebaseAnalytics.framework */,
+				75EC2E281E3FA51C00469A13 /* FirebaseCore.framework */,
+				75EC2E291E3FA51C00469A13 /* FirebaseInstanceID.framework */,
+				75EC2E2A1E3FA51C00469A13 /* GoogleInterchangeUtilities.framework */,
+				75EC2E2B1E3FA51C00469A13 /* GoogleSymbolUtilities.framework */,
+				75EC2E2C1E3FA51C00469A13 /* GoogleToolboxForMac.framework */,
+			);
+			name = "Firebase and Ad Framework";
 			sourceTree = "<group>";
 		};
 		750F2A361DF859DB00A784F6 /* Message System */ = {
@@ -936,15 +1069,7 @@
 		75C36DEE1DCCF77600F84214 = {
 			isa = PBXGroup;
 			children = (
-				75EC2E431E3FA75B00469A13 /* Firebase.h */,
-				75EC2E441E3FA84000469A13 /* GoogleService-Info.plist */,
-				75EC2E3F1E3FA62A00469A13 /* GoogleMobileAds.framework */,
-				75EC2E271E3FA51C00469A13 /* FirebaseAnalytics.framework */,
-				75EC2E281E3FA51C00469A13 /* FirebaseCore.framework */,
-				75EC2E291E3FA51C00469A13 /* FirebaseInstanceID.framework */,
-				75EC2E2A1E3FA51C00469A13 /* GoogleInterchangeUtilities.framework */,
-				75EC2E2B1E3FA51C00469A13 /* GoogleSymbolUtilities.framework */,
-				75EC2E2C1E3FA51C00469A13 /* GoogleToolboxForMac.framework */,
+				750A031C1E41136300869355 /* Firebase and Ad Framework */,
 				75E3B5B31E3AB07500979CA4 /* Free Items  */,
 				75B7C6A81E327D8400D01EB5 /* Trend System */,
 				75784D481E281AB600C41067 /* Daily Spin */,
@@ -977,6 +1102,7 @@
 				75C36E1A1DCCF77700F84214 /* CandyTests */,
 				75C36E251DCCF77700F84214 /* CandyUITests */,
 				75C36DF81DCCF77600F84214 /* Products */,
+				750A02DD1E40EBED00869355 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -1149,6 +1275,10 @@
 			children = (
 				75E3B5B41E3AB09300979CA4 /* freeItemsScene.h */,
 				75E3B5B51E3AB09300979CA4 /* freeItemsScene.m */,
+				750A031E1E41447600869355 /* fsTimerData.h */,
+				750A031F1E41447600869355 /* fsTimerData.m */,
+				750A03231E4149D700869355 /* timerLabels.h */,
+				750A03241E4149D700869355 /* timerLabels.m */,
 			);
 			name = "Free Items ";
 			sourceTree = "<group>";
@@ -1358,7 +1488,7 @@
 			files = (
 				75C36E0C1DCCF77700F84214 /* Main.storyboard in Resources */,
 				75C36E011DCCF77600F84214 /* GameScene.sks in Resources */,
-				75EC2E451E3FA84000469A13 /* GoogleService-Info.plist in Resources */,
+				75EC2E491E4002DD00469A13 /* GoogleService-Info.plist in Resources */,
 				75C36E0E1DCCF77700F84214 /* Assets.xcassets in Resources */,
 				7525F7B31DD232E600B0510C /* pixel.ttf in Resources */,
 				7525F7CC1DD2931900B0510C /* coders_crux.ttf in Resources */,
@@ -1373,7 +1503,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7525F7C61DD287A300B0510C /* pixel.ttf in Resources */,
-				75EC2E461E3FA84000469A13 /* GoogleService-Info.plist in Resources */,
+				75EC2E4A1E4002DD00469A13 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1382,7 +1512,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7525F7C71DD287A400B0510C /* pixel.ttf in Resources */,
-				75EC2E471E3FA84000469A13 /* GoogleService-Info.plist in Resources */,
+				75EC2E4B1E4002DD00469A13 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1439,6 +1569,7 @@
 				61E183921DEE14140034C021 /* background.m in Sources */,
 				7571FB6A1DFB509B006E1E49 /* packetUIButtons.m in Sources */,
 				756AEB021E0890C7002CFA70 /* uiGemLabel.m in Sources */,
+				750A03201E41447600869355 /* fsTimerData.m in Sources */,
 				75ED3B581E1960360012BA98 /* gemGemeratorGui.m in Sources */,
 				75E8F4F21E0B2EAB00018296 /* sweetInventorySlot.m in Sources */,
 				7571FB771DFB77D2006E1E49 /* sweetScrollUI.m in Sources */,
@@ -1486,6 +1617,7 @@
 				753D2EF51E2031BC0043F33C /* coinStoreScene.m in Sources */,
 				7525F7911DCFF8FB00B0510C /* menuBacking.m in Sources */,
 				75E8F19B1DD8F6E500A421E7 /* menuBackButton.m in Sources */,
+				750A03251E4149D700869355 /* timerLabels.m in Sources */,
 				75E3B5B21E37D6C700979CA4 /* trendsGenerator.m in Sources */,
 				75E1B5D71DE29B3600F7C50F /* doneButton.m in Sources */,
 				75527A321E007ACA00D149C0 /* skPacketOpener.m in Sources */,
@@ -1548,6 +1680,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				750A03211E41447600869355 /* fsTimerData.m in Sources */,
+				750A03261E4149D700869355 /* timerLabels.m in Sources */,
 				75C36E1C1DCCF77700F84214 /* CandyTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1556,6 +1690,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				750A03221E41447600869355 /* fsTimerData.m in Sources */,
+				750A03271E4149D700869355 /* timerLabels.m in Sources */,
 				75C36E271DCCF77700F84214 /* CandyUITests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1699,6 +1835,14 @@
 				INFOPLIST_FILE = Candy/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-fobjc-arc",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = kilcal.Candy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -1716,6 +1860,14 @@
 				INFOPLIST_FILE = Candy/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-fobjc-arc",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = kilcal.Candy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -1732,6 +1884,10 @@
 				INFOPLIST_FILE = CandyTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = kilcal.CandyTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Candy.app/Candy";
@@ -1749,6 +1905,10 @@
 				INFOPLIST_FILE = CandyTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = kilcal.CandyTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Candy.app/Candy";
@@ -1765,6 +1925,10 @@
 				INFOPLIST_FILE = CandyUITests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = kilcal.CandyUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_TARGET_NAME = Candy;
@@ -1781,6 +1945,10 @@
 				INFOPLIST_FILE = CandyUITests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = kilcal.CandyUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_TARGET_NAME = Candy;
