@@ -52,6 +52,9 @@
 		750A03251E4149D700869355 /* timerLabels.m in Sources */ = {isa = PBXBuildFile; fileRef = 750A03241E4149D700869355 /* timerLabels.m */; };
 		750A03261E4149D700869355 /* timerLabels.m in Sources */ = {isa = PBXBuildFile; fileRef = 750A03241E4149D700869355 /* timerLabels.m */; };
 		750A03271E4149D700869355 /* timerLabels.m in Sources */ = {isa = PBXBuildFile; fileRef = 750A03241E4149D700869355 /* timerLabels.m */; };
+		750C2C7A1E4254FF001F65C3 /* myPacketsScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 750C2C791E4254FF001F65C3 /* myPacketsScene.m */; };
+		750C2C7D1E42556A001F65C3 /* packetBacking.m in Sources */ = {isa = PBXBuildFile; fileRef = 750C2C7C1E42556A001F65C3 /* packetBacking.m */; };
+		750C2C801E425897001F65C3 /* packetDisplayItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 750C2C7F1E425897001F65C3 /* packetDisplayItem.m */; };
 		750F2A321DF7523E00A784F6 /* sweetFavourNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 750F2A311DF7523E00A784F6 /* sweetFavourNode.m */; };
 		750F2A351DF77FF400A784F6 /* fiftyTapBonus.m in Sources */ = {isa = PBXBuildFile; fileRef = 750F2A341DF77FF400A784F6 /* fiftyTapBonus.m */; };
 		750F2A391DF85B9D00A784F6 /* messageUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 750F2A381DF85B9D00A784F6 /* messageUI.m */; };
@@ -299,6 +302,12 @@
 		750A031F1E41447600869355 /* fsTimerData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = fsTimerData.m; path = "Candy/Free Items/fsTimerData.m"; sourceTree = "<group>"; };
 		750A03231E4149D700869355 /* timerLabels.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = timerLabels.h; path = "Candy/Free Items/timerLabels.h"; sourceTree = "<group>"; };
 		750A03241E4149D700869355 /* timerLabels.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = timerLabels.m; path = "Candy/Free Items/timerLabels.m"; sourceTree = "<group>"; };
+		750C2C781E4254FF001F65C3 /* myPacketsScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = myPacketsScene.h; path = "Packet System/myPacketsScene.h"; sourceTree = "<group>"; };
+		750C2C791E4254FF001F65C3 /* myPacketsScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = myPacketsScene.m; path = "Packet System/myPacketsScene.m"; sourceTree = "<group>"; };
+		750C2C7B1E42556A001F65C3 /* packetBacking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = packetBacking.h; path = "Packet System/packetBacking.h"; sourceTree = "<group>"; };
+		750C2C7C1E42556A001F65C3 /* packetBacking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = packetBacking.m; path = "Packet System/packetBacking.m"; sourceTree = "<group>"; };
+		750C2C7E1E425897001F65C3 /* packetDisplayItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = packetDisplayItem.h; path = "Packet System/packetDisplayItem.h"; sourceTree = "<group>"; };
+		750C2C7F1E425897001F65C3 /* packetDisplayItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = packetDisplayItem.m; path = "Packet System/packetDisplayItem.m"; sourceTree = "<group>"; };
 		750F2A301DF7523E00A784F6 /* sweetFavourNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = sweetFavourNode.h; path = Candy/inventory/sweetFavourNode.h; sourceTree = "<group>"; };
 		750F2A311DF7523E00A784F6 /* sweetFavourNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = sweetFavourNode.m; path = Candy/inventory/sweetFavourNode.m; sourceTree = "<group>"; };
 		750F2A331DF77FF400A784F6 /* fiftyTapBonus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = fiftyTapBonus.h; path = Candy/tap/fiftyTapBonus.h; sourceTree = "<group>"; };
@@ -770,6 +779,19 @@
 			name = "Firebase and Ad Framework";
 			sourceTree = "<group>";
 		};
+		750C2C771E4254E3001F65C3 /* Packets System */ = {
+			isa = PBXGroup;
+			children = (
+				750C2C781E4254FF001F65C3 /* myPacketsScene.h */,
+				750C2C791E4254FF001F65C3 /* myPacketsScene.m */,
+				750C2C7B1E42556A001F65C3 /* packetBacking.h */,
+				750C2C7C1E42556A001F65C3 /* packetBacking.m */,
+				750C2C7E1E425897001F65C3 /* packetDisplayItem.h */,
+				750C2C7F1E425897001F65C3 /* packetDisplayItem.m */,
+			);
+			name = "Packets System";
+			sourceTree = "<group>";
+		};
 		750F2A361DF859DB00A784F6 /* Message System */ = {
 			isa = PBXGroup;
 			children = (
@@ -1079,6 +1101,7 @@
 		75C36DEE1DCCF77600F84214 = {
 			isa = PBXGroup;
 			children = (
+				750C2C771E4254E3001F65C3 /* Packets System */,
 				750A031C1E41136300869355 /* Firebase and Ad Framework */,
 				75E3B5B31E3AB07500979CA4 /* Free Items  */,
 				75B7C6A81E327D8400D01EB5 /* Trend System */,
@@ -1549,6 +1572,7 @@
 				753D56D71E07572800A6CBF8 /* confirmPurchase.m in Sources */,
 				75527A2C1DFF009B00D149C0 /* packetInventroySlot.m in Sources */,
 				752CC6D21E26CAAD00C6FB31 /* gemAnimations.m in Sources */,
+				750C2C801E425897001F65C3 /* packetDisplayItem.m in Sources */,
 				758C52531E2295870054D864 /* deskStore.m in Sources */,
 				61E1837F1DEDE45A0034C021 /* Character_Maker.m in Sources */,
 				75B7C6AB1E32A59C00D01EB5 /* trendsMain.m in Sources */,
@@ -1625,6 +1649,7 @@
 				753D56D41E07035B00A6CBF8 /* jawbreakerPacket.m in Sources */,
 				757695291E0B2A860067ABBF /* sweetInventoryScrollUI.m in Sources */,
 				75B6A1361DFB8F2000ED922C /* packet.m in Sources */,
+				750C2C7D1E42556A001F65C3 /* packetBacking.m in Sources */,
 				755B0D1D1E1419F900EBA428 /* sweetDrawData.m in Sources */,
 				75712C111DFCE1A400450342 /* packetsScene.m in Sources */,
 				753D2EF51E2031BC0043F33C /* coinStoreScene.m in Sources */,
@@ -1654,6 +1679,7 @@
 				75E8F1981DD7969500A421E7 /* statsMenu.m in Sources */,
 				75B526481E1EC8400020A609 /* buildingType.m in Sources */,
 				756AEAFF1E088B76002CFA70 /* gems.m in Sources */,
+				750C2C7A1E4254FF001F65C3 /* myPacketsScene.m in Sources */,
 				750F2A321DF7523E00A784F6 /* sweetFavourNode.m in Sources */,
 				61E183861DEE00E30034C021 /* Character.m in Sources */,
 				75B7C6AE1E33C92000D01EB5 /* trendsButton.m in Sources */,
