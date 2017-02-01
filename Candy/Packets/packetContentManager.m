@@ -25,6 +25,8 @@
     SKSpriteNode *content = [SKSpriteNode spriteNodeWithImageNamed:textureName];
     content.zPosition = 6;
     content.position = pos;
+    content.xScale = 0.8;
+    content.yScale = 0.8;
     return content;
 }
 
@@ -75,6 +77,7 @@
     
     float x = 0.0;
     float y = 0.0;
+    float yAdj = s.frame.size.height/24;
     
     if(cID == 0 || cID == 3 || cID == 6){
         x = -s.frame.size.width/1.5;
@@ -87,13 +90,13 @@
     }
     
     if(cID <= 2){
-        y = s.frame.size.height/1.5;
+        y = s.frame.size.height/2.5 + yAdj;
     }
     if(cID >= 3 && cID <= 5){
-        y = 0;
+        y = 0 + yAdj;
     }
     if(cID >= 6 && cID <= 8){
-        y = -s.frame.size.height/1.5;
+        y = -s.frame.size.height/2.5 + yAdj;
     }
     
     return CGPointMake(x, y);

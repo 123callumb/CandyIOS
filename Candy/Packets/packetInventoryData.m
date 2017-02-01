@@ -47,19 +47,19 @@
 +(NSString*)getPacketAtSlot: (int)slotID {
     
     NSMutableArray *pInv = [self getPacketInventroyAsArray];
-    NSString *packetName = [pInv objectAtIndex:slotID-1];
+    NSString *packetName = [pInv objectAtIndex:slotID];
     
     return packetName;
 }
 +(int)getSlotsFull {
     NSMutableArray *pInv = [self getPacketInventroyAsArray];
-    return (int)([pInv count]+1);
+    return (int)([pInv count]);
 }
 +(void)removeFullSlot: (int)slotNo {
     NSUserDefaults *nd = [NSUserDefaults standardUserDefaults];
     NSMutableArray *pInv = [self getPacketInventroyAsArray];
     
-    [pInv removeObjectAtIndex:slotNo - 1];
+    [pInv removeObjectAtIndex:slotNo];
     
     NSData *arrayToData = [NSKeyedArchiver archivedDataWithRootObject:pInv];
     
