@@ -7,9 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <SpriteKit/SpriteKit.h>
 
 @interface scrollUpdate : UIView
-+(void)initializeScroll:(UIScrollView*)s uiView:(UIView*)v;
++(void)initializeScrollRegular:(SKScene*)s;
++(void)initializeScrollSpecial:(SKScene*)s;
 +(void)Show:(UIView*)v;
 +(void)Hide:(UIView*)v;
++(void)switchMenu:(UIView*)v;
 @end

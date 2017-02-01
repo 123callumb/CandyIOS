@@ -7,10 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		615C34E91DF6D42900F1B3E2 /* AddItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 615C34E81DF6D42900F1B3E2 /* AddItem.m */; };
 		615C34EC1DF6E0DB00F1B3E2 /* scrollUpdate.m in Sources */ = {isa = PBXBuildFile; fileRef = 615C34EB1DF6E0DB00F1B3E2 /* scrollUpdate.m */; };
+		616F84441E4254C000723148 /* upgrade_handler_regular.m in Sources */ = {isa = PBXBuildFile; fileRef = 616F84431E4254C000723148 /* upgrade_handler_regular.m */; };
+		616F844A1E425E7900723148 /* upgrade_handler_special.m in Sources */ = {isa = PBXBuildFile; fileRef = 616F84491E425E7900723148 /* upgrade_handler_special.m */; };
+		616F844D1E42635D00723148 /* upgrades_regular.m in Sources */ = {isa = PBXBuildFile; fileRef = 616F844C1E42635D00723148 /* upgrades_regular.m */; };
+		616F84501E4263C600723148 /* upgrades_special.m in Sources */ = {isa = PBXBuildFile; fileRef = 616F844F1E4263C600723148 /* upgrades_special.m */; };
 		618EA38C1DF1ED4C00D07ADD /* candyMachines.m in Sources */ = {isa = PBXBuildFile; fileRef = 618EA38B1DF1ED4C00D07ADD /* candyMachines.m */; };
-		61D0BCF81E365BAC00EA940C /* upgrades.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D0BCF71E365BAC00EA940C /* upgrades.m */; };
 		61E1837F1DEDE45A0034C021 /* Character_Maker.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E1837E1DEDE45A0034C021 /* Character_Maker.m */; };
 		61E183861DEE00E30034C021 /* Character.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E183851DEE00E30034C021 /* Character.m */; };
 		61E183891DEE13490034C021 /* skinColour.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E183881DEE13490034C021 /* skinColour.m */; };
@@ -243,14 +245,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		615C34E71DF6D42900F1B3E2 /* AddItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddItem.h; sourceTree = "<group>"; };
-		615C34E81DF6D42900F1B3E2 /* AddItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddItem.m; sourceTree = "<group>"; };
 		615C34EA1DF6E0DB00F1B3E2 /* scrollUpdate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = scrollUpdate.h; sourceTree = "<group>"; };
 		615C34EB1DF6E0DB00F1B3E2 /* scrollUpdate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = scrollUpdate.m; sourceTree = "<group>"; };
+		616F84421E4254C000723148 /* upgrade_handler_regular.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = upgrade_handler_regular.h; sourceTree = "<group>"; };
+		616F84431E4254C000723148 /* upgrade_handler_regular.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = upgrade_handler_regular.m; sourceTree = "<group>"; };
+		616F84481E425E7900723148 /* upgrade_handler_special.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = upgrade_handler_special.h; sourceTree = "<group>"; };
+		616F84491E425E7900723148 /* upgrade_handler_special.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = upgrade_handler_special.m; sourceTree = "<group>"; };
+		616F844B1E42635D00723148 /* upgrades_regular.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = upgrades_regular.h; sourceTree = "<group>"; };
+		616F844C1E42635D00723148 /* upgrades_regular.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = upgrades_regular.m; sourceTree = "<group>"; };
+		616F844E1E4263C600723148 /* upgrades_special.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = upgrades_special.h; sourceTree = "<group>"; };
+		616F844F1E4263C600723148 /* upgrades_special.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = upgrades_special.m; sourceTree = "<group>"; };
 		618EA38A1DF1ED4C00D07ADD /* candyMachines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = candyMachines.h; path = Candy/candyMachines.h; sourceTree = "<group>"; };
 		618EA38B1DF1ED4C00D07ADD /* candyMachines.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = candyMachines.m; path = Candy/candyMachines.m; sourceTree = "<group>"; };
-		61D0BCF61E365BAC00EA940C /* upgrades.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = upgrades.h; sourceTree = "<group>"; };
-		61D0BCF71E365BAC00EA940C /* upgrades.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = upgrades.m; sourceTree = "<group>"; };
 		61E1837D1DEDE45A0034C021 /* Character_Maker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Character_Maker.h; sourceTree = "<group>"; };
 		61E1837E1DEDE45A0034C021 /* Character_Maker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Character_Maker.m; sourceTree = "<group>"; };
 		61E183841DEE00E30034C021 /* Character.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Character.h; sourceTree = "<group>"; };
@@ -668,12 +674,16 @@
 		6109D29D1DF7576E00257CDB /* Update Menu */ = {
 			isa = PBXGroup;
 			children = (
-				61D0BCF61E365BAC00EA940C /* upgrades.h */,
-				61D0BCF71E365BAC00EA940C /* upgrades.m */,
+				616F844E1E4263C600723148 /* upgrades_special.h */,
+				616F844F1E4263C600723148 /* upgrades_special.m */,
+				616F844B1E42635D00723148 /* upgrades_regular.h */,
+				616F844C1E42635D00723148 /* upgrades_regular.m */,
+				616F84421E4254C000723148 /* upgrade_handler_regular.h */,
+				616F84431E4254C000723148 /* upgrade_handler_regular.m */,
+				616F84481E425E7900723148 /* upgrade_handler_special.h */,
+				616F84491E425E7900723148 /* upgrade_handler_special.m */,
 				615C34EA1DF6E0DB00F1B3E2 /* scrollUpdate.h */,
 				615C34EB1DF6E0DB00F1B3E2 /* scrollUpdate.m */,
-				615C34E71DF6D42900F1B3E2 /* AddItem.h */,
-				615C34E81DF6D42900F1B3E2 /* AddItem.m */,
 			);
 			name = "Update Menu";
 			sourceTree = "<group>";
@@ -1564,6 +1574,7 @@
 				750F3A9C1DEC863E002AFB78 /* registerStatsButtons.m in Sources */,
 				618EA38C1DF1ED4C00D07ADD /* candyMachines.m in Sources */,
 				75C36E421DCE63E500F84214 /* mainTransition.m in Sources */,
+				616F844A1E425E7900723148 /* upgrade_handler_special.m in Sources */,
 				75E8F1951DD3CC3100A421E7 /* nodeToParticle.m in Sources */,
 				75D2DA8E1E213B1100E31D1E /* floorStore.m in Sources */,
 				61E183921DEE14140034C021 /* background.m in Sources */,
@@ -1587,6 +1598,7 @@
 				7579CB061E2AA4CD00975F01 /* spinBox.m in Sources */,
 				753D56CE1E06FF2800A6CBF8 /* wrappedPacket.m in Sources */,
 				75B6A1331DFB8E0E00ED922C /* backButtonSweetShop.m in Sources */,
+				616F844D1E42635D00723148 /* upgrades_regular.m in Sources */,
 				75CCCB301E153198007DA3EC /* sweetInvSelectUI.m in Sources */,
 				7525F7781DCE921B00B0510C /* mainUI.m in Sources */,
 				75C36DFF1DCCF77600F84214 /* AppDelegate.m in Sources */,
@@ -1596,6 +1608,7 @@
 				75C36E061DCCF77700F84214 /* GameScene.m in Sources */,
 				7525F7BE1DD256A500B0510C /* comboBar.m in Sources */,
 				757257251E3E671B00363F94 /* spinStreak.m in Sources */,
+				616F84441E4254C000723148 /* upgrade_handler_regular.m in Sources */,
 				75B526451E1EAD580020A609 /* levelStructure.m in Sources */,
 				75919B9C1DDCA4CE001F66EB /* levelDecider.m in Sources */,
 				75C36E4A1DCE793D00F84214 /* mainBackground.m in Sources */,
@@ -1616,6 +1629,7 @@
 				75712C111DFCE1A400450342 /* packetsScene.m in Sources */,
 				753D2EF51E2031BC0043F33C /* coinStoreScene.m in Sources */,
 				7525F7911DCFF8FB00B0510C /* menuBacking.m in Sources */,
+				616F84501E4263C600723148 /* upgrades_special.m in Sources */,
 				75E8F19B1DD8F6E500A421E7 /* menuBackButton.m in Sources */,
 				750A03251E4149D700869355 /* timerLabels.m in Sources */,
 				75E3B5B21E37D6C700979CA4 /* trendsGenerator.m in Sources */,
@@ -1642,7 +1656,6 @@
 				756AEAFF1E088B76002CFA70 /* gems.m in Sources */,
 				750F2A321DF7523E00A784F6 /* sweetFavourNode.m in Sources */,
 				61E183861DEE00E30034C021 /* Character.m in Sources */,
-				615C34E91DF6D42900F1B3E2 /* AddItem.m in Sources */,
 				75B7C6AE1E33C92000D01EB5 /* trendsButton.m in Sources */,
 				759E71C81DF0A02600B7275A /* mapMain.m in Sources */,
 				752002481E11D47B00C2AC11 /* confirmSale.m in Sources */,
@@ -1656,7 +1669,6 @@
 				755B0D201E143BE100EBA428 /* sweetDrawUI.m in Sources */,
 				75D01FEE1E36AD60004F8F0F /* trendsChart.m in Sources */,
 				75C36DFC1DCCF77600F84214 /* main.m in Sources */,
-				61D0BCF81E365BAC00EA940C /* upgrades.m in Sources */,
 				75754BEF1E2401FE0030D1BA /* tutorialMessages.m in Sources */,
 				75D01FF11E36B103004F8F0F /* trendsData.m in Sources */,
 				75784D4E1E282F4200C41067 /* spinWheel.m in Sources */,
