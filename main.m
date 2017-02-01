@@ -26,6 +26,7 @@
 #import "sweetInventoryUI.h"
 #import "coinBarSprite.h"
 #import "tutorialMessages.h"
+#import "gems.h"
 
 UIScrollView* UIscrollUpdate = nil;
 UIImageView *img1 = nil;
@@ -38,6 +39,9 @@ UIImageView *img1 = nil;
     [mainUI drawUI:self];
     [levelDecider createLevel:self];
     [tutorialMessages firstTimeLoadMessages:self.view];
+    
+    [money addBalance:10000000];
+    [gems addGems:50];
     
     //scrollView(Update)
     [scrollUpdate initializeScrollRegular:self];

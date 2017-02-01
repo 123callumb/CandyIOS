@@ -8,6 +8,12 @@
 
 #import "upgrades_regular.h"
 #import "sweetDrawData.h"
+#import "chewPacket.h"
+#import "lollyPacket.h"
+#import "bonbonPacket.h"
+#import "wrappedPacket.h"
+#import "levelWorkstations.h"
+#import "jawbreakerPacket.h"
 
 NSInteger moneyValues[7];
 //TO ADD A NEW UPGRADE: ADD THE IMAGE AND TEXT IN THE *ADDUPGRADE* METHOD,
@@ -20,19 +26,16 @@ NSInteger moneyValues[7];
 
 +(void)addUpgrade:(long)upgradeID upgradeImage:(UIImageView*)box upgradeText:(UILabel*)txt{
     //upgrade 0
-    //upgrade_SlotsUnlocked
     if(upgradeID == 0){
-        [box setImage:[UIImage imageNamed:@"slotsUnlocked"]];
-        txt.text = @"Slots Unlocked";
-    }
-    //upgrade 1
-    //upgrade_UsableWorkStations
-    if(upgradeID == 1){
         [box setImage:[UIImage imageNamed:@"workStationsUnlocked"]];
         txt.text = @"Workstation";
     }
+    //upgrade 1
+    if(upgradeID == 1){
+        [box setImage:[UIImage imageNamed:@"upgrade_bonbons"]];
+        txt.text = @"Bonbons";
+    }
     //upgrade 2
-    //upgrade_Chew
     if(upgradeID == 2){
         [box setImage:[UIImage imageNamed:@"upgrade_chew"]];
         txt.text = @"Chew";
@@ -54,12 +57,6 @@ NSInteger moneyValues[7];
     if(upgradeID == 5){
         [box setImage:[UIImage imageNamed:@"upgrade_jawbreaker"]];
         txt.text = @"Jawbreaker";
-    }
-    //upgrade 6
-    //upgrade_Bonbons
-    if(upgradeID == 6){
-        [box setImage:[UIImage imageNamed:@"upgrade_bonbons"]];
-        txt.text = @"Bonbons";
     }
 }
 
@@ -116,35 +113,32 @@ NSInteger moneyValues[7];
 
 +(void)upgradeActions:(long)upgradeID{
     //finds the upgrade Progress of the current upgrade
-    NSString *upgradeValue = [NSString stringWithFormat:@"CurrentValue%li",upgradeID];
-    long upgradeProgress = [[NSUserDefaults standardUserDefaults] integerForKey:upgradeValue];
+    //NSString *upgradeValue = [NSString stringWithFormat:@"CurrentValue%li",upgradeID];
+    //long upgradeProgress = [[NSUserDefaults standardUserDefaults] integerForKey:upgradeValue];
     
     //upgrade0
     if(upgradeID == 0){
-        if(upgradeProgress < 8)[sweetDrawData setDrawsUnlocked:(int)(upgradeProgress)];
+        [levelWorkstations setUsableWorkstationAmount:([levelWorkstations getUsableWorkstations]+1)];
     }
     //upgrade1
     if(upgradeID == 1){
-        
+        [bonbonPacket upgradeBrandValue];
     }
     //upgrade2
     if(upgradeID == 2){
-        
+        [chewPacket upgradeBrandValue];
     }
     //upgrade3
     if(upgradeID == 3){
-        
+        [lollyPacket upgradeBrandValue];
     }
     //upgrade4
     if(upgradeID == 4){
-        
+        [wrappedPacket upgradeBrandValue];
     }
     //upgrade5
-    if(upgradeID == 4){
-        
-    }
-    //upgrade6
-    if(upgradeID == 4){
+    if(upgradeID == 5){
+        [jawbreakerPacket upgradeBrandValue];
         
     }
 }

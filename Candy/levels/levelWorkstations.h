@@ -16,4 +16,6 @@
 +(NSMutableArray*)getOwnedWorkstationsByID;
 +(void)addNewWorkstationToList: (int)workstationID;
 +(bool)doesOwnWorkstation: (int)workstationID;
++(void)setUsableWorkstationAmount: (int)value ;
++(int)getUsableWorkstations ;
 @end
