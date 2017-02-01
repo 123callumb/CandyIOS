@@ -19,7 +19,6 @@
 #import "money.h"
 #import "coinBarSprite.h"
 #import "upgradeMenu.h"
-#import "AddItem.h"
 #import "scrollUpdate.h"
 #import "sweetTypeUI.h"
 #import "flavourPicker.h"
@@ -41,12 +40,9 @@ UIImageView *img1 = nil;
     [tutorialMessages firstTimeLoadMessages:self.view];
     
     //scrollView(Update)
-    UIscrollUpdate = [[UIScrollView alloc]initWithFrame:CGRectMake(self.view.frame.size.width / 19, self.view.frame.size.height / 4.2, 8.95*(self.view.frame.size.width /10), 2.38*(self.view.frame.size.height / 4))];
-    [scrollUpdate initializeScroll:UIscrollUpdate uiView:self.view];
-    [self.view addSubview:UIscrollUpdate];
-    for(int i = 0; i<= 8; i++){
-        [AddItem CreateItem:@"nil" buttonTexture:@"upgradeButton" yPos:i*(UIscrollUpdate.frame.size.width/4) Scene:UIscrollUpdate ID:i];
-    }
+    [scrollUpdate initializeScrollRegular:self];
+    [scrollUpdate initializeScrollSpecial:self];
+    
     [sweetShopUI addUIView:self.view];
     }
 

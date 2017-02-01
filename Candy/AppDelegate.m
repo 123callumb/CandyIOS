@@ -23,7 +23,7 @@
     [GADMobileAds configureWithApplicationID:@"ca-app-pub-1801714701929045~3500859617"];
     
     GADRequest *req = [GADRequest request];
-    req.testDevices = @[@"1e69c118ffc7ac17572ce32296f9878fe6d58d46"];
+    req.testDevices = @[@"1e69c118ffc7ac17572ce32296f9878fe6d58d46", @"b30a5b67fd115143ca6a95a1873537861edfee2b"];
     
     [[GADRewardBasedVideoAd sharedInstance] loadRequest:req withAdUnitID:@"ca-app-pub-1801714701929045/4977592815"];
 
