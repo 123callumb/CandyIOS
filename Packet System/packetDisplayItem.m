@@ -19,6 +19,9 @@
     for (int i = 0; i <= [packetInventoryData getSlotsFull] - 1; i++) {
         [self createPacketViews:s number:i];
     }
+    if([packetInventoryData getSlotsFull] == 0){
+        [self createBuyButton:s];
+    }
 }
 +(void)createPacketViews: (SKScene*)s number:(int)noID {
     SKSpriteNode *backPane = [SKSpriteNode spriteNodeWithImageNamed:@"packetContent"];
@@ -66,5 +69,12 @@
     
     [s addChild:backPane];
     
+}
++(void)createBuyButton: (SKScene*)s {
+    SKLabelNode *sorry = [SKLabelNode labelNodeWithText:@"You don't own any sweet packets :("];
+    sorry.fontName = @"Coder's-Crux";
+    sorry.fontSize = 50;
+    sorry.fontColor = [SKColor blackColor];
+    [s addChild:sorry];
 }
 @end

@@ -18,6 +18,7 @@
         node.xScale = 0.4;
         node.yScale = 0.4;
         node.position = p;
+        node.zPosition = 6;
         
         SKAction *fade = [SKAction fadeInWithDuration:0.2];
         SKAction *fadeIn = [SKAction fadeInWithDuration:0.1];
