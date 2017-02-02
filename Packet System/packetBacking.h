@@ -10,4 +10,6 @@
 
 @interface packetBacking : SKSpriteNode
 +(void)addBacking: (SKScene*)s;
++(void)addOpenerBacking: (SKScene*)s;
++(void)addCongrats: (SKScene*)s;
 @end

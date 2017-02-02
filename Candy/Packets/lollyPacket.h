@@ -9,6 +9,7 @@
 #import <SpriteKit/SpriteKit.h>
 
 @interface lollyPacket : SKSpriteNode
++(NSArray*)contentList;
 +(void)addContentSection: (SKSpriteNode*)s;
 +(void)createRandomSlider: (SKScene*)s yPos:(float)yVal;
 +(int)getBrandValue;

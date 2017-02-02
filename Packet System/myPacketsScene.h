@@ -9,5 +9,6 @@
 #import <SpriteKit/SpriteKit.h>
 
 @interface myPacketsScene : SKScene
-
++(int)getCurrentPacket;
++(void)resetCurrentPack;
 @end

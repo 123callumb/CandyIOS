@@ -11,9 +11,11 @@
 #import "packetDisplayItem.h"
 #import "packetInventoryData.h"
 #import "mainTransition.h"
+#import "buttonAnimation.h"
+
 @implementation myPacketsScene
 
-int currentPacketDisplay = 0;
+int currentPacketDisplay;
 
 -(void)didMoveToView:(SKView *)view {
     [self setAnchorPoint:CGPointMake(0.5, 0.5)];
@@ -28,9 +30,11 @@ int currentPacketDisplay = 0;
     gestureLeft.direction = UISwipeGestureRecognizerDirectionRight;
     [[self view] addGestureRecognizer:gestureLeft];
     
+    currentPacketDisplay = 0;
+    
 }
 -(void)onGestureRight: (UISwipeGestureRecognizer*)swipe {
-    if(swipe.state == UIGestureRecognizerStateEnded && currentPacketDisplay <= [packetInventoryData getSlotsFull]){
+    if(swipe.state == UIGestureRecognizerStateEnded && currentPacketDisplay < [packetInventoryData getSlotsFull] - 1){
         
         for(int i = 0; i <= [packetInventoryData getSlotsFull]; i++){
         
@@ -38,10 +42,11 @@ int currentPacketDisplay = 0;
         SKAction *moveToLeft = [SKAction moveByX:-self.frame.size.width y:0 duration:0.4];
             
             [packetDisplays runAction:moveToLeft completion:^{
-                currentPacketDisplay++;
+                
             }];
             
         }
+        currentPacketDisplay++;
         
     }
 }
@@ -54,11 +59,11 @@ int currentPacketDisplay = 0;
             SKAction *moveToRight = [SKAction moveByX:self.frame.size.width y:0 duration:0.4];
             
             [packetDisplays runAction:moveToRight completion:^{
-                currentPacketDisplay = currentPacketDisplay - 1;
+               
             }];
             
         }
-        
+        currentPacketDisplay = currentPacketDisplay - 1;
     }
 }
 
@@ -68,7 +73,23 @@ int currentPacketDisplay = 0;
     SKNode *obj = [self nodeAtPoint:loc];
     
     if([obj.name isEqualToString:@"closeButton"]){
+        currentPacketDisplay = 0;
         [mainTransition switchScene:self sceneTwo:@"main" Transition:[SKTransition crossFadeWithDuration:0.4]];
     }
+    
+    if([obj.name isEqualToString:[NSString stringWithFormat:@"openPacketButton_ID_%d", currentPacketDisplay]]){
+        [buttonAnimation changeState:obj changeName:@"openGreenButtonPressed" originalName:@"openGreenButton"];
+        [mainTransition switchScene:self sceneTwo:@"openPacket" Transition:[SKTransition fadeWithColor:[UIColor blackColor] duration:0.3]];
+    }
+    
+    if([obj.name isEqualToString:@"buyButton"]){
+        [mainTransition switchScene:self sceneTwo:@"coinStore" Transition:[SKTransition crossFadeWithDuration:0.4]];
+    }
+}
++(int)getCurrentPacket {
+    return currentPacketDisplay;
+}
++(void)resetCurrentPack {
+    currentPacketDisplay = 0;
 }
 @end

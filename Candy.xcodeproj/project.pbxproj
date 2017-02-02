@@ -99,6 +99,7 @@
 		753D56D11E06FFF000A6CBF8 /* chewPacket.m in Sources */ = {isa = PBXBuildFile; fileRef = 753D56D01E06FFF000A6CBF8 /* chewPacket.m */; };
 		753D56D41E07035B00A6CBF8 /* jawbreakerPacket.m in Sources */ = {isa = PBXBuildFile; fileRef = 753D56D31E07035B00A6CBF8 /* jawbreakerPacket.m */; };
 		753D56D71E07572800A6CBF8 /* confirmPurchase.m in Sources */ = {isa = PBXBuildFile; fileRef = 753D56D61E07572800A6CBF8 /* confirmPurchase.m */; };
+		7541124F1E42D40F00A227A3 /* packetOpenScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 7541124E1E42D40F00A227A3 /* packetOpenScene.m */; };
 		75527A291DFDF9FF00D149C0 /* packetScrollUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 75527A281DFDF9FF00D149C0 /* packetScrollUI.m */; };
 		75527A2C1DFF009B00D149C0 /* packetInventroySlot.m in Sources */ = {isa = PBXBuildFile; fileRef = 75527A2B1DFF009B00D149C0 /* packetInventroySlot.m */; };
 		75527A2F1DFF00D600D149C0 /* packetInventoryData.m in Sources */ = {isa = PBXBuildFile; fileRef = 75527A2E1DFF00D600D149C0 /* packetInventoryData.m */; };
@@ -390,12 +391,14 @@
 		753D56D31E07035B00A6CBF8 /* jawbreakerPacket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = jawbreakerPacket.m; path = Candy/Packets/jawbreakerPacket.m; sourceTree = "<group>"; };
 		753D56D51E07572800A6CBF8 /* confirmPurchase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = confirmPurchase.h; path = "Candy/Sweet Shop/confirmPurchase.h"; sourceTree = "<group>"; };
 		753D56D61E07572800A6CBF8 /* confirmPurchase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = confirmPurchase.m; path = "Candy/Sweet Shop/confirmPurchase.m"; sourceTree = "<group>"; };
+		7541124D1E42D40F00A227A3 /* packetOpenScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = packetOpenScene.h; path = "Packet System/packetOpenScene.h"; sourceTree = "<group>"; };
+		7541124E1E42D40F00A227A3 /* packetOpenScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = packetOpenScene.m; path = "Packet System/packetOpenScene.m"; sourceTree = "<group>"; };
 		75527A271DFDF9FF00D149C0 /* packetScrollUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = packetScrollUI.h; path = Candy/Packets/packetScrollUI.h; sourceTree = "<group>"; };
 		75527A281DFDF9FF00D149C0 /* packetScrollUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = packetScrollUI.m; path = Candy/Packets/packetScrollUI.m; sourceTree = "<group>"; };
 		75527A2A1DFF009B00D149C0 /* packetInventroySlot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = packetInventroySlot.h; path = Candy/Packets/packetInventroySlot.h; sourceTree = "<group>"; };
 		75527A2B1DFF009B00D149C0 /* packetInventroySlot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = packetInventroySlot.m; path = Candy/Packets/packetInventroySlot.m; sourceTree = "<group>"; };
-		75527A2D1DFF00D600D149C0 /* packetInventoryData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = packetInventoryData.h; path = Candy/Packets/packetInventoryData.h; sourceTree = "<group>"; };
-		75527A2E1DFF00D600D149C0 /* packetInventoryData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = packetInventoryData.m; path = Candy/Packets/packetInventoryData.m; sourceTree = "<group>"; };
+		75527A2D1DFF00D600D149C0 /* packetInventoryData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = packetInventoryData.h; path = Candy/Packets/packetInventoryData.h; sourceTree = SOURCE_ROOT; };
+		75527A2E1DFF00D600D149C0 /* packetInventoryData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = packetInventoryData.m; path = Candy/Packets/packetInventoryData.m; sourceTree = SOURCE_ROOT; };
 		75527A301E007ACA00D149C0 /* skPacketOpener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = skPacketOpener.h; path = Candy/Packets/skPacketOpener.h; sourceTree = "<group>"; };
 		75527A311E007ACA00D149C0 /* skPacketOpener.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = skPacketOpener.m; path = Candy/Packets/skPacketOpener.m; sourceTree = "<group>"; };
 		75582AE91E22E42900254C54 /* buildingUpgradeUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = buildingUpgradeUI.h; path = "Candy/Building System/buildingUpgradeUI.h"; sourceTree = "<group>"; };
@@ -788,6 +791,8 @@
 				750C2C7C1E42556A001F65C3 /* packetBacking.m */,
 				750C2C7E1E425897001F65C3 /* packetDisplayItem.h */,
 				750C2C7F1E425897001F65C3 /* packetDisplayItem.m */,
+				7541124D1E42D40F00A227A3 /* packetOpenScene.h */,
+				7541124E1E42D40F00A227A3 /* packetOpenScene.m */,
 			);
 			name = "Packets System";
 			sourceTree = "<group>";
@@ -1684,6 +1689,7 @@
 				61E183861DEE00E30034C021 /* Character.m in Sources */,
 				75B7C6AE1E33C92000D01EB5 /* trendsButton.m in Sources */,
 				759E71C81DF0A02600B7275A /* mapMain.m in Sources */,
+				7541124F1E42D40F00A227A3 /* packetOpenScene.m in Sources */,
 				752002481E11D47B00C2AC11 /* confirmSale.m in Sources */,
 				75C36E461DCE752A00F84214 /* main.m in Sources */,
 				75828DFC1E16A417008DC5AF /* sweetValueCalculation.m in Sources */,
@@ -1883,6 +1889,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = kilcal.Candy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -1908,6 +1915,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = kilcal.Candy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
