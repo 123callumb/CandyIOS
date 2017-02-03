@@ -25,26 +25,16 @@ int currentMenu = 4;
     return currentMenu;
 }
 +(void)addTopButtons:(SKScene*)s {
-    [self addPacketButton:s];
     [self addMenuButton:s];
 }
 +(void)addMenuButton: (SKScene*)s {
-    SKSpriteNode *menuButton = [SKSpriteNode spriteNodeWithImageNamed:@"menuButtonTop"];
+    SKSpriteNode *menuButton = [SKSpriteNode spriteNodeWithImageNamed:@"menuTopState0"];
     menuButton.xScale = 0.6;
     menuButton.yScale = 0.6;
     menuButton.position = CGPointMake(-s.frame.size.width/2 + menuButton.frame.size.width/2, s.frame.size.height/2.2);
     menuButton.zPosition = 14;
     menuButton.name = @"buttonMenu";
     [s addChild:menuButton];
-}
-+(void)addPacketButton: (SKScene*)s {
-    SKSpriteNode *packetButton = [SKSpriteNode spriteNodeWithImageNamed:@"packetsButtonTop"];
-    packetButton.xScale = 0.6;
-    packetButton.yScale = 0.6;
-    packetButton.zPosition = 14;
-    packetButton.position = CGPointMake(s.frame.size.width/2 - packetButton.frame.size.width/2, s.frame.size.height/2.2);
-    packetButton.name = @"buttonPacket";
-    [s addChild:packetButton];
 }
 +(void)menuRemover:(SKScene*)s {
     
