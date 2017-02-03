@@ -12,7 +12,7 @@
 #import "packetUIButtons.h"
 #import "gemGemeratorGui.h"
 #import "gemInteractionUI.h"
-#import "skUiItems.h"
+#import "buildingUI.h"
 #import "buildingUpgradeUI.h"
 #import "spinWheel.h"
 #import "trendsButton.h"
@@ -25,8 +25,9 @@
     [packetUIButtons onButtonPress:(SKSpriteNode*)n scene:s];
     [gemGemeratorGui onDoneTouch:(SKSpriteNode*)n scene:s];
     [gemInteractionUI onInteraction:(SKSpriteNode*)n pos:p];
-    [skUiItems onUpgTouch:v button:(SKSpriteNode*)n scene:s];
+    [buildingUI onUpgTouch:v button:(SKSpriteNode*)n scene:s];
     [buildingUpgradeUI onBackTouch:v button:(SKSpriteNode*)n scene:s];
     [buildingUpgradeUI onUpgradeTouch:v button:(SKSpriteNode*)n scene:s];
+    
 }
 @end

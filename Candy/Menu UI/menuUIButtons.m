@@ -14,6 +14,7 @@
 #import "spinData.h"
 #import "trendsMain.h"
 #import "gemGemeratorGui.h"
+#import "buildingUI.h"
 
 @implementation menuUIButtons
 
@@ -115,6 +116,7 @@ int menuNo = -1;
     }
     if(menuNo == 10){
         menuNo = -1;
+        [buildingUI createBuildingUI:s];
     }
     
 }

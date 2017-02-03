@@ -69,7 +69,6 @@
 }
 +(void)onBackTouch: (UIView*)v button:(SKSpriteNode*)node scene:(SKScene*)s {
     if([node.name isEqualToString:@"redCrossButton"]){
-        [quickSelectUI addUI:v];
         [self removeMenu:s];
     }
 }
