@@ -9,7 +9,7 @@
 #import <SpriteKit/SpriteKit.h>
 
 @interface menuButton : SKSpriteNode
-+(void)onTouch: (SKSpriteNode*)obj scene:(SKScene*)s;
++(void)onTouch: (SKSpriteNode*)obj scene:(SKScene*)s view:(UIView*)v;
 +(void)reCreate: (SKScene*)s;
 +(void)createCloseButton: (SKScene*)s;
 +(void)onCloseButton: (SKSpriteNode*)obj scene:(SKScene*)s;

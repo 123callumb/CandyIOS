@@ -35,7 +35,7 @@
         [packetButton onTouch:(SKSpriteNode*)obj scene:s];
     }
     if([obj.name isEqualToString:@"buttonMenu"]){
-        [menuButton onTouch:(SKSpriteNode*)obj scene:s];
+        [menuButton onTouch:(SKSpriteNode*)obj scene:s view:v];
     }
     if([obj.name isEqualToString:@"closeButton"]){
         [menuButton onCloseButton:(SKSpriteNode*)obj scene:s];
