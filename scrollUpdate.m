@@ -10,7 +10,7 @@
 #import "upgrade_handler_regular.h"
 #import "upgrade_handler_special.h"
 
-int regularUpgrades = 7;
+int regularUpgrades = 5;
 int specialUpgrades = 3;
 
 @implementation scrollUpdate
