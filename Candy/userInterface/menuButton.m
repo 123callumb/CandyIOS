@@ -11,15 +11,17 @@
 #import "packetButton.h"
 #import "tutorialMessages.h"
 #import "trendsButton.h"
+#import "menuUi.h"
 
 @implementation menuButton
-+(void)onTouch: (SKSpriteNode*)obj scene:(SKScene*)s {
-    SKAction *slideAway = [SKAction moveToY:obj.position.y + obj.size.height*2 duration:0.1];
++(void)onTouch: (SKSpriteNode*)obj scene:(SKScene*)s view:(UIView*)v {
+    //SKAction *slideAway = [SKAction moveToY:obj.position.y + obj.size.height*2 duration:0.1];
     [tutorialMessages firstTimeMenuButton:s.view];
-    [bottomBar addBottomBar:s];
-    [packetButton slideAway:s];
-    [self addCloseButton:s];
-    [obj runAction:slideAway];
+    [menuUi createMenu:v];
+    //[bottomBar addBottomBar:s];
+    //[packetButton slideAway:s];
+    //[self addCloseButton:s];
+    //[obj runAction:slideAway];
 }
 +(void)reCreate: (SKScene*)s {
     SKSpriteNode *button = (SKSpriteNode*)[s childNodeWithName:@"buttonMenu"];
