@@ -10,7 +10,6 @@
 #import "floorStore.h"
 #import "deskStore.h"
 #import "workstationStore.h"
-#import "packetStore.h"
 
 @implementation coinStoreUI
 
@@ -22,7 +21,7 @@
 }
 +(void)addMainMenu: (UIView*)v {
     UIScrollView *menuScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, v.frame.size.width, v.frame.size.height)];
-    menuScrollView.contentSize = CGSizeMake(v.frame.size.width, v.frame.size.height*2 + (v.frame.size.height*2)/7);
+    menuScrollView.contentSize = CGSizeMake(v.frame.size.width, v.frame.size.height*2);
     [self addMenuButtons:menuScrollView];
     [v addSubview:menuScrollView];
 }
@@ -31,14 +30,13 @@
     [mainStore removeFromSuperview];
 }
 +(void)addMenuButtons: (UIScrollView*)v {
-    [self createButton:v textureName:@"sweetPacketsButtonStore" buttonID:0];
-    [self createButton:v textureName:@"floorsButton" buttonID:1];
-    [self createButton:v textureName:@"desksButton" buttonID:2];
-    [self createButton:v textureName:@"workstationsButton" buttonID:3];
-    [self createButton:v textureName:@"hatsButtonTemp" buttonID:4];
-    [self createButton:v textureName:@"shirtsButtonTemp" buttonID:5];
-    [self createButton:v textureName:@"pantsButtonTemp" buttonID:6];
-    [self createButton:v textureName:@"shoesButtonTemp" buttonID:7];
+    [self createButton:v textureName:@"floorsButton" buttonID:0];
+    [self createButton:v textureName:@"desksButton" buttonID:1];
+    [self createButton:v textureName:@"workstationsButton" buttonID:2];
+    [self createButton:v textureName:@"hatsButtonTemp" buttonID:3];
+    [self createButton:v textureName:@"shirtsButtonTemp" buttonID:4];
+    [self createButton:v textureName:@"pantsButtonTemp" buttonID:5];
+    [self createButton:v textureName:@"shoesButtonTemp" buttonID:6];
 }
 +(void)createButton: (UIScrollView*)v textureName:(NSString*)textureName buttonID:(int)buttonID {
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -65,16 +63,14 @@
     UIView *v = [sv superview];
 
     int buttonID = (int)button.tag - 20001;
+    
     if(buttonID == 0){
-        [packetStore addPacketStoreUI:v];
-    }
-    if(buttonID == 1){
         [floorStore addFloorStoreUI:v];
     }
-    if(buttonID == 2){
+    if(buttonID == 1){
         [deskStore addDeskStoreUI:v];
     }
-    if(buttonID == 3){
+    if(buttonID == 2){
         [workstationStore addWorkstationStoreUI:v];
     }
 }

@@ -71,36 +71,5 @@
     s2.scaleMode = SKSceneScaleModeAspectFill;
     [s1.view presentScene:s2 transition:customTransition];
 }
-+(void)switchForUIViews: (SKView*)s1 sceneTwo:(NSString *)scene2 Transition:(SKTransition *)tran {
-    //Set custom tran
-    SKTransition *customTransition = tran;
-    SKScene *s2;
-    
-    //fixed the transition problem lad
-    if([scene2 isEqual:@"main"]){
-        s2 = [[main alloc] initWithSize:s1.frame.size];
-    }
-    else if([scene2 isEqual:@"Character_Maker"]){
-        s2 = [[Character_Maker alloc] initWithSize:s1.frame.size];
-    }else if([scene2 isEqual:@"mainMap"]){
-        s2 = [[mapScene alloc] initWithSize:s1.frame.size];
-    }else if([scene2 isEqual:@"sweetShop"]){
-        s2 = [[sweetShop alloc] initWithSize:s1.frame.size];
-    }else if([scene2 isEqual:@"packetScene"]){
-        s2 = [[packetsScene alloc] initWithSize:s1.frame.size];
-    }else if([scene2 isEqual:@"coinStore"]){
-        s2 = [[coinStoreScene alloc] initWithSize:s1.frame.size];
-    }else if([scene2 isEqual:@"dailySpin"]){
-        s2 = [[spinScene alloc] initWithSize:s1.frame.size];
-    }else if([scene2 isEqual:@"freeItems"]){
-        s2 = [[freeItemsScene alloc] initWithSize:s1.frame.size];
-    }else if([scene2 isEqual:@"myPackets"]){
-        s2 = [[myPacketsScene alloc] initWithSize:s1.frame.size];
-    }else if([scene2 isEqual:@"openPacket"]){
-        s2 = [[packetOpenScene alloc] initWithSize:s1.frame.size];
-    }
-    s2.scaleMode = SKSceneScaleModeAspectFit;
-    
-    [(SKView*)s1 presentScene:s2 transition:customTransition];
-}
+
 @end
