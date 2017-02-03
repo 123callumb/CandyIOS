@@ -10,4 +10,5 @@
 
 @interface storeItemUI : UIView
 +(void)createItemUI: (UIScrollView*)v itemID:(int)itemNumber shopTexture:(NSString*)shopStyle startTagAt:(int)tag itemTexture:(NSString*)itemTexture itemScale:(float)itemScale itemName:(NSString*)itemName itemPrice:(int)price owned:(bool)doesOwnItem;
++(void)nonOwnedItemUI: (UIScrollView*)v itemID:(int)itemNumber shopTexture:(NSString*)shopStyle startTagAt:(int)tag itemTexture:(NSString*)itemTexture itemScale:(float)itemScale itemName:(NSString*)itemName itemPrice:(int)price;
 @end

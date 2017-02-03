@@ -26,7 +26,8 @@
 #import "sweetInventoryUI.h"
 #import "coinBarSprite.h"
 #import "tutorialMessages.h"
-#import "gems.h"
+#import "menuUi.h"
+#import "menuUIButtons.h"
 
 UIScrollView* UIscrollUpdate = nil;
 UIImageView *img1 = nil;
@@ -40,21 +41,29 @@ UIImageView *img1 = nil;
     [levelDecider createLevel:self];
     [tutorialMessages firstTimeLoadMessages:self.view];
     
-    [money addBalance:10000000];
-    [gems addGems:50];
-    
     //scrollView(Update)
     [scrollUpdate initializeScrollRegular:self];
     [scrollUpdate initializeScrollSpecial:self];
     
     [sweetShopUI addUIView:self.view];
-    }
+    
+    
+    //Add Gesture Rec
+    UISwipeGestureRecognizer *gestureRight = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(onGestureRight:)];
+    gestureRight.direction = UISwipeGestureRecognizerDirectionLeft;
+    [[self view] addGestureRecognizer:gestureRight];
+    
+    UISwipeGestureRecognizer *gestureLeft = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(onGestureLeft:)];
+    gestureLeft.direction = UISwipeGestureRecognizerDirectionRight;
+    [[self view] addGestureRecognizer:gestureLeft];
+    
+}
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     UITouch *tap = [touches anyObject];
     CGPoint loc = [tap locationInNode:self];
     SKNode *obj = [self nodeAtPoint:loc];
-
+    
     [upgradeMenu SwitchingMenu:self node:obj];
     [taps onPressed:self location:loc];
     [buttonHandler registerButtons:obj currentScene:self view:self.view];
@@ -72,6 +81,17 @@ UIImageView *img1 = nil;
     [taps onMovement:self location:loc node:obj];
 }
 
+-(void)onGestureRight: (UISwipeGestureRecognizer*)swipe {
+    if(swipe.state == UIGestureRecognizerStateEnded){
+        [menuUi removeMenu:self.view];
+    }
+}
+-(void)onGestureLeft: (UISwipeGestureRecognizer*)swipe {
+    if(swipe.state == UIGestureRecognizerStateEnded){
+        [menuUi createMenu:self.view];
+    }
+}
+
 -(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
     [taps onRelease:self];
 }
@@ -82,5 +102,6 @@ UIImageView *img1 = nil;
 -(void)update:(CFTimeInterval)currentTime {
     //God i really hope this doesn't cause lag
     [coinBarSprite updateText:self];
+    [menuUIButtons menuUpdateChecker:self view:self.view];
 }
 @end

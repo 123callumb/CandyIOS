@@ -10,6 +10,7 @@
 #import "floorStore.h"
 #import "deskStore.h"
 #import "workstationStore.h"
+#import "packetStore.h"
 
 @implementation coinStoreUI
 
@@ -21,7 +22,7 @@
 }
 +(void)addMainMenu: (UIView*)v {
     UIScrollView *menuScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, v.frame.size.width, v.frame.size.height)];
-    menuScrollView.contentSize = CGSizeMake(v.frame.size.width, v.frame.size.height*2);
+    menuScrollView.contentSize = CGSizeMake(v.frame.size.width, v.frame.size.height*2 + (v.frame.size.height*2)/7);
     [self addMenuButtons:menuScrollView];
     [v addSubview:menuScrollView];
 }
@@ -30,13 +31,14 @@
     [mainStore removeFromSuperview];
 }
 +(void)addMenuButtons: (UIScrollView*)v {
-    [self createButton:v textureName:@"floorsButton" buttonID:0];
-    [self createButton:v textureName:@"desksButton" buttonID:1];
-    [self createButton:v textureName:@"workstationsButton" buttonID:2];
-    [self createButton:v textureName:@"hatsButtonTemp" buttonID:3];
-    [self createButton:v textureName:@"shirtsButtonTemp" buttonID:4];
-    [self createButton:v textureName:@"pantsButtonTemp" buttonID:5];
-    [self createButton:v textureName:@"shoesButtonTemp" buttonID:6];
+    [self createButton:v textureName:@"packetsButtonStore" buttonID:0];
+    [self createButton:v textureName:@"floorsButton" buttonID:1];
+    [self createButton:v textureName:@"desksButton" buttonID:2];
+    [self createButton:v textureName:@"workstationsButton" buttonID:3];
+    [self createButton:v textureName:@"hatsButtonTemp" buttonID:4];
+    [self createButton:v textureName:@"shirtsButtonTemp" buttonID:5];
+    [self createButton:v textureName:@"pantsButtonTemp" buttonID:6];
+    [self createButton:v textureName:@"shoesButtonTemp" buttonID:7];
 }
 +(void)createButton: (UIScrollView*)v textureName:(NSString*)textureName buttonID:(int)buttonID {
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -57,20 +59,22 @@
     [v addSubview:button];
 }
 +(void)onButtonPress: (id)sender {
-   
+    
     UIButton *button = (UIButton*)sender;
     UIScrollView *sv = (UIScrollView*)[button superview];
     UIView *v = [sv superview];
-
-    int buttonID = (int)button.tag - 20001;
     
+    int buttonID = (int)button.tag - 20001;
     if(buttonID == 0){
-        [floorStore addFloorStoreUI:v];
+        [packetStore addPacketStoreUI:v];
     }
     if(buttonID == 1){
-        [deskStore addDeskStoreUI:v];
+        [floorStore addFloorStoreUI:v];
     }
     if(buttonID == 2){
+        [deskStore addDeskStoreUI:v];
+    }
+    if(buttonID == 3){
         [workstationStore addWorkstationStoreUI:v];
     }
 }
