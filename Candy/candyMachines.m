@@ -6,81 +6,77 @@
 //  Copyright © 2016 Kilcal. All rights reserved.
 //
 
+
+// Variables of a Candy Machine
+// || Candy Machine Number || Slot Amount || Slot Prices || Upgrade Value (will determine Texture)|| Upgrade Prices ||
 #import "candyMachines.h"
 #import "determineSweetTap.h"
 
-SKSpriteNode *machineBase;
-SKSpriteNode *stamper;
-SKSpriteNode *button;
-
 @implementation candyMachines
-+(void)addCandyMachines: (NSMutableArray*)machines {
-    [self createCandyMachine:@"machine_default" onPressTexture:@"machine_default_1" machineList:machines];
-}
-+(NSMutableArray*)getCandyMachines {
-    NSMutableArray *candyMachines = [[NSMutableArray alloc] init];
-    [self addCandyMachines:candyMachines];
-    return candyMachines;
-}
-+(void)createCandyMachine: (NSString*)texture1 onPressTexture:(NSString*)texturePressed machineList:(NSMutableArray*)machines {
-    NSMutableDictionary *candyMachineData = [[NSMutableDictionary alloc] init];
-    [candyMachineData setObject:texture1 forKey:@"texture"];
-    [candyMachineData setObject:texturePressed forKey:@"texture_pressed"];
-    [machines addObject:candyMachineData];
-}
-+(void)setCurrentCandyMachineID: (int)machineID {
+
+//Initialise all the Candy Machine Data
+
++(NSMutableArray*)candyMachines {
+    NSMutableArray *machineArray;
     NSUserDefaults *nd = [NSUserDefaults standardUserDefaults];
-    [nd setInteger:machineID forKey:@"candyMachine_ID"];
+    NSData *arrayToData = [nd objectForKey:@"candyMachineData"];
+    
+    if(arrayToData == nil){
+        machineArray = [[NSMutableArray alloc] init];
+        arrayToData = [[NSData alloc] init];
+    }
+    
+    machineArray = [NSKeyedUnarchiver unarchiveObjectWithData:arrayToData];
+    return machineArray;
+    
+}
++(void)addNewMachineToList: (NSMutableDictionary*)machineData {
+    NSUserDefaults *nd = [NSUserDefaults standardUserDefaults];
+    NSMutableArray *machines = [self candyMachines];
+    
+    if(machines == nil){
+        machines = [[NSMutableArray alloc] init];
+    }
+    
+    [machines addObject:machineData];
+    
+    NSData *arrayToData = [NSKeyedArchiver archivedDataWithRootObject:machines];
+    
+    [nd setObject:arrayToData forKey:@"candyMachineData"];
     [nd synchronize];
 }
-+(int)getCurrentCandyMachineID {
-    NSUserDefaults *nd = [NSUserDefaults standardUserDefaults];
-    return (int)[nd integerForKey:@"candyMachine_ID"];
++(NSMutableDictionary*)createMachineData {
+    NSMutableDictionary *candyMachineData = [[NSMutableDictionary alloc] init];
+    [candyMachineData setObject:[NSNumber numberWithInt:0] forKey:@"candyMachine_upgradeValue"];
+    [candyMachineData setObject:[NSNumber numberWithInt:0] forKey:@"candyMachine_slotValue"];
+    return candyMachineData;
 }
-+(NSString*)getCurrentCandyMachineTexture {
-    NSMutableDictionary *candyMachineData = [[self getCandyMachines] objectAtIndex:[self getCurrentCandyMachineID]];
-    return [candyMachineData objectForKey:@"texture"];
++(void)increaseCandyMachinesByOne {
+    [self addNewMachineToList:[self createMachineData]];
 }
-+(NSString*)getCurrentCandyMachineTextureOnPress {
-    NSMutableDictionary *candyMachineData = [[self getCandyMachines] objectAtIndex:[self getCurrentCandyMachineID]];
-    return [candyMachineData objectForKey:@"texture_pressed"];
-}
-+(void)addCandyMachine: (SKSpriteNode*)s scale:(float)scale position:(CGPoint)pos {
-    SKSpriteNode *candyMachine = [SKSpriteNode spriteNodeWithImageNamed:[self getCurrentCandyMachineTexture]];
-    candyMachine.xScale = scale;
-    candyMachine.yScale = scale;
-    candyMachine.position = pos;
-    candyMachine.name = @"candyMachine";
-    [s addChild:candyMachine];
-}
-+(void)onTouch:(SKScene*)s{
-    SKSpriteNode *desk = (SKSpriteNode*)[s childNodeWithName:@"desk"];
-    SKSpriteNode *machine = (SKSpriteNode*)[desk childNodeWithName:@"candyMachine"];
-    
-    CGPoint deskSweetSpawnPlace = CGPointMake(desk.position.x - desk.frame.size.width/2.3, desk.position.y + desk.frame.size.height/2);
-    
-    [self animateMachine:machine scene:s position:deskSweetSpawnPlace];
 
-    SKSpriteNode *floor = (SKSpriteNode*)[s childNodeWithName:@"levelFloor"];
-    [floor enumerateChildNodesWithName:@"workstation" usingBlock:^(SKNode *workstation, BOOL *stop){
-       
-        SKSpriteNode *machine = (SKSpriteNode*)[workstation childNodeWithName:@"candyMachine"];
-        
-        CGPoint sweetSpawnPlace = CGPointMake(workstation.position.x - workstation.frame.size.width/10, workstation.position.y - workstation.frame.size.height/3);
-        
-        [self animateMachine:machine scene:s position:sweetSpawnPlace];
+//Pull Candy Machine Data By ID
 
-    }];
-    
++(NSDictionary*)getCandyMachineDataAtID: (int)candyMachineID {
+    NSMutableArray *machines = [self candyMachines];
+    NSDictionary *machineData = [machines objectAtIndex:candyMachineID];
+    return machineData;
 }
-+(void)animateMachine: (SKSpriteNode*)node scene:(SKScene*)s position:(CGPoint)pos {
-    node.texture = [SKTexture textureWithImageNamed:[self getCurrentCandyMachineTextureOnPress]];
-    
-    SKAction *delay = [SKAction waitForDuration:0.03];
-    
-    [node runAction:delay completion:^{
-        node.texture = [SKTexture textureWithImageNamed:[self getCurrentCandyMachineTexture]];
-    }];
-    [determineSweetTap spawn:s location:pos];
+
++(int)getCandyMachineUpgradeValueAtID: (int)candyMachineID {
+    NSNumber *upgValue = [[self getCandyMachineDataAtID:candyMachineID] objectForKey:@"candyMachine_upgradeValue"];
+    int value = [upgValue intValue];
+    return value;
 }
++(int)getCandyMachineSlotValueAtID: (int)candyMachineID {
+    NSNumber *slotValue = [[self getCandyMachineDataAtID:candyMachineID] objectForKey:@"candyMachine_slotValue"];
+    int value = [slotValue intValue];
+    return value;
+}
+
+
++(int)getCandyMachinesUnlocked {
+    return (int)([[self candyMachines] count]);
+}
+
 @end

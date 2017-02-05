@@ -21,7 +21,7 @@
 #import "box1.h"
 #import "sweetInventoryData.h"
 #import "gems.h"
-#import "candyMachines.h"
+#import "candyMachineInteraction.h"
 #import "trendsData.h"
 
 @implementation taps
@@ -32,7 +32,8 @@
             [coinBarSprite updateText:s];
             [fiftyTapBonus tapCollector:s];
             [fiftyTapBonus onTouchofBonus:(SKSpriteNode*)obj scene:s];
-            [candyMachines onTouch:s];
+            [candyMachineInteraction animateAllCandyMachinesOnTap:s];
+            [candyMachineInteraction onCandyMachineTouch:(SKSpriteNode*)obj scene:s];
         }
     [trendsData keepTrendsUpdated];
 }
