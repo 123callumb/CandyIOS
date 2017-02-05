@@ -12,6 +12,7 @@
 #import "main.h"
 #import "Character_Maker.h"
 #import "gems.h"
+#import "firstTimeDataSetup.h"
 
 @implementation GameScene {
     
@@ -25,7 +26,10 @@
     
     //Set Background, Foreground etc..
     [backgroundManager splashScene:self];
-
+    
+    //Setup Data
+    [firstTimeDataSetup setup];
+    
     //Add Scene Extras
     //This can be moved to a custom delay method, but is it worth it?
     
@@ -43,10 +47,5 @@
         
     }
 }
-
-
--(void)update:(CFTimeInterval)currentTime {
-    
-   }
 
 @end

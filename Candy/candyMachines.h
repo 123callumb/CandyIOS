@@ -9,6 +9,8 @@
 #import <SpriteKit/SpriteKit.h>
 
 @interface candyMachines : SKSpriteNode
-+(void)addCandyMachine: (SKSpriteNode*)s scale:(float)scale position:(CGPoint)pos;
-+(void)onTouch:(SKScene*)n;
++(int)getCandyMachineUpgradeValueAtID: (int)candyMachineID;
++(int)getCandyMachineSlotValueAtID: (int)candyMachineID;
++(int)getCandyMachinesUnlocked;
++(void)increaseCandyMachinesByOne;
 @end

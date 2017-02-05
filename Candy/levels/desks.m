@@ -42,7 +42,7 @@
     desk.position = pos;
     desk.zPosition = 0;
     desk.name = @"desk";
-    [candyMachines addCandyMachine:desk scale:1 position:CGPointMake(-desk.frame.size.width/2.4, desk.frame.size.height/1.3)];
+   // [candyMachines addCandyMachine:desk scale:1 position:CGPointMake(-desk.frame.size.width/2.4, desk.frame.size.height/1.3)];
     [s addChild:desk];
 }
 +(int)getAmountOfDesks {

@@ -7,7 +7,7 @@
 //
 
 #import "levelWorkstations.h"
-#import "candyMachines.h"
+#import "candyMachineCreator.h"
 #import "buildingType.h"
 
 @implementation levelWorkstations
@@ -46,9 +46,9 @@
     workstation.anchorPoint = CGPointMake(0.5, 0.5);
     
     //We take 1 here because we have to take into account the one on the desk!
-    if([self getUsableWorkstations] - 1 >= workstationID){
-        workstation.name = @"workstation";
-        [candyMachines addCandyMachine:workstation scale:0.8 position:CGPointMake(0, workstation.frame.size.height/1.2)];
+    if([self getUsableWorkstations] >= workstationID){
+        workstation.name = [NSString stringWithFormat:@"workstation_%d", workstationID];
+        [candyMachineCreator createCandyMachineWithID:workstationID position:pos scale:1 attatchingSprite:workstation];
     }
     
     [s addChild:workstation];
