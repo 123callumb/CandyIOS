@@ -10,11 +10,12 @@
 #import "sweetInventoryData.h"
 
 @implementation inventorySweetData
-+(void)addSweet: (NSString*)sweetName sweetTextureName:(NSString*)textureName sweetColorRarity:(NSString*)colorRare {
++(void)addSweet: (NSString*)sweetName sweetTextureName:(NSString*)textureName sweetColorRarity:(NSString*)colorRare newUUID:(long)uuid {
     NSMutableDictionary *sweetData = [[NSMutableDictionary alloc] init];
     [sweetData setValue:sweetName forKey:@"sweet_name"];
     [sweetData setValue:textureName forKey:@"sweet_texture"];
     [sweetData setValue:colorRare forKey:@"sweet_color"];
+    [sweetData setValue:[NSNumber numberWithLong:uuid] forKey:@"sweet_uuid"];
     [sweetInventoryData addObject:sweetData];
 }
 @end

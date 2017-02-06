@@ -65,7 +65,7 @@ UIImageView *img1 = nil;
     SKNode *obj = [self nodeAtPoint:loc];
     
     [upgradeMenu SwitchingMenu:self node:obj];
-    [taps onPressed:self location:loc];
+    [taps onPressed:self location:loc view:self.view];
     [buttonHandler registerButtons:obj currentScene:self view:self.view];
     [registerBoxes registerBoxes:obj currentScene:self];
     [registerStatsButtons registerStatsButtons:self location:loc node:obj view:self.view];

@@ -9,5 +9,5 @@
 #import <Foundation/Foundation.h>
 
 @interface inventorySweetData : NSObject
-+(void)addSweet: (NSString*)sweetName sweetTextureName:(NSString*)textureName sweetColorRarity:(NSString*)colorRare;
++(void)addSweet: (NSString*)sweetName sweetTextureName:(NSString*)textureName sweetColorRarity:(NSString*)colorRare  newUUID:(long)uuid;
 @end

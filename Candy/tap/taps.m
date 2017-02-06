@@ -25,7 +25,7 @@
 #import "trendsData.h"
 
 @implementation taps
-+(void)onPressed: (SKScene *)s location:(CGPoint)p {
++(void)onPressed: (SKScene *)s location:(CGPoint)p view:(UIView*)v {
     SKNode *obj = [s nodeAtPoint:p];
     if([menuHandler getCurrentMenu] == 4){
             [self randomTapTests];
@@ -33,7 +33,7 @@
             [fiftyTapBonus tapCollector:s];
             [fiftyTapBonus onTouchofBonus:(SKSpriteNode*)obj scene:s];
             [candyMachineInteraction animateAllCandyMachinesOnTap:s];
-            [candyMachineInteraction onCandyMachineTouch:(SKSpriteNode*)obj scene:s];
+            [candyMachineInteraction onCandyMachineTouch:(SKSpriteNode*)obj scene:s view:v];
         }
     [trendsData keepTrendsUpdated];
 }

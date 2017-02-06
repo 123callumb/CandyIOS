@@ -11,6 +11,7 @@
 // || Candy Machine Number || Slot Amount || Slot Prices || Upgrade Value (will determine Texture)|| Upgrade Prices ||
 #import "candyMachines.h"
 #import "determineSweetTap.h"
+#import "candyMachineSlotData.h"
 
 @implementation candyMachines
 
@@ -49,6 +50,9 @@
     NSMutableDictionary *candyMachineData = [[NSMutableDictionary alloc] init];
     [candyMachineData setObject:[NSNumber numberWithInt:0] forKey:@"candyMachine_upgradeValue"];
     [candyMachineData setObject:[NSNumber numberWithInt:0] forKey:@"candyMachine_slotValue"];
+    [candyMachineData setObject:@"emptyDraw" forKey:@"candyMachine_slot_0"];
+    [candyMachineData setObject:@"emptyDraw" forKey:@"candyMachine_slot_1"];
+    [candyMachineData setObject:@"emptyDraw" forKey:@"candyMachine_slot_2"];
     return candyMachineData;
 }
 +(void)increaseCandyMachinesByOne {
@@ -57,9 +61,9 @@
 
 //Pull Candy Machine Data By ID
 
-+(NSDictionary*)getCandyMachineDataAtID: (int)candyMachineID {
++(NSMutableDictionary*)getCandyMachineDataAtID: (int)candyMachineID {
     NSMutableArray *machines = [self candyMachines];
-    NSDictionary *machineData = [machines objectAtIndex:candyMachineID];
+    NSMutableDictionary *machineData = [machines objectAtIndex:candyMachineID];
     return machineData;
 }
 
