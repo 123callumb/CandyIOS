@@ -9,6 +9,8 @@
 #import <SpriteKit/SpriteKit.h>
 
 @interface candyMachines : SKSpriteNode
++(NSMutableArray*)candyMachines;
++(NSMutableDictionary*)getCandyMachineDataAtID: (int)candyMachineID;
 +(int)getCandyMachineUpgradeValueAtID: (int)candyMachineID;
 +(int)getCandyMachineSlotValueAtID: (int)candyMachineID;
 +(int)getCandyMachinesUnlocked;

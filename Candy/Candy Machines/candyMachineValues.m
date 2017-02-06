@@ -41,23 +41,39 @@
 
 +(int)upgradePrices: (int)upgradeValue {
     
-    NSArray *price = @[@10000, @20000, @40000, @80000, @160000, @320000];
-    
-    for(int i = 0; i <= [price count] - 1; i++){
-        if(i == upgradeValue){
-            return (int)[price objectAtIndex:i];
-        }
+    if(upgradeValue == 0){
+        return 10000;
+    }
+    if(upgradeValue == 1){
+        return 25000;
+    }
+    if(upgradeValue == 2){
+        return 50000;
+    }
+    if(upgradeValue == 3){
+        return 100000;
+    }
+    if(upgradeValue == 4){
+        return 250000;
+    }
+    if(upgradeValue == 5){
+        return 500000;
+    }
+    if(upgradeValue == 6){
+        return 1000000;
     }
     return 0;
 }
 +(int)slotPrices: (int)slotValue {
     
-    NSArray *price = @[@25, @50, @100];
-    
-    for(int i = 0; i <= [price count] - 1; i++){
-        if(i == slotValue){
-            return (int)[price objectAtIndex:i];
-        }
+    if(slotValue == 0){
+        return 25;
+    }
+    if(slotValue == 1){
+        return 50;
+    }
+    if(slotValue == 2){
+        return 100;
     }
     return 0;
 }

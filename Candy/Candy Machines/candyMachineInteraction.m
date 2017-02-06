@@ -12,11 +12,15 @@
 #import "candyMachineUI.h"
 
 @implementation candyMachineInteraction
-+(void)onCandyMachineTouch: (SKSpriteNode*)machine scene:(SKScene*)s {
+
+int currentSelectedMachine = 1337;
+
++(void)onCandyMachineTouch: (SKSpriteNode*)machine scene:(SKScene*)s view:(UIView*)v{
     for(int i = 0; i <= [candyMachines getCandyMachinesUnlocked] - 1; i++){
         if([machine.name isEqualToString:[NSString stringWithFormat:@"candyMachine_Number_%d", i]]){
             NSLog(@"Candy Machine %d was touched", i);
-            [candyMachineUI createCandyMachineUIWithID:i scene:s];
+            [candyMachineUI createCandyMachineUIWithID:i scene:s view:v];
+            currentSelectedMachine = i;
         }
     }
 }
@@ -35,5 +39,12 @@
             machine.texture = [SKTexture textureWithImageNamed:[candyMachineValues getCandyMachineTextureFirstState:i]];
         }];
     }
+}
+
++(int)getCurrentSelectedMachine {
+    return currentSelectedMachine;
+}
++(void)resetCurrentSelectedMachine {
+    currentSelectedMachine = 1337;
 }
 @end

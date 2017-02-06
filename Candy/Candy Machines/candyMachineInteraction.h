@@ -9,6 +9,8 @@
 #import <SpriteKit/SpriteKit.h>
 
 @interface candyMachineInteraction : SKSpriteNode
-+(void)onCandyMachineTouch: (SKSpriteNode*)machine scene:(SKScene*)s;
++(void)onCandyMachineTouch: (SKSpriteNode*)machine scene:(SKScene*)s view:(UIView*)v;
 +(void)animateAllCandyMachinesOnTap: (SKScene*)s;
++(int)getCurrentSelectedMachine;
++(void)resetCurrentSelectedMachine;
 @end
