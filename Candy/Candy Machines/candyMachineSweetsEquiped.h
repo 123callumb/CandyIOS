@@ -9,6 +9,5 @@
 #import <Foundation/Foundation.h>
 
 @interface candyMachineSweetsEquiped : NSObject
-+(NSMutableArray*)equippedSweets;
-+(void)equipSweet: (NSNumber*)equipedSweetUUID;
++(bool)hasAlreadyGotItemEquiped: (long)sweetUUID;
 @end

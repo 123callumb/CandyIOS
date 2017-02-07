@@ -13,4 +13,5 @@
 +(void)animateAllCandyMachinesOnTap: (SKScene*)s;
 +(int)getCurrentSelectedMachine;
 +(void)resetCurrentSelectedMachine;
++(void)onBackButton: (SKSpriteNode*)s view:(UIView*)v;
 @end

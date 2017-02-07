@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @interface candyMachineSlotData : NSObject
-+(NSString*)getCandyMachineSlotDataAtID: (int)machineID slotID:(int)slotNumber;
-+(void)changeMachineSlotDataAtID:(int)machineID slotID:(int)slotNumber sweetTexture:(NSString*)sweetTexture;
++(long)getCandyMachineSlotUUIDAtID: (int)machineID slotID:(int)slotNumber;
++(void)changeMachineSlotDataAtID:(int)machineID slotID:(int)slotNumber sweetUUID:(NSNumber*)sweetUUID;
++(NSString*)getTextureFromSweetUUID: (long)sweetUUID;
 @end
