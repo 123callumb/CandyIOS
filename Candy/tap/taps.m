@@ -34,6 +34,7 @@
             [fiftyTapBonus onTouchofBonus:(SKSpriteNode*)obj scene:s];
             [candyMachineInteraction animateAllCandyMachinesOnTap:s];
             [candyMachineInteraction onCandyMachineTouch:(SKSpriteNode*)obj scene:s view:v];
+            [candyMachineInteraction onBackButton:(SKSpriteNode*)obj view:v];
         }
     [trendsData keepTrendsUpdated];
 }

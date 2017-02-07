@@ -50,9 +50,9 @@
     NSMutableDictionary *candyMachineData = [[NSMutableDictionary alloc] init];
     [candyMachineData setObject:[NSNumber numberWithInt:0] forKey:@"candyMachine_upgradeValue"];
     [candyMachineData setObject:[NSNumber numberWithInt:0] forKey:@"candyMachine_slotValue"];
-    [candyMachineData setObject:@"emptyDraw" forKey:@"candyMachine_slot_0"];
-    [candyMachineData setObject:@"emptyDraw" forKey:@"candyMachine_slot_1"];
-    [candyMachineData setObject:@"emptyDraw" forKey:@"candyMachine_slot_2"];
+    [candyMachineData setObject:[NSNumber numberWithLong:-1] forKey:@"candyMachine_slot_0"];
+    [candyMachineData setObject:[NSNumber numberWithLong:-1] forKey:@"candyMachine_slot_1"];
+    [candyMachineData setObject:[NSNumber numberWithLong:-1] forKey:@"candyMachine_slot_2"];
     return candyMachineData;
 }
 +(void)increaseCandyMachinesByOne {

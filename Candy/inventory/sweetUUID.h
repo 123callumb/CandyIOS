@@ -11,4 +11,5 @@
 @interface sweetUUID : NSObject
 +(long)createNewSweetUUID;
 +(int)getInventoryIdForSweetWithUUID: (long)sweetUUID;
++(long)getUUIDForSweetWithInventoryID: (int)inventoryID;
 @end

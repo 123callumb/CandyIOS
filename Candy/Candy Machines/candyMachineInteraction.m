@@ -47,4 +47,13 @@ int currentSelectedMachine = 1337;
 +(void)resetCurrentSelectedMachine {
     currentSelectedMachine = 1337;
 }
++(void)onBackButton: (SKSpriteNode*)s view:(UIView*)v {
+    if([s.name isEqualToString:@"machineBack"]){
+        SKSpriteNode *mainSkUI = (SKSpriteNode*)[s parent];
+        UIView *slots = [v viewWithTag:11998];
+        [slots removeFromSuperview];
+        [mainSkUI removeFromParent];
+        [self resetCurrentSelectedMachine];
+    }
+}
 @end

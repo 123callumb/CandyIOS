@@ -12,4 +12,5 @@
 +(void)createCandyMachineUIWithID: (int)machineID scene:(SKScene*)s view:(UIView*)v;
 +(int)getSelectedSlot;
 +(void)resetSelectedSlot;
++(void)addCandyMachineSlotUIWithID: (int)machineID view:(UIView*)v;
 @end

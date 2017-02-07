@@ -16,6 +16,7 @@
     [sweetData setValue:textureName forKey:@"sweet_texture"];
     [sweetData setValue:colorRare forKey:@"sweet_color"];
     [sweetData setValue:[NSNumber numberWithLong:uuid] forKey:@"sweet_uuid"];
+    NSLog(@"sweet created with UUID: %@", (NSNumber*)[sweetData valueForKey:@"sweet_uuid"]);
     [sweetInventoryData addObject:sweetData];
 }
 @end

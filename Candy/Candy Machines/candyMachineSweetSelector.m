@@ -18,11 +18,11 @@
 
 @implementation candyMachineSweetSelector
 +(void)createInvSelectionUI: (UIView*)v {
-    float uiWidth = v.frame.size.width/1.5;
-    float uiHeight = v.frame.size.height/1.74;
+    float uiWidth = v.frame.size.width*1.35;
+    float uiHeight = v.frame.size.height*1.02;
     
-    UIScrollView *drawSlotsUi = [[UIScrollView alloc] initWithFrame:CGRectMake(v.frame.size.width/2 - uiWidth/2, v.frame.size.height/5.4, uiWidth, uiHeight)];
-    drawSlotsUi.backgroundColor = [UIColor clearColor];
+    UIScrollView *drawSlotsUi = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, uiWidth, uiHeight)];
+    drawSlotsUi.backgroundColor = [UIColor colorWithRed:228.0/255.0f green:228.0/255.0f blue:228.0/255.0f alpha:1];
     
     
     if([[sweetInventoryData getInventory] count] >= 1 && [sweetInventoryData getInventory] != nil){
@@ -30,6 +30,8 @@
         for(int i = 0; i <= [[sweetInventoryData getInventory] count] - 1; i++){
             [self createSlot:drawSlotsUi slotNo:i];
         }
+    }else {
+        //Draw No Inventory Items Here
     }
     
     [drawSlotsUi setUserInteractionEnabled:true];
@@ -41,6 +43,8 @@
     NSString *colourRarity = [slotData objectForKey:@"sweet_color"];
     NSNumber *sweetUUID = [slotData objectForKey:@"sweet_uuid"];
     NSString *slotBackgroundName = [sweetInventorySlot getSlotBackgroundImage:colourRarity];
+    long uuidAsLong = [sweetUUID longValue];
+    
     
     UIView *slot = [[UIView alloc] initWithFrame:[self layoutStyle:v.frame.size.width/2.2 Padding:v.frame.size.width/40 drawNo:slotID]];
     
@@ -57,17 +61,17 @@
     
     sweet.tag = 12000 + slotID;
     [sweet setImage:sweetTeture forState:UIControlStateNormal];
-    
-    if(![[candyMachineSweetsEquiped equippedSweets] containsObject:sweetUUID]){
+
+    if(![candyMachineSweetsEquiped  hasAlreadyGotItemEquiped:uuidAsLong]){
         SEL onPress = @selector(onSweetInvPress:);
         
         [sweet addTarget:self action:onPress forControlEvents:UIControlEventTouchUpInside];
     }
-    
+
     [slot addSubview:slotBg];
     [slot addSubview:sweet];
     
-    if([[candyMachineSweetsEquiped equippedSweets] containsObject:sweetUUID]){
+    if([candyMachineSweetsEquiped  hasAlreadyGotItemEquiped:uuidAsLong]){
         UIImage *inUseImage = [UIImage imageNamed:@"boxInUse"];
         UIImageView *inUseSlot = [[UIImageView alloc] initWithImage:inUseImage];
         
@@ -106,16 +110,14 @@
     UIButton *sweet = (UIButton*)sender;
     UIView *v1 = [sweet superview];
     UIView *v = [v1 superview];
-    int slotNumber = (int)sweet.tag - 12000;
-    long uUID = [sweetUUID getInventoryIdForSweetWithUUID:slotNumber];
+    UIView *v2 = [v superview];
+    UIView *main = [v2 superview];
+    int inventorySlotNumber = (int)sweet.tag - 12000;
+    long invSweetUUID = [sweetUUID getUUIDForSweetWithInventoryID:inventorySlotNumber];
     
-    NSMutableDictionary *slotData = [sweetInventoryData getSweetDataAtSlot:slotNumber];
-    NSString *textureName = [slotData objectForKey:@"sweet_texture"];
-    
-    [candyMachineSlotData changeMachineSlotDataAtID:[candyMachineInteraction getCurrentSelectedMachine] slotID:[candyMachineUI getSelectedSlot] sweetTexture:textureName];
-    [candyMachineSweetsEquiped equipSweet:[NSNumber numberWithLong:uUID]];
+    [candyMachineSlotData changeMachineSlotDataAtID:[candyMachineInteraction getCurrentSelectedMachine] slotID:[candyMachineUI getSelectedSlot] sweetUUID:[NSNumber numberWithLong:invSweetUUID]];
+    [v2 removeFromSuperview];
+    [candyMachineUI addCandyMachineSlotUIWithID:[candyMachineInteraction getCurrentSelectedMachine] view:main];
     [candyMachineUI resetSelectedSlot];
-    [candyMachineInteraction resetCurrentSelectedMachine];
-    [v removeFromSuperview];
 }
 @end

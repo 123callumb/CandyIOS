@@ -56,6 +56,7 @@ int machineSlotSelected = 3;
     
     SKSpriteNode *backButton = [SKSpriteNode spriteNodeWithImageNamed:@"backButton"];
     backButton.position = CGPointMake(0, -mainH + backButton.frame.size.height/1.4);
+    backButton.name = @"machineBack";
     
     [mainUI addChild:candyMachine];
     [mainUI addChild:upgradeCostBar];
@@ -88,7 +89,11 @@ int machineSlotSelected = 3;
     [slot1Bg setImage:sweetDrawSlot];
     [slot2Bg setImage:sweetDrawSlot];
     
-    UIImage *slot0Texture = [UIImage imageNamed:[candyMachineSlotData getCandyMachineSlotDataAtID:machineID slotID:0]];
+    NSString *slot0TextureString = [candyMachineSlotData getTextureFromSweetUUID:[candyMachineSlotData getCandyMachineSlotUUIDAtID:machineID slotID:0]];
+    NSString *slot1TextureString = [candyMachineSlotData getTextureFromSweetUUID:[candyMachineSlotData getCandyMachineSlotUUIDAtID:machineID slotID:1]];
+    NSString *slot2TextureString = [candyMachineSlotData getTextureFromSweetUUID:[candyMachineSlotData getCandyMachineSlotUUIDAtID:machineID slotID:2]];
+    
+    UIImage *slot0Texture = [UIImage imageNamed:slot0TextureString];
     UIImage *slot1Texture;
     UIImage *slot2Texture;
     
@@ -97,7 +102,7 @@ int machineSlotSelected = 3;
     [slot0 addTarget:self action:@selector(onSlot1Press:) forControlEvents:UIControlEventTouchUpInside];
     
     if ([candyMachines getCandyMachineSlotValueAtID:machineID] >= 1) {
-        slot1Texture = [UIImage imageNamed:[candyMachineSlotData getCandyMachineSlotDataAtID:machineID slotID:1]];
+        slot1Texture = [UIImage imageNamed:slot1TextureString];
         [slot1 setFrame:CGRectMake(0,  -slot0Bg.frame.size.height/20, slot0Bg.frame.size.width, slot0Bg.frame.size.height)];
     }else {
         slot1Texture = [UIImage imageNamed:@"padlock"];
@@ -105,7 +110,7 @@ int machineSlotSelected = 3;
     }
     
     if ([candyMachines getCandyMachineSlotValueAtID:machineID] >= 2) {
-        slot2Texture = [UIImage imageNamed:[candyMachineSlotData getCandyMachineSlotDataAtID:machineID slotID:2]];
+        slot2Texture = [UIImage imageNamed:slot2TextureString];
         [slot2 setFrame:CGRectMake(0,  -slot0Bg.frame.size.height/20, slot0Bg.frame.size.width, slot0Bg.frame.size.height)];
 
     }else {
@@ -127,6 +132,8 @@ int machineSlotSelected = 3;
     [slots addSubview:slot1Bg];
     [slots addSubview:slot2Bg];
     
+    slots.tag = 11998;
+    
     [v addSubview:slots];
 
 }
@@ -135,8 +142,10 @@ int machineSlotSelected = 3;
     UIButton *slot = (UIButton*)sender;
     UIView *v = [slot superview];
     UIView *v1 = [v superview];
+
     machineSlotSelected = 0;
     [candyMachineSweetSelector createInvSelectionUI:v1];
+
 }
 +(int)getSelectedSlot {
     return machineSlotSelected;
