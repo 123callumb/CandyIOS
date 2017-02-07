@@ -23,6 +23,7 @@
 #import "gems.h"
 #import "candyMachineInteraction.h"
 #import "trendsData.h"
+#import "candyMachineUI.h"
 
 @implementation taps
 +(void)onPressed: (SKScene *)s location:(CGPoint)p view:(UIView*)v {
@@ -34,8 +35,11 @@
             [fiftyTapBonus onTouchofBonus:(SKSpriteNode*)obj scene:s];
             [candyMachineInteraction animateAllCandyMachinesOnTap:s];
             [candyMachineInteraction onCandyMachineTouch:(SKSpriteNode*)obj scene:s view:v];
-            [candyMachineInteraction onBackButton:(SKSpriteNode*)obj view:v];
-        }
+    }else {
+        //Menu interaction here!
+        [candyMachineInteraction onBackButton:(SKSpriteNode*)obj view:v];
+        [candyMachineUI onUpgradeMachine:s machineID:[candyMachineInteraction getCurrentSelectedMachine] node:(SKSpriteNode*)obj view:v];
+    }
     [trendsData keepTrendsUpdated];
 }
 

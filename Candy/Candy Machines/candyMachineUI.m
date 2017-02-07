@@ -11,6 +11,10 @@
 #import "candyMachineValues.h"
 #import "candyMachineSlotData.h"
 #import "candyMachineSweetSelector.h"
+#import "money.h"
+#import "messageUI.h"
+#import "mainTransition.h"
+#import "gems.h"
 
 @implementation candyMachineUI
 
@@ -21,6 +25,7 @@ int machineSlotSelected = 3;
     mainUI.xScale = 0.43;
     mainUI.yScale = 0.43;
     mainUI.position = CGPointMake(0, -s.frame.size.height);
+    mainUI.zPosition = 7;
     
     float mainW = mainUI.frame.size.width;
     float mainH = mainUI.frame.size.height;
@@ -35,12 +40,14 @@ int machineSlotSelected = 3;
     
     SKSpriteNode *upgradeButton = [SKSpriteNode spriteNodeWithImageNamed:@"machineUpgradeButton"];
     upgradeButton.position = CGPointMake(-mainW/2.4, -mainH/14);
+    upgradeButton.name = @"machineUpgradeButton";
     
     SKSpriteNode *slotUpgradeCostBar = [SKSpriteNode spriteNodeWithImageNamed:@"gemUpgradePrice"];
     slotUpgradeCostBar.position = CGPointMake(-mainW/2.4, -mainH/3.2);
     
     SKSpriteNode *slotUpgradeButton = [SKSpriteNode spriteNodeWithImageNamed:@"machineSlotUpgradeButton"];
     slotUpgradeButton.position = CGPointMake(-mainW/2.4, -mainH/1.82);
+    slotUpgradeButton.name = @"machineSlotUpgradeButton";
     
     SKLabelNode *upgradeCost = [SKLabelNode labelNodeWithFontNamed:@"Coder's-Crux"];
     upgradeCost.fontColor = [SKColor blackColor];
@@ -103,21 +110,26 @@ int machineSlotSelected = 3;
     UIImage *slot2Texture;
     
     [slot0Bg setUserInteractionEnabled:true];
+    [slot2Bg setUserInteractionEnabled:true];
+    [slot1Bg setUserInteractionEnabled:true];
     
     [slot0 addTarget:self action:@selector(onSlot1Press:) forControlEvents:UIControlEventTouchUpInside];
     
     if ([candyMachines getCandyMachineSlotValueAtID:machineID] >= 1) {
         slot1Texture = [UIImage imageNamed:slot1TextureString];
         [slot1 setFrame:CGRectMake(0,  -slot0Bg.frame.size.height/20, slot0Bg.frame.size.width, slot0Bg.frame.size.height)];
+        [slot1 addTarget:self action:@selector(onSlot2Press:) forControlEvents:UIControlEventTouchUpInside];
+
     }else {
         slot1Texture = [UIImage imageNamed:@"padlock"];
         [slot1 setFrame:CGRectMake(slot0Bg.frame.size.width/2 - (slot0Bg.frame.size.width/2.5)/2,  slot0Bg.frame.size.height/2.3 - slot0Bg.frame.size.height/4, slot0Bg.frame.size.width/2.5, slot0Bg.frame.size.height/2)];
+
     }
     
     if ([candyMachines getCandyMachineSlotValueAtID:machineID] >= 2) {
         slot2Texture = [UIImage imageNamed:slot2TextureString];
         [slot2 setFrame:CGRectMake(0,  -slot0Bg.frame.size.height/20, slot0Bg.frame.size.width, slot0Bg.frame.size.height)];
-
+        [slot2 addTarget:self action:@selector(onSlot3Press:) forControlEvents:UIControlEventTouchUpInside];
     }else {
         slot2Texture = [UIImage imageNamed:@"padlock"];
         [slot2 setFrame:CGRectMake(slot0Bg.frame.size.width/2 - (slot0Bg.frame.size.width/2.5)/2,  slot0Bg.frame.size.height/2.3 - slot0Bg.frame.size.height/4, slot0Bg.frame.size.width/2.5, slot0Bg.frame.size.height/2)];
@@ -147,7 +159,6 @@ int machineSlotSelected = 3;
 
 }
 +(void)onSlot1Press: (id)sender {
-    NSLog(@"we get here?");
     UIButton *slot = (UIButton*)sender;
     UIView *v = [slot superview];
     UIView *v1 = [v superview];
@@ -156,10 +167,53 @@ int machineSlotSelected = 3;
     [candyMachineSweetSelector createInvSelectionUI:v1];
 
 }
++(void)onSlot2Press: (id)sender {
+    UIButton *slot = (UIButton*)sender;
+    UIView *v = [slot superview];
+    UIView *v1 = [v superview];
+    
+    machineSlotSelected = 1;
+    [candyMachineSweetSelector createInvSelectionUI:v1];
+    
+}
++(void)onSlot3Press: (id)sender {
+    UIButton *slot = (UIButton*)sender;
+    UIView *v = [slot superview];
+    UIView *v1 = [v superview];
+    
+    machineSlotSelected = 2;
+    [candyMachineSweetSelector createInvSelectionUI:v1];
+    
+}
+
 +(int)getSelectedSlot {
     return machineSlotSelected;
 }
 +(void)resetSelectedSlot {
     machineSlotSelected = 4;
+}
++(void)onUpgradeMachine: (SKScene*)s machineID:(int)machineNumber node:(SKSpriteNode*)upg view:(UIView*)v {
+    if([upg.name isEqualToString:@"machineUpgradeButton"]){
+        int price = [candyMachineValues upgradePrices:[candyMachines getCandyMachineUpgradeValueAtID:machineNumber]];
+        if([money getBalance] >= price){
+            [candyMachines upgradeMachineAtID:machineNumber];
+            UIView *slotMenu = [v viewWithTag:11998];
+            [money addBalance:-price];
+            [slotMenu removeFromSuperview];
+            [mainTransition switchScene:s sceneTwo:@"main" Transition:[SKTransition crossFadeWithDuration:0.3]];
+            [messageUI createMessageBox:v information:@"Congratulations you just upgraded your candy machine!" representingImage:@"machine_default" imageScale:3 messageBoxID:40 displayOnce:false];
+        }
+    }
+    if([upg.name isEqualToString:@"machineSlotUpgradeButton"]){
+        int price = [candyMachineValues slotPrices:[candyMachines getCandyMachineSlotValueAtID:machineNumber]];
+        if([gems getGems] >= price){
+            [candyMachines upgradeMachineSlotsAtID:machineNumber];
+            [gems addGems:-price];
+            UIView *slotMenu = [v viewWithTag:11998];
+            [slotMenu removeFromSuperview];
+            [mainTransition switchScene:s sceneTwo:@"main" Transition:[SKTransition crossFadeWithDuration:0.3]];
+            [messageUI createMessageBox:v information:@"Congratulations you just unlocked a new slot for your candy machine!" representingImage:@"sweetDrawSlot" imageScale:3 messageBoxID:40 displayOnce:false];
+        }
+    }
 }
 @end

@@ -9,7 +9,7 @@
 #import <SpriteKit/SpriteKit.h>
 
 @interface levelWorkstations : SKSpriteNode
-+(void)addWorkstations: (SKSpriteNode*)s;
++(void)addWorkstations: (SKScene*)s;
 +(NSString*)getWorkstationAtIndex: (int)index;
 +(void)setCurrentWorkstationID: (int)buildingID;
 +(int)getAmountOfWorkstations;

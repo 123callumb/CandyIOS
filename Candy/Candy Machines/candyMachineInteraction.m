@@ -11,6 +11,7 @@
 #import "candyMachineValues.h"
 #import "candyMachineUI.h"
 #import "candyMachineSweetSpawner.h"
+#import "menuHandler.h"
 
 @implementation candyMachineInteraction
 
@@ -22,20 +23,20 @@ int currentSelectedMachine = 1337;
             NSLog(@"Candy Machine %d was touched", i);
             [candyMachineUI createCandyMachineUIWithID:i scene:s view:v];
             currentSelectedMachine = i;
+            [menuHandler setCurrentMenu:7];
         }
     }
 }
 +(void)animateAllCandyMachinesOnTap: (SKScene*)s {
     for(int i = 0; i <= [candyMachines getCandyMachinesUnlocked] - 1; i++){
         
-        SKSpriteNode *floor = (SKSpriteNode*)[s childNodeWithName:@"levelFloor"];
-        SKSpriteNode *workstation = (SKSpriteNode*)[floor childNodeWithName:[NSString stringWithFormat:@"workstation_%d", i]];
+        SKSpriteNode *workstation = (SKSpriteNode*)[s childNodeWithName:[NSString stringWithFormat:@"workstation_%d", i]];
         SKSpriteNode *machine = (SKSpriteNode*)[workstation childNodeWithName:[NSString stringWithFormat:@"candyMachine_Number_%d", i]];
         
         machine.texture = [SKTexture textureWithImageNamed:[candyMachineValues getCandyMachineTextureSecondState:i]];
         
         SKAction *animationDuration = [SKAction waitForDuration:0.1];
-        [candyMachineSweetSpawner createSweetsFromMachine:s machineID:i machinePosition:CGPointMake(machine.position.x, machine.position.y - machine.frame.size.height/2)];
+        [candyMachineSweetSpawner createSweetsFromMachine:s machineID:i machinePosition:CGPointMake(workstation.position.x, workstation.position.y + machine.frame.size.height/1.8)];
         [machine runAction:animationDuration completion:^{
             machine.texture = [SKTexture textureWithImageNamed:[candyMachineValues getCandyMachineTextureFirstState:i]];
         }];
@@ -62,8 +63,8 @@ int currentSelectedMachine = 1337;
         [mainSkUI runAction:slideAway completion:^{
                 [mainSkUI removeFromParent];
         }];
-
         [self resetCurrentSelectedMachine];
+        [menuHandler setCurrentMenu:4];
     }
 }
 @end

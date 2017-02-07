@@ -15,17 +15,22 @@
 
 @implementation candyMachineSweetSpawner
 +(void)createSweetsFromMachine: (SKScene*)s machineID:(int)machineNumber machinePosition:(CGPoint)pos{
-    for (int i = 0; i <= [candyMachines getCandyMachineSlotValueAtID:machineNumber]; i++) {
-        SKSpriteNode *sweet = [self createSweetSprite:s pos:pos machineID:machineNumber slotNo:i];
-        [nodeToParticle particleFlyAnimation:sweet scene:s scaleNo:0.2];
-        [money addBalance:[sweetValueCalculation calculateSkValue:sweet]];
+    for(int i = 0; i <= [candyMachines getCandyMachineUpgradeValueAtID:machineNumber]; i++){
+        for (int i = 0; i <= [candyMachines getCandyMachineSlotValueAtID:machineNumber]; i++) {
+            SKSpriteNode *sweet = [self createSweetSprite:s pos:pos machineID:machineNumber slotNo:i];
+            NSString *sweetTexture = [NSString stringWithFormat:@"%@", sweet.texture];
+            if(![sweetTexture isEqualToString:@"<SKTexture> 'emptyDraw' (280 x 280)"]){
+                [nodeToParticle particleFlyAnimation:sweet scene:s scaleNo:0.2];
+                [money addBalance:[sweetValueCalculation calculateSkValue:sweet]];
+            }
+        }
     }
 }
 +(id)createSweetSprite: (SKScene*)s pos:(CGPoint)p machineID:(int)machineNumber slotNo:(int)slotID {
     NSString *sweetTextureName =  [candyMachineSlotData getTextureFromSweetUUID:[candyMachineSlotData getCandyMachineSlotUUIDAtID:machineNumber slotID:slotID]];
     SKSpriteNode *sweet = [SKSpriteNode spriteNodeWithImageNamed:sweetTextureName];
     sweet.position = p;
-    sweet.zPosition = 1;
+    sweet.zPosition = 5;
     return sweet;
 }
 @end
