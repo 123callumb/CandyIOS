@@ -18,7 +18,7 @@
 
 @implementation candyMachineSweetSelector
 +(void)createInvSelectionUI: (UIView*)v {
-    float uiWidth = v.frame.size.width*1.35;
+    float uiWidth = v.frame.size.width;
     float uiHeight = v.frame.size.height*1.02;
     
     UIScrollView *drawSlotsUi = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, uiWidth, uiHeight)];

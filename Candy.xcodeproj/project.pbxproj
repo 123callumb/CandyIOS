@@ -164,6 +164,7 @@
 		75919B9C1DDCA4CE001F66EB /* levelDecider.m in Sources */ = {isa = PBXBuildFile; fileRef = 75919B9B1DDCA4CE001F66EB /* levelDecider.m */; };
 		759E71C81DF0A02600B7275A /* mapMain.m in Sources */ = {isa = PBXBuildFile; fileRef = 759E71C71DF0A02600B7275A /* mapMain.m */; };
 		759E71CB1DF0A21D00B7275A /* mapScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 759E71CA1DF0A21D00B7275A /* mapScene.m */; };
+		75ACAF841E4A156F0099F779 /* candyMachineSweetSpawner.m in Sources */ = {isa = PBXBuildFile; fileRef = 75ACAF831E4A156F0099F779 /* candyMachineSweetSpawner.m */; };
 		75B526421E1E9E610020A609 /* floors.m in Sources */ = {isa = PBXBuildFile; fileRef = 75B526411E1E9E610020A609 /* floors.m */; };
 		75B526451E1EAD580020A609 /* levelStructure.m in Sources */ = {isa = PBXBuildFile; fileRef = 75B526441E1EAD580020A609 /* levelStructure.m */; };
 		75B526481E1EC8400020A609 /* buildingType.m in Sources */ = {isa = PBXBuildFile; fileRef = 75B526471E1EC8400020A609 /* buildingType.m */; };
@@ -534,6 +535,8 @@
 		759E71C71DF0A02600B7275A /* mapMain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = mapMain.m; path = Candy/globalMenu/mapMenu/mapMain.m; sourceTree = "<group>"; };
 		759E71C91DF0A21D00B7275A /* mapScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = mapScene.h; path = Candy/Scenes/mapScene.h; sourceTree = "<group>"; };
 		759E71CA1DF0A21D00B7275A /* mapScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = mapScene.m; path = Candy/Scenes/mapScene.m; sourceTree = "<group>"; };
+		75ACAF821E4A156F0099F779 /* candyMachineSweetSpawner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = candyMachineSweetSpawner.h; path = "Candy/Candy Machines/candyMachineSweetSpawner.h"; sourceTree = "<group>"; };
+		75ACAF831E4A156F0099F779 /* candyMachineSweetSpawner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = candyMachineSweetSpawner.m; path = "Candy/Candy Machines/candyMachineSweetSpawner.m"; sourceTree = "<group>"; };
 		75B526401E1E9E610020A609 /* floors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = floors.h; path = Candy/levels/floors.h; sourceTree = "<group>"; };
 		75B526411E1E9E610020A609 /* floors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = floors.m; path = Candy/levels/floors.m; sourceTree = "<group>"; };
 		75B526431E1EAD580020A609 /* levelStructure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = levelStructure.h; path = Candy/levels/levelStructure.h; sourceTree = "<group>"; };
@@ -758,6 +761,8 @@
 				751F1EB41E48058E00476133 /* candyMachineSweetsEquiped.m */,
 				75795C631E481462001399BC /* candyMachineSweetSelector.h */,
 				75795C641E481462001399BC /* candyMachineSweetSelector.m */,
+				75ACAF821E4A156F0099F779 /* candyMachineSweetSpawner.h */,
+				75ACAF831E4A156F0099F779 /* candyMachineSweetSpawner.m */,
 			);
 			name = Candy_Machines;
 			sourceTree = "<group>";
@@ -1805,6 +1810,7 @@
 				75D8C3591E1C304C00D35217 /* bottomBar.m in Sources */,
 				7525F7C21DD25C8500B0510C /* comboTimer.m in Sources */,
 				757CD1981DE188C000D07480 /* sweetCustomMenu.m in Sources */,
+				75ACAF841E4A156F0099F779 /* candyMachineSweetSpawner.m in Sources */,
 				75E8F18D1DD3AB0300A421E7 /* defaultSweet.m in Sources */,
 				7525F7881DCFC72A00B0510C /* buttonAnimation.m in Sources */,
 				7571FB741DFB7453006E1E49 /* sweetShopBackground.m in Sources */,
