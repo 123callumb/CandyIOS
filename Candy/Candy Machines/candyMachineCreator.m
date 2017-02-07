@@ -19,8 +19,8 @@
     candyMachine.name = [NSString stringWithFormat:@"candyMachine_Number_%d", candyMachineID];
     candyMachine.xScale = scale;
     candyMachine.yScale = scale;
-    candyMachine.position = CGPointMake(pos.x, pos.y + candyMachine.frame.size.height/2);
-    candyMachine.zPosition = 4;
+    candyMachine.position = CGPointMake(s.position.x, s.position.y + candyMachine.frame.size.height/1.1);
+    candyMachine.zPosition = 5;
     [s addChild:candyMachine];
 }
 @end

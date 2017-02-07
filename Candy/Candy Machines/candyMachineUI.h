@@ -13,4 +13,5 @@
 +(int)getSelectedSlot;
 +(void)resetSelectedSlot;
 +(void)addCandyMachineSlotUIWithID: (int)machineID view:(UIView*)v;
++(void)onUpgradeMachine: (SKScene*)s machineID:(int)machineNumber node:(SKSpriteNode*)upg view:(UIView*)v;
 @end

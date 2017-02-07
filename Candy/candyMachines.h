@@ -15,4 +15,6 @@
 +(int)getCandyMachineSlotValueAtID: (int)candyMachineID;
 +(int)getCandyMachinesUnlocked;
 +(void)increaseCandyMachinesByOne;
++(void)upgradeMachineAtID:(int)machineID;
++(void)upgradeMachineSlotsAtID:(int)machineID;
 @end

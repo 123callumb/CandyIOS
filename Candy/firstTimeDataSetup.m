@@ -18,7 +18,7 @@
         
         [candyMachines increaseCandyMachinesByOne];
         
-        [gems addGems:10];
+        [gems addGems:100];
         
         [packetInventoryData addPacketWithStringToInventory:@"lollyPacket"];
         [packetInventoryData addPacketWithStringToInventory:@"jawbreakerPacket"];

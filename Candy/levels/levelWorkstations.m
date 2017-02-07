@@ -9,6 +9,7 @@
 #import "levelWorkstations.h"
 #import "candyMachineCreator.h"
 #import "buildingType.h"
+#import "candyMachines.h"
 
 @implementation levelWorkstations
 +(void)addWorkstationTypes: (NSMutableArray*)workstations {
@@ -38,39 +39,40 @@
     NSUserDefaults *nd = [NSUserDefaults standardUserDefaults];
     return (int)[nd integerForKey:@"workstation_ID"];
 }
-+(void)workstation: (CGPoint)pos scale:(float)scale nodeToAttatch:(SKSpriteNode*)s stationID:(int)workstationID {
++(void)workstation: (CGPoint)pos scale:(float)scale nodeToAttatch:(SKScene*)s stationID:(int)workstationID {
     SKSpriteNode *workstation = [SKSpriteNode spriteNodeWithImageNamed:[self getCurrentWorkstation]];
-    workstation.xScale = scale;
-    workstation.yScale = scale;
+    [candyMachineCreator createCandyMachineWithID:workstationID position:pos scale:scale attatchingSprite:workstation];
     workstation.position = pos;
     workstation.anchorPoint = CGPointMake(0.5, 0.5);
+    workstation.xScale = scale;
+    workstation.yScale = scale;
+
     
     //We take 1 here because we have to take into account the one on the desk!
-    if([self getUsableWorkstations] >= workstationID){
-        workstation.name = [NSString stringWithFormat:@"workstation_%d", workstationID];
-        [candyMachineCreator createCandyMachineWithID:workstationID position:pos scale:1 attatchingSprite:workstation];
-    }
+    workstation.name = [NSString stringWithFormat:@"workstation_%d", workstationID];
+
+
     
     [s addChild:workstation];
 }
-+(void)addWorkstations: (SKSpriteNode*)s {
++(void)addWorkstations: (SKScene*)s {
     if([buildingType getCurrentBuildingID] == 0){
-        [self workstation:CGPointMake(0, s.frame.size.height/12) scale:0.9 nodeToAttatch:s stationID:0];
+        [self workstation:CGPointMake(0, -s.frame.size.height/12) scale:0.9 nodeToAttatch:s stationID:0];
     }
     if([buildingType getCurrentBuildingID] == 1){
-        [self workstation:CGPointMake(s.frame.size.width/4, s.frame.size.height/15) scale:0.9 nodeToAttatch:s stationID:0];
-        [self workstation:CGPointMake(-s.frame.size.width/4, s.frame.size.height/15) scale:0.9 nodeToAttatch:s stationID:1];
+        [self workstation:CGPointMake(s.frame.size.width/4, -s.frame.size.height/14) scale:0.9 nodeToAttatch:s stationID:0];
+        [self workstation:CGPointMake(-s.frame.size.width/4, -s.frame.size.height/14) scale:0.9 nodeToAttatch:s stationID:1];
     }
     if([buildingType getCurrentBuildingID] == 2){
-        [self workstation:CGPointMake(s.frame.size.width/4, s.frame.size.height/15) scale:0.9 nodeToAttatch:s stationID:0];
-        [self workstation:CGPointMake(-s.frame.size.width/4, s.frame.size.height/15) scale:0.9 nodeToAttatch:s stationID:1];
-        [self workstation:CGPointMake(s.frame.size.width/4, -s.frame.size.height/4) scale:0.9 nodeToAttatch:s stationID:2];
+        [self workstation:CGPointMake(s.frame.size.width/4, -s.frame.size.height/14) scale:0.9 nodeToAttatch:s stationID:0];
+        [self workstation:CGPointMake(-s.frame.size.width/4, -s.frame.size.height/14) scale:0.9 nodeToAttatch:s stationID:1];
+        [self workstation:CGPointMake(0, -s.frame.size.height/2.8) scale:0.9 nodeToAttatch:s stationID:2];
     }
     if([buildingType getCurrentBuildingID] == 3){
-        [self workstation:CGPointMake(s.frame.size.width/4, s.frame.size.height/15) scale:0.9 nodeToAttatch:s stationID:0];
-        [self workstation:CGPointMake(-s.frame.size.width/4, s.frame.size.height/15) scale:0.9 nodeToAttatch:s stationID:1];
-        [self workstation:CGPointMake(s.frame.size.width/4, -s.frame.size.height/3) scale:0.9 nodeToAttatch:s stationID:2];
-        [self workstation:CGPointMake(-s.frame.size.width/4, -s.frame.size.height/4) scale:0.9 nodeToAttatch:s stationID:3];
+        [self workstation:CGPointMake(s.frame.size.width/4, -s.frame.size.height/14) scale:0.9 nodeToAttatch:s stationID:0];
+        [self workstation:CGPointMake(-s.frame.size.width/4, -s.frame.size.height/14) scale:0.9 nodeToAttatch:s stationID:1];
+        [self workstation:CGPointMake(s.frame.size.width/4, -s.frame.size.height/2.8) scale:0.9 nodeToAttatch:s stationID:2];
+        [self workstation:CGPointMake(-s.frame.size.width/4, -s.frame.size.height/2.8) scale:0.9 nodeToAttatch:s stationID:3];
     }
 }
 +(void)setUsableWorkstationAmount: (int)value {
@@ -79,8 +81,7 @@
     [nd synchronize];
 }
 +(int)getUsableWorkstations {
-    NSUserDefaults *nd = [NSUserDefaults standardUserDefaults];
-    return (int)[nd integerForKey:@"workstation_active"];
+    return [candyMachines getCandyMachinesUnlocked];
 }
 +(NSString*)getWorkstationAtIndex: (int)index {
     return [[self getWorkstationTypes] objectAtIndex:index];

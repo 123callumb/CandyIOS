@@ -28,7 +28,6 @@
 		750A02E91E40EC2900869355 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 750A02E81E40EC2900869355 /* JavaScriptCore.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		750A02EB1E40EC3700869355 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 750A02EA1E40EC3700869355 /* MessageUI.framework */; };
 		750A02ED1E40EC4100869355 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 750A02EC1E40EC4100869355 /* Social.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		750A02EF1E40EC4A00869355 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 750A02EE1E40EC4A00869355 /* StoreKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		750A02F71E4106DC00869355 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 750A02F61E4106DC00869355 /* UIKit.framework */; };
 		750A02F91E4106EC00869355 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 750A02F81E4106EC00869355 /* CoreMedia.framework */; };
 		750A02FB1E4106F100869355 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 750A02FA1E4106F100869355 /* CoreGraphics.framework */; };
@@ -667,7 +666,6 @@
 				750A02FB1E4106F100869355 /* CoreGraphics.framework in Frameworks */,
 				750A02F91E4106EC00869355 /* CoreMedia.framework in Frameworks */,
 				750A02F71E4106DC00869355 /* UIKit.framework in Frameworks */,
-				750A02EF1E40EC4A00869355 /* StoreKit.framework in Frameworks */,
 				750A02ED1E40EC4100869355 /* Social.framework in Frameworks */,
 				750A02EB1E40EC3700869355 /* MessageUI.framework in Frameworks */,
 				750A02E91E40EC2900869355 /* JavaScriptCore.framework in Frameworks */,

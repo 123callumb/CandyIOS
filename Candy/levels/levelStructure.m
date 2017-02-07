@@ -22,15 +22,16 @@
     [self addBuildingType:s];
     [self addMainCharacter:s];
     [desks addDesk:CGPointMake(0, s.frame.size.height/8) scale:0.85 nodeToAttatch:s];
+    [levelWorkstations addWorkstations:s];
 }
 +(void)addFloorItems: (SKSpriteNode*)s {
-    [levelWorkstations addWorkstations:s];
 }
 +(void)addFloor: (SKScene*)s {
     SKSpriteNode *floor = [SKSpriteNode spriteNodeWithImageNamed:[floors getCurrentFloor]];
     floor.size = CGSizeMake(s.frame.size.width, s.frame.size.height/1.4);
     floor.position = CGPointMake(0, -s.frame.size.height/7);
     floor.zPosition = -4;
+    floor.anchorPoint = CGPointMake(0.5, 0.5);
     floor.name = @"levelFloor";
     [self addFloorItems:floor];
     [s addChild:floor];

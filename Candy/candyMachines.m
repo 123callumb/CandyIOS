@@ -77,8 +77,40 @@
     int value = [slotValue intValue];
     return value;
 }
-
-
++(void)upgradeMachineAtID:(int)machineID {
+    
+    NSUserDefaults *nd = [NSUserDefaults standardUserDefaults];
+    NSMutableArray *machines = [candyMachines candyMachines];
+    
+    NSMutableDictionary *newData = [candyMachines getCandyMachineDataAtID:machineID];
+    int curentValue = [self getCandyMachineUpgradeValueAtID:machineID];
+    NSNumber *newValue = [NSNumber numberWithInt:(curentValue+1)];
+    [newData setObject:newValue forKey:@"candyMachine_upgradeValue"];
+    
+    [machines replaceObjectAtIndex:machineID withObject:newData];
+    
+    NSData *arrayToData = [NSKeyedArchiver archivedDataWithRootObject:machines];
+    
+    [nd setObject:arrayToData forKey:@"candyMachineData"];
+    [nd synchronize];
+}
++(void)upgradeMachineSlotsAtID:(int)machineID {
+    
+    NSUserDefaults *nd = [NSUserDefaults standardUserDefaults];
+    NSMutableArray *machines = [candyMachines candyMachines];
+    
+    NSMutableDictionary *newData = [candyMachines getCandyMachineDataAtID:machineID];
+    int curentValue = [self getCandyMachineUpgradeValueAtID:machineID];
+    NSNumber *newValue = [NSNumber numberWithInt:(curentValue+1)];
+    [newData setObject:newValue forKey:@"candyMachine_slotValue"];
+    
+    [machines replaceObjectAtIndex:machineID withObject:newData];
+    
+    NSData *arrayToData = [NSKeyedArchiver archivedDataWithRootObject:machines];
+    
+    [nd setObject:arrayToData forKey:@"candyMachineData"];
+    [nd synchronize];
+}
 +(int)getCandyMachinesUnlocked {
     return (int)([[self candyMachines] count]);
 }

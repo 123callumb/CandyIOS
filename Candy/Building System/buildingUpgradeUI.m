@@ -11,6 +11,7 @@
 #import "quickSelectUI.h"
 #import "money.h"
 #import "mainTransition.h"
+#import "candyMachines.h"
 
 
 @implementation buildingUpgradeUI
@@ -83,6 +84,7 @@
         if([node.name isEqualToString:@"buildingUpgradeButton"]){
             [money addBalance:-([buildingType getNextBuildingPrice])];
             [buildingType setCurrentBuildingID:([buildingType getCurrentBuildingID] + 1)];
+            [candyMachines increaseCandyMachinesByOne];
             [mainTransition switchScene:s sceneTwo:@"main" Transition:[SKTransition fadeWithDuration:0.3]];
         }
     }
