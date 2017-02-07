@@ -20,7 +20,7 @@ int machineSlotSelected = 3;
     SKSpriteNode *mainUI = [SKSpriteNode spriteNodeWithImageNamed:@"candyMachineUI"];
     mainUI.xScale = 0.43;
     mainUI.yScale = 0.43;
-    mainUI.position = CGPointMake(0, -s.frame.size.height/20);
+    mainUI.position = CGPointMake(0, -s.frame.size.height);
     
     float mainW = mainUI.frame.size.width;
     float mainH = mainUI.frame.size.height;
@@ -46,12 +46,14 @@ int machineSlotSelected = 3;
     upgradeCost.fontColor = [SKColor blackColor];
     upgradeCost.fontSize = 120.0f;
     upgradeCost.text = [NSString stringWithFormat:@"%d", [candyMachineValues upgradePrices:[candyMachines getCandyMachineUpgradeValueAtID:machineID]]];
+    upgradeCost.position = CGPointMake(0, -upgradeCost.frame.size.height/2);
     [upgradeCostBar addChild:upgradeCost];
     
     SKLabelNode *slotCost = [SKLabelNode labelNodeWithFontNamed:@"Coder's-Crux"];
     slotCost.fontColor = [SKColor blackColor];
     slotCost.fontSize = 120.0f;
     slotCost.text = [NSString stringWithFormat:@"%d", [candyMachineValues slotPrices:[candyMachines getCandyMachineSlotValueAtID:machineID]]];
+    slotCost.position = CGPointMake(0, -slotCost.frame.size.height/2);
     [slotUpgradeCostBar addChild:slotCost];
     
     SKSpriteNode *backButton = [SKSpriteNode spriteNodeWithImageNamed:@"backButton"];
@@ -66,12 +68,15 @@ int machineSlotSelected = 3;
     [mainUI addChild:backButton];
     [s addChild:mainUI];
     
+
+    SKAction *slideIn = [SKAction moveToY:-s.frame.size.height/20 duration:0.3];
     [self addCandyMachineSlotUIWithID:machineID view:v];
+    [mainUI runAction:slideIn];
     
 }
 //Need to create a slot creator to minimise this code!
 +(void)addCandyMachineSlotUIWithID: (int)machineID view:(UIView*)v {
-    UIView *slots = [[UIView alloc] initWithFrame:CGRectMake(v.frame.size.width/1.76, v.frame.size.height/4.58, v.frame.size.width/4, v.frame.size.height/1.8)];
+    UIView *slots = [[UIView alloc] initWithFrame:CGRectMake(v.frame.size.width/1.76, v.frame.size.height, v.frame.size.width/3, v.frame.size.height/1.8)];
     
     UIImage *sweetDrawSlot = [UIImage imageNamed:@"sweetDrawSlot"];
     
@@ -135,6 +140,10 @@ int machineSlotSelected = 3;
     slots.tag = 11998;
     
     [v addSubview:slots];
+    
+    [UIView animateWithDuration:0.3 animations:^{
+        slots.frame = CGRectMake(v.frame.size.width/1.76, v.frame.size.height/4.58, v.frame.size.width/3, v.frame.size.height/1.8);
+    }];
 
 }
 +(void)onSlot1Press: (id)sender {

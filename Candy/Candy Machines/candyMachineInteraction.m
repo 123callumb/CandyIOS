@@ -10,6 +10,7 @@
 #import "candyMachines.h"
 #import "candyMachineValues.h"
 #import "candyMachineUI.h"
+#import "candyMachineSweetSpawner.h"
 
 @implementation candyMachineInteraction
 
@@ -34,13 +35,12 @@ int currentSelectedMachine = 1337;
         machine.texture = [SKTexture textureWithImageNamed:[candyMachineValues getCandyMachineTextureSecondState:i]];
         
         SKAction *animationDuration = [SKAction waitForDuration:0.1];
-        
+        [candyMachineSweetSpawner createSweetsFromMachine:s machineID:i machinePosition:CGPointMake(machine.position.x, machine.position.y - machine.frame.size.height/2)];
         [machine runAction:animationDuration completion:^{
             machine.texture = [SKTexture textureWithImageNamed:[candyMachineValues getCandyMachineTextureFirstState:i]];
         }];
     }
 }
-
 +(int)getCurrentSelectedMachine {
     return currentSelectedMachine;
 }
@@ -51,8 +51,18 @@ int currentSelectedMachine = 1337;
     if([s.name isEqualToString:@"machineBack"]){
         SKSpriteNode *mainSkUI = (SKSpriteNode*)[s parent];
         UIView *slots = [v viewWithTag:11998];
-        [slots removeFromSuperview];
-        [mainSkUI removeFromParent];
+        
+        [UIView animateWithDuration:0.3 animations:^{
+            [slots setFrame:CGRectMake(v.frame.size.width/1.76, v.frame.size.height, v.frame.size.width/3, v.frame.size.height/1.8)];
+        } completion:^(BOOL finished){
+            [slots removeFromSuperview];
+        }];
+        
+        SKAction *slideAway = [SKAction moveToY:-[mainSkUI parent].frame.size.height duration:0.3];
+        [mainSkUI runAction:slideAway completion:^{
+                [mainSkUI removeFromParent];
+        }];
+
         [self resetCurrentSelectedMachine];
     }
 }

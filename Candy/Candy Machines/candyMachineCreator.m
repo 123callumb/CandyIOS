@@ -17,10 +17,10 @@
     SKSpriteNode *candyMachine = [SKSpriteNode spriteNodeWithImageNamed:machineTexture];
     
     candyMachine.name = [NSString stringWithFormat:@"candyMachine_Number_%d", candyMachineID];
-    candyMachine.position = pos;
     candyMachine.xScale = scale;
     candyMachine.yScale = scale;
-    
+    candyMachine.position = CGPointMake(pos.x, pos.y + candyMachine.frame.size.height/2);
+    candyMachine.zPosition = 4;
     [s addChild:candyMachine];
 }
 @end
