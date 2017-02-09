@@ -14,7 +14,14 @@
 }
 +(void)createSpriteSplosion: (SKScene*)s nodeAmount:(int)nAmount pos:(CGPoint)p{
     for(int i = 1; i <= nAmount; i++){
-        SKSpriteNode *node = [SKSpriteNode spriteNodeWithImageNamed:@"spark"];
+        
+        int lowerBoundColor = 0;
+        int upperBoundColor = 4;
+        int rndColor = lowerBoundColor + arc4random() % (upperBoundColor - lowerBoundColor);
+        
+        NSArray *sparkTextures = [NSArray arrayWithObjects:@"sparkBlue", @"sparkGreen", @"sparkRed", @"spark", @"sparkPink", nil];
+        
+        SKSpriteNode *node = [SKSpriteNode spriteNodeWithImageNamed:[sparkTextures objectAtIndex:rndColor]];
         node.xScale = 0.4;
         node.yScale = 0.4;
         node.position = p;
