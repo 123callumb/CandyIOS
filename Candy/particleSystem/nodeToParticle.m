@@ -40,13 +40,10 @@
 
     SKAction *leftFly = [SKAction moveBy:CGVectorMake(rndValueX,rndValueY) duration:0.3];
     SKAction *waitTillFade = [SKAction waitForDuration:0.2];
-    SKAction *killTimer = [SKAction fadeOutWithDuration:fadeTime];
-    SKSpriteNode *coinBar = (SKSpriteNode*)[s childNodeWithName:@"UIcoinBar"];
-    
+    SKAction *killTimer = [SKAction fadeOutWithDuration:fadeTime];    
     
     [l1 runAction:waitTillFade completion:^{
         [l1 runAction:killTimer completion:^{
-            [coinSpawner spriteToSpriteSpawner:l1 sprite2:coinBar scene:s];
             [l1 removeFromParent];
             
         }];

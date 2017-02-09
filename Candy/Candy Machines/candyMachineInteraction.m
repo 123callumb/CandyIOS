@@ -12,6 +12,7 @@
 #import "candyMachineUI.h"
 #import "candyMachineSweetSpawner.h"
 #import "menuHandler.h"
+#import "coinSpawner.h"
 
 @implementation candyMachineInteraction
 
