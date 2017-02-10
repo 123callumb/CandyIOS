@@ -13,6 +13,10 @@
 #import "wrappedPacket.h"
 #import "chewPacket.h"
 #import "jawbreakerPacket.h"
+#import "candybarPacket.h"
+#import "marshmallowPacket.h"
+#import "pencilPacket.h"
+#import "eggPacket.h"
 
 @implementation packetDisplayItem
 +(void)addOwnedPackets: (SKScene*)s {
@@ -58,6 +62,22 @@
     }
     if([packetAtID isEqualToString:@"jawbreakerPacket"]){
         [jawbreakerPacket addContentSection:backPane];
+        [backPane addChild:packet];
+    }
+    if([packetAtID isEqualToString:@"candybarPacket"]){
+        [candybarPacket addContentSection:backPane];
+        [backPane addChild:packet];
+    }
+    if([packetAtID isEqualToString:@"marshmallowPacket"]){
+        [marshmallowPacket addContentSection:backPane];
+        [backPane addChild:packet];
+    }
+    if([packetAtID isEqualToString:@"pencilPacket"]){
+        [pencilPacket addContentSection:backPane];
+        [backPane addChild:packet];
+    }
+    if([packetAtID isEqualToString:@"eggPacket"]){
+        [eggPacket addContentSection:backPane];
         [backPane addChild:packet];
     }
     

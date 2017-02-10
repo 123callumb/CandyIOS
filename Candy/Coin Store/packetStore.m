@@ -17,7 +17,11 @@
                         @"bonbonPacket",
                         @"sweetPacket",
                         @"chewPacket",
-                        @"jawbreakerPacket",nil];
+                        @"jawbreakerPacket",
+                        @"candybarPacket",
+                        @"marshmallowPacket",
+                        @"pencilPacket",
+                        @"eggPacket", nil];
     
     return packets;
 }
@@ -57,6 +61,14 @@
         output = @"CHEWS";
     }else if([inputString isEqualToString:@"jawbreakerPacket"]){
         output = @"JAWBREAKERS";
+    }else if([inputString isEqualToString:@"candybarPacket"]){
+        output = @"CANDYBARS";
+    }else if([inputString isEqualToString:@"marshmallowPacket"]){
+        output = @"MARSHMALLOWS";
+    }else if([inputString isEqualToString:@"pencilPacket"]){
+        output = @"CANDY PENCIL";
+    }else if([inputString isEqualToString:@"eggPacket"]){
+        output = @"EASTER EGGS";
     }else {
         output = @"No Name";
     }

@@ -18,6 +18,10 @@
 #import "jawbreakerPacket.h"
 #import "inventoryDataHandler.h"
 #import "mainTransition.h"
+#import "candybarPacket.h"
+#import "pencilPacket.h"
+#import "marshmallowPacket.h"
+#import "eggPacket.h"
 
 @implementation packetOpenScene
 
@@ -212,6 +216,18 @@ bool sceneChange = false;
     if([packetType isEqualToString:@"jawbreakerPacket"]){
         return [[jawbreakerPacket contentList] objectAtIndex:num];
     }
+    if([packetType isEqualToString:@"candybarPacket"]){
+        return [[candybarPacket contentList] objectAtIndex:num];
+    }
+    if([packetType isEqualToString:@"marshmallowPacket"]){
+        return [[marshmallowPacket contentList] objectAtIndex:num];
+    }
+    if([packetType isEqualToString:@"pencilPacket"]){
+        return [[pencilPacket contentList] objectAtIndex:num];
+    }
+    if([packetType isEqualToString:@"eggPacket"]){
+        return [[eggPacket contentList] objectAtIndex:num];
+    }
     return nil;
 }
 -(void)spawnPacketItems: (NSString*)packetName {
@@ -242,6 +258,22 @@ bool sceneChange = false;
         [self itemSpawner:[[jawbreakerPacket contentList] objectAtIndex:rndValue]
          ];
     }
+    if([packetName isEqualToString:@"candybarPacket"]){
+                [self itemSpawner:[[candybarPacket contentList] objectAtIndex:rndValue]
+                 ];
+            }
+    if([packetName isEqualToString:@"marshmallowPacket"]){
+                [self itemSpawner:[[marshmallowPacket contentList] objectAtIndex:rndValue]
+                 ];
+            }
+    if([packetName isEqualToString:@"pencilPacket"]){
+                [self itemSpawner:[[pencilPacket contentList] objectAtIndex:rndValue]
+                 ];
+            }
+    if([packetName isEqualToString:@"eggPacket"]){
+                [self itemSpawner:[[eggPacket contentList] objectAtIndex:rndValue]
+                 ];
+            }
         }
     
 }
