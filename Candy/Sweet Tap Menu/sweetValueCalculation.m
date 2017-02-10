@@ -14,6 +14,10 @@
 #import "chewPacket.h"
 #import "jawbreakerPacket.h"
 #import "trendsData.h"
+#import "candybarPacket.h"
+#import "marshmallowPacket.h"
+#import "pencilPacket.h"
+#import "eggPacket.h"
 
 @implementation sweetValueCalculation
 
@@ -81,6 +85,51 @@
     [self addSweetSaleData:@"lollyCherry" sellingPrice:default_red_per_tap * [lollyPacket getBrandValue] * lollyTrend array:dataArray];
     [self addSweetSaleData:@"lollySherbert" sellingPrice:default_red_per_tap * [lollyPacket getBrandValue] * lollyTrend array:dataArray];
     [self addSweetSaleData:@"lollySourApple" sellingPrice:default_yellow_per_tap * [lollyPacket getBrandValue] * lollyTrend array:dataArray];
+    
+    int cnadybarTrend = [trendsData getTrendMultiplierByPacketTrendID:5];
+    [self addSweetSaleData:@"candybarChocolate" sellingPrice:default_grey_per_tap * [candybarPacket getBrandValue] * cnadybarTrend array:dataArray];
+    [self addSweetSaleData:@"candybarDark" sellingPrice:default_grey_per_tap * [candybarPacket getBrandValue] * cnadybarTrend array:dataArray];
+    [self addSweetSaleData:@"candybarWhite" sellingPrice:default_grey_per_tap * [candybarPacket getBrandValue] * cnadybarTrend array:dataArray];
+    [self addSweetSaleData:@"candybarWhiteDark" sellingPrice:default_blue_per_tap * [candybarPacket getBrandValue] * cnadybarTrend array:dataArray];
+    [self addSweetSaleData:@"candybarCaramel" sellingPrice:default_blue_per_tap * [candybarPacket getBrandValue] * cnadybarTrend array:dataArray];
+    [self addSweetSaleData:@"candybarFruit" sellingPrice:default_blue_per_tap * [candybarPacket getBrandValue] * cnadybarTrend array:dataArray];
+    [self addSweetSaleData:@"candybarMint" sellingPrice:default_red_per_tap * [candybarPacket getBrandValue] * cnadybarTrend array:dataArray];
+    [self addSweetSaleData:@"candybarYogurt" sellingPrice:default_red_per_tap * [candybarPacket getBrandValue] * cnadybarTrend array:dataArray];
+    [self addSweetSaleData:@"candybarPoppingCandy" sellingPrice:default_yellow_per_tap * [candybarPacket getBrandValue] * cnadybarTrend array:dataArray];
+    
+    int marshmallowTrend = [trendsData getTrendMultiplierByPacketTrendID:6];
+    [self addSweetSaleData:@"marshmallowBanana" sellingPrice:default_grey_per_tap * [marshmallowPacket getBrandValue] * marshmallowTrend array:dataArray];
+    [self addSweetSaleData:@"marshmallowBlueberry" sellingPrice:default_grey_per_tap * [marshmallowPacket getBrandValue] * marshmallowTrend array:dataArray];
+    [self addSweetSaleData:@"marshmallowLemon" sellingPrice:default_grey_per_tap * [marshmallowPacket getBrandValue] * marshmallowTrend array:dataArray];
+    [self addSweetSaleData:@"marshmallowLime" sellingPrice:default_blue_per_tap * [marshmallowPacket getBrandValue] * marshmallowTrend array:dataArray];
+    [self addSweetSaleData:@"marshmallowOrange" sellingPrice:default_blue_per_tap * [marshmallowPacket getBrandValue] * marshmallowTrend array:dataArray];
+    [self addSweetSaleData:@"marshmallowStrawberry" sellingPrice:default_blue_per_tap * [marshmallowPacket getBrandValue] * marshmallowTrend array:dataArray];
+    [self addSweetSaleData:@"marshmallowCherry" sellingPrice:default_red_per_tap * [marshmallowPacket getBrandValue] * marshmallowTrend array:dataArray];
+    [self addSweetSaleData:@"marshmallowVanillaPacket" sellingPrice:default_red_per_tap * [marshmallowPacket getBrandValue] * marshmallowTrend array:dataArray];
+    [self addSweetSaleData:@"marshmallowCandyfloss" sellingPrice:default_yellow_per_tap * [marshmallowPacket getBrandValue] * marshmallowTrend array:dataArray];
+    
+    int pencilTrend = [trendsData getTrendMultiplierByPacketTrendID:7];
+    [self addSweetSaleData:@"pencilBanana" sellingPrice:default_grey_per_tap * [pencilPacket getBrandValue] * pencilTrend array:dataArray];
+    [self addSweetSaleData:@"pencilApple" sellingPrice:default_grey_per_tap * [pencilPacket getBrandValue] * pencilTrend array:dataArray];
+    [self addSweetSaleData:@"pencilLiquorice" sellingPrice:default_grey_per_tap * [pencilPacket getBrandValue] * pencilTrend array:dataArray];
+    [self addSweetSaleData:@"pencilTropical" sellingPrice:default_blue_per_tap * [pencilPacket getBrandValue] * pencilTrend array:dataArray];
+    [self addSweetSaleData:@"pencilBlackcurrant" sellingPrice:default_blue_per_tap * [pencilPacket getBrandValue] * pencilTrend array:dataArray];
+    [self addSweetSaleData:@"pencilCherry" sellingPrice:default_blue_per_tap * [pencilPacket getBrandValue] * pencilTrend array:dataArray];
+    [self addSweetSaleData:@"pencilMango" sellingPrice:default_red_per_tap * [pencilPacket getBrandValue] * pencilTrend array:dataArray];
+    [self addSweetSaleData:@"pencilStrawberry" sellingPrice:default_red_per_tap * [pencilPacket getBrandValue] * pencilTrend array:dataArray];
+    [self addSweetSaleData:@"pencilRaspberry" sellingPrice:default_yellow_per_tap * [pencilPacket getBrandValue] * pencilTrend array:dataArray];
+    
+    int eggTrend = [trendsData getTrendMultiplierByPacketTrendID:8];
+    [self addSweetSaleData:@"eggWhite" sellingPrice:default_grey_per_tap * [eggPacket getBrandValue] * eggTrend array:dataArray];
+    [self addSweetSaleData:@"eggChocolate" sellingPrice:default_grey_per_tap * [eggPacket getBrandValue] * eggTrend array:dataArray];
+    [self addSweetSaleData:@"eggDark" sellingPrice:default_grey_per_tap * [eggPacket getBrandValue] * eggTrend array:dataArray];
+    [self addSweetSaleData:@"eggBlue" sellingPrice:default_blue_per_tap * [eggPacket getBrandValue] * eggTrend array:dataArray];
+    [self addSweetSaleData:@"eggCaramel" sellingPrice:default_blue_per_tap * [eggPacket getBrandValue] * eggTrend array:dataArray];
+    [self addSweetSaleData:@"eggStrawberry" sellingPrice:default_blue_per_tap * [eggPacket getBrandValue] * eggTrend array:dataArray];
+    [self addSweetSaleData:@"eggMixed" sellingPrice:default_red_per_tap * [eggPacket getBrandValue] * eggTrend array:dataArray];
+    [self addSweetSaleData:@"eggGummy" sellingPrice:default_red_per_tap * [eggPacket getBrandValue] * eggTrend array:dataArray];
+    [self addSweetSaleData:@"eggBonbon" sellingPrice:default_yellow_per_tap * [eggPacket getBrandValue] * eggTrend array:dataArray];
+    
     
     return dataArray;
 }

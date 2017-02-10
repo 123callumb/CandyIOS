@@ -164,5 +164,124 @@
         [inventorySweetData addSweet:@"Sour Apple Lolly" sweetTextureName:@"lollySourApple" sweetColorRarity:yellow newUUID:[sweetUUID createNewSweetUUID]];
     }
     
+    //Candybar packet - there is a way to take the bon bon array and do this easier but idk how to yet!
+    if([textureName isEqualToString:@"candybarChocolatePacket"]){
+        [inventorySweetData addSweet:@"Regular Candybar" sweetTextureName:@"candybarChocolate" sweetColorRarity:grey newUUID:[sweetUUID createNewSweetUUID]];
+    }
+    if([textureName isEqualToString:@"candybarDarkPacket"]){
+        [inventorySweetData addSweet:@"Dark Candybar" sweetTextureName:@"candybarDark" sweetColorRarity:grey newUUID:[sweetUUID createNewSweetUUID]];
+    }
+    if([textureName isEqualToString:@"candybarWhitePacket"]){
+        [inventorySweetData addSweet:@"White Candybar" sweetTextureName:@"candybarWhite" sweetColorRarity:grey newUUID:[sweetUUID createNewSweetUUID]];
+    }
+    if([textureName isEqualToString:@"candybarWhiteDarkPacket"]){
+        [inventorySweetData addSweet:@"Mixed Candybar" sweetTextureName:@"candybarWhiteDark" sweetColorRarity:blue newUUID:[sweetUUID createNewSweetUUID]];
+    }
+    if([textureName isEqualToString:@"candybarCaramelPacket"]){
+        [inventorySweetData addSweet:@"Caramel Candybar" sweetTextureName:@"candybarCaramel" sweetColorRarity:blue newUUID:[sweetUUID createNewSweetUUID]];
+    }
+    if([textureName isEqualToString:@"candybarFruitPacket"]){
+        [inventorySweetData addSweet:@"Fruit Candybar" sweetTextureName:@"candybarFruit" sweetColorRarity:blue newUUID:[sweetUUID createNewSweetUUID]];
+    }
+    if([textureName isEqualToString:@"candybarMintPacket"]){
+        [inventorySweetData addSweet:@"Mint Candybar" sweetTextureName:@"candybarMint" sweetColorRarity:red newUUID:[sweetUUID createNewSweetUUID]];
+    }
+    if([textureName isEqualToString:@"candybarYogurtPacket"]){
+        [inventorySweetData addSweet:@"Yogurt Candybar" sweetTextureName:@"candybarYogurt" sweetColorRarity:red newUUID:[sweetUUID createNewSweetUUID]];
+    }
+    if([textureName isEqualToString:@"candybarPoppingPacket"]){
+        [inventorySweetData addSweet:@"Popping Candybar" sweetTextureName:@"candybarPoppingCandy" sweetColorRarity:yellow newUUID:[sweetUUID createNewSweetUUID]];
+    }
+    
+    //Marshmallow packet - there is a way to take the bon bon array and do this easier but idk how to yet!
+    if([textureName isEqualToString:@"marshmallowBananaPacket"]){
+        [inventorySweetData addSweet:@"Banana Marshmallow" sweetTextureName:@"marshmallowBanana" sweetColorRarity:grey newUUID:[sweetUUID createNewSweetUUID]];
+    }
+    if([textureName isEqualToString:@"marshmallowBlueberryPacket"]){
+        [inventorySweetData addSweet:@"Blueberry Marshmallow" sweetTextureName:@"marshmallowBlueberry" sweetColorRarity:grey newUUID:[sweetUUID createNewSweetUUID]];
+    }
+    if([textureName isEqualToString:@"marshmallowLemonPacket"]){
+        [inventorySweetData addSweet:@"Lemon Marshmallow" sweetTextureName:@"marshmallowLemon" sweetColorRarity:grey newUUID:[sweetUUID createNewSweetUUID]];
+    }
+    if([textureName isEqualToString:@"marshmallowLimePacket"]){
+        [inventorySweetData addSweet:@"Lime Marshmallow" sweetTextureName:@"marshmallowLime" sweetColorRarity:blue newUUID:[sweetUUID createNewSweetUUID]];
+    }
+    if([textureName isEqualToString:@"marshmallowOrangePacket"]){
+        [inventorySweetData addSweet:@"Orange Marshmallow" sweetTextureName:@"marshmallowOrange" sweetColorRarity:blue newUUID:[sweetUUID createNewSweetUUID]];
+    }
+    if([textureName isEqualToString:@"marshmallowStrawberryPacket"]){
+        [inventorySweetData addSweet:@"Strawberry Marshmallow" sweetTextureName:@"marshmallowStrawberry" sweetColorRarity:blue newUUID:[sweetUUID createNewSweetUUID]];
+    }
+    if([textureName isEqualToString:@"marshmallowCherryPacket"]){
+        [inventorySweetData addSweet:@"Cherry Marshmallow" sweetTextureName:@"marshmallowCherry" sweetColorRarity:red newUUID:[sweetUUID createNewSweetUUID]];
+    }
+    if([textureName isEqualToString:@"marshmallowVanillaPacket"]){
+        [inventorySweetData addSweet:@"Vanilla Marshmallow" sweetTextureName:@"marshmallowVanillaPacket" sweetColorRarity:red newUUID:[sweetUUID createNewSweetUUID]];
+    }
+    if([textureName isEqualToString:@"marshmallowCandyflossPacket"]){
+        [inventorySweetData addSweet:@"Candyfloss Marshmallow" sweetTextureName:@"marshmallowCandyfloss" sweetColorRarity:yellow newUUID:[sweetUUID createNewSweetUUID]];
+    }
+    
+    
+    //Pencil packet - there is a way to take the bon bon array and do this easier but idk how to yet!
+    if([textureName isEqualToString:@"pencilBananaPacket"]){
+        [inventorySweetData addSweet:@"Banana Candy Pencil" sweetTextureName:@"pencilBanana" sweetColorRarity:grey newUUID:[sweetUUID createNewSweetUUID]];
+    }
+    if([textureName isEqualToString:@"pencilApplePacket"]){
+        [inventorySweetData addSweet:@"Apple Candy Pencil" sweetTextureName:@"pencilApple" sweetColorRarity:grey newUUID:[sweetUUID createNewSweetUUID]];
+    }
+    if([textureName isEqualToString:@"pencilLiquoricePacket"]){
+        [inventorySweetData addSweet:@"Liquorice Candy Pencil" sweetTextureName:@"pencilLiquorice" sweetColorRarity:grey newUUID:[sweetUUID createNewSweetUUID]];
+    }
+    if([textureName isEqualToString:@"pencilTropicalPacket"]){
+        [inventorySweetData addSweet:@"Tropical Candy Pencil" sweetTextureName:@"pencilTropical" sweetColorRarity:blue newUUID:[sweetUUID createNewSweetUUID]];
+    }
+    if([textureName isEqualToString:@"pencilBlackcurrantPacket"]){
+        [inventorySweetData addSweet:@"Blackcurrant Candy Pencil" sweetTextureName:@"pencilBlackcurrant" sweetColorRarity:blue newUUID:[sweetUUID createNewSweetUUID]];
+    }
+    if([textureName isEqualToString:@"pencilCherryPacket"]){
+        [inventorySweetData addSweet:@"Cherry Candy Pencil" sweetTextureName:@"pencilCherry" sweetColorRarity:blue newUUID:[sweetUUID createNewSweetUUID]];
+    }
+    if([textureName isEqualToString:@"pencilMangoPacket"]){
+        [inventorySweetData addSweet:@"Mango Candy Pencil" sweetTextureName:@"pencilMango" sweetColorRarity:red newUUID:[sweetUUID createNewSweetUUID]];
+    }
+    if([textureName isEqualToString:@"pencilStrawberryPacket"]){
+        [inventorySweetData addSweet:@"Strawberry Candy Pencil" sweetTextureName:@"pencilStrawberry" sweetColorRarity:red newUUID:[sweetUUID createNewSweetUUID]];
+    }
+    if([textureName isEqualToString:@"pencilRaspberryPacket"]){
+        [inventorySweetData addSweet:@"Raspberry Candy Pencil" sweetTextureName:@"pencilRaspberry" sweetColorRarity:yellow newUUID:[sweetUUID createNewSweetUUID]];
+    }
+    
+    
+    
+    //Egg packet - there is a way to take the bon bon array and do this easier but idk how to yet!
+    if([textureName isEqualToString:@"eggWhitePacket"]){
+        [inventorySweetData addSweet:@"White Chocolate Egg" sweetTextureName:@"eggWhite" sweetColorRarity:grey newUUID:[sweetUUID createNewSweetUUID]];
+    }
+    if([textureName isEqualToString:@"eggChocolatePacket"]){
+        [inventorySweetData addSweet:@"Chocolate Egg" sweetTextureName:@"eggChocolate" sweetColorRarity:grey newUUID:[sweetUUID createNewSweetUUID]];
+    }
+    if([textureName isEqualToString:@"eggDarkPacket"]){
+        [inventorySweetData addSweet:@"Dark Chocolate Egg" sweetTextureName:@"eggDark" sweetColorRarity:grey newUUID:[sweetUUID createNewSweetUUID]];
+    }
+    if([textureName isEqualToString:@"eggBluePacket"]){
+        [inventorySweetData addSweet:@"Tropical Egg" sweetTextureName:@"eggBlue" sweetColorRarity:blue newUUID:[sweetUUID createNewSweetUUID]];
+    }
+    if([textureName isEqualToString:@"eggCaramelPacket"]){
+        [inventorySweetData addSweet:@"Caramel Egg" sweetTextureName:@"eggCaramel" sweetColorRarity:blue newUUID:[sweetUUID createNewSweetUUID]];
+    }
+    if([textureName isEqualToString:@"eggStrawberryPacket"]){
+        [inventorySweetData addSweet:@"Strawberry Egg" sweetTextureName:@"eggStrawberry" sweetColorRarity:blue newUUID:[sweetUUID createNewSweetUUID]];
+    }
+    if([textureName isEqualToString:@"eggMixedPacket"]){
+        [inventorySweetData addSweet:@"Mixed Chocolate Egg" sweetTextureName:@"eggMixed" sweetColorRarity:red newUUID:[sweetUUID createNewSweetUUID]];
+    }
+    if([textureName isEqualToString:@"eggGummyPacket"]){
+        [inventorySweetData addSweet:@"Gummy Egg" sweetTextureName:@"eggGummy" sweetColorRarity:red newUUID:[sweetUUID createNewSweetUUID]];
+    }
+    if([textureName isEqualToString:@"eggBonbonPacket"]){
+        [inventorySweetData addSweet:@"Bon Bon Filled Egg" sweetTextureName:@"eggBonbon" sweetColorRarity:yellow newUUID:[sweetUUID createNewSweetUUID]];
+    }
+    
 }
 @end

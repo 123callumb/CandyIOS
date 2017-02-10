@@ -21,10 +21,14 @@
     [self createTrendChartItem:m sweetTexture:@"chewPacket" trend:[trendsGenerator generateRandomTrend:2]];
     [self createTrendChartItem:m sweetTexture:@"bonbonPacket" trend:[trendsGenerator generateRandomTrend:3]];
     [self createTrendChartItem:m sweetTexture:@"sweetPacket" trend:[trendsGenerator generateRandomTrend:4]];
+    [self createTrendChartItem:m sweetTexture:@"candybarPacket" trend:[trendsGenerator generateRandomTrend:5]];
+    [self createTrendChartItem:m sweetTexture:@"marshmallowPacket" trend:[trendsGenerator generateRandomTrend:6]];
+    [self createTrendChartItem:m sweetTexture:@"pencilPacket" trend:[trendsGenerator generateRandomTrend:7]];
+    [self createTrendChartItem:m sweetTexture:@"eggPacket" trend:[trendsGenerator generateRandomTrend:8]];
 
 }
 +(void)keepTrendsUpdated {
-    for(int i = 0; i <= 4; i++){
+    for(int i = 0; i <= 8; i++){
         [trendsGenerator generateRandomTrend:i];
     }
 }
