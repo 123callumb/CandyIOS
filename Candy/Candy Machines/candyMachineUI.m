@@ -15,6 +15,7 @@
 #import "messageUI.h"
 #import "mainTransition.h"
 #import "gems.h"
+#import "candyMachineAutoSpawner.h"
 
 @implementation candyMachineUI
 
@@ -201,7 +202,7 @@ int machineSlotSelected = 3;
             [money addBalance:-price];
             [slotMenu removeFromSuperview];
             [mainTransition switchScene:s sceneTwo:@"main" Transition:[SKTransition crossFadeWithDuration:0.3]];
-            [messageUI createMessageBox:v information:@"Congratulations you just upgraded your candy machine!" representingImage:@"machine_default" imageScale:3 messageBoxID:40 displayOnce:false];
+            [messageUI createMessageBox:v information:[NSString stringWithFormat:@"Congratulations you just upgraded your candy machine! Your machine will now automatically produce candy every %d seconds!", [candyMachineAutoSpawner retrunSecondsBasedOnUpgValue:[candyMachines getCandyMachineUpgradeValueAtID:machineNumber]]] representingImage:@"machine_default" imageScale:0.5 messageBoxID:40 displayOnce:false];
         }
     }
     if([upg.name isEqualToString:@"machineSlotUpgradeButton"]){
@@ -212,7 +213,7 @@ int machineSlotSelected = 3;
             UIView *slotMenu = [v viewWithTag:11998];
             [slotMenu removeFromSuperview];
             [mainTransition switchScene:s sceneTwo:@"main" Transition:[SKTransition crossFadeWithDuration:0.3]];
-            [messageUI createMessageBox:v information:@"Congratulations you just unlocked a new slot for your candy machine!" representingImage:@"sweetDrawSlot" imageScale:3 messageBoxID:40 displayOnce:false];
+            [messageUI createMessageBox:v information:@"Congratulations you just unlocked a new slot for your candy machine!" representingImage:@"sweetDrawSlot" imageScale:0.5 messageBoxID:40 displayOnce:false];
         }
     }
 }

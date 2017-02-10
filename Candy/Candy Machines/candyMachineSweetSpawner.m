@@ -16,7 +16,6 @@
 
 @implementation candyMachineSweetSpawner
 +(void)createSweetsFromMachine: (SKScene*)s machineID:(int)machineNumber machinePosition:(CGPoint)pos{
-    for(int p = 0; p <= [candyMachines getCandyMachineUpgradeValueAtID:machineNumber]; p++){
         for (int i = 0; i <= [candyMachines getCandyMachineSlotValueAtID:machineNumber]; i++) {
             SKSpriteNode *sweet = [self createSweetSprite:s pos:pos machineID:machineNumber slotNo:i];
             NSString *sweetTexture = [NSString stringWithFormat:@"%@", sweet.texture];
@@ -28,7 +27,6 @@
                 [coinSpawner spriteToSpriteSpawner:workstation sprite2:coinbar scene:s];
 
             }
-        }
     }
 }
 +(id)createSweetSprite: (SKScene*)s pos:(CGPoint)p machineID:(int)machineNumber slotNo:(int)slotID {

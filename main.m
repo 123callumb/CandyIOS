@@ -28,6 +28,7 @@
 #import "tutorialMessages.h"
 #import "menuUi.h"
 #import "menuUIButtons.h"
+#import "candyMachineAutoSpawner.h"
 
 UIScrollView* UIscrollUpdate = nil;
 UIImageView *img1 = nil;
@@ -56,6 +57,10 @@ UIImageView *img1 = nil;
     UISwipeGestureRecognizer *gestureLeft = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(onGestureLeft:)];
     gestureLeft.direction = UISwipeGestureRecognizerDirectionRight;
     [[self view] addGestureRecognizer:gestureLeft];
+    
+    
+    //Start Auto Candy Machines
+    [candyMachineAutoSpawner startAutoCandyMachines:self];
     
 }
 
