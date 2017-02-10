@@ -196,6 +196,7 @@
 		75D025F41E4D703A0068C1DB /* marshmallowPacket.m in Sources */ = {isa = PBXBuildFile; fileRef = 75D025F31E4D703A0068C1DB /* marshmallowPacket.m */; };
 		75D025F71E4D70AB0068C1DB /* pencilPacket.m in Sources */ = {isa = PBXBuildFile; fileRef = 75D025F61E4D70AB0068C1DB /* pencilPacket.m */; };
 		75D025FA1E4E44660068C1DB /* eggPacket.m in Sources */ = {isa = PBXBuildFile; fileRef = 75D025F91E4E44660068C1DB /* eggPacket.m */; };
+		75D025FD1E4E571A0068C1DB /* candyMachineAutoSpawner.m in Sources */ = {isa = PBXBuildFile; fileRef = 75D025FC1E4E571A0068C1DB /* candyMachineAutoSpawner.m */; };
 		75D2B32D1E22AA5C0095C533 /* workstationStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 75D2B32C1E22AA5C0095C533 /* workstationStore.m */; };
 		75D2DA8B1E20454000E31D1E /* coinStoreUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 75D2DA8A1E20454000E31D1E /* coinStoreUI.m */; };
 		75D2DA8E1E213B1100E31D1E /* floorStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 75D2DA8D1E213B1100E31D1E /* floorStore.m */; };
@@ -601,6 +602,8 @@
 		75D025F61E4D70AB0068C1DB /* pencilPacket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = pencilPacket.m; path = Candy/Packets/pencilPacket.m; sourceTree = "<group>"; };
 		75D025F81E4E44660068C1DB /* eggPacket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = eggPacket.h; path = Candy/Packets/eggPacket.h; sourceTree = "<group>"; };
 		75D025F91E4E44660068C1DB /* eggPacket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = eggPacket.m; path = Candy/Packets/eggPacket.m; sourceTree = "<group>"; };
+		75D025FB1E4E571A0068C1DB /* candyMachineAutoSpawner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = candyMachineAutoSpawner.h; path = "Candy/Candy Machines/candyMachineAutoSpawner.h"; sourceTree = "<group>"; };
+		75D025FC1E4E571A0068C1DB /* candyMachineAutoSpawner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = candyMachineAutoSpawner.m; path = "Candy/Candy Machines/candyMachineAutoSpawner.m"; sourceTree = "<group>"; };
 		75D2B32B1E22AA5C0095C533 /* workstationStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = workstationStore.h; path = "Candy/Coin Store/workstationStore.h"; sourceTree = "<group>"; };
 		75D2B32C1E22AA5C0095C533 /* workstationStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = workstationStore.m; path = "Candy/Coin Store/workstationStore.m"; sourceTree = "<group>"; };
 		75D2DA891E20454000E31D1E /* coinStoreUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = coinStoreUI.h; path = "Candy/Coin Store/coinStoreUI.h"; sourceTree = "<group>"; };
@@ -773,6 +776,8 @@
 				75795C641E481462001399BC /* candyMachineSweetSelector.m */,
 				75ACAF821E4A156F0099F779 /* candyMachineSweetSpawner.h */,
 				75ACAF831E4A156F0099F779 /* candyMachineSweetSpawner.m */,
+				75D025FB1E4E571A0068C1DB /* candyMachineAutoSpawner.h */,
+				75D025FC1E4E571A0068C1DB /* candyMachineAutoSpawner.m */,
 			);
 			name = Candy_Machines;
 			sourceTree = "<group>";
@@ -1823,6 +1828,7 @@
 				75C36DFC1DCCF77600F84214 /* main.m in Sources */,
 				75754BEF1E2401FE0030D1BA /* tutorialMessages.m in Sources */,
 				75D025F71E4D70AB0068C1DB /* pencilPacket.m in Sources */,
+				75D025FD1E4E571A0068C1DB /* candyMachineAutoSpawner.m in Sources */,
 				75D01FF11E36B103004F8F0F /* trendsData.m in Sources */,
 				75784D4E1E282F4200C41067 /* spinWheel.m in Sources */,
 				7579CB031E2A8CBD00975F01 /* sparks.m in Sources */,
