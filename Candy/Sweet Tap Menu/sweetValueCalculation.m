@@ -95,7 +95,7 @@
     [self addSweetSaleData:@"candybarFruit" sellingPrice:default_blue_per_tap * [candybarPacket getBrandValue] * cnadybarTrend array:dataArray];
     [self addSweetSaleData:@"candybarMint" sellingPrice:default_red_per_tap * [candybarPacket getBrandValue] * cnadybarTrend array:dataArray];
     [self addSweetSaleData:@"candybarYogurt" sellingPrice:default_red_per_tap * [candybarPacket getBrandValue] * cnadybarTrend array:dataArray];
-    [self addSweetSaleData:@"candybarPoppingCandy" sellingPrice:default_yellow_per_tap * [candybarPacket getBrandValue] * cnadybarTrend array:dataArray];
+    [self addSweetSaleData:@"candybarPopingCandy" sellingPrice:default_yellow_per_tap * [candybarPacket getBrandValue] * cnadybarTrend array:dataArray];
     
     int marshmallowTrend = [trendsData getTrendMultiplierByPacketTrendID:6];
     [self addSweetSaleData:@"marshmallowBanana" sellingPrice:default_grey_per_tap * [marshmallowPacket getBrandValue] * marshmallowTrend array:dataArray];

@@ -10,6 +10,6 @@
 
 @interface workstationStore : UIView
 +(void)addWorkstationStoreUI: (UIView*)v;
-+(void)onBuy: (int)stationID;
-+(void)onEquip: (int)stationID;
++(void)onBuy: (int)stationID view:(UIView*)v;
++(void)onEquip: (int)stationID view:(UIView*)v;
 @end

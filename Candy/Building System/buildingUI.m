@@ -13,13 +13,14 @@
 #import "statsMenuButtons.h"
 #import "menuBacking.h"
 #import "buttonAnimation.h"
+#import "menuHandler.h"
 
 @implementation buildingUI
 +(void)createBuildingUI: (SKScene*)s  {
     SKSpriteNode *main = (SKSpriteNode *)[menuBacking createBacking];
     main.position = CGPointMake(0, -s.frame.size.height);
     main.name = @"menuInventory";
-    
+    main.zPosition = 10;
     [self addSkUI:main];
     [s addChild:main];
     
@@ -69,6 +70,7 @@
         [buttonAnimation changeState:node changeName:@"backButtonPressure" originalName:@"backButton"];
         SKSpriteNode *menu = (SKSpriteNode*)[node parent];
         SKAction *slideOut = [SKAction moveByX:0 y:-s.frame.size.height duration:0.3];
+        [menuHandler setCurrentMenu:4];
         [menu runAction:slideOut completion:^{
             [menu removeFromParent];
         }];

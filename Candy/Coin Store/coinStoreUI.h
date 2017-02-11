@@ -11,4 +11,5 @@
 @interface coinStoreUI : UIView
 +(void)addCoinStoreUI: (UIView*)v;
 +(void)removeCoinStore: (UIView*)v;
++(void)addBackUIButton: (UIView*)v;
 @end

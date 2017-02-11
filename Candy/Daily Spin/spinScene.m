@@ -24,7 +24,19 @@ int count = 0;
     backdrop.size = CGSizeMake(self.frame.size.width, self.frame.size.height);
     [self addChild:backdrop];
     [spinWheel addWheel:self];
-}
+    
+    if(!spinTaken){
+        SKAction *wait4Sec = [SKAction waitForDuration:0.2];
+        SKAction *returnItem = [SKAction moveToY:(-self.frame.size.height/2 + self.frame.size.height/48) duration:0.2];
+        SKAction *seq = [SKAction sequence:@[wait4Sec, returnItem]];
+        SKAction *rep = [SKAction repeatActionForever:seq];
+    
+        SKSpriteNode *tapMeter = (SKSpriteNode*)[self childNodeWithName:@"meterScale"];
+        [tapMeter runAction:rep];
+    
+        }
+    
+    }
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     
     UITouch *tap = [touches anyObject];
@@ -34,13 +46,9 @@ int count = 0;
         
         [sparks createSpriteSplosion:self nodeAmount:4 pos:loc];
 
-        
         SKSpriteNode *tapMeter = (SKSpriteNode*)[self childNodeWithName:@"meterScale"];
-    
         SKAction *grow = [SKAction moveToY:(tapMeter.position.y + self.frame.size.height/8) duration:0.2];
-        SKAction *backDown = [SKAction moveToY:(-self.frame.size.height/2 + self.frame.size.height/48) duration:0.2];
-        [tapMeter runAction:grow completion:^{[tapMeter runAction:backDown];}];
-        
+        [tapMeter runAction:grow];
         SKSpriteNode *wheel = (SKSpriteNode*)[self childNodeWithName:@"dailySpinWheel"];
         
         SKAction *rotateClockwise = [SKAction rotateByAngle:M_PI * 4 duration:0.8];

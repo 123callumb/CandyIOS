@@ -10,6 +10,7 @@
 #import "storeItemUI.h"
 #import "gems.h"
 #import "packetInventoryData.h"
+#import "messageUI.h"
 
 @implementation packetStore
 +(NSArray*)packets {
@@ -31,6 +32,8 @@
     packetStore.tag = 21300;
     packetStore.backgroundColor = [UIColor whiteColor];
     [self addItemUIs:packetStore];
+    
+    
     
     [v addSubview:packetStore];
 }

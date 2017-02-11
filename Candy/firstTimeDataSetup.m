@@ -10,6 +10,7 @@
 #import "gems.h"
 #import "packetInventoryData.h"
 #import "candyMachines.h"
+#import "money.h"
 
 @implementation firstTimeDataSetup
 +(void)setup {
@@ -19,6 +20,7 @@
         [candyMachines increaseCandyMachinesByOne];
         
         [gems addGems:100];
+        [money addBalance:10000000];
         
         [packetInventoryData addPacketWithStringToInventory:@"lollyPacket"];
         [packetInventoryData addPacketWithStringToInventory:@"jawbreakerPacket"];

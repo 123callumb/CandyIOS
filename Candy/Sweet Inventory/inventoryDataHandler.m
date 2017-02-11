@@ -190,7 +190,7 @@
         [inventorySweetData addSweet:@"Yogurt Candybar" sweetTextureName:@"candybarYogurt" sweetColorRarity:red newUUID:[sweetUUID createNewSweetUUID]];
     }
     if([textureName isEqualToString:@"candybarPoppingPacket"]){
-        [inventorySweetData addSweet:@"Popping Candybar" sweetTextureName:@"candybarPoppingCandy" sweetColorRarity:yellow newUUID:[sweetUUID createNewSweetUUID]];
+        [inventorySweetData addSweet:@"Popping Candybar" sweetTextureName:@"candybarPopingCandy" sweetColorRarity:yellow newUUID:[sweetUUID createNewSweetUUID]];
     }
     
     //Marshmallow packet - there is a way to take the bon bon array and do this easier but idk how to yet!

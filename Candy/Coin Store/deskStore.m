@@ -10,6 +10,7 @@
 #import "storeItemUI.h"
 #import "desks.h"
 #import "money.h"
+#import "messageUI.h"
 
 @implementation deskStore
 
@@ -75,21 +76,30 @@
     
     return output;
 }
-+(void)onBuy: (int)deskID {
++(void)onBuy: (int)deskID view:(UIView*)v {
     if(deskID >= 23000 && deskID < 24000){
         int desk = deskID - 23000;
         if([money getBalance] >= [self determinePriceBasedOnName:[desks getDeskAtIndex:desk]]){
+            
             [desks addNewDeskToList:desk];
             [desks setCurrentDeskID:desk];
             [money addBalance:-[self determinePriceBasedOnName:[desks getDeskAtIndex:desk]]];
+            
+            UIView *v1 = [v superview];
+            UIView *v2 = [v1 superview];
+            [v removeFromSuperview];
+            [self addDeskStoreUI:v2];
+        }else {
+            [messageUI createMessageBox:[[[v superview] superview] superview] information:@"You don't have enough moeny for this :(" representingImage:@"coin" imageScale:1 messageBoxID:42 displayOnce:false];
         }
     }
     
 }
-+(void)onEquip: (int)deskID {
++(void)onEquip: (int)deskID view:(UIView*)v {
     if(deskID >= 23000 && deskID < 24000){
         int desk = deskID - 23000;
         [desks setCurrentDeskID:desk];
+    
     }
 }
 @end
