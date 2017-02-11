@@ -10,6 +10,8 @@
 #import "storeItemUI.h"
 #import "floors.h"
 #import "money.h"
+#import "coinStoreUI.h"
+#import "messageUI.h"
 
 @implementation floorStore
 +(void)addFloorStoreUI: (UIView*)v {
@@ -18,7 +20,6 @@
     floorStore.tag = 21000;
     floorStore.backgroundColor = [UIColor whiteColor];
     [self addItemUIs:floorStore];
-    
     [v addSubview:floorStore];
 }
 +(void)addItemUIs: (UIScrollView*)v {
@@ -82,18 +83,24 @@
     
     return output;
 }
-+(void)onBuy: (int)floorID {
++(void)onBuy: (int)floorID view:(UIView*)v {
     if(floorID >= 22000 && floorID < 23000){
         int floor = floorID - 22000;
         if([money getBalance] >= [self determinePriceBasedOnName:[floors getFloorAtIndex:floor]]){
             [floors addNewFloorToList:floor];
             [floors setCurrentFloorID:floor];
             [money addBalance:-[self determinePriceBasedOnName:[floors getFloorAtIndex:floor]]];
+            UIView *v1 = [v superview];
+            UIView *v2 = [v1 superview];
+            [v removeFromSuperview];
+            [self addFloorStoreUI:v2];
+        }else {
+            [messageUI createMessageBox:[[[v superview] superview] superview] information:@"You don't have enough moeny for this :(" representingImage:@"coin" imageScale:1 messageBoxID:42 displayOnce:false];
         }
     }
                                   
 }
-+(void)onEquip: (int)floorID {
++(void)onEquip: (int)floorID view:(UIView*)v {
     if(floorID >= 22000 && floorID < 23000){
         int floor = floorID - 22000;
         [floors setCurrentFloorID:floor];

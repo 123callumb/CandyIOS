@@ -50,17 +50,34 @@ int machineSlotSelected = 3;
     slotUpgradeButton.position = CGPointMake(-mainW/2.4, -mainH/1.82);
     slotUpgradeButton.name = @"machineSlotUpgradeButton";
     
+    NSString *upgText;
+    
+    if([candyMachines getCandyMachineUpgradeValueAtID:machineID] < 10){
+        upgText = [NSString stringWithFormat:@"%d", [candyMachineValues upgradePrices:[candyMachines getCandyMachineUpgradeValueAtID:machineID]]];
+    }else {
+        upgText = @"UPGRADED";
+    }
+    
+    
     SKLabelNode *upgradeCost = [SKLabelNode labelNodeWithFontNamed:@"Coder's-Crux"];
     upgradeCost.fontColor = [SKColor blackColor];
     upgradeCost.fontSize = 120.0f;
-    upgradeCost.text = [NSString stringWithFormat:@"%d", [candyMachineValues upgradePrices:[candyMachines getCandyMachineUpgradeValueAtID:machineID]]];
+    upgradeCost.text = upgText;
     upgradeCost.position = CGPointMake(0, -upgradeCost.frame.size.height/2);
     [upgradeCostBar addChild:upgradeCost];
+    
+    NSString *slotCostText;
+    
+    if([candyMachines getCandyMachineSlotValueAtID:machineID] < 2){
+        slotCostText = [NSString stringWithFormat:@"%d", [candyMachineValues slotPrices:[candyMachines getCandyMachineSlotValueAtID:machineID]]];
+    }else {
+        slotCostText = @"UPGRADED";
+    }
     
     SKLabelNode *slotCost = [SKLabelNode labelNodeWithFontNamed:@"Coder's-Crux"];
     slotCost.fontColor = [SKColor blackColor];
     slotCost.fontSize = 120.0f;
-    slotCost.text = [NSString stringWithFormat:@"%d", [candyMachineValues slotPrices:[candyMachines getCandyMachineSlotValueAtID:machineID]]];
+    slotCost.text = slotCostText;
     slotCost.position = CGPointMake(0, -slotCost.frame.size.height/2);
     [slotUpgradeCostBar addChild:slotCost];
     
@@ -70,9 +87,15 @@ int machineSlotSelected = 3;
     
     [mainUI addChild:candyMachine];
     [mainUI addChild:upgradeCostBar];
-    [mainUI addChild:upgradeButton];
     [mainUI addChild:slotUpgradeCostBar];
-    [mainUI addChild:slotUpgradeButton];
+    
+    if([candyMachines getCandyMachineUpgradeValueAtID:machineID] < 10){
+        [mainUI addChild:upgradeButton];
+    }
+    if([candyMachines getCandyMachineSlotValueAtID:machineID] < 2){
+        [mainUI addChild:slotUpgradeButton];
+    }
+    
     [mainUI addChild:backButton];
     [s addChild:mainUI];
     
@@ -126,7 +149,6 @@ int machineSlotSelected = 3;
         [slot1 setFrame:CGRectMake(slot0Bg.frame.size.width/2 - (slot0Bg.frame.size.width/2.5)/2,  slot0Bg.frame.size.height/2.3 - slot0Bg.frame.size.height/4, slot0Bg.frame.size.width/2.5, slot0Bg.frame.size.height/2)];
 
     }
-    
     if ([candyMachines getCandyMachineSlotValueAtID:machineID] >= 2) {
         slot2Texture = [UIImage imageNamed:slot2TextureString];
         [slot2 setFrame:CGRectMake(0,  -slot0Bg.frame.size.height/20, slot0Bg.frame.size.width, slot0Bg.frame.size.height)];
@@ -202,7 +224,7 @@ int machineSlotSelected = 3;
             [money addBalance:-price];
             [slotMenu removeFromSuperview];
             [mainTransition switchScene:s sceneTwo:@"main" Transition:[SKTransition crossFadeWithDuration:0.3]];
-            [messageUI createMessageBox:v information:[NSString stringWithFormat:@"Congratulations you just upgraded your candy machine! Your machine will now automatically produce candy every %d seconds!", [candyMachineAutoSpawner retrunSecondsBasedOnUpgValue:[candyMachines getCandyMachineUpgradeValueAtID:machineNumber]]] representingImage:@"machine_default" imageScale:0.5 messageBoxID:40 displayOnce:false];
+            [messageUI createMessageBox:v information:[NSString stringWithFormat:@"Congratulations you just upgraded your candy machine! Your machine will now automatically produce candy every %d seconds!", [candyMachineAutoSpawner retrunSecondsBasedOnUpgValue:[candyMachines getCandyMachineUpgradeValueAtID:machineNumber]]] representingImage:@"machine_default" imageScale:0.5  messageBoxID:40 displayOnce:false];
         }
     }
     if([upg.name isEqualToString:@"machineSlotUpgradeButton"]){
@@ -213,7 +235,7 @@ int machineSlotSelected = 3;
             UIView *slotMenu = [v viewWithTag:11998];
             [slotMenu removeFromSuperview];
             [mainTransition switchScene:s sceneTwo:@"main" Transition:[SKTransition crossFadeWithDuration:0.3]];
-            [messageUI createMessageBox:v information:@"Congratulations you just unlocked a new slot for your candy machine!" representingImage:@"sweetDrawSlot" imageScale:0.5 messageBoxID:40 displayOnce:false];
+            [messageUI createMessageBox:v information:@"Congratulations you just unlocked a new slot for your candy machine!" representingImage:@"sweetDrawSlot" imageScale:0.2 messageBoxID:41 displayOnce:false];
         }
     }
 }

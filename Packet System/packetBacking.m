@@ -18,8 +18,8 @@
     header.position = CGPointMake(0, s.frame.size.height/2 - header.size.height/2);
     
     SKSpriteNode *close = [SKSpriteNode spriteNodeWithImageNamed:@"crossButton"];
-    close.xScale = 0.3;
-    close.yScale = 0.3;
+    close.xScale = 0.4;
+    close.yScale = 0.4;
     close.position = CGPointMake(-s.frame.size.width/2 + close.frame.size.width/2, s.frame.size.height/2 - close.frame.size.height/2 );
     close.name = @"closeButton";
     

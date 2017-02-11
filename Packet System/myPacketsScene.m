@@ -79,7 +79,10 @@ int currentPacketDisplay;
     
     if([obj.name isEqualToString:[NSString stringWithFormat:@"openPacketButton_ID_%d", currentPacketDisplay]]){
         [buttonAnimation changeState:obj changeName:@"openGreenButtonPressed" originalName:@"openGreenButton"];
-        [mainTransition switchScene:self sceneTwo:@"openPacket" Transition:[SKTransition fadeWithColor:[UIColor blackColor] duration:0.3]];
+        SKAction *wait = [SKAction waitForDuration:0.3];
+        [obj runAction:wait completion:^{
+            [mainTransition switchScene:self sceneTwo:@"openPacket" Transition:[SKTransition fadeWithColor:[UIColor blackColor] duration:0.3]];
+        }];
     }
     
     if([obj.name isEqualToString:@"buyButton"]){

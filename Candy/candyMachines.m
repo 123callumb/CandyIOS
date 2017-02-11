@@ -100,7 +100,7 @@
     NSMutableArray *machines = [candyMachines candyMachines];
     
     NSMutableDictionary *newData = [candyMachines getCandyMachineDataAtID:machineID];
-    int curentValue = [self getCandyMachineUpgradeValueAtID:machineID];
+    int curentValue = [self getCandyMachineSlotValueAtID:machineID];
     NSNumber *newValue = [NSNumber numberWithInt:(curentValue+1)];
     [newData setObject:newValue forKey:@"candyMachine_slotValue"];
     

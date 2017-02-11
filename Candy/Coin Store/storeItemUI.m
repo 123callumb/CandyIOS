@@ -11,6 +11,7 @@
 #import "deskStore.h"
 #import "workstationStore.h"
 #import "packetStore.h"
+#import "coinStoreUI.h"
 
 @implementation storeItemUI
 +(void)createItemUI: (UIScrollView*)v itemID:(int)itemNumber shopTexture:(NSString*)shopStyle startTagAt:(int)tag itemTexture:(NSString*)itemTexture itemScale:(float)itemScale itemName:(NSString*)itemName itemPrice:(int)price owned:(bool)doesOwnItem{
@@ -87,26 +88,22 @@
 }
 +(void)onBuyPress: (id)sender {
     UIButton *button = (UIButton*)sender;
+    UIView *v = [button superview];
     int buttonTag = (int)button.tag;
-    [floorStore onBuy:buttonTag];
-    [deskStore onBuy:buttonTag];
-    [workstationStore onBuy:buttonTag];
-    [self refreshItemUI:button];
+    [floorStore onBuy:buttonTag view:v];
+    [deskStore onBuy:buttonTag view:v];
+    [workstationStore onBuy:buttonTag view:v];
     
 }
 +(void)onEquipPress: (id)sender {
     UIButton *button = (UIButton*)sender;
     int buttonTag = (int)button.tag;
-    [floorStore onEquip:buttonTag];
-    [deskStore onEquip:buttonTag];
-    [workstationStore onEquip:buttonTag];
-    [self refreshItemUI:button];
+    UIView *v = [button superview];
+    [floorStore onEquip:buttonTag view:v];
+    [deskStore onEquip:buttonTag view:v];
+    [workstationStore onEquip:buttonTag view:v];
 }
-+(void)refreshItemUI: (UIButton*)button {
-    UIView *v1 = [button superview];
-    UIView *v = [v1 superview];
-    [v removeFromSuperview];
-}
+
 +(void)nonOwnedItemUI: (UIScrollView*)v itemID:(int)itemNumber shopTexture:(NSString*)shopStyle startTagAt:(int)tag itemTexture:(NSString*)itemTexture itemScale:(float)itemScale itemName:(NSString*)itemName itemPrice:(int)price {
     
     float containerW = v.frame.size.width;

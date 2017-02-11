@@ -12,6 +12,6 @@
 +(void)addFloorStoreUI: (UIView*)v;
 +(NSString*)determineScreenName: (NSString*)inputString;
 +(int)determinePriceBasedOnName: (NSString*)inputString;
-+(void)onBuy: (int)floorID;
-+(void)onEquip: (int)floorID;
++(void)onBuy: (int)floorID view:(UIView*)v;
++(void)onEquip: (int)floorID view:(UIView*)v;
 @end

@@ -10,6 +10,7 @@
 #import "levelWorkstations.h"
 #import "storeItemUI.h"
 #import "money.h"
+#import "messageUI.h"
 
 @implementation workstationStore
 
@@ -83,21 +84,28 @@
     
     return output;
 }
-+(void)onBuy: (int)stationID {
++(void)onBuy: (int)stationID view:(UIView*)v{
     if(stationID >= 24000 && stationID < 25000){
         int workstation = stationID - 24000;
         if([money getBalance] >= [self determinePriceBasedOnName:[levelWorkstations getWorkstationAtIndex:workstation]]){
             [levelWorkstations addNewWorkstationToList:workstation];
             [levelWorkstations setCurrentWorkstationID:workstation];
             [money addBalance:-[self determinePriceBasedOnName:[levelWorkstations getWorkstationAtIndex:workstation]]];
+            UIView *v1 = [v superview];
+            UIView *v2 = [v1 superview];
+            [v removeFromSuperview];
+            [self addWorkstationStoreUI:v2];
+        }else {
+            [messageUI createMessageBox:[[[v superview] superview] superview] information:@"You don't have enough moeny for this :(" representingImage:@"coin" imageScale:1 messageBoxID:42 displayOnce:false];
         }
     }
     
 }
-+(void)onEquip: (int)stationID {
++(void)onEquip: (int)stationID view:(UIView*)v {
     if(stationID >= 24000 && stationID < 25000){
         int workstation = stationID - 24000;
         [levelWorkstations setCurrentWorkstationID:workstation];
+        
     }
 }
 

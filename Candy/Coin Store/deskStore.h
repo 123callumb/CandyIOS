@@ -10,6 +10,6 @@
 
 @interface deskStore : UIView
 +(void)addDeskStoreUI: (UIView*)v;
-+(void)onBuy: (int)deskID;
-+(void)onEquip: (int)deskID;
++(void)onBuy: (int)deskID view:(UIView*)v;
++(void)onEquip: (int)deskID view:(UIView*)v;
 @end

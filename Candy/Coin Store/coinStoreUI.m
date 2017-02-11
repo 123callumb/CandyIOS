@@ -63,19 +63,60 @@
     UIButton *button = (UIButton*)sender;
     UIScrollView *sv = (UIScrollView*)[button superview];
     UIView *v = [sv superview];
+    UIView *v1 = [v superview];
     
     int buttonID = (int)button.tag - 20001;
     if(buttonID == 0){
         [packetStore addPacketStoreUI:v];
+        [self addBackUIButton:v1];
     }
     if(buttonID == 1){
         [floorStore addFloorStoreUI:v];
+        [self addBackUIButton:v1];
     }
     if(buttonID == 2){
         [deskStore addDeskStoreUI:v];
+        [self addBackUIButton:v1];
     }
     if(buttonID == 3){
         [workstationStore addWorkstationStoreUI:v];
+        [self addBackUIButton:v1];
+    }
+}
++(void)addBackUIButton: (UIView*)v {
+    UIButton *back = [UIButton buttonWithType:UIButtonTypeCustom];
+    UIImage *backImage = [UIImage imageNamed:@"storeBack"];
+    [back setImage:backImage forState:UIControlStateNormal];
+    [back setFrame:CGRectMake(0, v.frame.size.height/5.39, v.frame.size.width/4.6, v.frame.size.height/11.5)];
+    [back addTarget:self action:@selector(onBackPress:) forControlEvents:UIControlEventTouchUpInside];
+    [v addSubview:back];
+}
++(void)onBackPress: (id)sender {
+    UIButton *back = (UIButton*)sender;
+    UIView *v = [back superview];
+    UIView *v1 = [v viewWithTag:20000];
+    UIView *v2;
+    
+    v2 = [v1 viewWithTag:21000];
+    
+    if(v2 == nil){
+        v2 = [v1 viewWithTag:21100];
+    }
+    if(v2 == nil){
+        v2 = [v1 viewWithTag:21200];
+    }
+    if(v2 == nil){
+        v2 = [v1 viewWithTag:21300];
+    }
+    
+    if(v2.tag == 21000 || v2.tag == 21100 || v2.tag == 21200 || v2.tag == 21300){
+        [UIView animateWithDuration:0.3 animations:^{
+            [v2 setFrame:CGRectMake(v2.frame.size.width*2, v2.frame.origin.y, v2.frame.size.width, v2.frame.size.height)];
+            [back removeFromSuperview];
+
+        } completion:^(BOOL finished){
+            [v2 removeFromSuperview];
+        }];
     }
 }
 @end

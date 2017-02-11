@@ -15,6 +15,7 @@
 #import "trendsMain.h"
 #import "gemGemeratorGui.h"
 #import "buildingUI.h"
+#import "menuHandler.h"
 
 @implementation menuUIButtons
 
@@ -100,6 +101,7 @@ int menuNo = -1;
     }
     if(menuNo == 6){
         menuNo = -1;
+        [menuHandler setCurrentMenu:6];
         [gemGemeratorGui createGemMenu:s];
         [tutorialMessages firstTimeGemeratorButton:v];
     }
@@ -116,6 +118,7 @@ int menuNo = -1;
     }
     if(menuNo == 10){
         menuNo = -1;
+        [menuHandler setCurrentMenu:10];
         [buildingUI createBuildingUI:s];
     }
     

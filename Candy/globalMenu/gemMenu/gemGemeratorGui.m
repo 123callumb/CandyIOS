@@ -9,6 +9,7 @@
 #import "gemGemeratorGui.h"
 #import "buttonAnimation.h"
 #import "gemInteractionUI.h"
+#import "menuHandler.h"
 
 @implementation gemGemeratorGui
 +(void)createGemMenu: (SKScene*)s {
@@ -44,6 +45,7 @@
 +(void)onDoneTouch: (SKSpriteNode*)s scene:(SKScene*)sk{
     if([s.name isEqualToString:@"gemDoneButton"]){
         [self removeStatsMenu:sk];
+        [menuHandler setCurrentMenu:4];
         [buttonAnimation changeState:(SKSpriteNode*)s changeName:@"donePressured" originalName:@"doneButton"];
     }
 }
