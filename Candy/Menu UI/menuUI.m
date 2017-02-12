@@ -8,6 +8,7 @@
 
 #import "menuUi.h"
 #import "menuUIButtons.h"
+#import "settingsUI.h"
 
 @implementation menuUi
 
@@ -64,6 +65,7 @@
     [settingsButton setFrame:CGRectMake(0 + setH/8, v.frame.size.height - setH*1.1, setW, setH)];
     
     [backButton addTarget:self action:@selector(onBackPress:) forControlEvents:UIControlEventTouchUpInside];
+    [settingsButton addTarget:self action:@selector(onSettingsPress:) forControlEvents:UIControlEventTouchUpInside];
     
     [v addSubview:backButton];
     [v addSubview:rateButton];
@@ -73,6 +75,12 @@
     UIButton *back = (UIButton*)sender;
     UIView *v1 = [back superview];
     [self removeMenu:v1];
+}
++(void)onSettingsPress: (id)sender {
+    UIButton *back = (UIButton*)sender;
+    UIView *v1 = [back superview];
+    UIView *v = [v1 superview];
+    [settingsUI createSettingsMenu:v];
 }
 +(void)removeMenu: (UIView*)v {
     

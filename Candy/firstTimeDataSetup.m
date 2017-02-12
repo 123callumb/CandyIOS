@@ -11,6 +11,7 @@
 #import "packetInventoryData.h"
 #import "candyMachines.h"
 #import "money.h"
+#import "settingsData.h"
 
 @implementation firstTimeDataSetup
 +(void)setup {
@@ -26,6 +27,10 @@
         [packetInventoryData addPacketWithStringToInventory:@"jawbreakerPacket"];
         [packetInventoryData addPacketWithStringToInventory:@"sweetPacket"];
     
+        [settingsData toggleFancyGraphics:true];
+        [settingsData toggleTips:true];
+        [settingsData toggleMusic:true];
+        
         [nd setInteger:1 forKey:@"setup_int"];
         [nd synchronize];
     }
