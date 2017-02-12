@@ -29,6 +29,7 @@
 #import "menuUi.h"
 #import "menuUIButtons.h"
 #import "candyMachineAutoSpawner.h"
+#import "optimiseCandyMachineData.h"
 
 UIScrollView* UIscrollUpdate = nil;
 UIImageView *img1 = nil;
@@ -61,6 +62,7 @@ UIImageView *img1 = nil;
     
     //Start Auto Candy Machines
     [candyMachineAutoSpawner startAutoCandyMachines:self];
+    [optimiseCandyMachineData resetSlotArray];
     
 }
 

@@ -13,6 +13,7 @@
 #import "candyMachineSweetSpawner.h"
 #import "menuHandler.h"
 #import "coinSpawner.h"
+#import "optimiseCandyMachineData.h"
 
 @implementation candyMachineInteraction
 
@@ -65,6 +66,7 @@ int currentSelectedMachine = 1337;
                 [mainSkUI removeFromParent];
         }];
         [self resetCurrentSelectedMachine];
+        [optimiseCandyMachineData resetSlotArray];
         [menuHandler setCurrentMenu:4];
     }
 }

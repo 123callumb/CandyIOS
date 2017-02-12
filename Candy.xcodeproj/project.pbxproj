@@ -20,6 +20,7 @@
 		61E1838F1DEE13E20034C021 /* Save.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E1838E1DEE13E20034C021 /* Save.m */; };
 		61E183921DEE14140034C021 /* background.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E183911DEE14140034C021 /* background.m */; };
 		61E183951DEE14450034C021 /* character_clothes.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E183941DEE14450034C021 /* character_clothes.m */; };
+		750561791E4FFB1300C64E35 /* optimiseCandyMachineData.m in Sources */ = {isa = PBXBuildFile; fileRef = 750561781E4FFB1300C64E35 /* optimiseCandyMachineData.m */; };
 		750A02DF1E40EBEE00869355 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 750A02DE1E40EBEE00869355 /* AdSupport.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		750A02E11E40EBFB00869355 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 750A02E01E40EBFB00869355 /* AudioToolbox.framework */; };
 		750A02E31E40EC0500869355 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 750A02E21E40EC0500869355 /* AVFoundation.framework */; };
@@ -293,6 +294,8 @@
 		61E183911DEE14140034C021 /* background.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = background.m; sourceTree = "<group>"; };
 		61E183931DEE14450034C021 /* character_clothes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = character_clothes.h; sourceTree = "<group>"; };
 		61E183941DEE14450034C021 /* character_clothes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = character_clothes.m; sourceTree = "<group>"; };
+		750561771E4FFB1300C64E35 /* optimiseCandyMachineData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = optimiseCandyMachineData.h; path = "Candy/Candy Machines/optimiseCandyMachineData.h"; sourceTree = "<group>"; };
+		750561781E4FFB1300C64E35 /* optimiseCandyMachineData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = optimiseCandyMachineData.m; path = "Candy/Candy Machines/optimiseCandyMachineData.m"; sourceTree = "<group>"; };
 		750A02DE1E40EBEE00869355 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		750A02E01E40EBFB00869355 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		750A02E21E40EC0500869355 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -778,6 +781,8 @@
 				75ACAF831E4A156F0099F779 /* candyMachineSweetSpawner.m */,
 				75D025FB1E4E571A0068C1DB /* candyMachineAutoSpawner.h */,
 				75D025FC1E4E571A0068C1DB /* candyMachineAutoSpawner.m */,
+				750561771E4FFB1300C64E35 /* optimiseCandyMachineData.h */,
+				750561781E4FFB1300C64E35 /* optimiseCandyMachineData.m */,
 			);
 			name = Candy_Machines;
 			sourceTree = "<group>";
@@ -1731,6 +1736,7 @@
 				755ACB421DF32F51000DD9CB /* buildingGui.m in Sources */,
 				75B526421E1E9E610020A609 /* floors.m in Sources */,
 				7521F8C41DE0F66900F2AD76 /* slot.m in Sources */,
+				750561791E4FFB1300C64E35 /* optimiseCandyMachineData.m in Sources */,
 				755B0D231E14514B00EBA428 /* drawSlotSelectorUI.m in Sources */,
 				755B0D261E14777800EBA428 /* drawInventorySelector.m in Sources */,
 				75E04FD01E3128590098E2AE /* spinData.m in Sources */,
