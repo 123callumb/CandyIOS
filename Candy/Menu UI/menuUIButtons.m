@@ -25,6 +25,7 @@ int menuNo = -1;
     NSArray *buttons = [NSArray arrayWithObjects:
                         @"freeItemsButton",
                         @"itemPacksButton",
+                        @"achievementsButton",
                         @"coinStoreButton",
                         @"sweetMenuButton",
                         @"dailySpinButton",
@@ -78,15 +79,19 @@ int menuNo = -1;
     }
     if(menuNo == 2){
         menuNo = -1;
+ 
+    }
+    if(menuNo == 3){
+        menuNo = -1;
         [mainTransition switchScene:s sceneTwo:@"coinStore" Transition:[SKTransition crossFadeWithDuration:0.3]];
         [tutorialMessages firstTimeStoreButton:v];
     }
-    if(menuNo == 3){
+    if(menuNo == 4){
         menuNo = -1;
         [sweetInventoryUI showSweetInventoryUI:v];
         [tutorialMessages firstTimeSweetInvButton:v];
     }
-    if(menuNo == 4){
+    if(menuNo == 5){
         menuNo = -1;
         if([spinData isEligibleForDailySpin]){
             [mainTransition switchScene:s sceneTwo:@"dailySpin" Transition:[SKTransition crossFadeWithDuration:0.3]];
@@ -94,31 +99,31 @@ int menuNo = -1;
             [tutorialMessages spinTimeLeft:v];
         }
     }
-    if(menuNo == 5){
+    if(menuNo == 6){
         menuNo = -1;
         [trendsMain createTrendsMenu:v];
         [tutorialMessages firstTimeTrends:v];
     }
-    if(menuNo == 6){
+    if(menuNo == 7){
         menuNo = -1;
-        [menuHandler setCurrentMenu:6];
+        [menuHandler setCurrentMenu:7];
         [gemGemeratorGui createGemMenu:s];
         [tutorialMessages firstTimeGemeratorButton:v];
     }
-    if(menuNo == 7){
+    if(menuNo == 8){
         menuNo = -1;
         [mainTransition switchScene:s sceneTwo:@"Character_Maker" Transition:[SKTransition crossFadeWithDuration:0.3]];
     }
-    if(menuNo == 8){
+    if(menuNo == 9){
         menuNo = -1;
         [mainTransition switchScene:s sceneTwo:@"myPackets" Transition:[SKTransition crossFadeWithDuration:0.3]];
     }
-    if(menuNo == 9){
-        menuNo = -1;
-    }
     if(menuNo == 10){
         menuNo = -1;
-        [menuHandler setCurrentMenu:10];
+    }
+    if(menuNo == 11){
+        menuNo = -1;
+        [menuHandler setCurrentMenu:11];
         [buildingUI createBuildingUI:s];
     }
     
