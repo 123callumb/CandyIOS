@@ -21,6 +21,8 @@
 		61E183921DEE14140034C021 /* background.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E183911DEE14140034C021 /* background.m */; };
 		61E183951DEE14450034C021 /* character_clothes.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E183941DEE14450034C021 /* character_clothes.m */; };
 		750561791E4FFB1300C64E35 /* optimiseCandyMachineData.m in Sources */ = {isa = PBXBuildFile; fileRef = 750561781E4FFB1300C64E35 /* optimiseCandyMachineData.m */; };
+		7505617D1E50DF0800C64E35 /* settingsUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 7505617C1E50DF0800C64E35 /* settingsUI.m */; };
+		750561801E50E85C00C64E35 /* settingsData.m in Sources */ = {isa = PBXBuildFile; fileRef = 7505617F1E50E85C00C64E35 /* settingsData.m */; };
 		750A02DF1E40EBEE00869355 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 750A02DE1E40EBEE00869355 /* AdSupport.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		750A02E11E40EBFB00869355 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 750A02E01E40EBFB00869355 /* AudioToolbox.framework */; };
 		750A02E31E40EC0500869355 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 750A02E21E40EC0500869355 /* AVFoundation.framework */; };
@@ -296,6 +298,10 @@
 		61E183941DEE14450034C021 /* character_clothes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = character_clothes.m; sourceTree = "<group>"; };
 		750561771E4FFB1300C64E35 /* optimiseCandyMachineData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = optimiseCandyMachineData.h; path = "Candy/Candy Machines/optimiseCandyMachineData.h"; sourceTree = "<group>"; };
 		750561781E4FFB1300C64E35 /* optimiseCandyMachineData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = optimiseCandyMachineData.m; path = "Candy/Candy Machines/optimiseCandyMachineData.m"; sourceTree = "<group>"; };
+		7505617B1E50DF0800C64E35 /* settingsUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = settingsUI.h; path = "Candy/Settings Menu/settingsUI.h"; sourceTree = "<group>"; };
+		7505617C1E50DF0800C64E35 /* settingsUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = settingsUI.m; path = "Candy/Settings Menu/settingsUI.m"; sourceTree = "<group>"; };
+		7505617E1E50E85C00C64E35 /* settingsData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = settingsData.h; path = "Candy/Settings Menu/settingsData.h"; sourceTree = "<group>"; };
+		7505617F1E50E85C00C64E35 /* settingsData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = settingsData.m; path = "Candy/Settings Menu/settingsData.m"; sourceTree = "<group>"; };
 		750A02DE1E40EBEE00869355 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		750A02E01E40EBFB00869355 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		750A02E21E40EC0500869355 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -813,6 +819,17 @@
 			name = CharacterSpawn;
 			sourceTree = "<group>";
 		};
+		7505617A1E50DEEB00C64E35 /* Settings Menu */ = {
+			isa = PBXGroup;
+			children = (
+				7505617B1E50DF0800C64E35 /* settingsUI.h */,
+				7505617C1E50DF0800C64E35 /* settingsUI.m */,
+				7505617E1E50E85C00C64E35 /* settingsData.h */,
+				7505617F1E50E85C00C64E35 /* settingsData.m */,
+			);
+			name = "Settings Menu";
+			sourceTree = "<group>";
+		};
 		750A02DD1E40EBED00869355 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -1214,6 +1231,7 @@
 		75C36DEE1DCCF77600F84214 = {
 			isa = PBXGroup;
 			children = (
+				7505617A1E50DEEB00C64E35 /* Settings Menu */,
 				751F1EA91E46CB6C00476133 /* Setup Classes */,
 				752833701E441CEB00E101AD /* Menu UI */,
 				750C2C771E4254E3001F65C3 /* Packets System */,
@@ -1695,6 +1713,7 @@
 				750C2C801E425897001F65C3 /* packetDisplayItem.m in Sources */,
 				758C52531E2295870054D864 /* deskStore.m in Sources */,
 				61E1837F1DEDE45A0034C021 /* Character_Maker.m in Sources */,
+				7505617D1E50DF0800C64E35 /* settingsUI.m in Sources */,
 				75B7C6AB1E32A59C00D01EB5 /* trendsMain.m in Sources */,
 				756C31261DF4D0B20017FBE9 /* buttonCreator.m in Sources */,
 				753D56C81E06E50B00A6CBF8 /* packetContentManager.m in Sources */,
@@ -1714,6 +1733,7 @@
 				757CD1951DE1598100D07480 /* registerBoxes.m in Sources */,
 				750F2A391DF85B9D00A784F6 /* messageUI.m in Sources */,
 				753D56D11E06FFF000A6CBF8 /* chewPacket.m in Sources */,
+				750561801E50E85C00C64E35 /* settingsData.m in Sources */,
 				751F1EB51E48058E00476133 /* candyMachineSweetsEquiped.m in Sources */,
 				7525F78E1DCFEA7C00B0510C /* coinButton.m in Sources */,
 				750F3A9C1DEC863E002AFB78 /* registerStatsButtons.m in Sources */,
