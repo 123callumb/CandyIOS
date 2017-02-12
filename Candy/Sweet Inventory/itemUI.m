@@ -16,6 +16,10 @@
 #import "jawbreakerPacket.h"
 #import "bonbonPacket.h"
 #import "trendsData.h"
+#import "candybarPacket.h"
+#import "marshmallowPacket.h"
+#import "pencilPacket.h"
+#import "eggPacket.h"
 
 @implementation itemUI
 
@@ -191,6 +195,18 @@
     if([name containsString:@"chew"]){
         trendValueImageName = [NSString stringWithFormat:@"trendsInv%d", [trendsData getTrendMultiplierByPacketTrendID:2]];
     }
+    if([name containsString:@"candybar"]){
+        trendValueImageName = [NSString stringWithFormat:@"trendsInv%d", [trendsData getTrendMultiplierByPacketTrendID:5]];
+    }
+    if([name containsString:@"marshmallow"]){
+        trendValueImageName = [NSString stringWithFormat:@"trendsInv%d", [trendsData getTrendMultiplierByPacketTrendID:6]];
+    }
+    if([name containsString:@"pencil"]){
+        trendValueImageName = [NSString stringWithFormat:@"trendsInv%d", [trendsData getTrendMultiplierByPacketTrendID:7]];
+    }
+    if([name containsString:@"egg"]){
+        trendValueImageName = [NSString stringWithFormat:@"trendsInv%d", [trendsData getTrendMultiplierByPacketTrendID:8]];
+    }
     
     UIImage *trendImage = [UIImage imageNamed:trendValueImageName];
     UIImageView *trendValue = [[UIImageView alloc] initWithImage:trendImage];
@@ -217,6 +233,18 @@
     }
     if([name containsString:@"chew"]){
         trendValueImageName = [NSString stringWithFormat:@"brandlvl%d", [chewPacket getBrandValue]];
+    }
+    if([name containsString:@"candybar"]){
+        trendValueImageName = [NSString stringWithFormat:@"brandlvl%d", [candybarPacket getBrandValue]];
+    }
+    if([name containsString:@"marshmallow"]){
+        trendValueImageName = [NSString stringWithFormat:@"brandlvl%d", [marshmallowPacket getBrandValue]];
+    }
+    if([name containsString:@"pencil"]){
+        trendValueImageName = [NSString stringWithFormat:@"brandlvl%d", [pencilPacket getBrandValue]];
+    }
+    if([name containsString:@"egg"]){
+        trendValueImageName = [NSString stringWithFormat:@"brandlvl%d", [eggPacket getBrandValue]];
     }
     
     UIImage *trendImage = [UIImage imageNamed:trendValueImageName];
