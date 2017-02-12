@@ -12,7 +12,7 @@
 @implementation trendsMain
 +(void)createTrendsMenu: (UIView*)v {
     
-    UIView *mainTrendUI = [[UIView alloc] initWithFrame:CGRectMake(0, 0, v.frame.size.width, v.frame.size.height)];
+    UIView *mainTrendUI = [[UIView alloc] initWithFrame:CGRectMake(v.frame.size.width, 0, v.frame.size.width, v.frame.size.height)];
     
     UIImage *bgImage = [UIImage imageNamed:@"trendBG"];
     UIImageView *bg = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, v.frame.size.width, v.frame.size.height)];
@@ -33,7 +33,13 @@
     [trendsChart addChartView:mainTrendUI];
     [self addBackButton:mainTrendUI];
     
+    [mainTrendUI setAlpha:0.0];
     [v addSubview:mainTrendUI];
+    
+    [UIView animateWithDuration:0.3 animations:^{
+        [mainTrendUI setAlpha:1];
+        [mainTrendUI setFrame:CGRectMake(0, 0, v.frame.size.width, v.frame.size.height)];
+    }];
     
 }
 +(void)addBackButton: (UIView*)v {
@@ -49,7 +55,14 @@
 +(void)onBackPress: (id)sender {
     UIButton *button = (UIButton*)sender;
     UIView *v = [button superview];
-    [v removeFromSuperview];
+    
+    
+    [UIView animateWithDuration:0.3 animations:^{
+        [v setAlpha:0];
+        [v setFrame:CGRectMake(v.frame.size.width, 0, v.frame.size.width, v.frame.size.height)];
+    } completion:^(BOOL finished){
+        [v removeFromSuperview];
+    }];
 }
 
 @end

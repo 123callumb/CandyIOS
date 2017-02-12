@@ -15,10 +15,16 @@
 @implementation coinStoreUI
 
 +(void)addCoinStoreUI: (UIView*)v {
-    UIView *mainStoreView = [[UIView alloc] initWithFrame:CGRectMake(0, v.frame.size.height/3.37, v.frame.size.width, v.frame.size.height - v.frame.size.height/3.4)];
+    UIView *mainStoreView = [[UIView alloc] initWithFrame:CGRectMake(v.frame.size.width, v.frame.size.height/3.37, v.frame.size.width, v.frame.size.height - v.frame.size.height/3.4)];
     mainStoreView.tag = 20000;
     [self addMainMenu:mainStoreView];
+    [mainStoreView setAlpha:0];
     [v addSubview:mainStoreView];
+    
+    [UIView animateWithDuration:0.3 animations:^{
+        [mainStoreView setAlpha:1];
+        [mainStoreView setFrame:CGRectMake(0, v.frame.size.height/3.37, v.frame.size.width, v.frame.size.height - v.frame.size.height/3.4)];
+    }];
 }
 +(void)addMainMenu: (UIView*)v {
     UIScrollView *menuScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, v.frame.size.width, v.frame.size.height)];
