@@ -10,6 +10,7 @@
 
 @interface optimiseCandyMachineData : NSObject
 +(void)resetSlotArray;
++(NSMutableArray*)getCurrentSlotState;
 +(NSString*)returnTextureAtMachineID:(int)machineID slotNumber:(int)slotID;
 +(void)testArray;
 @end
