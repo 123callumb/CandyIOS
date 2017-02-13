@@ -43,6 +43,6 @@
 }
 +(void)refreshView: (UIView*)v {
     [self hideSweetInventoryUI:v];
-    [self showSweetInventoryUI:v];
+    [self showSweetInventoryUI:[v superview]];
 }
 @end
