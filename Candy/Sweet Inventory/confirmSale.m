@@ -17,13 +17,13 @@
     
     float scale = 0.24;
     
-    UIImage *confirmBG = [UIImage imageNamed:@"itemSale"];
-    UIImage *sellImageButton = [UIImage imageNamed:@"sellButton"];
-    UIImage *nvmImageButton = [UIImage imageNamed:@"confirmNvmButton"];
+    UIImage *confirmBG = [UIImage imageNamed:@"confirmBox"];
+    UIImage *sellImageButton = [UIImage imageNamed:@"confirmButton"];
+    UIImage *nvmImageButton = [UIImage imageNamed:@"cancelButton"];
     
     UIImageView *confirmView = [[UIImageView alloc] initWithImage:confirmBG];
     confirmView.frame = CGRectMake((v.frame.size.width/2 - (confirmBG.size.width * scale)/2),
-                                   (v.frame.size.height/1.75) -  ((confirmBG.size.height * scale)/2),
+                                   -((confirmBG.size.height * scale)/2),
                                    confirmBG.size.width * scale,
                                    confirmBG.size.height * scale);
     
@@ -44,8 +44,8 @@
     [sellButton addTarget:self action:onSellPress forControlEvents:UIControlEventTouchUpInside];
     [nvmButton addTarget:self action:onNvmPress forControlEvents:UIControlEventTouchUpInside];
     
-    sellButton.frame = CGRectMake(confirmView.frame.size.width/2 - (buyButtonW/2), confirmView.frame.size.height/2.4, buyButtonW, buyButtonH);
-    nvmButton.frame = CGRectMake((confirmView.frame.size.width/2 - (nvmButtonW/2)), confirmView.frame.size.height/1.55, nvmButtonW, nvmButtonH);
+    sellButton.frame = CGRectMake(confirmView.frame.size.width/2 - (buyButtonW/2), confirmView.frame.size.height/4, buyButtonW, buyButtonH);
+    nvmButton.frame = CGRectMake((confirmView.frame.size.width/2 - (nvmButtonW/2)), confirmView.frame.size.height/2, nvmButtonW, nvmButtonH);
     
     sellButton.tag = 6500 + tagNo;
     
@@ -58,6 +58,13 @@
     
     [v addSubview:confirmView];
     [v bringSubviewToFront:confirmView];
+    
+    [UIView animateWithDuration:0.2 animations:^{
+        [confirmView setFrame:CGRectMake((v.frame.size.width/2 - (confirmBG.size.width * scale)/2),
+                                         (v.frame.size.height/1.5) -  ((confirmBG.size.height * scale)/2),
+                                         confirmBG.size.width * scale,
+                                         confirmBG.size.height * scale)];
+    }];
     
 }
 +(void)onSell: (id)sender {

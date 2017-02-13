@@ -29,7 +29,7 @@
     NSString *name = [slotData objectForKey:@"sweet_name"];
     NSString *color = [slotData objectForKey:@"sweet_color"];
     
-    UIView *mainItem = [[UIView alloc] initWithFrame:CGRectMake(0, v.frame.size.height/4.5, v.frame.size.width, v.frame.size.height - v.frame.size.height/4.5 - v.frame.size.height/6)];
+    UIView *mainItem = [[UIView alloc] initWithFrame:CGRectMake(v.frame.size.width, v.frame.size.height/4.5, v.frame.size.width, v.frame.size.height - v.frame.size.height/4.5 - v.frame.size.height/6)];
     
     UIImage *topBarImage = [UIImage imageNamed:@"invItemHeader"];
     UIImage *backgroundImage = [UIImage imageNamed:@"invItemBg"];
@@ -118,6 +118,11 @@
     [self addBrandValue:mainItem texture:textureName];
     
     [v addSubview:mainItem];
+    
+    [UIView animateWithDuration:0.2 animations:^{
+        [mainItem setFrame:CGRectMake(0, v.frame.size.height/4.5, v.frame.size.width, v.frame.size.height - v.frame.size.height/4.5 - v.frame.size.height/6)];
+        [mainItem setAlpha:1];
+    }];
 }
 +(NSString*)titleColorDecider: (NSString*)color {
     if([color isEqualToString:@"Grey"]){
@@ -136,7 +141,14 @@
     UIButton *sweet = (UIButton*)sender;
     UIView *v = [sweet superview];
     
-    [v removeFromSuperview];
+    [UIView animateWithDuration:0.2 animations:^{
+        [v setFrame:CGRectMake(v.frame.size.width, v.frame.origin.y, v.frame.size.width, v.frame.size.height - v.frame.size.height/4.5 - v.frame.size.height/6)];
+        [v setAlpha:0.0];
+    } completion:^(BOOL finished){
+        [v removeFromSuperview];
+
+    }];
+    
 }
 +(void)sellForCoins: (id)sender {
     UIButton *sweet = (UIButton*)sender;
