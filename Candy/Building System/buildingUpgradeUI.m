@@ -12,6 +12,7 @@
 #import "money.h"
 #import "mainTransition.h"
 #import "candyMachines.h"
+#import "objectivesGold.h"
 
 
 @implementation buildingUpgradeUI
@@ -86,6 +87,7 @@
             [buildingType setCurrentBuildingID:([buildingType getCurrentBuildingID] + 1)];
             [candyMachines increaseCandyMachinesByOne];
             [mainTransition switchScene:s sceneTwo:@"main" Transition:[SKTransition fadeWithDuration:0.3]];
+            [objectivesGold object3:v];
         }
     }
 }

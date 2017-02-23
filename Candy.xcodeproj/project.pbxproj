@@ -105,6 +105,13 @@
 		752833791E441E5000E101AD /* packetStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 752833781E441E5000E101AD /* packetStore.m */; };
 		752CC6D21E26CAAD00C6FB31 /* gemAnimations.m in Sources */ = {isa = PBXBuildFile; fileRef = 752CC6D11E26CAAD00C6FB31 /* gemAnimations.m */; };
 		752CC6D51E26CB3300C6FB31 /* bonusAmounts.m in Sources */ = {isa = PBXBuildFile; fileRef = 752CC6D41E26CB3300C6FB31 /* bonusAmounts.m */; };
+		752E991C1E53A88600942C88 /* objectivesUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 752E991B1E53A88600942C88 /* objectivesUI.m */; };
+		752E991F1E53B03400942C88 /* objectivesUITask.m in Sources */ = {isa = PBXBuildFile; fileRef = 752E991E1E53B03400942C88 /* objectivesUITask.m */; };
+		752E99221E54D4C900942C88 /* objectivesData.m in Sources */ = {isa = PBXBuildFile; fileRef = 752E99211E54D4C900942C88 /* objectivesData.m */; };
+		752E99251E54D8D100942C88 /* objectivesGold.m in Sources */ = {isa = PBXBuildFile; fileRef = 752E99241E54D8D100942C88 /* objectivesGold.m */; };
+		752E99281E56184F00942C88 /* objectivesSilver.m in Sources */ = {isa = PBXBuildFile; fileRef = 752E99271E56184F00942C88 /* objectivesSilver.m */; };
+		752E992B1E56186A00942C88 /* objectivesBronze.m in Sources */ = {isa = PBXBuildFile; fileRef = 752E992A1E56186A00942C88 /* objectivesBronze.m */; };
+		752E992E1E56192F00942C88 /* objectiveComplete.m in Sources */ = {isa = PBXBuildFile; fileRef = 752E992D1E56192F00942C88 /* objectiveComplete.m */; };
 		753060CF1E19B99C004D7757 /* confirmGemSale.m in Sources */ = {isa = PBXBuildFile; fileRef = 753060CE1E19B99C004D7757 /* confirmGemSale.m */; };
 		753D2EEF1E1FE7960043F33C /* dynamicBackgrounds.m in Sources */ = {isa = PBXBuildFile; fileRef = 753D2EEE1E1FE7960043F33C /* dynamicBackgrounds.m */; };
 		753D2EF51E2031BC0043F33C /* coinStoreScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 753D2EF41E2031BC0043F33C /* coinStoreScene.m */; };
@@ -427,6 +434,20 @@
 		752CC6D11E26CAAD00C6FB31 /* gemAnimations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = gemAnimations.m; path = "Candy/Gems System/gemAnimations.m"; sourceTree = "<group>"; };
 		752CC6D31E26CB3300C6FB31 /* bonusAmounts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = bonusAmounts.h; path = Candy/tap/bonusAmounts.h; sourceTree = "<group>"; };
 		752CC6D41E26CB3300C6FB31 /* bonusAmounts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = bonusAmounts.m; path = Candy/tap/bonusAmounts.m; sourceTree = "<group>"; };
+		752E991A1E53A88600942C88 /* objectivesUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = objectivesUI.h; path = "Candy/Objectives Menu/objectivesUI.h"; sourceTree = "<group>"; };
+		752E991B1E53A88600942C88 /* objectivesUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = objectivesUI.m; path = "Candy/Objectives Menu/objectivesUI.m"; sourceTree = "<group>"; };
+		752E991D1E53B03400942C88 /* objectivesUITask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = objectivesUITask.h; path = "Candy/Objectives Menu/objectivesUITask.h"; sourceTree = "<group>"; };
+		752E991E1E53B03400942C88 /* objectivesUITask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = objectivesUITask.m; path = "Candy/Objectives Menu/objectivesUITask.m"; sourceTree = "<group>"; };
+		752E99201E54D4C900942C88 /* objectivesData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = objectivesData.h; path = "Candy/Objectives Menu/objectivesData.h"; sourceTree = "<group>"; };
+		752E99211E54D4C900942C88 /* objectivesData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = objectivesData.m; path = "Candy/Objectives Menu/objectivesData.m"; sourceTree = "<group>"; };
+		752E99231E54D8D100942C88 /* objectivesGold.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = objectivesGold.h; path = "Candy/Objectives Menu/objectivesGold.h"; sourceTree = "<group>"; };
+		752E99241E54D8D100942C88 /* objectivesGold.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = objectivesGold.m; path = "Candy/Objectives Menu/objectivesGold.m"; sourceTree = "<group>"; };
+		752E99261E56184F00942C88 /* objectivesSilver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = objectivesSilver.h; path = "Candy/Objectives Menu/objectivesSilver.h"; sourceTree = "<group>"; };
+		752E99271E56184F00942C88 /* objectivesSilver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = objectivesSilver.m; path = "Candy/Objectives Menu/objectivesSilver.m"; sourceTree = "<group>"; };
+		752E99291E56186A00942C88 /* objectivesBronze.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = objectivesBronze.h; path = "Candy/Objectives Menu/objectivesBronze.h"; sourceTree = "<group>"; };
+		752E992A1E56186A00942C88 /* objectivesBronze.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = objectivesBronze.m; path = "Candy/Objectives Menu/objectivesBronze.m"; sourceTree = "<group>"; };
+		752E992C1E56192F00942C88 /* objectiveComplete.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = objectiveComplete.h; path = "Candy/Objectives Menu/objectiveComplete.h"; sourceTree = "<group>"; };
+		752E992D1E56192F00942C88 /* objectiveComplete.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = objectiveComplete.m; path = "Candy/Objectives Menu/objectiveComplete.m"; sourceTree = "<group>"; };
 		753060CD1E19B99C004D7757 /* confirmGemSale.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = confirmGemSale.h; path = "Candy/Sweet Inventory/confirmGemSale.h"; sourceTree = "<group>"; };
 		753060CE1E19B99C004D7757 /* confirmGemSale.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = confirmGemSale.m; path = "Candy/Sweet Inventory/confirmGemSale.m"; sourceTree = "<group>"; };
 		753D2EED1E1FE7960043F33C /* dynamicBackgrounds.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dynamicBackgrounds.h; path = Candy/levels/dynamicBackgrounds.h; sourceTree = "<group>"; };
@@ -1079,6 +1100,27 @@
 			name = "Menu UI";
 			sourceTree = "<group>";
 		};
+		752E99191E53A86500942C88 /* Objectives Menu */ = {
+			isa = PBXGroup;
+			children = (
+				752E991A1E53A88600942C88 /* objectivesUI.h */,
+				752E991B1E53A88600942C88 /* objectivesUI.m */,
+				752E991D1E53B03400942C88 /* objectivesUITask.h */,
+				752E991E1E53B03400942C88 /* objectivesUITask.m */,
+				752E99201E54D4C900942C88 /* objectivesData.h */,
+				752E99211E54D4C900942C88 /* objectivesData.m */,
+				752E99231E54D8D100942C88 /* objectivesGold.h */,
+				752E99241E54D8D100942C88 /* objectivesGold.m */,
+				752E99261E56184F00942C88 /* objectivesSilver.h */,
+				752E99271E56184F00942C88 /* objectivesSilver.m */,
+				752E99291E56186A00942C88 /* objectivesBronze.h */,
+				752E992A1E56186A00942C88 /* objectivesBronze.m */,
+				752E992C1E56192F00942C88 /* objectiveComplete.h */,
+				752E992D1E56192F00942C88 /* objectiveComplete.m */,
+			);
+			name = "Objectives Menu";
+			sourceTree = "<group>";
+		};
 		75582AE81E22E40500254C54 /* Building System */ = {
 			isa = PBXGroup;
 			children = (
@@ -1243,6 +1285,7 @@
 		75C36DEE1DCCF77600F84214 = {
 			isa = PBXGroup;
 			children = (
+				752E99191E53A86500942C88 /* Objectives Menu */,
 				752181981E510F950043D0D9 /* Item Packs Menu */,
 				7505617A1E50DEEB00C64E35 /* Settings Menu */,
 				751F1EA91E46CB6C00476133 /* Setup Classes */,
@@ -1711,6 +1754,7 @@
 				750F3A991DEC81A4002AFB78 /* statsMenuButtons.m in Sources */,
 				61E183951DEE14450034C021 /* character_clothes.m in Sources */,
 				750F2A351DF77FF400A784F6 /* fiftyTapBonus.m in Sources */,
+				752E99221E54D4C900942C88 /* objectivesData.m in Sources */,
 				7525F77C1DCFBFF100B0510C /* inventoryButton.m in Sources */,
 				75C36E3A1DCE5CD900F84214 /* splashBacking.m in Sources */,
 				7580D74D1E1EDDA800BCDA75 /* desks.m in Sources */,
@@ -1725,6 +1769,7 @@
 				752CC6D21E26CAAD00C6FB31 /* gemAnimations.m in Sources */,
 				750C2C801E425897001F65C3 /* packetDisplayItem.m in Sources */,
 				758C52531E2295870054D864 /* deskStore.m in Sources */,
+				752E992B1E56186A00942C88 /* objectivesBronze.m in Sources */,
 				61E1837F1DEDE45A0034C021 /* Character_Maker.m in Sources */,
 				7505617D1E50DF0800C64E35 /* settingsUI.m in Sources */,
 				75B7C6AB1E32A59C00D01EB5 /* trendsMain.m in Sources */,
@@ -1815,6 +1860,7 @@
 				75B6A1361DFB8F2000ED922C /* packet.m in Sources */,
 				750C2C7D1E42556A001F65C3 /* packetBacking.m in Sources */,
 				755B0D1D1E1419F900EBA428 /* sweetDrawData.m in Sources */,
+				752E991C1E53A88600942C88 /* objectivesUI.m in Sources */,
 				75712C111DFCE1A400450342 /* packetsScene.m in Sources */,
 				753D2EF51E2031BC0043F33C /* coinStoreScene.m in Sources */,
 				7525F7911DCFF8FB00B0510C /* menuBacking.m in Sources */,
@@ -1822,10 +1868,12 @@
 				75E8F19B1DD8F6E500A421E7 /* menuBackButton.m in Sources */,
 				750A03251E4149D700869355 /* timerLabels.m in Sources */,
 				75E3B5B21E37D6C700979CA4 /* trendsGenerator.m in Sources */,
+				752E99251E54D8D100942C88 /* objectivesGold.m in Sources */,
 				75E1B5D71DE29B3600F7C50F /* doneButton.m in Sources */,
 				75527A321E007ACA00D149C0 /* skPacketOpener.m in Sources */,
 				75795C651E481462001399BC /* candyMachineSweetSelector.m in Sources */,
 				755ACB3F1DF1F781000DD9CB /* mapBuilding.m in Sources */,
+				752E992E1E56192F00942C88 /* objectiveComplete.m in Sources */,
 				75919B951DDB82DF001F66EB /* mainUpgrade.m in Sources */,
 				750F3A9F1DEF0762002AFB78 /* playerStatsMenu.m in Sources */,
 				759E71CB1DF0A21D00B7275A /* mapScene.m in Sources */,
@@ -1839,6 +1887,7 @@
 				753D2EEF1E1FE7960043F33C /* dynamicBackgrounds.m in Sources */,
 				7565B0A41DF6CA7400390278 /* sweetTypeUI.m in Sources */,
 				756C31231DF34F7F0017FBE9 /* coinSpawner.m in Sources */,
+				752E99281E56184F00942C88 /* objectivesSilver.m in Sources */,
 				752CC6D51E26CB3300C6FB31 /* bonusAmounts.m in Sources */,
 				751F1EB21E47E40B00476133 /* candyMachineSlotData.m in Sources */,
 				7525F7C51DD25C9100B0510C /* combo.m in Sources */,
@@ -1848,6 +1897,7 @@
 				756AEAFF1E088B76002CFA70 /* gems.m in Sources */,
 				750C2C7A1E4254FF001F65C3 /* myPacketsScene.m in Sources */,
 				750F2A321DF7523E00A784F6 /* sweetFavourNode.m in Sources */,
+				752E991F1E53B03400942C88 /* objectivesUITask.m in Sources */,
 				61E183861DEE00E30034C021 /* Character.m in Sources */,
 				75B7C6AE1E33C92000D01EB5 /* trendsButton.m in Sources */,
 				751F1EAC1E46CB9600476133 /* firstTimeDataSetup.m in Sources */,

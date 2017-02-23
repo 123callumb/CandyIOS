@@ -18,6 +18,10 @@
 #import "menuHandler.h"
 #import "messageUI.h"
 #import "itemPacksUI.h"
+#import "objectivesUI.h"
+#import "objectiveComplete.h"
+#import "objectivesSilver.h"
+#import "objectivesBronze.h"
 
 @implementation menuUIButtons
 
@@ -94,6 +98,7 @@ int menuNo = -1;
     }
     if(menuNo == 3){
         menuNo = -1;
+        [objectivesUI createObjectivesUI:v];
  
     }
     if(menuNo == 4){
@@ -118,15 +123,18 @@ int menuNo = -1;
         menuNo = -1;
         [trendsMain createTrendsMenu:v];
         [tutorialMessages firstTimeTrends:v];
+        [objectivesBronze object0:v];
     }
     if(menuNo == 8){
         menuNo = -1;
         [menuHandler setCurrentMenu:8];
         [gemGemeratorGui createGemMenu:s];
         [tutorialMessages firstTimeGemeratorButton:v];
+        [objectivesSilver object1:v];
     }
     if(menuNo == 9){
         menuNo = -1;
+        [objectivesBronze object1:v];
         [mainTransition switchScene:s sceneTwo:@"Character_Maker" Transition:[SKTransition crossFadeWithDuration:0.3]];
     }
     if(menuNo == 10){
@@ -135,6 +143,7 @@ int menuNo = -1;
     }
     if(menuNo == 11){
         menuNo = -1;
+        [objectiveComplete createCompletionAnimation:v type0To2:0];
     }
     if(menuNo == 12){
         menuNo = -1;

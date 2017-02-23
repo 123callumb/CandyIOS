@@ -15,6 +15,7 @@
 #import "candyMachineUI.h"
 #import "candyMachineSlotData.h"
 #import "candyMachineInteraction.h"
+#import "objectivesSilver.h"
 
 @implementation candyMachineSweetSelector
 +(void)createInvSelectionUI: (UIView*)v {
@@ -119,5 +120,6 @@
     [v2 removeFromSuperview];
     [candyMachineUI addCandyMachineSlotUIWithID:[candyMachineInteraction getCurrentSelectedMachine] view:main];
     [candyMachineUI resetSelectedSlot];
+    [objectivesSilver object0:main];
 }
 @end

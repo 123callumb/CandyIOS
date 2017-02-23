@@ -11,6 +11,7 @@
 #import "desks.h"
 #import "money.h"
 #import "messageUI.h"
+#import "objectivesBronze.h"
 
 @implementation deskStore
 
@@ -87,8 +88,11 @@
             
             UIView *v1 = [v superview];
             UIView *v2 = [v1 superview];
+            
             [v removeFromSuperview];
             [self addDeskStoreUI:v2];
+            
+            [objectivesBronze object2:[v2 superview]];
         }else {
             [messageUI createMessageBox:[[[v superview] superview] superview] information:@"You don't have enough moeny for this :(" representingImage:@"coin" imageScale:1 messageBoxID:42 displayOnce:false];
         }

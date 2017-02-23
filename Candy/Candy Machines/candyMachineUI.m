@@ -16,6 +16,7 @@
 #import "mainTransition.h"
 #import "gems.h"
 #import "candyMachineAutoSpawner.h"
+#import "objectivesGold.h"
 
 @implementation candyMachineUI
 
@@ -225,6 +226,7 @@ int machineSlotSelected = 3;
             [slotMenu removeFromSuperview];
             [mainTransition switchScene:s sceneTwo:@"main" Transition:[SKTransition crossFadeWithDuration:0.3]];
             [messageUI createMessageBox:v information:[NSString stringWithFormat:@"Congratulations you just upgraded your candy machine! Your machine will now automatically produce candy every %d seconds!", [candyMachineAutoSpawner retrunSecondsBasedOnUpgValue:[candyMachines getCandyMachineUpgradeValueAtID:machineNumber]]] representingImage:@"machine_default" imageScale:0.5  messageBoxID:40 displayOnce:false];
+            [objectivesGold object2:v];
         }
     }
     if([upg.name isEqualToString:@"machineSlotUpgradeButton"]){
@@ -236,6 +238,8 @@ int machineSlotSelected = 3;
             [slotMenu removeFromSuperview];
             [mainTransition switchScene:s sceneTwo:@"main" Transition:[SKTransition crossFadeWithDuration:0.3]];
             [messageUI createMessageBox:v information:@"Congratulations you just unlocked a new slot for your candy machine!" representingImage:@"sweetDrawSlot" imageScale:0.2 messageBoxID:41 displayOnce:false];
+            [objectivesGold object4:v];
+
         }
     }
 }

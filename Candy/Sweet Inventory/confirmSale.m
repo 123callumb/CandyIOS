@@ -11,6 +11,7 @@
 #import "sweetInventoryData.h"
 #import "money.h"
 #import "sweetInventoryUI.h"
+#import "objectivesSilver.h"
 
 @implementation confirmSale
 +(void)confirmPacketPurchase: (UIView*)v tagNumber:(int)tagNo {
@@ -83,6 +84,7 @@
     [sweetInventoryData removeObject:slotNo];
     [money addBalance:amount];
     [sweetInventoryUI refreshView:v2];
+    [objectivesSilver object4:v2];
     
     [v1 removeFromSuperview];
 }

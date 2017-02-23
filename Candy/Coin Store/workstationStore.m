@@ -11,6 +11,7 @@
 #import "storeItemUI.h"
 #import "money.h"
 #import "messageUI.h"
+#import "objectivesBronze.h"
 
 @implementation workstationStore
 
@@ -95,6 +96,8 @@
             UIView *v2 = [v1 superview];
             [v removeFromSuperview];
             [self addWorkstationStoreUI:v2];
+            [objectivesBronze object4:[v2 superview]];
+
         }else {
             [messageUI createMessageBox:[[[v superview] superview] superview] information:@"You don't have enough moeny for this :(" representingImage:@"coin" imageScale:1 messageBoxID:42 displayOnce:false];
         }
