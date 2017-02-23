@@ -14,6 +14,7 @@
 #import "fsTimerData.h"
 #import "gems.h"
 #import "money.h"
+#import "objectivesSilver.h"
 
 @import GoogleMobileAds;
 
@@ -92,7 +93,8 @@ NSString *rewardedGood;
         
         [statsMenuButtons buttonAnimation:node action:[SKAction runBlock:^{
         rewardedGood = @"gem";
-            
+            [objectivesSilver object3:self.view];
+
             [GADRewardBasedVideoAd sharedInstance].delegate = self;
             
             if([[GADRewardBasedVideoAd sharedInstance] isReady]){
@@ -109,7 +111,8 @@ NSString *rewardedGood;
         
         [statsMenuButtons buttonAnimation:node action:[SKAction runBlock:^{
             rewardedGood = @"miniGems";
-            
+            [objectivesSilver object3:self.view];
+
             [GADRewardBasedVideoAd sharedInstance].delegate = self;
             
             if([[GADRewardBasedVideoAd sharedInstance] isReady]){
@@ -124,7 +127,7 @@ NSString *rewardedGood;
         if([fsTimerData getCoinTimeLeft] <= 0){
         [statsMenuButtons buttonAnimation:node action:[SKAction runBlock:^{
             rewardedGood = @"coin";
-            
+            [objectivesSilver object3:self.view];
 
             [GADRewardBasedVideoAd sharedInstance].delegate = self;
             

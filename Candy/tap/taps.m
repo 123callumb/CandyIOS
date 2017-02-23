@@ -24,6 +24,8 @@
 #import "candyMachineInteraction.h"
 #import "trendsData.h"
 #import "candyMachineUI.h"
+#import "objectivesBronze.h"
+#import "objectivesSilver.h"
 
 @implementation taps
 +(void)onPressed: (SKScene *)s location:(CGPoint)p view:(UIView*)v {
@@ -35,6 +37,8 @@
             [fiftyTapBonus onTouchofBonus:(SKSpriteNode*)obj scene:s];
             [candyMachineInteraction animateAllCandyMachinesOnTap:s];
             [candyMachineInteraction onCandyMachineTouch:(SKSpriteNode*)obj scene:s view:v];
+            [objectivesBronze object3:v];
+            [objectivesSilver object2:v];
     }else {
         //Menu interaction here!
         [candyMachineInteraction onBackButton:(SKSpriteNode*)obj view:v];

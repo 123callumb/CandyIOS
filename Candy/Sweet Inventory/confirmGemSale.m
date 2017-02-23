@@ -11,6 +11,7 @@
 #import "itemUI.h"
 #import "gems.h"
 #import "sweetInventoryUI.h"
+#import "objectivesSilver.h"
 
 @implementation confirmGemSale
 
@@ -84,6 +85,7 @@
     [sweetInventoryData removeObject:slotNo];
     [gems addMiniGems:amount];
     [sweetInventoryUI refreshView:v2];
+    [objectivesSilver object5:v2];
     
     [v1 removeFromSuperview];
 }

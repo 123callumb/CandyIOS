@@ -30,6 +30,9 @@
 #import "menuUIButtons.h"
 #import "candyMachineAutoSpawner.h"
 #import "optimiseCandyMachineData.h"
+#import "objectivesGold.h"
+#import "objectivesSilver.h"
+#import "objectivesBronze.h"
 
 UIScrollView* UIscrollUpdate = nil;
 UIImageView *img1 = nil;
@@ -49,6 +52,9 @@ UIImageView *img1 = nil;
     
     [sweetShopUI addUIView:self.view];
     
+    //Objective Complete Checkers
+    [objectivesGold object0:self.view];
+    [objectivesGold object1:self.view];
     
     //Add Gesture Rec
     UISwipeGestureRecognizer *gestureRight = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(onGestureRight:)];
