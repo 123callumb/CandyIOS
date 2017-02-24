@@ -34,6 +34,7 @@
 #import "objectivesSilver.h"
 #import "objectivesBronze.h"
 #import "tipsUI.h"
+#import "bannerBonusUI.h"
 
 UIScrollView* UIscrollUpdate = nil;
 UIImageView *img1 = nil;
@@ -73,6 +74,9 @@ UIImageView *img1 = nil;
     
     //Start Tip System
     [tipsUI startTipSpawner:self];
+    
+    //Set Bonus Banner Settings
+    [bannerBonusUI addBonusBanner:self.view];
     
 }
 

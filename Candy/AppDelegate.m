@@ -31,7 +31,6 @@
     req.testDevices = @[callumsIphone, killiansIphone, callumsIpad];
     
     [[GADRewardBasedVideoAd sharedInstance] loadRequest:req withAdUnitID:@"ca-app-pub-1801714701929045/4977592815"];
-
     // Override point for customization after application launch.
     return YES;
 }
