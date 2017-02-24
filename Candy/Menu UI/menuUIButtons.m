@@ -22,14 +22,16 @@
 #import "objectiveComplete.h"
 #import "objectivesSilver.h"
 #import "objectivesBronze.h"
+#import "bannerBonusUI.h"
 
 @implementation menuUIButtons
 
 int menuNo = -1;
 
 +(NSArray*)menuButtons {
+        
     NSArray *buttons = [NSArray arrayWithObjects:
-                        @"enableBonus",
+                        [bannerBonusUI bonusState],
                         @"freeItemsButton",
                         @"itemPacksButton",
                         @"achievementsButton",
@@ -57,13 +59,11 @@ int menuNo = -1;
     float buttonW = v.frame.size.width/1.2;
     float buttonH = v.frame.size.height/3.5;
     
-    if([[[self menuButtons] objectAtIndex:butNo] isEqualToString:@"enableBonus"]){
+    if(butNo == 0){
         buttonH = v.frame.size.height/8;
-    }
-    if(![[[self menuButtons] objectAtIndex:butNo] isEqualToString:@"enableBonus"]){
-    button.frame = CGRectMake(v.frame.size.width/2.1 - buttonW/2, buttonH * butNo + v.frame.size.height/30 - v.frame.size.height/6.5, buttonW, buttonH);
-    }else {
         button.frame = CGRectMake(v.frame.size.width/2.1 - buttonW/2, buttonH * butNo + v.frame.size.height/30, buttonW, buttonH);
+    }else{
+    button.frame = CGRectMake(v.frame.size.width/2.1 - buttonW/2, buttonH * butNo + v.frame.size.height/30 - v.frame.size.height/6.5, buttonW, buttonH);
     }
     [button setImage:buttonImage forState:UIControlStateNormal];
     
@@ -86,7 +86,7 @@ int menuNo = -1;
 +(void)menuUpdateChecker: (SKScene*)s view:(UIView*)v {
     if(menuNo == 0){
         menuNo = -1;
-        [messageUI createMessageBox:v information:@"This will allow you to receive more money per tap while an advert is displayed at the bottom of the screen. Thanks for supporting us!" representingImage:@"enableBonus" imageScale:0.3 messageBoxID:46 displayOnce:false];
+        [bannerBonusUI bannerCalled:v];
     }
     if(menuNo == 1){
         menuNo = -1;
