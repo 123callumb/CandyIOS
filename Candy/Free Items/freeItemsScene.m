@@ -83,7 +83,7 @@ NSString *rewardedGood;
         
         SKAction *move = [SKAction moveToX:-self.frame.size.width*2 duration:0.2];
         [node runAction:move completion:^{
-            [mainTransition switchScene:self sceneTwo:@"main" Transition:[SKTransition fadeWithColor:[SKColor blackColor] duration:0.2]];
+            [mainTransition switchScene:self sceneTwo:@"main" Transition:[SKTransition fadeWithColor:[SKColor colorWithDisplayP3Red:51.0f/255.0f green:51.0f/255.0f blue:51.0f/255.0f alpha:1] duration:0.2]];
 
         }];
     }

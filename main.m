@@ -33,6 +33,7 @@
 #import "objectivesGold.h"
 #import "objectivesSilver.h"
 #import "objectivesBronze.h"
+#import "tipsUI.h"
 
 UIScrollView* UIscrollUpdate = nil;
 UIImageView *img1 = nil;
@@ -69,6 +70,9 @@ UIImageView *img1 = nil;
     //Start Auto Candy Machines
     [candyMachineAutoSpawner startAutoCandyMachines:self];
     [optimiseCandyMachineData resetSlotArray];
+    
+    //Start Tip System
+    [tipsUI startTipSpawner:self];
     
 }
 

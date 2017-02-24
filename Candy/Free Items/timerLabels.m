@@ -13,7 +13,7 @@
 +(void)addGemLabel: (SKSpriteNode*)s {
     SKLabelNode *label = [SKLabelNode labelNodeWithFontNamed:@"Coder's-Crux"];
     label.fontSize = 45;
-    label.fontColor = [SKColor blackColor];
+    label.fontColor = [SKColor colorWithDisplayP3Red:51.0f/255.0f green:51.0f/255.0f blue:51.0f/255.0f alpha:1];
     label.position = CGPointMake(-s.frame.size.width/3.5, 0);
     label.zPosition = 2;
     label.name = @"gemLabel";
@@ -35,7 +35,7 @@
 +(void)addCoinLabel: (SKSpriteNode*)s {
     SKLabelNode *label = [SKLabelNode labelNodeWithFontNamed:@"Coder's-Crux"];
     label.fontSize = 45;
-    label.fontColor = [SKColor blackColor];
+    label.fontColor = [SKColor colorWithDisplayP3Red:51.0f/255.0f green:51.0f/255.0f blue:51.0f/255.0f alpha:1];
     label.position = CGPointMake(-s.frame.size.width/3.5, 0);
     label.zPosition = 2;
     label.name = @"coinLabel";
@@ -57,7 +57,7 @@
 +(void)addMiniGemLabel: (SKSpriteNode*)s {
     SKLabelNode *label = [SKLabelNode labelNodeWithFontNamed:@"Coder's-Crux"];
     label.fontSize = 45;
-    label.fontColor = [SKColor blackColor];
+    label.fontColor = [SKColor colorWithDisplayP3Red:51.0f/255.0f green:51.0f/255.0f blue:51.0f/255.0f alpha:1];
     label.position = CGPointMake(-s.frame.size.width/3.5, 0);
     label.zPosition = 2;
     label.name = @"miniGemLabel";

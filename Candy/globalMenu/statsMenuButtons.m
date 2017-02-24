@@ -106,7 +106,7 @@
         SKAction *block = [SKAction runBlock:^{}];
         [self buttonAnimation:s action:block];
         if([spinData isEligibleForDailySpin]){
-            [mainTransition switchScene:sk sceneTwo:@"dailySpin" Transition:[SKTransition fadeWithColor:[SKColor blackColor] duration:0.3]];
+            [mainTransition switchScene:sk sceneTwo:@"dailySpin" Transition:[SKTransition fadeWithColor:[SKColor colorWithDisplayP3Red:51.0f/255.0f green:51.0f/255.0f blue:51.0f/255.0f alpha:1] duration:0.3]];
         }else {
             [tutorialMessages spinTimeLeft:v];
         }

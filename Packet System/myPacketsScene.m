@@ -81,7 +81,7 @@ int currentPacketDisplay;
         [buttonAnimation changeState:obj changeName:@"openGreenButtonPressed" originalName:@"openGreenButton"];
         SKAction *wait = [SKAction waitForDuration:0.3];
         [obj runAction:wait completion:^{
-            [mainTransition switchScene:self sceneTwo:@"openPacket" Transition:[SKTransition fadeWithColor:[UIColor blackColor] duration:0.3]];
+            [mainTransition switchScene:self sceneTwo:@"openPacket" Transition:[SKTransition fadeWithColor:[UIColor colorWithDisplayP3Red:51.0f/255.0f green:51.0f/255.0f blue:51.0f/255.0f alpha:1] duration:0.3]];
         }];
     }
     

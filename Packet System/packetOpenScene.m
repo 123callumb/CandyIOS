@@ -34,7 +34,7 @@ bool sceneChange = false;
     [packetBacking addOpenerBacking:self];
     [self createSweetPacket:self];
     prob = [self returnRarity];
-    [self setBackgroundColor:[UIColor blackColor]];
+    [self setBackgroundColor:[UIColor colorWithDisplayP3Red:51.0f/255.0f green:51.0f/255.0f blue:51.0f/255.0f alpha:1]];
 }
 -(void)createSweetPacket: (SKScene*)s {
     SKSpriteNode *sweetPacket = [SKSpriteNode spriteNodeWithImageNamed:[packetInventoryData getPacketAtSlot:[myPacketsScene getCurrentPacket]]];

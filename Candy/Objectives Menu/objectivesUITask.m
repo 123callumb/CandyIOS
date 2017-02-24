@@ -72,7 +72,7 @@
     
     [objText setFont:[UIFont fontWithName:@"Coder's-Crux" size:20.0f]];
     [objText setText:objString];
-    [objText setTextColor:[UIColor blackColor]];
+    [objText setTextColor:[UIColor colorWithDisplayP3Red:51.0f/255.0f green:51.0f/255.0f blue:51.0f/255.0f alpha:1]];
     [objText setLineBreakMode:0];
     [objText setNumberOfLines:0];
     

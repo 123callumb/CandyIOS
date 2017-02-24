@@ -26,7 +26,7 @@
 +(void)onButtonPress:(SKSpriteNode*)s scene:(SKScene*)sk {
     if([s.name isEqualToString:@"packetsMyButton"]){
         SKAction *block = [SKAction runBlock:^{
-            [mainTransition switchScene:sk sceneTwo:@"myPackets" Transition:[SKTransition fadeWithColor:[SKColor blackColor] duration:0.3]];
+            [mainTransition switchScene:sk sceneTwo:@"myPackets" Transition:[SKTransition fadeWithColor:[SKColor colorWithDisplayP3Red:51.0f/255.0f green:51.0f/255.0f blue:51.0f/255.0f alpha:1] duration:0.3]];
         }];
         [self buttonAnimation:s action:block];
 

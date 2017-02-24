@@ -37,7 +37,7 @@
     back.text = @"BACK";
     back.name = @"backText";
     back.fontSize = 75.0f;
-    back.fontColor = [SKColor blackColor];
+    back.fontColor = [SKColor colorWithDisplayP3Red:51.0f/255.0f green:51.0f/255.0f blue:51.0f/255.0f alpha:1];
     back.position = CGPointMake(-self.frame.size.width/2 + back.frame.size.width/1.35, header.frame.origin.y + header.frame.size.height/4.5);
     [self addChild:back];
     
@@ -46,7 +46,7 @@
     moneyLabel.text = [money getBalanceAsString];
     moneyLabel.name = @"moneyTag";
     moneyLabel.fontSize = 60.0f;
-    moneyLabel.fontColor = [SKColor blackColor];
+    moneyLabel.fontColor = [SKColor colorWithDisplayP3Red:51.0f/255.0f green:51.0f/255.0f blue:51.0f/255.0f alpha:1];
     moneyLabel.position = CGPointMake(- self.frame.size.width/60, header.frame.origin.y + header.frame.size.height/4.5);
     [self addChild:moneyLabel];
     
@@ -55,7 +55,7 @@
     gemLabel.text = [gems getGemsAsString];
     gemLabel.name = @"gemTag";
     gemLabel.fontSize = 60.0f;
-    gemLabel.fontColor = [SKColor blackColor];
+    gemLabel.fontColor = [SKColor colorWithDisplayP3Red:51.0f/255.0f green:51.0f/255.0f blue:51.0f/255.0f alpha:1];
     gemLabel.position = CGPointMake(self.frame.size.width/2.7, header.frame.origin.y + header.frame.size.height/4.5);
     [self addChild:gemLabel];
 

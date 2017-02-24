@@ -46,7 +46,7 @@ int flavourNum = 0;
     
     UILabel *flavourLabel = [[UILabel alloc] initWithFrame:CGRectMake(0-menuItem.frame.size.width/6, menuItem.frame.size.height/4.8, 300, 40)];
     
-    [flavourLabel setTextColor:[UIColor blackColor]];
+    [flavourLabel setTextColor:[UIColor colorWithDisplayP3Red:51.0f/255.0f green:51.0f/255.0f blue:51.0f/255.0f alpha:1]];
     [flavourLabel setBackgroundColor:[UIColor clearColor]];
     [flavourLabel setFont:[UIFont fontWithName:@"Coder's-Crux" size:40.0f]];
     [flavourLabel setText:flavourName];

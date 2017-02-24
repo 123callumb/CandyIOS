@@ -81,7 +81,7 @@
     [backInvButton addTarget:self action:onBack forControlEvents:UIControlEventTouchUpInside];
     
     [sweetName setFont:[UIFont fontWithName:@"Coder's-Crux" size:30]];
-    [sweetName setTextColor:[UIColor blackColor]];
+    [sweetName setTextColor:[UIColor colorWithDisplayP3Red:51.0f/255.0f green:51.0f/255.0f blue:51.0f/255.0f alpha:1]];
     [sweetName setText:name];
     [sweetName setTextAlignment:NSTextAlignmentCenter];
 
@@ -89,12 +89,12 @@
     UILabel *gemAmount = [[UILabel alloc] initWithFrame:CGRectMake(sellGemButton.frame.size.width/2 - sellGemButton.frame.size.width/16, 0, sellGemButton.frame.size.width/2, sellGemButton.frame.size.height)];
 
     [coinAmount setFont:[UIFont fontWithName:@"Coder's-Crux" size:30]];
-    [coinAmount setTextColor:[UIColor blackColor]];
+    [coinAmount setTextColor:[UIColor colorWithDisplayP3Red:51.0f/255.0f green:51.0f/255.0f blue:51.0f/255.0f alpha:1]];
     [coinAmount setText:[NSString stringWithFormat:@"%d", [self getCoinSelllingPrice:color]]];
     [coinAmount setTextAlignment:NSTextAlignmentCenter];
     
     [gemAmount setFont:[UIFont fontWithName:@"Coder's-Crux" size:30]];
-    [gemAmount setTextColor:[UIColor blackColor]];
+    [gemAmount setTextColor:[UIColor colorWithDisplayP3Red:51.0f/255.0f green:51.0f/255.0f blue:51.0f/255.0f alpha:1]];
     [gemAmount setText:[NSString stringWithFormat:@"%d", [self getGemSelllingPrice:color]]];
     [gemAmount setTextAlignment:NSTextAlignmentCenter];
     

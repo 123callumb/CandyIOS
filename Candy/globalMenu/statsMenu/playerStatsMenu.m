@@ -73,7 +73,7 @@
     
     slotOutput.fontName = @"Coder's-Crux";
     slotOutput.fontSize = 150;
-    slotOutput.fontColor = [SKColor blackColor];
+    slotOutput.fontColor = [SKColor colorWithDisplayP3Red:51.0f/255.0f green:51.0f/255.0f blue:51.0f/255.0f alpha:1];
     slotOutput.position = CGPointMake(0, -s.frame.size.height/6);
     
     

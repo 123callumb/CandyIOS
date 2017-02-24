@@ -19,7 +19,7 @@
     SKLabelNode *buttonText = [SKLabelNode labelNodeWithFontNamed:@"Coder's-Crux"];
     button.position = pos;
     buttonText.text = text;
-    buttonText.fontColor = [SKColor blackColor];
+    buttonText.fontColor = [SKColor colorWithDisplayP3Red:51.0f/255.0f green:51.0f/255.0f blue:51.0f/255.0f alpha:1];
     buttonText.position = CGPointMake(0, -button.frame.size.height/10);
     button.name = name;
     buttonText.name = name;
