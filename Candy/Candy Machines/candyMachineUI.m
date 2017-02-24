@@ -61,7 +61,7 @@ int machineSlotSelected = 3;
     
     
     SKLabelNode *upgradeCost = [SKLabelNode labelNodeWithFontNamed:@"Coder's-Crux"];
-    upgradeCost.fontColor = [SKColor blackColor];
+    upgradeCost.fontColor = [SKColor colorWithDisplayP3Red:51.0f/255.0f green:51.0f/255.0f blue:51.0f/255.0f alpha:1];
     upgradeCost.fontSize = 120.0f;
     upgradeCost.text = upgText;
     upgradeCost.position = CGPointMake(0, -upgradeCost.frame.size.height/2);
@@ -76,7 +76,7 @@ int machineSlotSelected = 3;
     }
     
     SKLabelNode *slotCost = [SKLabelNode labelNodeWithFontNamed:@"Coder's-Crux"];
-    slotCost.fontColor = [SKColor blackColor];
+    slotCost.fontColor = [SKColor colorWithDisplayP3Red:51.0f/255.0f green:51.0f/255.0f blue:51.0f/255.0f alpha:1];
     slotCost.fontSize = 120.0f;
     slotCost.text = slotCostText;
     slotCost.position = CGPointMake(0, -slotCost.frame.size.height/2);

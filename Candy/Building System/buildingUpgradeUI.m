@@ -45,7 +45,7 @@
     houseName.text = [buildingType getNextBuildingName];
     houseName.position = CGPointMake(0, -s.frame.size.height/4.4);
     houseName.fontSize = 160.0f;
-    houseName.fontColor = [SKColor blackColor];
+    houseName.fontColor = [SKColor colorWithDisplayP3Red:51.0f/255.0f green:51.0f/255.0f blue:51.0f/255.0f alpha:1];
     [s addChild:houseName];
 }
 +(void)addNextHouseIcon: (SKSpriteNode*)s {
@@ -58,7 +58,7 @@
     price.text = [NSString stringWithFormat:@"%d", [buildingType getNextBuildingPrice]];
     price.position = CGPointMake(0, -s.frame.size.height/1.925);
     price.fontSize = 200.0f;
-    price.fontColor = [SKColor blackColor];
+    price.fontColor = [SKColor colorWithDisplayP3Red:51.0f/255.0f green:51.0f/255.0f blue:51.0f/255.0f alpha:1];
     [s addChild:price];
 }
 +(void)addUpgradeButton: (SKSpriteNode*)s {

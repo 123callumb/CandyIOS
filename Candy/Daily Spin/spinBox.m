@@ -95,7 +95,7 @@ NSString *finalOutcome = @"gem";
                          pos:CGPointMake(box.frame.size.width/6, box.position.y - box.frame.size.height/3.5) textSize:50];
 
     [s runAction:[SKAction waitForDuration:4] completion:^{
-        [mainTransition switchScene:s sceneTwo:@"main" Transition:[SKTransition fadeWithColor:[SKColor blackColor] duration:2.5]];
+        [mainTransition switchScene:s sceneTwo:@"main" Transition:[SKTransition fadeWithColor:[SKColor colorWithDisplayP3Red:51.0f/255.0f green:51.0f/255.0f blue:51.0f/255.0f alpha:1] duration:2.5]];
     }];
     
     [spinData setCurrentDate];

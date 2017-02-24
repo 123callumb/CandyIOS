@@ -175,6 +175,7 @@
 		759E71C81DF0A02600B7275A /* mapMain.m in Sources */ = {isa = PBXBuildFile; fileRef = 759E71C71DF0A02600B7275A /* mapMain.m */; };
 		759E71CB1DF0A21D00B7275A /* mapScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 759E71CA1DF0A21D00B7275A /* mapScene.m */; };
 		75ACAF841E4A156F0099F779 /* candyMachineSweetSpawner.m in Sources */ = {isa = PBXBuildFile; fileRef = 75ACAF831E4A156F0099F779 /* candyMachineSweetSpawner.m */; };
+		75B2E14C1E5F9CD60091FC77 /* tipsUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 75B2E14B1E5F9CD60091FC77 /* tipsUI.m */; };
 		75B526421E1E9E610020A609 /* floors.m in Sources */ = {isa = PBXBuildFile; fileRef = 75B526411E1E9E610020A609 /* floors.m */; };
 		75B526451E1EAD580020A609 /* levelStructure.m in Sources */ = {isa = PBXBuildFile; fileRef = 75B526441E1EAD580020A609 /* levelStructure.m */; };
 		75B526481E1EC8400020A609 /* buildingType.m in Sources */ = {isa = PBXBuildFile; fileRef = 75B526471E1EC8400020A609 /* buildingType.m */; };
@@ -574,6 +575,8 @@
 		759E71CA1DF0A21D00B7275A /* mapScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = mapScene.m; path = Candy/Scenes/mapScene.m; sourceTree = "<group>"; };
 		75ACAF821E4A156F0099F779 /* candyMachineSweetSpawner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = candyMachineSweetSpawner.h; path = "Candy/Candy Machines/candyMachineSweetSpawner.h"; sourceTree = "<group>"; };
 		75ACAF831E4A156F0099F779 /* candyMachineSweetSpawner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = candyMachineSweetSpawner.m; path = "Candy/Candy Machines/candyMachineSweetSpawner.m"; sourceTree = "<group>"; };
+		75B2E14A1E5F9CD60091FC77 /* tipsUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = tipsUI.h; path = Candy/Tips/tipsUI.h; sourceTree = "<group>"; };
+		75B2E14B1E5F9CD60091FC77 /* tipsUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = tipsUI.m; path = Candy/Tips/tipsUI.m; sourceTree = "<group>"; };
 		75B526401E1E9E610020A609 /* floors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = floors.h; path = Candy/levels/floors.h; sourceTree = "<group>"; };
 		75B526411E1E9E610020A609 /* floors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = floors.m; path = Candy/levels/floors.m; sourceTree = "<group>"; };
 		75B526431E1EAD580020A609 /* levelStructure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = levelStructure.h; path = Candy/levels/levelStructure.h; sourceTree = "<group>"; };
@@ -1265,6 +1268,15 @@
 			name = mapMenu;
 			sourceTree = "<group>";
 		};
+		75B2E1491E5F9CBB0091FC77 /* Tips  */ = {
+			isa = PBXGroup;
+			children = (
+				75B2E14A1E5F9CD60091FC77 /* tipsUI.h */,
+				75B2E14B1E5F9CD60091FC77 /* tipsUI.m */,
+			);
+			name = "Tips ";
+			sourceTree = "<group>";
+		};
 		75B7C6A81E327D8400D01EB5 /* Trend System */ = {
 			isa = PBXGroup;
 			children = (
@@ -1285,6 +1297,7 @@
 		75C36DEE1DCCF77600F84214 = {
 			isa = PBXGroup;
 			children = (
+				75B2E1491E5F9CBB0091FC77 /* Tips  */,
 				752E99191E53A86500942C88 /* Objectives Menu */,
 				752181981E510F950043D0D9 /* Item Packs Menu */,
 				7505617A1E50DEEB00C64E35 /* Settings Menu */,
@@ -1795,6 +1808,7 @@
 				751F1EB51E48058E00476133 /* candyMachineSweetsEquiped.m in Sources */,
 				7525F78E1DCFEA7C00B0510C /* coinButton.m in Sources */,
 				750F3A9C1DEC863E002AFB78 /* registerStatsButtons.m in Sources */,
+				75B2E14C1E5F9CD60091FC77 /* tipsUI.m in Sources */,
 				618EA38C1DF1ED4C00D07ADD /* candyMachines.m in Sources */,
 				75C36E421DCE63E500F84214 /* mainTransition.m in Sources */,
 				616F844A1E425E7900723148 /* upgrade_handler_special.m in Sources */,

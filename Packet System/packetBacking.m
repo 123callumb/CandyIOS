@@ -25,7 +25,7 @@
     
     SKLabelNode *swipe = [SKLabelNode labelNodeWithText:@"Swipe left and right to view packs!"];
     swipe.fontName = @"Coder's-Crux";
-    swipe.fontColor = [SKColor blackColor];
+    swipe.fontColor = [SKColor colorWithDisplayP3Red:51.0f/255.0f green:51.0f/255.0f blue:51.0f/255.0f alpha:1];
     swipe.fontSize = 50;
     swipe.position = CGPointMake(0, - s.frame.size.height/2 + swipe.frame.size.height);
     
@@ -53,7 +53,7 @@
 +(void)addCongrats: (SKScene*)s {
     SKLabelNode *swipe = [SKLabelNode labelNodeWithText:@"Congratulations!"];
     swipe.fontName = @"Coder's-Crux";
-    swipe.fontColor = [SKColor blackColor];
+    swipe.fontColor = [SKColor colorWithDisplayP3Red:51.0f/255.0f green:51.0f/255.0f blue:51.0f/255.0f alpha:1];
     swipe.fontSize = 100;
     swipe.position = CGPointMake(0, - s.frame.size.height/5);
     swipe.xScale = 0.1;
@@ -61,7 +61,7 @@
     
     SKLabelNode *cont = [SKLabelNode labelNodeWithText:@"Tap to Continue"];
     cont.fontName = @"Coder's-Crux";
-    cont.fontColor = [SKColor blackColor];
+    cont.fontColor = [SKColor colorWithDisplayP3Red:51.0f/255.0f green:51.0f/255.0f blue:51.0f/255.0f alpha:1];
     cont.fontSize = 50;
     cont.position = CGPointMake(0, - s.frame.size.height/4);
     cont.alpha = 0.0;

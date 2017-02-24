@@ -30,7 +30,7 @@
         SKLabelNode *slotNo = [SKLabelNode labelNodeWithFontNamed:@"Coder's-Crux"];
         slotNo.text = [NSString stringWithFormat:@"%d", noOfSlot];
         slotNo.fontSize = 200;
-        slotNo.fontColor = [SKColor blackColor];
+        slotNo.fontColor = [SKColor colorWithDisplayP3Red:51.0f/255.0f green:51.0f/255.0f blue:51.0f/255.0f alpha:1];
         slotNo.position = CGPointMake(0, -slot.frame.size.height/8);
         slotNo.name = slot.name;
         if (noOfSlot == [box1 getSelectedSlot]) {

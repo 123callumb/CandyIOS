@@ -94,7 +94,7 @@
     SKLabelNode *sorry = [SKLabelNode labelNodeWithText:@"You don't own any sweet packets :("];
     sorry.fontName = @"Coder's-Crux";
     sorry.fontSize = 50;
-    sorry.fontColor = [SKColor blackColor];
+    sorry.fontColor = [SKColor colorWithDisplayP3Red:51.0f/255.0f green:51.0f/255.0f blue:51.0f/255.0f alpha:1];
     [s addChild:sorry];
 }
 @end

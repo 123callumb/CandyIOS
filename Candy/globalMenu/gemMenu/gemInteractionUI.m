@@ -79,9 +79,9 @@
     miniGemValue.fontSize = 140.0f;
     gemValue.fontSize = 140.0f;
     
-    tapToTrade.fontColor = [SKColor blackColor];
-    miniGemValue.fontColor = [SKColor blackColor];
-    gemValue.fontColor = [SKColor blackColor];
+    tapToTrade.fontColor = [SKColor colorWithDisplayP3Red:51.0f/255.0f green:51.0f/255.0f blue:51.0f/255.0f alpha:1];
+    miniGemValue.fontColor = [SKColor colorWithDisplayP3Red:51.0f/255.0f green:51.0f/255.0f blue:51.0f/255.0f alpha:1];
+    gemValue.fontColor = [SKColor colorWithDisplayP3Red:51.0f/255.0f green:51.0f/255.0f blue:51.0f/255.0f alpha:1];
     
     tapToTrade.text = @"TAP TO TRADE";
     gemValue.text = [gems getGemsAsString];

@@ -91,7 +91,7 @@
 +(void)addPrizeValue: (SKScene*)s text:(NSString*)text pos:(CGPoint)position textSize:(float)size{
     SKLabelNode *textV = [SKLabelNode labelNodeWithFontNamed:@"Coder's-Crux"];
     textV.fontSize = size;
-    textV.fontColor = [SKColor blackColor];
+    textV.fontColor = [SKColor colorWithDisplayP3Red:51.0f/255.0f green:51.0f/255.0f blue:51.0f/255.0f alpha:1];
     textV.text = text;
     textV.position = position;
     textV.zPosition = 10;

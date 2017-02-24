@@ -52,7 +52,7 @@
     
     [perTapValue setFont:[UIFont fontWithName:@"Coder's-Crux" size:20]];
     [perTapValue setText:[NSString stringWithFormat:@"%dPT", [sweetValueCalculation calculateTextureValue:textureName]]];
-    [perTapValue setTextColor:[UIColor blackColor]];
+    [perTapValue setTextColor:[UIColor colorWithDisplayP3Red:51.0f/255.0f green:51.0f/255.0f blue:51.0f/255.0f alpha:1]];
     [perTapValue setTextAlignment:NSTextAlignmentCenter];
     
     SEL onPress = @selector(onSweetPress:);

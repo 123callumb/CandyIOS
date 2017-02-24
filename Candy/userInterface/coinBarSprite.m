@@ -59,7 +59,7 @@
     gemText.name = @"gemText";
     gemText.zPosition = 12;
     gemText.fontSize = 140;
-    gemText.fontColor = [SKColor blackColor];
+    gemText.fontColor = [SKColor colorWithDisplayP3Red:51.0f/255.0f green:51.0f/255.0f blue:51.0f/255.0f alpha:1];
     gemText.text = [gems getGemsAsString];
     gemText.position = CGPointMake(0, -gemText.frame.size.height/1.65);
     [n addChild:gemText];
