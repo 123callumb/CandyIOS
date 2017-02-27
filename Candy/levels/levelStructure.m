@@ -21,10 +21,25 @@
     [self addFloor:s];
     [self addBuildingType:s];
     [self addMainCharacter:s];
-    [desks addDesk:CGPointMake(0, s.frame.size.height/8) scale:0.85 nodeToAttatch:s];
+    [self addDesk:s];
     [levelWorkstations addWorkstations:s];
 }
-+(void)addFloorItems: (SKSpriteNode*)s {
++(void)addDesk: (SKScene*)s {
+    
+    int building = [buildingType getCurrentBuildingID];
+    
+    if(building < 4){
+        [desks addDesk:CGPointMake(0, s.frame.size.height/8) scale:0.85 nodeToAttatch:s];
+    }
+    if (building >=4 && building <= 5) {
+        [desks addDesk:CGPointMake(0, s.frame.size.height/7) scale:0.75 nodeToAttatch:s];
+    }
+    if (building >=6 && building <= 7) {
+        [desks addDesk:CGPointMake(0, s.frame.size.height/6) scale:0.65 nodeToAttatch:s];
+    }
+    if (building >=8 && building <= 9) {
+        [desks addDesk:CGPointMake(0, s.frame.size.height/5.35) scale:0.55 nodeToAttatch:s];
+    }
 }
 +(void)addFloor: (SKScene*)s {
     SKSpriteNode *floor = [SKSpriteNode spriteNodeWithImageNamed:[floors getCurrentFloor]];
@@ -33,7 +48,6 @@
     floor.zPosition = -4;
     floor.anchorPoint = CGPointMake(0.5, 0.5);
     floor.name = @"levelFloor";
-    [self addFloorItems:floor];
     [s addChild:floor];
 }
 +(void)addBuildingType: (SKScene*)s {
@@ -52,16 +66,39 @@
 
 //These need to go in a character class V probably best when we have character animations on the go etc!
 +(float)returnCharacterScale {
-    if([buildingType getCurrentBuildingID] == 0){
+    
+    int building = [buildingType getCurrentBuildingID];
+    
+    if(building < 4){
         return 0.75;
+    }
+    if (building >= 4 && building <= 5) {
+        return 0.65;
+    }
+    if (building >= 6 && building <= 7) {
+        return 0.55;
+    }
+    if (building >= 8 && building <= 9) {
+        return 0.45;
     }
     return 0.75;
 }
 +(CGPoint)returnCharacterPosition: (SKScene*)s {
+    int building = [buildingType getCurrentBuildingID];
     CGPoint pos = CGPointMake(0, s.frame.size.height/7.4);
-        if([buildingType getCurrentBuildingID] == 0){
-            pos = CGPointMake(0, s.frame.size.height/7.4);
-        }
+    
+    if(building < 4){
+        pos = CGPointMake(0, s.frame.size.height/7.4);
+    }
+    if (building >= 4 && building <= 5) {
+        pos = CGPointMake(0, s.frame.size.height/6.8);
+    }
+    if (building >= 6 && building <= 7) {
+        pos = CGPointMake(0, s.frame.size.height/5.8);
+    }
+    if (building >= 8 && building <= 9) {
+        pos = CGPointMake(0, s.frame.size.height/5.2);
+    }
     return pos;
 }
 @end

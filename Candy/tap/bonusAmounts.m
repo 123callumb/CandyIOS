@@ -17,7 +17,14 @@
     
     for(int i = 0; i <= ([[buildingType getBuildingTypes] count] - 1); i++){
         if([buildingType getCurrentBuildingID] == i){
-            miniGems = ([self generateRandIntWithBounds:1 UprBound:2] * i);
+            int p;
+            
+            if(i == 0){
+                p = 1;
+            }else {
+                p = i;
+            }
+            miniGems = ([self generateRandIntWithBounds:1 UprBound:2] * p);
         }
     }
 
@@ -28,7 +35,14 @@
     
     for(int i = 0; i <= ([[buildingType getBuildingTypes] count] - 1); i++){
         if([buildingType getCurrentBuildingID] == i){
-            coins = ([self generateRandIntWithBounds:1 UprBound:30] * i);
+            int p;
+            
+            if(i == 0){
+                p = 1;
+            }else {
+                p = i;
+            }
+            coins = ([self generateRandIntWithBounds:1 UprBound:30] * p);
         }
     }
     

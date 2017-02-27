@@ -57,40 +57,81 @@
 }
 +(void)addWorkstations: (SKScene*)s {
     if([buildingType getCurrentBuildingID] == 0){
-        [self workstation:CGPointMake(0, -s.frame.size.height/12) scale:0.9 nodeToAttatch:s stationID:0];
+        [self workstation:CGPointMake(0, -s.frame.size.height/5) scale:1 nodeToAttatch:s stationID:0];
     }
     if([buildingType getCurrentBuildingID] == 1){
-        [self workstation:CGPointMake(s.frame.size.width/4, -s.frame.size.height/14) scale:0.9 nodeToAttatch:s stationID:0];
-        [self workstation:CGPointMake(-s.frame.size.width/4, -s.frame.size.height/14) scale:0.9 nodeToAttatch:s stationID:1];
+        [self workstation:CGPointMake(s.frame.size.width/4, -s.frame.size.height/6) scale:1 nodeToAttatch:s stationID:0];
+        [self workstation:CGPointMake(-s.frame.size.width/4, -s.frame.size.height/6) scale:1 nodeToAttatch:s stationID:1];
     }
     if([buildingType getCurrentBuildingID] == 2){
-        [self workstation:CGPointMake(s.frame.size.width/4, -s.frame.size.height/14) scale:0.9 nodeToAttatch:s stationID:0];
-        [self workstation:CGPointMake(-s.frame.size.width/4, -s.frame.size.height/14) scale:0.9 nodeToAttatch:s stationID:1];
-        [self workstation:CGPointMake(0, -s.frame.size.height/2.8) scale:0.9 nodeToAttatch:s stationID:2];
+        [self workstation:CGPointMake(s.frame.size.width/4, -s.frame.size.height/8) scale:0.9 nodeToAttatch:s stationID:0];
+        [self workstation:CGPointMake(-s.frame.size.width/4, -s.frame.size.height/8) scale:0.9 nodeToAttatch:s stationID:1];
+        [self workstation:CGPointMake(0, -s.frame.size.height/2.6) scale:0.9 nodeToAttatch:s stationID:2];
     }
     if([buildingType getCurrentBuildingID] == 3){
-        [self workstation:CGPointMake(s.frame.size.width/4, -s.frame.size.height/14) scale:0.9 nodeToAttatch:s stationID:0];
-        [self workstation:CGPointMake(-s.frame.size.width/4, -s.frame.size.height/14) scale:0.9 nodeToAttatch:s stationID:1];
-        [self workstation:CGPointMake(s.frame.size.width/4, -s.frame.size.height/2.8) scale:0.9 nodeToAttatch:s stationID:2];
-        [self workstation:CGPointMake(-s.frame.size.width/4, -s.frame.size.height/2.8) scale:0.9 nodeToAttatch:s stationID:3];
+        [self workstation:CGPointMake(s.frame.size.width/4, -s.frame.size.height/8) scale:0.9 nodeToAttatch:s stationID:0];
+        [self workstation:CGPointMake(-s.frame.size.width/4, -s.frame.size.height/8) scale:0.9 nodeToAttatch:s stationID:1];
+        [self workstation:CGPointMake(s.frame.size.width/4, -s.frame.size.height/2.6) scale:0.9 nodeToAttatch:s stationID:2];
+        [self workstation:CGPointMake(-s.frame.size.width/4, -s.frame.size.height/2.6) scale:0.9 nodeToAttatch:s stationID:3];
     }
     if([buildingType getCurrentBuildingID] == 4){
-        [self workstation:CGPointMake(s.frame.size.width/3, -s.frame.size.height/18) scale:0.7 nodeToAttatch:s stationID:0];
-        [self workstation:CGPointMake(-s.frame.size.width/3, -s.frame.size.height/18) scale:0.7 nodeToAttatch:s stationID:1];
-        [self workstation:CGPointMake(s.frame.size.width/3, -s.frame.size.height/5) scale:0.7 nodeToAttatch:s stationID:2];
-        [self workstation:CGPointMake(0, -s.frame.size.height/5) scale:0.7 nodeToAttatch:s stationID:3];
-        [self workstation:CGPointMake(0, -s.frame.size.height/18) scale:0.7 nodeToAttatch:s stationID:4];
+        [self workstation:CGPointMake(s.frame.size.width/4, -s.frame.size.height/22) scale:0.8 nodeToAttatch:s stationID:0];
+        [self workstation:CGPointMake(-s.frame.size.width/4, -s.frame.size.height/22) scale:0.8 nodeToAttatch:s stationID:1];
+        [self workstation:CGPointMake(s.frame.size.width/4, -s.frame.size.height/4.3) scale:0.8 nodeToAttatch:s stationID:2];
+        [self workstation:CGPointMake(-s.frame.size.width/4, -s.frame.size.height/4.3) scale:0.8 nodeToAttatch:s stationID:3];
+        [self workstation:CGPointMake(0, -s.frame.size.height/2.35) scale:0.8 nodeToAttatch:s stationID:4];
 
     }
     if([buildingType getCurrentBuildingID] == 5){
-        [self workstation:CGPointMake(s.frame.size.width/3, -s.frame.size.height/18) scale:0.7 nodeToAttatch:s stationID:0];
-        [self workstation:CGPointMake(-s.frame.size.width/3, -s.frame.size.height/18) scale:0.7 nodeToAttatch:s stationID:1];
-        [self workstation:CGPointMake(s.frame.size.width/3, -s.frame.size.height/5) scale:0.7 nodeToAttatch:s stationID:2];
-        [self workstation:CGPointMake(0, -s.frame.size.height/5) scale:0.7 nodeToAttatch:s stationID:3];
-        [self workstation:CGPointMake(0, -s.frame.size.height/18) scale:0.7 nodeToAttatch:s stationID:4];
-        [self workstation:CGPointMake(-s.frame.size.width/3, -s.frame.size.height/5) scale:0.7 nodeToAttatch:s stationID:5];
+        [self workstation:CGPointMake(s.frame.size.width/4, -s.frame.size.height/22) scale:0.8 nodeToAttatch:s stationID:0];
+        [self workstation:CGPointMake(-s.frame.size.width/4, -s.frame.size.height/22) scale:0.8 nodeToAttatch:s stationID:1];
+        [self workstation:CGPointMake(s.frame.size.width/4, -s.frame.size.height/4.3) scale:0.8 nodeToAttatch:s stationID:2];
+        [self workstation:CGPointMake(-s.frame.size.width/4, -s.frame.size.height/4.3) scale:0.8 nodeToAttatch:s stationID:3];
+        [self workstation:CGPointMake(s.frame.size.width/4, -s.frame.size.height/2.35) scale:0.8 nodeToAttatch:s stationID:4];
+        [self workstation:CGPointMake(-s.frame.size.width/4,  -s.frame.size.height/2.35) scale:0.8 nodeToAttatch:s stationID:5];
     }
-    
+    if([buildingType getCurrentBuildingID] == 6){
+        [self workstation:CGPointMake(s.frame.size.width/4, s.frame.size.height/40) scale:0.7 nodeToAttatch:s stationID:0];
+        [self workstation:CGPointMake(-s.frame.size.width/4, s.frame.size.height/40) scale:0.7 nodeToAttatch:s stationID:1];
+        [self workstation:CGPointMake(s.frame.size.width/4, -s.frame.size.height/8) scale:0.7 nodeToAttatch:s stationID:2];
+        [self workstation:CGPointMake(-s.frame.size.width/4, -s.frame.size.height/8) scale:0.7 nodeToAttatch:s stationID:3];
+        [self workstation:CGPointMake(s.frame.size.width/4, -s.frame.size.height/3.6) scale:0.7 nodeToAttatch:s stationID:4];
+        [self workstation:CGPointMake(-s.frame.size.width/4, -s.frame.size.height/3.6) scale:0.7 nodeToAttatch:s stationID:5];
+        [self workstation:CGPointMake(0, -s.frame.size.height/2.3) scale:0.7 nodeToAttatch:s stationID:6];
+    }
+    if([buildingType getCurrentBuildingID] == 7){
+        [self workstation:CGPointMake(s.frame.size.width/4, s.frame.size.height/40) scale:0.7 nodeToAttatch:s stationID:0];
+        [self workstation:CGPointMake(-s.frame.size.width/4, s.frame.size.height/40) scale:0.7 nodeToAttatch:s stationID:1];
+        [self workstation:CGPointMake(s.frame.size.width/4, -s.frame.size.height/8) scale:0.7 nodeToAttatch:s stationID:2];
+        [self workstation:CGPointMake(-s.frame.size.width/4, -s.frame.size.height/8) scale:0.7 nodeToAttatch:s stationID:3];
+        [self workstation:CGPointMake(s.frame.size.width/4, -s.frame.size.height/3.6) scale:0.7 nodeToAttatch:s stationID:4];
+        [self workstation:CGPointMake(-s.frame.size.width/4, -s.frame.size.height/3.6) scale:0.7 nodeToAttatch:s stationID:5];
+        [self workstation:CGPointMake(s.frame.size.width/4, -s.frame.size.height/2.3) scale:0.7 nodeToAttatch:s stationID:6];
+        [self workstation:CGPointMake(-s.frame.size.width/4, -s.frame.size.height/2.3) scale:0.7 nodeToAttatch:s stationID:7];
+    }
+    if([buildingType getCurrentBuildingID] == 8){
+        [self workstation:CGPointMake(s.frame.size.width/4, s.frame.size.height/15) scale:0.6 nodeToAttatch:s stationID:0];
+        [self workstation:CGPointMake(-s.frame.size.width/4, s.frame.size.height/15) scale:0.6 nodeToAttatch:s stationID:1];
+        [self workstation:CGPointMake(s.frame.size.width/4, -s.frame.size.height/20) scale:0.6 nodeToAttatch:s stationID:2];
+        [self workstation:CGPointMake(-s.frame.size.width/4, -s.frame.size.height/20) scale:0.6 nodeToAttatch:s stationID:3];
+        [self workstation:CGPointMake(s.frame.size.width/4, -s.frame.size.height/5.9) scale:0.6 nodeToAttatch:s stationID:4];
+        [self workstation:CGPointMake(-s.frame.size.width/4, -s.frame.size.height/5.9) scale:0.6 nodeToAttatch:s stationID:5];
+        [self workstation:CGPointMake(s.frame.size.width/4, -s.frame.size.height/3.4) scale:0.6 nodeToAttatch:s stationID:6];
+        [self workstation:CGPointMake(-s.frame.size.width/4, -s.frame.size.height/3.4) scale:0.6 nodeToAttatch:s stationID:7];
+        [self workstation:CGPointMake(0, -s.frame.size.height/2.4) scale:0.6 nodeToAttatch:s stationID:8];
+    }
+    if([buildingType getCurrentBuildingID] == 9){
+        [self workstation:CGPointMake(s.frame.size.width/4, s.frame.size.height/15) scale:0.6 nodeToAttatch:s stationID:0];
+        [self workstation:CGPointMake(-s.frame.size.width/4, s.frame.size.height/15) scale:0.6 nodeToAttatch:s stationID:1];
+        [self workstation:CGPointMake(s.frame.size.width/4, -s.frame.size.height/20) scale:0.6 nodeToAttatch:s stationID:2];
+        [self workstation:CGPointMake(-s.frame.size.width/4, -s.frame.size.height/20) scale:0.6 nodeToAttatch:s stationID:3];
+        [self workstation:CGPointMake(s.frame.size.width/4, -s.frame.size.height/5.9) scale:0.6 nodeToAttatch:s stationID:4];
+        [self workstation:CGPointMake(-s.frame.size.width/4, -s.frame.size.height/5.9) scale:0.6 nodeToAttatch:s stationID:5];
+        [self workstation:CGPointMake(s.frame.size.width/4, -s.frame.size.height/3.4) scale:0.6 nodeToAttatch:s stationID:6];
+        [self workstation:CGPointMake(-s.frame.size.width/4, -s.frame.size.height/3.4) scale:0.6 nodeToAttatch:s stationID:7];
+        [self workstation:CGPointMake(s.frame.size.width/4, -s.frame.size.height/2.4) scale:0.6 nodeToAttatch:s stationID:8];
+        [self workstation:CGPointMake(-s.frame.size.width/4, -s.frame.size.height/2.4) scale:0.6 nodeToAttatch:s stationID:9];
+    }
 }
 +(void)setUsableWorkstationAmount: (int)value {
     NSUserDefaults *nd = [NSUserDefaults standardUserDefaults];
