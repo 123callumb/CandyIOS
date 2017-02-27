@@ -14,12 +14,28 @@
 #import "menuHandler.h"
 #import "coinSpawner.h"
 #import "optimiseCandyMachineData.h"
+#import "sparks.h"
 
 @implementation candyMachineInteraction
 
 int currentSelectedMachine = 1337;
 
-+(void)onCandyMachineTouch: (SKSpriteNode*)machine scene:(SKScene*)s view:(UIView*)v{
++(void)onCandyFirstMachineTouch: (SKSpriteNode*)machine scene:(SKScene*)s view:(UIView*)v {
+    for(int i = 0; i <= [candyMachines getCandyMachinesUnlocked] - 1; i++){
+        if([machine.name isEqualToString:[NSString stringWithFormat:@"candyMachine_Number_%d", i]]){
+            NSLog(@"Candy Machine %d was touched", i);
+            SKAction *rise= [SKAction fadeAlphaTo:0.3 duration:0.1];
+            [machine runAction:rise completion:^{
+                SKAction *lower= [SKAction fadeAlphaTo:1 duration:0.1];
+                [machine runAction:lower completion:^{
+                    [self onCandyMachineTouch:machine scene:s view:v];
+                }];
+            }];
+        }
+    }
+}
+
++(void)onCandyMachineTouch: (SKSpriteNode*)machine scene:(SKScene*)s view:(UIView*)v {
     for(int i = 0; i <= [candyMachines getCandyMachinesUnlocked] - 1; i++){
         if([machine.name isEqualToString:[NSString stringWithFormat:@"candyMachine_Number_%d", i]]){
             NSLog(@"Candy Machine %d was touched", i);

@@ -36,7 +36,7 @@
             [fiftyTapBonus tapCollector:s];
             [fiftyTapBonus onTouchofBonus:(SKSpriteNode*)obj scene:s];
             [candyMachineInteraction animateAllCandyMachinesOnTap:s];
-            [candyMachineInteraction onCandyMachineTouch:(SKSpriteNode*)obj scene:s view:v];
+           // [candyMachineInteraction onCandyMachineTouch:(SKSpriteNode*)obj scene:s view:v];
             [objectivesBronze object3:v];
             [objectivesSilver object2:v];
     }else {

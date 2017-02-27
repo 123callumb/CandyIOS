@@ -35,6 +35,7 @@
 #import "objectivesBronze.h"
 #import "tipsUI.h"
 #import "bannerBonusUI.h"
+#import "candyMachineInteraction.h"
 
 UIScrollView* UIscrollUpdate = nil;
 UIImageView *img1 = nil;
@@ -67,6 +68,9 @@ UIImageView *img1 = nil;
     gestureLeft.direction = UISwipeGestureRecognizerDirectionRight;
     [[self view] addGestureRecognizer:gestureLeft];
     
+    UILongPressGestureRecognizer *longPress = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(onLongPress:)];
+    longPress.minimumPressDuration = 0.4;
+    [[self view] addGestureRecognizer:longPress];
     
     //Start Auto Candy Machines
     [candyMachineAutoSpawner startAutoCandyMachines:self];
@@ -112,7 +116,20 @@ UIImageView *img1 = nil;
         [menuUi createMenu:self.view];
     }
 }
-
+-(void)onLongPress: (UILongPressGestureRecognizer*)longPress {\
+    
+    CGPoint touchLocation = [longPress.self locationOfTouch:0 inView:longPress.view];
+    CGPoint objLoc = [[self.scene view] convertPoint:touchLocation toScene:self.scene];
+    SKNode *obj = [self nodeAtPoint:objLoc];
+    
+    if (longPress.state == UIGestureRecognizerStateBegan) {
+        [candyMachineInteraction onCandyFirstMachineTouch:(SKSpriteNode*)obj scene:self view:self.view];
+    }
+    if (longPress.state == UIGestureRecognizerStateEnded) {
+       
+    }
+    
+}
 -(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
     [taps onRelease:self];
 }
