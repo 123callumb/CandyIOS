@@ -7,17 +7,21 @@
 //
 
 #import "tipsUI.h"
+#import "settingsData.h"
 
 @implementation tipsUI
 +(void)startTipSpawner: (SKScene*)s {
-    SKAction *tipTimer = [SKAction waitForDuration:120];
+    SKAction *tipTimer = [SKAction waitForDuration:10];
     SKAction *tipSpawner = [SKAction runBlock:^{
-        [self spawnRandomTip:s]
+        if(![settingsData isTipsEnabled]){
+            [self spawnRandomTip:s];
+                }
         ;}];
     SKAction *seq = [SKAction sequence:@[tipTimer, tipSpawner]];
     SKAction *repeat = [SKAction repeatActionForever:seq];
-    
-    [s runAction:repeat];
+    if(![settingsData isTipsEnabled]){
+        [s runAction:repeat];
+    }
 }
 +(void)spawnRandomTip:(SKScene*)s {
     SKSpriteNode *tip = [self createTipsUI:[self getRandomTiString]];

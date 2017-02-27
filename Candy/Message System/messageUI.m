@@ -28,10 +28,12 @@
     NSUserDefaults *nd = [NSUserDefaults standardUserDefaults];
     
     if([nd integerForKey:[NSString stringWithFormat:@"messageBox_with_id_%d", boxID]] == 0){
-        UIView *messageBox = [[UIView alloc] initWithFrame:CGRectMake(0, 0, v.frame.size.width, v.frame.size.height)];
+        UIView *messageBox = [[UIView alloc] initWithFrame:CGRectMake(0,  v.frame.size.height, v.frame.size.width, v.frame.size.height)];
         UIImage *backgroundImage = [UIImage imageNamed:@"informationBox"];
+        UIImage *backgoundTick = [UIImage imageNamed:@"informationBoxTick"];
         UIButton *backdrop = [UIButton buttonWithType:UIButtonTypeCustom];
         [backdrop setImage:backgroundImage forState:UIControlStateNormal];
+        [backdrop setImage:backgoundTick forState:UIControlStateHighlighted];
         [backdrop addTarget:self action:@selector(removeMessageOnPress:) forControlEvents:UIControlEventTouchUpInside];
     
         UILabel *information = [[UILabel alloc] initWithFrame:CGRectMake(messageBox.frame.size.width/2 - v.frame.size.width/3 , messageBox.frame.size.height/2.5, v.frame.size.width/1.5, v.frame.size.height/2)];
@@ -60,6 +62,10 @@
         [messageBox addSubview:information];
     
         [v addSubview:messageBox];
+        
+        [UIView animateWithDuration:0.3 animations:^{
+            [messageBox setFrame:CGRectMake(0, 0, v.frame.size.width, v.frame.size.height)];
+        }];
     
         if(displayOnce){
             [nd setInteger:1 forKey:[NSString stringWithFormat:@"messageBox_with_id_%d", boxID]];
@@ -70,6 +76,12 @@
 +(void)removeMessageOnPress: (id)sender {
     UIButton *button = (UIButton*)sender;
     UIView *messageBox = [button superview];
-    [messageBox removeFromSuperview];
+    UIView *v = [messageBox superview];
+    
+    [UIView animateWithDuration:0.3 animations:^{
+        [messageBox setFrame:CGRectMake(0,  -v.frame.size.height, messageBox.frame.size.width, -messageBox.frame.size.height)];
+    } completion:^(BOOL finished){
+        [messageBox removeFromSuperview];
+    }];
 }
 @end
