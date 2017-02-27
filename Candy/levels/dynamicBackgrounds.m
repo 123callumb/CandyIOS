@@ -55,7 +55,4 @@
 +(void)addClouds: (SKScene*)s {
 
 }
-+(void)addSunAndMoon {
-
-}
 @end
