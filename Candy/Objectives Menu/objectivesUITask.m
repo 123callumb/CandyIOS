@@ -8,6 +8,7 @@
 
 #import "objectivesUITask.h"
 #import "objectivesData.h"
+#import "messageUI.h"
 
 @implementation objectivesUITask
 +(void)createTasks: (UIView*)v {
@@ -46,27 +47,31 @@
     UIView *mainObj = [[UIView alloc] initWithFrame:frame];
     
     UIImage *bgType = [UIImage imageNamed:@"objGold"];
-    
+    UIButton *skipButton = [UIButton buttonWithType:UIButtonTypeCustom];
+
     if(objID == 0){
         bgType = [UIImage imageNamed:@"objGold"];
+        skipButton.tag = 1447;
     }
     if(objID == 1){
         bgType = [UIImage imageNamed:@"objSilver"];
+        skipButton.tag = 1448;
     }
     if(objID == 2){
         bgType = [UIImage imageNamed:@"objBronze"];
+        skipButton.tag = 1449;
     }
     
     UIImageView *objView = [[UIImageView alloc] initWithImage:bgType];
     [objView setFrame:CGRectMake(0, 0, mainObj.frame.size.width, mainObj.frame.size.height)];
     
     UIImage *skipBg = [UIImage imageNamed:@"objSkip"];
-    UIButton *skipButton = [UIButton buttonWithType:UIButtonTypeCustom];
 
     float skipDi = mainObj.frame.size.width/7.5;
 
     [skipButton setImage:skipBg forState:UIControlStateNormal];
     [skipButton setFrame:CGRectMake(mainObj.frame.size.width - skipDi - skipDi/8, mainObj.frame.size.height - skipDi - skipDi/8, skipDi, skipDi)];
+    [skipButton addTarget:self action:@selector(onSkip:) forControlEvents:UIControlEventTouchUpInside];
     
     UILabel *objText = [[UILabel alloc] initWithFrame:CGRectMake(mainObj.frame.size.width/3.6, mainObj.frame.size.height/4, mainObj.frame.size.width/1.6, mainObj.frame.size.height/3)];
     
@@ -83,5 +88,11 @@
     return mainObj;
     
 }
-
++(void)onSkip:(id)sender{
+    UIButton *skip = (UIButton*)sender;
+    UIView *objV = [skip superview];
+    UIView *v = [objV superview];
+    
+    [messageUI createConfirmMessageBox:v information:@"Are you sure you would like to skip this objective for 2 Gems?" representingImage:@"gem" imageScale:0.4 messageBoxID:80 displayOnce:false onConfirm:2 confTag:(int)skip.tag];
+}
 @end
