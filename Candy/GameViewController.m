@@ -29,6 +29,7 @@
     
     skView.showsFPS = YES;
     skView.showsNodeCount = YES;
+    skView.multipleTouchEnabled = NO;
 }
 
 - (BOOL)shouldAutorotate {

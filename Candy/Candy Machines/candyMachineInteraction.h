@@ -14,4 +14,5 @@
 +(int)getCurrentSelectedMachine;
 +(void)resetCurrentSelectedMachine;
 +(void)onBackButton: (SKSpriteNode*)s view:(UIView*)v;
++(void)onCandyFirstMachineTouch: (SKSpriteNode*)machine scene:(SKScene*)s view:(UIView*)v;
 @end
