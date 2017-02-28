@@ -36,6 +36,7 @@
 #import "tipsUI.h"
 #import "bannerBonusUI.h"
 #import "candyMachineInteraction.h"
+#import "sweetInventoryData.h"
 
 UIScrollView* UIscrollUpdate = nil;
 UIImageView *img1 = nil;
@@ -47,6 +48,11 @@ UIImageView *img1 = nil;
     [backgroundManager mainScene:self];
     [mainUI drawUI:self];
     [levelDecider createLevel:self];
+    
+    //Tutorial Stuff
+    if([[sweetInventoryData getInventory] count] >= 1){
+        [tutorialMessages firstTimeOpenedPacket:self.view];
+    }
     [tutorialMessages firstTimeLoadMessages:self.view];
     
     //scrollView(Update)
@@ -81,6 +87,7 @@ UIImageView *img1 = nil;
     
     //Set Bonus Banner Settings
     [bannerBonusUI addBonusBanner:self.view];
+
     
 }
 

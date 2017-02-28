@@ -12,6 +12,7 @@
 #import "packetInventoryData.h"
 #import "mainTransition.h"
 #import "buttonAnimation.h"
+#import "tutorialMessages.h"
 
 @implementation myPacketsScene
 
@@ -31,6 +32,7 @@ int currentPacketDisplay;
     [[self view] addGestureRecognizer:gestureLeft];
     
     currentPacketDisplay = 0;
+    [tutorialMessages firstTimePacktsButton:self.view];
     
 }
 -(void)onGestureRight: (UISwipeGestureRecognizer*)swipe {

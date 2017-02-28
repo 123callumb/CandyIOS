@@ -17,6 +17,7 @@
 #import "gems.h"
 #import "candyMachineAutoSpawner.h"
 #import "objectivesGold.h"
+#import "tutorialMessages.h"
 
 @implementation candyMachineUI
 
@@ -104,7 +105,7 @@ int machineSlotSelected = 3;
     SKAction *slideIn = [SKAction moveToY:-s.frame.size.height/20 duration:0.3];
     [self addCandyMachineSlotUIWithID:machineID view:v];
     [mainUI runAction:slideIn];
-    
+    [tutorialMessages firstTimeMachine:v];
 }
 //Need to create a slot creator to minimise this code!
 +(void)addCandyMachineSlotUIWithID: (int)machineID view:(UIView*)v {

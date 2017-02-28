@@ -42,15 +42,15 @@
 }
 +(id)createTipsUI:(NSString*)tipString {
     SKSpriteNode *tipsBG = [SKSpriteNode spriteNodeWithImageNamed:@"tips"];
-    tipsBG.xScale = 0.43;
-    tipsBG.yScale =0.43;
-    tipsBG.zPosition = -4;
+    tipsBG.xScale = 0.48;
+    tipsBG.yScale =0.48;
+    tipsBG.zPosition = -3;
     
     SKLabelNode *tipText = [SKLabelNode labelNodeWithFontNamed:@"Coder's-Crux"];
     tipText.text = tipString;
     tipText.fontColor = [SKColor colorWithRed:51.0f/255.0f green:51.0f/255.0f blue:51.0f/255.0f alpha:1];
-    tipText.fontSize = 80;
-    tipText.position = CGPointMake(0, -tipsBG.frame.size.height/8);
+    tipText.fontSize = 70;
+    tipText.position = CGPointMake(0, -tipText.frame.size.height*1.25);
     
     [tipsBG addChild:tipText];
     
@@ -60,8 +60,10 @@
     NSArray *tips = [NSArray arrayWithObjects:
                      @"Make more money by selling trending sweets!",
                      @"Earn Gems from the Free Items Menu",
-                     @"Upgrade your Building for more Candy Machines",
-                     @"Tippy tip tip",
+                     @"Upgrade your Building for more Machines",
+                     @"Older Device? Disable Fancy Effects in Settings",
+                     @"Follow us on twitter @Keemstar",
+                     @"",
                      nil];
     
     return [tips objectAtIndex:[self randomNumberBetween:0 maxNumber:(int)([tips count] - 1)]];

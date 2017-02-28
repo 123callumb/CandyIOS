@@ -17,4 +17,9 @@
 +(void)firstTimeStoreButton: (UIView*)v;
 +(void)firstTimeTrends: (UIView*)v;
 +(void)spinTimeLeft: (UIView*)v;
++(void)firstTimeOpenedPacket: (UIView*)v;
++(void)firstTimeMachine: (UIView*)v;
++(void)firstTimeAfterMachine: (UIView*)v;
++(void)firstTimeObjectives: (UIView*)v;
++(void)firstTimeDailySpin: (UIView*)v;
 @end

@@ -10,6 +10,7 @@
 #import "spinWheel.h"
 #import "sparks.h"
 #import "spinBox.h"
+#import "tutorialMessages.h"
 
 @implementation spinScene
 
@@ -35,6 +36,7 @@ int count = 0;
         [tapMeter runAction:rep];
     
         }
+    [tutorialMessages firstTimeDailySpin:self.view];
     
     }
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
