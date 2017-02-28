@@ -11,7 +11,7 @@
 
 @implementation tipsUI
 +(void)startTipSpawner: (SKScene*)s {
-    SKAction *tipTimer = [SKAction waitForDuration:10];
+    SKAction *tipTimer = [SKAction waitForDuration:90];
     SKAction *tipSpawner = [SKAction runBlock:^{
         if(![settingsData isTipsEnabled]){
             [self spawnRandomTip:s];
