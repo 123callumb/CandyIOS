@@ -14,6 +14,9 @@
 +(void)addDynamicBackground: (SKScene*)s {
     [self addSky:s];
     [self addCurrentBackdrop:s];
+    if(![settingsData isFancyGraphicsEnabled]){
+        [self addClouds:s];
+    }
 }
 +(void)addCurrentBackdrop: (SKScene*)s {
     
@@ -53,6 +56,24 @@
     }
 }
 +(void)addClouds: (SKScene*)s {
+    SKSpriteNode *cloud_1 = [SKSpriteNode spriteNodeWithImageNamed:@"xlouds"];
+    
+    cloud_1.xScale = 0.43;
+    
+    cloud_1.yScale = 0.43;
+    
+    cloud_1.zPosition = -6;
+    
+    cloud_1.position = CGPointMake(-s.frame.size.width, s.frame.size.height/2.65);
+    
+    [s addChild:cloud_1];
+    
+    SKAction *moveRight = [SKAction moveTo:CGPointMake(s.frame.size.width/2 + cloud_1.size.width, s.frame.size.height/2.65) duration:90];
+    SKAction *posReset = [SKAction moveTo:CGPointMake(-s.frame.size.width/2-cloud_1.size.width, s.frame.size.height/2.65) duration:0];
+    SKAction *seq = [SKAction sequence:@[moveRight, posReset]];
+    SKAction *repeatSeq = [SKAction repeatActionForever:seq];
+    
+    [cloud_1 runAction:repeatSeq];
 
 }
 @end
