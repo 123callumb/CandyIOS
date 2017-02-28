@@ -9,6 +9,7 @@
 #import "menuUi.h"
 #import "menuUIButtons.h"
 #import "settingsUI.h"
+#import "tutorialMessages.h"
 
 @implementation menuUi
 
@@ -32,6 +33,7 @@
         [UIView animateWithDuration:0.3 animations:^{
             menuBase.frame = CGRectMake(0, 0, menuBase.frame.size.width, menuBase.frame.size.height);
         }];
+        [tutorialMessages firstTimeMenuButton:v];
     }
 }
 +(void)addButtonScrollUI: (UIView*)v {

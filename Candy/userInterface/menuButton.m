@@ -9,7 +9,6 @@
 #import "menuButton.h"
 #import "bottomBar.h"
 #import "packetButton.h"
-#import "tutorialMessages.h"
 #import "trendsButton.h"
 #import "buttonAnimation.h"
 #import "menuUI.h"
@@ -17,7 +16,6 @@
 
 @implementation menuButton
 +(void)onTouch: (SKSpriteNode*)obj scene:(SKScene*)s view:(UIView*)v{
-    [tutorialMessages firstTimeMenuButton:s.view];
     [buttonAnimation changeState:obj changeName:@"menuTopState1" originalName:@"menuTopState0"];
     [menuUi createMenu:v];
 }

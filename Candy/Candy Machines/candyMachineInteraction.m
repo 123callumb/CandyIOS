@@ -15,6 +15,7 @@
 #import "coinSpawner.h"
 #import "optimiseCandyMachineData.h"
 #import "sparks.h"
+#import "tutorialMessages.h"
 
 @implementation candyMachineInteraction
 
@@ -84,6 +85,7 @@ int currentSelectedMachine = 1337;
         [self resetCurrentSelectedMachine];
         [optimiseCandyMachineData resetSlotArray];
         [menuHandler setCurrentMenu:4];
+        [tutorialMessages firstTimeAfterMachine:v];
     }
 }
 @end

@@ -8,6 +8,7 @@
 
 #import "objectivesUI.h"
 #import "objectivesUITask.h"
+#import "tutorialMessages.h"
 
 @implementation objectivesUI
 
@@ -40,6 +41,8 @@
         [mainObj setAlpha:1];
         [mainObj setFrame:v.frame];
     }];
+    
+    [tutorialMessages firstTimeObjectives:v];
 }
 +(void)onBackPress: (id)sender {
     UIButton *back = (UIButton*)sender;
