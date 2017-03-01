@@ -22,9 +22,7 @@
     gemBacking.anchorPoint = CGPointMake(0.5, 0.55);
     
     SKAction *slideRight = [SKAction moveByX:-s.frame.size.width y:0 duration:0.15];
-    
-    [gemInteractionUI addInteractionUI:gemBacking];
-    
+        
     [s addChild:done];
     [s addChild:gemBacking];
     

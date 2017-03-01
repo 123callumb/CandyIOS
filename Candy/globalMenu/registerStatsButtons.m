@@ -23,8 +23,6 @@
     [playerStatsMenu onDoneTouch:(SKSpriteNode*)n scene:s];
     [playerStatsMenu onPlayerButtonTouch:s location:p node:n];
     [packetUIButtons onButtonPress:(SKSpriteNode*)n scene:s];
-    [gemGemeratorGui onDoneTouch:(SKSpriteNode*)n scene:s];
-    [gemInteractionUI onInteraction:(SKSpriteNode*)n pos:p];
     [buildingUI onUpgTouch:v button:(SKSpriteNode*)n scene:s];
     [buildingUpgradeUI onBackTouch:v button:(SKSpriteNode*)n scene:s];
     [buildingUpgradeUI onUpgradeTouch:v button:(SKSpriteNode*)n scene:s];
