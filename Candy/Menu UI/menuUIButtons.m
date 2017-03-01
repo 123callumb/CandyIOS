@@ -128,9 +128,8 @@ int menuNo = -1;
     if(menuNo == 8){
         menuNo = -1;
         [menuHandler setCurrentMenu:8];
-        [gemGemeratorGui createGemMenu:s];
-        [tutorialMessages firstTimeGemeratorButton:v];
-        [objectivesSilver object1:v];
+        [mainTransition switchScene:s sceneTwo:@"gemerator" Transition:[SKTransition crossFadeWithDuration:0.5]];
+
     }
     if(menuNo == 9){
         menuNo = -1;

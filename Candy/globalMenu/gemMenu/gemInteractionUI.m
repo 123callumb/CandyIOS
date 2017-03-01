@@ -11,8 +11,7 @@
 #import "gemPotData.h"
 
 @implementation gemInteractionUI
-+(void)addInteractionUI: (SKSpriteNode*)s {
-    [self addBackingSprite:s];
++(void)addInteractionUI: (SKScene*)s {
     [self addGemPot:s];
     [self addGemLabelValues:s];
 }
@@ -23,28 +22,29 @@
     back.zPosition = 12;
     [s addChild:back];
 }
-+(void)addGemPot: (SKSpriteNode*)s {
-    SKSpriteNode *pot = [SKSpriteNode spriteNodeWithImageNamed:@"gemBag"];
++(void)addGemPot: (SKScene*)s {
+    SKSpriteNode *pot = [SKSpriteNode spriteNodeWithImageNamed:@"gem_pot"];
     pot.name = @"gemBag";
-    pot.position = CGPointMake(0, -s.frame.size.height/1.4);
+    pot.xScale = 0.5;
+    pot.yScale = 0.5;
+    pot.position = CGPointMake(0, -s.frame.size.height/2.6);
     pot.zPosition = 13;
     [s addChild:pot];
 }
 +(void)onInteraction: (SKSpriteNode*)s pos:(CGPoint)loc {
-    if([s.name isEqualToString:@"gemBacking"]){
-        if([gems getMiniGems] > 0){
+    if([gems getMiniGems] > 0){
             SKSpriteNode *ui = (SKSpriteNode*)[s parent];
             SKSpriteNode *gemPot = (SKSpriteNode*)[ui childNodeWithName:@"gemBag"];
             
             [self miniGemAnimation:ui bagNode:gemPot touchPos:loc];
-        }
-
     }
 }
 +(void)miniGemAnimation: (SKSpriteNode*)s bagNode:(SKSpriteNode*)bagNode touchPos:(CGPoint)pos {
     SKSpriteNode *miniGem = [SKSpriteNode spriteNodeWithImageNamed:@"miniGems"];
     miniGem.position = pos;
     miniGem.zPosition = 15;
+    miniGem.xScale = 0.43;
+    miniGem.yScale = 0.43;
     [s addChild:miniGem];
     
     CGPoint bagPos = bagNode.position;
@@ -57,7 +57,7 @@
     
     
 }
-+(void)addGemLabelValues: (SKSpriteNode*)s {
++(void)addGemLabelValues: (SKScene*)s {
     SKLabelNode *gemValue = [SKLabelNode labelNodeWithFontNamed:@"Coder's-Crux"];
     SKLabelNode *miniGemValue = [SKLabelNode labelNodeWithFontNamed:@"Coder's-Crux"];
     SKLabelNode *tapToTrade = [SKLabelNode labelNodeWithFontNamed:@"Coder's-Crux"];
@@ -67,17 +67,17 @@
     
     tapToTrade.zRotation = -M_PI/8;
     
-    tapToTrade.position = CGPointMake(s.frame.size.width/2, 0);
-    gemValue.position = CGPointMake(s.frame.size.width/2.2, s.frame.size.height/2.9);
-    miniGemValue.position = CGPointMake(-s.frame.size.width/2.2, s.frame.size.height/2.9);
+    tapToTrade.position = CGPointMake(s.frame.size.width/4, -s.frame.size.height/6);
+    gemValue.position = CGPointMake(s.frame.size.width/6, 0);
+    miniGemValue.position = CGPointMake(-s.frame.size.width/6, 0);
     
     tapToTrade.zPosition = 14;
     miniGemValue.zPosition = 14;
     gemValue.zPosition = 14;
     
-    tapToTrade.fontSize = 100.0f;
-    miniGemValue.fontSize = 140.0f;
-    gemValue.fontSize = 140.0f;
+    tapToTrade.fontSize = 60.0f;
+    miniGemValue.fontSize = 100.0f;
+    gemValue.fontSize = 100.0f;
     
     tapToTrade.fontColor = [SKColor colorWithDisplayP3Red:51.0f/255.0f green:51.0f/255.0f blue:51.0f/255.0f alpha:1];
     miniGemValue.fontColor = [SKColor colorWithDisplayP3Red:51.0f/255.0f green:51.0f/255.0f blue:51.0f/255.0f alpha:1];
@@ -110,10 +110,10 @@
     SKAction *growItem = [SKAction scaleBy:2 duration:0.4];
     
     if(gemNo == 15){
-        gem.position = CGPointMake(0, -s.frame.size.height/1.5);
+        gem.position = CGPointMake(0, -s.frame.size.height/2.2);
         gem.zPosition = 16;
-        gem.xScale = 1.5;
-        gem.yScale = 1.5;
+        gem.xScale = 1;
+        gem.yScale = 1;
         [s addChild:gem];
         
         [gem runAction:moveUp];
@@ -126,8 +126,8 @@
         }];
 
     }else {
-        amount.position = CGPointMake(0, -s.frame.size.height/1.5);
-        amount.fontSize = 200.0f;
+        amount.position = CGPointMake(0, -s.frame.size.height/2.8);
+        amount.fontSize = 100.0f;
         amount.fontColor = [SKColor whiteColor];
         amount.zPosition = 16;
         amount.text = [gemPotData getGemsAsString];

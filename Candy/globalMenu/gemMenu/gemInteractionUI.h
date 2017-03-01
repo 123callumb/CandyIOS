@@ -10,7 +10,7 @@
 
 @interface gemInteractionUI : SKSpriteNode
 +(void)potAnimation: (SKSpriteNode*)s gemValue:(int)gemNo;
-+(void)addInteractionUI: (SKSpriteNode*)s;
++(void)addInteractionUI: (SKScene*)s;
 +(void)onInteraction: (SKSpriteNode*)s pos:(CGPoint)loc;
 +(void)refreshLabelNodes: (SKSpriteNode*)s;
 @end

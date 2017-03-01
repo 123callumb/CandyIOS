@@ -24,6 +24,7 @@
 		750561791E4FFB1300C64E35 /* optimiseCandyMachineData.m in Sources */ = {isa = PBXBuildFile; fileRef = 750561781E4FFB1300C64E35 /* optimiseCandyMachineData.m */; };
 		7505617D1E50DF0800C64E35 /* settingsUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 7505617C1E50DF0800C64E35 /* settingsUI.m */; };
 		750561801E50E85C00C64E35 /* settingsData.m in Sources */ = {isa = PBXBuildFile; fileRef = 7505617F1E50E85C00C64E35 /* settingsData.m */; };
+		7507BB061E66C38700A8452D /* gemeratorScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 7507BB051E66C38700A8452D /* gemeratorScene.m */; };
 		750A02DF1E40EBEE00869355 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 750A02DE1E40EBEE00869355 /* AdSupport.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		750A02E11E40EBFB00869355 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 750A02E01E40EBFB00869355 /* AudioToolbox.framework */; };
 		750A02E31E40EC0500869355 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 750A02E21E40EC0500869355 /* AVFoundation.framework */; };
@@ -315,6 +316,8 @@
 		7505617C1E50DF0800C64E35 /* settingsUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = settingsUI.m; path = "Candy/Settings Menu/settingsUI.m"; sourceTree = "<group>"; };
 		7505617E1E50E85C00C64E35 /* settingsData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = settingsData.h; path = "Candy/Settings Menu/settingsData.h"; sourceTree = "<group>"; };
 		7505617F1E50E85C00C64E35 /* settingsData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = settingsData.m; path = "Candy/Settings Menu/settingsData.m"; sourceTree = "<group>"; };
+		7507BB041E66C38700A8452D /* gemeratorScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gemeratorScene.h; sourceTree = "<group>"; };
+		7507BB051E66C38700A8452D /* gemeratorScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = gemeratorScene.m; sourceTree = "<group>"; };
 		750A02DE1E40EBEE00869355 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		750A02E01E40EBFB00869355 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		750A02E21E40EC0500869355 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -1603,6 +1606,8 @@
 				75ED3B5A1E19647F0012BA98 /* gemInteractionUI.m */,
 				75ED3B5C1E19897D0012BA98 /* gemPotData.h */,
 				75ED3B5D1E19897D0012BA98 /* gemPotData.m */,
+				7507BB041E66C38700A8452D /* gemeratorScene.h */,
+				7507BB051E66C38700A8452D /* gemeratorScene.m */,
 			);
 			name = gemMenu;
 			sourceTree = "<group>";
@@ -1875,6 +1880,7 @@
 				75B526451E1EAD580020A609 /* levelStructure.m in Sources */,
 				75919B9C1DDCA4CE001F66EB /* levelDecider.m in Sources */,
 				751F1EAF1E46CFE000476133 /* candyMachineUI.m in Sources */,
+				7507BB061E66C38700A8452D /* gemeratorScene.m in Sources */,
 				75C36E4A1DCE793D00F84214 /* mainBackground.m in Sources */,
 				75D2DA8B1E20454000E31D1E /* coinStoreUI.m in Sources */,
 				7525F79A1DD0EF9500B0510C /* menuHandler.m in Sources */,
