@@ -45,7 +45,7 @@
     buildingUpgButton.name = @"menuBuildingUpgradeButton";
     SKLabelNode *placeTitle = [SKLabelNode labelNodeWithFontNamed:@"Coder's-Crux"];
     placeTitle.text = [NSString stringWithFormat:@"UPGRADE %@", [buildingType getCurrentBuildingName]];
-    placeTitle.fontSize = 150.0f;
+    placeTitle.fontSize = 140.0f;
     placeTitle.fontColor = [SKColor colorWithDisplayP3Red:51.0f/255.0f green:51.0f/255.0f blue:51.0f/255.0f alpha:1];
     placeTitle.position = CGPointMake(-buildingUpgButton.frame.size.width/16, -buildingUpgButton.frame.size.height/10);
     placeTitle.name = @"menuBuildingUpgradeButton";

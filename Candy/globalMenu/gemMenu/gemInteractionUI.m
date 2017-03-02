@@ -9,18 +9,12 @@
 #import "gemInteractionUI.h"
 #import "gems.h"
 #import "gemPotData.h"
+#import "sparks.h"
 
 @implementation gemInteractionUI
 +(void)addInteractionUI: (SKScene*)s {
     [self addGemPot:s];
     [self addGemLabelValues:s];
-}
-+(void)addBackingSprite: (SKSpriteNode*)s {
-    SKSpriteNode *back = [SKSpriteNode spriteNodeWithImageNamed:@"gemBase"];
-    back.name = @"gemBacking";
-    back.position = CGPointMake(0, -s.frame.size.height/2.85);
-    back.zPosition = 12;
-    [s addChild:back];
 }
 +(void)addGemPot: (SKScene*)s {
     SKSpriteNode *pot = [SKSpriteNode spriteNodeWithImageNamed:@"gem_pot"];
@@ -28,7 +22,7 @@
     pot.xScale = 0.5;
     pot.yScale = 0.5;
     pot.position = CGPointMake(0, -s.frame.size.height/2.6);
-    pot.zPosition = 13;
+    pot.zPosition = 0;
     [s addChild:pot];
 }
 +(void)onInteraction: (SKSpriteNode*)s pos:(CGPoint)loc {
@@ -133,6 +127,8 @@
         amount.text = [gemPotData getGemsAsString];
         
         [s addChild:amount];
+        
+        [sparks createSpriteSplosion:(SKScene*)s nodeAmount:4 pos:amount.frame.origin];
         
         [amount runAction:moveUp];
         [amount runAction:fadeItem completion:^{

@@ -146,7 +146,7 @@ bool sceneChange = false;
 -(NSString*)didReceiveGreyItem:(NSString*)packetType {
     int upperBound = 3;
     int lowerBound = 1;
-    int rndValue = lowerBound + arc4random() % (upperBound - lowerBound);
+    int rndValue = [self randomNumberBetween:lowerBound maxNumber:upperBound];
 
 
     if(rndValue == 1){
@@ -167,7 +167,7 @@ bool sceneChange = false;
 -(NSString*)didReceiveBlueItem:(NSString*)packetType {
     int upperBound = 3;
     int lowerBound = 1;
-    int rndValue = lowerBound + arc4random() % (upperBound - lowerBound);
+    int rndValue = [self randomNumberBetween:lowerBound maxNumber:upperBound];
 
     if(rndValue == 1){
         return [self returnItemFromPacket:packetType number:3];
@@ -184,7 +184,7 @@ bool sceneChange = false;
 -(NSString*)didReceiveRedItem:(NSString*)packetType {
     int upperBound = 2;
     int lowerBound = 1;
-    int rndValue = lowerBound + arc4random() % (upperBound - lowerBound);
+    int rndValue = [self randomNumberBetween:lowerBound maxNumber:upperBound];
 
 
     if(rndValue == 1){
@@ -300,5 +300,9 @@ bool sceneChange = false;
     
     [item1 runAction:lauch];
 
+}
+-(int)randomNumberBetween:(int)min maxNumber:(int)max
+{
+    return (int)min + arc4random_uniform(max - min + 1);
 }
 @end

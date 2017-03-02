@@ -78,6 +78,7 @@
 		751F1EB81E480D4D00476133 /* sweetUUID.m in Sources */ = {isa = PBXBuildFile; fileRef = 751F1EB71E480D4D00476133 /* sweetUUID.m */; };
 		752002451E11B2FB00C2AC11 /* itemUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 752002441E11B2FB00C2AC11 /* itemUI.m */; };
 		752002481E11D47B00C2AC11 /* confirmSale.m in Sources */ = {isa = PBXBuildFile; fileRef = 752002471E11D47B00C2AC11 /* confirmSale.m */; };
+		7521700F1E682344006FFF2E /* bannerTimerData.m in Sources */ = {isa = PBXBuildFile; fileRef = 7521700E1E682344006FFF2E /* bannerTimerData.m */; };
 		7521819B1E510FBC0043D0D9 /* itemPacksUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 7521819A1E510FBC0043D0D9 /* itemPacksUI.m */; };
 		7521F8C11DE0F61E00F2AD76 /* slotManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7521F8C01DE0F61E00F2AD76 /* slotManager.m */; };
 		7521F8C41DE0F66900F2AD76 /* slot.m in Sources */ = {isa = PBXBuildFile; fileRef = 7521F8C31DE0F66900F2AD76 /* slot.m */; };
@@ -390,6 +391,8 @@
 		752002441E11B2FB00C2AC11 /* itemUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = itemUI.m; path = "Candy/Sweet Inventory/itemUI.m"; sourceTree = "<group>"; };
 		752002461E11D47B00C2AC11 /* confirmSale.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = confirmSale.h; path = "Candy/Sweet Inventory/confirmSale.h"; sourceTree = "<group>"; };
 		752002471E11D47B00C2AC11 /* confirmSale.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = confirmSale.m; path = "Candy/Sweet Inventory/confirmSale.m"; sourceTree = "<group>"; };
+		7521700D1E682344006FFF2E /* bannerTimerData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = bannerTimerData.h; path = "Candy/Banner Bonus/bannerTimerData.h"; sourceTree = "<group>"; };
+		7521700E1E682344006FFF2E /* bannerTimerData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = bannerTimerData.m; path = "Candy/Banner Bonus/bannerTimerData.m"; sourceTree = "<group>"; };
 		752181991E510FBC0043D0D9 /* itemPacksUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = itemPacksUI.h; path = "Candy/Item Packs/itemPacksUI.h"; sourceTree = "<group>"; };
 		7521819A1E510FBC0043D0D9 /* itemPacksUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = itemPacksUI.m; path = "Candy/Item Packs/itemPacksUI.m"; sourceTree = "<group>"; };
 		7521F8BF1DE0F61E00F2AD76 /* slotManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = slotManager.h; path = Candy/inventory/slots/slotManager.h; sourceTree = "<group>"; };
@@ -1293,6 +1296,8 @@
 				75B2E14F1E5FBFD00091FC77 /* bannerBonusUI.m */,
 				750369BF1E5FE1A300749A69 /* miniGemBonus.h */,
 				750369C01E5FE1A300749A69 /* miniGemBonus.m */,
+				7521700D1E682344006FFF2E /* bannerTimerData.h */,
+				7521700E1E682344006FFF2E /* bannerTimerData.m */,
 			);
 			name = "Banner Bonus";
 			sourceTree = "<group>";
@@ -1890,6 +1895,7 @@
 				757CD19E1DE208E300D07480 /* slot1Data.m in Sources */,
 				75784D4B1E281ADF00C41067 /* spinScene.m in Sources */,
 				75919B911DDB7A93001F66EB /* upgradeMenu.m in Sources */,
+				7521700F1E682344006FFF2E /* bannerTimerData.m in Sources */,
 				7525F7B11DD2242100B0510C /* taps.m in Sources */,
 				757695261E09AFF10067ABBF /* sweetInventoryBackground.m in Sources */,
 				752833761E441D3F00E101AD /* menuUIButtons.m in Sources */,
