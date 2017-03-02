@@ -12,7 +12,10 @@
 @implementation candyMachineValues
 +(void)addCandyMachineTextures: (NSMutableArray*)machineTextures {
     [self createMachineWithTexture:machineTextures stateOne:@"machine_default" stateTwo:@"machine_default_1"];
-    [self createMachineWithTexture:machineTextures stateOne:@"machine_default_1" stateTwo:@"machine_default"];
+    [self createMachineWithTexture:machineTextures stateOne:@"machine_2" stateTwo:@"machine_2_1"];
+    [self createMachineWithTexture:machineTextures stateOne:@"machine_3" stateTwo:@"machine_3_1"];
+    [self createMachineWithTexture:machineTextures stateOne:@"machine_4" stateTwo:@"machine_4_1"];
+    [self createMachineWithTexture:machineTextures stateOne:@"machine_5" stateTwo:@"machine_5_1"];
 
 }
 

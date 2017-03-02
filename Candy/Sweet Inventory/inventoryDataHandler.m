@@ -181,7 +181,7 @@
         [inventorySweetData addSweet:@"Caramel Candybar" sweetTextureName:@"candybarCaramel" sweetColorRarity:blue newUUID:[sweetUUID createNewSweetUUID]];
     }
     if([textureName isEqualToString:@"candybarFruitPacket"]){
-        [inventorySweetData addSweet:@"Fruit Candybar" sweetTextureName:@"candybarFruit" sweetColorRarity:blue newUUID:[sweetUUID createNewSweetUUID]];
+        [inventorySweetData addSweet:@"Fruit Candybar" sweetTextureName:@"candybarFruitChocolate" sweetColorRarity:blue newUUID:[sweetUUID createNewSweetUUID]];
     }
     if([textureName isEqualToString:@"candybarMintPacket"]){
         [inventorySweetData addSweet:@"Mint Candybar" sweetTextureName:@"candybarMint" sweetColorRarity:red newUUID:[sweetUUID createNewSweetUUID]];
