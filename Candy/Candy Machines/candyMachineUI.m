@@ -109,7 +109,7 @@ int machineSlotSelected = 3;
 }
 //Need to create a slot creator to minimise this code!
 +(void)addCandyMachineSlotUIWithID: (int)machineID view:(UIView*)v {
-    UIView *slots = [[UIView alloc] initWithFrame:CGRectMake(v.frame.size.width/1.76, v.frame.size.height, v.frame.size.width/3, v.frame.size.height/1.8)];
+    UIView *slots = [[UIView alloc] initWithFrame:CGRectMake(v.frame.size.width/1.76, v.frame.size.height*1.75, v.frame.size.width/3, v.frame.size.height/1.8)];
     
     UIImage *sweetDrawSlot = [UIImage imageNamed:@"sweetDrawSlot"];
     

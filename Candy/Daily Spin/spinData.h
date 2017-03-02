@@ -13,4 +13,5 @@
 +(void)setCurrentDate;
 +(int)getHoursLeft;
 +(int)getStreakValue;
++(void)addStreak;
 @end

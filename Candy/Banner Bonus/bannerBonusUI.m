@@ -9,21 +9,33 @@
 #import "bannerBonusUI.h"
 #import "miniGemBonus.h"
 #import "messageUI.h"
+#import "bannerTimerData.h"
 
 @implementation bannerBonusUI
 +(void)bannerCalled:(UIView*)v {
+    
+    
+    
     if ([[self bonusState] isEqualToString:@"enableBonus"]) {
-        [messageUI createMessageBox:v information:@"This will allow to gain free Mini Gems every so often while an advert is displayed at the bottom of the screen. Thanks for supporting us!" representingImage:@"miniGems" imageScale:0.3 messageBoxID:51 displayOnce:false];
-        [self setBannerCalled:true];
-        [self addBonusBanner:v];
+            
+        if([bannerTimerData getBonusOpenedLeft] <= 0){
+            [messageUI createMessageBox:v information:@"This will allow to gain free Mini Gems every so often while an advert is displayed at the bottom of the screen. Thanks for supporting us!" representingImage:@"miniGems" imageScale:0.3 messageBoxID:51 displayOnce:false];
+            [self setBannerCalled:true];
+            [self addBonusBanner:v];
+            [bannerTimerData storeBonusOpenedLast];
+                
+        }else {
+                [messageUI createMessageBox:v information:[NSString stringWithFormat:@"You can only use this buton every 3 Minutes, please wait %d seconds!", [bannerTimerData getBonusOpenedLeft]] representingImage:@"dunnoButton" imageScale:0.3 messageBoxID:99 displayOnce:false];
+            }
     }else {
-        GADBannerView *banner = [v viewWithTag:1342];
-        UIView *gemView = [v viewWithTag:1344];
-        [self setBannerCalled:false];
-        [banner removeFromSuperview];
-        [gemView removeFromSuperview];
-        [messageUI createMessageBox:v information:@"Thank you for supporting us :)" representingImage:@"dunnoButton" imageScale:0.3 messageBoxID:52 displayOnce:false];
-    }
+            GADBannerView *banner = [v viewWithTag:1342];
+            UIView *gemView = [v viewWithTag:1344];
+            [self setBannerCalled:false];
+            [banner removeFromSuperview];
+            [gemView removeFromSuperview];
+            [messageUI createMessageBox:v information:@"Thank you for supporting us :)" representingImage:@"dunnoButton" imageScale:0.3 messageBoxID:52 displayOnce:false];
+        }
+    
 }
 +(void)setBannerCalled:(BOOL)enabled {
     

@@ -36,31 +36,31 @@ NSString *rewardedGood;
     
     SKSpriteNode *note = [SKSpriteNode spriteNodeWithImageNamed:@"fsNote"];
     note.size = CGSizeMake(self.frame.size.width, self.frame.size.height/7);
-    note.position = CGPointMake(0, self.frame.size.height/4.7);
+    note.position = CGPointMake(0, -self.frame.size.height/2 + note.size.height/2);
     
     SKSpriteNode *gemButton = [SKSpriteNode spriteNodeWithImageNamed:@"fsGem"];
     gemButton.size = CGSizeMake(self.frame.size.width, self.frame.size.height/5);
-    gemButton.position = CGPointMake(0, self.frame.size.height/20);
+    gemButton.position = CGPointMake(0, self.frame.size.height/8.5);
     gemButton.name = @"gemButton";
     [timerLabels addGemLabel:gemButton];
 
     SKSpriteNode *miniGemButton = [SKSpriteNode spriteNodeWithImageNamed:@"fsMiniGems"];
     miniGemButton.size = CGSizeMake(self.frame.size.width, self.frame.size.height/5);
-    miniGemButton.position = CGPointMake(0, -self.frame.size.height/3.05);
+    miniGemButton.position = CGPointMake(0, -self.frame.size.height/3.8);
     miniGemButton.name = @"miniGemButton";
     [timerLabels addMiniGemLabel:miniGemButton];
     
     SKSpriteNode *coinsButton = [SKSpriteNode spriteNodeWithImageNamed:@"fsCoins"];
     coinsButton.size = CGSizeMake(self.frame.size.width, self.frame.size.height/5);
-    coinsButton.position = CGPointMake(0, -self.frame.size.height/7.2);
+    coinsButton.position = CGPointMake(0, -self.frame.size.height/13.7);
     coinsButton.name = @"coinsButton";
     [timerLabels addCoinLabel:coinsButton];
     
     SKSpriteNode *doneButton = [SKSpriteNode spriteNodeWithImageNamed:@"fsBackbutton"];
-    doneButton.size = CGSizeMake(s.frame.size.width*2, self.frame.size.height/7);
+    doneButton.size = CGSizeMake(s.frame.size.width*2, self.frame.size.height/7.2);
     doneButton.xScale = 0.5;
     doneButton.yScale = 0.5;
-    doneButton.position = CGPointMake(0, -self.frame.size.height/2 + doneButton.size.height/1.7);
+    doneButton.position = CGPointMake(0, self.frame.size.height/4);
     doneButton.name = @"doneButton";
     
     [s addChild:background];
@@ -93,7 +93,6 @@ NSString *rewardedGood;
         
         [statsMenuButtons buttonAnimation:node action:[SKAction runBlock:^{
         rewardedGood = @"gem";
-            [objectivesSilver object3:self.view];
 
             [GADRewardBasedVideoAd sharedInstance].delegate = self;
             
@@ -111,7 +110,6 @@ NSString *rewardedGood;
         
         [statsMenuButtons buttonAnimation:node action:[SKAction runBlock:^{
             rewardedGood = @"miniGems";
-            [objectivesSilver object3:self.view];
 
             [GADRewardBasedVideoAd sharedInstance].delegate = self;
             
@@ -127,7 +125,6 @@ NSString *rewardedGood;
         if([fsTimerData getCoinTimeLeft] <= 0){
         [statsMenuButtons buttonAnimation:node action:[SKAction runBlock:^{
             rewardedGood = @"coin";
-            [objectivesSilver object3:self.view];
 
             [GADRewardBasedVideoAd sharedInstance].delegate = self;
             
@@ -166,6 +163,8 @@ NSString *rewardedGood;
         
         NSString *goodname;
         
+        [objectivesSilver object3:self.view];
+
         if([rewardedGood isEqualToString:@"gem"]){
             goodname = @"1x Gem";
             [fsTimerData storeNextGemAdvert];
@@ -185,6 +184,8 @@ NSString *rewardedGood;
         [messageUI createMessageBox:self.view information:
          [NSString stringWithFormat:@"Thank You for supporting us by watching an advert! Here's your reward! %@", goodname]
                   representingImage:rewardedGood imageScale:0.4 messageBoxID:80 displayOnce:false];
+        
+
     }
 }
 

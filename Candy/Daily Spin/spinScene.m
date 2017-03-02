@@ -11,6 +11,7 @@
 #import "sparks.h"
 #import "spinBox.h"
 #import "tutorialMessages.h"
+#import "spinData.h"
 
 @implementation spinScene
 
@@ -25,7 +26,7 @@ int count = 0;
     backdrop.size = CGSizeMake(self.frame.size.width, self.frame.size.height);
     [self addChild:backdrop];
     [spinWheel addWheel:self];
-    
+
     if(!spinTaken){
         SKAction *wait4Sec = [SKAction waitForDuration:0.2];
         SKAction *returnItem = [SKAction moveToY:(-self.frame.size.height/2 + self.frame.size.height/48) duration:0.2];
@@ -34,6 +35,7 @@ int count = 0;
     
         SKSpriteNode *tapMeter = (SKSpriteNode*)[self childNodeWithName:@"meterScale"];
         [tapMeter runAction:rep];
+        [spinData addStreak];
     
         }
     [tutorialMessages firstTimeDailySpin:self.view];
