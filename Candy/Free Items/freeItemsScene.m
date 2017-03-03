@@ -81,10 +81,9 @@ NSString *rewardedGood;
     
     if([node.name isEqualToString:@"doneButton"]){
         
-        SKAction *move = [SKAction moveToX:-self.frame.size.width*2 duration:0.2];
-        [node runAction:move completion:^{
-            [mainTransition switchScene:self sceneTwo:@"main" Transition:[SKTransition fadeWithColor:[SKColor colorWithDisplayP3Red:51.0f/255.0f green:51.0f/255.0f blue:51.0f/255.0f alpha:1] duration:0.2]];
-
+        SKAction *scale = [SKAction scaleBy:0.9 duration:0.2];
+        [node runAction:scale completion:^{
+            [mainTransition switchScene:self sceneTwo:@"main" Transition:[SKTransition crossFadeWithDuration:0.3]];
         }];
     }
     if ([node.name isEqualToString:@"gemButton"]) {

@@ -11,7 +11,7 @@
 
 @implementation tipsUI
 +(void)startTipSpawner: (SKScene*)s {
-    SKAction *tipTimer = [SKAction waitForDuration:90];
+    SKAction *tipTimer = [SKAction waitForDuration:60];
     SKAction *tipSpawner = [SKAction runBlock:^{
         if(![settingsData isTipsEnabled]){
             [self spawnRandomTip:s];
@@ -63,7 +63,9 @@
                      @"Upgrade your Building for more Machines",
                      @"Older Device? Disable Fancy Effects in Settings",
                      @"Follow us on twitter @Keemstar",
-                     @"",
+                     @"Upgrade your machines so you don't have to tap!",
+                     @"Make the most of objective rewards!",
+                     @"Buy packets from the store to get more sweets",
                      nil];
     
     return [tips objectAtIndex:[self randomNumberBetween:0 maxNumber:(int)([tips count] - 1)]];

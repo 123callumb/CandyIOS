@@ -17,7 +17,7 @@
     
     if(objNo == 0){
         //Called in main load method
-        if ([[sweetInventoryData getInventory] count] >= 3) {
+        if ([[sweetInventoryData getInventory] count] >= 4) {
             [objectiveComplete createCompletionAnimation:v type0To2:0];
         }
     }
