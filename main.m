@@ -115,12 +115,17 @@ UIImageView *img1 = nil;
 
 -(void)onGestureRight: (UISwipeGestureRecognizer*)swipe {
     if(swipe.state == UIGestureRecognizerStateEnded){
+       
         [menuUi removeMenu:self.view];
     }
 }
 -(void)onGestureLeft: (UISwipeGestureRecognizer*)swipe {
     if(swipe.state == UIGestureRecognizerStateEnded){
-        [menuUi createMenu:self.view];
+        CGPoint touchLocation = [swipe.self locationOfTouch:0 inView:swipe.view];
+
+        if(touchLocation.x < self.view.frame.size.width/8){
+            [menuUi createMenu:self.view];
+        }
     }
 }
 -(void)onLongPress: (UILongPressGestureRecognizer*)longPress {\

@@ -30,7 +30,7 @@
 
         if ([dateGap day] >= 1) {
 
-            if([dateGap day] != 1){
+            if([dateGap day] != 2 || [dateGap day] != 1){
                 [self resetStreak];
             }
     

@@ -11,7 +11,7 @@
 @implementation objectivesData
 
 +(void)addGoldObjectives: (NSMutableArray*)goldObjs {
-    [goldObjs addObject:@"Open 3 packets of sweets"];
+    [goldObjs addObject:@"Open 4 packets of sweets"];
     [goldObjs addObject:@"Own 10 Sweets"];
     [goldObjs addObject:@"Uprade a Candy Machine"];
     [goldObjs addObject:@"Upgrade your Building"];
