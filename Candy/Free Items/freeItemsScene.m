@@ -155,7 +155,7 @@ NSString *rewardedGood;
     NSLog(@"Reward based video ad is closed.");
     
     GADRequest *rq = [GADRequest request];
-    rq.testDevices = @[@"1e69c118ffc7ac17572ce32296f9878fe6d58d46"];
+    rq.testDevices = @[@"1e69c118ffc7ac17572ce32296f9878fe6d58d46", @"dd3e145ade361cebc1c6d4c423ebeddd928a4279"];
     [[GADRewardBasedVideoAd sharedInstance] loadRequest:rq withAdUnitID:@"ca-app-pub-1801714701929045/4977592815"];
     
     if(rewardedGood != nil){

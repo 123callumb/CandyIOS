@@ -54,6 +54,16 @@
         output = @"WOODEN FLOOR";
     }else if([inputString isEqualToString:@"floor_disco"]){
         output = @"DISCO FLOOR";
+    }else if([inputString isEqualToString:@"floor_blackgold"]){
+        output = @"BLACK GOLD";
+    }else if([inputString isEqualToString:@"floor_candycane"]){
+        output = @"CANDY CANE ";
+    }else if([inputString isEqualToString:@"floor_checkered"]){
+        output = @"CHECKERED";
+    }else if([inputString isEqualToString:@"floor_gold"]){
+        output = @"GOLDEN FLOOR";
+    }else if([inputString isEqualToString:@"floor_bonbonlover"]){
+        output = @"BON BON LOVER";
     }else {
         output = @"No Name";
     }
@@ -76,6 +86,16 @@
     }else if([inputString isEqualToString:@"floor_wood"]){
         output = 7500;
     }else if([inputString isEqualToString:@"floor_disco"]){
+        output = 25000;
+    }else if([inputString isEqualToString:@"floor_blackgold"]){
+        output = 75000;
+    }else if([inputString isEqualToString:@"floor_candycane"]){
+        output = 40000;
+    }else if([inputString isEqualToString:@"floor_checkered"]){
+        output = 10000;
+    }else if([inputString isEqualToString:@"floor_gold"]){
+        output = 75000;
+    }else if([inputString isEqualToString:@"floor_bonbonlover"]){
         output = 25000;
     }else {
         output = 0;

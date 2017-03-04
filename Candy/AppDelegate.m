@@ -27,8 +27,10 @@
     NSString *callumsIphone = @"1e69c118ffc7ac17572ce32296f9878fe6d58d46";
     NSString *killiansIphone = @"b30a5b67fd115143ca6a95a1873537861edfee2b";
     NSString *callumsIpad = @"43447cddde8c5d17daff33786118e8a133ad286e";
+    NSString *cMumIphone = @"dd3e145ade361cebc1c6d4c423ebeddd928a4279";
+    NSString *alPhone = @"4102bb8176738f601231d62c47d2da38f5ceaf6b";
     
-    req.testDevices = @[callumsIphone, killiansIphone, callumsIpad];
+    req.testDevices = @[callumsIphone, killiansIphone, callumsIpad, cMumIphone, alPhone];
     
     [[GADRewardBasedVideoAd sharedInstance] loadRequest:req withAdUnitID:@"ca-app-pub-1801714701929045/4977592815"];
     // Override point for customization after application launch.
