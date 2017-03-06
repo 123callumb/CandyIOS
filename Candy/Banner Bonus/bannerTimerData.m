@@ -13,7 +13,7 @@
     NSDate *date = [NSDate date];
     NSCalendar *cal = [NSCalendar currentCalendar];
     NSDateComponents *hour = [NSDateComponents new];
-    hour.minute = 3;
+    hour.minute = 2;
     NSDate *min = [cal dateByAddingComponents:hour toDate:date options:0];
     [[NSUserDefaults standardUserDefaults] setObject:min forKey:@"bonus_ad"];
     [[NSUserDefaults standardUserDefaults] synchronize];
