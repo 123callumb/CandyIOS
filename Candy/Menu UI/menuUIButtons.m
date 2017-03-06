@@ -23,6 +23,7 @@
 #import "objectivesSilver.h"
 #import "objectivesBronze.h"
 #import "bannerBonusUI.h"
+#import "specialsUI.h"
 
 @implementation menuUIButtons
 
@@ -44,6 +45,7 @@ int menuNo = -1;
                         @"myPacketsSmallButton",
                         @"upgradeSmallButton",
                         @"buildingMenuButton",
+                        @"specialsMenuButton",
                         nil];
     return buttons;
 }
@@ -148,6 +150,11 @@ int menuNo = -1;
         menuNo = -1;
         [menuHandler setCurrentMenu:12];
         [buildingUI createBuildingUI:s];
+    }
+    if(menuNo == 13){
+        menuNo = -1;
+        [menuHandler setCurrentMenu:13];
+        [specialsUI createSpecialsMenu:v];
     }
     
 }

@@ -83,6 +83,9 @@
 		7521F8C11DE0F61E00F2AD76 /* slotManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7521F8C01DE0F61E00F2AD76 /* slotManager.m */; };
 		7521F8C41DE0F66900F2AD76 /* slot.m in Sources */ = {isa = PBXBuildFile; fileRef = 7521F8C31DE0F66900F2AD76 /* slot.m */; };
 		7521F8C71DE0F91700F2AD76 /* box1.m in Sources */ = {isa = PBXBuildFile; fileRef = 7521F8C61DE0F91700F2AD76 /* box1.m */; };
+		7523558A1E6D8DBE002EE1D5 /* specialsUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 752355891E6D8DBE002EE1D5 /* specialsUI.m */; };
+		7523558D1E6DA74D002EE1D5 /* specialsItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 7523558C1E6DA74D002EE1D5 /* specialsItem.m */; };
+		752355901E6DEDE5002EE1D5 /* specialsItemUi.m in Sources */ = {isa = PBXBuildFile; fileRef = 7523558F1E6DEDE5002EE1D5 /* specialsItemUi.m */; };
 		7525F7781DCE921B00B0510C /* mainUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 7525F7771DCE921B00B0510C /* mainUI.m */; };
 		7525F77C1DCFBFF100B0510C /* inventoryButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 7525F77B1DCFBFF100B0510C /* inventoryButton.m */; };
 		7525F7851DCFC58B00B0510C /* buttonHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 7525F7841DCFC58B00B0510C /* buttonHandler.m */; };
@@ -401,6 +404,12 @@
 		7521F8C31DE0F66900F2AD76 /* slot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = slot.m; path = Candy/inventory/slot.m; sourceTree = "<group>"; };
 		7521F8C51DE0F91700F2AD76 /* box1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = box1.h; path = Candy/inventory/slots/box1.h; sourceTree = "<group>"; };
 		7521F8C61DE0F91700F2AD76 /* box1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = box1.m; path = Candy/inventory/slots/box1.m; sourceTree = "<group>"; };
+		752355881E6D8DBE002EE1D5 /* specialsUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = specialsUI.h; path = "Candy/Specials Menu/specialsUI.h"; sourceTree = "<group>"; };
+		752355891E6D8DBE002EE1D5 /* specialsUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = specialsUI.m; path = "Candy/Specials Menu/specialsUI.m"; sourceTree = "<group>"; };
+		7523558B1E6DA74D002EE1D5 /* specialsItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = specialsItem.h; path = "Candy/Specials Menu/specialsItem.h"; sourceTree = "<group>"; };
+		7523558C1E6DA74D002EE1D5 /* specialsItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = specialsItem.m; path = "Candy/Specials Menu/specialsItem.m"; sourceTree = "<group>"; };
+		7523558E1E6DEDE5002EE1D5 /* specialsItemUi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = specialsItemUi.h; path = "Candy/Specials Menu/specialsItemUi.h"; sourceTree = "<group>"; };
+		7523558F1E6DEDE5002EE1D5 /* specialsItemUi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = specialsItemUi.m; path = "Candy/Specials Menu/specialsItemUi.m"; sourceTree = "<group>"; };
 		7525F7761DCE921B00B0510C /* mainUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mainUI.h; sourceTree = "<group>"; };
 		7525F7771DCE921B00B0510C /* mainUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mainUI.m; sourceTree = "<group>"; };
 		7525F77A1DCFBFF100B0510C /* inventoryButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = inventoryButton.h; path = Candy/userInterface/Buttons/inventoryButton.h; sourceTree = "<group>"; };
@@ -1004,6 +1013,19 @@
 			name = Slots;
 			sourceTree = "<group>";
 		};
+		752355871E6D8B95002EE1D5 /* Specials Menu */ = {
+			isa = PBXGroup;
+			children = (
+				752355881E6D8DBE002EE1D5 /* specialsUI.h */,
+				752355891E6D8DBE002EE1D5 /* specialsUI.m */,
+				7523558B1E6DA74D002EE1D5 /* specialsItem.h */,
+				7523558C1E6DA74D002EE1D5 /* specialsItem.m */,
+				7523558E1E6DEDE5002EE1D5 /* specialsItemUi.h */,
+				7523558F1E6DEDE5002EE1D5 /* specialsItemUi.m */,
+			);
+			name = "Specials Menu";
+			sourceTree = "<group>";
+		};
 		7525F7751DCE920400B0510C /* userInterface */ = {
 			isa = PBXGroup;
 			children = (
@@ -1322,6 +1344,7 @@
 		75C36DEE1DCCF77600F84214 = {
 			isa = PBXGroup;
 			children = (
+				752355871E6D8B95002EE1D5 /* Specials Menu */,
 				75B2E14D1E5FBF9E0091FC77 /* Banner Bonus */,
 				75B2E1491E5F9CBB0091FC77 /* Tips  */,
 				752E99191E53A86500942C88 /* Objectives Menu */,
@@ -1822,6 +1845,7 @@
 				7521F8C11DE0F61E00F2AD76 /* slotManager.m in Sources */,
 				75C36E091DCCF77700F84214 /* GameViewController.m in Sources */,
 				61E1838C1DEE13BA0034C021 /* selection_bar.m in Sources */,
+				752355901E6DEDE5002EE1D5 /* specialsItemUi.m in Sources */,
 				75527A291DFDF9FF00D149C0 /* packetScrollUI.m in Sources */,
 				75FCC5EA1E09769B0051CBA1 /* inventorySweetData.m in Sources */,
 				61E183891DEE13490034C021 /* skinColour.m in Sources */,
@@ -1879,11 +1903,13 @@
 				75C36E061DCCF77700F84214 /* GameScene.m in Sources */,
 				7525F7BE1DD256A500B0510C /* comboBar.m in Sources */,
 				757257251E3E671B00363F94 /* spinStreak.m in Sources */,
+				7523558A1E6D8DBE002EE1D5 /* specialsUI.m in Sources */,
 				616F84441E4254C000723148 /* upgrade_handler_regular.m in Sources */,
 				75D025F41E4D703A0068C1DB /* marshmallowPacket.m in Sources */,
 				752833731E441D0900E101AD /* menuUI.m in Sources */,
 				75B526451E1EAD580020A609 /* levelStructure.m in Sources */,
 				75919B9C1DDCA4CE001F66EB /* levelDecider.m in Sources */,
+				7523558D1E6DA74D002EE1D5 /* specialsItem.m in Sources */,
 				751F1EAF1E46CFE000476133 /* candyMachineUI.m in Sources */,
 				7507BB061E66C38700A8452D /* gemeratorScene.m in Sources */,
 				75C36E4A1DCE793D00F84214 /* mainBackground.m in Sources */,
