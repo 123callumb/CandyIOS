@@ -42,6 +42,7 @@ UIScrollView* UIscrollUpdate = nil;
 UIImageView *img1 = nil;
 @implementation main
 
+
 -(void)didMoveToView:(SKView *)view {
     //Set Background Foreground, mainly static!
     [menuHandler refreshMenuSystem:self];
