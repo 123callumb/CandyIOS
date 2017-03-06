@@ -22,8 +22,6 @@
             [messageUI createMessageBox:v information:@"This will allow to gain free Mini Gems every so often while an advert is displayed at the bottom of the screen. Thanks for supporting us!" representingImage:@"miniGems" imageScale:0.3 messageBoxID:51 displayOnce:false];
             [self setBannerCalled:true];
             [self addBonusBanner:v];
-            [bannerTimerData storeBonusOpenedLast];
-                
         }else {
                 [messageUI createMessageBox:v information:[NSString stringWithFormat:@"You can only use this buton every 3 Minutes, please wait %d seconds!", [bannerTimerData getBonusOpenedLeft]] representingImage:@"dunnoButton" imageScale:0.3 messageBoxID:99 displayOnce:false];
             }
@@ -77,8 +75,10 @@
 }
 +(void)adViewDidReceiveAd:(GADBannerView *)bannerView {
     bannerView.hidden = NO;
-    NSLog(@"im guessing were calling here everytime");
-    [miniGemBonus createMiniGemBonusBar:[bannerView superview] bannerView:bannerView];
+    if([bannerTimerData getBonusOpenedLeft] <= 0){
+        [miniGemBonus createMiniGemBonusBar:[bannerView superview] bannerView:bannerView];
+        [bannerTimerData storeBonusOpenedLast];
+    }
 
 }
 +(void)adView:(GADBannerView *)adView didFailToReceiveAdWithError:(GADRequestError *)error {
