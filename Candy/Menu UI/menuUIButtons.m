@@ -8,7 +8,7 @@
 
 #import "menuUIButtons.h"
 #import "mainTransition.h"
-#import "menuUi.h"
+#import "menuUI.h"
 #import "sweetInventoryUI.h"
 #import "tutorialMessages.h"
 #import "spinData.h"
@@ -45,7 +45,6 @@ int menuNo = -1;
                         @"myPacketsSmallButton",
                         @"upgradeSmallButton",
                         @"buildingMenuButton",
-                        @"specialsMenuButton",
                         nil];
     return buttons;
 }
@@ -150,11 +149,6 @@ int menuNo = -1;
         menuNo = -1;
         [menuHandler setCurrentMenu:12];
         [buildingUI createBuildingUI:s];
-    }
-    if(menuNo == 13){
-        menuNo = -1;
-        [menuHandler setCurrentMenu:13];
-        [specialsUI createSpecialsMenu:v];
     }
     
 }

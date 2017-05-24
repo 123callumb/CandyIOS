@@ -72,4 +72,28 @@
     
     [specialsItemUi createItemUIWithID:(int)((item.tag) - 350000) view:v1];
 }
++(int)getPriceOfItem:(int)itemNo {
+    int price = 4;
+    
+    if(itemNo == 0){
+        price = 5;
+    }
+    if(itemNo == 1){
+        price = 8;
+    }
+    if(itemNo == 2){
+        price = 13;
+    }
+    if(itemNo == 3){
+        price = 4;
+    }
+    if(itemNo == 4){
+        price = 7;
+    }
+    if(itemNo == 5){
+        price = 12;
+    }
+    
+    return price;
+}
 @end

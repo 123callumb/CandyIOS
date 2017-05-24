@@ -9,6 +9,6 @@
 #import <SpriteKit/SpriteKit.h>
 
 @interface fiftyTapBonus : SKSpriteNode
-+(void)tapCollector:(SKScene*)s;
++(void)reward:(SKScene*)s;
 +(void)onTouchofBonus:(SKSpriteNode*)obj scene:(SKScene*)s;
 @end

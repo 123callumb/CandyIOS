@@ -10,6 +10,7 @@
 #import "coinBarSprite.h"
 #import "menuHandler.h"
 #import "gems.h"
+#import "specialsData.h"
 
 @implementation coinBarSprite
 +(void)addCoinBar:(SKScene *)s {
@@ -64,4 +65,22 @@
     gemText.position = CGPointMake(0, -gemText.frame.size.height/1.65);
     [n addChild:gemText];
 }
++(void)addSpecialIcon:(SKScene*)s {
+    if([s childNodeWithName:@"specialIcon"] == nil && [specialsData getSpecialActiveWithID] != -1){
+        SKSpriteNode *specialIcon = [SKSpriteNode spriteNodeWithImageNamed:[specialsData determineSpecialIcon]];
+        specialIcon.xScale = 0.48;
+        specialIcon.yScale = 0.48;
+        specialIcon.zPosition = 12;
+        specialIcon.position = CGPointMake(s.frame.size.width/3, s.frame.size.height/3);
+        specialIcon.name = @"specialIcon";
+        [s addChild:specialIcon];
+    }else if([s childNodeWithName:@"specialIcon"] != nil && [specialsData getSpecialActiveWithID] == -1){
+        SKSpriteNode *icon = (SKSpriteNode*)[s childNodeWithName:@"specialIcon"];
+        [icon removeFromParent];
+    }
+    if([s childNodeWithName:@"specialIcon"] != nil ){
+        [specialsData checkForSpecialTimerCompletion];
+    }
+}
+
 @end
