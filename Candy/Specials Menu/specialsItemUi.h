@@ -10,4 +10,5 @@
 
 @interface specialsItemUi : UIView
 +(void)createItemUIWithID:(int)itemID view:(UIView*)v;
++(void)itemActiveScene:(UIView*)v activeItemID:(int)itemID;
 @end

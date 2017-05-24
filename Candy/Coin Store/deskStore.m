@@ -52,6 +52,30 @@
         output = @"METAL DESK";
     }else if([inputString isEqualToString:@"desk_king"]){
         output = @"RICH OAK";
+    }else if([inputString isEqualToString:@"desk_dj"]){
+        output = @"DJ DESK";
+    }else if([inputString isEqualToString:@"desk_domino"]){
+        output = @"DOMINO DESK";
+    }else if([inputString isEqualToString:@"desk_invader"]){
+        output = @"INVADER DESK";
+    }else if([inputString isEqualToString:@"desk_legged"]){
+        output = @"LEGGED DESK";
+    }else if([inputString isEqualToString:@"desk_people"]){
+        output = @"WOODEN HOLDER";
+    }else if([inputString isEqualToString:@"desk_pipework"]){
+        output = @"PIPEWORK DESK";
+    }else if([inputString isEqualToString:@"desk_speaker"]){
+        output = @"SPEAKER DESK";
+    }else if([inputString isEqualToString:@"desk_stacled"]){
+        output = @"STACKED DESK";
+    }else if([inputString isEqualToString:@"desk_tank"]){
+        output = @"FISH TANK";
+    }else if([inputString isEqualToString:@"desk_tesla"]){
+        output = @"MODERN DESK";
+    }else if([inputString isEqualToString:@"desk_tetris"]){
+        output = @"RETRO DESK";
+    }else if([inputString isEqualToString:@"desk_tree"]){
+        output = @"BRANCHING DESK";
     }else {
         output = @"No Name";
     }
@@ -71,6 +95,30 @@
         output = 7500;
     }else if([inputString isEqualToString:@"desk_king"]){
         output = 50000;
+    }else if([inputString isEqualToString:@"desk_dj"]){
+        output = 50000;
+    }else if([inputString isEqualToString:@"desk_domino"]){
+        output = 40000;
+    }else if([inputString isEqualToString:@"desk_invader"]){
+        output = 30000;
+    }else if([inputString isEqualToString:@"desk_legged"]){
+        output = 10000;
+    }else if([inputString isEqualToString:@"desk_people"]){
+        output = 30000;
+    }else if([inputString isEqualToString:@"desk_pipework"]){
+        output = 25000;
+    }else if([inputString isEqualToString:@"desk_speaker"]){
+        output = 45000;
+    }else if([inputString isEqualToString:@"desk_stacled"]){
+        output = 10000;
+    }else if([inputString isEqualToString:@"desk_tank"]){
+        output = 65000;
+    }else if([inputString isEqualToString:@"desk_tesla"]){
+        output = 75000;
+    }else if([inputString isEqualToString:@"desk_tetris"]){
+        output = 100000;
+    }else if([inputString isEqualToString:@"desk_tree"]){
+        output = 30000;
     }else {
         output = 0;
     }

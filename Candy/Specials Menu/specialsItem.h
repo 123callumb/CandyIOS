@@ -11,4 +11,5 @@
 @interface specialsItem : UIView
 +(void)createSpecialItemPane: (UIScrollView*)v;
 +(NSArray*)specialItems;
++(int)getPriceOfItem:(int)itemNo;
 @end

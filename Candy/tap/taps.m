@@ -26,6 +26,8 @@
 #import "candyMachineUI.h"
 #import "objectivesBronze.h"
 #import "objectivesSilver.h"
+#import "tapCombo.h"
+#import "specialBonus.h"
 
 @implementation taps
 +(void)onPressed: (SKScene *)s location:(CGPoint)p view:(UIView*)v {
@@ -33,9 +35,11 @@
     if([menuHandler getCurrentMenu] == 4){
             [self randomTapTests];
             [coinBarSprite updateText:s];
-            [fiftyTapBonus tapCollector:s];
             [fiftyTapBonus onTouchofBonus:(SKSpriteNode*)obj scene:s];
+            [tapCombo startTapTimerCountDown:s];
+            [specialBonus onSpecialBonus:(SKSpriteNode*)obj onScene:s];
             [candyMachineInteraction animateAllCandyMachinesOnTap:s];
+            [coinBarSprite addSpecialIcon:s];
            // [candyMachineInteraction onCandyMachineTouch:(SKSpriteNode*)obj scene:s view:v];
             [objectivesBronze object3:v];
             [objectivesSilver object2:v];

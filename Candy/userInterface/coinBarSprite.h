@@ -11,4 +11,5 @@
 @interface coinBarSprite : SKSpriteNode
 +(void)addCoinBar:(SKScene *)s;
 +(void)updateText: (SKScene *)s;
++(void)addSpecialIcon:(SKScene*)s;
 @end

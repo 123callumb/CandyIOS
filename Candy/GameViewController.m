@@ -27,8 +27,8 @@
     // Present the scene
     [skView presentScene:scene];
     
-    skView.showsFPS = YES;
-    skView.showsNodeCount = YES;
+    skView.showsFPS = NO;
+    skView.showsNodeCount = NO;
     skView.multipleTouchEnabled = NO;
 }
 

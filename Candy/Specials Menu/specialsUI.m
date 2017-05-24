@@ -8,6 +8,8 @@
 
 #import "specialsUI.h"
 #import "specialsItem.h"
+#import "specialsData.h"
+#import "specialsItemUi.h"
 
 @implementation specialsUI
 
@@ -38,8 +40,11 @@
     UIScrollView *contentScroll = [[UIScrollView alloc] initWithFrame:CGRectMake(0, content.frame.size.height/40, content.frame.size.width, content.frame.size.height/1.05)];
     [specialsItem createSpecialItemPane:contentScroll];
     
-    [content addSubview:contentScroll];
-    
+    if([specialsData getSpecialActiveWithID] != -1){
+        [specialsItemUi itemActiveScene:content activeItemID:[specialsData getSpecialActiveWithID]];
+    }else{
+            [content addSubview:contentScroll];
+    }
     [mainSpec addSubview:backing];
     [mainSpec addSubview:title];
     [mainSpec addSubview:content];

@@ -67,6 +67,7 @@
 		750F3A991DEC81A4002AFB78 /* statsMenuButtons.m in Sources */ = {isa = PBXBuildFile; fileRef = 750F3A981DEC81A4002AFB78 /* statsMenuButtons.m */; };
 		750F3A9C1DEC863E002AFB78 /* registerStatsButtons.m in Sources */ = {isa = PBXBuildFile; fileRef = 750F3A9B1DEC863E002AFB78 /* registerStatsButtons.m */; };
 		750F3A9F1DEF0762002AFB78 /* playerStatsMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 750F3A9E1DEF0761002AFB78 /* playerStatsMenu.m */; };
+		7511411A1E6F0D80005CC7F1 /* specialsData.m in Sources */ = {isa = PBXBuildFile; fileRef = 751141191E6F0D80005CC7F1 /* specialsData.m */; };
 		751F1E9F1E44EAF100476133 /* buildingUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 751F1E9E1E44EAF100476133 /* buildingUI.m */; };
 		751F1EA21E4673F300476133 /* candyMachineValues.m in Sources */ = {isa = PBXBuildFile; fileRef = 751F1EA11E4673F300476133 /* candyMachineValues.m */; };
 		751F1EA51E46775400476133 /* candyMachineCreator.m in Sources */ = {isa = PBXBuildFile; fileRef = 751F1EA41E46775400476133 /* candyMachineCreator.m */; };
@@ -111,6 +112,7 @@
 		752833791E441E5000E101AD /* packetStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 752833781E441E5000E101AD /* packetStore.m */; };
 		752CC6D21E26CAAD00C6FB31 /* gemAnimations.m in Sources */ = {isa = PBXBuildFile; fileRef = 752CC6D11E26CAAD00C6FB31 /* gemAnimations.m */; };
 		752CC6D51E26CB3300C6FB31 /* bonusAmounts.m in Sources */ = {isa = PBXBuildFile; fileRef = 752CC6D41E26CB3300C6FB31 /* bonusAmounts.m */; };
+		752DBE9D1ED1F4CC001C9E6A /* tapCombo.m in Sources */ = {isa = PBXBuildFile; fileRef = 752DBE9C1ED1F4CC001C9E6A /* tapCombo.m */; };
 		752E991C1E53A88600942C88 /* objectivesUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 752E991B1E53A88600942C88 /* objectivesUI.m */; };
 		752E991F1E53B03400942C88 /* objectivesUITask.m in Sources */ = {isa = PBXBuildFile; fileRef = 752E991E1E53B03400942C88 /* objectivesUITask.m */; };
 		752E99221E54D4C900942C88 /* objectivesData.m in Sources */ = {isa = PBXBuildFile; fileRef = 752E99211E54D4C900942C88 /* objectivesData.m */; };
@@ -141,6 +143,7 @@
 		755B0D201E143BE100EBA428 /* sweetDrawUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 755B0D1F1E143BE100EBA428 /* sweetDrawUI.m */; };
 		755B0D231E14514B00EBA428 /* drawSlotSelectorUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 755B0D221E14514B00EBA428 /* drawSlotSelectorUI.m */; };
 		755B0D261E14777800EBA428 /* drawInventorySelector.m in Sources */ = {isa = PBXBuildFile; fileRef = 755B0D251E14777800EBA428 /* drawInventorySelector.m */; };
+		755F78291ED6103E000DFCA9 /* specialBonus.m in Sources */ = {isa = PBXBuildFile; fileRef = 755F78281ED6103E000DFCA9 /* specialBonus.m */; };
 		7565B0A41DF6CA7400390278 /* sweetTypeUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 7565B0A31DF6CA7400390278 /* sweetTypeUI.m */; };
 		756AEAFF1E088B76002CFA70 /* gems.m in Sources */ = {isa = PBXBuildFile; fileRef = 756AEAFE1E088B76002CFA70 /* gems.m */; };
 		756AEB021E0890C7002CFA70 /* uiGemLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 756AEB011E0890C7002CFA70 /* uiGemLabel.m */; };
@@ -372,6 +375,8 @@
 		750F3A9B1DEC863E002AFB78 /* registerStatsButtons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = registerStatsButtons.m; path = Candy/globalMenu/registerStatsButtons.m; sourceTree = "<group>"; };
 		750F3A9D1DEF0761002AFB78 /* playerStatsMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = playerStatsMenu.h; path = Candy/globalMenu/statsMenu/playerStatsMenu.h; sourceTree = "<group>"; };
 		750F3A9E1DEF0761002AFB78 /* playerStatsMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = playerStatsMenu.m; path = Candy/globalMenu/statsMenu/playerStatsMenu.m; sourceTree = "<group>"; };
+		751141181E6F0D80005CC7F1 /* specialsData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = specialsData.h; path = "Candy/Specials Menu/specialsData.h"; sourceTree = "<group>"; };
+		751141191E6F0D80005CC7F1 /* specialsData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = specialsData.m; path = "Candy/Specials Menu/specialsData.m"; sourceTree = "<group>"; };
 		751F1E9D1E44EAF100476133 /* buildingUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = buildingUI.h; path = "Candy/Building System/buildingUI.h"; sourceTree = "<group>"; };
 		751F1E9E1E44EAF100476133 /* buildingUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = buildingUI.m; path = "Candy/Building System/buildingUI.m"; sourceTree = "<group>"; };
 		751F1EA01E4673F300476133 /* candyMachineValues.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = candyMachineValues.h; path = "Candy/Candy Machines/candyMachineValues.h"; sourceTree = "<group>"; };
@@ -454,6 +459,8 @@
 		752CC6D11E26CAAD00C6FB31 /* gemAnimations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = gemAnimations.m; path = "Candy/Gems System/gemAnimations.m"; sourceTree = "<group>"; };
 		752CC6D31E26CB3300C6FB31 /* bonusAmounts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = bonusAmounts.h; path = Candy/tap/bonusAmounts.h; sourceTree = "<group>"; };
 		752CC6D41E26CB3300C6FB31 /* bonusAmounts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = bonusAmounts.m; path = Candy/tap/bonusAmounts.m; sourceTree = "<group>"; };
+		752DBE9B1ED1F4CC001C9E6A /* tapCombo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = tapCombo.h; path = Candy/tap/tapCombo.h; sourceTree = "<group>"; };
+		752DBE9C1ED1F4CC001C9E6A /* tapCombo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = tapCombo.m; path = Candy/tap/tapCombo.m; sourceTree = "<group>"; };
 		752E991A1E53A88600942C88 /* objectivesUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = objectivesUI.h; path = "Candy/Objectives Menu/objectivesUI.h"; sourceTree = "<group>"; };
 		752E991B1E53A88600942C88 /* objectivesUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = objectivesUI.m; path = "Candy/Objectives Menu/objectivesUI.m"; sourceTree = "<group>"; };
 		752E991D1E53B03400942C88 /* objectivesUITask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = objectivesUITask.h; path = "Candy/Objectives Menu/objectivesUITask.h"; sourceTree = "<group>"; };
@@ -514,6 +521,8 @@
 		755B0D221E14514B00EBA428 /* drawSlotSelectorUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = drawSlotSelectorUI.m; path = "Candy/Sweet Tap Menu/drawSlotSelectorUI.m"; sourceTree = "<group>"; };
 		755B0D241E14777800EBA428 /* drawInventorySelector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = drawInventorySelector.h; path = "Candy/Sweet Tap Menu/drawInventorySelector.h"; sourceTree = "<group>"; };
 		755B0D251E14777800EBA428 /* drawInventorySelector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = drawInventorySelector.m; path = "Candy/Sweet Tap Menu/drawInventorySelector.m"; sourceTree = "<group>"; };
+		755F78271ED6103E000DFCA9 /* specialBonus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = specialBonus.h; path = Candy/tap/specialBonus.h; sourceTree = "<group>"; };
+		755F78281ED6103E000DFCA9 /* specialBonus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = specialBonus.m; path = Candy/tap/specialBonus.m; sourceTree = "<group>"; };
 		7565B0A21DF6CA7400390278 /* sweetTypeUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = sweetTypeUI.h; path = Candy/inventory/sweetTypeUI.h; sourceTree = "<group>"; };
 		7565B0A31DF6CA7400390278 /* sweetTypeUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = sweetTypeUI.m; path = Candy/inventory/sweetTypeUI.m; sourceTree = "<group>"; };
 		756AEAFD1E088B76002CFA70 /* gems.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = gems.h; path = "Candy/Gems System/gems.h"; sourceTree = "<group>"; };
@@ -1022,6 +1031,8 @@
 				7523558C1E6DA74D002EE1D5 /* specialsItem.m */,
 				7523558E1E6DEDE5002EE1D5 /* specialsItemUi.h */,
 				7523558F1E6DEDE5002EE1D5 /* specialsItemUi.m */,
+				751141181E6F0D80005CC7F1 /* specialsData.h */,
+				751141191E6F0D80005CC7F1 /* specialsData.m */,
 			);
 			name = "Specials Menu";
 			sourceTree = "<group>";
@@ -1091,6 +1102,10 @@
 				750F2A341DF77FF400A784F6 /* fiftyTapBonus.m */,
 				752CC6D31E26CB3300C6FB31 /* bonusAmounts.h */,
 				752CC6D41E26CB3300C6FB31 /* bonusAmounts.m */,
+				752DBE9B1ED1F4CC001C9E6A /* tapCombo.h */,
+				752DBE9C1ED1F4CC001C9E6A /* tapCombo.m */,
+				755F78271ED6103E000DFCA9 /* specialBonus.h */,
+				755F78281ED6103E000DFCA9 /* specialBonus.m */,
 			);
 			name = tap;
 			sourceTree = "<group>";
@@ -1843,6 +1858,7 @@
 				615C34EC1DF6E0DB00F1B3E2 /* scrollUpdate.m in Sources */,
 				75FCC5E71E0975FD0051CBA1 /* inventoryDataHandler.m in Sources */,
 				7521F8C11DE0F61E00F2AD76 /* slotManager.m in Sources */,
+				755F78291ED6103E000DFCA9 /* specialBonus.m in Sources */,
 				75C36E091DCCF77700F84214 /* GameViewController.m in Sources */,
 				61E1838C1DEE13BA0034C021 /* selection_bar.m in Sources */,
 				752355901E6DEDE5002EE1D5 /* specialsItemUi.m in Sources */,
@@ -1979,6 +1995,7 @@
 				75828DFC1E16A417008DC5AF /* sweetValueCalculation.m in Sources */,
 				7525F7971DD08F8400B0510C /* inventoryMenu.m in Sources */,
 				75D025F11E4D67340068C1DB /* candybarPacket.m in Sources */,
+				752DBE9D1ED1F4CC001C9E6A /* tapCombo.m in Sources */,
 				753060CF1E19B99C004D7757 /* confirmGemSale.m in Sources */,
 				75B5264B1E1ECD2B0020A609 /* levelWorkstations.m in Sources */,
 				757CD1A11DE2200000D07480 /* sweetPicker.m in Sources */,
@@ -1993,6 +2010,7 @@
 				75D01FF11E36B103004F8F0F /* trendsData.m in Sources */,
 				75784D4E1E282F4200C41067 /* spinWheel.m in Sources */,
 				7579CB031E2A8CBD00975F01 /* sparks.m in Sources */,
+				7511411A1E6F0D80005CC7F1 /* specialsData.m in Sources */,
 				750F3A911DE64A65002AFB78 /* sweetnessSlider.m in Sources */,
 				75ED3B5B1E19647F0012BA98 /* gemInteractionUI.m in Sources */,
 				75E39AD01E0319FD003D7DD7 /* bonbonPacket.m in Sources */,

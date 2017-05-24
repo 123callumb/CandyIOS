@@ -6,7 +6,7 @@
 //  Copyright © 2017 Kilcal. All rights reserved.
 //
 
-#import "menuUi.h"
+#import "menuUI.h"
 #import "menuUIButtons.h"
 #import "settingsUI.h"
 #import "tutorialMessages.h"

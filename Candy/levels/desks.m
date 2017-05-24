@@ -16,6 +16,18 @@
     [desks addObject:@"desk_polished"]; 
     [desks addObject:@"black_desk"];
     [desks addObject:@"desk_king"];
+    [desks addObject:@"desk_dj"];
+    [desks addObject:@"desk_domino"];
+    [desks addObject:@"desk_invader"];
+    [desks addObject:@"desk_legged"];
+    [desks addObject:@"desk_people"];
+    [desks addObject:@"desk_pipework"];
+    [desks addObject:@"desk_speaker"];
+    [desks addObject:@"desk_stacled"];
+    [desks addObject:@"desk_tank"];
+    [desks addObject:@"desk_tesla"];
+    [desks addObject:@"desk_tetris"];
+    [desks addObject:@"desk_tree"];
 }
 +(NSArray*)getDeskTypes {
     NSMutableArray *deskTypes = [[NSMutableArray alloc] init];
