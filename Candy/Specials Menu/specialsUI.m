@@ -43,7 +43,7 @@
     if([specialsData getSpecialActiveWithID] != -1){
         [specialsItemUi itemActiveScene:content activeItemID:[specialsData getSpecialActiveWithID]];
     }else{
-            [content addSubview:contentScroll];
+        [content addSubview:contentScroll];
     }
     [mainSpec addSubview:backing];
     [mainSpec addSubview:title];
