@@ -57,7 +57,7 @@
     sweet.position = [(SKSpriteNode*)[s childNodeWithName:@"comboBar"] position];
     [s addChild:sweet];
     SKAction *fadeIn = [SKAction fadeInWithDuration:0.2];
-    SKAction *scaleIn = [SKAction scaleTo:0.6 duration:0.2];
+    SKAction *scaleIn = [SKAction scaleTo:0.4 duration:0.2];
     [sweet runAction:scaleIn];
     [sweet runAction:fadeIn];
     sweet.physicsBody = [SKPhysicsBody bodyWithTexture:sweet.texture size:sweet.frame.size];
@@ -67,6 +67,7 @@
 {
     return (int)(min + arc4random_uniform(max - min + 1));
 }
+
 +(void)onSpecialBonus:(SKSpriteNode*)s onScene:(SKScene*)sc {
     if([s.name containsString:@"bonusSpecial_"]){
         if([s.name containsString:@"5x"]){
@@ -79,8 +80,18 @@
             [specialsData activateSpecialWithID:2];
         }
         
-        [sparks createSpriteSplosion:sc nodeAmount:20 pos:s.position];
-        [s removeFromParent];
+        [sparks createSpriteSplosion:sc nodeAmount:30 pos:s.position];
+        
+        SKAction *fadeout = [SKAction fadeOutWithDuration:0.5];
+        SKAction *shrink = [SKAction scaleBy:0.25 duration:0.5];
+        SKAction *impulse = [SKAction applyImpulse:CGVectorMake(0, 50) duration:0.2];
+        
+        [s runAction:impulse];
+        [s runAction:fadeout];
+        [s runAction:shrink completion:^{
+                [s removeFromParent];
+        }];
+
     }
 }
 @end

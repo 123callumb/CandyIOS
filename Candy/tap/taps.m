@@ -33,13 +33,13 @@
 +(void)onPressed: (SKScene *)s location:(CGPoint)p view:(UIView*)v {
     SKNode *obj = [s nodeAtPoint:p];
     if([menuHandler getCurrentMenu] == 4){
-            [self randomTapTests];
+            //[self randomTapTests];
             [coinBarSprite updateText:s];
             [fiftyTapBonus onTouchofBonus:(SKSpriteNode*)obj scene:s];
             [tapCombo startTapTimerCountDown:s];
             [specialBonus onSpecialBonus:(SKSpriteNode*)obj onScene:s];
             [candyMachineInteraction animateAllCandyMachinesOnTap:s];
-            [coinBarSprite addSpecialIcon:s];
+            //[coinBarSprite addSpecialIcon:s];
            // [candyMachineInteraction onCandyMachineTouch:(SKSpriteNode*)obj scene:s view:v];
             [objectivesBronze object3:v];
             [objectivesSilver object2:v];

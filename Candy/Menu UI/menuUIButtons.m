@@ -24,6 +24,7 @@
 #import "objectivesBronze.h"
 #import "bannerBonusUI.h"
 #import "specialsUI.h"
+#import "tapCombo.h"
 
 @implementation menuUIButtons
 
@@ -91,6 +92,7 @@ int menuNo = -1;
     }
     if(menuNo == 1){
         menuNo = -1;
+        [tapCombo resetComboData];
         [mainTransition switchScene:s sceneTwo:@"freeItems" Transition:[SKTransition crossFadeWithDuration:0.3]];
     }
     if(menuNo == 2){
@@ -104,6 +106,7 @@ int menuNo = -1;
     }
     if(menuNo == 4){
         menuNo = -1;
+        [tapCombo resetComboData];
         [mainTransition switchScene:s sceneTwo:@"coinStore" Transition:[SKTransition crossFadeWithDuration:0.3]];
         [tutorialMessages firstTimeStoreButton:v];
     }
@@ -115,6 +118,7 @@ int menuNo = -1;
     if(menuNo == 6){
         menuNo = -1;
         if([spinData isEligibleForDailySpin]){
+            [tapCombo resetComboData];
             [mainTransition switchScene:s sceneTwo:@"dailySpin" Transition:[SKTransition crossFadeWithDuration:0.3]];
         }else {
             [tutorialMessages spinTimeLeft:v];
@@ -129,16 +133,19 @@ int menuNo = -1;
     if(menuNo == 8){
         menuNo = -1;
         [menuHandler setCurrentMenu:8];
+        [tapCombo resetComboData];
         [mainTransition switchScene:s sceneTwo:@"gemerator" Transition:[SKTransition crossFadeWithDuration:0.5]];
 
     }
     if(menuNo == 9){
         menuNo = -1;
         [objectivesBronze object1:v];
+        [tapCombo resetComboData];
         [mainTransition switchScene:s sceneTwo:@"Character_Maker" Transition:[SKTransition crossFadeWithDuration:0.3]];
     }
     if(menuNo == 10){
         menuNo = -1;
+        [tapCombo resetComboData];
         [mainTransition switchScene:s sceneTwo:@"myPackets" Transition:[SKTransition crossFadeWithDuration:0.3]];
     }
     if(menuNo == 11){

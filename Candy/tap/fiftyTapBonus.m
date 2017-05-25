@@ -18,9 +18,9 @@
 @implementation fiftyTapBonus
 int tapCollector = 0;
 +(void)reward:(SKScene*)s {
-    int rewardTypeNum = [self randomNumberBetween:1 maxNumber:10];
+    int rewardTypeNum = [self randomNumberBetween:1 maxNumber:5];
     
-    if(rewardTypeNum > 8){
+    if(rewardTypeNum <= 1){
         
         [specialBonus spawnSpecialItem:s];
         //Multiplier or Auto tap reward

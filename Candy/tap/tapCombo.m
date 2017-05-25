@@ -113,4 +113,10 @@ int comboReward = 0;
 +(float)getCurrentComboMultiplier {
     return comboMultiplier;
 }
++(void)resetComboData {
+    comboNumber = 0;
+    comboMultiplier = 0;
+    comboReward = 0;
+    comboTimer = 0;
+}
 @end

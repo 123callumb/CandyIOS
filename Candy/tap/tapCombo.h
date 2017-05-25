@@ -12,4 +12,5 @@
 @interface tapCombo : NSObject
 +(void)startTapTimerCountDown:(SKScene*)onScene;
 +(float)getCurrentComboMultiplier;
++(void)resetComboData;
 @end
