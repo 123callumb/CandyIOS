@@ -10,5 +10,5 @@
 
 @interface spinWheel : SKSpriteNode
 +(void)addWheel: (SKScene*)s;
-+(void)addPrizeValue: (SKScene*)s text:(NSString*)text pos:(CGPoint)position textSize:(float)size;
++(void)onBoxInteraction:(SKScene*)s box:(SKSpriteNode*)box;
 @end

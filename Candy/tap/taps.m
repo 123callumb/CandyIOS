@@ -39,7 +39,7 @@
             [tapCombo startTapTimerCountDown:s];
             [specialBonus onSpecialBonus:(SKSpriteNode*)obj onScene:s];
             [candyMachineInteraction animateAllCandyMachinesOnTap:s];
-            //[coinBarSprite addSpecialIcon:s];
+            [coinBarSprite addSpecialIcon:s];
            // [candyMachineInteraction onCandyMachineTouch:(SKSpriteNode*)obj scene:s view:v];
             [objectivesBronze object3:v];
             [objectivesSilver object2:v];

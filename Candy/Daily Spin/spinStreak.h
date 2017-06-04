@@ -7,7 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <SpriteKit/SpriteKit.h>
 
 @interface spinStreak : NSObject
-+(NSString*)determineSpinStreakPrize;
++(void)createRewardPane: (SKScene*)s prize:(NSString*)prizeTexture ;
 @end

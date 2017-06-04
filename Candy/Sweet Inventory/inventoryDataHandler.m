@@ -216,7 +216,7 @@
         [inventorySweetData addSweet:@"Cherry Marshmallow" sweetTextureName:@"marshmallowCherry" sweetColorRarity:red newUUID:[sweetUUID createNewSweetUUID]];
     }
     if([textureName isEqualToString:@"marshmallowVanillaPacket"]){
-        [inventorySweetData addSweet:@"Vanilla Marshmallow" sweetTextureName:@"marshmallowVanillaPacket" sweetColorRarity:red newUUID:[sweetUUID createNewSweetUUID]];
+        [inventorySweetData addSweet:@"Vanilla Marshmallow" sweetTextureName:@"marshmallowVanilla" sweetColorRarity:red newUUID:[sweetUUID createNewSweetUUID]];
     }
     if([textureName isEqualToString:@"marshmallowCandyflossPacket"]){
         [inventorySweetData addSweet:@"Candyfloss Marshmallow" sweetTextureName:@"marshmallowCandyfloss" sweetColorRarity:yellow newUUID:[sweetUUID createNewSweetUUID]];
