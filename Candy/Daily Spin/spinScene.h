@@ -9,4 +9,5 @@
 #import <SpriteKit/SpriteKit.h>
 
 @interface spinScene : SKScene
++(void)spinTaken;
 @end

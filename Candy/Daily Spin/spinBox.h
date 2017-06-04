@@ -9,7 +9,6 @@
 #import <SpriteKit/SpriteKit.h>
 
 @interface spinBox : SKSpriteNode
-+(void)createPrizeBox: (SKScene*)s;
-+(void)updateBox: (SKScene*)s;
-+(void)setFinalOutcome: (NSString*)str;
++(void)beginBoxSpinning:(SKScene*)s;
++(void)addRandomPRizePane:(SKScene*)s;
 @end
