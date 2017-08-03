@@ -26,7 +26,7 @@
                 [nodeToParticle particleFlyAnimation:sweet scene:s scaleNo:0.2];
                 [money addBalance:[sweetValueCalculation calculateSkValue:sweet] * ([specialsData getSpecialsMultiplier] + [tapCombo getCurrentComboMultiplier] - 1)];
                 SKSpriteNode *coinbar = (SKSpriteNode*)[s childNodeWithName:@"UIcoinBar"];
-                SKSpriteNode *workstation = (SKSpriteNode*)[s childNodeWithName:[NSString stringWithFormat:@"workstation_%d", machineNumber]];
+                SKSpriteNode *workstation = (SKSpriteNode*)[s childNodeWithName:[NSString stringWithFormat:@"candyMachine_Number_%d", machineNumber]];
                 [coinSpawner spriteToSpriteSpawner:workstation sprite2:coinbar scene:s];
 
             }

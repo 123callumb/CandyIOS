@@ -22,7 +22,7 @@
     [self addBuildingType:s];
     [self addMainCharacter:s];
     [self addDesk:s];
-    [levelWorkstations addWorkstations:s];
+    [levelWorkstations addCandyMachines:s];
 }
 +(void)addDesk: (SKScene*)s {
     
@@ -42,7 +42,10 @@
     }
 }
 +(void)addFloor: (SKScene*)s {
-    SKSpriteNode *floor = [SKSpriteNode spriteNodeWithImageNamed:[floors getCurrentFloor]];
+    
+    int building = [buildingType getCurrentBuildingID];
+    
+    SKSpriteNode *floor = [SKSpriteNode spriteNodeWithImageNamed:[floors getFloorAtIndex:building]];
     floor.size = CGSizeMake(s.frame.size.width, s.frame.size.height/1.4);
     floor.position = CGPointMake(0, -s.frame.size.height/7);
     floor.zPosition = -4;

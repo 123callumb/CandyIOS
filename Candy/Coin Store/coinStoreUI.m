@@ -38,13 +38,11 @@
 }
 +(void)addMenuButtons: (UIScrollView*)v {
     [self createButton:v textureName:@"packetsButtonStore" buttonID:0];
-    [self createButton:v textureName:@"floorsButton" buttonID:1];
-    [self createButton:v textureName:@"desksButton" buttonID:2];
-    [self createButton:v textureName:@"workstationsButton" buttonID:3];
-    [self createButton:v textureName:@"hatsButtonTemp" buttonID:4];
-    [self createButton:v textureName:@"shirtsButtonTemp" buttonID:5];
-    [self createButton:v textureName:@"pantsButtonTemp" buttonID:6];
-    [self createButton:v textureName:@"shoesButtonTemp" buttonID:7];
+    [self createButton:v textureName:@"desksButton" buttonID:1];
+    [self createButton:v textureName:@"hatsButtonTemp" buttonID:2];
+    [self createButton:v textureName:@"shirtsButtonTemp" buttonID:3];
+    [self createButton:v textureName:@"pantsButtonTemp" buttonID:4];
+    [self createButton:v textureName:@"shoesButtonTemp" buttonID:5];
 }
 +(void)createButton: (UIScrollView*)v textureName:(NSString*)textureName buttonID:(int)buttonID {
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -77,17 +75,10 @@
         [self addBackUIButton:v1];
     }
     if(buttonID == 1){
-        [floorStore addFloorStoreUI:v];
-        [self addBackUIButton:v1];
-    }
-    if(buttonID == 2){
         [deskStore addDeskStoreUI:v];
         [self addBackUIButton:v1];
     }
-    if(buttonID == 3){
-        [workstationStore addWorkstationStoreUI:v];
-        [self addBackUIButton:v1];
-    }
+
 }
 +(void)addBackUIButton: (UIView*)v {
     UIButton *back = [UIButton buttonWithType:UIButtonTypeCustom];

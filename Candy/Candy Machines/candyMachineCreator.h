@@ -9,5 +9,5 @@
 #import <SpriteKit/SpriteKit.h>
 
 @interface candyMachineCreator : SKSpriteNode
-+(void)createCandyMachineWithID: (int)candyMachineID position:(CGPoint)pos scale:(float)scale attatchingSprite:(SKSpriteNode*)s;
++(void)createCandyMachineWithID: (int)candyMachineID position:(CGPoint)pos scale:(float)scale scene:(SKScene*)s;
 @end

@@ -35,8 +35,8 @@ int machineSlotSelected = 3;
     
     SKSpriteNode *candyMachine = [SKSpriteNode spriteNodeWithImageNamed:[candyMachineValues getCandyMachineTextureFirstState:machineID]];
     candyMachine.position = CGPointMake(-mainW/2.5, mainH/1.5);
-    candyMachine.xScale = 3;
-    candyMachine.yScale = 3;
+    candyMachine.xScale = 1.5;
+    candyMachine.yScale = 1.5;
     
     SKSpriteNode *upgradeCostBar = [SKSpriteNode spriteNodeWithImageNamed:@"machineCoinUpgradePrice"];
     upgradeCostBar.position = CGPointMake(-mainW/2.4, mainH/6);
