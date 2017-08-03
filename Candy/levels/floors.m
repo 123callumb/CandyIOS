@@ -17,12 +17,12 @@
     [floors addObject:@"floor_yellow"];
     [floors addObject:@"floor_green"];
     [floors addObject:@"floor_wood"];
-    [floors addObject:@"floor_disco"];
-    [floors addObject:@"floor_blackgold"];
-    [floors addObject:@"floor_candycane"];
+   // [floors addObject:@"floor_disco"];
+   //    // [floors addObject:@"floor_candycane"];
     [floors addObject:@"floor_checkered"];
-    [floors addObject:@"floor_gold"];
-    [floors addObject:@"floor_bonbonlover"];
+    [floors addObject:@"floor_blackgold"];
+   // [floors addObject:@"floor_gold"];
+   // [floors addObject:@"floor_bonbonlover"];
 }
 +(NSArray*)getFloors {
     NSMutableArray *floors = [[NSMutableArray alloc] init];

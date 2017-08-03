@@ -18,8 +18,7 @@
     [self addBuildingData:buildings interiorTexture:@"upgradedHouse_lvl_1" buildingTexture:@"cityOffice_lvl_2" onScreenName:@"Office" buildingPrice:[NSNumber numberWithInt:320000]];
     [self addBuildingData:buildings interiorTexture:@"upgradedHouse_lvl_3" buildingTexture:@"cityOffice_lvl_3" onScreenName:@"Large Office" buildingPrice:[NSNumber numberWithInt:640000]];
     [self addBuildingData:buildings interiorTexture:@"upgradedHouse_lvl_2" buildingTexture:@"factory_lvl_1" onScreenName:@"Small Factory" buildingPrice:[NSNumber numberWithInt:1200000]];
-    [self addBuildingData:buildings interiorTexture:@"upgradedHouse_lvl_1" buildingTexture:@"factory_lvl_2" onScreenName:@"Factory" buildingPrice:[NSNumber numberWithInt:2400000]];
-    [self addBuildingData:buildings interiorTexture:@"upgradedHouse_lvl_3" buildingTexture:@"factory_lvl_3" onScreenName:@"Large Factory" buildingPrice:[NSNumber numberWithInt:4800000]];
+    [self addBuildingData:buildings interiorTexture:@"upgradedHouse_lvl_1" buildingTexture:@"factory_lvl_2" onScreenName:@"MOVE OUT!" buildingPrice:[NSNumber numberWithInt:2400000]];
 
 }
 +(NSArray*)getBuildingTypes {

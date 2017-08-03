@@ -49,13 +49,12 @@ int currentSelectedMachine = 1337;
 +(void)animateAllCandyMachinesOnTap: (SKScene*)s {
     for(int i = 0; i <= [candyMachines getCandyMachinesUnlocked] - 1; i++){
         
-        SKSpriteNode *workstation = (SKSpriteNode*)[s childNodeWithName:[NSString stringWithFormat:@"workstation_%d", i]];
-        SKSpriteNode *machine = (SKSpriteNode*)[workstation childNodeWithName:[NSString stringWithFormat:@"candyMachine_Number_%d", i]];
+        SKSpriteNode *machine = (SKSpriteNode*)[s childNodeWithName:[NSString stringWithFormat:@"candyMachine_Number_%d", i]];
         
         machine.texture = [SKTexture textureWithImageNamed:[candyMachineValues getCandyMachineTextureSecondState:i]];
         
         SKAction *animationDuration = [SKAction waitForDuration:0.1];
-        [candyMachineSweetSpawner createSweetsFromMachine:s machineID:i machinePosition:CGPointMake(workstation.position.x, workstation.position.y + machine.frame.size.height/1.8)];
+        [candyMachineSweetSpawner createSweetsFromMachine:s machineID:i machinePosition:CGPointMake(machine.position.x, machine.position.y + machine.frame.size.height/6)];
         [machine runAction:animationDuration completion:^{
             machine.texture = [SKTexture textureWithImageNamed:[candyMachineValues getCandyMachineTextureFirstState:i]];
         }];
