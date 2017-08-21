@@ -13,6 +13,7 @@
 #import "Character_Maker.h"
 #import "gems.h"
 #import "firstTimeDataSetup.h"
+#import "character_editor.h"
 
 @implementation GameScene {
     
@@ -43,8 +44,9 @@
         SKAction *splashTime = [SKAction waitForDuration:2];
         [self runAction:splashTime completion:^{
             [mainTransition switchScene:self sceneTwo:@"main" Transition:[SKTransition crossFadeWithDuration:1]];
+    
         }];
-        
+
     }
 }
 
