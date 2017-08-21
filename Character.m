@@ -10,11 +10,10 @@
 
 @implementation Character
 +(void)Spawn:(SKScene*)s Position:(CGPoint)Pos Scale:(double)scale{
-    NSString *HatName = [[NSUserDefaults standardUserDefaults] stringForKey:@"hatsVal"];
-    NSString *PantsName = [[NSUserDefaults standardUserDefaults] stringForKey:@"pantsVal"];
-    NSString *ShirtName = [[NSUserDefaults standardUserDefaults] stringForKey:@"shirtsVal"];
-    NSString *ShoesName = [[NSUserDefaults standardUserDefaults] stringForKey:@"shoesVal"];
-    NSString *PresetName = [[NSUserDefaults standardUserDefaults] stringForKey:@"presetVal"];
+    NSString *HatName = [[NSUserDefaults standardUserDefaults] stringForKey:@"current_hat"];
+    NSString *PantsName = [[NSUserDefaults standardUserDefaults] stringForKey:@"current_pants"];
+    NSString *ShirtName = [[NSUserDefaults standardUserDefaults] stringForKey:@"current_shirt_0"];
+    NSString *ShoesName = [[NSUserDefaults standardUserDefaults] stringForKey:@"current_shoes"];
     
     SKSpriteNode *base = [SKSpriteNode spriteNodeWithImageNamed:@"spr_character_base_0"];
     SKSpriteNode *hue = [SKSpriteNode spriteNodeWithImageNamed:@"spr_character_hue_0"];
@@ -22,7 +21,6 @@
     SKSpriteNode *shirt = [SKSpriteNode spriteNodeWithImageNamed:ShirtName];
     SKSpriteNode *pants = [SKSpriteNode spriteNodeWithImageNamed:PantsName];
     SKSpriteNode *shoes = [SKSpriteNode spriteNodeWithImageNamed:ShoesName];
-    SKSpriteNode *preset = [SKSpriteNode spriteNodeWithImageNamed:PresetName];
     //checkennugget
 
     SKSpriteNode *shadow = [SKSpriteNode spriteNodeWithImageNamed:@"spr_shadow_0"];
@@ -39,7 +37,6 @@
     shirt.position = Pos;
     pants.position = Pos;
     shoes.position = Pos;
-    preset.position = Pos;
     shadow.position = Pos;
     HatShadow.position = CGPointMake(Pos.x+10, Pos.y-10);
     
@@ -57,8 +54,7 @@
     pants.yScale = scale;
     shoes.xScale = scale;
     shoes.yScale = scale;
-    preset.xScale = scale;
-    preset.yScale = scale;
+//    preset.yScale = scale;
     HatShadow.xScale = scale;
     HatShadow.yScale = scale;
     shadow.xScale = scale;
@@ -72,7 +68,7 @@
     shirt.anchorPoint = Anchor;
     pants.anchorPoint = Anchor;
     shoes.anchorPoint = Anchor;
-    preset.anchorPoint = Anchor;
+//    preset.anchorPoint = Anchor;
     shadow.anchorPoint = Anchor;
     HatShadow.anchorPoint = Anchor;
     
@@ -82,7 +78,7 @@
     shirt.zPosition = -2;
     pants.zPosition = -2;
     shoes.zPosition = -2;
-    preset.zPosition = -2;
+//    preset.zPosition = -2;
     shadow.zPosition = -2;
     HatShadow.zPosition = -2;
     
@@ -104,7 +100,7 @@
         [s addChild:shoes];
     }
     else if(isPre == 1){
-        [s addChild:preset];
+//        [s addChild:preset];
     }
 }
 @end

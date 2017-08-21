@@ -7,20 +7,17 @@
 //
 
 #import "Character_Maker.h"
-#import "selection_bar.h"
-#import "character_clothes.h"
-#import "background.h"
-#import "skinColour.h"
-#import "Save.h"
+#import "character_editor.h"
+#import "mainTransition.h"
+#import "CE_continue_button.h"
 
 int imageState;
 
-@implementation Character_Maker
+@implementation Character_Maker{
+    SKScene *scen_;
+}
 - (void)didMoveToView:(SKView *)view {
-    [background spawnTextures:self];
-    self.anchorPoint = CGPointMake(0, 0);
-    [character_clothes initializeSprites:self imageState:imageState];
-    [Save spawn:self];
+    [character_editor initializeTextures:self.scene view:self.view scene:self];
 }
 - (void)tapMove:(SKScene*)s location:(CGPoint)p node:(SKNode*)n {
     
@@ -31,20 +28,8 @@ int imageState;
 - (void)touchUpAtPoint:(CGPoint)pos{
 }
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-    UITouch *tap = [touches anyObject];
-    CGPoint loc = [tap locationInNode:self];
-    SKNode *obj = [self nodeAtPoint:loc];
-    
-    [selection_bar onTouch:obj imgst:imageState];
-    [character_clothes onTouch:obj];
-    [Save onTouch:obj scene:self];
 }
 - (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event{
-    UITouch *tap = [touches anyObject];
-    CGPoint loc = [tap locationInNode:self];
-    SKNode *obj = [self nodeAtPoint:loc];
-    
-    [skinColour touchDown:(SKSpriteNode*)obj location:loc];
 }
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
     
@@ -53,7 +38,7 @@ int imageState;
     
 }
 -(void)update:(CFTimeInterval)currentTime {
-    [background updating];
+    [CE_continue_button testForChange:self.scene];
 }
 
 @end
