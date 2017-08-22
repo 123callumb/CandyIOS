@@ -13,16 +13,16 @@
 		616F844D1E42635D00723148 /* upgrades_regular.m in Sources */ = {isa = PBXBuildFile; fileRef = 616F844C1E42635D00723148 /* upgrades_regular.m */; };
 		616F84501E4263C600723148 /* upgrades_special.m in Sources */ = {isa = PBXBuildFile; fileRef = 616F844F1E4263C600723148 /* upgrades_special.m */; };
 		618EA38C1DF1ED4C00D07ADD /* candyMachines.m in Sources */ = {isa = PBXBuildFile; fileRef = 618EA38B1DF1ED4C00D07ADD /* candyMachines.m */; };
-		61AFB5E31F4B0D9700BE49C8 /* CE_continue_button.m in Sources */ = {isa = PBXBuildFile; fileRef = 61AFB5D01F4B0D9700BE49C8 /* CE_continue_button.m */; };
-		61AFB5E41F4B0D9700BE49C8 /* CE_costumes_menu.m in Sources */ = {isa = PBXBuildFile; fileRef = 61AFB5D21F4B0D9700BE49C8 /* CE_costumes_menu.m */; };
-		61AFB5E51F4B0D9700BE49C8 /* CE_hats_menu.m in Sources */ = {isa = PBXBuildFile; fileRef = 61AFB5D41F4B0D9700BE49C8 /* CE_hats_menu.m */; };
-		61AFB5E61F4B0D9700BE49C8 /* CE_menu_buttons.m in Sources */ = {isa = PBXBuildFile; fileRef = 61AFB5D61F4B0D9700BE49C8 /* CE_menu_buttons.m */; };
-		61AFB5E71F4B0D9700BE49C8 /* CE_pants_menu.m in Sources */ = {isa = PBXBuildFile; fileRef = 61AFB5D81F4B0D9700BE49C8 /* CE_pants_menu.m */; };
-		61AFB5E81F4B0D9700BE49C8 /* CE_shirts_menu.m in Sources */ = {isa = PBXBuildFile; fileRef = 61AFB5DA1F4B0D9700BE49C8 /* CE_shirts_menu.m */; };
-		61AFB5E91F4B0D9700BE49C8 /* CE_shoes_menu.m in Sources */ = {isa = PBXBuildFile; fileRef = 61AFB5DC1F4B0D9700BE49C8 /* CE_shoes_menu.m */; };
-		61AFB5EA1F4B0D9700BE49C8 /* CE_skin_menu.m in Sources */ = {isa = PBXBuildFile; fileRef = 61AFB5DE1F4B0D9700BE49C8 /* CE_skin_menu.m */; };
-		61AFB5EB1F4B0D9700BE49C8 /* character_editor.m in Sources */ = {isa = PBXBuildFile; fileRef = 61AFB5E01F4B0D9700BE49C8 /* character_editor.m */; };
-		61AFB5EC1F4B0D9700BE49C8 /* display_character.m in Sources */ = {isa = PBXBuildFile; fileRef = 61AFB5E21F4B0D9700BE49C8 /* display_character.m */; };
+		61D3FDAC1F4C3C5F004AA96E /* CE_continue_button.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D3FDA51F4C3B5B004AA96E /* CE_continue_button.m */; };
+		61D3FDAD1F4C3C5F004AA96E /* CE_costumes_menu.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D3FD9E1F4C3B5A004AA96E /* CE_costumes_menu.m */; };
+		61D3FDAE1F4C3C5F004AA96E /* CE_hats_menu.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D3FDA81F4C3B5B004AA96E /* CE_hats_menu.m */; };
+		61D3FDAF1F4C3C5F004AA96E /* CE_menu_buttons.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D3FDA01F4C3B5A004AA96E /* CE_menu_buttons.m */; };
+		61D3FDB01F4C3C5F004AA96E /* CE_pants_menu.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D3FDA31F4C3B5A004AA96E /* CE_pants_menu.m */; };
+		61D3FDB11F4C3C5F004AA96E /* CE_shirts_menu.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D3FDAA1F4C3B5B004AA96E /* CE_shirts_menu.m */; };
+		61D3FDB21F4C3C5F004AA96E /* CE_shoes_menu.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D3FD9F1F4C3B5A004AA96E /* CE_shoes_menu.m */; };
+		61D3FDB31F4C3C5F004AA96E /* CE_skin_menu.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D3FD9B1F4C3B59004AA96E /* CE_skin_menu.m */; };
+		61D3FDB41F4C3C5F004AA96E /* character_editor.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D3FDA21F4C3B5A004AA96E /* character_editor.m */; };
+		61D3FDB71F4C3CF5004AA96E /* display_character.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D3FDB51F4C3CC9004AA96E /* display_character.m */; };
 		61E1837F1DEDE45A0034C021 /* Character_Maker.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E1837E1DEDE45A0034C021 /* Character_Maker.m */; };
 		61E183861DEE00E30034C021 /* Character.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E183851DEE00E30034C021 /* Character.m */; };
 		61E183891DEE13490034C021 /* skinColour.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E183881DEE13490034C021 /* skinColour.m */; };
@@ -311,26 +311,26 @@
 		616F844F1E4263C600723148 /* upgrades_special.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = upgrades_special.m; sourceTree = "<group>"; };
 		618EA38A1DF1ED4C00D07ADD /* candyMachines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = candyMachines.h; path = Candy/candyMachines.h; sourceTree = "<group>"; };
 		618EA38B1DF1ED4C00D07ADD /* candyMachines.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = candyMachines.m; path = Candy/candyMachines.m; sourceTree = "<group>"; };
-		61AFB5CF1F4B0D9700BE49C8 /* CE_continue_button.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CE_continue_button.h; path = ../../Desktop/editor/CE_continue_button.h; sourceTree = "<group>"; };
-		61AFB5D01F4B0D9700BE49C8 /* CE_continue_button.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CE_continue_button.m; path = ../../Desktop/editor/CE_continue_button.m; sourceTree = "<group>"; };
-		61AFB5D11F4B0D9700BE49C8 /* CE_costumes_menu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CE_costumes_menu.h; path = ../../Desktop/editor/CE_costumes_menu.h; sourceTree = "<group>"; };
-		61AFB5D21F4B0D9700BE49C8 /* CE_costumes_menu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CE_costumes_menu.m; path = ../../Desktop/editor/CE_costumes_menu.m; sourceTree = "<group>"; };
-		61AFB5D31F4B0D9700BE49C8 /* CE_hats_menu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CE_hats_menu.h; path = ../../Desktop/editor/CE_hats_menu.h; sourceTree = "<group>"; };
-		61AFB5D41F4B0D9700BE49C8 /* CE_hats_menu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CE_hats_menu.m; path = ../../Desktop/editor/CE_hats_menu.m; sourceTree = "<group>"; };
-		61AFB5D51F4B0D9700BE49C8 /* CE_menu_buttons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CE_menu_buttons.h; path = ../../Desktop/editor/CE_menu_buttons.h; sourceTree = "<group>"; };
-		61AFB5D61F4B0D9700BE49C8 /* CE_menu_buttons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CE_menu_buttons.m; path = ../../Desktop/editor/CE_menu_buttons.m; sourceTree = "<group>"; };
-		61AFB5D71F4B0D9700BE49C8 /* CE_pants_menu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CE_pants_menu.h; path = ../../Desktop/editor/CE_pants_menu.h; sourceTree = "<group>"; };
-		61AFB5D81F4B0D9700BE49C8 /* CE_pants_menu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CE_pants_menu.m; path = ../../Desktop/editor/CE_pants_menu.m; sourceTree = "<group>"; };
-		61AFB5D91F4B0D9700BE49C8 /* CE_shirts_menu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CE_shirts_menu.h; path = ../../Desktop/editor/CE_shirts_menu.h; sourceTree = "<group>"; };
-		61AFB5DA1F4B0D9700BE49C8 /* CE_shirts_menu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CE_shirts_menu.m; path = ../../Desktop/editor/CE_shirts_menu.m; sourceTree = "<group>"; };
-		61AFB5DB1F4B0D9700BE49C8 /* CE_shoes_menu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CE_shoes_menu.h; path = ../../Desktop/editor/CE_shoes_menu.h; sourceTree = "<group>"; };
-		61AFB5DC1F4B0D9700BE49C8 /* CE_shoes_menu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CE_shoes_menu.m; path = ../../Desktop/editor/CE_shoes_menu.m; sourceTree = "<group>"; };
-		61AFB5DD1F4B0D9700BE49C8 /* CE_skin_menu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CE_skin_menu.h; path = ../../Desktop/editor/CE_skin_menu.h; sourceTree = "<group>"; };
-		61AFB5DE1F4B0D9700BE49C8 /* CE_skin_menu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CE_skin_menu.m; path = ../../Desktop/editor/CE_skin_menu.m; sourceTree = "<group>"; };
-		61AFB5DF1F4B0D9700BE49C8 /* character_editor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = character_editor.h; path = ../../Desktop/editor/character_editor.h; sourceTree = "<group>"; };
-		61AFB5E01F4B0D9700BE49C8 /* character_editor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = character_editor.m; path = ../../Desktop/editor/character_editor.m; sourceTree = "<group>"; };
-		61AFB5E11F4B0D9700BE49C8 /* display_character.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = display_character.h; path = ../../Desktop/editor/display_character.h; sourceTree = "<group>"; };
-		61AFB5E21F4B0D9700BE49C8 /* display_character.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = display_character.m; path = ../../Desktop/editor/display_character.m; sourceTree = "<group>"; };
+		61D3FD9A1F4C3B59004AA96E /* CE_skin_menu.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CE_skin_menu.h; path = editor/CE_skin_menu.h; sourceTree = "<group>"; };
+		61D3FD9B1F4C3B59004AA96E /* CE_skin_menu.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CE_skin_menu.m; path = editor/CE_skin_menu.m; sourceTree = "<group>"; };
+		61D3FD9C1F4C3B59004AA96E /* CE_shirts_menu.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CE_shirts_menu.h; path = editor/CE_shirts_menu.h; sourceTree = "<group>"; };
+		61D3FD9D1F4C3B5A004AA96E /* CE_menu_buttons.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CE_menu_buttons.h; path = editor/CE_menu_buttons.h; sourceTree = "<group>"; };
+		61D3FD9E1F4C3B5A004AA96E /* CE_costumes_menu.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CE_costumes_menu.m; path = editor/CE_costumes_menu.m; sourceTree = "<group>"; };
+		61D3FD9F1F4C3B5A004AA96E /* CE_shoes_menu.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CE_shoes_menu.m; path = editor/CE_shoes_menu.m; sourceTree = "<group>"; };
+		61D3FDA01F4C3B5A004AA96E /* CE_menu_buttons.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CE_menu_buttons.m; path = editor/CE_menu_buttons.m; sourceTree = "<group>"; };
+		61D3FDA11F4C3B5A004AA96E /* CE_hats_menu.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CE_hats_menu.h; path = editor/CE_hats_menu.h; sourceTree = "<group>"; };
+		61D3FDA21F4C3B5A004AA96E /* character_editor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = character_editor.m; path = editor/character_editor.m; sourceTree = "<group>"; };
+		61D3FDA31F4C3B5A004AA96E /* CE_pants_menu.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CE_pants_menu.m; path = editor/CE_pants_menu.m; sourceTree = "<group>"; };
+		61D3FDA41F4C3B5B004AA96E /* CE_shoes_menu.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CE_shoes_menu.h; path = editor/CE_shoes_menu.h; sourceTree = "<group>"; };
+		61D3FDA51F4C3B5B004AA96E /* CE_continue_button.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CE_continue_button.m; path = editor/CE_continue_button.m; sourceTree = "<group>"; };
+		61D3FDA61F4C3B5B004AA96E /* character_editor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = character_editor.h; path = editor/character_editor.h; sourceTree = "<group>"; };
+		61D3FDA71F4C3B5B004AA96E /* CE_continue_button.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CE_continue_button.h; path = editor/CE_continue_button.h; sourceTree = "<group>"; };
+		61D3FDA81F4C3B5B004AA96E /* CE_hats_menu.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CE_hats_menu.m; path = editor/CE_hats_menu.m; sourceTree = "<group>"; };
+		61D3FDA91F4C3B5B004AA96E /* CE_costumes_menu.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CE_costumes_menu.h; path = editor/CE_costumes_menu.h; sourceTree = "<group>"; };
+		61D3FDAA1F4C3B5B004AA96E /* CE_shirts_menu.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CE_shirts_menu.m; path = editor/CE_shirts_menu.m; sourceTree = "<group>"; };
+		61D3FDAB1F4C3B5C004AA96E /* CE_pants_menu.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CE_pants_menu.h; path = editor/CE_pants_menu.h; sourceTree = "<group>"; };
+		61D3FDB51F4C3CC9004AA96E /* display_character.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = display_character.m; path = editor/display_character.m; sourceTree = "<group>"; };
+		61D3FDB61F4C3CCA004AA96E /* display_character.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = display_character.h; path = editor/display_character.h; sourceTree = "<group>"; };
 		61E1837D1DEDE45A0034C021 /* Character_Maker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Character_Maker.h; sourceTree = "<group>"; };
 		61E1837E1DEDE45A0034C021 /* Character_Maker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Character_Maker.m; sourceTree = "<group>"; };
 		61E183841DEE00E30034C021 /* Character.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Character.h; sourceTree = "<group>"; };
@@ -883,26 +883,26 @@
 		61AFB5CE1F4B0D8300BE49C8 /* character_editor */ = {
 			isa = PBXGroup;
 			children = (
-				61AFB5CF1F4B0D9700BE49C8 /* CE_continue_button.h */,
-				61AFB5D01F4B0D9700BE49C8 /* CE_continue_button.m */,
-				61AFB5D11F4B0D9700BE49C8 /* CE_costumes_menu.h */,
-				61AFB5D21F4B0D9700BE49C8 /* CE_costumes_menu.m */,
-				61AFB5D31F4B0D9700BE49C8 /* CE_hats_menu.h */,
-				61AFB5D41F4B0D9700BE49C8 /* CE_hats_menu.m */,
-				61AFB5D51F4B0D9700BE49C8 /* CE_menu_buttons.h */,
-				61AFB5D61F4B0D9700BE49C8 /* CE_menu_buttons.m */,
-				61AFB5D71F4B0D9700BE49C8 /* CE_pants_menu.h */,
-				61AFB5D81F4B0D9700BE49C8 /* CE_pants_menu.m */,
-				61AFB5D91F4B0D9700BE49C8 /* CE_shirts_menu.h */,
-				61AFB5DA1F4B0D9700BE49C8 /* CE_shirts_menu.m */,
-				61AFB5DB1F4B0D9700BE49C8 /* CE_shoes_menu.h */,
-				61AFB5DC1F4B0D9700BE49C8 /* CE_shoes_menu.m */,
-				61AFB5DD1F4B0D9700BE49C8 /* CE_skin_menu.h */,
-				61AFB5DE1F4B0D9700BE49C8 /* CE_skin_menu.m */,
-				61AFB5DF1F4B0D9700BE49C8 /* character_editor.h */,
-				61AFB5E01F4B0D9700BE49C8 /* character_editor.m */,
-				61AFB5E11F4B0D9700BE49C8 /* display_character.h */,
-				61AFB5E21F4B0D9700BE49C8 /* display_character.m */,
+				61D3FDB61F4C3CCA004AA96E /* display_character.h */,
+				61D3FDB51F4C3CC9004AA96E /* display_character.m */,
+				61D3FDA71F4C3B5B004AA96E /* CE_continue_button.h */,
+				61D3FDA51F4C3B5B004AA96E /* CE_continue_button.m */,
+				61D3FDA91F4C3B5B004AA96E /* CE_costumes_menu.h */,
+				61D3FD9E1F4C3B5A004AA96E /* CE_costumes_menu.m */,
+				61D3FDA11F4C3B5A004AA96E /* CE_hats_menu.h */,
+				61D3FDA81F4C3B5B004AA96E /* CE_hats_menu.m */,
+				61D3FD9D1F4C3B5A004AA96E /* CE_menu_buttons.h */,
+				61D3FDA01F4C3B5A004AA96E /* CE_menu_buttons.m */,
+				61D3FDAB1F4C3B5C004AA96E /* CE_pants_menu.h */,
+				61D3FDA31F4C3B5A004AA96E /* CE_pants_menu.m */,
+				61D3FD9C1F4C3B59004AA96E /* CE_shirts_menu.h */,
+				61D3FDAA1F4C3B5B004AA96E /* CE_shirts_menu.m */,
+				61D3FDA41F4C3B5B004AA96E /* CE_shoes_menu.h */,
+				61D3FD9F1F4C3B5A004AA96E /* CE_shoes_menu.m */,
+				61D3FD9A1F4C3B59004AA96E /* CE_skin_menu.h */,
+				61D3FD9B1F4C3B59004AA96E /* CE_skin_menu.m */,
+				61D3FDA61F4C3B5B004AA96E /* character_editor.h */,
+				61D3FDA21F4C3B5A004AA96E /* character_editor.m */,
 			);
 			name = character_editor;
 			sourceTree = "<group>";
@@ -1886,6 +1886,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61D3FDB71F4C3CF5004AA96E /* display_character.m in Sources */,
+				61D3FDAC1F4C3C5F004AA96E /* CE_continue_button.m in Sources */,
+				61D3FDAD1F4C3C5F004AA96E /* CE_costumes_menu.m in Sources */,
+				61D3FDAE1F4C3C5F004AA96E /* CE_hats_menu.m in Sources */,
+				61D3FDAF1F4C3C5F004AA96E /* CE_menu_buttons.m in Sources */,
+				61D3FDB01F4C3C5F004AA96E /* CE_pants_menu.m in Sources */,
+				61D3FDB11F4C3C5F004AA96E /* CE_shirts_menu.m in Sources */,
+				61D3FDB21F4C3C5F004AA96E /* CE_shoes_menu.m in Sources */,
+				61D3FDB31F4C3C5F004AA96E /* CE_skin_menu.m in Sources */,
+				61D3FDB41F4C3C5F004AA96E /* character_editor.m in Sources */,
 				751F1EA21E4673F300476133 /* candyMachineValues.m in Sources */,
 				7571FB711DFB716D006E1E49 /* sweetShopUI.m in Sources */,
 				750F3A991DEC81A4002AFB78 /* statsMenuButtons.m in Sources */,
@@ -1896,7 +1906,6 @@
 				75C36E3A1DCE5CD900F84214 /* splashBacking.m in Sources */,
 				7580D74D1E1EDDA800BCDA75 /* desks.m in Sources */,
 				7571FB641DFB130E006E1E49 /* packetButton.m in Sources */,
-				61AFB5E41F4B0D9700BE49C8 /* CE_costumes_menu.m in Sources */,
 				75E3B5B61E3AB09300979CA4 /* freeItemsScene.m in Sources */,
 				75919B991DDCA41C001F66EB /* defaultLevel.m in Sources */,
 				75C36E3E1DCE5F2000F84214 /* backgroundManager.m in Sources */,
@@ -1910,7 +1919,6 @@
 				752E992B1E56186A00942C88 /* objectivesBronze.m in Sources */,
 				61E1837F1DEDE45A0034C021 /* Character_Maker.m in Sources */,
 				7505617D1E50DF0800C64E35 /* settingsUI.m in Sources */,
-				61AFB5EB1F4B0D9700BE49C8 /* character_editor.m in Sources */,
 				75B7C6AB1E32A59C00D01EB5 /* trendsMain.m in Sources */,
 				756C31261DF4D0B20017FBE9 /* buttonCreator.m in Sources */,
 				753D56C81E06E50B00A6CBF8 /* packetContentManager.m in Sources */,
@@ -1921,11 +1929,9 @@
 				755F78291ED6103E000DFCA9 /* specialBonus.m in Sources */,
 				75C36E091DCCF77700F84214 /* GameViewController.m in Sources */,
 				61E1838C1DEE13BA0034C021 /* selection_bar.m in Sources */,
-				61AFB5E81F4B0D9700BE49C8 /* CE_shirts_menu.m in Sources */,
 				752355901E6DEDE5002EE1D5 /* specialsItemUi.m in Sources */,
 				75527A291DFDF9FF00D149C0 /* packetScrollUI.m in Sources */,
 				75FCC5EA1E09769B0051CBA1 /* inventorySweetData.m in Sources */,
-				61AFB5E31F4B0D9700BE49C8 /* CE_continue_button.m in Sources */,
 				61E183891DEE13490034C021 /* skinColour.m in Sources */,
 				757CD19B1DE2083400D07480 /* sweetData.m in Sources */,
 				757CD1921DE1383F00D07480 /* box1DataScreen.m in Sources */,
@@ -1990,7 +1996,6 @@
 				7523558D1E6DA74D002EE1D5 /* specialsItem.m in Sources */,
 				751F1EAF1E46CFE000476133 /* candyMachineUI.m in Sources */,
 				7507BB061E66C38700A8452D /* gemeratorScene.m in Sources */,
-				61AFB5E91F4B0D9700BE49C8 /* CE_shoes_menu.m in Sources */,
 				75C36E4A1DCE793D00F84214 /* mainBackground.m in Sources */,
 				75D2DA8B1E20454000E31D1E /* coinStoreUI.m in Sources */,
 				7525F79A1DD0EF9500B0510C /* menuHandler.m in Sources */,
@@ -2029,12 +2034,10 @@
 				759E71CB1DF0A21D00B7275A /* mapScene.m in Sources */,
 				757695231E09AF9F0067ABBF /* sweetInventoryUI.m in Sources */,
 				7525F7A81DD216D800B0510C /* money.m in Sources */,
-				61AFB5E51F4B0D9700BE49C8 /* CE_hats_menu.m in Sources */,
 				7525F7941DD08C9D00B0510C /* coinBarSprite.m in Sources */,
 				752002451E11B2FB00C2AC11 /* itemUI.m in Sources */,
 				751F1E9F1E44EAF100476133 /* buildingUI.m in Sources */,
 				75270FCB1DE50B8600E7588F /* flavourPicker.m in Sources */,
-				61AFB5E71F4B0D9700BE49C8 /* CE_pants_menu.m in Sources */,
 				75D2B32D1E22AA5C0095C533 /* workstationStore.m in Sources */,
 				753D2EEF1E1FE7960043F33C /* dynamicBackgrounds.m in Sources */,
 				7565B0A41DF6CA7400390278 /* sweetTypeUI.m in Sources */,
@@ -2042,7 +2045,6 @@
 				752E99281E56184F00942C88 /* objectivesSilver.m in Sources */,
 				752CC6D51E26CB3300C6FB31 /* bonusAmounts.m in Sources */,
 				751F1EB21E47E40B00476133 /* candyMachineSlotData.m in Sources */,
-				61AFB5E61F4B0D9700BE49C8 /* CE_menu_buttons.m in Sources */,
 				7525F7C51DD25C9100B0510C /* combo.m in Sources */,
 				75ED3B5E1E19897D0012BA98 /* gemPotData.m in Sources */,
 				75E8F1981DD7969500A421E7 /* statsMenu.m in Sources */,
@@ -2071,7 +2073,6 @@
 				751F1EA51E46775400476133 /* candyMachineCreator.m in Sources */,
 				75C36DFC1DCCF77600F84214 /* main.m in Sources */,
 				75754BEF1E2401FE0030D1BA /* tutorialMessages.m in Sources */,
-				61AFB5EC1F4B0D9700BE49C8 /* display_character.m in Sources */,
 				75D025F71E4D70AB0068C1DB /* pencilPacket.m in Sources */,
 				75D025FD1E4E571A0068C1DB /* candyMachineAutoSpawner.m in Sources */,
 				75D01FF11E36B103004F8F0F /* trendsData.m in Sources */,
@@ -2087,7 +2088,6 @@
 				757CD1981DE188C000D07480 /* sweetCustomMenu.m in Sources */,
 				75ACAF841E4A156F0099F779 /* candyMachineSweetSpawner.m in Sources */,
 				75E8F18D1DD3AB0300A421E7 /* defaultSweet.m in Sources */,
-				61AFB5EA1F4B0D9700BE49C8 /* CE_skin_menu.m in Sources */,
 				7525F7881DCFC72A00B0510C /* buttonAnimation.m in Sources */,
 				7571FB741DFB7453006E1E49 /* sweetShopBackground.m in Sources */,
 				75527A2F1DFF00D600D149C0 /* packetInventoryData.m in Sources */,
@@ -2186,6 +2186,7 @@
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_INPUT_FILETYPE = automatic;
 				GCC_NO_COMMON_BLOCKS = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -2240,6 +2241,7 @@
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_INPUT_FILETYPE = automatic;
 				GCC_NO_COMMON_BLOCKS = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
