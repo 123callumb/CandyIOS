@@ -25,7 +25,6 @@
 #import "bannerBonusUI.h"
 #import "specialsUI.h"
 #import "tapCombo.h"
-#import "buildingType.h"
 
 @implementation menuUIButtons
 
@@ -87,9 +86,6 @@ int menuNo = -1;
     
 }
 +(void)menuUpdateChecker: (SKScene*)s view:(UIView*)v {
-    
-    int building = [buildingType getCurrentBuildingID];
-    
     if(menuNo == 0){
         menuNo = -1;
         [bannerBonusUI bannerCalled:v];
@@ -159,9 +155,7 @@ int menuNo = -1;
     if(menuNo == 12){
         menuNo = -1;
         [menuHandler setCurrentMenu:12];
-        if(building != 8){
-            [buildingUI createBuildingUI:s];
-        }
+        [buildingUI createBuildingUI:s];
     }
     
 }
