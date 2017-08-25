@@ -119,6 +119,8 @@
 
 //slider selector
 +(void)sliderValueChanged:(UISlider*)sender {
+    NSUserDefaults *nd = [NSUserDefaults standardUserDefaults];
+    
     UIView *vw = [sender superview];
     UISlider *sldr = [vw viewWithTag:123333];
     [sldr setMinimumTrackTintColor:[UIColor colorWithRed:100/255 green:100/255 blue:100/255 alpha:(sldr.value/10)]];
@@ -126,5 +128,8 @@
     blk.alpha = sldr.value/10;
     UIImageView *mg = [vw viewWithTag:10105];
     mg.alpha = sldr.value/10;
+    
+    [nd setFloat:mg.alpha forKey:@"char_skin"];
+    [nd synchronize];
 }
 @end

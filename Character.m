@@ -83,7 +83,7 @@
     HatShadow.zPosition = -2;
     
     shadow.alpha = 0.1;
-    hue.alpha = [[NSUserDefaults standardUserDefaults] doubleForKey:@"Alpha"];
+    hue.alpha = [[NSUserDefaults standardUserDefaults] floatForKey:@"char_skin"];
     
     long isPre = [[NSUserDefaults standardUserDefaults] integerForKey:@"isPreset"];
     
