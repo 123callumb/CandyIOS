@@ -18,6 +18,7 @@
 #import "myPacketsScene.h"
 #import "packetOpenScene.h"
 #import "gemeratorScene.h"
+#import "world.h"
 
 //Everytime we want to change scene if we use this method it will make it easier, we can also add certain scene transitions easier this way!
 
@@ -36,6 +37,7 @@
     myPacketsScene *myPackets;
     packetOpenScene *packetOpener;
     gemeratorScene *gemScene;
+    world *world;
 }
 
 +(void)switchScene: (SKScene *)s1 sceneTwo: (NSString *)scene2 Transition:(SKTransition *)tran{
@@ -68,6 +70,8 @@
         s2 = [[packetOpenScene alloc] initWithSize:s1.size];
     }else if([scene2 isEqual:@"gemerator"]){
         s2 = [[gemeratorScene alloc] initWithSize:s1.size];
+    }else if([scene2 isEqualToString:@"world"]){
+        s2 = [[world alloc] initWithSize:s1.size];
     }
     s2.scaleMode = SKSceneScaleModeAspectFill;
     
