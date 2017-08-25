@@ -13,6 +13,16 @@
 		616F844D1E42635D00723148 /* upgrades_regular.m in Sources */ = {isa = PBXBuildFile; fileRef = 616F844C1E42635D00723148 /* upgrades_regular.m */; };
 		616F84501E4263C600723148 /* upgrades_special.m in Sources */ = {isa = PBXBuildFile; fileRef = 616F844F1E4263C600723148 /* upgrades_special.m */; };
 		618EA38C1DF1ED4C00D07ADD /* candyMachines.m in Sources */ = {isa = PBXBuildFile; fileRef = 618EA38B1DF1ED4C00D07ADD /* candyMachines.m */; };
+		61D3FDAC1F4C3C5F004AA96E /* CE_continue_button.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D3FDA51F4C3B5B004AA96E /* CE_continue_button.m */; };
+		61D3FDAD1F4C3C5F004AA96E /* CE_costumes_menu.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D3FD9E1F4C3B5A004AA96E /* CE_costumes_menu.m */; };
+		61D3FDAE1F4C3C5F004AA96E /* CE_hats_menu.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D3FDA81F4C3B5B004AA96E /* CE_hats_menu.m */; };
+		61D3FDAF1F4C3C5F004AA96E /* CE_menu_buttons.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D3FDA01F4C3B5A004AA96E /* CE_menu_buttons.m */; };
+		61D3FDB01F4C3C5F004AA96E /* CE_pants_menu.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D3FDA31F4C3B5A004AA96E /* CE_pants_menu.m */; };
+		61D3FDB11F4C3C5F004AA96E /* CE_shirts_menu.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D3FDAA1F4C3B5B004AA96E /* CE_shirts_menu.m */; };
+		61D3FDB21F4C3C5F004AA96E /* CE_shoes_menu.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D3FD9F1F4C3B5A004AA96E /* CE_shoes_menu.m */; };
+		61D3FDB31F4C3C5F004AA96E /* CE_skin_menu.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D3FD9B1F4C3B59004AA96E /* CE_skin_menu.m */; };
+		61D3FDB41F4C3C5F004AA96E /* character_editor.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D3FDA21F4C3B5A004AA96E /* character_editor.m */; };
+		61D3FDB71F4C3CF5004AA96E /* display_character.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D3FDB51F4C3CC9004AA96E /* display_character.m */; };
 		61E1837F1DEDE45A0034C021 /* Character_Maker.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E1837E1DEDE45A0034C021 /* Character_Maker.m */; };
 		61E183861DEE00E30034C021 /* Character.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E183851DEE00E30034C021 /* Character.m */; };
 		61E183891DEE13490034C021 /* skinColour.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E183881DEE13490034C021 /* skinColour.m */; };
@@ -309,6 +319,26 @@
 		616F844F1E4263C600723148 /* upgrades_special.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = upgrades_special.m; sourceTree = "<group>"; };
 		618EA38A1DF1ED4C00D07ADD /* candyMachines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = candyMachines.h; path = Candy/candyMachines.h; sourceTree = "<group>"; };
 		618EA38B1DF1ED4C00D07ADD /* candyMachines.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = candyMachines.m; path = Candy/candyMachines.m; sourceTree = "<group>"; };
+		61D3FD9A1F4C3B59004AA96E /* CE_skin_menu.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CE_skin_menu.h; path = editor/CE_skin_menu.h; sourceTree = "<group>"; };
+		61D3FD9B1F4C3B59004AA96E /* CE_skin_menu.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CE_skin_menu.m; path = editor/CE_skin_menu.m; sourceTree = "<group>"; };
+		61D3FD9C1F4C3B59004AA96E /* CE_shirts_menu.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CE_shirts_menu.h; path = editor/CE_shirts_menu.h; sourceTree = "<group>"; };
+		61D3FD9D1F4C3B5A004AA96E /* CE_menu_buttons.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CE_menu_buttons.h; path = editor/CE_menu_buttons.h; sourceTree = "<group>"; };
+		61D3FD9E1F4C3B5A004AA96E /* CE_costumes_menu.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CE_costumes_menu.m; path = editor/CE_costumes_menu.m; sourceTree = "<group>"; };
+		61D3FD9F1F4C3B5A004AA96E /* CE_shoes_menu.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CE_shoes_menu.m; path = editor/CE_shoes_menu.m; sourceTree = "<group>"; };
+		61D3FDA01F4C3B5A004AA96E /* CE_menu_buttons.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CE_menu_buttons.m; path = editor/CE_menu_buttons.m; sourceTree = "<group>"; };
+		61D3FDA11F4C3B5A004AA96E /* CE_hats_menu.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CE_hats_menu.h; path = editor/CE_hats_menu.h; sourceTree = "<group>"; };
+		61D3FDA21F4C3B5A004AA96E /* character_editor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = character_editor.m; path = editor/character_editor.m; sourceTree = "<group>"; };
+		61D3FDA31F4C3B5A004AA96E /* CE_pants_menu.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CE_pants_menu.m; path = editor/CE_pants_menu.m; sourceTree = "<group>"; };
+		61D3FDA41F4C3B5B004AA96E /* CE_shoes_menu.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CE_shoes_menu.h; path = editor/CE_shoes_menu.h; sourceTree = "<group>"; };
+		61D3FDA51F4C3B5B004AA96E /* CE_continue_button.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CE_continue_button.m; path = editor/CE_continue_button.m; sourceTree = "<group>"; };
+		61D3FDA61F4C3B5B004AA96E /* character_editor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = character_editor.h; path = editor/character_editor.h; sourceTree = "<group>"; };
+		61D3FDA71F4C3B5B004AA96E /* CE_continue_button.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CE_continue_button.h; path = editor/CE_continue_button.h; sourceTree = "<group>"; };
+		61D3FDA81F4C3B5B004AA96E /* CE_hats_menu.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CE_hats_menu.m; path = editor/CE_hats_menu.m; sourceTree = "<group>"; };
+		61D3FDA91F4C3B5B004AA96E /* CE_costumes_menu.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CE_costumes_menu.h; path = editor/CE_costumes_menu.h; sourceTree = "<group>"; };
+		61D3FDAA1F4C3B5B004AA96E /* CE_shirts_menu.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CE_shirts_menu.m; path = editor/CE_shirts_menu.m; sourceTree = "<group>"; };
+		61D3FDAB1F4C3B5C004AA96E /* CE_pants_menu.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CE_pants_menu.h; path = editor/CE_pants_menu.h; sourceTree = "<group>"; };
+		61D3FDB51F4C3CC9004AA96E /* display_character.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = display_character.m; path = editor/display_character.m; sourceTree = "<group>"; };
+		61D3FDB61F4C3CCA004AA96E /* display_character.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = display_character.h; path = editor/display_character.h; sourceTree = "<group>"; };
 		61E1837D1DEDE45A0034C021 /* Character_Maker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Character_Maker.h; sourceTree = "<group>"; };
 		61E1837E1DEDE45A0034C021 /* Character_Maker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Character_Maker.m; sourceTree = "<group>"; };
 		61E183841DEE00E30034C021 /* Character.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Character.h; sourceTree = "<group>"; };
@@ -874,6 +904,33 @@
 			name = Candy_Machines;
 			sourceTree = "<group>";
 		};
+		61AFB5CE1F4B0D8300BE49C8 /* character_editor */ = {
+			isa = PBXGroup;
+			children = (
+				61D3FDB61F4C3CCA004AA96E /* display_character.h */,
+				61D3FDB51F4C3CC9004AA96E /* display_character.m */,
+				61D3FDA71F4C3B5B004AA96E /* CE_continue_button.h */,
+				61D3FDA51F4C3B5B004AA96E /* CE_continue_button.m */,
+				61D3FDA91F4C3B5B004AA96E /* CE_costumes_menu.h */,
+				61D3FD9E1F4C3B5A004AA96E /* CE_costumes_menu.m */,
+				61D3FDA11F4C3B5A004AA96E /* CE_hats_menu.h */,
+				61D3FDA81F4C3B5B004AA96E /* CE_hats_menu.m */,
+				61D3FD9D1F4C3B5A004AA96E /* CE_menu_buttons.h */,
+				61D3FDA01F4C3B5A004AA96E /* CE_menu_buttons.m */,
+				61D3FDAB1F4C3B5C004AA96E /* CE_pants_menu.h */,
+				61D3FDA31F4C3B5A004AA96E /* CE_pants_menu.m */,
+				61D3FD9C1F4C3B59004AA96E /* CE_shirts_menu.h */,
+				61D3FDAA1F4C3B5B004AA96E /* CE_shirts_menu.m */,
+				61D3FDA41F4C3B5B004AA96E /* CE_shoes_menu.h */,
+				61D3FD9F1F4C3B5A004AA96E /* CE_shoes_menu.m */,
+				61D3FD9A1F4C3B59004AA96E /* CE_skin_menu.h */,
+				61D3FD9B1F4C3B59004AA96E /* CE_skin_menu.m */,
+				61D3FDA61F4C3B5B004AA96E /* character_editor.h */,
+				61D3FDA21F4C3B5A004AA96E /* character_editor.m */,
+			);
+			name = character_editor;
+			sourceTree = "<group>";
+		};
 		61E1836B1DEDE3DE0034C021 /* Character_Maker */ = {
 			isa = PBXGroup;
 			children = (
@@ -1383,7 +1440,8 @@
 		75C36DEE1DCCF77600F84214 = {
 			isa = PBXGroup;
 			children = (
-				B29068101F37F03700016017 /* World Level */,
+				B29068101F37F03700016017 /* World Level */
+				61AFB5CE1F4B0D8300BE49C8 /* character_editor */,
 				752355871E6D8B95002EE1D5 /* Specials Menu */,
 				75B2E14D1E5FBF9E0091FC77 /* Banner Bonus */,
 				75B2E1491E5F9CBB0091FC77 /* Tips  */,
@@ -1802,7 +1860,7 @@
 		75C36DEF1DCCF77600F84214 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0820;
+				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = Kilcal;
 				TargetAttributes = {
 					75C36DF61DCCF77600F84214 = {
@@ -1884,6 +1942,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61D3FDB71F4C3CF5004AA96E /* display_character.m in Sources */,
+				61D3FDAC1F4C3C5F004AA96E /* CE_continue_button.m in Sources */,
+				61D3FDAD1F4C3C5F004AA96E /* CE_costumes_menu.m in Sources */,
+				61D3FDAE1F4C3C5F004AA96E /* CE_hats_menu.m in Sources */,
+				61D3FDAF1F4C3C5F004AA96E /* CE_menu_buttons.m in Sources */,
+				61D3FDB01F4C3C5F004AA96E /* CE_pants_menu.m in Sources */,
+				61D3FDB11F4C3C5F004AA96E /* CE_shirts_menu.m in Sources */,
+				61D3FDB21F4C3C5F004AA96E /* CE_shoes_menu.m in Sources */,
+				61D3FDB31F4C3C5F004AA96E /* CE_skin_menu.m in Sources */,
+				61D3FDB41F4C3C5F004AA96E /* character_editor.m in Sources */,
 				751F1EA21E4673F300476133 /* candyMachineValues.m in Sources */,
 				7571FB711DFB716D006E1E49 /* sweetShopUI.m in Sources */,
 				750F3A991DEC81A4002AFB78 /* statsMenuButtons.m in Sources */,
@@ -2156,7 +2224,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -2164,7 +2234,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
@@ -2176,6 +2250,7 @@
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_INPUT_FILETYPE = automatic;
 				GCC_NO_COMMON_BLOCKS = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -2205,7 +2280,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -2213,7 +2290,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
@@ -2224,6 +2305,7 @@
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_INPUT_FILETYPE = automatic;
 				GCC_NO_COMMON_BLOCKS = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
