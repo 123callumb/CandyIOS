@@ -37,10 +37,6 @@
 #import "bannerBonusUI.h"
 #import "candyMachineInteraction.h"
 #import "sweetInventoryData.h"
-#import "worldMap.h"
-#import "buildingType.h"
-
-//Bit too many classes maybe hmmmmm 
 
 UIScrollView* UIscrollUpdate = nil;
 UIImageView *img1 = nil;
@@ -92,14 +88,8 @@ UIImageView *img1 = nil;
     
     //Set Bonus Banner Settings
     [bannerBonusUI addBonusBanner:self.view];
+
     
-    
-    //Dealloc all gestures for the world scene
-    if([buildingType getCurrentBuildingID] == 8){
-        [self.view removeGestureRecognizer:longPress];
-        [self.view removeGestureRecognizer:gestureLeft];
-        [self.view removeGestureRecognizer:gestureRight];
-    }
 }
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
@@ -131,7 +121,6 @@ UIImageView *img1 = nil;
     }
 }
 -(void)onGestureLeft: (UISwipeGestureRecognizer*)swipe {
-
     if(swipe.state == UIGestureRecognizerStateEnded){
         CGPoint touchLocation = [swipe.self locationOfTouch:0 inView:swipe.view];
 
@@ -145,7 +134,7 @@ UIImageView *img1 = nil;
     CGPoint touchLocation = [longPress.self locationOfTouch:0 inView:longPress.view];
     CGPoint objLoc = [[self.scene view] convertPoint:touchLocation toScene:self.scene];
     SKNode *obj = [self nodeAtPoint:objLoc];
-
+    
     if (longPress.state == UIGestureRecognizerStateBegan) {
         [candyMachineInteraction onCandyFirstMachineTouch:(SKSpriteNode*)obj scene:self view:self.view];
     }
