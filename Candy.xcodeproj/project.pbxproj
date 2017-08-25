@@ -279,14 +279,6 @@
 		75FCC5E41E08E6380051CBA1 /* sweetInventoryData.m in Sources */ = {isa = PBXBuildFile; fileRef = 75FCC5E31E08E6380051CBA1 /* sweetInventoryData.m */; };
 		75FCC5E71E0975FD0051CBA1 /* inventoryDataHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 75FCC5E61E0975FD0051CBA1 /* inventoryDataHandler.m */; };
 		75FCC5EA1E09769B0051CBA1 /* inventorySweetData.m in Sources */ = {isa = PBXBuildFile; fileRef = 75FCC5E91E09769B0051CBA1 /* inventorySweetData.m */; };
-		B20851BF1F4F3F040078616C /* mapMachineCandyDraw.m in Sources */ = {isa = PBXBuildFile; fileRef = B20851BE1F4F3F040078616C /* mapMachineCandyDraw.m */; };
-		B22774321F4B3ED3001FE223 /* mapMachineSlots.m in Sources */ = {isa = PBXBuildFile; fileRef = B22774311F4B3ED3001FE223 /* mapMachineSlots.m */; };
-		B29068131F37F06100016017 /* world.m in Sources */ = {isa = PBXBuildFile; fileRef = B29068121F37F06100016017 /* world.m */; };
-		B2C5DAAB1F42822A0024DB26 /* worldMap.m in Sources */ = {isa = PBXBuildFile; fileRef = B2C5DAAA1F42822A0024DB26 /* worldMap.m */; };
-		B2C5DAAE1F4285390024DB26 /* buildingData.m in Sources */ = {isa = PBXBuildFile; fileRef = B2C5DAAD1F4285390024DB26 /* buildingData.m */; };
-		B2CE87A41F451AEA00958E1B /* mapBuildingUI.m in Sources */ = {isa = PBXBuildFile; fileRef = B2CE87A31F451AEA00958E1B /* mapBuildingUI.m */; };
-		B2CE87A71F47410A00958E1B /* mapBuildingSlots.m in Sources */ = {isa = PBXBuildFile; fileRef = B2CE87A61F47410A00958E1B /* mapBuildingSlots.m */; };
-		B2CE87AA1F48BF5F00958E1B /* mapMachineUI.m in Sources */ = {isa = PBXBuildFile; fileRef = B2CE87A91F48BF5F00958E1B /* mapMachineUI.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -769,22 +761,6 @@
 		75FCC5E61E0975FD0051CBA1 /* inventoryDataHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = inventoryDataHandler.m; path = "Candy/Sweet Inventory/inventoryDataHandler.m"; sourceTree = "<group>"; };
 		75FCC5E81E09769B0051CBA1 /* inventorySweetData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = inventorySweetData.h; path = "Candy/Sweet Inventory/inventorySweetData.h"; sourceTree = "<group>"; };
 		75FCC5E91E09769B0051CBA1 /* inventorySweetData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = inventorySweetData.m; path = "Candy/Sweet Inventory/inventorySweetData.m"; sourceTree = "<group>"; };
-		B20851BD1F4F3F040078616C /* mapMachineCandyDraw.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = mapMachineCandyDraw.h; path = "Candy/World/Building UI/mapMachineCandyDraw.h"; sourceTree = "<group>"; };
-		B20851BE1F4F3F040078616C /* mapMachineCandyDraw.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = mapMachineCandyDraw.m; path = "Candy/World/Building UI/mapMachineCandyDraw.m"; sourceTree = "<group>"; };
-		B22774301F4B3ED3001FE223 /* mapMachineSlots.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = mapMachineSlots.h; path = "Candy/World/Building UI/mapMachineSlots.h"; sourceTree = "<group>"; };
-		B22774311F4B3ED3001FE223 /* mapMachineSlots.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = mapMachineSlots.m; path = "Candy/World/Building UI/mapMachineSlots.m"; sourceTree = "<group>"; };
-		B29068111F37F06100016017 /* world.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = world.h; path = Candy/World/world.h; sourceTree = "<group>"; };
-		B29068121F37F06100016017 /* world.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = world.m; path = Candy/World/world.m; sourceTree = "<group>"; };
-		B2C5DAA91F42822A0024DB26 /* worldMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = worldMap.h; path = Candy/World/worldMap.h; sourceTree = "<group>"; };
-		B2C5DAAA1F42822A0024DB26 /* worldMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = worldMap.m; path = Candy/World/worldMap.m; sourceTree = "<group>"; };
-		B2C5DAAC1F4285390024DB26 /* buildingData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = buildingData.h; path = Candy/World/buildingData.h; sourceTree = "<group>"; };
-		B2C5DAAD1F4285390024DB26 /* buildingData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = buildingData.m; path = Candy/World/buildingData.m; sourceTree = "<group>"; };
-		B2CE87A21F451AEA00958E1B /* mapBuildingUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = mapBuildingUI.h; path = "Candy/World/Building UI/mapBuildingUI.h"; sourceTree = "<group>"; };
-		B2CE87A31F451AEA00958E1B /* mapBuildingUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = mapBuildingUI.m; path = "Candy/World/Building UI/mapBuildingUI.m"; sourceTree = "<group>"; };
-		B2CE87A51F47410A00958E1B /* mapBuildingSlots.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = mapBuildingSlots.h; path = "Candy/World/Building UI/mapBuildingSlots.h"; sourceTree = "<group>"; };
-		B2CE87A61F47410A00958E1B /* mapBuildingSlots.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = mapBuildingSlots.m; path = "Candy/World/Building UI/mapBuildingSlots.m"; sourceTree = "<group>"; };
-		B2CE87A81F48BF5F00958E1B /* mapMachineUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = mapMachineUI.h; path = "Candy/World/Building UI/mapMachineUI.h"; sourceTree = "<group>"; };
-		B2CE87A91F48BF5F00958E1B /* mapMachineUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = mapMachineUI.m; path = "Candy/World/Building UI/mapMachineUI.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1440,7 +1416,6 @@
 		75C36DEE1DCCF77600F84214 = {
 			isa = PBXGroup;
 			children = (
-				B29068101F37F03700016017 /* World Level */
 				61AFB5CE1F4B0D8300BE49C8 /* character_editor */,
 				752355871E6D8B95002EE1D5 /* Specials Menu */,
 				75B2E14D1E5FBF9E0091FC77 /* Banner Bonus */,
@@ -1767,37 +1742,6 @@
 			name = "Sweet Inventory";
 			sourceTree = "<group>";
 		};
-		B29068101F37F03700016017 /* World Level */ = {
-			isa = PBXGroup;
-			children = (
-				B2CE87A11F451ABC00958E1B /* Building UI */,
-				B29068111F37F06100016017 /* world.h */,
-				B29068121F37F06100016017 /* world.m */,
-				B2C5DAA91F42822A0024DB26 /* worldMap.h */,
-				B2C5DAAA1F42822A0024DB26 /* worldMap.m */,
-				B2C5DAAC1F4285390024DB26 /* buildingData.h */,
-				B2C5DAAD1F4285390024DB26 /* buildingData.m */,
-			);
-			name = "World Level";
-			sourceTree = "<group>";
-		};
-		B2CE87A11F451ABC00958E1B /* Building UI */ = {
-			isa = PBXGroup;
-			children = (
-				B2CE87A21F451AEA00958E1B /* mapBuildingUI.h */,
-				B2CE87A31F451AEA00958E1B /* mapBuildingUI.m */,
-				B2CE87A51F47410A00958E1B /* mapBuildingSlots.h */,
-				B2CE87A61F47410A00958E1B /* mapBuildingSlots.m */,
-				B2CE87A81F48BF5F00958E1B /* mapMachineUI.h */,
-				B2CE87A91F48BF5F00958E1B /* mapMachineUI.m */,
-				B22774301F4B3ED3001FE223 /* mapMachineSlots.h */,
-				B22774311F4B3ED3001FE223 /* mapMachineSlots.m */,
-				B20851BD1F4F3F040078616C /* mapMachineCandyDraw.h */,
-				B20851BE1F4F3F040078616C /* mapMachineCandyDraw.m */,
-			);
-			name = "Building UI";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1964,8 +1908,6 @@
 				7571FB641DFB130E006E1E49 /* packetButton.m in Sources */,
 				75E3B5B61E3AB09300979CA4 /* freeItemsScene.m in Sources */,
 				75919B991DDCA41C001F66EB /* defaultLevel.m in Sources */,
-				B22774321F4B3ED3001FE223 /* mapMachineSlots.m in Sources */,
-				B2CE87A71F47410A00958E1B /* mapBuildingSlots.m in Sources */,
 				75C36E3E1DCE5F2000F84214 /* backgroundManager.m in Sources */,
 				61E1838F1DEE13E20034C021 /* Save.m in Sources */,
 				755B0D1A1E1415FF00EBA428 /* sweetDrawSlots.m in Sources */,
@@ -1987,7 +1929,6 @@
 				755F78291ED6103E000DFCA9 /* specialBonus.m in Sources */,
 				75C36E091DCCF77700F84214 /* GameViewController.m in Sources */,
 				61E1838C1DEE13BA0034C021 /* selection_bar.m in Sources */,
-				B2CE87AA1F48BF5F00958E1B /* mapMachineUI.m in Sources */,
 				752355901E6DEDE5002EE1D5 /* specialsItemUi.m in Sources */,
 				75527A291DFDF9FF00D149C0 /* packetScrollUI.m in Sources */,
 				75FCC5EA1E09769B0051CBA1 /* inventorySweetData.m in Sources */,
@@ -1995,7 +1936,6 @@
 				757CD19B1DE2083400D07480 /* sweetData.m in Sources */,
 				757CD1921DE1383F00D07480 /* box1DataScreen.m in Sources */,
 				7525F7851DCFC58B00B0510C /* buttonHandler.m in Sources */,
-				B20851BF1F4F3F040078616C /* mapMachineCandyDraw.m in Sources */,
 				75D2DA911E213FFC00E31D1E /* storeItemUI.m in Sources */,
 				757CD1951DE1598100D07480 /* registerBoxes.m in Sources */,
 				750F2A391DF85B9D00A784F6 /* messageUI.m in Sources */,
@@ -2053,7 +1993,6 @@
 				752833731E441D0900E101AD /* menuUI.m in Sources */,
 				75B526451E1EAD580020A609 /* levelStructure.m in Sources */,
 				75919B9C1DDCA4CE001F66EB /* levelDecider.m in Sources */,
-				B2C5DAAE1F4285390024DB26 /* buildingData.m in Sources */,
 				7523558D1E6DA74D002EE1D5 /* specialsItem.m in Sources */,
 				751F1EAF1E46CFE000476133 /* candyMachineUI.m in Sources */,
 				7507BB061E66C38700A8452D /* gemeratorScene.m in Sources */,
@@ -2062,7 +2001,6 @@
 				7525F79A1DD0EF9500B0510C /* menuHandler.m in Sources */,
 				751F1EA81E4679A100476133 /* candyMachineInteraction.m in Sources */,
 				75D568871E13263800349143 /* skUiItems.m in Sources */,
-				B2CE87A41F451AEA00958E1B /* mapBuildingUI.m in Sources */,
 				7571FB671DFB1696006E1E49 /* packetMenu.m in Sources */,
 				757CD19E1DE208E300D07480 /* slot1Data.m in Sources */,
 				75784D4B1E281ADF00C41067 /* spinScene.m in Sources */,
@@ -2084,8 +2022,6 @@
 				616F84501E4263C600723148 /* upgrades_special.m in Sources */,
 				75E8F19B1DD8F6E500A421E7 /* menuBackButton.m in Sources */,
 				750A03251E4149D700869355 /* timerLabels.m in Sources */,
-				B2C5DAAB1F42822A0024DB26 /* worldMap.m in Sources */,
-				B29068131F37F06100016017 /* world.m in Sources */,
 				75E3B5B21E37D6C700979CA4 /* trendsGenerator.m in Sources */,
 				752E99251E54D8D100942C88 /* objectivesGold.m in Sources */,
 				75E1B5D71DE29B3600F7C50F /* doneButton.m in Sources */,
