@@ -14,15 +14,23 @@
 #import "desks.h"
 #import "dynamicBackgrounds.h"
 #import "spinWheel.h"
+#import "mainTransition.h"
 
 @implementation levelStructure
 +(void)createLevel: (SKScene*)s {
-    [self addDynamicBackground:s];
-    [self addFloor:s];
-    [self addBuildingType:s];
-    [self addMainCharacter:s];
-    [self addDesk:s];
-    [levelWorkstations addCandyMachines:s];
+   
+    int building = [buildingType getCurrentBuildingID];
+    
+    if(building != 8){
+        [self addDynamicBackground:s];
+        [self addFloor:s];
+        [self addBuildingType:s];
+        [self addMainCharacter:s];
+        [self addDesk:s];
+        [levelWorkstations addCandyMachines:s];
+    }else if(building == 8) {
+        [mainTransition switchScene:s sceneTwo:@"world" Transition:[SKTransition crossFadeWithDuration:0.3]];;
+    }
 }
 +(void)addDesk: (SKScene*)s {
     
@@ -37,9 +45,7 @@
     if (building >=6 && building <= 7) {
         [desks addDesk:CGPointMake(0, s.frame.size.height/6) scale:0.65 nodeToAttatch:s];
     }
-    if (building >=8 && building <= 9) {
-        [desks addDesk:CGPointMake(0, s.frame.size.height/5.35) scale:0.55 nodeToAttatch:s];
-    }
+
 }
 +(void)addFloor: (SKScene*)s {
     
@@ -81,9 +87,7 @@
     if (building >= 6 && building <= 7) {
         return 0.55;
     }
-    if (building >= 8 && building <= 9) {
-        return 0.45;
-    }
+
     return 0.75;
 }
 +(CGPoint)returnCharacterPosition: (SKScene*)s {
@@ -99,9 +103,7 @@
     if (building >= 6 && building <= 7) {
         pos = CGPointMake(0, s.frame.size.height/5.8);
     }
-    if (building >= 8 && building <= 9) {
-        pos = CGPointMake(0, s.frame.size.height/5.2);
-    }
+
     return pos;
 }
 @end

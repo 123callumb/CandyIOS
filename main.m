@@ -37,6 +37,8 @@
 #import "bannerBonusUI.h"
 #import "candyMachineInteraction.h"
 #import "sweetInventoryData.h"
+#import "worldMap.h"
+#import "buildingType.h"
 
 UIScrollView* UIscrollUpdate = nil;
 UIImageView *img1 = nil;
@@ -89,6 +91,12 @@ UIImageView *img1 = nil;
     //Set Bonus Banner Settings
     [bannerBonusUI addBonusBanner:self.view];
 
+    //Dealloc all gestures for the world scene
+    if([buildingType getCurrentBuildingID] == 8){
+        [self.view removeGestureRecognizer:longPress];
+        [self.view removeGestureRecognizer:gestureLeft];
+        [self.view removeGestureRecognizer:gestureRight];
+    }
     
 }
 
