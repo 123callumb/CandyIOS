@@ -82,12 +82,14 @@
 }
 +(void)onUpgradeTouch: (UIView*)v button:(SKSpriteNode*)node scene:(SKScene*)s {
     if([money getBalance] >= [buildingType getNextBuildingPrice]){
-        if([node.name isEqualToString:@"buildingUpgradeButton"]){
+        if([node.name isEqualToString:@"buildingUpgradeButton"]  && [buildingType getCurrentBuildingID] != 8){
             [money addBalance:-([buildingType getNextBuildingPrice])];
             [buildingType setCurrentBuildingID:([buildingType getCurrentBuildingID] + 1)];
             [candyMachines increaseCandyMachinesByOne];
             [mainTransition switchScene:s sceneTwo:@"main" Transition:[SKTransition fadeWithDuration:0.3]];
             [objectivesGold object3:v];
+        }else if([buildingType getCurrentBuildingID] == 8){
+            [mainTransition switchScene:s sceneTwo:@"world" Transition:[SKTransition crossFadeWithDuration:0.3]];
         }
     }
 }

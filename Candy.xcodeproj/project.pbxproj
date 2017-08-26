@@ -279,6 +279,14 @@
 		75FCC5E41E08E6380051CBA1 /* sweetInventoryData.m in Sources */ = {isa = PBXBuildFile; fileRef = 75FCC5E31E08E6380051CBA1 /* sweetInventoryData.m */; };
 		75FCC5E71E0975FD0051CBA1 /* inventoryDataHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 75FCC5E61E0975FD0051CBA1 /* inventoryDataHandler.m */; };
 		75FCC5EA1E09769B0051CBA1 /* inventorySweetData.m in Sources */ = {isa = PBXBuildFile; fileRef = 75FCC5E91E09769B0051CBA1 /* inventorySweetData.m */; };
+		B21321181F50D5AE00105B47 /* mapMachineCandyDraw.m in Sources */ = {isa = PBXBuildFile; fileRef = B21321171F50D5AE00105B47 /* mapMachineCandyDraw.m */; };
+		B213211B1F50D5E300105B47 /* mapMachineSlots.m in Sources */ = {isa = PBXBuildFile; fileRef = B213211A1F50D5E300105B47 /* mapMachineSlots.m */; };
+		B213211E1F50D64800105B47 /* mapMachineUI.m in Sources */ = {isa = PBXBuildFile; fileRef = B213211D1F50D64800105B47 /* mapMachineUI.m */; };
+		B290C7C31F50D36200F62F02 /* world.m in Sources */ = {isa = PBXBuildFile; fileRef = B290C7C21F50D36200F62F02 /* world.m */; };
+		B290C7C61F50D3A000F62F02 /* worldMap.m in Sources */ = {isa = PBXBuildFile; fileRef = B290C7C51F50D3A000F62F02 /* worldMap.m */; };
+		B290C7C91F50D3E500F62F02 /* buildingData.m in Sources */ = {isa = PBXBuildFile; fileRef = B290C7C81F50D3E500F62F02 /* buildingData.m */; };
+		B290C7CD1F50D43800F62F02 /* mapBuildingSlots.m in Sources */ = {isa = PBXBuildFile; fileRef = B290C7CC1F50D43800F62F02 /* mapBuildingSlots.m */; };
+		B290C7D01F50D47800F62F02 /* mapBuildingUI.m in Sources */ = {isa = PBXBuildFile; fileRef = B290C7CF1F50D47800F62F02 /* mapBuildingUI.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -761,6 +769,22 @@
 		75FCC5E61E0975FD0051CBA1 /* inventoryDataHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = inventoryDataHandler.m; path = "Candy/Sweet Inventory/inventoryDataHandler.m"; sourceTree = "<group>"; };
 		75FCC5E81E09769B0051CBA1 /* inventorySweetData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = inventorySweetData.h; path = "Candy/Sweet Inventory/inventorySweetData.h"; sourceTree = "<group>"; };
 		75FCC5E91E09769B0051CBA1 /* inventorySweetData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = inventorySweetData.m; path = "Candy/Sweet Inventory/inventorySweetData.m"; sourceTree = "<group>"; };
+		B21321161F50D5AE00105B47 /* mapMachineCandyDraw.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = mapMachineCandyDraw.h; path = "Candy/World/Building UI/mapMachineCandyDraw.h"; sourceTree = "<group>"; };
+		B21321171F50D5AE00105B47 /* mapMachineCandyDraw.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = mapMachineCandyDraw.m; path = "Candy/World/Building UI/mapMachineCandyDraw.m"; sourceTree = "<group>"; };
+		B21321191F50D5E300105B47 /* mapMachineSlots.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = mapMachineSlots.h; path = "Candy/World/Building UI/mapMachineSlots.h"; sourceTree = "<group>"; };
+		B213211A1F50D5E300105B47 /* mapMachineSlots.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = mapMachineSlots.m; path = "Candy/World/Building UI/mapMachineSlots.m"; sourceTree = "<group>"; };
+		B213211C1F50D64800105B47 /* mapMachineUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = mapMachineUI.h; path = "Candy/World/Building UI/mapMachineUI.h"; sourceTree = "<group>"; };
+		B213211D1F50D64800105B47 /* mapMachineUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = mapMachineUI.m; path = "Candy/World/Building UI/mapMachineUI.m"; sourceTree = "<group>"; };
+		B290C7C11F50D36200F62F02 /* world.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = world.h; path = Candy/World/world.h; sourceTree = "<group>"; };
+		B290C7C21F50D36200F62F02 /* world.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = world.m; path = Candy/World/world.m; sourceTree = "<group>"; };
+		B290C7C41F50D3A000F62F02 /* worldMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = worldMap.h; path = Candy/World/worldMap.h; sourceTree = "<group>"; };
+		B290C7C51F50D3A000F62F02 /* worldMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = worldMap.m; path = Candy/World/worldMap.m; sourceTree = "<group>"; };
+		B290C7C71F50D3E500F62F02 /* buildingData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = buildingData.h; path = Candy/World/buildingData.h; sourceTree = "<group>"; };
+		B290C7C81F50D3E500F62F02 /* buildingData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = buildingData.m; path = Candy/World/buildingData.m; sourceTree = "<group>"; };
+		B290C7CB1F50D43800F62F02 /* mapBuildingSlots.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = mapBuildingSlots.h; path = "Candy/World/Building UI/mapBuildingSlots.h"; sourceTree = "<group>"; };
+		B290C7CC1F50D43800F62F02 /* mapBuildingSlots.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = mapBuildingSlots.m; path = "Candy/World/Building UI/mapBuildingSlots.m"; sourceTree = "<group>"; };
+		B290C7CE1F50D47800F62F02 /* mapBuildingUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = mapBuildingUI.h; path = "Candy/World/Building UI/mapBuildingUI.h"; sourceTree = "<group>"; };
+		B290C7CF1F50D47800F62F02 /* mapBuildingUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = mapBuildingUI.m; path = "Candy/World/Building UI/mapBuildingUI.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1416,6 +1440,7 @@
 		75C36DEE1DCCF77600F84214 = {
 			isa = PBXGroup;
 			children = (
+				B290C7C01F50CFF800F62F02 /* World */,
 				61AFB5CE1F4B0D8300BE49C8 /* character_editor */,
 				752355871E6D8B95002EE1D5 /* Specials Menu */,
 				75B2E14D1E5FBF9E0091FC77 /* Banner Bonus */,
@@ -1742,6 +1767,37 @@
 			name = "Sweet Inventory";
 			sourceTree = "<group>";
 		};
+		B290C7C01F50CFF800F62F02 /* World */ = {
+			isa = PBXGroup;
+			children = (
+				B290C7CA1F50D40800F62F02 /* Building Ui */,
+				B290C7C41F50D3A000F62F02 /* worldMap.h */,
+				B290C7C51F50D3A000F62F02 /* worldMap.m */,
+				B290C7C11F50D36200F62F02 /* world.h */,
+				B290C7C21F50D36200F62F02 /* world.m */,
+				B290C7C71F50D3E500F62F02 /* buildingData.h */,
+				B290C7C81F50D3E500F62F02 /* buildingData.m */,
+			);
+			name = World;
+			sourceTree = "<group>";
+		};
+		B290C7CA1F50D40800F62F02 /* Building Ui */ = {
+			isa = PBXGroup;
+			children = (
+				B290C7CB1F50D43800F62F02 /* mapBuildingSlots.h */,
+				B290C7CC1F50D43800F62F02 /* mapBuildingSlots.m */,
+				B290C7CE1F50D47800F62F02 /* mapBuildingUI.h */,
+				B290C7CF1F50D47800F62F02 /* mapBuildingUI.m */,
+				B21321161F50D5AE00105B47 /* mapMachineCandyDraw.h */,
+				B21321171F50D5AE00105B47 /* mapMachineCandyDraw.m */,
+				B21321191F50D5E300105B47 /* mapMachineSlots.h */,
+				B213211A1F50D5E300105B47 /* mapMachineSlots.m */,
+				B213211C1F50D64800105B47 /* mapMachineUI.h */,
+				B213211D1F50D64800105B47 /* mapMachineUI.m */,
+			);
+			name = "Building Ui";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1933,6 +1989,7 @@
 				75527A291DFDF9FF00D149C0 /* packetScrollUI.m in Sources */,
 				75FCC5EA1E09769B0051CBA1 /* inventorySweetData.m in Sources */,
 				61E183891DEE13490034C021 /* skinColour.m in Sources */,
+				B290C7C91F50D3E500F62F02 /* buildingData.m in Sources */,
 				757CD19B1DE2083400D07480 /* sweetData.m in Sources */,
 				757CD1921DE1383F00D07480 /* box1DataScreen.m in Sources */,
 				7525F7851DCFC58B00B0510C /* buttonHandler.m in Sources */,
@@ -1944,6 +2001,7 @@
 				751F1EB51E48058E00476133 /* candyMachineSweetsEquiped.m in Sources */,
 				7525F78E1DCFEA7C00B0510C /* coinButton.m in Sources */,
 				750F3A9C1DEC863E002AFB78 /* registerStatsButtons.m in Sources */,
+				B290C7C31F50D36200F62F02 /* world.m in Sources */,
 				75B2E14C1E5F9CD60091FC77 /* tipsUI.m in Sources */,
 				618EA38C1DF1ED4C00D07ADD /* candyMachines.m in Sources */,
 				75C36E421DCE63E500F84214 /* mainTransition.m in Sources */,
@@ -1960,7 +2018,9 @@
 				75E8F4F21E0B2EAB00018296 /* sweetInventorySlot.m in Sources */,
 				7571FB771DFB77D2006E1E49 /* sweetScrollUI.m in Sources */,
 				75D025FA1E4E44660068C1DB /* eggPacket.m in Sources */,
+				B21321181F50D5AE00105B47 /* mapMachineCandyDraw.m in Sources */,
 				755ACB3C1DF0C9C5000DD9CB /* mapGui.m in Sources */,
+				B213211B1F50D5E300105B47 /* mapMachineSlots.m in Sources */,
 				750F3A941DE68167002AFB78 /* determineSweetTap.m in Sources */,
 				755ACB421DF32F51000DD9CB /* buildingGui.m in Sources */,
 				75B526421E1E9E610020A609 /* floors.m in Sources */,
@@ -2035,6 +2095,8 @@
 				757695231E09AF9F0067ABBF /* sweetInventoryUI.m in Sources */,
 				7525F7A81DD216D800B0510C /* money.m in Sources */,
 				7525F7941DD08C9D00B0510C /* coinBarSprite.m in Sources */,
+				B290C7C61F50D3A000F62F02 /* worldMap.m in Sources */,
+				B290C7D01F50D47800F62F02 /* mapBuildingUI.m in Sources */,
 				752002451E11B2FB00C2AC11 /* itemUI.m in Sources */,
 				751F1E9F1E44EAF100476133 /* buildingUI.m in Sources */,
 				75270FCB1DE50B8600E7588F /* flavourPicker.m in Sources */,
@@ -2051,6 +2113,7 @@
 				75B526481E1EC8400020A609 /* buildingType.m in Sources */,
 				756AEAFF1E088B76002CFA70 /* gems.m in Sources */,
 				750C2C7A1E4254FF001F65C3 /* myPacketsScene.m in Sources */,
+				B290C7CD1F50D43800F62F02 /* mapBuildingSlots.m in Sources */,
 				750F2A321DF7523E00A784F6 /* sweetFavourNode.m in Sources */,
 				752E991F1E53B03400942C88 /* objectivesUITask.m in Sources */,
 				61E183861DEE00E30034C021 /* Character.m in Sources */,
@@ -2082,6 +2145,7 @@
 				750F3A911DE64A65002AFB78 /* sweetnessSlider.m in Sources */,
 				75ED3B5B1E19647F0012BA98 /* gemInteractionUI.m in Sources */,
 				75E39AD01E0319FD003D7DD7 /* bonbonPacket.m in Sources */,
+				B213211E1F50D64800105B47 /* mapMachineUI.m in Sources */,
 				75D8C3591E1C304C00D35217 /* bottomBar.m in Sources */,
 				750369C11E5FE1A300749A69 /* miniGemBonus.m in Sources */,
 				7525F7C21DD25C8500B0510C /* comboTimer.m in Sources */,
