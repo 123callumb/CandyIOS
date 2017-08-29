@@ -11,6 +11,7 @@
 #import "mapMachineUI.h"
 #import "mapBuildingUI.h"
 #import "candyMachineSlotData.h"
+#import "mapMachineSweetDraw.h"
 
 @implementation mapMachineSlots
 
@@ -34,7 +35,7 @@
         NSString *sweetTexture;
         float sweetArea = slotArea/1.25;
         
-        NSLog(@"%d <= %d", machineSlotsUnlocked, i);
+        //NSLog(@"%d <= %d", machineSlotsUnlocked, i);
         
         if(i <= machineSlotsUnlocked){
             if(slotUUID == -1){
@@ -43,6 +44,7 @@
             }else{
                 sweetTexture = [candyMachineSlotData getTextureFromSweetUUID:slotUUID];
             }
+            
             [slotBacking setUserInteractionEnabled:true];
             
         }else {
@@ -54,7 +56,8 @@
         UIImage *slotImage = [UIImage imageNamed:sweetTexture];
         UIButton *sweetButton = [UIButton buttonWithType:UIButtonTypeCustom];
         [sweetButton setImage:slotImage forState:UIControlStateNormal];
-        
+        [sweetButton setTag:i + 1]; //we have to add one becuase the nsdictionary value starts at slot1 not slot0
+        [sweetButton addTarget:self action:@selector(onSlotPress:) forControlEvents:UIControlEventTouchUpInside];
         
         [sweetButton setFrame:CGRectMake(slotArea/2 - sweetArea/2, slotArea/2 - sweetArea/2, sweetArea, sweetArea)];
         
@@ -65,7 +68,18 @@
     
 }
 +(void)onSlotPress:(UIButton*)sender {
+    UIButton *button = (UIButton*)sender;
+    UIView *view = [button superview];
+    UIView *main = [view superview];
+    UIView *upper = [main superview];
+    int slotTag = (int)[button tag];
+    [mapMachineSweetDraw createSweetDrawForMachineSlot:slotTag onView:upper];
     
+    [UIView animateWithDuration:0.3 animations:^{
+        [main setFrame:CGRectMake(-main.frame.size.width, main.frame.origin.y, main.frame.size.width, main.frame.size.height)];
+    } completion:^(bool finished){
+        [main removeFromSuperview];
+    }];
 }
 
 @end

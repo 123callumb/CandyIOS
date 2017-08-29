@@ -21,4 +21,6 @@
 +(int)getMachineRankFromBuildingWithID:(int)buildingID andMachineID:(int)machineID;
 +(int)getSlotsUnlockedAtMachineWithID:(int)machineID fromBuilding:(int)buildingID;
 +(NSMutableDictionary*)getMachineDataWithID:(int)machineID fromBuilding:(int)buildingID;
++(void)changeMachineSlotValueFromBuilding:(int)buildingID andMachine:(int)machineID forSlot:(int)slotID andSweetUUID:(long)sweetUUID;
++(void)upgradeMachineSlotsWithID:(int)machineID fromBuilding:(int)buildingID;
 @end

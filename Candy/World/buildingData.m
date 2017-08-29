@@ -9,6 +9,7 @@
 #import "buildingData.h"
 #import "candyMachines.h"
 #import "candyMachineSlotData.h"
+#import "mapSweetsEquipped.h"
 
 @implementation buildingData
 
@@ -151,7 +152,7 @@ int buildingCount = 8;
     return [NSMutableDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithInt:0], @"machineCount", machineData, @"machineData", nil];
 }
 +(NSMutableDictionary*)createDefaultMachineSettings {
-    return [NSMutableDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithInt:0], @"rank", [NSNumber numberWithInt:0], @"slotRank", nil, @"slot1", nil, @"slot2", nil, @"slot3", nil];
+    return [NSMutableDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithInt:0], @"rank", [NSNumber numberWithInt:0], @"slotRank", [NSNumber numberWithInt:-1], @"slot1", [NSNumber numberWithInt:-1], @"slot2", [NSNumber numberWithInt:-1], @"slot3", nil];
 }
 +(NSString*)machineTextureForRank:(int)rank {
     NSArray *machineTextures = [[NSArray alloc] initWithObjects:@"padlock", @"machine_default", @"machine_2", @"machine_3", @"machine_5", nil];
@@ -217,6 +218,34 @@ int buildingCount = 8;
     [self updateBuildingData:buildings];
     
 }
++(void)upgradeMachineSlotsWithID:(int)machineID fromBuilding:(int)buildingID {
+    
+    NSMutableArray *buildings = (NSMutableArray*)[self getBuidlingData];
+    NSMutableDictionary *building = [buildings objectAtIndex:buildingID];
+    NSMutableArray *machines = [building valueForKey:@"machineData"];
+    NSMutableDictionary *machineData = [machines objectAtIndex:machineID];
+    
+    int newMachineRank = [[machineData objectForKey:@"slotRank"] intValue] + 1;
+    
+    NSMutableDictionary *newMachineData = [machineData mutableCopy];
+    
+    [newMachineData removeObjectForKey:@"slotRank"];
+    [newMachineData setObject:[NSNumber numberWithInt:newMachineRank] forKey:@"slotRank"];
+    
+    NSMutableArray *newMachines = [machines mutableCopy];
+    
+    [newMachines replaceObjectAtIndex:machineID withObject:newMachineData];
+    
+    NSMutableDictionary *newBuilding = [building mutableCopy];
+    
+    [newBuilding removeObjectForKey:@"machineData"];
+    [newBuilding setObject:newMachines forKey:@"machineData"];
+    
+    [buildings replaceObjectAtIndex:buildingID withObject:newBuilding];
+    
+    [self updateBuildingData:buildings];
+    
+}
 +(int)getSlotsUnlockedAtMachineWithID:(int)machineID fromBuilding:(int)buildingID {
     NSDictionary *machineData = [self getMachineDataWithID:machineID fromBuilding:buildingID];
     return [[machineData objectForKey:@"slotRank"] intValue];
@@ -228,5 +257,34 @@ int buildingCount = 8;
     NSData *arrayToData = [NSKeyedArchiver archivedDataWithRootObject:newBuildingData];
     [nd setObject:arrayToData forKey:@"buildingData"];
     
+}
++(void)changeMachineSlotValueFromBuilding:(int)buildingID andMachine:(int)machineID forSlot:(int)slotID andSweetUUID:(long)sweetUUID {
+    
+    NSMutableArray *buildings = (NSMutableArray*)[self getBuidlingData];
+    NSMutableDictionary *building = [buildings objectAtIndex:buildingID];
+    NSMutableArray *machines = [building valueForKey:@"machineData"];
+    NSMutableDictionary *machineData = [machines objectAtIndex:machineID];
+    
+    NSMutableDictionary *newMachineData = [machineData mutableCopy];
+    NSString *key = [NSString stringWithFormat:@"slot%d", slotID];
+    
+    [newMachineData removeObjectForKey:key];
+    [newMachineData setObject:[NSNumber numberWithLong:sweetUUID] forKey:key];
+    
+    NSMutableArray *newMachines = [machines mutableCopy];
+    
+    [newMachines replaceObjectAtIndex:machineID withObject:newMachineData];
+    
+    NSMutableDictionary *newBuilding = [building mutableCopy];
+    
+    [newBuilding removeObjectForKey:@"machineData"];
+    [newBuilding setObject:newMachines forKey:@"machineData"];
+    
+    [buildings replaceObjectAtIndex:buildingID withObject:newBuilding];
+    
+    [self updateBuildingData:buildings];
+    
+    //Update
+    [mapSweetsEquipped updateAndLoadCurrentEquippedSweetsByUUID];
 }
 @end

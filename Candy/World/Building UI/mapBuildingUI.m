@@ -95,6 +95,9 @@ int currentMapBuilding = -1;
         NSLog(@"Opened UI for building with id: %d", buildingID);
     }];
 }
++(void)onUpgradeBuilding:(UIButton*)sender {
+    
+}
 +(void)onClose:(id)sender {
     UIButton *cross = (UIButton*)sender;
     UIView *mainView = [cross superview];
