@@ -15,12 +15,14 @@
 #import "bannerBonusUI.h"
 #import "buttonHandler.h"
 #import "worldMap.h"
+#import "mapSweetsEquipped.h"
+#import "gems.h"
 
 @implementation world
 
 -(void)didMoveToView:(SKView *)view {
     [self setAnchorPoint:CGPointMake(0.5, 0.5)];
-    
+    [mapSweetsEquipped updateAndLoadCurrentEquippedSweetsByUUID];
     //Something important to note if the gestures are not removed then they will remain in the next scene becuase it listens on the view not the scene
     
     //Add Gesture Rec - Is there a way to add this directly to the map node if I turn it into an object? I dont think soooooo
@@ -39,6 +41,7 @@
     //Add level stuff
     [self addBacking];
     [worldMap addWorld:self];
+
 }
 
 //Should I be placing this elsewhere kinda feels ugly here

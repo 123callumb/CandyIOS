@@ -14,6 +14,7 @@
 #import "candyMachineValues.h"
 #import "messageUI.h"
 #import "mapBuildingUI.h"
+#import "gems.h"
 
 @implementation mapMachineUI
 
@@ -82,10 +83,49 @@ int currentMapMachineID;
     
     [backView addSubview:machineImageView];
     [machineView addSubview:cross];
-    [machineView addSubview:coinBar];
-    [machineView addSubview:upgradeButton];
-    [machineView addSubview:gemBar];
-    [machineView addSubview:slotButton];
+    UIImage *fullyUpgradedImage = [UIImage imageNamed:@"fullyUpgradedTag"];
+    
+    int machineRank = [buildingData getMachineRankFromBuildingWithID:[mapBuildingUI getCurrentMapBuildingID] andMachineID:currentMapMachineID];
+    
+    if(machineRank != 4){
+    
+        int nextMachineRankPrice = [candyMachineValues upgradePrices:machineRank];
+    
+        UILabel *upgradePrice = [[UILabel alloc] initWithFrame:CGRectMake(0, coinBar.frame.size.height/34, coinBar.frame.size.width, coinBar.frame.size.height)];
+        [upgradePrice setFont:[UIFont fontWithName:@"Coder's-Crux" size:30]];
+        [upgradePrice setText:[NSString stringWithFormat:@"%d", nextMachineRankPrice]];
+        [upgradePrice setTextAlignment:NSTextAlignmentCenter];
+        [coinBar addSubview:upgradePrice];
+        
+        [machineView addSubview:coinBar];
+        [machineView addSubview:upgradeButton];
+    }else {
+        
+        UIImageView *fullyUpgraded = [[UIImageView alloc] initWithImage:fullyUpgradedImage];
+        [fullyUpgraded setFrame:CGRectMake(viewWidth/14, viewHeight/1.9, barDimensions.width, barDimensions.height*1.5)];
+        [machineView addSubview:fullyUpgraded];
+    }
+    
+    int slotRank = [buildingData getSlotsUnlockedAtMachineWithID:[mapMachineUI getCurrentMapMachineID] fromBuilding:[mapBuildingUI getCurrentMapBuildingID]];
+    
+    if(slotRank != 2){
+        int nextSlotPrice = [candyMachineValues slotPrices:slotRank];
+        UILabel *slotPrice = [[UILabel alloc] initWithFrame:CGRectMake(0, gemBar.frame.size.height/34, gemBar.frame.size.width, gemBar.frame.size.height)];
+        [slotPrice setFont:[UIFont fontWithName:@"Coder's-Crux" size:30]];
+        [slotPrice setText:[NSString stringWithFormat:@"%d", nextSlotPrice]];
+        [slotPrice setTextAlignment:NSTextAlignmentCenter];
+        
+        [slotButton addTarget:self action:@selector(onSlotUpgradeButton:) forControlEvents:UIControlEventTouchUpInside];
+        [gemBar addSubview:slotPrice];
+        [machineView addSubview:gemBar];
+        [machineView addSubview:slotButton];
+    }else {
+       
+        UIImageView *fullyUpgraded = [[UIImageView alloc] initWithImage:fullyUpgradedImage];
+        [fullyUpgraded setFrame:CGRectMake(viewWidth/14, viewHeight/2 + barDimensions.height * 2.2, barDimensions.width, barDimensions.height*1.5)];
+        [machineView addSubview:fullyUpgraded];
+    }
+
     
     [UIView animateWithDuration:0.15 animations:^{
         [view addSubview:machineView];
@@ -116,7 +156,7 @@ int currentMapMachineID;
     int currentBuildingID = [mapBuildingUI getCurrentMapBuildingID];
     int nextMachineRankPrice = [candyMachineValues upgradePrices:[buildingData getMachineRankFromBuildingWithID:currentBuildingID andMachineID:currentMapMachineID]];
     
-    if(nextMachineRankPrice < [money getBalance]){
+    if(nextMachineRankPrice <= [money getBalance]){
         [money addBalance:-nextMachineRankPrice];
         [buildingData upgradeMachineWithID:currentMapMachineID fromBuilding:currentBuildingID];
         [self onClose:sender];
@@ -128,6 +168,20 @@ int currentMapMachineID;
     
 }
 +(void)onSlotUpgradeButton:(UIButton*)sender {
+   
+    UIButton *upgrade = (UIButton*)sender;
+    UIView *machineView = [upgrade superview];
+    UIView *main = [machineView superview];
+
+    int nextMachineSlotPrice = [candyMachineValues slotPrices:[buildingData getSlotsUnlockedAtMachineWithID:[mapMachineUI getCurrentMapMachineID] fromBuilding:[mapBuildingUI getCurrentMapBuildingID]]];
     
+    if(nextMachineSlotPrice <= [gems getGems]){
+        [gems removeGems:nextMachineSlotPrice];
+        [buildingData upgradeMachineSlotsWithID:[mapMachineUI getCurrentMapMachineID] fromBuilding:[mapBuildingUI getCurrentMapBuildingID]];
+        [self onClose:sender];
+        [messageUI createMessageBox:main information:@"Woop! You just upgraded one of you candy Machines!" representingImage:@"machine_default" imageScale:0.5 messageBoxID:69 displayOnce:false];
+    }else {
+        [messageUI createMessageBox:main information:@"Awww you can't afford this :(" representingImage:@"dunnoButton" imageScale:0.5 messageBoxID:69 displayOnce:false];
+    }
 }
 @end
